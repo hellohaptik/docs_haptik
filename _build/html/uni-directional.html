@@ -1,0 +1,298 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Uni Directional Metadata flow &#8212; haptik_docs  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Bot Deployment" href="deploying-bot.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="uni-directional-metadata-flow">
+<span id="uni-directional-metadata-flow"></span><h1><strong>Uni Directional Metadata flow</strong><a class="headerlink" href="#uni-directional-metadata-flow" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="purpose-of-this-feature">
+<span id="purpose-of-this-feature"></span><h2>Purpose of this feature<a class="headerlink" href="#purpose-of-this-feature" title="Permalink to this headline">¶</a></h2>
+<p><strong>What is metadata?</strong>
+In this document we refer to metadata as</p>
+<ul class="simple">
+<li>Business data</li>
+<li>Tasks data</li>
+<li>Forms data</li>
+<li>Form Fields data</li>
+<li>Banner data</li>
+</ul>
+<p>In our current architecture we have admin tools that allow us to create metadata for each environment separately. Because different people create different data in staging and production there are few issues that we face</p>
+<ul class="simple">
+<li><strong>Double Entry</strong>: Product team has to first create data in staging on which the engineering will test and setup flows. Once the flows are tested and ready to go into production, the product team has to go into production and re-create all the data. This is prone to a lot of manual errors</li>
+<li><strong>DIfferent IDs</strong>: The IDs of the same metadata in staging and production are different and because of that ML has to setup different flows for different environments using different IDs. This causes a lot of confusion between staging and production testing.</li>
+</ul>
+<p>The purpose of this feature is to solve the above 2 problems. The plan here is to</p>
+<ul class="simple">
+<li>Allow product to create data in staging.</li>
+<li>Once the data is tested out and ready to go into production, there should be a button on staging to transfer only the newly created data in pre prod.</li>
+<li>Once it is tested in pre-prod there should be a button to move it into production</li>
+<li>No one will be allowed to create data straight in production.</li>
+<li>This way the integrity of data between staging and production is maintained</li>
+<li>The data that QA or Dev team creates should not be allowed to go into production.</li>
+</ul>
+</div>
+<div class="section" id="data-flow-access">
+<span id="data-flow-access"></span><h2>Data flow &amp; access<a class="headerlink" href="#data-flow-access" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Only people with <em>product_manager</em>    permission can send data to different environments</li>
+<li>Staging -&gt; Pre prod -&gt; Production</li>
+<li>Staging : Read, write, and transfer permissions</li>
+<li>Pre-prod: Read and transfer permissions</li>
+<li>Production: Read permission</li>
+</ul>
+</div>
+<div class="section" id="user-epics-and-job-stories">
+<span id="user-epics-and-job-stories"></span><h2>User Epics and Job Stories<a class="headerlink" href="#user-epics-and-job-stories" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li>As a PM I should be able to create data in staging.</li>
+<li>There should be an easy way to select which row goes into production and which one does not.</li>
+<li>It is the responsibility of the PM to transfer the data when the data is ready for production and verify that the data has been transfered properly as expected.</li>
+<li>The PM will have to go and individually transfer all the newly created rows in different admins.</li>
+<li>The button to transfer data should only be visible to product team and no one else.</li>
+<li>No one should be allowed to add or edit data in production, pre-prod</li>
+<li>Everyone should be able to view data in production.</li>
+<li>QA and Dev teams should not be able to transfer data into production</li>
+<li>Data when moved to a new environment should get synced to the app based on modified_At. (Modified_at should be updated to the value of now instead of when it was modified at the source)</li>
+</ol>
+</div>
+<div class="section" id="apps">
+<span id="apps"></span><h2>Apps<a class="headerlink" href="#apps" title="Permalink to this headline">¶</a></h2>
+<p><em>This section demonstrates how features will work from the perspective of the user</em></p>
+<p>No change to apps required. The apps still make the calls to the regular API end points as they would and expect the right data to come from the API calls.</p>
+</div>
+<div class="section" id="gogo">
+<span id="gogo"></span><h2>Gogo<a class="headerlink" href="#gogo" title="Permalink to this headline">¶</a></h2>
+<p><em>This section has any specifications related to changes to Gogo</em></p>
+<p>ML team will still have to index data in staging and production but the IDs and the data should ideally be the same.
+After this is live, IDs in staging, preprod and production should be the same. The first we release this we have to make sure to re-index all the data based on the production IDs in all environments</p>
+<p><em>NOTE: The ML team should re-confirm with the PMs that the data has been transferred from staging to production</em></p>
+</div>
+<div class="section" id="athena-assistant">
+<span id="athena-assistant"></span><h2>Athena Assistant<a class="headerlink" href="#athena-assistant" title="Permalink to this headline">¶</a></h2>
+<p>This section has specifications related to the Athena tool</p>
+<div class="section" id="admin-tools">
+<span id="admin-tools"></span><h3>Admin Tools<a class="headerlink" href="#admin-tools" title="Permalink to this headline">¶</a></h3>
+<p>There are 4 main admin tools that will be affected by this features (Staging URLs)</p>
+<ul class="simple">
+<li>Business admin: http://staging.hellohaptik.com/admin_tools/business_admin/</li>
+<li>Tasks admin: http://staging.hellohaptik.com/admin_tools/business_task/422/</li>
+<li>STS: http://staging.hellohaptik.com/admin_tools/business_sts/422/</li>
+<li>Forms admin: http://staging.hellohaptik.com/admin_tools/add_form/</li>
+<li>Banner admin: http://staging.hellohaptik.com/admin_tools/app_banner/</li>
+</ul>
+</div>
+<div class="section" id="backward-compatibility">
+<span id="backward-compatibility"></span><h3>Backward compatibility<a class="headerlink" href="#backward-compatibility" title="Permalink to this headline">¶</a></h3>
+<p>There are no backward compatibility issues here because once we change it everyone will start using the new admin tool</p>
+</div>
+<div class="section" id="possible-edge-cases">
+<span id="possible-edge-cases"></span><h3>Possible edge cases<a class="headerlink" href="#possible-edge-cases" title="Permalink to this headline">¶</a></h3>
+<p>We need to be very careful with this because it affects data in production as well.</p>
+<ul class="simple">
+<li>Make sure modified at are updated when data is transfered</li>
+<li>Make sure cities are udpated when data is transfered</li>
+<li>Make sure partners are updated when the city is transfered</li>
+<li>​</li>
+</ul>
+</div>
+</div>
+<div class="section" id="technical-documentation">
+<span id="technical-documentation"></span><h2>Technical Documentation<a class="headerlink" href="#technical-documentation" title="Permalink to this headline">¶</a></h2>
+<p>Need to create new environment variables to define destination of the data. These variables will be.</p>
+<p><strong>MySQL</strong></p>
+<ul class="simple">
+<li>UNI_DIR_DESTINATION_SQL_DB_NAME</li>
+<li>UNI_DIR_DESTINATION_SQL_DB_USER</li>
+<li>UNI_DIR_DESTINATION_SQL_DB_PASSWORD</li>
+<li>UNI_DIR_DESTINATION_SQL_DB_HOST</li>
+<li>UNI_DIR_DESTINATION_SQL_DB_PORT</li>
+</ul>
+<p><strong>Mongo</strong></p>
+<ul class="simple">
+<li>UNI_DIR_DESTINATION_NOSQL_DB_NAME</li>
+<li>UNI_DIR_DESTINATION_NOSQL_DB_HOST</li>
+<li>UNI_DIR_DESTINATION_NOSQL_DB_PORT</li>
+<li>UNI_DIR_DESTINATION_NOSQL_DB_PASSWORD</li>
+<li>UNI_DIR_DESTINATION_NOSQL_DB_USER</li>
+</ul>
+<p><strong>Description</strong></p>
+<ul class="simple">
+<li>When the transfer row button is clicked it will call a view with the Primary ID of that row and the data type (business, tasks, forms, form fields, banner etc)</li>
+<li>On the backend, we will take the ID  and for that table we will fetch the data from staging database</li>
+<li>We will then check if a row for that ID already exists in production. If it does that means it’s an update query otherwise it’s an insert query.</li>
+<li>We will then take all the data from staging and insert or update all the columns in production.</li>
+<li>Create a new permission in the backend called ‘product_manager’</li>
+<li>Only show the transfer data to people with ‘product manager’ permission</li>
+<li>Remove the edit buttons in production for everyone (TBD: instead od edit button, let them get to the edit page to see details but don't let them submit and click save)</li>
+<li>As part of making this production ready we have to
+Move data from production to staging and prepared for
+Business, forms, tasks, form fields, banners, external tools (and all related data)</li>
+</ul>
+</div>
+<div class="section" id="todos">
+<span id="todos"></span><h2>TODOs<a class="headerlink" href="#todos" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>When a task / sts is deleted it goes away from the UI and there is no way to transfer that deleted row into production. Need to fix this. For now please ask one of the engineers to update this from the shell</li>
+<li>Business Icons: Right now business icons don't get migrated. So once the business is migrate you will have to add them in production separately.</li>
+<li>Make sure partner names are same in production, staging and development. If hte partner names are different we won't be able to find the partner in the destination</li>
+</ul>
+</div>
+<div class="section" id="unit-test-cases">
+<span id="unit-test-cases"></span><h2>Unit Test Cases<a class="headerlink" href="#unit-test-cases" title="Permalink to this headline">¶</a></h2>
+<p>| Test case                   | Validation                               |
+| --------------------------- | ---------------------------------------- |
+| insert data in staging      | Make sure all data can be inserted in staging |
+| City updates                | Make sure city of meta data updates properly |
+| Partner updates             | Make sure partner of data updates properly |
+| Modified at updated         | Make sure modified at updates properly   |
+| Forms                       | Make sure forms and form fields update properly |
+| Order receipts              | Make sure when a task is moved the order recipet is moved properly |
+| Emojis and funny charecters | Makre sure data with funny charecters move |</p>
+</div>
+<div class="section" id="release-process">
+<span id="release-process"></span><h2>release process<a class="headerlink" href="#release-process" title="Permalink to this headline">¶</a></h2>
+<p>To release this feature the below needs to be done</p>
+<ul class="simple">
+<li>Make sure code is in master</li>
+<li>Make sure all the env variables are set as mentioned above</li>
+<li>Make sure all data in production is up to date. (Mainly check the TOI partner etc)</li>
+<li>Transfer data from production into staging and preprod</li>
+<li>Re-index gogo data for staging and preprod</li>
+<li>Give product_manager permission to the right people in staging and preprod (Remember to not do this in production)</li>
+</ul>
+<p>To revert</p>
+<ul>
+<li><p class="first">To revert incase things go bad, make sure we fall back to editing straight in production. To do this, hack it in the permission files
+<code class="docutils literal"><span class="pre">api/lib/permissions.py</span></code></p>
+<p>in function <code class="docutils literal"><span class="pre">is_staging</span></code> always return true.
+This will allow people to edit in production.
+Remove <code class="docutils literal"><span class="pre">product_manager</span></code> permission for all users in staging and preprod</p>
+<p>​</p>
+</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">haptik_docs</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="channels.html">Channels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="entities.html">Entities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intents.html">Intents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="connections.html">Connections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general-responses.html">General Responses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="forms.html">Forms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploying-bot.html">Bot Deployment</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Uni Directional Metadata flow</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#purpose-of-this-feature">Purpose of this feature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data-flow-access">Data flow &amp; access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#user-epics-and-job-stories">User Epics and Job Stories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#apps">Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gogo">Gogo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#athena-assistant">Athena Assistant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#technical-documentation">Technical Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#todos">TODOs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#unit-test-cases">Unit Test Cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#release-process">release process</a></li>
+</ul>
+</li>
+</ul>
+
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href="https://www.haptik.ai">Haptik Website</a></li>
+    
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="deploying-bot.html" title="previous chapter">Bot Deployment</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Haptik.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/uni-directional.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

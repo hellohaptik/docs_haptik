@@ -3,13 +3,13 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Documentation for the Haptik Bot Development Platform!
-=================================================================
+Welcome to the Haptik Platform Documentation
+============================================
 
 Haptik is a end to end bot development platform blah blah
 
-Features
-========
+Getting Started
+===============
 Haptik is awesome, has so many features
 
 
@@ -18,17 +18,14 @@ Haptik is awesome, has so many features
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Guides:
 
-   getting-started
-   channels
-   entities
-   intents
-   connections
-   general-responses
-   forms
-   deploying-bot
-   uni-directional
+   bot-builder/index
+   bot-configuration/index
+   bot-builder-advanced/index
+   bot-analytics/index
+   agent-interface/index
+ 
 
 
 For more information get in touch with us at

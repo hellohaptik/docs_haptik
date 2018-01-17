@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Bot Builder Advanced &mdash; Haptik Platform Documentation  documentation</title>
+  <title>Intergrating Webviews into Android and iOS SDKs &mdash; Haptik Platform Documentation  documentation</title>
   
 
   
@@ -35,9 +35,7 @@
         <link rel="index" title="Index"
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="Haptik Platform Documentation  documentation" href="../index.html"/>
-        <link rel="next" title="Advanced Messaging Elements" href="message-elements.html"/>
-        <link rel="prev" title="Android SDK" href="../bot-configuration/client-sdk.html"/> 
+    <link rel="top" title="Haptik Platform Documentation  documentation" href="../index.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -87,7 +85,7 @@
             
             
               <p class="caption"><span class="caption-text">Guides:</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../bot-builder/index.html">Bot Builder</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../bot-builder/creating-bot.html">Creating a Bot</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../bot-builder/testing-bot.html">Testing your Bot</a></li>
@@ -119,7 +117,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../bot-configuration/client-sdk.html#facebook-deployment">Facebook Deployment</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Bot Builder Advanced</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Bot Builder Advanced</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="message-elements.html">Advanced Messaging Elements</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="message-elements.html#hsl-elements">HSL Elements</a></li>
 <li class="toctree-l3"><a class="reference internal" href="message-elements.html#forms">Forms</a></li>
@@ -182,13 +180,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Bot Builder Advanced</li>
+      <li>Intergrating Webviews into Android and iOS SDKs</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/bot-builder-advanced/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/bot-builder-advanced/integrating-webviews-into-sd.md.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -201,24 +199,49 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="bot-builder-advanced">
-<h1>Bot Builder Advanced<a class="headerlink" href="#bot-builder-advanced" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Advanced Bot Building Concepts:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="message-elements.html">Advanced Messaging Elements</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="message-elements.html#hsl-elements">HSL Elements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="message-elements.html#forms">Forms</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="demo-links.html">Demo Link</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ml-dummies.html">ML for Dummies</a></li>
-<li class="toctree-l1"><a class="reference internal" href="integrating-webviews-into-sdk.html">Intergrating Webviews into Android and iOS SDKs</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="integrating-webviews-into-sdk.html#displaying-the-webview">Displaying the Webview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="integrating-webviews-into-sdk.html#closing-the-webview">Closing the Webview</a></li>
-</ul>
-</li>
-</ul>
+  <div class="section" id="intergrating-webviews-into-android-and-ios-sdks">
+<span id="intergrating-webviews-into-android-and-ios-sdks"></span><h1>Intergrating Webviews into Android and iOS SDKs<a class="headerlink" href="#intergrating-webviews-into-android-and-ios-sdks" title="Permalink to this headline">¶</a></h1>
+<p>The existing functionality of the Android and iOS SDKs can be extended by using native webview of each of the devices. This can be used to render custom content, take payments or other experiences which may be difficult to offer with messages.</p>
+<p><img alt="Apps-Webview" src="../_images/Apps-Webview.png" /></p>
+<div class="section" id="displaying-the-webview">
+<span id="displaying-the-webview"></span><h2>Displaying the Webview<a class="headerlink" href="#displaying-the-webview" title="Permalink to this headline">¶</a></h2>
+<p>The Webview is displayed by sending a a Smart Action message with the <code class="docutils literal"><span class="pre">SELF_SERVE_WEB</span></code> URI</p>
+<p>Smart Action Syntax</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;Enter the message copy here.&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;BUTTON&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;actionable_text&quot;</span><span class="p">:</span> <span class="s2">&quot;Button message here&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;location_required&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="nt">&quot;uri&quot;</span><span class="p">:</span> <span class="s2">&quot;SELF_SERVE_WEB&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;is_default&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;APP_ACTION&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;payload&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;Provide your URL Here&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;gogo_message&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;emoji&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="closing-the-webview">
+<span id="closing-the-webview"></span><h2>Closing the Webview<a class="headerlink" href="#closing-the-webview" title="Permalink to this headline">¶</a></h2>
+<p>The webview can be closed by redirecting itself to a url on the <code class="docutils literal"><span class="pre">haptik-webview</span></code> domain. The Native application will listen to the a change on the URL and the webview will be closed and a message, if present will be sent to the user</p>
+<div class="highlight-http"><div class="highlight"><pre><span></span>http://haptik-webview//perform-action?action=close&amp;message={message}&amp;message_type={message_type}
+</pre></div>
+</div>
+<p>| Query Parameters | Value                                    | Sample                                 |
+| ---------------- | :--------------------------------------- | -------------------------------------- |
+| action           | close                                    |                                        |
+| message          | The message to be sent when the webview is closed. | &quot;Thanks for providing the information&quot; |
+| message_type     | The type of message to be sent. For more information refer to the message types documentation. | 16                                     |</p>
 </div>
 </div>
 
@@ -229,15 +252,6 @@
            </div>
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="message-elements.html" class="btn btn-neutral float-right" title="Advanced Messaging Elements" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="../bot-configuration/client-sdk.html" class="btn btn-neutral" title="Android SDK" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>

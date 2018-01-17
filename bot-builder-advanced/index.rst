@@ -8,3 +8,4 @@ Bot Builder Advanced
    message-elements
    demo-links
    ml-dummies
+   integrating-webviews-into-sdk

@@ -114,10 +114,6 @@ Words with their synonyms enabled have a **blue** underline under them. Words th
 
 **NOTE: When you enable/disable synonyms for a particular word in a user response, they're applied across all user responses in that section. You'll notice that when you enable synonyms for call for example, all occurences of the word call get underlined blue. (This does not apply for tags)**
 
-Basic Nomenclature
-^^^^^^^^^^^^^^^^^^^
-
-
 
 Bot Says
 ^^^^^^^^

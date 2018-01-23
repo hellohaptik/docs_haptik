@@ -7,12 +7,14 @@ What is a Node?
 User Says
 ^^^^^^^^^
 
+@TODO: What is an intent in the context of a node
+
 As the name suggests, it is used to detect phrases that the user might say.
 To reach the user says interface for a particular node, click on the User Says option on the right hand side or alternatively right click on a node and tap on User Says.
 
-.. image:: 1.png
+.. image:: user_says_nodes.png
 
-.. image:: 2.png
+.. image:: user_says_interface.png
 
 The User Says interface allows you to
 
@@ -20,7 +22,7 @@ The User Says interface allows you to
 * Add/Remove Tags,
 * Enable/Disable synonyms
 
-.. image:: legend.png
+.. image:: user_says_legend.png
 
 **The relevant sections below detail these features and how to use them .**
 
@@ -30,20 +32,20 @@ The User Says interface allows you to
 To add a user says just start typing into the input box situated at the top to add a User Response (see screenshot below)
 Just hit enter, and it will add it to the list. To save your changes and exit back to the graph click on the Save and Exit button on the top right corner to exit.
 
-.. image:: 3.png
+.. image:: user_says_adding_user_response.png
 
 2. Modifying/Deleting User Says Responses
 """""""""""""""""""""""""""""""""""""""""
 To modify an existing user response, simply click on the user response you'd like to edit and go ahead and make any changes you'd like to make. To disable a user response, simply click on the cross on the right side of the user response. This will dim the response along with strikethrough. Make sure you hit save to actually save your changes to the Back End.
 
-.. image:: 4.png
-.. image:: 5.png
+.. image:: user_says_modifying_user_response.png
+.. image:: user_says_deleting_user_response.png
 
 3. The context menu
 """""""""""""""""""""""""""""""""""""""""
 The context menu allows you to add/delete synonyms and tags. To open the menu, select a word from an existing user response. The moment you select it, a popup with the relevant options shows up.
 
-.. image:: 6.png
+.. image:: user_says_context_menu.png
 
 4. Adding/Deleting Tags
 """""""""""""""""""""""
@@ -59,7 +61,7 @@ Every sentence needs to have some unique keywords from within the phrase. These 
 * Select the *add tag* option
 * Hit Save to save your changes
 
-.. image:: 7.png
+.. image:: user_says_add_tags.png
 
 **To remove a tag**
 
@@ -68,7 +70,7 @@ Every sentence needs to have some unique keywords from within the phrase. These 
 * Select the *remove tag* option
 * Hit Save to save your changes
 
-.. image:: 8.png
+.. image:: user_says_remove_tags.png
 
 4. Adding/Deleting Synonyms
 """""""""""""""""""""""""""
@@ -84,17 +86,17 @@ Words with their synonyms enabled have a **blue** underline under them. Words th
 * The context menu opens
 * Select on *Search synonyms*
 
-  .. image:: 9.png
+  .. image:: user_says_context_search.png
 
 * The synonyms overlay opens
 
-  .. image:: 10.png
+  .. image:: user_says_search_synonyms.png
 
 * Select the meaning that best fits the context
 * Synonyms are now enabled for the word
 * You can edit the synonyms list at this point, not that you would be editing the global synonym dictionary. These synonyms would be added for **all** other bots that are using the same word. Please edit this list with extreme caution.
 
-  .. image:: 11.png
+  .. image:: user_says_edit_synonyms.png
 
 * Close the overlay & hit Save & Exit to save your changes
 
@@ -104,11 +106,11 @@ Words with their synonyms enabled have a **blue** underline under them. Words th
 * The context menu opens
 * Click on *View Synonyms*
 
-  .. image:: 12.png
+  .. image:: user_says_context_view.png
 
 * Deselect the enabled checkbox in the left pane to disable the synonym
 
-  .. image:: 13.png
+  .. image:: user_says_disable_synonym.png
 
 * Hit Save to save your changes
 

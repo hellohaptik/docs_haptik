@@ -7,7 +7,21 @@ What is a Node?
 User Says
 ^^^^^^^^^
 
-@TODO: What is an intent in the context of a node
+An intent is a set of sentences that all carry the same meaning. They can be very different in terms of language but still denote the same meaning. When a user sends a message to your bot, our pipeline compares it to the phrases in your intents. Then it checks if it’s close enough to one of them. This allows the bot to decide what the intent or purpose of that message and allows our bots to respond accordingly.
+
+Example:
+- Are you a bot?
+- That typing speed makes me think you're a bot !
+- Am I speaking to a human?
+
+The above sentences are all different, but at the same time their meaning/intent is the same. They ask the same question, *Are you a bot?* You can then set an appropriate response to the intent so if the bot recognizes the intent, you can prepare a user says response such as *I’m both human and robot*.
+
+For example:
+
+Are you a bot?
+You reply so fast, I’m sure you must be some kind of robot.
+Am I speaking to a human or not?
+are all different, but they all ask the same question that we can can sum up as: Are you a bot? Well, that would make a great intent! If your bot is able to recognize this question, you can prepare a smart reaction, like “I’m a robot and I’m proud of it “.
 
 As the name suggests, it is used to detect phrases that the user might say.
 To reach the user says interface for a particular node, click on the User Says option on the right hand side or alternatively right click on a node and tap on User Says.

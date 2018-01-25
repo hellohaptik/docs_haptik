@@ -255,7 +255,7 @@ Consider the following example for detailed explanation:
    * - Content-Type
      - application/json
    * - X-Hub-Signature
-     - sha1=signature  (The HMAC hex digest of the response body. This header will be sent if the node is configured with a secret. The HMAC hex digest is generated using the sha1 hash function and the secret as the HMAC key.)
+     - sha1=signature  (The HMAC hex digest of the request body. This header will be sent if the node is configured with a secret. The HMAC hex digest is generated using the sha1 hash function and the secret as the HMAC key.)
 
 **Response Parameters**
 

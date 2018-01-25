@@ -221,13 +221,9 @@ TODO: Insert Images for the above
      - Dictionary containing user data
    * - entities
      - Dictionary
-     - Entities containting ..
+     - The entities dictionary will have a key for each entity that is detected e.g. movie_name, venue, phone_number, etc. The value for each entity is a list of dictionary as shown below.
 
-**entities output format**
-
-The entities Dictionary will have a key for each entity that is detected e.g. movie_name, venue, phone_number, etc.
-
-The value for each entity is a list of dictionary containing the following structure:
+**entity output format**
 
 .. code:: json
 

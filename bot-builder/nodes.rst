@@ -164,30 +164,49 @@ Add the endpoint of the webhook
 Specify the security challenge that will be verified
 
 TODO: Insert Images for the above
-TODO: Think through security
 
 **Request Parameters**
 
 .. code:: json
 
-   {
-   	 "node": "system name of the node",
-   	 "event": "API_INTEGRATION",
-   	 "user":{
-   	 	"user_name": "",
-   	 	"full_name": "",
-   	 	"device_platform": "",
-   	 },
-     "entities":[
-	     {
-	     	"detection": "",
-	     	"original_text": "",
-	     	"entity_value": ""
-	     },
-	     ....
+{
+   "node":"system name of the node",
+   "event":"API_INTEGRATION",
+   "user":{
+      "user_name":"haptik username",
+      "full_name":"",
+      "device_platform": 5
+   },
+   "entities":{
+      "product_id":[
+         {
+            "detection":"message",
+            "original_text":"71",
+            "entity_value":"71",
+            "meta_data":{
+
+            }
+         }
+      ],
+      "email":[
+         {
+            "detection":"user_profile",
+            "original_text":"test@test.com",
+            "entity_value":"test@test.com",
+            "meta_data":{
+
+            }
+         }
+      ],
+      "product_name":[
+         {
+            "detection":"default",
+            "original_text":"headphones",
+            "entity_value":"headphones"
+         }
       ]
    }
-
+}
 
 .. list-table::
    :widths: 15 10 30
@@ -200,9 +219,14 @@ TODO: Think through security
      - String
      - Unique system name of the calling node
    * - entities
-     - Array
+     - Dictionary
      - Entities containting ..
 
+
+**Request Headers**
+
+Content-Type: application/json
+X-Hub-Signature: sha1=...  (The HMAC hex digest of the response body. This header will be sent if the node is configured with a secret. The HMAC hex digest is generated using the sha1 hash function and the secret as the HMAC key.)
 
 
 **Response Parameters**
@@ -242,8 +266,90 @@ The following additional fields can be specified by the Webhook to control behav
      - Boolean
      - If status is True, then the decorator will assign the response to success_response. If status is False, then the decorator will assign the response to failure_response.
 
+** Validate Webhook **
+
+The HTTP request will contain an X-Hub-Signature header which contains the SHA1 signature of the request payload, using the secret_key entered for the node, and prefixed with sha1=. Your API can verify this signature to validate the integrity and origin of the payload.
 
 3. Code Upload
 """"""""""""""
+** Python Code **
 
-*Coming Soon*
+.. code:: python
+
+#!/usr/bin/env python
+"""
+Simple HTTP server in python for handling haptik webhooks.
+
+Usage::
+    ./test_server.py [<port>]
+
+"""
+import cgi
+import json
+import hmac
+import hashlib
+from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
+
+
+class WebhookServer(BaseHTTPRequestHandler):
+    def _set_headers(self, status_code, content_type):
+        self.send_response(status_code)
+        self.send_header('Content-type', content_type)
+        self.end_headers()
+
+    def do_GET(self):
+        self._set_headers(status_code=200, content_type='text/html')
+        self.wfile.write("<html><body><h1>Test Server</h1></body></html>")
+
+    def do_POST(self):
+        content_type, pdict = cgi.parse_header(self.headers.getheader('Content-Type'))
+
+        if content_type != 'application/json':
+            self.send_response(400)
+            self.end_headers()
+            return
+
+        length = int(self.headers.getheader('Content-Length'))
+        if not length:
+            self.send_response(400)
+            self.end_headers()
+            return
+
+        body = self.rfile.read(length)
+        data = json.loads(body)
+        secret_key = 'test'
+        hash_value = hmac.new(secret_key, body, hashlib.sha1).hexdigest()
+        sha1_signature = 'sha1=' + str(hash_value)
+        request_signature = self.headers.getheader('X-Hub-Signature')
+        if sha1_signature != request_signature:
+            self.send_response(401)
+            self.end_headers()
+            return
+        entities = data['entities']
+        product_name = entities['product_name'][0]['entity_value'] if entities.get('product_name') else None
+        if product_name == 'speaker':
+            message = 'The Wireless Radio Alarm Clock Speaker can be yours only for Rs.1599'
+        elif product_name == 'powerbank':
+            message = 'The Ambrane Powerbank can be yours only for Rs.1799'
+        else:
+            self.send_response(400)
+            self.end_headers()
+            return
+        response = {"status": True, "response": [message]}
+        self._set_headers(status_code=200, content_type='application/json')
+        self.wfile.write(json.dumps(response))
+
+
+def run(server_class=HTTPServer, handler_class=WebhookServer, port=80):
+    server_address = ('', port)
+    httpd = server_class(server_address, handler_class)
+    print 'Starting test server...'
+    httpd.serve_forever()
+
+if __name__ == "__main__":
+    from sys import argv
+
+    if len(argv) == 2:
+        run(port=int(argv[1]))
+    else:
+        run()

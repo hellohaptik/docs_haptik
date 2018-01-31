@@ -154,7 +154,9 @@ Once a particular node has been detected and the mandatory entities have been co
 A node can be configured to call a webhook once the required entities have been collected.
 
 To deploy a live webhook that can receive webhook events, your code must be hosted on a public HTTP server that has the following:
+
 - A Valid SSL Certificate
+
 - An open port that accepts ``GET`` and ``POST`` requests
 
 Select the API Functions section
@@ -163,7 +165,24 @@ Add the endpoint of the webhook
 
 Specify the security challenge that will be verified
 
-TODO: Insert Images for the above
+
+**Request Method**
+
+POST
+
+**Request Headers**
+
+
+.. list-table::
+   :widths: 15 30
+   :header-rows: 1
+
+   * - Header
+     - Description
+   * - Content-Type
+     - application/json
+   * - X-Hub-Signature
+     - sha1=signature  (The HMAC hex digest of the request body. This header will be sent if the node is configured with a secret. The HMAC hex digest is generated using the sha1 hash function and the secret as the HMAC key.)
 
 **Request Parameters**
 
@@ -243,19 +262,6 @@ Consider the following example for detailed explanation:
 * detection: This will store how the entity is detected i.e. whether from message, structured value or fallback value.
 * original_text: This will store the actual value that is detected. For example, mcd.
 
-**Request Headers**
-
-
-.. list-table::
-   :widths: 15 30
-   :header-rows: 1
-
-   * - Header
-     - Description
-   * - Content-Type
-     - application/json
-   * - X-Hub-Signature
-     - sha1=signature  (The HMAC hex digest of the request body. This header will be sent if the node is configured with a secret. The HMAC hex digest is generated using the sha1 hash function and the secret as the HMAC key.)
 
 **Response Parameters**
 

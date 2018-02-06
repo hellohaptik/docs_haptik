@@ -6,29 +6,28 @@
 Welcome to the Haptik Platform Documentation
 ============================================
 
-Haptik is a end to end bot development platform blah blah
+Haptik is a end to end bot development platform
 
 Getting Started
 ===============
-Haptik is awesome, has so many features
 
 
 
 
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Guides:
+   :hidden:
 
    bot-builder/index
    bot-configuration/index
    bot-builder-advanced/index
    bot-analytics/index
    agent-interface/index
- 
+   security
+   
 
 
-For more information get in touch with us at
+For more information get in touch with us at hello@haptik.ai
 
 Indices and tables
 ==================

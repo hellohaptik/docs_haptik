@@ -159,7 +159,7 @@ Basically some specific data which needs to be detected from a user's input
 
 * Simply click select on one of the existing entities to add it to your node
 
-2. Creating an Entity
+2. Creating a New Entity
 """""""""""""""""""""""""""""
 * Click on Create Entitiy if the existing entities can not solve your purpose, or if the search result is empty
 

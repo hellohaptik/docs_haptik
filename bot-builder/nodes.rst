@@ -183,19 +183,6 @@ Basically detectable data which needs to be derived from a user's input
 * Click on save to update the entity
 
 
-
-
-* After selecting the node on which the entity is to be added, click on bot says or entities
-.. image:: entities_open_node.png
-* Click on Add Entities
-* One can search for a particular word that needs to be detected, all existing entities that are capable of detecting that word will appear as the search result
-.. image:: entities_add.png
-* Simply click select on one of the existing entities to add it to your node
-
-
-
-
-
 Integrating Custom Code
 ^^^^^^^^^^^^^^^^^^^^^^^
 Once a particular node has been detected and the mandatory entities have been collected, these entities can be given to custom code to execute your own business logic. There are 3 different ways to execute this business logic.

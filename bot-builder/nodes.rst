@@ -132,7 +132,7 @@ Words with their synonyms enabled have a **blue** underline under them. Words th
 
 Bot Says
 ^^^^^^^^
-Bot Says as the name suggests is used to indicate what the bot might say to the user. It can be a simple bot reply or an HSL component. You can also collect entities (more on that later).
+Bot Says is used to indicate what the bot can say to the user. It can be a simple bot reply or an HSL component. You can also collect entities (more on that later).
 
 Getting Started
 """"""""""""""""
@@ -194,7 +194,10 @@ Each of the above responses are composed of **variants**, **messages**, and **qu
 
   .. image:: bot_says_quick-reply.png
 
-* **Mandatory Words**: @TODO
+* **Mandatory Words**: These words function as tags. These specific responses will only match if the tags match exactly. Use these tags if
+
+  - You have multiple nodes that are similar to each other.
+  - You want to trigger a node only if a specific keyword exists
 
   .. image:: bot_says_mandatory_open.png
   .. image:: bot_says_mandatory.png

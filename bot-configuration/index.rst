@@ -1,16 +1,13 @@
 Configuring and Deploying your Bot
 ==================================
 
-Everything related to deploying your bot comes here
-
-Business
-Tasks, Clients
-and FB and other configurations will come here as well
+This section contains information related to configuring and deploying your bot. 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Configuring and Deploying your Bot:
 
    business-task
    partners
    client-sdk
+   permissions

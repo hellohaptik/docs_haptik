@@ -29,9 +29,3 @@ Getting Started
 
 For more information get in touch with us at hello@haptik.ai
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

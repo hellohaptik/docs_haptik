@@ -16,7 +16,7 @@ User's are assigned partners within the Expert Dashboard.
 
 
 
-##Features
+## Features
 
 Features are actions that a user can do with any of the tools. A user can be granted access to any feature by linking the name of the feature to the user. Examples of Features are:
 

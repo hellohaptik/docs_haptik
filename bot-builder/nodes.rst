@@ -108,7 +108,7 @@ Words with their synonyms enabled have a **blue** underline under them. Words th
 
 * Select the meaning that best fits the context
 * Synonyms are now enabled for the word
-* You can edit the synonyms list at this point, not that you would be editing the global synonym dictionary. These synonyms would be added for **all** other bots that are using the same word. Please edit this list with extreme caution.
+* You can edit the synonyms list at this point, note that you would be editing the global synonym dictionary. These synonyms would be added for **all** other bots that are using the same word. Please edit this list with extreme caution.
 
   .. image:: user_says_edit_synonyms.png
 

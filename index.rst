@@ -6,13 +6,6 @@
 Welcome to the Haptik Platform Documentation
 ============================================
 
-Haptik is a end to end bot development platform
-
-Getting Started
-===============
-
-
-
 
 
 .. toctree::

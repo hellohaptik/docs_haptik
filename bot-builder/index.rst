@@ -8,6 +8,7 @@ Bot Builder
    testing-bot
    grouping-conversations
    nodes
+   integrating-custom-code
    connecting-nodes
    general-nodes
    general-responses   

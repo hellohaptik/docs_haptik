@@ -11,7 +11,7 @@ Sub Story: A minor segregation of story tasks, for example hotel booking could h
 book room, room facilities, etc.
 
 Node: The smallest unit of a bot which will return a message or group of messages or make an API call or a combination
-of any of the these based on the message sent by the user. If nodes cannot be connected across stories, stories are
+of any of the these based on the message sent by the user. Nodes cannot be connected across stories, stories are
 completely independent.
 
 1. Creating a story
@@ -69,11 +69,9 @@ Designing chatbot interactions
 The designer can model the conversation flow based on the type of interactions between the user and a chatbot.
 These are segmented into structured and unstructured interactions.
 
-* As the name suggests, the structured type is more about the logical flow of information which allows including
-display elements like menus, forms, etc to collect information precisely from the users.For instance, a customer
+* As the name suggests, the structured type is more about the logical flow of information which allows including display elements like menus, forms, etc to collect information precisely from the users. For instance, a customer
 buying a product is prompted to fill an order form.
-* The unstructured conversation flow includes freestyle plain text. Such as conversations with family, colleagues,
-friends and other acquaintances fall into this segment.
+* The unstructured conversation flow includes freestyle plain text. Such as conversations with family, colleagues, friends and other acquaintances fall into this segment.
 
 Let us take the use-case of building a hotel bot. End goals of the chatbot are:
 

@@ -6,7 +6,6 @@ Bot Builder
 
    creating-bot
    testing-bot
-   grouping-conversations
    nodes
    integrating-custom-code
    connecting-nodes

@@ -1,7 +1,7 @@
 # General Nodes
 ----
 
-##What are General Nodes?
+## What are General Nodes?
 
 General nodes are like regular nodes and follow the same principle of **User Says**, **Bot Says** and **End Nodes** to detect nodes, reply back to the user and update the chat status.
 
@@ -17,8 +17,6 @@ There are 2 types of General Nodes:
 They function in exactly the same way but there is a difference in their priorities which is explained in more detail below.
 
 
-----
-
 ## Related Terms
 1. **Node Name**: This is the unique identifier for a Node. This cannot be modified after creation and is similar to the System Name for regular nodes.
 2. **User Says**: This is similar to User Says in regular nodes. Enter a few phrases which should redirect a user to this node
@@ -28,7 +26,7 @@ They function in exactly the same way but there is a difference in their priorit
 ![General Nodes](https://haptikappimg.haptikapi.com/content/d9a9046d60f3ec4358ba9e9594d5f1a7e4db678d340c34c35964d7428ef97d7d.jpeg?w=1352&h=573 "How to Create/Edit a General Node?")
 
 
-##General Responses vs General Nodes
+## General Responses vs General Nodes
 The Bot Maker tool gives options to add General Responses which are usually used to train the bot for simple queries like ‘Good Morning’ or ‘Hi!’.
 
 However, in some cases, the general queries could be more complicated: For example, ‘Who made you?’, ‘Who is your creator’, ‘Where do you live’, ‘Where are you from’.
@@ -38,7 +36,7 @@ These messages are simple queries but have scope for a lot of variations and spe
 General Nodes are the perfect use case for these questions as they use our ML tools which easily account for these variations, just like the normal nodes.
 
 
-##Regular Nodes vs General Nodes
+## Regular Nodes vs General Nodes
 Whenever a User sends a message to the Bot, the bot maintains a context of the node that it replied from.
 
 However, general nodes do not update this context and hence allows the bot to remain on the original node and answer the user’s query without breaking the chat flow.
@@ -46,7 +44,7 @@ However, general nodes do not update this context and hence allows the bot to re
 Regular nodes are complicated and have many more features as they can collect entities, transition from 1 node to another and call external Integration functions. General Nodes are relatively simpler as they are not responsible for collecting any entities or call integration functions.
 
 
-##Domain General Nodes vs Story General Nodes
+## Domain General Nodes vs Story General Nodes
 As mentioned above, there are 2 types of General Nodes which have the same behaviour except the order in which they are used.
 
 Story General Nodes are detected only when the user is in the middle of a flow and only the General Nodes from the Current Story based on the Bot’s context are checked.
@@ -79,7 +77,7 @@ To understand another example of how General Nodes could be used to improve the 
 
 As a lot of user’s ask random questions like ‘Are you a boy or a girl’ or ‘How old are you’ or ‘Are you a bot or a human’ or ‘You are stupid’. To answer these correctly and engage with the users, we could create Domain General Nodes for such responses and reply back with serious/funny/poetic responses to improve the Bot’s personality.
 
-##FAQ Uploader
+## FAQ Uploader
 Because General Nodes are very simple in terms of features (no entities/api calls etc.) and the ability to maintain the context of the bot, they are ideal for quick Question/Answer type contents i.e. FAQs
 
 To simplify the process of creating these FAQ General nodes, there is an option to upload a TSV file (Tab separated file).

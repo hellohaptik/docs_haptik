@@ -7,7 +7,7 @@ General nodes are like regular nodes and follow the same principle of **User Say
 
 However, there are certain differences between General Nodes and Regular nodes which make them ideal for certain use cases like FAQ Bots or to answer general queries that a bot is usually asked like ‘Who are you’ or ‘Who made you’ or ‘Are you a bot or Human’ which help in giving a personality to the bot.
 
-![General Nodes](https://haptikappimg.haptikapi.com/content/d9a9046d60f3ec4358ba9e9594d5f1a7140b187bab4be6ad812096406697186f.jpeg?w=1366&h=647 "Where to find General Nodes?")
+![General Nodes](general_nodes_open.png "Where to find General Nodes?")
 
 There are 2 types of General Nodes:
 
@@ -23,7 +23,7 @@ They function in exactly the same way but there is a difference in their priorit
 3. **Bot Says**: Add messages which the Bot should reply back whenever this node is reached
 4. **Mark as End Node**: If this is ticked, the chat will be marked complete after answering to the user’s query. If not, the bot will reply back and remain in the Bot State with the context of the previous regular node
 5. **Activate/Deactivate**: This button can be used to activate/deactivate certain general nodes as needed
-![General Nodes](https://haptikappimg.haptikapi.com/content/d9a9046d60f3ec4358ba9e9594d5f1a7e4db678d340c34c35964d7428ef97d7d.jpeg?w=1352&h=573 "How to Create/Edit a General Node?")
+![General Nodes](general_node_terms.png "How to Create/Edit a General Node?")
 
 
 ## General Responses vs General Nodes
@@ -66,8 +66,7 @@ As soon as a matching node is detected, the Bot sends the response from that nod
 ## When to use General Nodes
 To explain how General Nodes are useful, look at the following example of a Product Sale Bot:
 
-![General Nodes](https://haptikappimg.haptikapi.com/content/d9a9046d60f3ec4358ba9e9594d5f1a75fc04bf4fbb31a78062f279aea603f04.jpeg?w=770&h=565 "Example Product  Sale Bot")
-
+![General Nodes](general_nodes_example1.png "Example Product  Sale Bot")
 
 
 Now a user could ask about **Cashback/Product Offers** at any stage.
@@ -82,7 +81,7 @@ Because General Nodes are very simple in terms of features (no entities/api call
 
 To simplify the process of creating these FAQ General nodes, there is an option to upload a TSV file (Tab separated file).
 
-Here is a [sample TSV file](haptik.ai) which can be used to create FAQ based general nodes.
+Here is a [sample TSV file](general_nodes_faq.tsv) which can be used to create FAQ based general nodes.
 
 A General node is created for every Question/Answer pair in the file.
 

@@ -47,16 +47,16 @@ We recommend starting the chatbot design process by creating an outline and a st
 
    - **Giving directional cues to the user**: By prompting users to respond in certain ways, bot builders can better anticipate users' inputs and accordingly develop a styled conversation flow that move in a pre-determined direction. For example: 
   
-  ![Guided Reply](Intro_Design_GuidedReply.png "Guided Reply")
+  ![Guided Reply](Intro_Design_GuidedReply.png "Guided Reply") <!-- .element height="50%" width="50%" --> 
    
    - **Connect with the user on a personal level**: Incorporating personal touches into your chatbot's script, such as addressing users by name or asking users how they're doing, will keep users more engaged. 
    
-   ![Connecting on a Personal Level](Intro_Design_PersonalLevel.png "Connecting on a Personal Level")
+   ![Connecting on a Personal Level](Intro_Design_PersonalLevel.png "Connecting on a Personal Level") <!-- .element height="50%" width="50%" -->
    
    - **Don't keep the user waiting**: Certain user requests require some amount of processing time by the chatbot. When you anticipate this happening, create fillers to keep users engaged. Similarly, when your chatbot's conversations with users are just opening, don't immediately dive into a series of questions. Always maintain an equal flow of information so users don't become frustrated or disengaged. 
    
-   ![Don't Keep User Waiting](Intro_Design_DontKeepWaiting.PNG "Don't Keep Users Waiting")
+   ![Don't Keep User Waiting](Intro_Design_DontKeepWaiting.PNG "Don't Keep Users Waiting") <!-- .element height="50%" width="50%" -->
    
    - **Add appropriate emotions to your conversation**: Make sure to match the tone of each bot response to the emotions a user expects. For example, if the bot is expressing positive information, such as the completion of a hotel booking to a user, throw in a smiling emoji or fun gif (if your bot has a somewhat casual persona). If the bot is expressing negative news, such as the inability to process a request, express this to the user with a regretful tone. 
    
-   ![Adding Appropriate Emotions](Intro_Design_Emotions.png "Adding Appropriate Emotions")
+   ![Adding Appropriate Emotions](Intro_Design_Emotions.png "Adding Appropriate Emotions") <!-- .element height="50%" width="50%" -->

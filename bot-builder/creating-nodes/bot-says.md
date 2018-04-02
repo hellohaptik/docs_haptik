@@ -10,7 +10,7 @@ Once you arrive at the Bot Says page, you'll see the following interface. This i
 
 ![bot says screen](bot_says_bot-says-screen.png) 
 
-Bot Says supports three types of responses:
+Bot Says supports four types of responses:
 
 1. **Initial Bot Says**: The initial bot reply. It's the first message that the bot sends out when the node is activated. (**Note** that this is not active when there is only one entity present. For multiple entities, consider it to be the opening message. For more on the possible entity scenarios that can arise, see "Scenarios" section below. The initial bot says looks like: 
 
@@ -21,28 +21,17 @@ Bot Says supports three types of responses:
 
 ![bot says entity](bot_says_entity.png)
 
+ > For more information about entities, read on to the next page. 
+
 3. **Final Bot Reply**: Once all the entities/data has been collected, the bot finally replies with the final bot reply. Think of it as the closing message for the node. 
 
 ![bot says final reply](bot_says_final-reply.png)
 
-   **Now that you know the three types of responses a bot can make, a quick word on adding entities**: 
+4. **Delay Message**: If the user is inactive for a specific set time, then the the bot replies with the Delay message. The delay can be set using the slider, it can be set between 20 seconds and 20 minutes.
 
-   > **To add an entity to a node:**
-   >
-   > - Select the node onto which the entity is to be added and click on the Entities button on the side panel. 
-   > - Click on "Add Entities"
-   > - Bot builders can search by the name of the entity they want to add, or by the particular word that needs to be detected. If they choose the latter method of search, all existing entities that are capable of detecting that word/variant will appear as the search result.
-   > - Click on one of the existing entities to add it to your node.
-   >
-   > - Can't find an entity that suits your purpose? Learn how to create an entity from scratch, HERE.
-   >
-   > **Depending on the complexity of the Bot Says component of the node, which of the preceding components a bot builder will have to add varies.**
-   >
-   > - *If there are no entities in the Bot Says*, this will be where a bot builder will input the replies that will come from the bot. *
-   > - *If there is only one entity in Bot Says*, there is no Initial Bot Says, as the entity response will serve as the bot reply. 
-   > - *If there are multiple entities in Bot Says*, there will be an Initial Bot Says, as well as entity responses between each entity that prompt users to input the answers required to move ahead.
+![bot says delay](bot_says_delay.png) 
 
-Each of the above three types of response (initial bot reply, entities, and final bot reply) are composed of **variants,** **chat bubbles**, **quick replies**, and **mandatory words**:
+Each of the above four types of response (initial bot reply, entities, final bot reply, and delay messages) are composed of **variants,** **chat bubbles**, **quick replies**, and **mandatory words**:
 
 - **Variants**: A bot response can consist of multiple variants. Each variant is an independent message. All variants should imply the same meaning. The bot rotates through them randomly with different users. This way, the bot avoids being repetitive even when asked the same question.
 

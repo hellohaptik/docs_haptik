@@ -55,7 +55,7 @@ We recommend starting the chatbot design process by creating an outline and a st
    
    - **Don't keep the user waiting**: Certain user requests require some amount of processing time by the chatbot. When you anticipate this happening, create fillers to keep users engaged. Similarly, when your chatbot's conversations with users are just opening, don't immediately dive into a series of questions. Always maintain an equal flow of information so users don't become frustrated or disengaged. 
    
-   ![Don't Keep Users Waiting](Intro_Design_DontKeepWaiting.PNG "Don't Keep Users Waiting")
+   ![Waiting](Intro_Design_Users_Waiting.png "Waiting")
    
    - **Add appropriate emotions to your conversation**: Make sure to match the tone of each bot response to the emotions a user expects. For example, if the bot is expressing positive information, such as the completion of a hotel booking to a user, throw in a smiling emoji or fun gif (if your bot has a somewhat casual persona). If the bot is expressing negative news, such as the inability to process a request, express this to the user with a regretful tone. 
    

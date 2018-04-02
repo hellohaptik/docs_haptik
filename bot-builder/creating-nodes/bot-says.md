@@ -25,7 +25,7 @@ Bot Says supports three types of responses:
 
 ![bot says final reply](bot_says_final-reply.png)
 
-   **A quick word on adding entities**: 
+   **Now that you know the three types of responses a bot can make, a quick word on adding entities**: 
 
    > **To add an entity to a node:**
    >

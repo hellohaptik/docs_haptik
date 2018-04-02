@@ -11,13 +11,14 @@ Welcome to the Haptik Platform Documentation
 .. toctree::
    :hidden:
 
-   bot-builder/index
+   introduction/index.rst
    bot-configuration/index
+   bot-builder/index
    bot-builder-advanced/index
    bot-analytics/index
    agent-interface/index
    security
-   
+
 
 
 For more information get in touch with us at hello@haptik.ai

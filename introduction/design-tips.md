@@ -59,4 +59,4 @@ We recommend starting the chatbot design process by creating an outline and a st
    
    - **Add appropriate emotions to your conversation**: Make sure to match the tone of each bot response to the emotions a user expects. For example, if the bot is expressing positive information, such as the completion of a hotel booking to a user, throw in a smiling emoji or fun gif (if your bot has a somewhat casual persona). If the bot is expressing negative news, such as the inability to process a request, express this to the user with a regretful tone. 
    
-   ![Adding Appropriate Emotions](Intro_Design_Emotions.png "Adding Appropriate Emotions") 
+   ![Appropriate Emotions](Design_Emotions.png "Appropriate Emotions") 

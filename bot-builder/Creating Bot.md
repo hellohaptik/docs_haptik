@@ -5,6 +5,7 @@ Time to get started!
 The first step in the process of creating a bot is to configure your bot's basic details. Navigate to the Mogambo homepage and click on the "Create a new bot" button, located in the upper right hand corner of the page:
 
    ![Create New Bot Button](Create New Bot Button.png "Create New Bot Button")
+   ![Connecting on a Personal Level](Intro_Design_PersonalLevel.png "Connecting on a Personal Level") 
 
 The following pop-up will appear:
 

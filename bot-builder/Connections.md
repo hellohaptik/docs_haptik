@@ -8,7 +8,9 @@ The connections you create can prompt a user to transition from one node to the 
 
    - To set a connection based on a user input, click on the arrow linking the two nodes you need to link
    - Click on 'Connection Responses,' which will take you to the following screen:
-   - [input image from http://haptik-docs.readthedocs.io/en/latest/bot-builder/connecting-nodes.html]
+   
+![transition connections](transition_messages.png)
+   
    - Decide which type of user input you want to set as an indicator to transition to the next node. 
      - **Independent Responses**: Adding potential user inputs here indicates to the bot that a user may transition to this next node from any point in the conversation as long as their input sufficiently matches the responses input by the bot builder. 
      - **Responses from 'Previous_Node'**: This lets you limit the flow of conversation so that a user can only reach the next node if the bot has received a response from the specific preceding node.
@@ -17,7 +19,7 @@ The connections you create can prompt a user to transition from one node to the 
 
    - To set a connection based on an entity presence, click on the arrow connecting the two nodes you're looking to connect. This will take you to the following screen: 
 
-     [input image from http://haptik-docs.readthedocs.io/en/latest/bot-builder/connecting-nodes.html]
+  ![transition entity](transition_entity.png)
 
    - The entities from the first node should automatically appear in a drop down menu. Select from the list to complete the creation of a transition based on an entity presence. 
 
@@ -25,7 +27,7 @@ The connections you create can prompt a user to transition from one node to the 
 
    - To set a step transition value, click the arrow between the two nodes for which you're creating a connection. Select Step Transition Values, which will take you to this screen: 
 
-     [input image from http://haptik-docs.readthedocs.io/en/latest/bot-builder/connecting-nodes.html]
+![transition entity value](transition_entity_values.png)
 
      The entity (or entities) present in the first node will be listed in the left-hand column. In the column labeled Values, type the value from the entity (or entities) you want to set as the required transition value. 
 

@@ -21,20 +21,30 @@ You can use the framework of stories and sub-stories as a skeleton for building 
 
 #### Creating a Story
 
-To add a story just click 'Add a Story' button and enter the name of the story in 'Enter Story Name' and click on the 'OK' button. 
+To add a story, just click 'Add a Story' button: and enter the name of the story in 'Enter Story Name' and click on the 'OK' button. 
 
-[insert images from https://github.com/hellohaptik/docs_haptik/blob/master/bot-builder/creating-bot.rst]
+![Add Story](add_story_button.png)
+
+Enter the name of the story in 'Enter Story Name' and click on the 'OK' button:
+
+![Story Dialogue](input_story_dialog.png)
 
 Post creation of a story, the story will be displayed as depicted below. 
 
-[insert images from https://github.com/hellohaptik/docs_haptik/blob/master/bot-builder/creating-bot.rst]
+![New Story Complete](new_story_complete.png)
 
 #### Creating a Sub-story
 
-Go into the story inside which the sub-story needs to be added. To add a sub-story, click 'Add Sub-story' button and enter the name of the sub-story in 'Sub Story Name' and click on the 'Create' button. 
+Go into the story inside which the sub-story needs to be added. To add a sub-story, click 'Add Sub-story' button. 
 
-[insert images from https://github.com/hellohaptik/docs_haptik/blob/master/bot-builder/creating-bot.rst]
+![Add sub story](add_sub_story_button.png)
+
+ Next, enter the name of the sub-story in 'Sub Story Name' and click on the 'Create' button. 
+ 
+![sub story dialogue](input_sub_story_dialog.png) 
 
 Post creation of a sub-story, the sub-story will be displayed as depicted below. 
 
-[insert images from https://github.com/hellohaptik/docs_haptik/blob/master/bot-builder/creating-bot.rst]
+![new sub story complete](post_sub_story_creation.png) 
+
+When you are done creating all the sub-stories your conversation requires, click the substory you want to start building. 

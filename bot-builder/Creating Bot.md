@@ -4,11 +4,11 @@ Time to get started!
 
 The first step in the process of creating a bot is to configure your bot's basic details. Navigate to the Mogambo homepage and click on the "Create a new bot" button, located in the upper right hand corner of the page:
 
-  ![Create New Bot Button](Create New Bot Button.png "Create New Bot Button") 
+  ![Create New Bot Button](Create New Bot Button.png"Create New Bot Button") 
 
 The following pop-up will appear:
 
-  ![Create New Bot Popup](Create New Bot Popup.png "Create New Bot Popup")
+  ![Create New Bot Popup](Create New Bot Popup.png"Create New Bot Popup")
 
 Fill the bot details according to the instructions given here:
 
@@ -18,4 +18,4 @@ Fill the bot details according to the instructions given here:
 
 You may also upload a new bot if you have one already created. 
 
-Click "Ok" to be taken to the bot builder GUI where you'll start adding the components that will make up your bot. 
+Click "Ok" to go on to the next page, where you'll be prompted to input the stories and sub-stories that will make up your conversation flow.

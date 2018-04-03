@@ -9,7 +9,7 @@ To keep track of where your bots are being kept and being deployed, you’ll nee
 
 The following image might help you envision this organizational system: 
 
-
+![bot org structure](Partner_business_bot org.png)
 
 Below are two examples of Haptik's two main partners that serve two different functions:
 
@@ -19,15 +19,15 @@ Below are two examples of Haptik's two main partners that serve two different fu
 
 To get started creating businesses, navigate to the Business Manager tab from the Mogambo homepage and click the Create New Business button on the page's top right-hand corner:
 
-[insert picture]
+![manage business nav](manage_business_nav.png)
 
 You'll be taken to this page, where you'll need to click the "Create New Business" button, located on the top right-hand corner of the page. 
 
-[image]
+![manage business page](business_manager_page.png) 
 
 You'll be taken to this page, where you now need to fill in information in four main sections:
 
-[image]
+![four tabs](Four Tabs Business Manager.png)
 
 - Business
 - Bot
@@ -66,7 +66,7 @@ Each business is equipped with a taskbar that will helps users understand what t
 
 **Create New Task**: When you click this box, a new pop-up will appear, as below:
 
-[image]
+![create new task](Create new tasks.png)
 
 Fill out the details as outlined here: 
 

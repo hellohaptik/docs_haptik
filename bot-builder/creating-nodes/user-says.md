@@ -70,4 +70,8 @@ Tags are what we call the keywords that the bot uses to identify the user's inte
 ![remove tags](user_says_remove_tags.png)
 
 #### **(4) Train Bot**:
-Every time a bot builder adds new inputs to a node's User Says, they must train the bot. To do this, click on the Train Bot button on the GUI's uppper right hand corner. 
+Every time a bot builder adds new inputs to a node's User Says, they must train the bot. To do this, click on the Train Bot button on the GUI's uppper right hand corner, as shown: 
+
+![train bot button](Train Bot Button.png) 
+
+Only when you train the bot will the bot be able to recognize user inputs as triggers to move on to a node - so **don't forget to train the bot!**

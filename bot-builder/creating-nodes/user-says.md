@@ -34,25 +34,25 @@ There are several actions bot builders must take to train their bot to be able t
 
 ![user says context menu](user_says_context_search.png)
 
-    The synonyms overlay opens:
+   The synonyms overlay opens:
 
 ![synonym overlay](user_says_search_synonyms.png)
 
-    Select the meaning that best fits the context. Synonyms are now enabled for the word. You can edit the synonyms list at this point. Note that you would be editing the global synonym dictionary. These synonyms would be added for **all** other bots that are using the same word. Please edit this list with extreme caution.
+   Select the meaning that best fits the context. Synonyms are now enabled for the word. You can edit the synonyms list at this point. Note that you would be editing the global synonym dictionary. These synonyms would be added for **all** other bots that are using the same word. Please edit this list with extreme caution.
     
 ![edit synonyms](user_says_edit_synonyms.png)
 
-    Close the overlay and hit Save and Exit to save your changes. 
+   Close the overlay and hit Save and Exit to save your changes. 
 
   - **To delete synonyms**, select a word(s) with a blue underline so that the context menu opens. Click on *View Synonyms*: 
 
 ![context view](user_says_context_view.png)
 
-    Delete the eneabled checkbox in the left pane to disable the synonym: 
+   Delete the eneabled checkbox in the left pane to disable the synonym: 
 
 ![disable synonyms](user_says_disable_synonym.png)
 
-    Hit save to save your changes. 
+   Hit save to save your changes. 
 
   **NOTE!** When you enable/disable synonyms for a particular word in a user response, they’re applied across all user responses in that section. You’ll notice that when you enable synonyms for call for example, all occurences of the word call get underlined blue. (This does not apply for tags)
 

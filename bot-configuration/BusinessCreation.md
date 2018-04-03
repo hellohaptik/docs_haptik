@@ -9,7 +9,7 @@ To keep track of where your bots are being kept and being deployed, you’ll nee
 
 The following image might help you envision this organizational system: 
 
-![bot org structure](Partner_business_bot org.png)
+![bot_org_structure](partner_business_bot.png)
 
 Below are two examples of Haptik's two main partners that serve two different functions:
 
@@ -27,7 +27,7 @@ You'll be taken to this page, where you'll need to click the "Create New Busines
 
 You'll be taken to this page, where you now need to fill in information in four main sections:
 
-![four tabs](Four Tabs Business Manager.png) 
+![four_tabs](four_tabs_biz_manager.png) 
 
 - Business
 - Bot
@@ -66,7 +66,7 @@ Each business is equipped with a taskbar that will helps users understand what t
 
 **Create New Task**: When you click this box, a new pop-up will appear, as below:
 
-![create new task](Create new tasks.png)
+![create_new_task](create_new_tasks.png) 
 
 Fill out the details as outlined here: 
 

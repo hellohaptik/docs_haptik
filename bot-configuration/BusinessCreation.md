@@ -27,7 +27,7 @@ You'll be taken to this page, where you'll need to click the "Create New Busines
 
 You'll be taken to this page, where you now need to fill in information in four main sections:
 
-![four tabs](Four Tabs Business Manager.png)
+![four tabs](Four Tabs Business Manager.png) 
 
 - Business
 - Bot

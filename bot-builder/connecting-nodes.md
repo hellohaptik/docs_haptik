@@ -1,47 +1,33 @@
-# Connecting Nodes
+## Connections
 
-While a single node by itself is capabale of detecting a user intent, collecting entities and calling an API function. The real power and intelligence of Haptik Bots comes from being able to connect multiple nodes together to create a much more complex and powerful flow.
+Connections represent the path a conversation takes from node to node. Depending on the response a user inputs to the bot, they traverse down a different connection to the appropriate next node. Bot builders must modify every connection they create to indicate which user inputs correspond to which nodes.  
 
-A Conversation can move from one node to another based in 3 ways
+The connections you create can prompt a user to transition from one node to the next in the following three ways:
 
-1. Transitioning basis on Messages
-2. Transitioning via an Entity Presence
-3. Transitioning basis a particular entity value
+1. **Basis message input by user**: This is when a conversation moves from one node to another based on a particular keyword/phrase or set of keywords sent by a user.
 
-Before we look at each of these in more details let's see how a connection is made in the first place! The easiest way to connect nodes to each other is to hold down <kbd>shift</kbd> and drag a connection from one node to another. It's that easy!
+   - To set a connection based on a user input, click on the arrow linking the two nodes you need to link
+   - Click on 'Connection Responses,' which will take you to the following screen:
+   
+![transition connections](transition_messages.png)
+   
+   - Decide which type of user input you want to set as an indicator to transition to the next node. 
+     - **Independent Responses**: Adding potential user inputs here indicates to the bot that a user may transition to this next node from any point in the conversation as long as their input sufficiently matches the responses input by the bot builder. 
+     - **Responses from 'Previous_Node'**: This lets you limit the flow of conversation so that a user can only reach the next node if the bot has received a response from the specific preceding node.
 
-*Note that this connection is a directional connection.*
+2. **Basis an entity presence**: When you’ve added an entity to a conversation, you can define the transition from the node with the entity to the next as only being possible if the user has input a response that falls within the entity. This is particularly helpful when you are setting a conversational flow in which a user needs to input something like a phone number or email ID. All values within the entities are accepted, but the bot will be able to determine whether or not the user has input the correct type of value (i.e. a 9 digit number or a complete email address). 
 
-If you define more than 1 method for transitioning from 1 node to another. The rules are evaluated as an *OR* clause. i.e. If any one of the criteria are met the node will transition.
+   - To set a connection based on an entity presence, click on the arrow connecting the two nodes you're looking to connect. This will take you to the following screen: 
 
-## Transitioning based on Messages
+  ![transition entity](transition_entity.png)
 
-A conversation can move from one node to another node based on a particular keyword or set of messages sent by the user.
+   - The entities from the first node should automatically appear in a drop down menu. Select from the list to complete the creation of a transition based on an entity presence. 
 
-Click on the *Connection Responses* button to reach the page below
+3. **Basis a particular entity value** (a.k.a. a **Step Transition)**: The last type of transition that you can create is where a user may only move to the next node if a user inputs a specific value(s) from within an entity in the first node. 
 
-Similar to the *User Says* page, a set of user responses can be defined below for which the bot will transition. Haptik will automatically detect similar responses, enter as much data as possible to increase the intelligence of the bot.
+   - To set a step transition value, click the arrow between the two nodes for which you're creating a connection. Select Step Transition Values, which will take you to this screen: 
 
-![Transition Message](transition_messages.png)
+![transition entity value](transition_entity_values.png)
 
-## Transitioning via an Entity Presence
+     The entity (or entities) present in the first node will be listed in the left-hand column. In the column labeled Values, type the value from the entity (or entities) you want to set as the required transition value. 
 
-A conversation can move from one node to another once  particular entities have been collected, regardless of their value.
-
-The screenshot below shows the detailed view of a connection. The Transition entities selected below can be defined as required for the transition to take place.
-
-![Transition Entity](transition_entity.png)
-
-
-
-
-
-## Transitioning basis a particular entity value
-
-A conversation can move from one node to another once  particular entities have been collected and their value matches certain values specified.
-
-Click on the *Step Transition Values* button to reach the page below
-
-The Screenshot below shows the specific values required per entity for a transition to take place. These values are defined basis the Entity that has been created. 
-
-![Transition Entities](transition_entity_values.png)

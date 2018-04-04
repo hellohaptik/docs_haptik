@@ -5,9 +5,9 @@ Bot Builder
    :caption: Bot Builder:
 
    creating-bot
-   testing-bot
-   nodes
-   integrating-custom-code
+   creating-story
+   creating-nodes/index
    connecting-nodes
    general-nodes
-   general-responses   
+   general-responses
+   testing-bot

@@ -1,6 +1,4 @@
-
 # Client SDKs
-
 ------
 
 ## Android SDK
@@ -13,7 +11,7 @@ Details on Deploying on iOS can be found here :
 
 ## Javascript SDK
 
-Details on Deploying on the web can be found here : 
+Details on Deploying on the web can be found here :
 
 ## Facebook Deployment
 

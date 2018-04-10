@@ -2,11 +2,15 @@
 
 **API** - A software intermediary that allows two applications to communicate. In the context of Mogambo, bot builders can use APIs to connect data from another application to a chat flow. 
 
-**Button** - One possible bot reply format. A button represents a single task in a *taskbar* (see more information below) that bots can deploy to prompt users to navigate in one of several directions. Looks like this: (ADD GOOD IMAGE)
+**Button** - One possible bot reply format. A button represents a single task in a *taskbar* (see more information below) that bots can deploy to prompt users to navigate in one of several directions. Looks like this: 
 
-**Carousel** - Another possible bot reply format. A carousel is comprised of a set of selections a user may make, presented in a horizontal scroll format. Each item is enabled with an icon to give bot builders the opportunity to supplement the selection list with more detail. A carousel is usually used to prompt users to make a selection of some sort (such as the hotel they’d like to book, the destination they’d like to visit, etc). Looks like this: (ADD GOOD IMAGE)
+![demo_buttons](demo_buttons.png)
 
-**Chat Bubble** - A chat bubble is the bubble in which a bot reply is shown. Looks like this" (ADD GOOD IMAGE)
+**Carousel** - Another possible bot reply format. A carousel is comprised of a set of selections a user may make, presented in a horizontal scroll format. Each item is enabled with an icon to give bot builders the opportunity to supplement the selection list with more detail. A carousel is usually used to prompt users to make a selection of some sort (such as the hotel they’d like to book, the destination they’d like to visit, etc). Looks like this: 
+
+![demo_carousel](demo_carousel.png)
+
+**Chat Bubble** - The bubble in which a bot reply is shown. 
 
 **Conversational User Interface** - A digital interface that allows users to interact with an operating system by telling it what to do, via voice or text, rather than by interacting with icons on a screen or using syntax specific commands. 
 
@@ -35,7 +39,9 @@ When a user sends a message to your bot, our pipeline identifies keywords in the
 
 **Node** - Nodes are the building blocks of our chatbots; they are interlinked and, when taken altogether, comprise a full conversation, including all its various chat flow variants. Nodes are the points where conversation converges or diverges basis the information users input to the bot. 
 
-**Quick Reply** - Another possible bot reply format. Quick replies are a limited selection of preset user responses presented by the bot that the user can tap to choose from. Looks like: (ADD GOOD IMAGE)
+**Quick Reply** - Another possible bot reply format. Quick replies are a limited selection of preset user responses presented by the bot that the user can tap to choose from. Looks like: 
+
+![demo_quickreply](demo_quickreply.png) 
 
 **Story** - Stories are major tasks that usually align with the overall goals of the chatbot. 
 

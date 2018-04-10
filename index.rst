@@ -9,7 +9,9 @@ Welcome to the Haptik Platform Documentation
 Welcome to the user's guide to the Haptik Platform. Here, you'll find step by step instructions on how to use the Haptik bot builder, analytics tool, and live agent chat interface. 
 
 Start learning about the bot builder tool at <http://haptik-docs.readthedocs.io/en/latest/introduction/index.html>.
+
 Read up on the analytics tool at <http://haptik-docs.readthedocs.io/en/latest/bot-analytics/index.html>.
+
 Jump to the agent interface at <http://haptik-docs.readthedocs.io/en/latest/agent-interface/index.html>.
 
 

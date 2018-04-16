@@ -1,9 +1,11 @@
 ## Connections
 This section will cover the following topics:  
+[What are connections?](#what-are-connections)  
 [Connections based on user inputs](#basis-message-input-by-user)  
 [Connections based on an entity presence](#basis-an-entity-presence)  
 [Connections based on particular entity values](#basis-a-particular-entity-value)  
 
+### What are Connections? 
 Connections represent the path a conversation takes from node to node. Depending on the response a user inputs to the bot, they traverse down a different connection to the appropriate next node. Bot builders must modify every connection they create to indicate which user inputs correspond to which nodes.  
 
 The connections you create can prompt a user to transition from one node to the next in the following three ways:

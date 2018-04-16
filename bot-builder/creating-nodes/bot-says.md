@@ -1,5 +1,13 @@
 ## Bot Says
+In this section, we'll cover:  
+[What is Bot Says?](#what-is-bot-says)  
+[Initial Bot Replies](#initial=bot-says)  
+[Entities](#entities)  
+[Final Bot Replies](#final-bot-reply)  
+[Delay Messages](#delay-message)  
 
+
+#### What is Bot Says?
 Once you've completed the User Says component of a node, you'll need to define the node's **Bot Says** component. Bot Says is where nodes store the replies that are deployed in response to what the user has input, as detected by User Says. Bot Says also houses **variants** and **entities**.
 
 To get started with adding some Bot Says responses, navigate to a specific node and click on either Bot Says or Entities. (See Screenshot Below)
@@ -12,22 +20,26 @@ Once you arrive at the Bot Says page, you'll see the following interface. This i
 
 Bot Says supports four types of responses:
 
-1. **Initial Bot Says**: The initial bot reply. It's the first message that the bot sends out when the node is activated. (**Note** that this is not active when there is only one entity present. For multiple entities, consider it to be the opening message. For more on the possible entity scenarios that can arise, see "Scenarios" section below. The initial bot says looks like: 
+#### Initial Bot Says
+The initial bot reply. It's the first message that the bot sends out when the node is activated. (**Note** that this is not active when there is only one entity present. For multiple entities, consider it to be the opening message. For more on the possible entity scenarios that can arise, see "Scenarios" section below. The initial bot says looks like: 
 
 ![bot says card](bot_says_bot-says-card.png)
 ![bot says card expanded](bot_says_bot-says-card-expanded.png) 
 
-2. **Entities**: If you want to gather any sort of user input that isn't confined to a very limited set of possible responses, you'll need to create an entity. An entity represents the set of values from which a user’s response must come in order for that user to progress onwards in a conversation. Depending on the context of the conversation, the required response can either be a single value or limited group of specific values from the entity, or any value from within the entity. Entities are always added in connection with the bot’s query the required response is associated with, so that they may detect whether the required response was given. Entities look like:
+#### Entities
+If you want to gather any sort of user input that isn't confined to a very limited set of possible responses, you'll need to create an entity. An entity represents the set of values from which a user’s response must come in order for that user to progress onwards in a conversation. Depending on the context of the conversation, the required response can either be a single value or limited group of specific values from the entity, or any value from within the entity. Entities are always added in connection with the bot’s query the required response is associated with, so that they may detect whether the required response was given. Entities look like:
 
 ![bot says entity](bot_says_entity.png)
 
  > For more information about entities, read on to the next page. 
 
-3. **Final Bot Reply**: Once all the entities/data has been collected, the bot finally replies with the final bot reply. Think of it as the closing message for the node. 
+#### Final Bot Reply
+Once all the entities/data has been collected, the bot finally replies with the final bot reply. Think of it as the closing message for the node. 
 
 ![bot says final reply](bot_says_final-reply.png)
 
-4. **Delay Message**: If the user is inactive for a specific set time, then the the bot replies with the Delay message. The delay can be set using the slider, it can be set between 20 seconds and 20 minutes.
+#### Delay Message
+If the user is inactive for a specific set time, then the the bot replies with the Delay message. The delay can be set using the slider, it can be set between 20 seconds and 20 minutes.
 
 ![bot says delay](bot_says_delay.png) 
 

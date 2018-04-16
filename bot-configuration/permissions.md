@@ -1,7 +1,7 @@
 # Permissions
 
 This section contains informaiton as to how permissions are maintained within the Haptik Tools. You can control the granularity of access each user has to various tools in the system. Jump straight to:  
-[Partner Assignment](#partner-assignment)
+[Partner Assignment](#partner-assignment)  
 [Features](#features)  
 [Permission Groups](#permission-groups)
 

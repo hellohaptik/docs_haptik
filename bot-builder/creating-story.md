@@ -1,6 +1,6 @@
 ## Creating a Story Flow
-
-[Components of a Story Flow?](#components-of-a-story-flow)
+In this section, we'll cover:  
+[Components of a Story Flow?](#components-of-a-story-flow)  
 [How to Create Stories](#creating-a-story)  
 [How to Create Sub Stories](#creating-a-sub-story)
 

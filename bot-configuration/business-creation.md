@@ -1,6 +1,7 @@
 ## Business Creation
 
 [Organizational Hierarhcy](#organizational-hierarchy)
+
 [Creating a Business](#how-to-create-a-business)
 
 #### Organizational Hierarhcy

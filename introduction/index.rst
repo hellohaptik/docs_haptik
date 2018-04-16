@@ -1,6 +1,10 @@
 Bot Builder Introduction 
 ==================================
 
+[Welcome](#welcome-to-the-bot-builder-tool)
+[Getting Started](#getting-started)
+[Resources](#
+
 Welcome to the Bot Builder Tool!
 --------------------------------
 

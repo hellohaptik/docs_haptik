@@ -1,5 +1,10 @@
 ## Business Creation
 
+[Organizational Hierarhcy](#organizational-hierarchy)
+[Creating a Business](#how-to-create-a-business)
+
+#### Organizational Hierarhcy
+
 To keep track of where your bots are being kept and being deployed, you’ll need to maintain a bot organization system. We’ve devised a three-tiered organizational system that will help you keep bots organized in such a manner that allows you to easily deploy bots across multiple channels. The three tiers of this system are called **bots**, **businesses**, and **partners**:
 
 - The smallest unit of organization is the actual **bot**. Bots are clusters of chatflows that accomplish limited goals. You can think of a bot like a single tangent of a conversation (i.e. if the conversation is about technology, a bot would be the conversational tangent about blockchain). 

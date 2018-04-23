@@ -24,13 +24,3 @@ Getting Started
 ---------------
 
 To log-on to the bot builder tool directly, click here: <https://staging.hellohaptik.com/mogambo/#/> 
-
-
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Introduction:
-
-   welcome
-   glossary
-   design-tips

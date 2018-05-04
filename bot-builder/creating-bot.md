@@ -20,4 +20,4 @@ Fill the bot details according to the instructions given here:
 
 Click "Ok" to go on to the next page, where you'll be prompted to input the stories and sub-stories that will make up your conversation flow.
 
-To read more about how to plan for and create stories and sub-stories, jump to the [Creating a Story Flow] section.
+To read more about how to plan for and create stories and sub-stories, jump to the [Creating a Story Flow](http://haptik-docs.readthedocs.io/en/latest/bot-builder/creating-story.html) section.

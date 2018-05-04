@@ -1,10 +1,17 @@
 ## Entities
 
-#### What is an entity again? 
+In this section, we'll cover the following topics:  
+[What is an Entity?](#what-is-an-entity-again)  
+[When to Use Entities](#when-is-the-appropriate-time-to-use-an-entity)  
+[How Adding Entities Affects Bot Says](#how-does-using-an-entity-affect-the-other-bot-says-responses?)  
+[How to Add an Entity](#adding-an-entity)  
+[Creating a New Entity](#making-a-new-entity)  
+
+#### What is an entity again?
 
 **Entities**: An entity represents the set of values from which a user’s response must come in order for that user to progress onwards in a conversation. Depending on the context of the conversation, the required response can either be a single value or limited group of specific values from the entity, or any value from within the entity. Entities are always added in connection with the bot’s query the required response is associated with, so that they may detect whether the required response was given. 
 
-#### When is the appropriate time to use an entity? 
+#### When is the appropriate time to use an entity?
 
 Some examples of when you would use an entity in Bot Says: 
 

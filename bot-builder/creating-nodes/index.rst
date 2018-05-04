@@ -1,6 +1,14 @@
 Nodes
 ---------------------------
+On this page, we'll cover the following topics:
 
+What-is-a-node_
+
+Subcomponents-of-nodes_
+
+Creating-a-node_
+
+.. _What-is-a-node:
 What is a Node?
 ^^^^^^^^^^^^^^^
 
@@ -8,8 +16,10 @@ What is a Node?
 
 To jump straight to reading about any of the sub-components of nodes, click on the link below. Otherwise, keep reading below to learn about how to get started creating nodes.
 
+.. _Subcomponents-of-nodes:
 Subcomponents of Nodes
 ^^^^^^^^^^^^^^^^^^^^^^
+
 .. toctree::
    :maxdepth: 2
 
@@ -18,6 +28,7 @@ Subcomponents of Nodes
    entities
    integrating-custom-code
 
+.. _Creating-a-node:
 Creating a Node
 ^^^^^^^^^^^^^^^
 You will create your nodes inside the Mogambo graph. To make a node, click into the sub-story graph where you'd like your node to appear, and click on the 'Add Node' button on the top left-hand corner of the graph, as depicted here:

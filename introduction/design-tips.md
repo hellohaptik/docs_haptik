@@ -59,4 +59,10 @@ We recommend starting the chatbot design process by creating an outline and a st
    
    - **Add appropriate emotions to your conversation**: Make sure to match the tone of each bot response to the emotions a user expects. For example, if the bot is expressing positive information, such as the completion of a hotel booking to a user, throw in a smiling emoji or fun gif (if your bot has a somewhat casual persona). If the bot is expressing negative news, such as the inability to process a request, express this to the user with a regretful tone. 
    
-   ![Appropriate Emotions](Design_Emotions.png "Appropriate Emotions") 
+   ![Appropriate Emotions](Design_Emotions.png "Appropriate Emotions")
+   
+## Getting Started
+
+Jump to the [Bot Builder](http://haptik-docs.readthedocs.io/en/latest/bot-builder/creating-bot.html) section for instructions on how to get started building a bot. 
+
+To start building a bot as you continue through the documentation, log into the Haptik platform [here](https://staging.hellohaptik.com/mogambo/#/). 

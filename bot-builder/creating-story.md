@@ -1,4 +1,10 @@
 ## Creating a Story Flow
+In this section, we'll cover:  
+[Components of a Story Flow](#components-of-a-story-flow)  
+[How to Create Stories](#creating-a-story)  
+[How to Create Sub Stories](#creating-a-sub-story)
+
+#### Components of a Story Flow
 
 Once you've configured your bot, you'll need to set up the stories and sub-stories that make up your chat flow. We've given a description of these units of organization here, but you can also see the Designing Bots section for more details about the role of stories and sub-stories in the creation of chatflows. 
 

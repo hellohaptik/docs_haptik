@@ -1,12 +1,8 @@
 ## Business Creation
 
-In this section, we'll cover:  
-[Organizational Hierarchy](#organizational-hierarchy)  
-[Creating a Business](#how-to-create-a-business)
-
 #### Organizational Hierarhcy
 
-To keep track of where your bots are being kept and being deployed, you’ll need to maintain a bot organization system. We’ve devised a three-tiered organizational system that will help you keep bots organized in such a manner that allows you to easily deploy bots across multiple channels. The three tiers of this system are called **bots**, **businesses**, and **partners**:
+The Haptik bot builder platform has a three-tiered organizational system that will help keep bots organized in such a manner that allows bot developers to easily deploy bots across multiple channels. The three tiers of this system are called **bots**, **businesses**, and **partners**:
 
 - The smallest unit of organization is the actual **bot**. Bots are clusters of chatflows that accomplish limited goals. You can think of a bot like a single tangent of a conversation (i.e. if the conversation is about technology, a bot would be the conversational tangent about blockchain). 
 - Several bots can be grouped together into one **business**. Continuing the analogy from before, a business would therefore be the *topic* of a conversation (i.e. the business called "technology" would be comprised of several bots focused on various sub-topics related to technology, such as blockchain, servers, and so forth). While most businesses are comprised of multiple bots, it is also possible for a business to consist of only a single bot. 
@@ -24,7 +20,9 @@ Below are two examples of Haptik's two main partners that serve two different fu
 
 #### How to Create a Business
 
-To get started creating businesses, navigate to the Business Manager tab from the Mogambo homepage and click the Create New Business button on the page's top right-hand corner:
+There are two ways to create a business. The first way is to create a business at the same time as you create a bot from the bot builder homepage. For more information about how to do this, jump to the page that describes how to create a new bot [here](http://haptik-docs.readthedocs.io/en/latest/bot-builder/creating-bot.html). 
+
+The second way to create a business is through the business manager page. To get started creating businesses from the business manager, navigate to the Business Manager tab from the Mogambo homepage and click the "Create New Business" button on the page's top right-hand corner:
 
 ![manage business nav](manage_business_nav.png)
 
@@ -67,31 +65,49 @@ In this section, you will assign the bots that will be live in your business.
 
 #### Task(s)
 
-Each business is equipped with a taskbar that will helps users understand what they can get out of the conversation. Each task will be linked to one or multiple bots. 
+Bot builders can define **tasks** for each business. Tasks are the activities that the chatbot can assist users with. On the web SDK, the tasks associated with each business can be viewed by the user while they are chatting in that particular channel. Providing this taskbox helps guide users to initiate conversations that the chatbot can handle most effectively. For example, a chatbot designed to help users set reminders might have the following taskbox:
 
-**Taskbar Header Message**: Before you can add tasks, add a header message. This message will be shown to users to help frame the purpose of this cluster of tasks. 
+![taskbox_sample](taskbox_sample.png)
+
+Multiple businesses that are clustered together that have some sort of homescreen from which where multiple businesses can be accessed can also have something called a **fab button**. A fab button essentially serves the same purpose as a taskbox, but aggregates key tasks from each business and presents these the user from the homescreen.
+
+You can edit a business' tasks from the business manager tab. Scroll down to the tasks toolbar and click:
+
+![taskbox_button](taskbox_button.png)
+
+When the editing fields open, you'll need to fill out the following information: 
+
+**Taskbox Header Message**: This header will be shown to users to explain how to use the taskbox. In the sample taskbox above, the header is the text above the tasks that says, "Hi! Tap below to get started." 
 
 **Create New Task**: When you click this box, a new pop-up will appear, as below:
 
 ![create_new_task](create_new_tasks.png) 
 
-Fill out the details as outlined here: 
+Fill out the following details: 
 
-- **Task Title**: Give the task a label (bear in mind that these titles need to fit into a taskbar in a chatbox - so keep it short)
-- **User Says**: What the user will say once the task is tapped. 
-- **Live Cities**: Again, you can indicate if the bot is only supposed to be enabled in certain geographies or globally. 
+- **Task Title**: Give the task a label. This is what will show up on the actual task button.
+- **User Says**: When the user taps on a task, a user says message is generated and sent in tandem. Enter what the user says associated with this task will be in this field. 
+- **Live Cities**: Indicate if this task should be live globally or only in certain geographies. 
 - **Shorthand**: 
-- **Visible on Fab Button**: The fab button is a shortcut visible at the partner level that lists various tasks that are accessible via businesses within the partner. Sort of like a list of favorite tasks.
-- **Visible on Task Box**: Checking this box will make this task visible on the business's task box.
+- **Visible on Fab Button**: As explained above, the fab button is a shortcut visible at a partner level (i.e. where several businesses are clustered together) that lists key tasks from each business. Check off this box if the task you're creating should be added to the fab button.
+- **Visible on Task Box**: Check this box to make this task active on the taskbox associated with this channel. If you want to deactivate a task at any point, uncheck this box, and it will be removed from the taskbox.
 - **Location Required**: Enabling this box will require users to input their location to move ahead with the task. 
 
-Click save. 
+Click save. You've created a task! 
 
 #### **Chat Settings** 
 
-Finally, you need to assign the business a partner. As described above, partners are where clusters of businesses are deployed. 
+This section is where you can deploy businesses across a single or multiple partners, and customize several chat settings for each partner. The section is located at the bottom of the business manager page and looks like this:
 
-To assign a new partner, click the "Add New Partner" button on the right side of the bar. You may add more than one partner. 
+![chat_settings_reference](chat_settings_reference.png)
 
-You're done! Click save on the top right-hand corner of the Create New Business Page and navigate back to the bot you'd like to build.
+To make this business live on a new partner, click on "Add New Partner." A modal with the full list of partners you have permissions to access will appear. To make this business live on a partner, check off the box next to the partner name and exit the modal. 
 
+To customize the settings for each partner the business is live on, click the dropdown next to "Partner:" on the top lefthand side of this section. Once you've selected a partner from this dropdown, the rest of the settings in this section will only be applied to how this business appears in that particular partner. You can apply the following customized settings:
+
+- **Make this Business Active/Archived**: To make this business live on a partner, check off "Make this Business Active." If you want to temporarily make the business inactive on the partner, select "Make this Business Archived."
+- **Make this Business Sponsored**:
+- **Upload Business Icon**: When there are multiple businesses clustered together in a partner that are shown in a homescreen, you can assign each business an icon. Upload that icon here.
+- **Task Title**: The taskbox that will appear for each business can be customized to the business's various partners. Select "Add Task" to start adding tasks to the business's taskbox on a particular partner. A modal with a list of all the tasks associated with the business will appaer; select the tasks you want to make live on a particular partner. Exit the modal. 
+- **Bot Break Message**: This is the message that will be sent to users when the bot breaks.
+- **Outlier Message**: This is the message that will be sent to users when a message is detected to be an outlier. 

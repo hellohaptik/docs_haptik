@@ -1,5 +1,12 @@
 ## User Says
+In this section, we'll cover:  
+[What is User Says?](#what-is-user-says)  
+[How to Define User Intents](#define-the-user-intent)  
+[Enabling & Disabling Synonyms](#enable-and-disable-synonyms)  
+[Adding & Removing Tags](#add-or-remove-tags)  
+[Training Your Bot](#train-bot)  
 
+#### What is User Says? 
 **User Says** is where the node identifies that the user has given an input that warrants this particular node's response. The node identifies this by comparing the keywords in the user's input to the keywords in the intent associated with this node. If the keywords are similar enough, users proceed to this particular node.
 
 To open up the User Says of a node, click on the User Says tab on the right-hand sidebar as indicated below:
@@ -29,7 +36,7 @@ This is where bot builders construct the set of synonymous responses users are m
 ![user says modify answer](user_says_modifying_user_response.png)
 ![user says delete response](user_says_deleting_user_response.png)
 
-#### 2. Enable/disable synonyms:
+#### 2. Enable and disable synonyms:
 In addition to defining the various manners of wording phrases that would comprise an intent, bot builders must also define sets of synonyms a user could employ in a phrase. By selecting words from phrases in an intent and defining the synonyms that fit, users create synonym clusters that are then enabled for users.
 
    - **To add synonyms,** highlight a word in your input user response that has appeared with a black underline. When you highlight the word, the context menu will open. Select *Search Synonyms*.

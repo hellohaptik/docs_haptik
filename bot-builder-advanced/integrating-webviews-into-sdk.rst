@@ -2,7 +2,17 @@
 
 Intergrating Webviews into Android and iOS SDKs
 ===============================================
+This page will cover the following topics: 
 
+Overview_
+
+Displaying-the-Webview_
+
+Closing-the-Webview_
+
+.. _Overview:
+Overview
+--------
 The existing functionality of the Android and iOS SDKs can be extended
 by using native webview of each of the devices. This can be used to
 render custom content, take payments or other experiences which may be
@@ -13,6 +23,7 @@ difficult to offer with messages.
 
 .. _header-n8:
 
+.. _Displaying-the-Webview:
 Displaying the Webview
 ----------------------
 
@@ -48,6 +59,7 @@ Smart Action Syntax
 
 .. _header-n16:
 
+.. _Closing-the-webview:
 Closing the Webview
 -------------------
 

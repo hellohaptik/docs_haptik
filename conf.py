@@ -39,6 +39,7 @@ source_parsers = {
 extensions = ['sphinx.ext.doctest',
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
+    'sphinx_markdown_tables',
     'sphinx.ext.ifconfig',
     'sphinx.ext.viewcode']
 

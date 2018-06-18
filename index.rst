@@ -25,6 +25,7 @@ Jump to the agent interface at <http://haptik-docs.readthedocs.io/en/latest/agen
    bot-analytics/index
    agent-interface/index
    security
+   sla_agreement
 
 
 

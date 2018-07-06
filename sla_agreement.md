@@ -14,10 +14,10 @@ The following definitions apply to the SLA:
 ## Financial Credit
 
 | Monthly Uptime Percentage | Percentage of Monthly Bill that will be credited to future monthly bills of the customer. |
-| ------------------------- | ------------------------------------------------------------ |
-| 99% – < 99.9%             | 10%                                                          |
-| 95% – < 99.0%             | 25%                                                          |
-| < 95%                     | 50%                                                          |
+| ------------------------- | ----------------------------------------------------------------------------------------- |
+| 99% – < 99.9%             | 10%                                                                                       |
+| 95% – < 99.0%             | 25%                                                                                       |
+| < 95%                     | 50%                                                                                       |
 
 Customer must request Financial Credits described above, Customer must notify Haptik Technical Team within 30 days from the time the customer becomes eligible to receive a financial credit. Customer must provide Haptik with identifying information and the date and time those errors occured. If Customer does not comply with these requirements, Customer will forfeit its right to receive a Financial Credit. If a dispute arises with respect to this SLA, Haptik will make a determination in good faith based on its system logs, monitoring reports, configuration records, and other available information.
 
@@ -37,3 +37,37 @@ The SLA does not apply to
 6. In the event of a scheduled maintenance window (Intimation of which, will be provided atleast 1 week in advance.)
 
 
+
+## Technical Support
+
+Technical support is provided for the Haptik Service offering during the subscription period and is not
+available as a separate offering.
+
+
+
+| Severity | Severity Definition                                          | Response Time Objectives  | Response Time Coverage |
+| -------- | ------------------------------------------------------------ | ------------------------- | ---------------------- |
+| 1        | **Critical business impact/service down**: Business critical functionality is inoperable or critical interface has failed. This usually applies to the production environment and indicates an inability to access services resulting in a critical impact on operations. This condition requires an immediate solution. | Within 2 Hours            | 24x7                   |
+| 2        | **Significant business impact**:  A service business feature or function of the service that was previously working is severely restricted in its use. | Within 2-6 Business Hours | M-F Business Hours     |
+| 3        | **Minor business impact**:  Indicates that the core service or functionality of the bot is usable and the issue does not have a critical impact on operations. | Within 1-3 Business Days  | M-F Business Hours     |
+| 4        | **Minimal business impact**:  This may be an inquiry or non-technical request or any other minor issue or improvement. | Within 5-10 Business Days | M-F Business Hours     |
+
+
+
+## Escalation Matrix
+
+| Level | Name          | Title                   | E-Mail                 |
+| ----- | ------------- | ----------------------- | ---------------------- |
+| 1     | Shrey Jain    | Product Manager         | shrey@haptik.ai        |
+| 2     | Madhan Mohan  | Sr.Engineering Manager  | madhan.mohan@haptik.ai |
+| 3     | Kartik Poddar | Business Head           | kartik@haptik.ai       |
+| 4     | Prateek Gupte | Director of Engineering | prateek@haptik.ai      |
+| 5     | Swapan Rajdev | CTO                     | swapan@haptik.ai       |
+
+
+
+## Change Requests
+
+- Change requests will be assessed on a case by case basis.
+- Assessment will take into account a combination of scope and complexity of change, priority ascertained by client, original scope of the engagement and bandwidth available within Haptik's development team to take up the request. 
+- Final costing and timelines will be provided by Haptik based on these factors and work will be started once an agreement is reached with the Customer on the same.

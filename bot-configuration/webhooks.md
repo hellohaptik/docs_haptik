@@ -1,3 +1,7 @@
+# Webhooks
+
+
+
 ## Send Message to User via Registered Webhook
 
 The Haptik Platform  sends an event to your registered webhook whenever a bot or an agent has a message for the user. Your webhook must be a single `HTTPS` endpoint exposed by you that accepts  `POST` requests. All messages sent from the Haptik Platform will be in `JSON` format.

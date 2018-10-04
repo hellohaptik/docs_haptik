@@ -69,7 +69,7 @@ The Log Message API allows you to send messages via a `POST` request to the Hapt
 
 Example URL
 
-`https://api.haptikapi.com/v1.0/message_delivery/<CLIENT_NAME>/log_message_from_user/`
+`https://delivery.haptikapi.com/v1.0/log_message_from_user/<CLIENT_NAME>/`
 
 Example Payload
 

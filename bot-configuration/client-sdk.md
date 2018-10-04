@@ -1,22 +1,33 @@
 # Client SDKs
 ------
-In this section, we'll cover the following topics:   
-[Android SDK](#android-sdk)  
-[iOS SDK](#ios-sdk)  
-[Javascript SDK](#javascript-sdk)  
-[Facebook Deployment](#facebook-deployment)  
+In this section, we'll cover the following topics:  
+
+- [Android SDK](#android-sdk)  
+
+- [iOS SDK](#ios-sdk)  
+- [Javascript SDK](#javascript-sdk)  
+- [Facebook Deployment](#facebook-deployment)  
 
 ## Android SDK
 
-Details on Deploying on  Android  can be found here :
+A sample application with an integrated SDK can be found on the github repo:
+https://github.com/hellohaptik/haptiklib-demo
+
+The relevant documentation, aar files and JavaDocs can be found in the folder below:
+Android SDK and Related Documentation - https://drive.google.com/drive/folders/0B1dPUmeHaNriSk83YXpGaHFEV00?usp=sharing
 
 ## iOS SDK
 
-Details on Deploying on iOS can be found here :
+A sample application with an integrated SDK can be found on the github repo: https://github.com/hellohaptik/HaptikLib-iOS
+
+The relevant documentation is within the repository itself at the links below:
+
+Integration Guide - https://github.com/hellohaptik/HaptikLib-iOS/blob/master/Integration%20Guide.md
+Feature Guides - https://github.com/hellohaptik/HaptikLib-iOS/tree/master/Feature%20Guides
 
 ## Javascript SDK
 
-Details on Deploying on the web can be found here :
+Javascript Integration Documentation: https://hellohaptik.github.io/javascript_sdk/docs/
 
 ## Facebook Deployment
 

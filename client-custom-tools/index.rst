@@ -1,4 +1,4 @@
-Custom Tools, Athena
+Custom/Client Tools
 ====================
 
 .. toctree::

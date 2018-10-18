@@ -43,7 +43,7 @@ A HSL Image element is a type of Carousel element. However a seperate section ha
       </tr>
       <tr>
          <td>type</td>
-         <td>type list as per the actionables list specified in hsl properties</td>
+         <td>type list as per the actionables list specified in <a href='https://haptik-docs.readthedocs.io/en/latest/bot-builder-advanced/hsl-properties.html'>hsl-properties</a></td>
          <td>Yes</td>
       </tr>
       <tr>

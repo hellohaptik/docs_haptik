@@ -1,11 +1,37 @@
 ## HSL Text Element
 
+<table border="1" class="docutils">
+   <thead>
+      <tr>
+         <th>Property Name</th>
+         <th>Description</th>
+         <th>Required</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td>text</td>
+         <td>The message data</td>
+         <th>Yes</th>
+      </tr>
+      <tr>
+         <td>type</td>
+         <td>Should be "TEXT"</td>
+         <th>Yes</th>
+      </tr>
+      <tr>
+         <td>data</td>
+         <td>object that contains a list of quick replies, which can be empty</td>
+         <th>Yes</th>
+      </tr>
+   </tbody>
+</table>
+
+
 #### Sample Json for simple text element
 ```json
 {
 	"text": "simple text message",
-	"voice_text": "",
-	"mic_auto_open": false,
 	"type": "TEXT",
 	"data": {
 		"quick_replies": []

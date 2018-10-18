@@ -14,13 +14,15 @@ To build complex UI elements, we introduced Haptik Specific Language, our in-hou
 
 All of Haptik’s frontend properties (Android SDK, iOS SDK, Web SDK) are configured to render HSL objects.
 
-The basic anatomy of an HSL looks something like this:
-..code-block::
-    {
-    "text": str,
-    "type": str,
-    "data": dict
-    }
+The basic anatomy of an HSL looks something like this.
+
+.. code-block:: javascript
+
+  {
+    "text": "str",
+    "type": "str",
+    "data": "dict"
+  }
 
 A HSL Object is made up 3 primary properties: text, type & data.
 
@@ -28,16 +30,18 @@ A HSL Object is made up 3 primary properties: text, type & data.
 * type - Defines the main function of the HSL. For e.g. whether it's a carousel or a smart action or an order receipt etc.
 * data - Contains all the supporting data needed for the particular type.
 
-A quick example for a button smart action:
-..code-block::
-   {  
-   "text":"Hey there. This is a HSL Button Smart Action with 1 Actionable. Tapping on the actionable will send a message stored in the payload",
-   "type":"BUTTON",
-   "data":{  
+A quick example for a button smart action.
+
+.. code-block:: javascript
+
+  {  
+    "text":"Hey there. This is a HSL Button Smart Action with 1 Actionable. Tapping on the actionable will send a message stored in the payload",
+    "type":"BUTTON",
+    "data":{  
       "items":[  
          {  
             "actionable_text":"Tap",
-            "location_required":false,
+            "location_required":"false",
             "uri":"",
             "is_default":0,
             "type":"TEXT_ONLY",
@@ -48,11 +52,11 @@ A quick example for a button smart action:
             },
             "emoji":""
          }
-      ]
-   }
+    ]}
+  }
+  
 
 The above message will render like this on the front end:
-
 
 .. image:: hsl-button.jpeg
 

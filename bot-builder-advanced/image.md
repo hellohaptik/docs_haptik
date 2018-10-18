@@ -47,17 +47,17 @@ A HSL Image element is a type of Carousel element. However a seperate section ha
          <td>Yes</td>
       </tr>
       <tr>
-         <td>image_aspect_ratio</td>
+         <td>data.image_aspect_ratio</td>
          <td>The possible aspect ratios for images</td>
          <td>Yes</td>
       </tr>
       <tr>
-         <td>width</td>
+         <td>data.width</td>
          <td>THIN, MEDIUM, FAT, BIG defines how much space each carousel item will take, this will be set before the image aspect ratio</td>
          <td>Yes</td>
       </tr>
       <tr>
-         <td>items</td>
+         <td>data.items</td>
          <td>Multiple images can be shared at a time as per a carousel, however for a single image we will use one item</td>
          <td>Yes</td>
       </tr>

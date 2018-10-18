@@ -112,47 +112,47 @@ Carousel works mostly on actionables but some parts of it are very specific to C
       <tr>
          <td>text</td>
          <td>this will be the notification text</td>
-         <td>Required</td>
+         <td>Yes</td>
       </tr>
       <tr>
          <td>type</td>
          <td>has to be "CAROUSEL"</td>
-         <td>Required</td>
+         <td>Yes</td>
       </tr>
       <tr>
          <td>data.image_aspect_ratio</td>
          <td>defines the height of the carousel</td>
-         <td>Not Required</td>
+         <td>No</td>
       </tr>
       <tr>
          <td>data.width</td>
          <td>THIN, MEDIUM, FAT, BIG</td>
-         <td>Required</td>
+         <td>Yes</td>
       </tr>
       <tr>
          <td>data.items</td>
          <td>list of each carousel element</td>
-         <td>Required</td>
+         <td>Yes</td>
       </tr>
       <tr>
          <td>data.items.title</td>
          <td>title of carousel element</td>
-         <td>Not Required</td>
+         <td>No</td>
       </tr>
       <tr>
          <td>data.items.sub_title</td>
          <td>below title of carousel element</td>
-         <td>Not Required</td>
+         <td>No</td>
       </tr>
       <tr>
          <td>data.items.description</td>
          <td>appears below sub_title</td>
-         <td>Not Required</td>
+         <td>No</td>
       </tr>
       <tr>
          <td>data.items.actionable</td>
          <td>type list as per the actionables list specified in <a href='https://haptik-docs.readthedocs.io/en/latest/bot-builder-advanced/hsl-properties.html'>hsl-properties</a></td>
-         <td>Required</td>
+         <td>Yes</td>
       </tr>
 </table>
 

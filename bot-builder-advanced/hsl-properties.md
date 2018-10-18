@@ -223,7 +223,7 @@ Carousel works mostly on actionables but some parts of it are very specific to C
    <tbody>
       <tr>
          <td>title</td>
-         <td>This message is sent when the user taps on the actionable. Mostly used with the BUTTON element.</td>
+         <td>This message is sent when the user taps on the actionable.</td>
       </tr>
       <tr>
          <td>title</td>

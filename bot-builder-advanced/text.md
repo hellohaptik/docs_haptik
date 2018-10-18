@@ -98,7 +98,7 @@
       </tr>
       <tr>
          <td>is_default</td>
-         <td>if 1, click on the message, will trigger this quick reply</td>
+         <td>1 or 0, if 1, click on the message, will trigger this quick reply</td>
          <th>Yes</th>
       </tr>
       <tr>

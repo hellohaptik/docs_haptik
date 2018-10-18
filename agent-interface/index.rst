@@ -16,7 +16,7 @@ Assistants can be assigned 3 chats at a time. Below is the image for the same.
    :maxdepth: 2
    :caption: Agent Interface:
 
-   athena_sides
+   client-custom-tools/index
    athena_smart_actions
    admin_panel
    athena_assignment

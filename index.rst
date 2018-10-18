@@ -17,6 +17,9 @@ Read up on the analytics tool `here
 Jump to the agent interface `here 
 <http://haptik-docs.readthedocs.io/en/latest/agent-interface/index.html>`_.
 
+Read about our HSL elements `here
+<http://haptik-docs.readthedocs.io/en/latest/hsl-elements/index.html>`_.
+
 .. toctree::
    :hidden:
 
@@ -28,6 +31,7 @@ Jump to the agent interface `here
    agent-interface/index
    security
    sla_agreement
+   hsl-elements/index
 
 
 

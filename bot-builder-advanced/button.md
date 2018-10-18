@@ -47,32 +47,32 @@
          <td>Yes</td>
       </tr>
       <tr>
-         <td>actionable_text</td>
+         <td>data.items.actionable_text</td>
          <td>The text that is displayed to the users</td>
          <td>Yes</td>
       </tr>
       <tr>
-         <td>location_required</td>
+         <td>data.items.location_required</td>
          <td>DEPRECATED - true or false, if true, location information is sent to backend<</td>
          <td>Yes</td>
       </tr>
       <tr>
-         <td>is_default</td>
+         <td>data.items.is_default</td>
          <td>If True, this is the default element that is invoked if the image/text part of the element is tapped</td>
          <td>Yes</td>
       </tr>
       <tr>
-         <td>uri</td>
+         <td>data.items.uri</td>
          <td>This can take multiple values that is defined in the <a href='https://haptik-docs.readthedocs.io/en/latest/bot-builder-advanced/hsl-properties.html'>hsl-properties</a></td>
          <td>Yes</td>
       </tr>
       <tr>
-         <td>type</td>
+         <td>data.items.type</td>
          <td>This can take multiple values that is defined in the <a href='https://haptik-docs.readthedocs.io/en/latest/bot-builder-advanced/hsl-properties.html'>hsl-properties</a></td>
          <td>Yes</td>
       </tr>
       <tr>
-         <td>payload</td>
+         <td>data.items.payload</td>
          <td>This can take multiple values that is defined in the <a href='https://haptik-docs.readthedocs.io/en/latest/bot-builder-advanced/hsl-properties.html'>hsl-properties</a></td>
          <td>Yes</td>
       </tr>

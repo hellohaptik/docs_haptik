@@ -13,11 +13,11 @@ The Haptik Platform  sends an event to your registered webhook whenever a bot or
 ```json
 {
     "version": "1.0",
-    "user":{
-	    "auth_id": "<AUTH_ID>"
+    "user": {
+        "auth_id": "<AUTH_ID>"
     },
     "business_id": 343,
-	"event_name": "message",
+    "event_name": "message",
     "agent": {
         "id": 4415,
         "name": "gogo",
@@ -48,17 +48,21 @@ Example Message:
 ```json
 {
     "version": "1.0",
-	"user":{ 
-	    "auth_id": "<AUTH_ID>"
+    "user":{
+        "auth_id": "<AUTH_ID>"
     },
     "business_id": 343,
     "event_name": "typing_indicator",
-    "typing indicator": "start"
+    "typing_indicator": "start"
 }
 ```
 
 Typing indicator value can either be `start` or `stop` to indicate the change in state of the typing indicator
 
+
+**Validate Webhook**
+
+The HTTP request will contain an X-Hub-Signature header which contains the SHA1 signature of the request payload, using the secret_key shared in advance, and prefixed with sha1=. Your callback endpoint can verify this signature to validate the integrity and origin of the payload.
 
 
 ### Webhook Performance Requirements
@@ -87,9 +91,9 @@ The Log Message API allows you to send messages via a `POST` request to the Hapt
 
 Example URL
 
-`https://delivery.haptikapi.com/v1.0/log_message_from_user/<CLIENT_NAME>/`
+`https://delivery.haptikapi.com/v1.0/log_message_from_user/`
 
-The Authorization header of each HTTP request should be “Bearer” followed by your token:
+The Authorization header of each HTTP request should be “Bearer” followed by your token which will be shared with you:
 
 ```
 Authorization: Bearer <TOKEN>
@@ -107,12 +111,13 @@ Example Payload
 
 ```json
 {
-	"user":{ 
-	    "auth_id": "<AUTH_ID>"
+    "user":{ 
+        "auth_id": "<AUTH_ID>"
     },
     "message_body": "Hello World!",
     "message_type": 0,
     "business_id": 343,
+    "client_id": "<CLIENT_ID>"
 }
 ```
 
@@ -120,7 +125,7 @@ Example Payload
 - business_id - This is a the numeric identifier for channel/queue that you wish to register the message on.
 - message -  The message body containing the message to be sent to the bot or agent.
 - message_type - This defines the processing pipeline for messages, standard messages are of type `0`
-
+- client_id - The client id for your account
 
 
 ### User Management and User Ids
@@ -139,12 +144,6 @@ A successful request to the log message sent API will return a `200` status code
 ```json
 [{
     "message_id": 1411200492,
-	"agent": {
-        "id": 4415,
-        "name": "gogo",
-        "profile_image": "https://assets.haptikapi.com/content/42e123411bk1109823bf.jpg",
-        "is_automated": "True"
-    },
     "body": "Hello World!",
     "sort_id": 88,
     "created_at": "2018-10-04T12:41:27.980Z",

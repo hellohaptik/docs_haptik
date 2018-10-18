@@ -60,7 +60,7 @@ Example Message:
 Typing indicator value can either be `start` or `stop` to indicate the change in state of the typing indicator
 
 
-**Validate Webhook**
+### Validate Webhook for security
 
 The HTTP request will contain an X-Hub-Signature header which contains the SHA1 signature of the request payload, using the secret_key shared in advance, and prefixed with sha1=. Your callback endpoint can verify this signature to validate the integrity and origin of the payload.
 
@@ -97,7 +97,7 @@ Example URL
 `https://delivery.haptikapi.com/v1.0/user/`
 
 
-Headers
+### Headers
 ```
 Authorization: Bearer <TOKEN>
 client-id: <CLIENT_ID>
@@ -109,7 +109,7 @@ Content-Type: application/json
 - Content-Type - application/json
 
 
-Example Payload
+### Request
 
 ```json
 {
@@ -125,7 +125,7 @@ Example Payload
 - email - Email of the user (optional)
 - name - Name of the user (optional)
 
-### API Response
+### Response
 
 A successful request to the user creation API will return a `200` status code with a JSON response object.
 
@@ -157,7 +157,7 @@ Example URL
 
 `https://delivery.haptikapi.com/v1.0/log_message_from_user/`
 
-Headers
+### Headers
 ```
 Authorization: Bearer <TOKEN>
 client-id: <CLIENT_ID>
@@ -169,14 +169,14 @@ Content-Type: application/json
 - Content-Type - application/json
 
 
-Example Payload
+### Request
 
 ```json
 {
     "user":{ 
         "auth_id": "<AUTH_ID>"
     },
-    "message_body": "Hello World!",
+    "message_body": "<MESSAGE_BODY>",
     "message_type": 0,
     "business_id": 343
 }
@@ -187,7 +187,7 @@ Example Payload
 - message_body -  The message body containing the message to be sent to the bot or agent.
 - message_type - This defines the processing pipeline for messages, standard messages are of type `0`
 
-### API Response
+### Response
 
 A successful request to the log message sent API will return a `200` status code with a JSON response object with a unique message id and other metadata about the messages.
 
@@ -217,3 +217,7 @@ If the Authorization header is missing or invalid, then the API will return a `4
 {
    "error_message": "invalid authorization details"
 }
+```
+
+## API Security
+To access the Haptik API, you need a token. The Authorization header of each HTTP request should be “Bearer” followed by your token which will be shared with you. If the Authorization header is missing or invalid, then 401 status code is returned. You should ensure that you keep your token secret.

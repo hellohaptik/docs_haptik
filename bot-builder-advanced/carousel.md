@@ -151,7 +151,7 @@ Carousel works mostly on actionables but some parts of it are very specific to C
       </tr>
       <tr>
          <td>data.items.actionable</td>
-         <td>link defined in the properties section of this doc</td>
+         <td>type list as per the actionables list specified in <a href='https://haptik-docs.readthedocs.io/en/latest/bot-builder-advanced/hsl-properties.html'>hsl-properties</a></td>
          <td>Required</td>
       </tr>
 </table>

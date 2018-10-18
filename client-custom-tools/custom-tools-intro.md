@@ -4,7 +4,7 @@
 
 When a client wishes to use some of their internal tools within our agent dashboard for ease of data access, the can do so.
 
-The below example shows how we use out tools internally.
+The below example shows how we use our tools internally.
 
 ![all_custom_tools](all_custom_tools.png)
 

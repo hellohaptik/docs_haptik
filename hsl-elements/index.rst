@@ -1,4 +1,4 @@
-HSL Elements
+HSL
 ==================================
 
 Haptik started as a simple chat application with simple text messages being exchanged between the user & the assistant. As we evolved, we introduced new chat elements which go beyond simple text messages and are able to handle complex use-cases. For a long time we hacked the text messages and added more meaning to it by appending some meta at the end of the message which the apps agreed to treat differently. 

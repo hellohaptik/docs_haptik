@@ -1,4 +1,4 @@
-## HSL
+## HSL Properties
 
 Haptik is a chatbot platform where we build chat flows for various use cases. Chat flows are nothing but exchange of messages. These messages can range from being plain text messages to complex UI elements like carousel, smart actions etc.
 
@@ -16,7 +16,7 @@ The basic anatomy of an HSL looks something like this:
 }
 ```
 
-## HSL Properties
+## HSL data attribute
  
 The data part of the HSL holds most of the complex information enabling us to create complex chat elements. The data varies for every different type of the HSL. Before we dig into what all different data we could have, let’s quickly look into what actionables are how are they used along with different HSLs. Actionable is one of the most important part of the data is used heavily across all kinds of HSL.
  

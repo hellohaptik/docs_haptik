@@ -27,7 +27,6 @@ Read about our HSL elements `here
    bot-configuration/index
    bot-builder/index
    bot-builder-advanced/index
-   client-custom-tools/index
    bot-analytics/index
    agent-interface/index
    security

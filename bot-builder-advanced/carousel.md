@@ -1,5 +1,34 @@
 ## HSL Carousel Element
 
+#### Carousel Data
+Carousel works mostly on actionables but some parts of it are very specific to Carousel design. Here are the keys:
+<table border="1" class="docutils">
+   <thead>
+      <tr>
+         <th>Values</th>
+         <th>Description</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td>title</td>
+         <td>This message is sent when the user taps on the actionable.</td>
+      </tr>
+      <tr>
+         <td>title</td>
+         <td>This is the title shown on the Carousel.</td>
+      </tr>
+      <tr>
+         <td>sub_title</td>
+         <td>Optional. Takes up the second row when used with a title.</td>
+      </tr>
+      <tr>
+         <td>description</td>
+         <td>Optional. Takes up the third row when used with a title.</td>
+      </tr>
+</table>
+
+
 #### Sample Json for default Carousel
 ```json
 {

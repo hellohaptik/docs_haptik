@@ -2,7 +2,7 @@
 
 This doc will describe the various valid attributes and their values that can be used while generating the HSL jsons as and when applicable.
 
-## HSL Data Attribute/Parameter Descriptions
+### HSL Data Attribute/Parameter Descriptions
  
 The data part of the HSL holds most of the complex information enabling us to create complex chat elements. The data varies for every different type of the HSL. Before we dig into what all different data we could have, let’s quickly look into what actionables are how are they used along with different HSLs. Actionable is one of the most important part of the data is used heavily across all kinds of HSL.
 
@@ -61,7 +61,7 @@ Actionables exist to define both the existence & action of CTAs. Anatomy of an a
 </table>
 
 
-## Possible values for "uri"
+### Possible values for "uri"
 <table border="1" class="docutils">
    <thead>
       <tr>
@@ -107,7 +107,7 @@ Actionables exist to define both the existence & action of CTAs. Anatomy of an a
 
 
 
-## Possible values for "type"
+### Possible values for "type"
 Like we have type of HSL, we also have type of an actionable. This type defines the nature of the actionable. The available types are:
 <table border="1" class="docutils">
    <thead>
@@ -126,8 +126,12 @@ Like we have type of HSL, we also have type of an actionable. This type defines 
          <td>Indicates an action that should happen when you tap on it. Usually combined with a URI.</td>
       </tr>
       <tr>
+         <td>TEXT</td>
+         <td>Used to send a message in the same channel</td>
+      </tr>
+      <tr>
          <td>TEXT_ONLY</td>
-         <td>Used to send a message in the same channel where this actionable is.</td>
+         <td>Mainly used by quick replies</td>
       </tr>
       <tr>
          <td>TAB_LIST_TEXT_ONLY</td>
@@ -152,7 +156,7 @@ Like we have type of HSL, we also have type of an actionable. This type defines 
    </tbody>
 </table>
  
-## Keys of "payload" object
+### Keys of "payload" object
 Actionable Payload is a dictionary which carries the meta-data required for the actionable to do it’s job.
 Some of the keys used in this payload are:
 <table border="1" class="docutils">
@@ -210,32 +214,4 @@ Some of the keys used in this payload are:
    </tbody>
 </table>
 
-
-## Carousel Data
-Carousel works mostly on actionables but some parts of it are very specific to Carousel design. Here are the keys:
-<table border="1" class="docutils">
-   <thead>
-      <tr>
-         <th>Values</th>
-         <th>Description</th>
-      </tr>
-   </thead>
-   <tbody>
-      <tr>
-         <td>title</td>
-         <td>This message is sent when the user taps on the actionable.</td>
-      </tr>
-      <tr>
-         <td>title</td>
-         <td>This is the title shown on the Carousel.</td>
-      </tr>
-      <tr>
-         <td>sub_title</td>
-         <td>Optional. Takes up the second row when used with a title.</td>
-      </tr>
-      <tr>
-         <td>description</td>
-         <td>Optional. Takes up the third row when used with a title.</td>
-      </tr>
-</table>
 

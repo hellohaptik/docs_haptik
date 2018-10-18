@@ -32,7 +32,6 @@
 				"gogo_message": "",
 				"test4": "4"
 			},
-			"test3": "3"
 		}, {
 			"actionable_text": "Thanks",
 			"is_default": 0,
@@ -52,9 +51,7 @@
 				"gogo_message": ""
 			}
 		}],
-		"test1": "2"
 	},
-	"test1": "1"
 }
 ```
 

@@ -1,4 +1,4 @@
-## Text
+## HSL Text Element
 
 #### Sample Json
 ```json

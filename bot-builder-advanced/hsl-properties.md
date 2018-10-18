@@ -1,25 +1,11 @@
 ## HSL Properties
 
-Haptik is a chatbot platform where we build chat flows for various use cases. Chat flows are nothing but exchange of messages. These messages can range from being plain text messages to complex UI elements like carousel, smart actions etc.
+This doc will describe the various valid attributes and their values that can be used while generating the HSL jsons as and when applicable.
 
-To build complex UI elements, we introduced Haptik Specific Language, our in-house format of messages. HSL is essentially JSON with a special meaning within the Haptik system. It’s a mutual agreement between the backend and the frontend to decide how some of the chat elements should look like and what action they can perform.
-
-All of Haptik’s frontend properties (Android SDK, iOS SDK, Web SDK) are configured to render HSL objects.
-
-The basic anatomy of an HSL looks something like this:
-
-```json
-{
-"text": str,
-"type": str,
-"data": dict
-}
-```
-
-## HSL data attribute
+## HSL Data Attribute/Parameter Descriptions
  
 The data part of the HSL holds most of the complex information enabling us to create complex chat elements. The data varies for every different type of the HSL. Before we dig into what all different data we could have, let’s quickly look into what actionables are how are they used along with different HSLs. Actionable is one of the most important part of the data is used heavily across all kinds of HSL.
- 
+
 ### Actionable
  
 Actionables exist to define both the existence & action of CTAs. Anatomy of an actionable object:
@@ -38,6 +24,8 @@ Actionables exist to define both the existence & action of CTAs. Anatomy of an a
     "emoji": "<Emoji from Emoji Framework>"
 }
 ```
+
+### List of all Properties:
 
 *      actionable_text
 This is the text shown on the actionable
@@ -66,21 +54,12 @@ This property defines whether the screen should switch when you tap on the actio
 *      LAUNCH_CHANNEL
         	Opens up a new channel. The details of the channel to be opened is given in the payload.
  
-*      SELF_SERVE_RECHARGE
-        	Takes you the Recharge & Bills Screen. By default, the first tab (Recharge) is selected.
- 
-*      ELECTRICITY
-        	Takes you the Recharge & Bills Screen and selects Electricity tab.
- 
 *      SEND_LOCATION
         	Opens Place Picker and enables a user to send a particular location.
  
 *      CAROUSEL_DEFAULT
-        	Opens up a screen which has little space on the top for text, followed by a carousel of images underneath it and a message sending area underneath it. Primarily built for the Food Delivery channel but still useful in many ways.
- 
-*      APP_AUTHENTICATE
-        	Used to get Uber authentication. Launches Uber app if available other wise fires up a web view.
- 
+        	Opens up a screen which has little space on the top for text, followed by a carousel of images underneath it and a message sending area underneath it.
+  
 *      PROFILE
         	Opens up the Profile screen in the app.
  
@@ -102,31 +81,33 @@ This property will visually make the actionable text bold for the particular act
 *      type
 Like we have type of HSL, we also have type of an actionable. This type defines the nature of the actionable. The available types are:
  
-*      APP_ACTION
-        	Indicates an action that should happen when you tap on it. Usually combined with a URI.
-        	
-*      MESSAGE_BAR
-        	Adds a message bar. Used exclusively along with CAROUSEL_DEFAULT URI.
-        	
-*      TEXT_ONLY
-        	Used to send a message in the same channel where this actionable is.
-        	
-*      TAB_LIST_TEXT_ONLY
-        	Used to send a message based on the chosen option in the TAB_LIST element.
-        	
-*      FORM_SHOW
-        	Used to present a form in the same channel where the actionable is.
-        	
-*      SHARE_RECEIPT
-        	Used along with the RECEIPT HSL object to take a snapshot of the receipt and make it shareable.
-        	
-*      APP_FEEDBACK
-        	Used to allow a user to give feedback.
-        	
-*      SHARE_REFERRAL
-        	Used to share referral message
- 
-*      payload
+    -      APP_ACTION
+            	Indicates an action that should happen when you tap on it. Usually combined with a URI.
+            	
+    -      MESSAGE_BAR
+            	Adds a message bar. Used exclusively along with CAROUSEL_DEFAULT URI.
+            	
+    -      TEXT_ONLY
+            	Used to send a message in the same channel where this actionable is.
+            	
+    -      TAB_LIST_TEXT_ONLY
+            	Used to send a message based on the chosen option in the TAB_LIST element.
+            	
+    -      FORM_SHOW
+            	Used to present a form in the same channel where the actionable is.
+            	
+    -      SHARE_RECEIPT
+            	Used along with the RECEIPT HSL object to take a snapshot of the receipt and make it shareable.
+            	
+    -      APP_FEEDBACK
+            	Used to allow a user to give feedback.
+            	
+    -      SHARE_REFERRAL
+            	Used to share referral message
+     
+    -      payload
+
+
 Actionable Payload is a dictionary which carries the meta-data required for the actionable to do it’s job.
 Some of the keys used in this payload are:
  
@@ -155,23 +136,11 @@ Some of the keys used in this payload are:
 *      actionables
         	Actionable within actionable. This is the list of actionables for the next screen, usually used with Carousel Details screen.
         	
-*      menu_url
-        	
-        	
-*      via_name
-        	vianame of the channel to switch to. Used with LAUNCH_CHANNEL actionable.
-        	
-*      id
-        	Carries an integer. We use this to send the form id and present it using the FORM_SHOW  type.
- 
 *      lat_key
         	lat key to be sent back along with the latitude. Used with the SEND_LOCATION & SEND_MULTIPLE_LOCATIONS URIs
  
 *      lng_key
         	lng key to be sent back along with the longitude. Used with the SEND_LOCATION & SEND_MULTIPLE_LOCATIONS URIs.
-        	
-*      package_name
-        	Used to represent which app needs to be opened to authenticate. Right now we use only Uber.
         	
 *      callback_link
         	The URL to be called once the apps get the Uber/Ola auth token.
@@ -182,26 +151,19 @@ Some of the keys used in this payload are:
 *      tool_name
         	Usually contains the API name used to fetch the data.
         	
-*      price_enabled
-        	Boolean property. Tells the app whether to show the price on the actionable or not.
- 
-*      expired_message
-        	Used exclusively with TAB_LIST. This is the message that is sent when the user taps on the an expired actionable.
- 
 *      athena_smart_action
         	This is built to make it easy for assistants to get the flight that the user was searching for. It’s contains a link which is opened in an iframe on the Athena RHS. The app needs to append this to the outgoing message.
 
 *      items
- 
-*      emoji
-You can add an emoji from the emoji framework. This emoji will be displayed along with the actionable_text. Here are some of the emojis that are supported by the Apps right now.
 
 ### Carousel Data
 
 Carousel works mostly on actionables but some parts of it are very specific to Carousel design. Here are the keys:
 
 *      thumbnail
-	thumbnail is a dictionary which carries information necessary to show the thumbnail on the carousel. There are two keys, namely image & type. Image has the link to the image & type can be PORTRAIT or LANDSCAPE. Apps support on LANDSCAPE type thumbnails.
+	thumbnail is a dictionary which carries information necessary to show the thumbnail on the carousel. There are two keys, namely image & type. 
+    - Image has the link to the image
+    - type can be PORTRAIT or LANDSCAPE. Apps support on LANDSCAPE type thumbnails.
 
 *      title
 	This is the title shown on the Carousel. The space between Thumbnail & Actionables is divided into three fictional rows which can be filled up using title, subtitle & description. Title font weighs more than sub_title & description.
@@ -210,13 +172,10 @@ Carousel works mostly on actionables but some parts of it are very specific to C
 	Optional. Takes up the second row when used with a title. 
 
 *      description
-     Optional. Takes up the third row when used with a title & sub_title. 
+    Optional. Takes up the third row when used with a title & sub_title. 
 
 *      meta
 	Usually used to indicate rating etc. Works best with floating numbers.
-
-*      tool_name
-	Athena tool name used to build the Carousel. Was used to add the Powered by Zomato tag on the Carousel.
 
 
 ### Tab List Data
@@ -230,34 +189,34 @@ Like RECEIPT, TAB_LIST has it’s own unique data which is used along with Actio
 	List of tab dictionaries. Each dictionary represents the information stored in a tab. Keys in the dictionary:
 
 *      unselected_text
-      Text to be shown on the actionable when no tab list item is selected.
+    Text to be shown on the actionable when no tab list item is selected.
 
 *      title
-      Title as shown in the Tab Header. For e.g. Source-Destination in case of Flights.
+    Title as shown in the Tab Header. For e.g. Source-Destination in case of Flights.
 
 *      sub_title
-      Subtitle as shown in the Tab Header. For e.g. Date in case of Flights.
+    Subtitle as shown in the Tab Header. For e.g. Date in case of Flights.
 
 *      tab_items
-      List containing items in the tab. For e.g. all the flights in case of Flights Carousel. These items are dictionaries and contain the following keys:
+    List containing items in the tab. For e.g. all the flights in case of Flights Carousel. These items are dictionaries and contain the following keys:
 
-	*      title
-	      Title as shown in the row. For e.g The flight time.
+	-      title
+	   Title as shown in the row. For e.g The flight time.
 
-	*      price
-	      Price of the particular item in that row.
+	-      price
+	   Price of the particular item in that row.
 
-	*      caption
-	      Shown under the title. For e.g. duration in case of Flights.
+	-      caption
+	   Shown under the title. For e.g. duration in case of Flights.
 
-	*      message
-	      The message that is sent when the user select this particular item and taps on the actionable
+	-      message
+	   The message that is sent when the user select this particular item and taps on the actionable
 
-	*      meta
-	     Meta-data
+	-      meta
+	   Meta-data
 
-	*      emoji
-	      Used to add an image in the left side of the row. For e.g. Airline Icon in case of Flights
+	-      emoji
+	   Used to add an image in the left side of the row. For e.g. Airline Icon in case of Flights
 
 
 *      expiry

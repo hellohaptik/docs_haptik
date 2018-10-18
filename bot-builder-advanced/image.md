@@ -1,4 +1,4 @@
-## Image
+## HSL Image Element
 
 #### Sample Json
 ```json

@@ -1,4 +1,4 @@
-## Carousel
+## HSL Carousel Element
 
 #### Sample Json for default Carousel
 ```json

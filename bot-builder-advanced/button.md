@@ -1,4 +1,4 @@
-## Button
+## HSL Button Element
 
 #### Sample Json
 ```json

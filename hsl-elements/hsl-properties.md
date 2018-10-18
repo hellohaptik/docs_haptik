@@ -1,24 +1,25 @@
-## JSON Properties
+## HSL Properties
  
 The data part of the HSL holds most of the complex information enabling us to create complex chat elements. The data varies for every different type of the HSL. Before we dig into what all different data we could have, let’s quickly look into what actionables are how are they used along with different HSLs. Actionable is one of the most important part of the data is used heavily across all kinds of HSL.
  
-### Actionable:
+### Actionable
  
 Actionables exist to define both the existence & action of CTAs. Anatomy of an actionable object:
  
-json``` 
+```json
 {
-    "actionable_text": <text on the CTA>,
-    "location_required": <true or false>,
-    "uri": <URI>,
-    "is_default": <0 or 1>,
-    "type": <type of actionable>,
+    "actionable_text": "<text on the CTA>",
+    "location_required": "<true or false>",
+    "uri": "<URI>",
+    "is_default": "<0 or 1>",
+    "type": "<type of actionable>",
     "payload": {
-        "link": “<link>”,
+        "link": "<link>",
         "gogo_message": "<message>"
     },
-    "emoji": <Emoji from Emoji Framework>
-}```
+    "emoji": "<Emoji from Emoji Framework>"
+}
+```
  
  
 *      actionable_text
@@ -234,7 +235,7 @@ You can add an emoji from the emoji framework. This emoji will be displayed alon
 
 
 
-### Receipt Data:
+### Receipt Data
 
 RECEIPT elements have a specific kind of data which is exclusively used only by them.
 
@@ -264,7 +265,7 @@ All the four keys are optional but at-least one should be available to create a 
 *      footer
 	As the name explains, this is the footer of the receipt and carries the amount & actionables. It also has a field called offer_text which is used to display the cashback info.
 
-### Carousel Data:
+### Carousel Data
 
 Carousel works mostly on actionables but some parts of it are very specific to Carousel design. Here are the keys:
 
@@ -287,7 +288,7 @@ Carousel works mostly on actionables but some parts of it are very specific to C
 	Athena tool name used to build the Carousel. Was used to add the Powered by Zomato tag on the Carousel.
 
 
-### Tab List Data:
+### Tab List Data
 
 Like RECEIPT, TAB_LIST has it’s own unique data which is used along with Actionables.
 

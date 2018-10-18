@@ -17,7 +17,8 @@ On a high level, this is how a HSL message looks:
 .. toctree::
    :maxdepth: 1
    :caption: HSL - Haptik Specific Language:
-   json-properties
+
+   hsl-properties
    image
    text
    button

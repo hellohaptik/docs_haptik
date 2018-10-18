@@ -20,214 +20,222 @@ Actionables exist to define both the existence & action of CTAs. Anatomy of an a
     "payload": {
         "link": "<link>",
         "gogo_message": "<message>"
-    },
-    "emoji": "<Emoji from Emoji Framework>"
+    }
 }
 ```
 
-### List of all Properties:
 
-*      actionable_text
-This is the text shown on the actionable
- 
-*      option_unselected_text
-Used exclusively with the TAB_LIST element. This is the text shown when no options from the Tab list are selected.
- 
-*      option_selected_text
-Used exclusively with the TAB_LIST element. This is the text shown when an option from the Tab list is selected.
- 
-*      expired_text
-Used exclusively with the TAB_LIST element. This is the text shown when the element expires. The expiry is set in the data in seconds.
- 
-*      location_required
-Sometimes, on tapping on the actionable, we might require the user’s location for the action to work properly. This boolean properly defines whether location is required or not.
- 
-*      uri
-This property defines whether the screen should switch when you tap on the actionable. If yes, the value for uri will mention the destination screen to go to. URI can be empty when there is no destination screen and the action happens on the same screen.
- 
-*      CAROUSEL_DETAIL
-        	Opens a screen which has a carousel of image on the top and space underneath for text.
- 
-*      GALLERY_PICKER
-        	Pops up the dialog to choose an image from camera / gallery.
- 
-*      LAUNCH_CHANNEL
-        	Opens up a new channel. The details of the channel to be opened is given in the payload.
- 
-*      SEND_LOCATION
-        	Opens Place Picker and enables a user to send a particular location.
- 
-*      CAROUSEL_DEFAULT
-        	Opens up a screen which has little space on the top for text, followed by a carousel of images underneath it and a message sending area underneath it.
-  
-*      PROFILE
-        	Opens up the Profile screen in the app.
- 
-*      SAVED_ADDRESSES
-        	Opens up the Saved Addresses screen with the list of saved addresses, if any. Otherwise, opens up the screen to save a new address.
- 
-*      CALL
-        	Makes a phone call to a number provided in the payload.
- 
-*      LINK
-        	Fires up web view with a link provided in the payload.
- 
-*      SEND_MULTIPLE_LOCATIONS
-        	Used mostly in channels to allow a user to select two locations and send it back as a message.
+<table border="1" class="docutils">
+   <thead>
+      <tr>
+         <th>Property Name</th>
+         <th>Description</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td>actionable_text</td>
+         <td>This is the text shown on the actionable</td>
+      </tr>
+      <tr>
+         <td>location_required</td>
+         <td>true or false, if true, location information is sent to backend</td>
+      </tr>
+      <tr>
+         <td>uri</td>
+         <td>dictates the screen interaction</td>
+      </tr>
+      <tr>
+         <td>is_default</td>
+         <td>0 or 1, if 1, on click of the element, this actionable will get triggered</td>
+      </tr>
+      <tr>
+         <td>type</td>
+         <td>We have a type for an actionable, similar to types of hsl's</td>
+      </tr>
+      <tr>
+         <td>payload</td>
+         <td>dictionary which carries the meta-data required for the actionable to do it’s job.</td>
+      </tr>
+   </tbody>
+</table>
 
-*      is_default
-This property will visually make the actionable text bold for the particular actionable. Additionally, what is also does is that on tapping on the main message, the action will be the same as that of this actionable.
- 
-*      type
+
+## Possible values for "uri"
+<table border="1" class="docutils">
+   <thead>
+      <tr>
+         <th>Values</th>
+         <th>Description</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td>CAROUSEL_DETAIL</td>
+         <td>Opens a screen which has a carousel of image</td>
+      </tr>
+      <tr>
+         <td>GALLERY_PICKER</td>
+         <td>Pops up the dialog to choose an image from camera / gallery.</td>
+      </tr>
+      <tr>
+         <td>SEND_LOCATION</td>
+         <td>Opens Place Picker and enables a user to send a particular location.</td>
+      </tr>
+      <tr>
+         <td>CAROUSEL_DEFAULT</td>
+         <td>opens carousel with title and actionables (buttons)</td>
+      </tr>
+      <tr>
+         <td>SAVED_ADDRESSES</td>
+         <td>Opens up the Saved Addresses screen with the list of saved addresses, if empty, user can add</td>
+      </tr>
+      <tr>
+         <td>CALL</td>
+         <td>Makes a phone call to a number provided in the payload.</td>
+      </tr>
+      <tr>
+         <td>LINK</td>
+         <td>Fires up web view with a link provided in the payload.</td>
+      </tr>
+      <tr>
+         <td>SEND_MULTIPLE_LOCATIONS</td>
+         <td>To allow a user to select two locations and send it back as a message.</td>
+      </tr>
+   </tbody>
+</table>
+
+
+
+## Possible values for "type"
 Like we have type of HSL, we also have type of an actionable. This type defines the nature of the actionable. The available types are:
+<table border="1" class="docutils">
+   <thead>
+      <tr>
+         <th>Values</th>
+         <th>Description</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td>APP_ACTION</td>
+         <td>Indicates an action that should happen when you tap on it. Usually combined with a URI.</td>
+      </tr>
+      <tr>
+         <td>MESSAGE_BAR</td>
+         <td>Indicates an action that should happen when you tap on it. Usually combined with a URI.</td>
+      </tr>
+      <tr>
+         <td>TEXT_ONLY</td>
+         <td>Used to send a message in the same channel where this actionable is.</td>
+      </tr>
+      <tr>
+         <td>TAB_LIST_TEXT_ONLY</td>
+         <td>Used to send a message based on the chosen option in the TAB_LIST element.</td>
+      </tr>
+      <tr>
+         <td>FORM_SHOW</td>
+         <td>Used to present a form in the same channel where the actionable is.</td>
+      </tr>
+      <tr>
+         <td>SHARE_RECEIPT</td>
+         <td>Used along with the RECEIPT HSL object to take a snapshot of the receipt and make it shareable.</td>
+      </tr>
+      <tr>
+         <td>APP_FEEDBACK</td>
+         <td>Used to allow a user to give feedback.</td>
+      </tr>
+      <tr>
+         <td>SHARE_REFERRAL</td>
+         <td>Used to share referral message</td>
+      </tr>
+   </tbody>
+</table>
  
-    -      APP_ACTION
-            	Indicates an action that should happen when you tap on it. Usually combined with a URI.
-            	
-    -      MESSAGE_BAR
-            	Adds a message bar. Used exclusively along with CAROUSEL_DEFAULT URI.
-            	
-    -      TEXT_ONLY
-            	Used to send a message in the same channel where this actionable is.
-            	
-    -      TAB_LIST_TEXT_ONLY
-            	Used to send a message based on the chosen option in the TAB_LIST element.
-            	
-    -      FORM_SHOW
-            	Used to present a form in the same channel where the actionable is.
-            	
-    -      SHARE_RECEIPT
-            	Used along with the RECEIPT HSL object to take a snapshot of the receipt and make it shareable.
-            	
-    -      APP_FEEDBACK
-            	Used to allow a user to give feedback.
-            	
-    -      SHARE_REFERRAL
-            	Used to share referral message
-     
-    -      payload
-
-
+## Keys of "payload" object
 Actionable Payload is a dictionary which carries the meta-data required for the actionable to do it’s job.
 Some of the keys used in this payload are:
- 
-*      link
-        	
-*      gogo_message
-        	Sometimes we want the apps to send meta-data along with a message so that gogo can use it. We don’t want this message to be visible to the user so we write it in between { } which the apps then hide it from the user. gogo_message is append to the message being sent out from the app.
-        	
-*      message
-        	This message is sent when the user taps on the actionable. Mostly used with the BUTTON element.
-        	
-*      url
-        	
-*      title
-        	Used to pass the information for the Carousel Details screen.
-        	
-*      sub_title
-        	Used to pass the information for the Carousel Details screen.
-        	
-*      description
-        	Used to pass the information for the Carousel Details screen.
-        	
-*      images
-        	List of images. Used to pass the information for the Carousel Details screen.
-        	
-*      actionables
-        	Actionable within actionable. This is the list of actionables for the next screen, usually used with Carousel Details screen.
-        	
-*      lat_key
-        	lat key to be sent back along with the latitude. Used with the SEND_LOCATION & SEND_MULTIPLE_LOCATIONS URIs
- 
-*      lng_key
-        	lng key to be sent back along with the longitude. Used with the SEND_LOCATION & SEND_MULTIPLE_LOCATIONS URIs.
-        	
-*      callback_link
-        	The URL to be called once the apps get the Uber/Ola auth token.
-        	
-*      location
-        	List of location dictionaries which mentions how many locations need to be picked up. The dictionary inside contains details required for the location picker and the message to be sent once location is chosen.
-        	
-*      tool_name
-        	Usually contains the API name used to fetch the data.
-        	
-*      athena_smart_action
-        	This is built to make it easy for assistants to get the flight that the user was searching for. It’s contains a link which is opened in an iframe on the Athena RHS. The app needs to append this to the outgoing message.
+<table border="1" class="docutils">
+   <thead>
+      <tr>
+         <th>Values</th>
+         <th>Description</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td>url</td>
+         <td>url to redirect to</td>
+      </tr>
+      <tr>
+         <td>message</td>
+         <td>This message is sent when the user taps on the actionable. Mostly used with the BUTTON element.</td>
+      </tr>
+      <tr>
+         <td>title</td>
+         <td>Used to pass the information for the Carousel Details screen.</td>
+      </tr>
+      <tr>
+         <td>sub_title</td>
+         <td>Used to pass the information for the Carousel Details screen.</td>
+      </tr>
+      <tr>
+         <td>description</td>
+         <td>Used to pass the information for the Carousel Details screen.</td>
+      </tr>
+      <tr>
+         <td>images</td>
+         <td>List of images. Used to pass the information for the Carousel Details screen.</td>
+      </tr>
+      <tr>
+         <td>lat_key</td>
+         <td>lat key to be sent back along with the latitude. Used with the SEND_LOCATION & SEND_MULTIPLE_LOCATIONS URIs</td>
+      </tr>
+      <tr>
+         <td>lng_key</td>
+         <td>lng key to be sent back along with the longitude. Used with the SEND_LOCATION & SEND_MULTIPLE_LOCATIONS URIs.</td>
+      </tr>
+      <tr>
+         <td>callback_link</td>
+         <td>The URL to be called once the apps get the Uber/Ola auth token.</td>
+      </tr>
+      <tr>
+         <td>lng_key</td>
+         <td>lng key to be sent back along with the longitude. Used with the SEND_LOCATION & SEND_MULTIPLE_LOCATIONS URIs.</td>
+      </tr>
+      <tr>
+         <td>items</td>
+         <td>a list of carousel elements</td>
+      </tr>
+   </tbody>
+</table>
 
-*      items
 
-### Carousel Data
-
+## Carousel Data
 Carousel works mostly on actionables but some parts of it are very specific to Carousel design. Here are the keys:
-
-*      thumbnail
-	thumbnail is a dictionary which carries information necessary to show the thumbnail on the carousel. There are two keys, namely image & type. 
-    - Image has the link to the image
-    - type can be PORTRAIT or LANDSCAPE. Apps support on LANDSCAPE type thumbnails.
-
-*      title
-	This is the title shown on the Carousel. The space between Thumbnail & Actionables is divided into three fictional rows which can be filled up using title, subtitle & description. Title font weighs more than sub_title & description.
-
-*      sub_title
-	Optional. Takes up the second row when used with a title. 
-
-*      description
-    Optional. Takes up the third row when used with a title & sub_title. 
-
-*      meta
-	Usually used to indicate rating etc. Works best with floating numbers.
-
-
-### Tab List Data
-
-Like RECEIPT, TAB_LIST has it’s own unique data which is used along with Actionables.
-
-*      selection
-	The value of this field can be SELECT_ONE or SELECT_ALL. It suggests whether in multi-tab list is the selection of 1 tab enough or are all the tabs compulsory. Used with Onward & Return Journey Flights.
-
-*      tabs
-	List of tab dictionaries. Each dictionary represents the information stored in a tab. Keys in the dictionary:
-
-*      unselected_text
-    Text to be shown on the actionable when no tab list item is selected.
-
-*      title
-    Title as shown in the Tab Header. For e.g. Source-Destination in case of Flights.
-
-*      sub_title
-    Subtitle as shown in the Tab Header. For e.g. Date in case of Flights.
-
-*      tab_items
-    List containing items in the tab. For e.g. all the flights in case of Flights Carousel. These items are dictionaries and contain the following keys:
-
-	-      title
-	   Title as shown in the row. For e.g The flight time.
-
-	-      price
-	   Price of the particular item in that row.
-
-	-      caption
-	   Shown under the title. For e.g. duration in case of Flights.
-
-	-      message
-	   The message that is sent when the user select this particular item and taps on the actionable
-
-	-      meta
-	   Meta-data
-
-	-      emoji
-	   Used to add an image in the left side of the row. For e.g. Airline Icon in case of Flights
-
-
-*      expiry
-	No. of seconds after which the tab should expire. On expiry, the actionable text changes based on the expiry_text mentioned in the actionable.
-
-*      analytics
-	Dictionary containing analytics related stuff. Apps forward this to all analytics SDKs whenever the user interacts with the HSL.
-
-*      actionables
-	Actionable list with a single actionable that has all the details wrt to the actionable.
-
-*      tool_name
-	Athena tool name. Usually contains the API name used to fetch all the data in the tabs.
+<table border="1" class="docutils">
+   <thead>
+      <tr>
+         <th>Values</th>
+         <th>Description</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td>title</td>
+         <td>This message is sent when the user taps on the actionable. Mostly used with the BUTTON element.</td>
+      </tr>
+      <tr>
+         <td>title</td>
+         <td>This is the title shown on the Carousel.</td>
+      </tr>
+      <tr>
+         <td>sub_title</td>
+         <td>Optional. Takes up the second row when used with a title.</td>
+      </tr>
+      <tr>
+         <td>description</td>
+         <td>Optional. Takes up the third row when used with a title.</td>
+      </tr>
+</table>
 

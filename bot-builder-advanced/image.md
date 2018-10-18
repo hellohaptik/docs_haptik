@@ -1,11 +1,13 @@
 ## HSL Image Element
 
+A HSL Image element is a type of Carousel element. However a seperate section has been created for it for ease.
+
+
 #### Sample Json
 ```json
 {
 	"text": "*Thats out*!☝️ Ovs)",
 	"type": "CAROUSEL",
-	"builder_metadata_subtype": "IMAGE",
 	"data": {
 		"image_aspect_ratio": 1.77,
 		"width": "FAT",
@@ -20,5 +22,54 @@
 }
 ```
 
+
 #### Sample Output
 ![hsl_sample_image](hsl_sample_image.png)
+
+
+<table border="1" class="docutils">
+   <thead>
+      <tr>
+         <th>Property Name</th>
+         <th>Description</th>
+         <th>Required</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td>text</td>
+         <td>This is the notification text shown on Apps when a message is sent to users along with the image</td>
+         <td>Yes, can be empty</td>
+      </tr>
+      <tr>
+         <td>type</td>
+         <td>type list as per the actionables list specified in <a href='https://haptik-docs.readthedocs.io/en/latest/bot-builder-advanced/hsl-properties.html'>hsl-properties</a></td>
+         <td>Yes</td>
+      </tr>
+      <tr>
+         <td>image_aspect_ratio</td>
+         <td>The possible aspect ratios for images</td>
+         <td>Yes</td>
+      </tr>
+      <tr>
+         <td>width</td>
+         <td>THIN, MEDIUM, FAT, BIG defines how much space each carousel item will take, this will be set before the image aspect ratio</td>
+         <td>Yes</td>
+      </tr>
+      <tr>
+         <td>items</td>
+         <td>Multiple images can be shared at a time as per a carousel, however for a single image we will use one item</td>
+         <td>Yes</td>
+      </tr>
+      <tr>
+         <td>thumbnail.image</td>
+         <td>The image to be sent</td>
+         <td>Yes</td>
+      </tr>
+      <tr>
+         <td>thumbnail.type</td>
+         <td>DEPRECATED - To be set as LANDSCAPE only</td>
+         <td>Yes</td>
+      </tr>
+   </tbody>
+</table>

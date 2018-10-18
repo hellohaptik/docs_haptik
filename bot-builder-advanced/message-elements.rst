@@ -56,10 +56,10 @@ A quick example for a button smart action.
   }
   
 
-The above message will render like this on the front end:
+The above message will render like this on front end:
 
 .. image:: hsl-button.jpeg
 
 The next message was sent by tapping on the **Tap** actionable.
 
-HSL is a very powerful language that has enabled us to make a lot of use-cases easier. There are quite a few combinations of it that can be used to get the best out of it. To know more about the technical details & possibilities please checkout the HSL Tech Documentation
+HSL is a very powerful language that has enabled us to make a lot of use-cases easier to achieve. There are quite a few combinations, that can be used to get the best out of it.

@@ -1,6 +1,22 @@
 ## HSL Text Element
 
-#### Sample Json
+#### Sample Json for simple text element
+```json
+{
+	"text": "simple text message",
+	"voice_text": "",
+	"mic_auto_open": false,
+	"type": "TEXT",
+	"data": {
+		"quick_replies": []
+	}
+}
+```
+#### Sample Output
+![hsl_simple_text](hsl_simple_text.png)
+
+
+#### Sample Json for text element with quick replies
 ```json
 {
 	"text": "Hi ! There, this is a quick text message with some quick replies.",

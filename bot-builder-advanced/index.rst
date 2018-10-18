@@ -6,6 +6,10 @@ Bot Builder Advanced
    :caption: Advanced Bot Building Concepts:
 
    message-elements
+   hsl-properties
+   image
+   text
+   button
+   carousel
    demo-links
-   ml-dummies
    integrating-webviews-into-sdk

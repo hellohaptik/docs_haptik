@@ -1,12 +1,8 @@
-Advanced Messaging Elements
+How HSL Elements Work
 ---------------------------
-This page will cover the following topics:
+This page will cover how to use HSL-Elements
 
-HSL-Elements_
-
-Forms_
-
-Haptik defines a superset of UI elements that are available across multiple platforms. These UI elements are then converted to their platform equivalent if they are not available on that specific platform. Eg. Forms are converted to quick replies on the Facebook platform and collected over free form.
+Haptik defines a superset of UI elements that are available across multiple platforms. These UI elements are then converted to their platform equivalent (js-sdk, android, ios, facebook-messenger, etc..) if they are not available on that specific platform. Eg. Forms are converted to quick replies on the Facebook platform and collected over free form.
 
 .. _HSL-Elements:
 HSL Elements
@@ -28,9 +24,9 @@ The basic anatomy of an HSL looks something like this:
 
 A HSL Object is made up 3 primary properties: text, type & data.
 
-text - Defines what's seen on the message bubble.
-type - Defines the main function of the HSL. For e.g. whether it's a carousel or a smart action or an order receipt etc.
-data - Contains all the supporting data needed for the particular type.
+* text - Defines what's seen on the message bubble.
+* type - Defines the main function of the HSL. For e.g. whether it's a carousel or a smart action or an order receipt etc.
+* data - Contains all the supporting data needed for the particular type.
 
 A quick example for a button smart action:
 ..code-block::
@@ -63,7 +59,3 @@ The above message will render like this on the front end:
 The next message was sent by tapping on the **Tap** actionable.
 
 HSL is a very powerful language that has enabled us to make a lot of use-cases easier. There are quite a few combinations of it that can be used to get the best out of it. To know more about the technical details & possibilities please checkout the HSL Tech Documentation
-
-.. _Forms:
-Forms
-^^^^^

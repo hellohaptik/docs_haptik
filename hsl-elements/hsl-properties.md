@@ -1,3 +1,21 @@
+## HSL
+
+Haptik is a chatbot platform where we build chat flows for various use cases. Chat flows are nothing but exchange of messages. These messages can range from being plain text messages to complex UI elements like carousel, smart actions etc.
+
+To build complex UI elements, we introduced Haptik Specific Language, our in-house format of messages. HSL is essentially JSON with a special meaning within the Haptik system. It’s a mutual agreement between the backend and the frontend to decide how some of the chat elements should look like and what action they can perform.
+
+All of Haptik’s frontend properties (Android SDK, iOS SDK, Web SDK) are configured to render HSL objects.
+
+The basic anatomy of an HSL looks something like this:
+
+```json
+{
+"text": str,
+"type": str,
+"data": dict
+}
+```
+
 ## HSL Properties
  
 The data part of the HSL holds most of the complex information enabling us to create complex chat elements. The data varies for every different type of the HSL. Before we dig into what all different data we could have, let’s quickly look into what actionables are how are they used along with different HSLs. Actionable is one of the most important part of the data is used heavily across all kinds of HSL.
@@ -20,8 +38,7 @@ Actionables exist to define both the existence & action of CTAs. Anatomy of an a
     "emoji": "<Emoji from Emoji Framework>"
 }
 ```
- 
- 
+
 *      actionable_text
 This is the text shown on the actionable
  
@@ -67,26 +84,8 @@ This property defines whether the screen should switch when you tap on the actio
 *      PROFILE
         	Opens up the Profile screen in the app.
  
-*      WALLET
-        	Opens up the Wallet screen in the app. Useful to show the wallet balance.
- 
-*      WALLET_HISTORY
-        	Opens up the Wallet screen and switches to Wallet History.
- 
-*      TRANSACTION_HISTORY
-        	Opens up the Transaction History screen.
- 
-*      REFERRAL
-        	Opens up the Referral screen.
- 
 *      SAVED_ADDRESSES
         	Opens up the Saved Addresses screen with the list of saved addresses, if any. Otherwise, opens up the screen to save a new address.
- 
-*      RECHARGE
-        	Similar to SELF_SERVE_RECHARGE. Takes you the Recharge & Bills screen with Recharge tab selected.
- 
-*      DTH
-        	Takes you the Recharge & Bills Screen and selects DTH tab.
  
 *      CALL
         	Makes a phone call to a number provided in the payload.
@@ -95,18 +94,8 @@ This property defines whether the screen should switch when you tap on the actio
         	Fires up web view with a link provided in the payload.
  
 *      SEND_MULTIPLE_LOCATIONS
-        	Used mostly in the Cabs channel to allow a user to select two locations and send it back as a message.
- 
-*      VIDEO_PLAYER (Deprecated)
-        	Starts playing a video using the YouTube SDK / Web view.
-        	Support dropped in Android v5.4.0
- 
-*      SHOWTIME_DETAIL (Deprecated)
-        	Opens up a screen which will show the user movie showtimes for a particular movie.
- 
-*      SHOPPING_DETAIL (Deprecated)
-        	Opens up Shopping Detail screen used indirectly using Shopalyst APIs. Not used ever since we stopped the Shopping channel.
- 
+        	Used mostly in channels to allow a user to select two locations and send it back as a message.
+
 *      is_default
 This property will visually make the actionable text bold for the particular actionable. Additionally, what is also does is that on tapping on the main message, the action will be the same as that of this actionable.
  
@@ -137,9 +126,6 @@ Like we have type of HSL, we also have type of an actionable. This type defines 
 *      SHARE_REFERRAL
         	Used to share referral message
  
-
-
-
 *      payload
 Actionable Payload is a dictionary which carries the meta-data required for the actionable to do it’s job.
 Some of the keys used in this payload are:
@@ -204,66 +190,11 @@ Some of the keys used in this payload are:
  
 *      athena_smart_action
         	This is built to make it easy for assistants to get the flight that the user was searching for. It’s contains a link which is opened in an iframe on the Athena RHS. The app needs to append this to the outgoing message.
- 
-*      movie_name (Deprecated)
-        	Was used along with SHOW_TIME_DETAIL.
- 
-*      movie_image (Deprecated)
-        	Was used along with SHOW_TIME_DETAIL.
- 
-*      movie_trailer_url (Deprecated)
-        	Was used along with SHOW_TIME_DETAIL.
- 
-*      options_url (Deprecated)
-        	Was used along with SHOPPING_DETAIL.
- 
+
 *      items
  
 *      emoji
 You can add an emoji from the emoji framework. This emoji will be displayed along with the actionable_text. Here are some of the emojis that are supported by the Apps right now.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Receipt Data
-
-RECEIPT elements have a specific kind of data which is exclusively used only by them.
-
-*      header
-	This is the header of the Receipt. E.g. Ride Summary, Recharge Summary etc
-
-*      subheader
-	This is a list. We can add two sub headers with each subheader having a header & a body of itself namely header_one, body_one, header_two & body_two. Usually details like Transaction ID etc are put in this field.
-
-*      order_items
-	Order Items is a list of order_item_detail dictionaries. This is the most scalable part of the receipt and allows us to create receipts for different use cases. The UI of an order receipt has this imaginary rows which can be filled using this key. Anatomy of an order_item_detail dictionary:
-
-            {
-                "body": "",
-                "header": "",
-                "image_url": "",
-                "title": ""
-            }
-
-All the four keys are optional but at-least one should be available to create a row on the order receipt. Body, Header & Title are stacked under each other in that order and have different weights.
-
-
-
-*      total_item_count
-	This is the no. of dictionaries/rows available in the order_items key.
-
-*      footer
-	As the name explains, this is the footer of the receipt and carries the amount & actionables. It also has a field called offer_text which is used to display the cashback info.
 
 ### Carousel Data
 
@@ -292,9 +223,6 @@ Carousel works mostly on actionables but some parts of it are very specific to C
 
 Like RECEIPT, TAB_LIST has it’s own unique data which is used along with Actionables.
 
-*      category
-	Not sure why this exists. Was build to distinguish Trains / Flights etc but no known use at the moment.
-	
 *      selection
 	The value of this field can be SELECT_ONE or SELECT_ALL. It suggests whether in multi-tab list is the selection of 1 tab enough or are all the tabs compulsory. Used with Onward & Return Journey Flights.
 
@@ -321,8 +249,6 @@ Like RECEIPT, TAB_LIST has it’s own unique data which is used along with Actio
 
 	*      caption
 	      Shown under the title. For e.g. duration in case of Flights.
-
-
 
 	*      message
 	      The message that is sent when the user select this particular item and taps on the actionable

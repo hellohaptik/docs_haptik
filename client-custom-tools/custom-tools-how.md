@@ -3,7 +3,7 @@
 #### Steps
 
 
-* Go to: https://staging.hellohaptik.com/home/ 
+* Go to: [a https://staging.hellohaptik.com/home/](https://staging.hellohaptik.com/home/ )
 * Enter your login credentials
 * Once logged in, you will see the below page (may vary based on permissions)
 

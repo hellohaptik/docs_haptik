@@ -22,11 +22,11 @@ The Haptik Platform  sends an event to your registered webhook whenever a bot or
         "id": 4415,
         "name": "gogo",
         "profile_image": "https://assets.haptikapi.com/content/42e123411bk1109823bf.jpg",
-        "is_automated": "True"
+        "is_automated": true
     },
     "message": {
-         "id": 1982371,
-         "body": "Hello World!"   
+        "id": 1982371,
+        "body": "Hello World!"   
     }
 }
 ```
@@ -85,6 +85,70 @@ The Haptik Platform is capable of supporting rich messaging elements such as Car
 
 
 
+## Create or Update Users in the Haptik System via REST API
+
+During message logging you provide Haptik with a unique id for every user (auth_id). This is usually the unique identifier for the user in your system.
+Before sending the message you need to first register the user and provide optional user details such as name, mobile number, email etc.
+
+The User API allows you to register the user via a `POST` request to the Haptik Platform. If the user with auth_id already exists then the user details will be updated. The URL for user creation is generated on the Haptik Platform Dashboard.
+
+Example URL
+
+`https://delivery.haptikapi.com/v1.0/user/`
+
+
+Headers
+```
+Authorization: Bearer <TOKEN>
+client-id: <CLIENT_ID>
+Content-Type: application/json
+```
+
+- Authorization - The Authorization header of each HTTP request should be “Bearer” followed by your token which will be shared with you
+- client-id - The client id for your account
+- Content-Type - application/json
+
+
+Example Payload
+
+```json
+{
+    "auth_id": "<AUTH_ID>",
+    "mobile_no": "<MOBILE_NO>",
+    "email": "<EMAIL>",
+    "name": "<NAME>"
+}
+```
+
+- auth_id - This is a alphanumeric User identifier from a 3rd Party System
+- mobile_no - Mobile no of the user (optional)
+- email - Email of the user (optional)
+- name - Name of the user (optional)
+
+### API Response
+
+A successful request to the user creation API will return a `200` status code with a JSON response object.
+
+```json
+{
+    "auth_id": "<AUTH_ID>",
+    "mobile_no": "<MOBILE_NO>",
+    "email": "<EMAIL>",
+    "name": "<NAME>"
+}
+```
+
+#### Error Response:
+
+If the Authorization header is missing or invalid, then the API will return a `401` status code.
+
+
+```json
+{
+   "error_message": "invalid authorization details"
+}
+```
+
 ## Log Message to Haptik System via REST API
 
 The Log Message API allows you to send messages via a `POST` request to the Haptik Platform. The URL for message logging is generated on the Haptik Platform Dashboard.
@@ -93,18 +157,16 @@ Example URL
 
 `https://delivery.haptikapi.com/v1.0/log_message_from_user/`
 
-The Authorization header of each HTTP request should be “Bearer” followed by your token which will be shared with you:
-
+Headers
 ```
 Authorization: Bearer <TOKEN>
-```
-
-In addition, `POST` requests to the REST API must include the following header:
-
-```
+client-id: <CLIENT_ID>
 Content-Type: application/json
 ```
 
+- Authorization - The Authorization header of each HTTP request should be “Bearer” followed by your token which will be shared with you
+- client-id - The client id for your account
+- Content-Type - application/json
 
 
 Example Payload
@@ -116,42 +178,42 @@ Example Payload
     },
     "message_body": "Hello World!",
     "message_type": 0,
-    "business_id": 343,
-    "client_id": "<CLIENT_ID>"
+    "business_id": 343
 }
 ```
 
 - auth_id - This is a alphanumeric User identifier from a 3rd Party System
 - business_id - This is a the numeric identifier for channel/queue that you wish to register the message on.
-- message -  The message body containing the message to be sent to the bot or agent.
+- message_body -  The message body containing the message to be sent to the bot or agent.
 - message_type - This defines the processing pipeline for messages, standard messages are of type `0`
-- client_id - The client id for your account
-
-
-### User Management and User Ids
-
-During message logging you provide Haptik with a unique id for every user(auth_id). This is usually the unique identifier for the user in your system.
-
-For details on integrating further user details such as name, mobile number etc please refer to the documentation on integrating 3rd party authentication during signup.
-
-
-
 
 ### API Response
 
 A successful request to the log message sent API will return a `200` status code with a JSON response object with a unique message id and other metadata about the messages.
 
 ```json
-[{
+{
     "message_id": 1411200492,
     "body": "Hello World!",
     "sort_id": 88,
     "created_at": "2018-10-04T12:41:27.980Z",
     "message_type": 0
-}]
+}
 ```
 
+#### Error Response:
+If the user with auth_id is not registered, then the API will return a `404` status code.
+
+```json
+{
+   "error_message": "user not found"
+}
+```
+
+If the Authorization header is missing or invalid, then the API will return a `401` status code.
 
 
-
-
+```json
+{
+   "error_message": "invalid authorization details"
+}

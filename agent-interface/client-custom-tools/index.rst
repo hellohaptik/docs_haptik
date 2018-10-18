@@ -1,4 +1,4 @@
-Custom/Client Tools
+Custom Tools
 ====================
 
 .. toctree::

@@ -37,3 +37,21 @@ which should appear for Flight Hindi Voice Business as "Test External Link"
 * Simply Click on the tool, and the url will open on the RHS
 
 ![agent_view_tool_url](agent_view_tool_url.png)
+
+
+#### Important Tech Note
+
+* An external tool appears for a business, if a user wishes to use the same tool across multiple businesses, they can do so by adding a the same entry for the other business.
+
+* Please make sure your `X-Frame-Options` is set to allow our host, So that your tool can open within our Iframe.
+
+#### Important Design Note
+
+* The RHS section, where the tool loads is restricted to exactly 26% of the page ~ 360px in width in most cases.
+* Please make sure that the tool is responsive to all required screen resolutions
+
+
+```json
+Header set X-Frame-Options "allow-from https://staging.hellohaptik.com"
+```
+

@@ -113,7 +113,7 @@
       </tr>
       <tr>
          <td>payload.gogo_message</td>
-         <td>message sent to our backend, if not provided message will be sent</td>
+         <td>message sent to our backend, if null payload.message is sent</td>
          <th>No</th>
       </tr>
    </tbody>

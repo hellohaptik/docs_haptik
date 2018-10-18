@@ -1,34 +1,5 @@
 ## HSL Carousel Element
 
-#### Carousel Data
-Carousel works mostly on actionables but some parts of it are very specific to Carousel design. Here are the keys:
-<table border="1" class="docutils">
-   <thead>
-      <tr>
-         <th>Values</th>
-         <th>Description</th>
-      </tr>
-   </thead>
-   <tbody>
-      <tr>
-         <td>title</td>
-         <td>This message is sent when the user taps on the actionable.</td>
-      </tr>
-      <tr>
-         <td>title</td>
-         <td>This is the title shown on the Carousel.</td>
-      </tr>
-      <tr>
-         <td>sub_title</td>
-         <td>Optional. Takes up the second row when used with a title.</td>
-      </tr>
-      <tr>
-         <td>description</td>
-         <td>Optional. Takes up the third row when used with a title.</td>
-      </tr>
-</table>
-
-
 #### Sample Json for default Carousel
 ```json
 {
@@ -125,4 +96,64 @@ Carousel works mostly on actionables but some parts of it are very specific to C
 
 #### Sample Output
 ![hsl_mini_actionable_carousel](hsl_mini_actionable_carousel.png)
+
+
+#### Carousel
+Carousel works mostly on actionables but some parts of it are very specific to Carousel design. Here are the keys:
+<table border="1" class="docutils">
+   <thead>
+      <tr>
+         <th>Values</th>
+         <th>Description</th>
+         <th>Required</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td>text</td>
+         <td>this will be the notification text</td>
+         <td>Required</td>
+      </tr>
+      <tr>
+         <td>type</td>
+         <td>has to be "CAROUSEL"</td>
+         <td>Required</td>
+      </tr>
+      <tr>
+         <td>data.image_aspect_ratio</td>
+         <td>defines the height of the carousel</td>
+         <td>Not Required</td>
+      </tr>
+      <tr>
+         <td>data.width</td>
+         <td>THIN, MEDIUM, FAT, BIG</td>
+         <td>Required</td>
+      </tr>
+      <tr>
+         <td>data.items</td>
+         <td>list of each carousel element</td>
+         <td>Required</td>
+      </tr>
+      <tr>
+         <td>data.items.title</td>
+         <td>title of carousel element</td>
+         <td>Not Required</td>
+      </tr>
+      <tr>
+         <td>data.items.sub_title</td>
+         <td>below title of carousel element</td>
+         <td>Not Required</td>
+      </tr>
+      <tr>
+         <td>data.items.description</td>
+         <td>appears below sub_title</td>
+         <td>Not Required</td>
+      </tr>
+      <tr>
+         <td>data.items.actionable</td>
+         <td>link defined in the properties section of this doc</td>
+         <td>Required</td>
+      </tr>
+</table>
+
 

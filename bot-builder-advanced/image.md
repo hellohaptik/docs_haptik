@@ -1,6 +1,7 @@
 ## HSL Image Element
 
-A HSL Image element is a type of Carousel element. However a seperate section has been created for it for ease.
+A HSL Image element is a type of Carousel element. In other words, the type is "CAROUSEL", and mainly its
+width and image url needs to be specified.
 
 
 #### Sample Json

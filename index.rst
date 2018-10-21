@@ -18,7 +18,7 @@ Jump to the agent interface `here
 <http://haptik-docs.readthedocs.io/en/latest/agent-interface/index.html>`_.
 
 Read about our HSL elements `here
-<http://haptik-docs.readthedocs.io/en/latest/hsl-elements/index.html>`_.
+<http://haptik-docs.readthedocs.io/en/latest/bot-builder-advanced/index.html>`_.
 
 .. toctree::
    :hidden:

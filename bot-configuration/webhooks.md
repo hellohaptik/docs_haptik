@@ -114,6 +114,7 @@ Content-Type: application/json
 ```json
 {
     "auth_id": "<AUTH_ID>",
+    "auth_code": "<AUTH_ID>",
     "mobile_no": "<MOBILE_NO>",
     "email": "<EMAIL>",
     "name": "<NAME>"
@@ -121,6 +122,7 @@ Content-Type: application/json
 ```
 
 - auth_id - This is a alphanumeric User identifier from your System
+- auth_code - We treat this value as the client token (optional)
 - mobile_no - Mobile no of the user (optional)
 - email - Email of the user (optional)
 - name - Name of the user (optional)

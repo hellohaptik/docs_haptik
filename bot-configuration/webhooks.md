@@ -114,7 +114,7 @@ Content-Type: application/json
 ```json
 {
     "auth_id": "<AUTH_ID>",
-    "auth_code": "<AUTH_ID>",
+    "auth_code": "<AUTH_CODE>",
     "mobile_no": "<MOBILE_NO>",
     "email": "<EMAIL>",
     "name": "<NAME>"

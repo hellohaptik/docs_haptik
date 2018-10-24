@@ -7,62 +7,64 @@
 The Haptik Platform  sends an event to your registered webhook whenever a bot or an agent has a message for the user. Your webhook must be a single `HTTPS` endpoint exposed by you that accepts  `POST` requests. All messages sent from the Haptik Platform will be in `JSON` format.
 
 1. Messages
+    
+    A standard message event to emit a message from either an agent or a bot.
 
-   A standard message event to emit a message from either an agent or a bot.
-
-```json
-{
-    "version": "1.0",
-    "user": {
-        "auth_id": "<AUTH_ID>"
-    },
-    "business_id": 343,
-    "event_name": "message",
-    "agent": {
-        "id": 4415,
-        "name": "gogo",
-        "profile_image": "https://assets.haptikapi.com/content/42e123411bk1109823bf.jpg",
-        "is_automated": true
-    },
-    "message": {
-        "id": 1982371,
-        "body": "Hello World!"   
+    ```json
+    {
+        "version": "1.0",
+        "user": {
+            "auth_id": "<AUTH_ID>"
+        },
+        "business_id": 343,
+        "event_name": "message",
+        "agent": {
+            "id": 4415,
+            "name": "gogo",
+            "profile_image": "https://assets.haptikapi.com/content/42e123411bk1109823bf.jpg",
+            "is_automated": true
+        },
+        "message": {
+            "id": 1982371,
+            "body": {
+                "text": "Hi",
+                "type": "TEXT",
+                "data": {
+                    "quick_replies": []
+                }
+            }  
+        }
     }
-}
-```
-
-
-
-- auth_id - This is a alphanumeric user identifier from your System.
-- business_id - This is a the numeric identifier for channel/queue that the user sent the previous message on. 
-- message -  The message body containing the message from the bot or the agent. 
-- agent - A JSON object containing information about the sending agent or bot.
-
-
-
+    ```
+    - auth_id - This is a alphanumeric user identifier from your System.
+    - business_id - This is a the numeric identifier for channel/queue that the user sent the previous message on. 
+    - message -  A JSON object containing the message from the bot or the agent. The body object represents [HSL](https://haptik-docs.readthedocs.io/en/latest/bot-builder-advanced/index.html).
+    - agent - A JSON object containing information about the sending agent or bot.
+     
 2. Typing Indicator
 
-  A change in the typing indicator state, that indicates if an agent or a bot is typing. A typing indicator is good UX pattern to keep users engaged while they interact with your chat platform.
+     A change in the typing indicator state, that indicates if an agent or a bot is typing. A typing indicator is good UX pattern to keep users engaged while they interact with your chat platform.
+    
+     Example Message:
+       
+    ```json
+    {
+        "version": "1.0",
+        "user":{
+            "auth_id": "<AUTH_ID>"
+        },
+        "business_id": 343,
+        "event_name": "typing_indicator",
+        "typing_indicator": "start"
+    }
+    ```
 
-Example Message:
-```json
-{
-    "version": "1.0",
-    "user":{
-        "auth_id": "<AUTH_ID>"
-    },
-    "business_id": 343,
-    "event_name": "typing_indicator",
-    "typing_indicator": "start"
-}
-```
-
-Typing indicator value can either be `start` or `stop` to indicate the change in state of the typing indicator
+    Typing indicator value can either be `start` or `stop` to indicate the change in state of the typing indicator
 
 
 ### Validate Webhook for security
 
-The HTTP request will contain an X-Hub-Signature header which contains the SHA1 signature of the request payload, using the secret_key shared in advance, and prefixed with sha1=. Your callback endpoint can verify this signature to validate the integrity and origin of the payload.
+The HTTP request will contain an X-Hub-Signature header which contains the SHA1 signature of the request payload computed using the HMAC algorithm and the secret_key shared in advance, and prefixed with sha1=. Your callback endpoint can verify this signature to validate the integrity and origin of the payload.
 
 
 ### Webhook Performance Requirements
@@ -81,7 +83,7 @@ A webhook that does not respond within the specified time frame or does not resp
 
 ###  Support for Rich Messaging
 
-The Haptik Platform is capable of supporting rich messaging elements such as Carousels, Buttons, Images and dozens more. Please get in touch with the technical support team for a complete list of rich messaging elements and details on adding support for your platform.
+The Haptik Platform is capable of supporting [rich messaging elements](https://haptik-docs.readthedocs.io/en/latest/bot-builder-advanced/index.html) such as Carousels, Buttons, Images and dozens more. Please get in touch with the technical support team for a complete list of rich messaging elements and details on adding support for your platform.
 
 
 
@@ -94,7 +96,7 @@ The User API allows you to register the user via a `POST` request to the Haptik 
 
 Example URL
 
-`https://delivery.haptikapi.com/v1.0/user/`
+`https://staging-messenger.haptikapi.com/v1.0/user/`
 
 
 ### Headers
@@ -149,13 +151,27 @@ If the Authorization header is missing or invalid, then the API will return a `4
 }
 ```
 
+### Sample CURL command
+```
+curl -X POST \
+   https://staging-messenger.haptikapi.com/v1.0/user/ \
+  -H 'Authorization: Bearer <TOKEN>' \
+  -H 'client-id: <CLIENT_ID>' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "auth_id": "<AUTH_ID>",
+    "name": "guest user"
+}
+'
+```
+
 ## Log Message to Haptik System via REST API
 
 The Log Message API allows you to send messages via a `POST` request to the Haptik Platform. The URL for message logging is generated on the Haptik Platform Dashboard.
 
 Example URL
 
-`https://delivery.haptikapi.com/v1.0/log_message_from_user/`
+`https://staging-messenger.haptikapi.com/v1.0/log_message_from_user/`
 
 ### Headers
 ```
@@ -222,6 +238,22 @@ If the Authorization header is missing or invalid, then the API will return a `4
 {
    "error_message": "invalid authorization details"
 }
+```
+
+### Sample CURL command
+```
+curl -X POST \
+    https://staging-messenger.haptikapi.com/v1.0/log_message_from_user/ \
+  -H 'Authorization: Bearer <TOKEN>' \
+  -H 'client-id: <CLIENT_ID>' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "message_body": "<MESSAGE_BODY>",
+    "business_id": 343,
+    "message_type": 0,
+    "user": {"auth_id": "<AUTH_ID>"}
+}
+'
 ```
 
 ## API Security

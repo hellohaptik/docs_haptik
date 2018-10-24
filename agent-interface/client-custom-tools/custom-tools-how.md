@@ -21,10 +21,11 @@
 which should appear for Flight Hindi Voice Business as "Test External Link"
 
 * On clicking "Add External Tool"
-	- Business: Select you unique business name. (Should already exist)
-	- Task: can be set to Default or None
+	- Business: Select your unique business name. (Will be availabe in dropdown)
+	- Partner: Select your unique partner name. (Will be availabe in dropdown)
+	- Task: can be ignored, and left black
 	- Tool Name: can be any string (this is what will apear to the agents)
-	- Url: an external link to your tool.
+	- Url: an external link to your tool
 	- Select "Link"
 	- Hit Submit
 

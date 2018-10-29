@@ -258,5 +258,22 @@ curl -X POST \
 '
 ```
 
+#### CURL command to upload images
+```
+curl -X POST \
+    https://staging-messenger.haptikapi.com/v1.0/log_message_from_user/ \
+  -H 'Authorization: Bearer <TOKEN>' \
+  -H 'client-id: <CLIENT_ID>' \
+  -H 'Content-Type: application/json' \
+  --data-binary "@image.jpg" \
+  -d '{
+    "message_body": "",
+    "business_id": 343,
+    "message_type": 1,
+    "user": {"auth_id": "<AUTH_ID>"}
+}
+'
+```
+
 ## API Security
 To access the Haptik API, you need a token. The Authorization header of each HTTP request should be “Bearer” followed by your token which will be shared with you. If the Authorization header is missing or invalid, then 401 status code is returned. You should ensure that you keep your token secret.

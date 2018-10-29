@@ -71,7 +71,7 @@ We provide data in the below mentioned format.
 
 #### How do we send data
 
-We send data to the iframe which has loaded the client's external tool via javascript.
+We send data to the parent iframe of the external tool via javascript.```
 
 ```
 iframeET = '<iframe on which the external tool loads>'

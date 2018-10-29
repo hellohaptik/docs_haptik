@@ -14,9 +14,12 @@ data = '<json object with client specified data>'
 iframeEl.contentWindow.postMessage(data)
 ```
 
+for more information on what postMessage is, please refer to [here](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage )
+
+
 #### How we expect the client to receive the data
 
-The client's external tool will have to add a listener for 'message' sent via 'postMessage'.
+The client's external tool will have to add a listener for 'message' sent via [postMessage](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage).
 
 We will provide the data once the iframe is loaded successfully.
 

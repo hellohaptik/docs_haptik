@@ -324,7 +324,7 @@ A successful request will return a `200` status code with a JSON response object
     "message_id": 1411200492,
     "message_body": "<MESSAGE_BODY>",
     "created_at": "2018-10-04T12:41:27.980Z",
-    "message_type": 0
+    "message_type": 1
 }
 ```
 

@@ -297,7 +297,7 @@ Content-Length: 1
 
 1
 --MultipartBoundry
-Content-Disposition: form-data; name="image"; filename="image.jpg"
+Content-Disposition: form-data; name="file"; filename="image.jpg"
 Content-Type: image/jpeg
 Content-Length: 151160
 
@@ -313,7 +313,7 @@ Content-Length: 0
 - auth_id - This is a alphanumeric User identifier from your system
 - business_id - This is a the numeric identifier for channel/queue that you wish to register the message on.
 - message_type - The message type should be `1` for image
-- image - contents of the image
+- file - contents of the image (Supported extensions: jpeg, png)
 - message_body - message body that was logged in the haptik system
 ### Response
 
@@ -362,7 +362,7 @@ curl -X POST\
   -F "auth_id=<AUTH_ID>" \
   -F "business_id=<BUSINESS_ID>" \
   -F "message_type=1" \
-  -F "image=@/home/user1/Desktop/test.jpg" \
+  -F "file=@/home/user1/Desktop/test.jpg" \
   -F "message_body="
 ```
 

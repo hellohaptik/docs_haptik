@@ -362,7 +362,7 @@ curl -X POST\
   -F "auth_id=<AUTH_ID>" \
   -F "business_id=<BUSINESS_ID>" \
   -F "message_type=1" \
-  -F "image=@/home/user1/Desktop/test.jpg" \
+  -F "file=@/home/user1/Desktop/test.jpg" \
   -F "message_body="
 ```
 

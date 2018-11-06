@@ -65,6 +65,15 @@ The Haptik Platform  sends an event to your registered webhook whenever a bot or
    "https://assets.haptikapi.com/content/42e123411bk1109823bf.jpg",
            "is_automated": false
        },
+       "message": {
+           "id": 1982314,
+           "body": {
+               "text": "Prateek has entered the Conversation",
+               "type": "SYSTEM",
+               "data": {
+               }
+           }  
+       }
    }
    ```
 
@@ -90,6 +99,15 @@ The Haptik Platform  sends an event to your registered webhook whenever a bot or
            "profile_image": "https://assets.haptikapi.com/content/42e123411bk1109823bf.jpg",
            "is_automated": true
        },
+       "message": {
+           "id": 1982471,
+           "body": {
+               "text": "The conversation has been completed",
+               "type": "SYSTEM",
+               "data": {
+               }
+           }  
+       }
        
    }
    ```

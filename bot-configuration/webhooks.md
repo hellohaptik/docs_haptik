@@ -7,7 +7,7 @@
 The Haptik Platform  sends an event to your registered webhook whenever a bot or an agent has a message for the user. Your webhook must be a single `HTTPS` endpoint exposed by you that accepts  `POST` requests. All messages sent from the Haptik Platform will be in `JSON` format.
 
 1. Messages
-    
+
     A standard message event to emit a message from either an agent or a bot.
 
     ```json
@@ -40,31 +40,68 @@ The Haptik Platform  sends an event to your registered webhook whenever a bot or
     - business_id - This is a the numeric identifier for channel/queue that the user sent the previous message on. 
     - message -  A JSON object containing the message from the bot or the agent. The body object represents [HSL](https://haptik-docs.readthedocs.io/en/latest/bot-builder-advanced/index.html).
     - agent - A JSON object containing information about the sending agent or bot.
-     
-2. Typing Indicator
 
-     A change in the typing indicator state, that indicates if an agent or a bot is typing. A typing indicator is good UX pattern to keep users engaged while they interact with your chat platform.
-    
-     Example Message:
+
+
+2. Chat Agent Pinned
+
+   A chat has been assigned to an agent
+
+   Example:
+
+   ```json
+   {
+       "version": "1.0",
+       "user": {
+           "auth_id": "<AUTH_ID>"
+       },
+       "business_id": 343,
+       "event_name": "chat_pinned",
+       "team_name": "Refunds",
+       "agent": {
+           "id": 235,
+           "name": "Prateek",
+           "profile_image":
+   "https://assets.haptikapi.com/content/42e123411bk1109823bf.jpg",
+           "is_automated": false
+       },
+   }
+   ```
+
+
+
+3. Chat Complete
+
+   A chat has been marked as complete either by a bot or by an agent. When a chat is marked complete any assigned agent is cleared.
+
+   Example:
+
+   ```json
+   {
+       "version": "1.0",
+       "user": {
+           "auth_id": "<AUTH_ID>"
+       },
+       "business_id": 343,
+       "event_name": "chat_complete",
+       "agent": {
+           "id": 4415,
+           "name": "gogo",
+           "profile_image": "https://assets.haptikapi.com/content/42e123411bk1109823bf.jpg",
+           "is_automated": true
+       },
        
-    ```json
-    {
-        "version": "1.0",
-        "user":{
-            "auth_id": "<AUTH_ID>"
-        },
-        "business_id": 343,
-        "event_name": "typing_indicator",
-        "typing_indicator": "start"
-    }
-    ```
+   }
+   ```
 
-    Typing indicator value can either be `start` or `stop` to indicate the change in state of the typing indicator
+
+​	
+
 
 
 ### Validate Webhook for security
 
-The HTTP request will contain an X-Hub-Signature header which contains the SHA1 signature of the request payload computed using the HMAC algorithm and the secret_key shared in advance, and prefixed with sha1=. Your callback endpoint can verify this signature to validate the integrity and origin of the payload.
+The HTTP request will contain an `X-Hub-Signature` header which contains the SHA1 signature of the request payload computed using the HMAC algorithm and the secret_key shared in advance, and prefixed with `sha1=`. Your callback endpoint can verify this signature to validate the integrity and origin of the payload.
 
 
 ### Webhook Performance Requirements

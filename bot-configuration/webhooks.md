@@ -52,6 +52,9 @@ The Haptik Platform  sends an event to your registered webhook whenever a bot or
    ```json
    {
        "version": "1.0",
+       "user": {
+           "auth_id": "<AUTH_ID>"
+       },
        "business_id": 343,
        "event_name": "chat_pinned",
        "team_name": "Refunds",
@@ -76,6 +79,9 @@ The Haptik Platform  sends an event to your registered webhook whenever a bot or
    ```json
    {
        "version": "1.0",
+       "user": {
+           "auth_id": "<AUTH_ID>"
+       },
        "business_id": 343,
        "event_name": "chat_complete",
        "agent": {

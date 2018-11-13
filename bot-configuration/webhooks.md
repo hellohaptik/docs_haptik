@@ -37,7 +37,7 @@ The Haptik Platform  sends an event to your registered webhook whenever a bot or
     }
     ```
     - auth_id - This is a alphanumeric user identifier from your System.
-    - business_id - This is a the numeric identifier for channel/queue that the user sent the previous message on. 
+    - business_id - This is a numeric identifier for channel/queue that the user sent the previous message on. 
     - message -  A JSON object containing the message from the bot or the agent. The body object represents [HSL](https://haptik-docs.readthedocs.io/en/latest/bot-builder-advanced/index.html).
     - agent - A JSON object containing information about the sending agent or bot.
 

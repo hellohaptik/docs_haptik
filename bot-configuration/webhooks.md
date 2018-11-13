@@ -13,6 +13,7 @@ The Haptik Platform  sends an event to your registered webhook whenever a bot or
     ```json
     {
         "version": "1.0",
+        "timestamp": "2018-10-04T12:41:27.980Z",
         "user": {
             "auth_id": "<AUTH_ID>"
         },
@@ -36,6 +37,7 @@ The Haptik Platform  sends an event to your registered webhook whenever a bot or
         }
     }
     ```
+    - timestamp - ISO timestamp denoting when the webhook request was created in the haptik system
     - auth_id - This is a alphanumeric user identifier from your System.
     - business_id - This is a the numeric identifier for channel/queue that the user sent the previous message on. 
     - message -  A JSON object containing the message from the bot or the agent. The body object represents [HSL](https://haptik-docs.readthedocs.io/en/latest/bot-builder-advanced/index.html).
@@ -52,6 +54,7 @@ The Haptik Platform  sends an event to your registered webhook whenever a bot or
    ```json
    {
        "version": "1.0",
+       "timestamp": "2018-10-04T12:41:27.980Z",
        "user": {
            "auth_id": "<AUTH_ID>"
        },
@@ -88,6 +91,7 @@ The Haptik Platform  sends an event to your registered webhook whenever a bot or
    ```json
    {
        "version": "1.0",
+       "timestamp": "2018-10-04T12:41:27.980Z",
        "user": {
            "auth_id": "<AUTH_ID>"
        },
@@ -130,9 +134,14 @@ Your webhook should meet the following minimum performance requirements
   Respond to all webhook events with a `200` OK
 - Respond to all webhook events in 5 seconds or less
 
-Please note that message delivery will be only attempted *once* for every message. There can be multiple delivery requests within a short time span and it is the responsibility of the client sdk to maintain ordering and QoS in case of failure to accept messages.
+If we cannot connect to your webhook or your server takes more than 5 seconds to return the response or returns non 2xx status code, 
+then we will retry the request 6 times over the course of 60 minutes (5 seconds, 25 seconds, 125 seconds, 625 seconds, 1410 seconds, 1410 seconds). 
+If a single webhook call is unsuccessful after the last attempt then it will be dropped and we will automatically disable the webhook. 
+You can then visit the Haptik Dashboard to activate the webhook once more. When the webhook is disabled, 
+then new requests will be queued for a max duration of 60 minutes. During those 60 minutes, 
+we will check if the webhook was enabled again 6 times. If the webhook was enabled, then we will try to deliver the request.
 
-A webhook that does not respond within the specified time frame or does not respond with a `200` status code will be deactivated and will not receive notifications until it is verified once more. Visit the Haptik Dashboard to activate the webhook once more.
+There can be multiple delivery requests within a short time span and it is your responsibility to maintain ordering and QoS in case of failure to accept messages.
 
 
 

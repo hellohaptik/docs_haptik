@@ -137,7 +137,7 @@ Your webhook should meet the following minimum performance requirements
 If we cannot connect to your webhook or your server takes more than 5 seconds to return the response or returns non 2xx status code, 
 then we will retry the request 6 times over the course of 60 minutes (Retry intervals: 5 seconds, 25 seconds, 125 seconds, 625 seconds, 1410 seconds, 1410 seconds). 
 If a single webhook call is unsuccessful after the last attempt then it will be dropped and we will automatically disable the webhook. 
-You can then visit the Haptik Dashboard to activate the webhook once more. When the webhook is disabled, 
+Visit the Haptik Dashboard to activate the webhook once more. When the webhook is disabled, 
 then new requests will be queued for a max duration of 60 minutes. During those 60 minutes, 
 we will check if the webhook was enabled again 6 times (Retry intervals: 5 seconds, 25 seconds, 125 seconds, 625 seconds, 1410 seconds, 1410 seconds). If the webhook was enabled, then we will try to deliver the request.
 

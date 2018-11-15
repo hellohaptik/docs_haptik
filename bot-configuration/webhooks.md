@@ -43,8 +43,6 @@ The Haptik Platform  sends an event to your registered webhook whenever a bot or
     - message -  A JSON object containing the message from the bot or the agent. The body object represents [HSL](https://haptik-docs.readthedocs.io/en/latest/bot-builder-advanced/index.html).
     - agent - A JSON object containing information about the sending agent or bot.
 
-
-
 2. Chat Agent Pinned
 
    A chat has been assigned to an agent
@@ -79,8 +77,6 @@ The Haptik Platform  sends an event to your registered webhook whenever a bot or
        }
    }
    ```
-
-
 
 3. Chat Complete
 
@@ -137,7 +133,7 @@ Your webhook should meet the following minimum performance requirements
 If we cannot connect to your webhook or your server takes more than 5 seconds to return the response or returns non 2xx status code, 
 then we will retry the request 6 times over the course of 60 minutes (Retry intervals: 5 seconds, 25 seconds, 125 seconds, 625 seconds, 1410 seconds, 1410 seconds). 
 If a single webhook call is unsuccessful after the last attempt then it will be dropped and we will automatically disable the webhook. 
-Visit the Haptik Dashboard to activate the webhook once more. When the webhook is disabled, 
+Visit the Haptik Dashboard or use the [REST API](#enable-webhook-via-rest-api) to activate the webhook once more. When the webhook is disabled, 
 then new requests will be queued for a max duration of 60 minutes. If the webhook was enabled, then we will try to deliver the request.
 
 There can be multiple delivery requests within a short time span and it is your responsibility to maintain ordering and QoS in case of failure to accept messages.
@@ -387,7 +383,8 @@ A successful request will return a `200` status code with a JSON response object
     "message_id": 1411200492,
     "message_body": "<MESSAGE_BODY>",
     "created_at": "2018-10-04T12:41:27.980Z",
-    "message_type": 1
+    "message_type": 1,
+    "file_url": "https://assets.haptikapi.com/content/42e123411bk1109823bf.jpg"
 }
 ```
 
@@ -395,6 +392,7 @@ A successful request will return a `200` status code with a JSON response object
 - message_body - message body that was logged in the haptik system
 - created_at - ISO timestamp denoting when the message was created in the haptik system
 - message_type - The message type should be `1` for image
+- file_url - The url for the uploaded image
 
 
 #### Error Response:
@@ -427,6 +425,74 @@ curl -X POST\
   -F "message_type=1" \
   -F "file=@/home/user1/Desktop/test.jpg" \
   -F "message_body="
+```
+
+## Enable webhook via REST API
+
+If a single webhook call is unsuccessful after multiple retries, then the webhook is automatically disabled. 
+You can use Enable webhook API to enable the webhook again via a `POST` request to the Haptik Platform. 
+The URL to enable webhook is generated on the Haptik Platform Dashboard.
+
+
+Example URL
+
+`https://staging-messenger.haptikapi.com/v1.0/webhook/`
+
+
+### Headers
+```
+Authorization: Bearer <TOKEN>
+client-id: <CLIENT_ID>
+Content-Type: application/json
+```
+
+- Authorization - The Authorization header of each HTTP request should be “Bearer” followed by your token which will be shared with you
+- client-id - The client id for your account
+- Content-Type - application/json
+
+
+### Request
+
+```json
+{
+    "enabled": true
+}
+```
+
+- enabled - enabled should be true to enable the webhook again
+
+### Response
+
+A successful request to the enable webhook API will return a `200` status code with a JSON response object.
+
+```json
+{
+    "enabled": true
+}
+```
+
+#### Error Response:
+
+If the Authorization header is missing or invalid, then the API will return a `401` status code.
+
+
+```json
+{
+   "error_message": "invalid authorization details"
+}
+```
+
+### Sample CURL command
+```
+curl -X POST \
+   https://staging-messenger.haptikapi.com/v1.0/webhook/ \
+  -H 'Authorization: Bearer <TOKEN>' \
+  -H 'client-id: <CLIENT_ID>' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "enabled": true
+}
+'
 ```
 
 ## API Security

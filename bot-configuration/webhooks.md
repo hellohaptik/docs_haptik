@@ -303,11 +303,7 @@ curl -X POST \
   -H 'Authorization: Bearer <TOKEN>' \
   -H 'client-id: <CLIENT_ID>' \
   -H 'Content-Type: application/json' \
-  -d '{
-    "auth_id": "<AUTH_ID>",
-    "name": "guest user"
-}
-'
+  -d '{"auth_id": "<AUTH_ID>", "name": "guest user"}'
 ```
 
 ## Log Message to Haptik System via REST API
@@ -392,13 +388,12 @@ curl -X POST \
   -H 'Authorization: Bearer <TOKEN>' \
   -H 'client-id: <CLIENT_ID>' \
   -H 'Content-Type: application/json' \
-  -d '{
-    "message_body": "<MESSAGE_BODY>",
-    "business_id": 343,
-    "message_type": 0,
-    "user": {"auth_id": "<AUTH_ID>"}
-}
-'
+  -d '{\
+    "message_body": "<MESSAGE_BODY>",\
+    "business_id": 343,\
+    "message_type": 0,\
+    "user": {"auth_id": "<AUTH_ID>"}\
+}'
 ```
 
 ## Image Upload
@@ -573,10 +568,7 @@ curl -X POST \
   -H 'Authorization: Bearer <TOKEN>' \
   -H 'client-id: <CLIENT_ID>' \
   -H 'Content-Type: application/json' \
-  -d '{
-    "enabled": true
-}
-'
+  -d '{"enabled": true}'
 ```
 
 ## API Security

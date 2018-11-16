@@ -508,9 +508,10 @@ curl -X POST\
 
 ## Enable webhook via REST API
 
-If a single webhook call is unsuccessful after multiple retries, then the webhook is automatically disabled. 
-You can use Enable webhook API to enable the webhook again via a `POST` request to the Haptik Platform. 
-The URL to enable webhook is generated on the Haptik Platform Dashboard.
+If a single webhook call is unsuccessful after multiple retries, then the webhook is automatically disabled by Haptik.
+
+Client will have to use Enable webhook API to enable the webhook again via a `POST` request to the Haptik Platform. 
+The URL to enable webhook will be generated on the Haptik Platform Dashboard.
 
 
 Example URL

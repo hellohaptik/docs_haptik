@@ -242,7 +242,7 @@ Example URL
 `https://staging-messenger.haptikapi.com/v1.0/user/`
 
 
-### Headers
+#### Headers
 ```
 Authorization: Bearer <TOKEN>
 client-id: <CLIENT_ID>
@@ -254,7 +254,7 @@ Content-Type: application/json
 - Content-Type - application/json
 
 
-### POST Request
+#### POST Request
 
 ```json
 {
@@ -272,7 +272,7 @@ Content-Type: application/json
 - email - Email of the user (optional)
 - name - Name of the user (optional)
 
-### Response
+#### Response
 
 A successful request to the user creation API will return a `200` status code with a JSON response object.
 
@@ -285,7 +285,7 @@ A successful request to the user creation API will return a `200` status code wi
 }
 ```
 
-#### Error Response:
+##### Error Response:
 
 If the Authorization header is missing or invalid, then the API will return a `401` status code.
 
@@ -296,7 +296,7 @@ If the Authorization header is missing or invalid, then the API will return a `4
 }
 ```
 
-### Sample CURL command
+#### Sample CURL command
 ```
 curl -X POST \
    https://staging-messenger.haptikapi.com/v1.0/user/ \
@@ -318,7 +318,7 @@ Example URL
 
 `https://staging-messenger.haptikapi.com/v1.0/log_message_from_user/`
 
-### Headers
+#### Headers
 ```
 Authorization: Bearer <TOKEN>
 client-id: <CLIENT_ID>
@@ -330,7 +330,7 @@ Content-Type: application/json
 - Content-Type - application/json
 
 
-### Request
+#### Request
 
 ```json
 {
@@ -348,7 +348,7 @@ Content-Type: application/json
 - message_body -  The message body containing the message to be sent to the bot or agent.
 - message_type - This defines the processing pipeline for messages, standard messages are of type `0`
 
-### Response
+#### Response
 
 A successful request to the log message sent API will return a `200` status code with a JSON response object with a unique message id and other metadata about the messages.
 
@@ -385,7 +385,7 @@ If the Authorization header is missing or invalid, then the API will return a `4
 }
 ```
 
-### Sample CURL command
+#### Sample CURL command
 ```
 curl -X POST \
     https://staging-messenger.haptikapi.com/v1.0/log_message_from_user/ \
@@ -409,7 +409,7 @@ Example URL
 
 `https://staging-messenger.haptikapi.com/v1.0/log_file_from_user/`
 
-### Headers
+#### Headers
 ```
 Authorization: Bearer <TOKEN>
 client-id: <CLIENT_ID>
@@ -421,7 +421,7 @@ Content-Type: multipart/form-data; boundary=MultipartBoundry
 - Content-Type - multipart/form-data; boundary=MultipartBoundry
 
 
-### Request
+#### Request
 
 ```
 --MultipartBoundry
@@ -497,7 +497,7 @@ If the Authorization header is missing or invalid, then the API will return a `4
 }
 ```
 
-### Sample CURL command
+#### Sample CURL command
 ```
 curl -X POST\
     https://staging-messenger.haptikapi.com/v1.0/log_file_from_user/ \
@@ -523,7 +523,7 @@ Example URL
 `https://staging-messenger.haptikapi.com/v1.0/webhook/`
 
 
-### Headers
+#### Headers
 ```
 Authorization: Bearer <TOKEN>
 client-id: <CLIENT_ID>
@@ -535,7 +535,7 @@ Content-Type: application/json
 - Content-Type - application/json
 
 
-### Request
+#### Request
 
 ```json
 {
@@ -545,7 +545,7 @@ Content-Type: application/json
 
 - enabled - enabled should be true to enable the webhook again
 
-### Response
+#### Response
 
 A successful request to the enable webhook API will return a `200` status code with a JSON response object.
 
@@ -566,7 +566,7 @@ If the Authorization header is missing or invalid, then the API will return a `4
 }
 ```
 
-### Sample CURL command
+#### Sample CURL command
 ```
 curl -X POST \
    https://staging-messenger.haptikapi.com/v1.0/webhook/ \

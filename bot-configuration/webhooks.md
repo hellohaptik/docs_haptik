@@ -4,11 +4,11 @@
 
 ## Receive Message via Registered Webhook
 
-The Haptik Platform  sends an event to client's registered webhook whenever a bot or an agent has a message for the user. 
+The Haptik Platform  sends an event to your registered webhook whenever a bot or an agent has a message for the user. 
 
 <b>Note</b>: Your webhook must be a single `HTTPS` endpoint exposed by you that accepts `POST` requests. 
 
-All messages sent from Haptik Platform to registered client's webhook will always be in `JSON` format.
+All messages sent from Haptik Platform to your registered webhook will always be in `JSON` format.
 
 
 <table border="1" class="docutils">
@@ -78,7 +78,7 @@ All messages sent from Haptik Platform to registered client's webhook will alway
       <tr>
          <td>message.body</td>
          <td>
-         Will comprice of hsl elements, for a complete description of hsl elemnets refer 
+         Will comprize of hsl elements, for a complete description of hsl elemnets refer 
          [here](https://haptik-docs.readthedocs.io/en/latest/bot-builder-advanced/index.html)
          </td>
       </tr>
@@ -190,7 +190,7 @@ All messages sent from Haptik Platform to registered client's webhook will alway
 
 The HTTP request will contain an `X-Hub-Signature` header which contains the SHA1 signature of the request payload computed using the HMAC algorithm and the secret_key shared in advance, and prefixed with `sha1=`. 
 
-The client's callback endpoint should verify this signature to validate the integrity and origin of the payload.
+Your callback endpoint should verify this signature to validate the integrity and origin of the payload.
 
 
 ### Webhook Performance Requirements
@@ -203,7 +203,7 @@ Your webhook should meet the following minimum performance requirements
 #### Implemented FallBacks
 
 <b>If any of the below 3 conditions are observed</b>
-1) We cannot connect to client's webhook
+1) We cannot connect to your webhook
 2) Client webhook takes to long to response (threshold = `5s`)
 3) Client webhook returns non 2xx status code
 
@@ -215,10 +215,10 @@ If the webhook call is unsuccessful even after the last attempt then it will be 
 
 After which new requests will be queued for a max duration of `60 minutes`. Once the webhook is enabled by the client, we will attempt to deliver the request.
 
-Client can visit the Haptik Dashboard or use the [REST API](#enable-webhook-via-rest-api) to activate the webhook, If disabled.
+You can visit the Haptik Dashboard or use the [REST API](#enable-webhook-via-rest-api) to activate the webhook, If disabled.
 
 
-<b>Note:</b> There can be multiple delivery requests within a short time span and it is the `client's responsibility` to maintain ordering and QoS in case of failure to accept messages.
+<b>Note:</b> There can be multiple delivery requests within a short time span and it is `your responsibility` to maintain ordering and QoS in case of failure to accept messages.
 
 
 ###  Support for Rich Messaging
@@ -228,8 +228,8 @@ The Haptik Platform is capable of supporting [rich messaging elements](https://h
 
 ## Create or Update Users in the Haptik System via REST API
 
-During message logging, the client provide Haptik with a unique id for every user (auth_id). This is supposed to be the unique identifier for the user in said client's system.
-Before sending the message to Haptik, the client needs to register the user and provide optional user details such as name, mobile number, email etc.
+During message logging, you will provide Haptik with a unique id for every user (auth_id). This is supposed to be the unique identifier for the user in your system.
+Before sending the message to Haptik, you need to register the user and provide optional user details such as name, mobile number, email etc.
 
 The User API allows you to register the user via a `POST` request to the Haptik Platform.
 
@@ -340,7 +340,7 @@ Content-Type: application/json
 ```
 
 - auth_id - This is a alphanumeric User identifier from your system
-- business_id - This is a the numeric identifier for channel/queue that the client wish to register the message on.
+- business_id - This is a the numeric identifier for channel/queue that you wish to register the message on.
 - message_body -  The message body containing the message to be sent to the bot or agent.
 - message_type - This defines the processing pipeline for messages, standard messages are of type `0`
 
@@ -398,7 +398,7 @@ curl -X POST \
 
 ## Image Upload
 
-The Image upload API allows the client to upload user images via a `POST` request to the Haptik Platform. The URL for image uploads is generated on the Haptik Platform Dashboard.
+The Image upload API allows you to upload user images via a `POST` request to the Haptik Platform. The URL for image uploads is generated on the Haptik Platform Dashboard.
 
 Example URL
 
@@ -411,7 +411,7 @@ client-id: <CLIENT_ID>
 Content-Type: multipart/form-data; boundary=MultipartBoundry
 ```
 
-- Authorization - The Authorization header of each HTTP request should be “Bearer” followed by client's token which will be provided by Haptik
+- Authorization - The Authorization header of each HTTP request should be “Bearer” followed by your token which will be provided by Haptik
 - client-id - The client id account, provided by Haptik
 - Content-Type - multipart/form-data; boundary=MultipartBoundry
 
@@ -510,7 +510,7 @@ curl -X POST\
 
 If a single webhook call is unsuccessful after multiple retries, then the webhook is automatically disabled by Haptik.
 
-Client will have to use Enable webhook API to enable the webhook again via a `POST` request to the Haptik Platform. 
+You will have to use Enable webhook API to enable the webhook again via a `POST` request to the Haptik Platform. 
 The URL to enable webhook will be generated on the Haptik Platform Dashboard.
 
 
@@ -526,7 +526,7 @@ client-id: <CLIENT_ID>
 Content-Type: application/json
 ```
 
-- Authorization - The Authorization header of each HTTP request should be “Bearer” followed by client's token provided by Haptik
+- Authorization - The Authorization header of each HTTP request should be “Bearer” followed by your token which will be provided by Haptik
 - client-id - The client id for your account
 - Content-Type - application/json
 
@@ -573,6 +573,6 @@ curl -X POST \
 ```
 
 ## API Security
-To access the Haptik API, client's will require a Haptik provided token. The Authorization header of each HTTP request should be “Bearer” followed by said token. If the Authorization header is missing or invalid, then 401 status code is returned.
+To access the Haptik API, you require a Haptik provided token. The Authorization header of each HTTP request should be “Bearer” followed by said token. If the Authorization header is missing or invalid, then 401 status code is returned.
 
-<b>Note:</b> Clients should never share their token with external parties
+<b>Note:</b> You should never share your token with external parties

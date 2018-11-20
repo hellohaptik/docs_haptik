@@ -33,11 +33,11 @@ All messages sent from Haptik Platform to your registered webhook will always be
       </tr>
       <tr>
          <td>user.auth_id</td>
-         <td>This is a alphanumeric user identifier from client's System.</td>
+         <td>This is a alphanumeric user identifier from your system.</td>
       </tr>
       <tr>
          <td>business_id</td>
-         <td>Business id as provided to the client</td>
+         <td>Business id is a unique indentifier for your business, provided by Haptik.</td>
       </tr>
       <tr>
          <td>event_name</td>
@@ -204,8 +204,8 @@ Your webhook should meet the following minimum performance requirements
 
 <b>If any of the below 3 conditions are observed</b>
 1) We cannot connect to your webhook
-2) Client webhook takes to long to response (threshold = `5s`)
-3) Client webhook returns non 2xx status code
+2) Your webhook takes to long to response (threshold = `5s`)
+3) Your webhook returns non 2xx status code
 
 <b>then</b>
 
@@ -213,7 +213,7 @@ We will retry the request 6 times over the course of `60 minutes` (Retry interva
 
 If the webhook call is unsuccessful even after the last attempt then it will be dropped and we will automatically disable the webhook. 
 
-After which new requests will be queued for a max duration of `60 minutes`. Once the webhook is enabled by the client, we will attempt to deliver the request.
+After which new requests will be queued for a max duration of `60 minutes`. Once the webhook is enabled by you, we will attempt to deliver the request.
 
 You can visit the Haptik Dashboard or use the [REST API](#enable-webhook-via-rest-api) to activate the webhook, If disabled.
 
@@ -250,7 +250,7 @@ Content-Type: application/json
 ```
 
 - Authorization - The Authorization header of each HTTP request should be “Bearer” followed by your token which will be shared with you
-- client-id - The client id for your account
+- client-id - Will be provided by haptik
 - Content-Type - application/json
 
 

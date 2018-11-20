@@ -249,7 +249,7 @@ Content-Type: application/json
 - Content-Type - application/json
 
 
-#### POST Request
+#### Request
 
 ```json
 {

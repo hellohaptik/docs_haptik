@@ -21,7 +21,7 @@ All messages sent from Haptik Platform to your registered webhook will always be
    <tbody>
       <tr>
          <td>version</td>
-         <td>TODO</td>
+         <td>Webhook version</td>
       </tr>
       <tr>
          <td>timestamp</td>
@@ -29,7 +29,7 @@ All messages sent from Haptik Platform to your registered webhook will always be
       </tr>
       <tr>
          <td>user</td>
-         <td>All user information will be provided under this</td>
+         <td>All user info will be available here</td>
       </tr>
       <tr>
          <td>user.auth_id</td>
@@ -37,15 +37,11 @@ All messages sent from Haptik Platform to your registered webhook will always be
       </tr>
       <tr>
          <td>business_id</td>
-         <td>Business id is a unique indentifier for your business, provided by Haptik.</td>
+         <td>Business id is a unique numeric indentifier for your business, provided by Haptik.</td>
       </tr>
       <tr>
          <td>event_name</td>
-         <td>Possible Values: `message`, `chat_pinned` and `chat_complete`.</td>
-      </tr>
-      <tr>
-         <td>team_name</td>
-         <td>TODO</td>
+         <td>Possible Values: message, chat_pinned and chat_complete.</td>
       </tr>
       <tr>
          <td>agent</td>
@@ -57,28 +53,28 @@ All messages sent from Haptik Platform to your registered webhook will always be
       </tr>
       <tr>
          <td>agent.name</td>
-         <td>gogo is an internal name for our ai engine, else agent name will appear here.</td>
+         <td>Name of the agent or bot who sent the message. Gogo is an internal name for our ai engine.</td>
       </tr>
       <tr>
          <td>agent.profile_image</td>
-         <td>TODO</td>
+         <td>URL for the agent profile image.</td>
       </tr>
       <tr>
          <td>agent.is_automated</td>
-         <td>TODO</td>
+         <td>Whether the reply was automated or not. It will be false if agent sent the reply</td>
       </tr>
       <tr>
          <td>message</td>
-         <td>All message oriented info will be available here</td>
+         <td>All message info will be available here</td>
       </tr>
       <tr>
          <td>message.id</td>
-         <td>Unique identifier for messages</td>
+         <td>Unique numeric identifier for messages</td>
       </tr>
       <tr>
          <td>message.body</td>
          <td>
-         Will comprize of hsl elements, for a complete description of hsl elemnets refer 
+         Will comprize of HSL elements. For a complete description of HSL elements refer 
          [here](https://haptik-docs.readthedocs.io/en/latest/bot-builder-advanced/index.html)
          </td>
       </tr>
@@ -132,7 +128,6 @@ All messages sent from Haptik Platform to your registered webhook will always be
        },
        "business_id": 343,
        "event_name": "chat_pinned",
-       "team_name": "Refunds",
        "agent": {
            "id": 235,
            "name": "Prateek",
@@ -204,7 +199,7 @@ Your webhook should meet the following minimum performance requirements
 
 <b>If any of the below 3 conditions are observed</b>
 1) We cannot connect to your webhook
-2) Your webhook takes to long to response (threshold = `5s`)
+2) Your webhook takes more than `5` seconds to return the response
 3) Your webhook returns non 2xx status code
 
 <b>then</b>
@@ -213,9 +208,9 @@ We will retry the request 6 times over the course of `60 minutes` (Retry interva
 
 If the webhook call is unsuccessful even after the last attempt then it will be dropped and we will automatically disable the webhook. 
 
-After which new requests will be queued for a max duration of `60 minutes`. Once the webhook is enabled by you, we will attempt to deliver the request.
+Once the webhook is disabled, then new requests will be queued for a max duration of `60 minutes`. Once the webhook is enabled by you, then we will attempt to deliver the request.
 
-You can visit the Haptik Dashboard or use the [REST API](#enable-webhook-via-rest-api) to activate the webhook, If disabled.
+You can visit the Haptik Dashboard or use the [REST API](#enable-webhook-via-rest-api) to activate the webhook if it is disabled.
 
 
 <b>Note:</b> There can be multiple delivery requests within a short time span and it is `your responsibility` to maintain ordering and QoS in case of failure to accept messages.
@@ -249,8 +244,8 @@ client-id: <CLIENT_ID>
 Content-Type: application/json
 ```
 
-- Authorization - The Authorization header of each HTTP request should be “Bearer” followed by your token which will be shared with you
-- client-id - Will be provided by haptik
+- Authorization - The Authorization header of each HTTP request should be “Bearer” followed by your token which will be provided by Haptik
+- client-id - The client id for your account which will be provided by Haptik
 - Content-Type - application/json
 
 
@@ -321,8 +316,8 @@ client-id: <CLIENT_ID>
 Content-Type: application/json
 ```
 
-- Authorization - The Authorization header of each HTTP request should be “Bearer” followed by your token which will be shared with you
-- client-id - The client id for your account
+- Authorization - The Authorization header of each HTTP request should be “Bearer” followed by your token which will be provided by Haptik
+- client-id - The client id for your account which will be provided by Haptik
 - Content-Type - application/json
 
 
@@ -340,13 +335,13 @@ Content-Type: application/json
 ```
 
 - auth_id - This is a alphanumeric User identifier from your system
-- business_id - This is a the numeric identifier for channel/queue that you wish to register the message on.
+- business_id - This is a numeric identifier for channel/queue that you wish to register the message on.
 - message_body -  The message body containing the message to be sent to the bot or agent.
 - message_type - This defines the processing pipeline for messages, standard messages are of type `0`
 
 #### Response
 
-A successful request to the log message sent API will return a `200` status code with a JSON response object with a unique message id and other metadata about the messages.
+A successful request to the log message sent API will return a `200` status code with a JSON response object. It will contain a unique message id and other metadata about the message.
 
 ```json
 {
@@ -412,7 +407,7 @@ Content-Type: multipart/form-data; boundary=MultipartBoundry
 ```
 
 - Authorization - The Authorization header of each HTTP request should be “Bearer” followed by your token which will be provided by Haptik
-- client-id - The client id account, provided by Haptik
+- client-id - The client id for your account which will be provided by Haptik
 - Content-Type - multipart/form-data; boundary=MultipartBoundry
 
 
@@ -449,7 +444,7 @@ Content-Length: 0
 ```
 
 - auth_id - This is a alphanumeric User identifier from your system
-- business_id - This is a the numeric identifier for channel/queue on which the message is to be registerd.
+- business_id - This is a numeric identifier for channel/queue on which the message is to be registered.
 - message_type - The message type should be `1` for image
 - file - contents of the image (Supported extensions: jpeg, png)
 - message_body - message body that was logged in the haptik system
@@ -527,7 +522,7 @@ Content-Type: application/json
 ```
 
 - Authorization - The Authorization header of each HTTP request should be “Bearer” followed by your token which will be provided by Haptik
-- client-id - The client id for your account
+- client-id - The client id for your account which will be provided by Haptik
 - Content-Type - application/json
 
 
@@ -573,6 +568,6 @@ curl -X POST \
 ```
 
 ## API Security
-To access the Haptik API, you require a Haptik provided token. The Authorization header of each HTTP request should be “Bearer” followed by said token. If the Authorization header is missing or invalid, then 401 status code is returned.
+To access the Haptik API, you require a Haptik provided token. The Authorization header of each HTTP request should be “Bearer” followed by the token. If the Authorization header is missing or invalid, then 401 status code is returned.
 
 <b>Note:</b> You should never share your token with external parties

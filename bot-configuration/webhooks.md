@@ -33,7 +33,7 @@ All messages sent from Haptik Platform to your registered webhook will always be
       </tr>
       <tr>
          <td>user.auth_id</td>
-         <td>This is a alphanumeric user identifier from your system.</td>
+         <td>This is an alphanumeric user identifier from your system.</td>
       </tr>
       <tr>
          <td>business_id</td>
@@ -75,7 +75,7 @@ All messages sent from Haptik Platform to your registered webhook will always be
          <td>message.body</td>
          <td>
          Will comprize of HSL elements. For a complete description of HSL elements refer 
-         [here](https://haptik-docs.readthedocs.io/en/latest/bot-builder-advanced/index.html)
+         <a href="https://haptik-docs.readthedocs.io/en/latest/bot-builder-advanced/index.html">here</a>
          </td>
       </tr>
     </tbody>
@@ -261,7 +261,7 @@ Content-Type: application/json
 }
 ```
 
-- auth_id - This is a alphanumeric User identifier from your System
+- auth_id - This is an alphanumeric User identifier from your System
 - auth_code - We treat this value as the client token (optional)
 - mobile_no - Mobile no of the user (optional)
 - email - Email of the user (optional)
@@ -280,7 +280,7 @@ A successful request to the user creation API will return a `200` status code wi
 }
 ```
 
-##### Error Response:
+#### Error Response
 
 If the Authorization header is missing or invalid, then the API will return a `401` status code.
 
@@ -334,7 +334,7 @@ Content-Type: application/json
 }
 ```
 
-- auth_id - This is a alphanumeric User identifier from your system
+- auth_id - This is an alphanumeric User identifier from your system
 - business_id - This is a numeric identifier for channel/queue that you wish to register the message on.
 - message_body -  The message body containing the message to be sent to the bot or agent.
 - message_type - This defines the processing pipeline for messages, standard messages are of type `0`
@@ -358,7 +358,7 @@ A successful request to the log message sent API will return a `200` status code
 - message_type - This defines the processing pipeline for messages, standard messages are of type `0`
 
 
-#### Error Response:
+#### Error Response
 If the user with auth_id is not registered, then the API will return a `403` status code.
 
 ```json
@@ -443,12 +443,12 @@ Content-Length: 0
 --MultipartBoundry--
 ```
 
-- auth_id - This is a alphanumeric User identifier from your system
+- auth_id - This is an alphanumeric User identifier from your system
 - business_id - This is a numeric identifier for channel/queue on which the message is to be registered.
 - message_type - The message type should be `1` for image
 - file - contents of the image (Supported extensions: jpeg, png)
 - message_body - message body that was logged in the haptik system
-### Response
+#### Response
 
 A successful request will return a `200` status code with a JSON response object with a unique message id and other metadata about the messages.
 
@@ -469,7 +469,7 @@ A successful request will return a `200` status code with a JSON response object
 - file_url - The url for the uploaded image
 
 
-#### Error Response:
+#### Error Response
 If the user with auth_id is not registered, then the API will return a `403` status code.
 
 ```json
@@ -546,7 +546,7 @@ A successful request to the enable webhook API will return a `200` status code w
 }
 ```
 
-#### Error Response:
+#### Error Response
 
 If the Authorization header is missing or invalid, then the API will return a `401` status code.
 

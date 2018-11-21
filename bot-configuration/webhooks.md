@@ -446,7 +446,7 @@ Content-Length: 0
 - auth_id - This is an alphanumeric User identifier from your system
 - business_id - This is a numeric identifier for channel/queue on which the message is to be registered.
 - message_type - The message type should be `1` for image
-- file - contents of the image (Supported extensions: jpeg, png)
+- file - contents of the image (Supported extensions: jpeg, png). Max file size allowed is 10MB
 - message_body - message body that was logged in the haptik system
 #### Response
 

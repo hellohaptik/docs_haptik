@@ -5,6 +5,7 @@ This page will cover how to use HSL-Elements
 Haptik defines a superset of UI elements that are available across multiple platforms. These UI elements are then converted to their platform equivalent (js-sdk, android, ios, facebook-messenger, etc..) if they are not available on that specific platform. Eg. Forms are converted to quick replies on the Facebook platform and collected over free form.
 
 .. _HSL-Elements:
+
 HSL Elements
 ^^^^^^^^^^^^
 
@@ -34,18 +35,18 @@ A quick example for a button smart action.
 
 .. code-block:: javascript
 
-  {  
+  {
     "text":"Hey there. This is a HSL Button Smart Action with 1 Actionable. Tapping on the actionable will send a message stored in the payload",
     "type":"BUTTON",
-    "data":{  
-      "items":[  
-         {  
+    "data":{
+      "items":[
+         {
             "actionable_text":"Tap",
             "location_required":"false",
             "uri":"",
             "is_default":0,
             "type":"TEXT_ONLY",
-            "payload":{  
+            "payload":{
                "link":"",
                "message":"Hi, I just tapped on an actionable.",
                "gogo_message":""
@@ -54,7 +55,7 @@ A quick example for a button smart action.
          }
     ]}
   }
-  
+
 
 The above message will render like this on front end:
 

@@ -1,6 +1,6 @@
-# General Nodes
+General Nodes
 ----
-This page will cover the following topics: 
+This page will cover the following topics:
 [What are General Nodes?](#what-are-general-nodes)
 [Related Terms](#related-terms)
 [General Responses vs. General Nodes](#general-responses-vs-general-nodes)

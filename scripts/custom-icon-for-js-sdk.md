@@ -4,7 +4,7 @@ The below file, is a running example of hosting our js-sdk on your website with 
 the default haptik icon.
 
 
-```json
+```html
 <!DOCTYPE html>
 <html>
 
@@ -31,7 +31,7 @@ the default haptik icon.
   <div style="width: 100%; padding-top: 100px;">
     <div style="max-width: 7000px; margin: 0 auto; padding: 0 40px; text-align: left;">
       <h4>Haptik JS SDK</h4>
-      <h6>Custom Icon example</h6> 
+      <h6>Custom Icon example</h6>
         Steps: <br/>
         1) While defining haptikInitSettings simply add 'custom-button': true <br/>
         2) Add you icon, in this case we have directly used an img tag <br/>

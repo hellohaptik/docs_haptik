@@ -3,17 +3,17 @@ Testing Your Bot
 
 How to Test Your Bot
 ^^^^^^^^^^^^^^^^^^^^
-Test your bot as you build it to ensure your end users won't experience any annoying bot breakages! You can test your bot in two ways: 
+Test your bot as you build it to ensure your end users won't experience any annoying bot breakages! You can test your bot in two ways:
 
-The easiest way to test your bot is to test it directly in the bot building tool. You can do this by clicking on the "Test Bot" button at the bottom of the graphical interface where you're building and connecting your nodes. 
+The easiest way to test your bot is to test it directly in the bot building tool. You can do this by clicking on the "Test Bot" button at the bottom of the graphical interface where you're building and connecting your nodes.
 
 The second way to test your bot is to deploy and connect the bot to any of the Client SDKs - iOS, Android, Web, Facebook.
 
 How to Set Up Your Test Bot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-However, before you'll be able to test anything at all, you need to assign your bot a *Test Business* and a *Test Partner*. Why? Because a bot can be live within multiple businesses, and a business can be deployed across multiple partners* - and test chat windows are designed to give users the ability to test bots as they will appear in the context of the different combinations of businesses and partners they will be deployed in. Therefore, defining a Test Business and a Test Partner for your bot is required. You can change these settings by accessing the bot homepage and clicking on the three dots on the right hand side of a bot, and clicking "Edit." 
+However, before you'll be able to test anything at all, you need to assign your bot a *Test Business* and a *Test Partner*. Why? Because a bot can be live within multiple businesses, and a business can be deployed across multiple partners* - and test chat windows are designed to give users the ability to test bots as they will appear in the context of the different combinations of businesses and partners they will be deployed in. Therefore, defining a Test Business and a Test Partner for your bot is required. You can change these settings by accessing the bot homepage and clicking on the three dots on the right hand side of a bot, and clicking "Edit."
 
-(*Not ringing a bell? Read more about the differences between bots, businesses, and partners at http://haptik-docs.readthedocs.io/en/latest/bot-configuration/business-creation.html)
+(Not ringing a bell? Read more about the differences between bots, businesses, and partners at http://haptik-docs.readthedocs.io/en/latest/bot-configuration/business-creation.html)
 
 The easiest way to test your bot is directly on the bot building tool itself. To set this up, define the *Test-Business* on the domain itself. This will be the business where messages will be sent. Make sure your domain/bot is active on this business as well.
 

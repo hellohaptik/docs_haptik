@@ -1,11 +1,11 @@
-# Client SDKs
+Client SDKs
 ------
-In this section, we'll cover the following topics:  
+In this section, we'll cover the following topics:
 
-- [Android SDK](#android-sdk)  
-- [iOS SDK](#ios-sdk)  
-- [Javascript SDK](#javascript-sdk)  
-- [Facebook Deployment](#facebook-deployment)  
+- [Android SDK](#android-sdk)
+- [iOS SDK](#ios-sdk)
+- [Javascript SDK](#javascript-sdk)
+- [Facebook Deployment](#facebook-deployment)
 
 
 

@@ -12,7 +12,7 @@ Welcome to Haptik's bot builder tool! Once you've mastered this software, you'll
 
 * **Tool Tips**: For those of you who want to jump right into building your bot, we've built tooltips directly into the tool. By hovering over the tooltip icon, which are indicated by the question marks in circles, you'll be able to view brief descriptions of how to use most of the major tools in the builder tool. Next to many of the tool tip icons you'll also find a documentation icon. As you're working in the bot builder graph, you can click these icons to link to the relevant section of this documentation.
 
-* **Glossary**: A glossary of all the terms you might encounter over the course of building a bot. Find this `here <http://haptik-docs.readthedocs.io/en/latest/introduction/glossary.html>`_.
+* **Glossary**: A glossary of all the terms you might encounter over the course of building a bot. Find this `here <http://haptik-docs.readthedocs.io/en/latest/introduction/glossary.html>`__.
 
 * **Design Tips**: Creating the conversation flow your bots will use might seem straightforward, but there are a few things bot designers can do to increase how engaged users feel as they interact with bots. Read through the Haptik designers' pro tips `here <http://haptik-docs.readthedocs.io/en/latest/introduction/design-tips.html>`_.
 
@@ -20,7 +20,7 @@ Welcome to Haptik's bot builder tool! Once you've mastered this software, you'll
 **Getting Started**
 
 To log-on to the bot builder tool directly, click `here
-<https://staging.hellohaptik.com/mogambo/#/>`_.
+<https://staging.hellohaptik.com/mogambo/#/>`__.
 
 
 .. toctree::

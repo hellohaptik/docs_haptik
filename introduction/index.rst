@@ -25,7 +25,6 @@ To log-on to the bot builder tool directly, click `here
 
 .. toctree::
     :maxdepth: 2
-    :caption: Agent Interface:
     :hidden:
     :titlesonly:
 

@@ -1,9 +1,10 @@
 Important Terms
 ===============
 
+Before we jump to the UI, we need to understand a few terms commonly used across the tool.
+
 .. toctree::
     :maxdepth: 2
-    :caption: Important Terms:
 
     chats/index
     agent/index

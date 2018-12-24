@@ -2,6 +2,8 @@ My Chats
 =================
 This page is used for handling all active chats and made up of 4 major parts
 
+<TODO>
+
 .. toctree::
     :maxdepth: 2
 

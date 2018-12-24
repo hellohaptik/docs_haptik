@@ -3,6 +3,8 @@ UI Interface
 
 Now that we understand the different terms, let's start with the Interface that will be used by the agents.
 
+<TODO>
+
 .. toctree::
     :maxdepth: 2
 

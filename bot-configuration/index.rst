@@ -15,6 +15,7 @@ However, if you want to go straight to the documentation covering the first step
    :caption: Configuring and Deploying your Bot:
 
    business-creation
+   bot-prompt
    client-sdk
    permissions
    webhooks

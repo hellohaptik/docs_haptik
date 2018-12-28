@@ -31,7 +31,6 @@ Read about our HSL elements `here
    agent-interface/index
    security
    sla_agreement
-   scripts/index
 
 
 

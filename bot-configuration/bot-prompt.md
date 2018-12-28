@@ -50,10 +50,10 @@ Make sure to understand the needs of your user and customer before creating your
 
 Each Bot Prompt is provided a unique id. Using this unique id you can measure the performance of your trigger with these 3 events on Google Analytics.
 
-| Event Action         | Event Category | Event Label |
-| -------------------- | -------------- | ----------- |
-| BOT_PROMPT_SHOWED    | Business-id    | Trigger-id  |
-| BOT_PROMPT_CLICKED   | Business-id    | Trigger-id  |
-| BOT_PROMPT_DISMISSED | Business-id    | Trigger-id  |
+| Event Action         | Event Category | Trigger id (Custom Dimension) |
+| -------------------- | -------------- | ----------------------------- |
+| BOT_PROMPT_SHOWED    | Business-id    | Trigger-id                    |
+| BOT_PROMPT_CLICKED   | Business-id    | Trigger-id                    |
+| BOT_PROMPT_DISMISSED | Business-id    | Trigger-id                    |
 
 Use these 3 metrics to evaluate the effectiveness of your prompt trigger and keep an eye on the click rate, dismiss rate and show rate. It might take you some experimentation to understand what works best for that specific customer and bot.

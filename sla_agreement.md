@@ -56,12 +56,12 @@ available as a separate offering.
 
 ## Escalation Matrix
 
-| Level | Name          | Title                   | E-Mail                              |
-| ----- | ------------- | ----------------------- | ----------------------------------- |
-| 1     | Nameer Khan   | Product Manager         | nameer.khan@haptik.ai@haptik.ai     |
-| 2     | Madhan Mohan  | Sr.Engineering Manager  | madhan.mohan@haptik.ai              |
-| 3     | Kartik Poddar | Business Head           | kartik@haptik.ai                    |
-| 4     | Swapan Rajdev | CTO                     | swapan@haptik.ai                    |
+| Level | Name          | Title                   | E-Mail                   |
+| ----- | ------------- | ----------------------- | ------------------------ |
+| 1     | Nameer Khan   | Product Manager         | nameer.khan@haptik.ai    |
+| 2     | Madhan Mohan  | Sr.Engineering Manager  | madhan.mohan@haptik.ai   |
+| 3     | Kartik Poddar | Business Head           | kartik@haptik.ai         |
+| 4     | Swapan Rajdev | CTO                     | swapan@haptik.ai         |
 
 
 

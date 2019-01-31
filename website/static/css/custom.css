@@ -1,0 +1,54 @@
+/* your custom css */
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
+}
+
+@media only screen and (min-width: 1024px) {
+}
+
+@media only screen and (max-width: 1023px) {
+}
+
+@media only screen and (min-width: 1400px) {
+}
+
+@media only screen and (min-width: 1500px) {
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.headerTitleWithLogo {
+  font-weight: 500;
+  color: #333;
+}
+
+.nav-site li a {
+  font-weight: 500 !important;
+  color: #666 !important;
+}
+
+.nav-site li a:hover {
+  color: #000 !important;
+  background-color: transparent !important;
+}
+
+.nav-site li.siteNavItemActive a {
+  color: #42A5F5 !important;
+  background-color: transparent !important;
+  pointer-events: none;
+}
+
+.fixedHeaderContainer {
+  background-color: #FFF;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.fbOpenSource {
+  width: auto !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,11 @@
+{
+  "sidebar": {
+    "Teja 1": ["doc1"],
+    "Teja 2": ["doc2"],
+    "Teja 3": ["doc3"]
+  },
+  "headerLink": {
+    "doc": "doc1",
+    "label": "Teja"
+  }
+}

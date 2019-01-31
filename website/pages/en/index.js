@@ -25,14 +25,18 @@ function Row({ title, sections = [], others = [] }) {
             ))}
           </div>
           <div className="home-row-others column">
-            <div className="home-row-others-title">Other</div>
-            <div className="home-row-others-links">
-              {others.map(({ url, title }, i) => (
-                <a key={i} href={url}>
-                  {title}
-                </a>
-              ))}
-            </div>
+            {others.length ? (
+              <React.Fragment>
+                <div className="home-row-others-title">Other</div>
+                <div className="home-row-others-links">
+                  {others.map(({ url, title }, i) => (
+                    <a key={i} href={url}>
+                      {title}
+                    </a>
+                  ))}
+                </div>
+              </React.Fragment>
+            ) : null}
           </div>
         </div>
       </div>
@@ -50,14 +54,14 @@ module.exports = () => (
           description:
             'A quickstart guide explaining a high level overview of how all our tools work together',
           ctaText: 'Read More',
-          ctaLink: 'http://google.com'
+          ctaLink: '/docs_haptik/product-overview'
         },
         {
           title: 'Technical Overview',
           description:
             'A simple guide for executives trying to understand the technology powering Haptik',
           ctaText: 'Learn More',
-          ctaLink: 'http://yahoo.com'
+          ctaLink: '/docs_haptik/technical-overview'
         }
       ]}
       others={[]}
@@ -70,82 +74,82 @@ module.exports = () => (
           description:
             'Everything required to get you from beginner to advanced in Bot Building & Development.',
           ctaText: 'Learn More',
-          ctaLink: 'http://google.com'
+          ctaLink: '/docs_haptik/bot-builder/basic'
         },
         {
           title: 'Live Chat',
           description: 'Manage and plan your chat work with these resources & guides',
           ctaText: "Let's Begin",
-          ctaLink: 'http://yahoo.com'
+          ctaLink: '/docs_haptik/agent-chat'
         },
         {
           title: 'Analytics',
           description: 'Learn how to uncover hidden insghts in your chat data & communication',
           ctaText: 'Get Started',
-          ctaLink: 'http://yahoo.com'
+          ctaLink: '/docs_haptik/bot-analytics'
         }
       ]}
       others={[
         {
           title: 'Security',
-          url: 'security.com'
+          url: '/docs_haptik/other/security'
         },
         {
           title: 'Support',
-          url: 'support.com'
+          url: '/docs_haptik/other/support'
         },
         {
           title: 'SLA',
-          url: 'sla.com'
+          url: '/docs_haptik/other/sla'
         }
       ]}
     />
     <Row
-      title="Haptik Integration"
+      title="Integrations"
       sections={[
         {
           title: 'iOS SDK',
           description: 'A sample application with an integrated SDK & relevant Documentation',
           ctaText: 'Read More',
-          ctaLink: 'http://google.com'
+          ctaLink: '/docs_haptik/sdk-ios'
         },
         {
           title: 'Android SDK',
           description:
             'A sample application with an integrated SDK & relevant Documentation with aar & javadoc',
           ctaText: 'Learn More',
-          ctaLink: 'http://yahoo.com'
+          ctaLink: '/docs_haptik/sdk-android'
         },
         {
           title: 'Web SDK',
           description: 'JavaScript documentation along with examples to begin.',
           ctaText: "Let's Begin",
-          ctaLink: 'http://yahoo.com'
+          ctaLink: '/docs_haptik/sdk-web'
         },
         {
           title: 'Webhooks',
           description:
             'A sample application with an integrated SDK & relevant Documentation with aar & javadoc',
           ctaText: 'Get Started',
-          ctaLink: 'http://yahoo.com'
+          ctaLink: '/docs_haptik/webhooks'
         }
       ]}
       others={[
         {
           title: 'HSL',
-          url: 'security.com'
+          url: '/docs_haptik/hsl'
         },
         {
           title: 'Facebook',
-          url: 'support.com'
+          url: '/docs_haptik/other/facebook'
         },
         {
           title: 'Cordova',
-          url: 'sla.com'
+          url: '/docs_haptik/other/cordova'
         },
         {
           title: 'React Native',
-          url: 'sla.com'
+          url: '/docs_haptik/other/react-native'
         }
       ]}
     />

@@ -1,18 +1,7 @@
-/* your custom css */
-
-@media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
-}
-
-@media only screen and (min-width: 1024px) {
-}
-
-@media only screen and (max-width: 1023px) {
-}
-
-@media only screen and (min-width: 1400px) {
-}
-
-@media only screen and (min-width: 1500px) {
+@media only screen and (max-width: 1500px) {
+  .wrapper {
+    max-width: 1300px !important;
+  }
 }
 
 body {
@@ -27,6 +16,15 @@ a {
 .headerTitleWithLogo {
   font-weight: 500;
   color: #333;
+  display: flex !important;
+  align-items: center;
+}
+
+.headerTitleWithLogo span {
+  font-size: 14px;
+  color: #666;
+  padding-left: 6px;
+  padding-top: 2px;
 }
 
 .nav-site li a {

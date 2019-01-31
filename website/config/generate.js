@@ -76,9 +76,9 @@ function _generate(docsPath, directory) {
         } else if (file === 'meta.json') {
           readJSON(filePath, function(json) {
             sidebars[directory] = generateSidebar(json, docsPath);
-            headerLinks.push(generateHeaderLink(json, docsPath));
+            // headerLinks.push(generateHeaderLink(json, docsPath));
             writeToFile(sidebars, path.join(__dirname, '../sidebars.json'), function() {});
-            writeToFile(headerLinks, path.join(__dirname, '../headerLinks.json'), function() {});
+            // writeToFile(headerLinks, path.join(__dirname, '../headerLinks.json'), function() {});
           });
         }
       });
@@ -102,8 +102,8 @@ function _moveAssets(docsPath) {
 }
 
 function generate() {
-  // _generate(PATH, 'docs');
-  _moveAssets(PATH);
+  _generate(PATH, 'docs');
+  // _moveAssets(PATH);
 }
 
 generate();

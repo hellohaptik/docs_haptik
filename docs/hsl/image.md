@@ -1,5 +1,5 @@
 ---
-title: HSL Image
+title: Image
 ---
 
 A HSL Image element is a type of Carousel element. In other words, the type is "CAROUSEL", and mainly its

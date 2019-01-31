@@ -1,5 +1,5 @@
 ---
-title: HSL Button
+title: Button
 ---
 
 #### Sample Json

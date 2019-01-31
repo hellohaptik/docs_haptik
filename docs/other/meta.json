@@ -1,11 +1,6 @@
 {
   "sidebar": {
-    "Docusaurus": ["doc1"],
-    "First Category": ["doc2"],
-    "Second Category": ["doc3"]
-  },
-  "headerLink": {
-    "doc": "doc1",
-    "label": "Mogambo"
+    "Tools": ["security", "support", "sla_agreement"],
+    "Integrations": ["hsl", "facebook", "cordova", "react-native"]
   }
 }

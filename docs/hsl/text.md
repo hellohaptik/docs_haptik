@@ -1,5 +1,5 @@
 ---
-title: HSL Text
+title: Text
 ---
 
 #### Sample Json for simple text element

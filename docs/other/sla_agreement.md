@@ -1,6 +1,8 @@
-# Service Level Agreement (SLA) for Enterprise Clients
+---
+title: SLA Agreement
+---
 
-We guarantee that 99.9% of the time the Covered Service 	will successfully receive and respond to API  requests on the production environment.
+We guarantee that 99.9% of the time the Covered Service will successfully receive and respond to API requests on the production environment.
 
 The following definitions apply to the SLA:
 
@@ -36,34 +38,26 @@ The SLA does not apply to
 5. That result from your failure to adhere to any required configurations, use supported platforms, follow any policies for acceptable use, or your use of the Service in a manner inconsistent with the features and functionality of the Service.
 6. In the event of a scheduled maintenance window (Intimation of which, will be provided atleast 1 week in advance.)
 
-
-
 ## Technical Support
 
 Technical support is provided for the Haptik Service offering during the subscription period and is not
 available as a separate offering.
 
-
-
-| Severity | Severity Definition                                          | Response Time Objectives  | Response Time Coverage |
-| -------- | ------------------------------------------------------------ | ------------------------- | ---------------------- |
+| Severity | Severity Definition                                                                                                                                                                                                                                                                                                      | Response Time Objectives  | Response Time Coverage |
+| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------- | ---------------------- |
 | 1        | **Critical business impact/service down**: Business critical functionality is inoperable or critical interface has failed. This usually applies to the production environment and indicates an inability to access services resulting in a critical impact on operations. This condition requires an immediate solution. | Within 2 Hours            | 24x7                   |
-| 2        | **Significant business impact**:  A service business feature or function of the service that was previously working is severely restricted in its use. | Within 2-6 Business Hours | M-F Business Hours     |
-| 3        | **Minor business impact**:  Indicates that the core service or functionality of the bot is usable and the issue does not have a critical impact on operations. | Within 1-3 Business Days  | M-F Business Hours     |
-| 4        | **Minimal business impact**:  This may be an inquiry or non-technical request or any other minor issue or improvement. | Within 5-10 Business Days | M-F Business Hours     |
-
-
+| 2        | **Significant business impact**: A service business feature or function of the service that was previously working is severely restricted in its use.                                                                                                                                                                    | Within 2-6 Business Hours | M-F Business Hours     |
+| 3        | **Minor business impact**: Indicates that the core service or functionality of the bot is usable and the issue does not have a critical impact on operations.                                                                                                                                                            | Within 1-3 Business Days  | M-F Business Hours     |
+| 4        | **Minimal business impact**: This may be an inquiry or non-technical request or any other minor issue or improvement.                                                                                                                                                                                                    | Within 5-10 Business Days | M-F Business Hours     |
 
 ## Escalation Matrix
 
-| Level | Name          | Title                   | E-Mail                   |
-| ----- | ------------- | ----------------------- | ------------------------ |
-| 1     | Nameer Khan   | Product Manager         | nameer.khan@haptik.ai    |
-| 2     | Madhan Mohan  | Sr.Engineering Manager  | madhan.mohan@haptik.ai   |
-| 3     | Kartik Poddar | Business Head           | kartik@haptik.ai         |
-| 4     | Swapan Rajdev | CTO                     | swapan@haptik.ai         |
-
-
+| Level | Name          | Title                  | E-Mail                 |
+| ----- | ------------- | ---------------------- | ---------------------- |
+| 1     | Nameer Khan   | Product Manager        | nameer.khan@haptik.ai  |
+| 2     | Madhan Mohan  | Sr.Engineering Manager | madhan.mohan@haptik.ai |
+| 3     | Kartik Poddar | Business Head          | kartik@haptik.ai       |
+| 4     | Swapan Rajdev | CTO                    | swapan@haptik.ai       |
 
 ## Change Requests
 

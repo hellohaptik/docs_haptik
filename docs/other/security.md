@@ -1,4 +1,6 @@
-# Security Overview
+---
+title: Security
+---
 
 #### We protect your data.
 
@@ -21,7 +23,7 @@ https://aws.amazon.com/security/
 
 #### Penetration Testing and Security Audit of SDKs
 
-Our Client SDKs are regularly audited by Appknox for any issues in code or design that may result in security vulnerabilities. Any leakages during communication are detected using both Manual and Automated Techniques. 
+Our Client SDKs are regularly audited by Appknox for any issues in code or design that may result in security vulnerabilities. Any leakages during communication are detected using both Manual and Automated Techniques.
 
 #### Network Security
 
@@ -32,6 +34,3 @@ The entire Haptik Systems and Infrastructure are further secured with a VPN. No 
 #### Authentication
 
 Clients login to Haptik using a password which is known only to them. Passwords are not stored; instead, as is standard practice, only a secure hash of the password is stored in the database. Because the hash is relatively expensive to compute, and because a “salting” method is used, brute-force guessing attempts are relatively ineffective, and password reverse-engineering is difficult even if the hash value were to be obtained by a malicious party.
-
-
-

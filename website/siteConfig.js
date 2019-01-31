@@ -9,12 +9,13 @@
 // site configuration options.
 
 const headerLinks = require('./headerLinks.json');
+const baseUrl = '/docs_haptik/';
 
 const siteConfig = {
   title: 'Haptik Docs',
   tagline: 'Haptik documentation in one place',
   url: 'https://hellohaptik.github.io/',
-  baseUrl: '/docs_haptik/',
+  baseUrl: baseUrl,
   projectName: 'docs_haptik',
   organizationName: 'hellohaptik',
 
@@ -53,6 +54,8 @@ const siteConfig = {
 
   // Show documentation's last update time.
   enableUpdateTime: true,
+  docsUrl: '',
+  scripts: [`${baseUrl}js/index.js`],
 
   fonts: {
     myFont: ['Roboto', 'sans-serif'],

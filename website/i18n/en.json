@@ -77,24 +77,6 @@
       "bot-builder/basic/user-says": {
         "title": "User Says"
       },
-      "bot-builder/hsl/button": {
-        "title": "HSL Button"
-      },
-      "bot-builder/hsl/carousel": {
-        "title": "HSL Carousel"
-      },
-      "bot-builder/hsl/hsl-properties": {
-        "title": "Configuration"
-      },
-      "bot-builder/hsl/image": {
-        "title": "HSL Image"
-      },
-      "bot-builder/hsl/index": {
-        "title": "Introduction"
-      },
-      "bot-builder/hsl/text": {
-        "title": "HSL Text"
-      },
       "bot-configuration/bot-prompt": {
         "title": "bot-configuration/bot-prompt"
       },
@@ -113,26 +95,68 @@
       "bot-configuration/webhooks": {
         "title": "bot-configuration/webhooks"
       },
-      "introduction/design-tips": {
-        "title": "introduction/design-tips"
+      "hsl/button": {
+        "title": "Button"
       },
-      "introduction/glossary": {
-        "title": "introduction/glossary"
+      "hsl/carousel": {
+        "title": "Carousel"
       },
-      "introduction/welcome": {
-        "title": "introduction/welcome"
+      "hsl/hsl-properties": {
+        "title": "Configuration"
+      },
+      "hsl/image": {
+        "title": "Image"
+      },
+      "hsl/index": {
+        "title": "Introduction"
+      },
+      "hsl/text": {
+        "title": "Text"
+      },
+      "other/cordova": {
+        "title": "Cordova"
+      },
+      "other/facebook": {
+        "title": "Facebook"
+      },
+      "other/react-native": {
+        "title": "React Native"
       },
       "other/security": {
-        "title": "other/security"
+        "title": "Security"
       },
       "other/sla_agreement": {
-        "title": "other/sla_agreement"
+        "title": "SLA Agreement"
+      },
+      "other/support": {
+        "title": "Support"
+      },
+      "product-overview/design-tips": {
+        "title": "product-overview/design-tips"
+      },
+      "product-overview/glossary": {
+        "title": "product-overview/glossary"
+      },
+      "product-overview/index": {
+        "title": "Getting started"
+      },
+      "sdk-android/index": {
+        "title": "Getting started"
+      },
+      "sdk-ios/index": {
+        "title": "Getting started"
+      },
+      "sdk-web/index": {
+        "title": "Getting started"
+      },
+      "webhooks/index": {
+        "title": "Getting started"
       }
     },
     "links": {
       "Getting Started": "Getting Started",
       "Tools": "Tools",
-      "Haptik Integration": "Haptik Integration"
+      "Integrations": "Integrations"
     },
     "categories": {
       "Introduction": "Introduction",
@@ -140,7 +164,13 @@
       "Custom Tools": "Custom Tools",
       "Getting Started": "Getting Started",
       "HSL": "HSL",
-      "Advanced Concepts": "Advanced Concepts"
+      "Advanced Concepts": "Advanced Concepts",
+      "Docusaurus": "Docusaurus",
+      "First Category": "First Category",
+      "Second Category": "Second Category",
+      "HSL Elements": "HSL Elements",
+      "Tools": "Tools",
+      "Integrations": "Integrations"
     }
   },
   "pages-strings": {

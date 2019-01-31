@@ -1,5 +1,5 @@
 ---
-title: HSL Carousel
+title: Carousel
 ---
 
 #### Sample Json for default Carousel

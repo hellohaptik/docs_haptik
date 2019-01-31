@@ -130,8 +130,9 @@
       }
     },
     "links": {
-      "Agent Chat": "Agent Chat",
-      "Bot Builder": "Bot Builder"
+      "Getting Started": "Getting Started",
+      "Tools": "Tools",
+      "Haptik Integration": "Haptik Integration"
     },
     "categories": {
       "Introduction": "Introduction",

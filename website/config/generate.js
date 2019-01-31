@@ -1,5 +1,8 @@
 var fs = require('fs');
 var path = require('path');
+var ncp = require('ncp').ncp;
+
+ncp.limit = 16;
 
 var sidebars = {};
 var headerLinks = [];
@@ -83,9 +86,24 @@ function _generate(docsPath, directory) {
   });
 }
 
+function _moveAssets(docsPath) {
+  readDirectory(docsPath, function(files) {
+    files.forEach(function(file, index) {
+      var filePath = path.join(docsPath, file);
+      isDirectory(filePath, function(isDirectory) {
+        if (isDirectory && file === 'assets') {
+          ncp(filePath, PATH + '/assets/');
+        } else if (isDirectory) {
+          _moveAssets(filePath);
+        }
+      });
+    });
+  });
+}
+
 function generate() {
-  console.log('GENERATING');
-  _generate(PATH, 'docs');
+  // _generate(PATH, 'docs');
+  _moveAssets(PATH);
 }
 
 generate();

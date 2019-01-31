@@ -5,38 +5,141 @@
     "previous": "Previous",
     "tagline": "Haptik documentation in one place",
     "docs": {
-      "mogambo/doc1": {
-        "title": "Latin-ish",
-        "sidebar_label": "Example Page"
+      "agent-chat/admin_panel": {
+        "title": "Admin Panel"
       },
-      "mogambo/doc2": {
-        "title": "document number 2"
+      "agent-chat/athena_assignment": {
+        "title": "Chat Assignment"
       },
-      "mogambo/doc3": {
-        "title": "This is document number 3"
+      "agent-chat/athena_lhs": {
+        "title": "The left hand side"
       },
-      "teja/doc1": {
-        "title": "Latin-ish",
-        "sidebar_label": "Example Page"
+      "agent-chat/athena_rhs": {
+        "title": "The right hand side"
       },
-      "teja/doc2": {
-        "title": "document number 2"
+      "agent-chat/athena_smart_actions": {
+        "title": "Smart Actions"
       },
-      "teja/doc3": {
-        "title": "This is document number 3"
+      "agent-chat/custom-tools-data-communication": {
+        "title": "Using conversation data"
+      },
+      "agent-chat/custom-tools-how": {
+        "title": "Adding your own custom tool"
+      },
+      "agent-chat/custom-tools-intro": {
+        "title": "Introduction"
+      },
+      "agent-chat/index": {
+        "title": "Getting started"
+      },
+      "bot-analytics/index": {
+        "title": "Getting started"
+      },
+      "bot-builder/advanced/demo-links": {
+        "title": "Demo Page"
+      },
+      "bot-builder/advanced/integrating-webviews-into-sdk": {
+        "title": "Integrating WebViews"
+      },
+      "bot-builder/basic/bot-says": {
+        "title": "Bot Says"
+      },
+      "bot-builder/basic/connecting-nodes": {
+        "title": "Connections"
+      },
+      "bot-builder/basic/creating-bot": {
+        "title": "Creating a Bot"
+      },
+      "bot-builder/basic/creating-nodes": {
+        "title": "Creating Nodes"
+      },
+      "bot-builder/basic/creating-story": {
+        "title": "Creating a Story"
+      },
+      "bot-builder/basic/entities": {
+        "title": "Entities"
+      },
+      "bot-builder/basic/general-nodes": {
+        "title": "General Nodes"
+      },
+      "bot-builder/basic/general-responses": {
+        "title": "General Responses"
+      },
+      "bot-builder/basic/index": {
+        "title": "Getting started"
+      },
+      "bot-builder/basic/integrating-custom-code": {
+        "title": "Integrating Custom Code"
+      },
+      "bot-builder/basic/testing-bot": {
+        "title": "Testing your bot"
+      },
+      "bot-builder/basic/user-says": {
+        "title": "User Says"
+      },
+      "bot-builder/hsl/button": {
+        "title": "HSL Button"
+      },
+      "bot-builder/hsl/carousel": {
+        "title": "HSL Carousel"
+      },
+      "bot-builder/hsl/hsl-properties": {
+        "title": "Configuration"
+      },
+      "bot-builder/hsl/image": {
+        "title": "HSL Image"
+      },
+      "bot-builder/hsl/index": {
+        "title": "Introduction"
+      },
+      "bot-builder/hsl/text": {
+        "title": "HSL Text"
+      },
+      "bot-configuration/bot-prompt": {
+        "title": "bot-configuration/bot-prompt"
+      },
+      "bot-configuration/business-creation": {
+        "title": "bot-configuration/business-creation"
+      },
+      "bot-configuration/client-sdk": {
+        "title": "bot-configuration/client-sdk"
+      },
+      "bot-configuration/custom-icon-for-js-sdk": {
+        "title": "bot-configuration/custom-icon-for-js-sdk"
+      },
+      "bot-configuration/permissions": {
+        "title": "bot-configuration/permissions"
+      },
+      "bot-configuration/webhooks": {
+        "title": "bot-configuration/webhooks"
+      },
+      "introduction/design-tips": {
+        "title": "introduction/design-tips"
+      },
+      "introduction/glossary": {
+        "title": "introduction/glossary"
+      },
+      "introduction/welcome": {
+        "title": "introduction/welcome"
+      },
+      "other/security": {
+        "title": "other/security"
+      },
+      "other/sla_agreement": {
+        "title": "other/sla_agreement"
       }
     },
     "links": {
-      "Mogambo": "Mogambo",
-      "Teja": "Teja"
+      "Agent Chat": "Agent Chat",
+      "Bot Builder": "Bot Builder"
     },
     "categories": {
-      "Docusaurus": "Docusaurus",
-      "First Category": "First Category",
-      "Second Category": "Second Category",
-      "Teja 1": "Teja 1",
-      "Teja 2": "Teja 2",
-      "Teja 3": "Teja 3"
+      "Introduction": "Introduction",
+      "The Interface": "The Interface",
+      "Custom Tools": "Custom Tools",
+      "Getting Started": "Getting Started",
+      "HSL": "HSL",
+      "Advanced Concepts": "Advanced Concepts"
     }
   },
   "pages-strings": {

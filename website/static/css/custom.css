@@ -20,6 +20,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+a {
+  color: #42A5F5;
+}
+
 .headerTitleWithLogo {
   font-weight: 500;
   color: #333;
@@ -35,7 +39,7 @@ body {
   background-color: transparent !important;
 }
 
-.nav-site li.siteNavItemActive a {
+.nav-site li.siteNavGroupActive a {
   color: #42A5F5 !important;
   background-color: transparent !important;
   pointer-events: none;

@@ -1,8 +1,9 @@
 {
   "scripts": {
     "generate": "node config/generate.js",
-    "start": "docusaurus-start",
+    "start": "npm run generate && docusaurus-start",
     "build": "npm run generate && docusaurus-build",
+    "publish-docs": "npm run generate && GIT_USER=pagrawl && docusaurus-publish",
     "publish-gh-pages": "docusaurus-publish",
     "write-translations": "docusaurus-write-translations",
     "version": "docusaurus-version",

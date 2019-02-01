@@ -71,7 +71,9 @@ const siteConfig = {
   fonts: {
     myFont: ['Roboto', 'sans-serif'],
     myOtherFont: ['Roboto', 'sans-serif']
-  }
+  },
+
+  gaTrackingId: 'UA-106563119-5'
 };
 
 module.exports = siteConfig;

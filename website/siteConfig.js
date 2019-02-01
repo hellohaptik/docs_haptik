@@ -7,8 +7,6 @@
 
 // See https://docusaurus.io/docs/site-config for all the possible
 // site configuration options.
-
-const headerLinks = require('./headerLinks.json');
 const baseUrl = '/docs_haptik/';
 
 const siteConfig = {
@@ -19,7 +17,20 @@ const siteConfig = {
   projectName: 'docs_haptik',
   organizationName: 'hellohaptik',
 
-  headerLinks: headerLinks,
+  headerLinks: [
+    {
+      page: '#getting-started',
+      label: 'Getting Started'
+    },
+    {
+      page: '#tools',
+      label: 'Tools'
+    },
+    {
+      page: '#integrations',
+      label: 'Integrations'
+    }
+  ],
 
   headerIcon: 'img/image_0.png',
   footerIcon: 'img/image_0.png',
@@ -27,7 +38,7 @@ const siteConfig = {
 
   colors: {
     primaryColor: '#333',
-    secondaryColor: '#205C3B'
+    secondaryColor: '#FFF'
   },
 
   copyright: `Copyright © ${new Date().getFullYear()} Haptik Inc.`,

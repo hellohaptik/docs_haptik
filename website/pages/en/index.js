@@ -13,9 +13,10 @@ function Section({ title, description, ctaText, ctaLink }) {
   );
 }
 
-function Row({ title, sections = [], others = [] }) {
+function Row({ title, sections = [], others = [], id }) {
   return (
     <div className="home-row-wrapper">
+      <div className="home-row-anchor" id={id} />
       <div className="home-row">
         <div className="home-row-title">{title}</div>
         <div className="home-row-columns">
@@ -24,8 +25,8 @@ function Row({ title, sections = [], others = [] }) {
               <Section key={i} {...section} />
             ))}
           </div>
-          <div className="home-row-others column">
-            {others.length ? (
+          {others.length ? (
+            <div className="home-row-others column">
               <React.Fragment>
                 <div className="home-row-others-title">Other</div>
                 <div className="home-row-others-links">
@@ -36,8 +37,8 @@ function Row({ title, sections = [], others = [] }) {
                   ))}
                 </div>
               </React.Fragment>
-            ) : null}
-          </div>
+            </div>
+          ) : null}
         </div>
       </div>
     </div>
@@ -47,6 +48,7 @@ function Row({ title, sections = [], others = [] }) {
 module.exports = () => (
   <div className="home">
     <Row
+      id="getting-started"
       title="Getting Started"
       sections={[
         {
@@ -67,6 +69,7 @@ module.exports = () => (
       others={[]}
     />
     <Row
+      id="tools"
       title="Tools"
       sections={[
         {
@@ -105,6 +108,7 @@ module.exports = () => (
       ]}
     />
     <Row
+      id="integrations"
       title="Integrations"
       sections={[
         {

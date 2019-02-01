@@ -5,7 +5,6 @@ var ncp = require('ncp').ncp;
 ncp.limit = 16;
 
 var sidebars = {};
-var headerLinks = [];
 var PATH = path.join(__dirname, '../../docs');
 
 function readDirectory(directory, callback) {
@@ -54,14 +53,6 @@ function generateSidebar(meta, pathToPrepend) {
   return generatedConfig;
 }
 
-function generateHeaderLink(meta, pathToPrepend) {
-  var headerLink = meta.headerLink;
-  return {
-    doc: pathToPrepend.split(PATH)[1].substring(1) + '/' + headerLink.doc,
-    label: headerLink.label
-  };
-}
-
 function writeToFile(json, filePath, callback) {
   fs.writeFile(filePath, JSON.stringify(json, null, 2), 'utf8', callback);
 }
@@ -76,9 +67,7 @@ function _generate(docsPath, directory) {
         } else if (file === 'meta.json') {
           readJSON(filePath, function(json) {
             sidebars[directory] = generateSidebar(json, docsPath);
-            // headerLinks.push(generateHeaderLink(json, docsPath));
             writeToFile(sidebars, path.join(__dirname, '../sidebars.json'), function() {});
-            // writeToFile(headerLinks, path.join(__dirname, '../headerLinks.json'), function() {});
           });
         }
       });
@@ -103,7 +92,7 @@ function _moveAssets(docsPath) {
 
 function generate() {
   _generate(PATH, 'docs');
-  // _moveAssets(PATH);
+  _moveAssets(PATH);
 }
 
 generate();

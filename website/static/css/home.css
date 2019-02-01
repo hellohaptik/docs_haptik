@@ -15,8 +15,8 @@
 .home-row {
   max-width: 1400px;
   padding: 0 20px;
-  padding-top: 2.5%;
-  padding-bottom: 2.5%;
+  padding-top: 32px;
+  padding-bottom: 32px;
   margin: 0 auto;
 }
 
@@ -24,6 +24,11 @@
   .home-row {
     max-width: 1300px;
   }
+}
+
+.home-row-anchor {
+  position: relative;
+  top: -48px;
 }
 
 .home-row-title {
@@ -34,14 +39,32 @@
 
 .home-row-columns {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .home-row-sections.column {
-  flex: 3;
+  flex: 4;
   display: flex;
   margin-right: 24px;
-  margin-bottom: -48px;
+  /* margin-bottom: -48px; */
   flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+
+.home-row-sections.column:last-child {
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 800px) {
+  .home-row-sections.column {
+    min-width: calc( 100% );
+  }
+}
+
+@media only screen and (max-width: 1100px) and (min-width: 768px) {
+  .home-row-sections.column {
+    margin-right: -64px;
+  }
 }
 
 .home-row-section {
@@ -50,6 +73,16 @@
   margin-bottom: 48px;
   min-width: calc( 50% - 100px );
   max-width: 0;
+}
+
+.home-row-section:last-child {
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 800px) {
+  .home-row-section {
+    min-width: calc( 100% );
+  }
 }
 
 .home-row-section-title {
@@ -66,11 +99,12 @@
 
 .home-row-section-cta {
   font-weight: 500;
-  color: #42A5F5;
+  color: #0C4DA2;
 }
 
 .home-row-others.column {
   flex: 1;
+  min-width: 240px;
 }
 
 .home-row-others-title {

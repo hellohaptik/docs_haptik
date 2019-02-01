@@ -10,7 +10,7 @@ body {
 }
 
 a {
-  color: #42A5F5;
+  color: #0C4DA2;
 }
 
 .headerTitleWithLogo {
@@ -27,9 +27,18 @@ a {
   padding-top: 2px;
 }
 
+.slidingNav .nav-site {
+  margin-bottom: 0;
+}
+
 .nav-site li a {
   font-weight: 500 !important;
   color: #666 !important;
+  background-color: #fff !important;
+}
+
+.nav-site li:hover {
+  background-color: #fff !important;
 }
 
 .nav-site li a:hover {
@@ -38,7 +47,7 @@ a {
 }
 
 .nav-site li.siteNavGroupActive a {
-  color: #42A5F5 !important;
+  color: #0C4DA2 !important;
   background-color: transparent !important;
   pointer-events: none;
 }
@@ -47,6 +56,14 @@ a {
   background-color: #FFF;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+
+@media only screen and (max-width: 1023px) {
+  .slidingNav {
+    background-color: #FFF;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+}
+
 
 .fbOpenSource {
   width: auto !important;

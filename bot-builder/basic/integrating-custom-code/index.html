@@ -1,0 +1,247 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Integrating Custom Code · Haptik Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;Once a particular node has been detected and the mandatory entities have been collected, these entities can be given to custom code to execute your own business logic. There are 3 different ways to execute this business logic.&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Integrating Custom Code · Haptik Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://hellohaptik.github.io//docs_haptik/index.html"/><meta property="og:description" content="&lt;p&gt;Once a particular node has been detected and the mandatory entities have been collected, these entities can be given to custom code to execute your own business logic. There are 3 different ways to execute this business logic.&lt;/p&gt;
+"/><meta property="og:image" content="https://hellohaptik.github.io//docs_haptik/img/image_0.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://hellohaptik.github.io//docs_haptik/img/image_0.png"/><link rel="shortcut icon" href="/docs_haptik/img/image_0.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-106563119-5', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="/docs_haptik/js/index.js"></script><link rel="stylesheet" href="/docs_haptik/css/main.css"/><script src="/docs_haptik/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs_haptik/"><img class="logo" src="/docs_haptik/img/image_0.png" alt="Haptik Docs"/><h2 class="headerTitleWithLogo">Haptik Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs_haptik/#getting-started" target="_self">Getting Started</a></li><li class=""><a href="/docs_haptik/#tools" target="_self">Tools</a></li><li class=""><a href="/docs_haptik/#integrations" target="_self">Integrations</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Integrating Custom Code</h1></header><article><div><span><p>Once a particular node has been detected and the mandatory entities have been collected, these entities can be given to custom code to execute your own business logic. There are 3 different ways to execute this business logic.</p>
+<ol>
+<li>API Functions
+^^^^^^^^^^^^^^^^</li>
+</ol>
+<p><em>This is internal to Haptik Developers</em></p>
+<ol start="2">
+<li>Webhooks
+^^^^^^^^^^^</li>
+</ol>
+<p>A node can be configured to call a webhook once the required entities have been collected.</p>
+<p>To deploy a live webhook that can receive webhook events, your code must be hosted on a public HTTP server that has the following:</p>
+<ul>
+<li><p>A Valid SSL Certificate</p></li>
+<li><p>An open port that accepts <code>GET</code> and <code>POST</code> requests</p></li>
+</ul>
+<p>Select the API Functions section
+Select the type as WebHook
+Add the endpoint of the webhook</p>
+<p>Specify the security challenge that will be verified</p>
+<p><strong>Request Method</strong></p>
+<p>POST</p>
+<p><strong>Request Headers</strong></p>
+<p>.. list-table::
+:widths: 15 30
+:header-rows: 1</p>
+<ul>
+<li><ul>
+<li>Header</li>
+<li>Description</li>
+</ul></li>
+<li><ul>
+<li>Content-Type</li>
+<li>application/json</li>
+</ul></li>
+<li><ul>
+<li>X-Hub-Signature</li>
+<li>sha1=signature (The HMAC hex digest of the request body. This header will be sent if the node is configured with a secret. The HMAC hex digest is generated using the sha1 hash function and the secret as the HMAC key.)</li>
+</ul></li>
+</ul>
+<p><strong>Request Parameters</strong></p>
+<p>.. code:: json</p>
+<p>{
+&quot;node&quot;:&quot;system name of the node&quot;,
+&quot;event&quot;:&quot;API_INTEGRATION&quot;,
+&quot;user&quot;:{
+&quot;user_name&quot;:&quot;haptik username&quot;,
+&quot;full_name&quot;:&quot;&quot;,
+&quot;device_platform&quot;: 5
+},
+&quot;entities&quot;:{
+&quot;product_id&quot;:[
+{
+&quot;detection&quot;:&quot;message&quot;,
+&quot;original_text&quot;:&quot;71&quot;,
+&quot;entity_value&quot;:&quot;71&quot;
+}
+],
+&quot;email&quot;:[
+{
+&quot;detection&quot;:&quot;user_profile&quot;,
+&quot;original_text&quot;:&quot;<a href="mailto:test@test.com">test@test.com</a>&quot;,
+&quot;entity_value&quot;:&quot;<a href="mailto:test@test.com">test@test.com</a>&quot;
+}
+],
+&quot;product_name&quot;:[
+{
+&quot;detection&quot;:&quot;default&quot;,
+&quot;original_text&quot;:&quot;headphones&quot;,
+&quot;entity_value&quot;:&quot;headphones&quot;
+}
+]
+}
+}</p>
+<p>.. list-table::
+:widths: 15 10 30
+:header-rows: 1</p>
+<ul>
+<li><ul>
+<li>Name</li>
+<li>Type</li>
+<li>Description</li>
+</ul></li>
+<li><ul>
+<li>node</li>
+<li>String</li>
+<li>Unique system name of the calling node</li>
+</ul></li>
+<li><ul>
+<li>event</li>
+<li>String</li>
+<li>event type e.g. API_INTEGRATION</li>
+</ul></li>
+<li><ul>
+<li>user</li>
+<li>Dictionary</li>
+<li>Dictionary containing user data</li>
+</ul></li>
+<li><ul>
+<li>entities</li>
+<li>Dictionary</li>
+<li>The entities dictionary will have a key for each entity that is detected e.g. movie_name, venue, phone_number, etc. The value for each entity is a list of dictionary as shown below.</li>
+</ul></li>
+</ul>
+<p><strong>entity output format</strong></p>
+<p>.. code:: json</p>
+<p>[
+{
+&quot;entity_value&quot;: entity_value,
+&quot;detection&quot;: detection_method,
+&quot;original_text&quot;: original_text
+}
+]</p>
+<p>Consider the following example for detailed explanation:</p>
+<p>&quot;I want to order from mcd&quot;</p>
+<ul>
+<li>entity_value: This will store the value of entity (i.e entity value) that is detected. For example, Mc’Donalds.</li>
+<li>detection: This will store how the entity is detected i.e. whether from message, structured value or fallback value.</li>
+<li>original_text: This will store the actual value that is detected. For example, mcd.</li>
+</ul>
+<p><strong>Response Parameters</strong></p>
+<p>A <code>200 OK</code> HTTP Response must be sent back to the Haptik Servers, Failing which a bot break response will be sent to the user. Webhook response must be sent in 30 seconds or less, failing which a bot break response will be sent to the user.
+The following additional fields can be specified by the Webhook to control behaviour of the bot and send messages to the user.</p>
+<p>.. code:: json</p>
+<p>{
+&quot;response&quot;: [
+&quot;message1&quot;,
+&quot;message2&quot;,
+....
+],
+&quot;response_message_type&quot;: 16,
+&quot;status&quot;: True/False,
+}</p>
+<p>.. list-table::
+:widths: 15 10 30
+:header-rows: 1</p>
+<ul>
+<li><ul>
+<li>Name</li>
+<li>Type</li>
+<li>Description</li>
+</ul></li>
+<li><ul>
+<li>response</li>
+<li>Array</li>
+<li>List of messages to be sent to the user</li>
+</ul></li>
+<li><ul>
+<li>response_message_type</li>
+<li>Integer</li>
+<li>Message Type of the Message. Please refer the Message Type Documentation</li>
+</ul></li>
+<li><ul>
+<li>status</li>
+<li>Boolean</li>
+<li>If status is True, then the decorator will assign the response to success_response. If status is False, then the decorator will assign the response to failure_response.</li>
+</ul></li>
+</ul>
+<p><strong>Validate Webhook</strong></p>
+<p>The HTTP request will contain an X-Hub-Signature header which contains the SHA1 signature of the request payload, using the secret_key entered for the node, and prefixed with sha1=. Your API can verify this signature to validate the integrity and origin of the payload.</p>
+<p><strong>Sample python code for webhook</strong></p>
+<p>.. code-block:: python</p>
+<p>#!/usr/bin/env python
+&quot;&quot;&quot;
+Simple HTTP server in python for handling haptik webhooks.</p>
+<p>Usage::
+./test_server.py [<port>]</p>
+<p>&quot;&quot;&quot;
+import cgi
+import json
+import hmac
+import hashlib
+from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer</p>
+<p>class WebhookServer(BaseHTTPRequestHandler):
+def _set_headers(self, status_code, content_type):
+self.send_response(status_code)
+self.send_header('Content-type', content_type)
+self.end_headers()</p>
+<pre><code class="hljs">   def do_GET(self):
+       self._set_headers(status_code=200, content_type='text/html')
+       self.wfile.write(&quot;&lt;html&gt;&lt;body&gt;&lt;h1&gt;Test Server&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)
+
+   def do_POST(self):
+       content_type, pdict = cgi.parse_header(self.headers.getheader('Content-Type'))
+
+       if content_type != 'application/json':
+           self.send_response(400)
+           self.end_headers()
+           return
+
+       length = int(self.headers.getheader('Content-Length'))
+       if not length:
+           self.send_response(400)
+           self.end_headers()
+           return
+
+       body = self.rfile.read(length)
+       data = json.loads(body)
+       secret_key = 'test'
+       hash_value = hmac.new(secret_key, body, hashlib.sha1).hexdigest()
+       sha1_signature = 'sha1=' + str(hash_value)
+       request_signature = self.headers.getheader('X-Hub-Signature')
+       if sha1_signature != request_signature:
+           self.send_response(401)
+           self.end_headers()
+           return
+       entities = data['entities']
+       product_name = entities['product_name'][0]['entity_value'] if entities.get('product_name') else None
+       if product_name == 'speaker':
+           message = 'The Wireless Radio Alarm Clock Speaker can be yours only for Rs.1599'
+       elif product_name == 'powerbank':
+           message = 'The Ambrane Powerbank can be yours only for Rs.1799'
+       else:
+           self.send_response(400)
+           self.end_headers()
+           return
+       response = {&quot;status&quot;: True, &quot;response&quot;: [message]}
+       self._set_headers(status_code=200, content_type='application/json')
+       self.wfile.write(json.dumps(response))
+</code></pre>
+<p>def run(server_class=HTTPServer, handler_class=WebhookServer, port=80):
+server_address = ('', port)
+httpd = server_class(server_address, handler_class)
+print 'Starting test server...'
+httpd.serve_forever()</p>
+<p>if <strong>name</strong> == &quot;<strong>main</strong>&quot;:
+from sys import argv</p>
+<pre><code class="hljs">   if len(argv) == 2:
+       run(port=int(argv[1]))
+   else:
+       run()
+</code></pre>
+<ol start="3">
+<li>Code Upload
+^^^^^^^^^^^^^^ -<em>Coming Soon</em></li>
+</ol>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-1-31</em></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/docs_haptik/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Getting Started</div><div class="footer-column-links"><a class="footer-column-link">Product Overview</a><a class="footer-column-link">Technical Overview</a></div></div><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a class="footer-column-link">Bot Builder</a><a class="footer-column-link">Agent Chat</a><a class="footer-column-link">Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a class="footer-column-link">iOS SDK</a><a class="footer-column-link">Android SDK</a><a class="footer-column-link">Web SDK</a><a class="footer-column-link">Webhooks</a><a class="footer-column-link">HSL</a></div></div><div class="footer-column"><div class="footer-column-title">Misc</div><div class="footer-column-links"><a class="footer-column-link">Security</a><a class="footer-column-link">Support</a><a class="footer-column-link">SLA</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2019 Haptik Inc.</section></footer></div></body></html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Entities · Haptik Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;In this section, we&#x27;ll cover the following topics:&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Entities · Haptik Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://hellohaptik.github.io//docs_haptik/index.html"/><meta property="og:description" content="&lt;p&gt;In this section, we&#x27;ll cover the following topics:&lt;/p&gt;
+"/><meta property="og:image" content="https://hellohaptik.github.io//docs_haptik/img/image_0.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://hellohaptik.github.io//docs_haptik/img/image_0.png"/><link rel="shortcut icon" href="/docs_haptik/img/image_0.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-106563119-5', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="/docs_haptik/js/index.js"></script><link rel="stylesheet" href="/docs_haptik/css/main.css"/><script src="/docs_haptik/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs_haptik/"><img class="logo" src="/docs_haptik/img/image_0.png" alt="Haptik Docs"/><h2 class="headerTitleWithLogo">Haptik Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs_haptik/#getting-started" target="_self">Getting Started</a></li><li class=""><a href="/docs_haptik/#tools" target="_self">Tools</a></li><li class=""><a href="/docs_haptik/#integrations" target="_self">Integrations</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Entities</h1></header><article><div><span><p>In this section, we'll cover the following topics:<br>
+<a href="#what-is-an-entity-again">What is an Entity?</a>  <br>
+<a href="#when-is-the-appropriate-time-to-use-an-entity">When to Use Entities</a>  <br>
+<a href="#how-does-using-an-entity-affect-the-other-bot-says-responses?">How Adding Entities Affects Bot Says</a>  <br>
+<a href="#adding-an-entity">How to Add an Entity</a>  <br>
+<a href="#making-a-new-entity">Creating a New Entity</a></p>
+<h4><a class="anchor" aria-hidden="true" id="what-is-an-entity-again"></a><a href="#what-is-an-entity-again" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What is an entity again?</h4>
+<p><strong>Entities</strong>: An entity represents the set of values from which a user’s response must come in order for that user to progress onwards in a conversation. Depending on the context of the conversation, the required response can either be a single value or limited group of specific values from the entity, or any value from within the entity. Entities are always added in connection with the bot’s query the required response is associated with, so that they may detect whether the required response was given.</p>
+<h4><a class="anchor" aria-hidden="true" id="when-is-the-appropriate-time-to-use-an-entity"></a><a href="#when-is-the-appropriate-time-to-use-an-entity" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>When is the appropriate time to use an entity?</h4>
+<p>Some examples of when you would use an entity in Bot Says:</p>
+<ul>
+<li>When you need a user's email ID and need to verify that inputs are valid IDs or not. The ‘email’ entity allows the detection of an email id.</li>
+<li>When you need a user's phone number and need to verify that inputs are valid phone numbers. The ‘phone_number_without_validation’ entity detects a 10 digit number.</li>
+<li>When you need to gather the city a user wants to fly into and need to verify that the user has indicated a city with an airport in it.</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="how-does-using-an-entity-affect-the-other-bot-says-responses"></a><a href="#how-does-using-an-entity-affect-the-other-bot-says-responses" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How does using an entity affect the other Bot Says responses?</h4>
+<p>The flow of Bot Says responses goes from top to bottom in terms of evaluation. <strong>The order of the entities, and their order relative to Bot Says inputs, matters</strong>. First the initial bot reply comes, then the entities, and then finally the final bot reply. The delay message is sent only after a certain level of inactivity. The initial/final bot replies might be not needed in some scenarios. <strong>Note</strong> that to change the order of the Bot Says inputs, simply click and drag the reorder handle.</p>
+<p><img src="bot_says_drag.png" alt="bot says drag"></p>
+<blockquote>
+<p><strong>Entity Scenarios</strong></p>
+<ul>
+<li><em>If there are no entities</em>: If it’s a simple node that doesn’t need to collect entities or data, a simple bot says is all that’s needed. You won’t be able to add a final bot reply as that would be redundant as there are no middle steps.</li>
+<li><em>If there is one entity</em>: If there’s only one entity, then there is no initial bot reply as that entite’s responses serve as the initial bot reply.</li>
+<li><em>If there are multiple entities</em>: If there are multiple entities, then all the responses are required. (Intial Bot Says, Entity Responses as well as the final bot reply).</li>
+</ul>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="adding-an-entity"></a><a href="#adding-an-entity" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Adding an entity:</h4>
+<p>After selecting the node on which the entity is to be added, click on bot says or entities:</p>
+<p><img src="entities_open_node.png" alt="entities open node"></p>
+<p>Click on Add Entities. One can search for a particular word that needs to be detected, all existing entities that are capable of detecting that word/variant will appear as the search result</p>
+<p><img src="entities_add.png" alt="entities add"></p>
+<p>Simply click select on one of the existing entities to add it to your node.</p>
+<h4><a class="anchor" aria-hidden="true" id="making-a-new-entity"></a><a href="#making-a-new-entity" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Making a new entity:</h4>
+<p>To create a new entity</p>
+<ul>
+<li><p>Click on Create Entity if an appropriate entity doesn't exist.</p>
+<p><img src="entities_create_click.png" alt="entities create click"></p></li>
+<li><p>Enter the name (must be a lower case, underscrore separated text) and description of an Entity. Try to make the description as relevant as possible, as it will help you better search for your entity in the future.</p>
+<p><img src="entities_create_new_step1.png" alt="entities create new"></p></li>
+<li><p>Enter the details of the data dictionary. You can use ‘tab’ to quicky add words and variants. Once variants for a particular word are entered, press enter to store and to add new words and variants.</p>
+<p><img src="entities_create_new_step2.png" alt="entities create new 2"></p>
+<p><strong>A few technical details</strong>:</p>
+<blockquote>
+<p>The ‘Backup’ button will download the current data set for a dictionary.</p>
+<p>The ‘Upload New Dictionary’ button will upload data from a csv into the dictionary.</p>
+<p>Format for upload and backup: word1|variant1,variant2,variant3 word2|variant4,variant5,variant.</p>
+<p>Any other format will be rejected.</p>
+</blockquote></li>
+<li><p>Click 'Next Step' once you're satisfied with your dictionary.</p></li>
+<li><p>In the final step you can add a default message that the node should respond when the entity is detected</p></li>
+<li><p>On clicking 'Save', the entity will be created.</p></li>
+<li><p>You can add the newly created entity to the existing node, or you can edit the newly created entity.</p></li>
+</ul>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-1-31</em></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/docs_haptik/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Getting Started</div><div class="footer-column-links"><a class="footer-column-link">Product Overview</a><a class="footer-column-link">Technical Overview</a></div></div><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a class="footer-column-link">Bot Builder</a><a class="footer-column-link">Agent Chat</a><a class="footer-column-link">Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a class="footer-column-link">iOS SDK</a><a class="footer-column-link">Android SDK</a><a class="footer-column-link">Web SDK</a><a class="footer-column-link">Webhooks</a><a class="footer-column-link">HSL</a></div></div><div class="footer-column"><div class="footer-column-title">Misc</div><div class="footer-column-links"><a class="footer-column-link">Security</a><a class="footer-column-link">Support</a><a class="footer-column-link">SLA</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2019 Haptik Inc.</section></footer></div></body></html>

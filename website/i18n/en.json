@@ -140,15 +140,6 @@
       "product-overview/index": {
         "title": "Getting started"
       },
-      "sdk-android/index": {
-        "title": "Getting started"
-      },
-      "sdk-ios/index": {
-        "title": "Getting started"
-      },
-      "sdk-web/index": {
-        "title": "Getting started"
-      },
       "webhooks/index": {
         "title": "Getting started"
       }
@@ -165,12 +156,12 @@
       "Getting Started": "Getting Started",
       "HSL": "HSL",
       "Advanced Concepts": "Advanced Concepts",
-      "HSL Elements": "HSL Elements",
-      "Tools": "Tools",
-      "Integrations": "Integrations",
       "Docusaurus": "Docusaurus",
       "First Category": "First Category",
-      "Second Category": "Second Category"
+      "Second Category": "Second Category",
+      "HSL Elements": "HSL Elements",
+      "Tools": "Tools",
+      "Integrations": "Integrations"
     }
   },
   "pages-strings": {

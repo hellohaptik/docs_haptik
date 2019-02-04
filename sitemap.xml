@@ -46,8 +46,5 @@
 <url> <loc>https://hellohaptik.github.io/docs_haptik/product-overview/design-tips</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://hellohaptik.github.io/docs_haptik/product-overview/design-tips" /> </url>
 <url> <loc>https://hellohaptik.github.io/docs_haptik/product-overview/glossary</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://hellohaptik.github.io/docs_haptik/product-overview/glossary" /> </url>
 <url> <loc>https://hellohaptik.github.io/docs_haptik/product-overview/</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://hellohaptik.github.io/docs_haptik/product-overview/" /> </url>
-<url> <loc>https://hellohaptik.github.io/docs_haptik/sdk-android/</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://hellohaptik.github.io/docs_haptik/sdk-android/" /> </url>
-<url> <loc>https://hellohaptik.github.io/docs_haptik/sdk-ios/</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://hellohaptik.github.io/docs_haptik/sdk-ios/" /> </url>
-<url> <loc>https://hellohaptik.github.io/docs_haptik/sdk-web/</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://hellohaptik.github.io/docs_haptik/sdk-web/" /> </url>
 <url> <loc>https://hellohaptik.github.io/docs_haptik/webhooks/</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://hellohaptik.github.io/docs_haptik/webhooks/" /> </url>
 </urlset>

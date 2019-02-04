@@ -115,20 +115,20 @@ module.exports = () => (
           title: 'iOS SDK',
           description: 'A sample application with an integrated SDK & relevant Documentation',
           ctaText: 'Read More',
-          ctaLink: '/HaptikLib-iOS/sdk-ios'
+          ctaLink: '/HaptikLib-iOS'
         },
         {
           title: 'Android SDK',
           description:
             'A sample application with an integrated SDK & relevant Documentation with aar & javadoc',
           ctaText: 'Learn More',
-          ctaLink: '/haptik-android-lib/sdk-android'
+          ctaLink: '/haptik-android-lib'
         },
         {
           title: 'Web SDK',
           description: 'JavaScript documentation along with examples to begin.',
           ctaText: "Let's Begin",
-          ctaLink: '/javascript_sdk/sdk-web'
+          ctaLink: '/javascript_sdk'
         },
         {
           title: 'Webhooks',

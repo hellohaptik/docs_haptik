@@ -1,6 +1,0 @@
-{
-  "sidebar": {
-    "Getting Started": ["index", "hsl-properties"],
-    "HSL Elements": ["text", "button", "image", "carousel"]
-  }
-}

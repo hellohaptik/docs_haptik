@@ -1,6 +1,0 @@
-{
-  "sidebar": {
-    "Tools": ["security", "support", "sla_agreement"],
-    "Integrations": ["hsl", "facebook", "cordova", "react-native"]
-  }
-}

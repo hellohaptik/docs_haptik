@@ -10,7 +10,8 @@
       "basic/general-responses",
       "basic/testing-bot",
       "basic/bot-says",
-      "basic/user-says"
+      "basic/user-says,
+      "basic/user-says2"
     ],
     "HSL": [
       "hsl/index",

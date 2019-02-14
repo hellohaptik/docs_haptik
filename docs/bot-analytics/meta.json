@@ -1,6 +1,25 @@
 {
   "sidebar": {
-    "Introduction": ["index"]
+    "Getting Started": [
+      "index",
+      "chat-leads",
+      "chat-agents"
+    ],
+    "Guides": [
+      "navigating-keyboard-interface",
+      "claiming-chat",
+      "adding-agents-permission",
+      "custom-tools",
+    ],
+    "Resources": [
+      "handover",
+      "action-toolbar",
+      "smart-action",
+      "businesses",
+      "teams",
+      "analytics",
+    ],
+    
   },
   "headerLink": {
     "doc": "index",

@@ -2,22 +2,19 @@
   "sidebar": {
     "Getting Started": [
       "index",
-      "chat-leads",
-      "chat-agents"
+      "analysts",
+      "core-concepts",
     ],
     "Guides": [
-      "navigating-keyboard-interface",
-      "claiming-chat",
-      "adding-agents-permission",
-      "custom-tools",
+      "basic-analysis",
+      "message-analysis",
     ],
     "Resources": [
-      "handover",
-      "action-toolbar",
-      "smart-action",
-      "businesses",
-      "teams",
-      "analytics",
+      "story-analysis",
+      "user-reviews",
+      "user-ratings",
+      "user-journeys",
+      "sample-metrics",
     ],
     
   },

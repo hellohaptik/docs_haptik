@@ -1,51 +1,34 @@
 {
   "sidebar": {
     "Getting Started": [
-      "basic/introduction",
-      "basic/for-bot-builders",
       "basic/index",
-      "basic/creating-bot",
-      "basic/creating-story",
-      "basic/creating-nodes",
-      "basic/connecting-nodes",
-      "basic/general-nodes",
-      "basic/general-responses",
-      "basic/testing-bot",
-      "basic/bot-says",
-      "basic/user-says"
+      "basic/for-bot-builders",
     ],
     "Guides": [
       "basic/making-first-bot",
       "basic/design-guidelines",
-      "basic/testing-debugging-bot",
+      "basic/testing-bot",
       "basic/multiple-languages",
       "basic/platforms-deployment",
     ],
     "Resources": [
       "basic/heirarchy",
       "basic/business",
-      "basic/bot-creation",
-      "basic/stories",
+      "basic/creating-bot",
+      "basic/creating-story",
       "basic/story-templates",
-      "basic/nodes",
-      "basic/user-bot-says",
+      "basic/creating-nodes",
+      "basic/connecting-nodes",
+      "basic/general-nodes",
+      "basic/bot-says",
+      "basic/user-says"
       "basic/chat-elements",
       "basic/connections",
       "basic/integrations",
       "basic/entities",
       "basic/bot-prompt",
+      "basic/general-responses",
     ],
-    "HSL": [
-      "hsl/index",
-      "hsl/hsl-properties",
-      "hsl/text",
-      "hsl/button",
-      "hsl/image",
-      "hsl/carousel"
-    ],
-    "Advanced Concepts": [
-      "advanced/demo-links", "advanced/integrating-webviews-into-sdk"
-    ]
   },
   "headerLink": {
     "doc": "basic/index",

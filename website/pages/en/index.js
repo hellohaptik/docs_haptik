@@ -48,27 +48,6 @@ function Row({ title, sections = [], others = [], id }) {
 module.exports = () => (
   <div className="home">
     <Row
-      id="getting-started"
-      title="Getting Started"
-      sections={[
-        {
-          title: 'Product Overview',
-          description:
-            'A quickstart guide explaining a high level overview of how all our tools work together',
-          ctaText: 'Read More',
-          ctaLink: '/docs_haptik/product-overview'
-        },
-        {
-          title: 'Technical Overview',
-          description:
-            'A simple guide for executives trying to understand the technology powering Haptik',
-          ctaText: 'Learn More',
-          ctaLink: '/docs_haptik/technical-overview'
-        }
-      ]}
-      others={[]}
-    />
-    <Row
       id="tools"
       title="Tools"
       sections={[

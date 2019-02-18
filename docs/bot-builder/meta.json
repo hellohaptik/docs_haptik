@@ -2,25 +2,33 @@
   "sidebar": {
     "Getting Started": [
       "basic/index",
+      "basic/for-bot-builders",
+    ],
+    "Guides": [
+      "basic/making-first-bot",
+      "basic/design-guidelines",
+      "basic/testing-bot",
+      "basic/multiple-languages",
+      "basic/platforms-deployment",
+    ],
+    "Resources": [
+      "basic/heirarchy",
+      "basic/business",
       "basic/creating-bot",
       "basic/creating-story",
+      "basic/story-templates",
       "basic/creating-nodes",
       "basic/connecting-nodes",
       "basic/general-nodes",
-      "basic/general-responses",
-      "basic/testing-bot",
       "basic/bot-says",
       "basic/user-says"
+      "basic/chat-elements",
+      "basic/connections",
+      "basic/integrations",
+      "basic/entities",
+      "basic/bot-prompt",
+      "basic/general-responses",
     ],
-    "HSL": [
-      "hsl/index",
-      "hsl/hsl-properties",
-      "hsl/text",
-      "hsl/button",
-      "hsl/image",
-      "hsl/carousel"
-    ],
-    "Advanced Concepts": ["advanced/demo-links", "advanced/integrating-webviews-into-sdk"]
   },
   "headerLink": {
     "doc": "basic/index",

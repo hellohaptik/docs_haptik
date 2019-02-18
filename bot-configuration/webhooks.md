@@ -36,6 +36,10 @@ All messages sent from Haptik Platform to your registered webhook will always be
          <td>This is an alphanumeric user identifier from your system.</td>
       </tr>
       <tr>
+         <td>user.device_platform</td>
+         <td>This is a numeric indentifier for the device platform. It is 5 for Web SDK users and 13 for Webhoook based users</td>
+      </tr>
+      <tr>
          <td>business_id</td>
          <td>Business id is a unique numeric indentifier for your business, provided by Haptik.</td>
       </tr>
@@ -90,7 +94,8 @@ All messages sent from Haptik Platform to your registered webhook will always be
         "version": "1.0",
         "timestamp": "2018-10-04T12:41:27.980Z",
         "user": {
-            "auth_id": "<AUTH_ID>"
+            "auth_id": "<AUTH_ID>",
+            "device_platform": "<DEVICE_PLATFORM>"
         },
         "business_id": 343,
         "event_name": "message",
@@ -124,7 +129,8 @@ All messages sent from Haptik Platform to your registered webhook will always be
        "version": "1.0",
        "timestamp": "2018-10-04T12:41:27.980Z",
        "user": {
-           "auth_id": "<AUTH_ID>"
+           "auth_id": "<AUTH_ID>",
+           "device_platform": "<DEVICE_PLATFORM>"
        },
        "business_id": 343,
        "event_name": "chat_pinned",
@@ -158,7 +164,8 @@ All messages sent from Haptik Platform to your registered webhook will always be
        "version": "1.0",
        "timestamp": "2018-10-04T12:41:27.980Z",
        "user": {
-           "auth_id": "<AUTH_ID>"
+           "auth_id": "<AUTH_ID>",
+           "device_platform": "<DEVICE_PLATFORM>"
        },
        "business_id": 343,
        "event_name": "chat_complete",
@@ -530,11 +537,15 @@ Content-Type: application/json
 
 ```json
 {
-    "enabled": true
+    "enabled": true,
+    "business_id": 343,
+    "device_platform": 13
 }
 ```
 
 - enabled - enabled should be true to enable the webhook again
+- business_id - This is a numeric identifier for channel/queue
+- device_platform - This is a numeric indentifier for the device platform. It is 5 for Web SDK users and 13 for Webhoook based users
 
 #### Response
 

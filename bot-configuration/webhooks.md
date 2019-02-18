@@ -130,7 +130,7 @@ All messages sent from Haptik Platform to your registered webhook will always be
        "timestamp": "2018-10-04T12:41:27.980Z",
        "user": {
            "auth_id": "<AUTH_ID>",
-            "device_platform": "<DEVICE_PLATFORM>"
+           "device_platform": "<DEVICE_PLATFORM>"
        },
        "business_id": 343,
        "event_name": "chat_pinned",
@@ -165,7 +165,7 @@ All messages sent from Haptik Platform to your registered webhook will always be
        "timestamp": "2018-10-04T12:41:27.980Z",
        "user": {
            "auth_id": "<AUTH_ID>",
-            "device_platform": "<DEVICE_PLATFORM>"
+           "device_platform": "<DEVICE_PLATFORM>"
        },
        "business_id": 343,
        "event_name": "chat_complete",

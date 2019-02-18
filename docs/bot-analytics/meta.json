@@ -1,6 +1,22 @@
 {
   "sidebar": {
-    "Introduction": ["index"]
+    "Getting Started": [
+      "index",
+      "analysts",
+      "core-concepts",
+    ],
+    "Guides": [
+      "basic-analysis",
+      "message-analysis",
+    ],
+    "Resources": [
+      "story-analysis",
+      "user-reviews",
+      "user-ratings",
+      "user-journeys",
+      "sample-metrics",
+    ],
+    
   },
   "headerLink": {
     "doc": "index",

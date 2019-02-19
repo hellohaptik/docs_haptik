@@ -1,6 +1,6 @@
 #Business
 
-##Use case
+**Use case**
 
 A Business is like a contact in your Whatsapp application. An user clicks on the particular contact (Business) and starts the conversation. Businesses are the broad buckets which connect with user’s specific category of intents. Say, an user chooses to interact with the Movies Business. And it has multiple bots from movie ticket booking bot to an offers bot and refunds/cancellations bot.
 
@@ -13,25 +13,26 @@ A bot always has a Business tagged to it. Several bots can be grouped together i
 ![Business and bots](1_business_bot_mapping.png)
 
 
-##Business creation
+**Business creation**
 
 There are two ways to create a Business. 
 
-*The first way is to create a Business at the same time as you create a bot from the bot builder homepage
-*The second way to create a Business is through the Business manager page. To get started creating Businesses from the Business manager, navigate to the Business Manager tab from the Mogambo homepage and click the + New Business button on the page’s top left-hand corner.
+1. The first way is to create a Business at the same time as you create a bot from the bot builder homepage
+
+2. The second way to create a Business is through the Business manager page. To get started creating Businesses from the Business manager, navigate to the Business Manager tab from the Mogambo homepage and click the + New Business button on the page’s top left-hand corner.
 
 ![Business and bots](2_business.png)
 
 Now, you’ll be taken to a page, where you now need to fill information in four main sections: 
 
-*General Settings
-*Task(s)
-*Partner Specific
-*Bot Prompt Triggers
+1. General Settings
+2. Task(s)
+3. Partner Specific
+4. Bot Prompt Triggers
 
 ![General Settings](3_general_settings.png)
 
-###Section 1: General settings
+**Section 1: General settings**
 
 In this section, fill out information that will help you deploy this Business in the future.
 Business Name: This refers to the overarching topic of its conversational capabilities. For example, a Business Name called Flights would have a Flight booking, Flight cancellation and Flight Offers bots covering broad user intents. 
@@ -39,7 +40,8 @@ Business Name: This refers to the overarching topic of its conversational capabi
 *Tip: You can change the Business name once you’ve saved it.*
 
 Business Via Name: This is auto-populated. You cannot change the Business Via Name
-Preview Text: The text that will be shown to users before they’ve started chatting with the bot. This field is applicable for Android/iOS SDKs only                                            
+Preview Text: The text that will be shown to users before they’ve started chatting with the bot. This field is applicable for Android/iOS SDKs only
+
 Order: The order your Business will appear in the partner in which it’s deployed. This field is applicable for Android/iOS SDKs only. In the image below, Reminders is the first Business for Partner Haptik
 
 ![Channels List](4_channel_list_view.jpg)
@@ -62,7 +64,7 @@ Fallback Bots: When user input doesn’t match the User Says of any of the activ
 
 User Feedback: Tick the checkbox here to setup collection of user feedback within this business. You can choose to ask feedback once or multiple times (configurable) and also set a delay message (waiting period) after which the bot pushes the feedback message to the user here. You can access this feedback data from our analytics tool (Teja)
 
-###Section 2: Task(s)
+**Section 2: Task(s)**
 
 Bot builders can define Tasks for each Business. Providing this taskbox helps guide users to initiate conversations that the chatbot can handle most effectively. 
 
@@ -73,6 +75,7 @@ As you can see above, there are 5 Tasks that users can initiate - Play Cricket Q
 You can edit a Business tasks from the “Tasks(s)” tab. Click the Tasks section after selecting the relevant Business. 
 
 When the editing fields open, you’ll need to fill out the following information:
+
 Taskbox Header Message: This header will be shown to users to explain how to use the taskbox. In the sample taskbox above, the header is the text above the tasks that says, “Hi! Tap below to get started.” Refer the image to view this header message
 
 ![Taskbox Header](6_taskbox_header_message.jpg)
@@ -83,6 +86,7 @@ Image
 Fill out the following details:
 
 Task Title: Give the task a label. This is what will show up on the actual task button
+
 User Says: When the user taps on a task, a user says message is generated and sent in tandem. Enter what the user says associated with this task will be in this field
 
 Live Cities: Indicate if this task should be live globally or only in certain geographies. This is applicable for Android/iOS SDKs only
@@ -97,7 +101,7 @@ Location Required: Enabling this box will require users to input their location 
 
 Click Save. You’ve created a task!
 
-###Section 3: Partner specific
+**Section 3: Partner specific**
 
 This section is where you can deploy Businesses across a single or multiple Partners, and customize several chat settings for each partner. The section is located third from the top left-hand corner.
 
@@ -123,7 +127,7 @@ Bot Break Messages: This is the message that will be sent to users when the bot 
 
 *Tip: Bot break means when a bot isn’t able to come up with an appropriate response to the  user’s message within a chat flow*
 
-###Section 4: Bot Prompt Triggers
+**Section 4: Bot Prompt Triggers**
 
 Bot prompts are pop-ups with content and a click action. It’s used to grab an user’s attention in a non-intrusive way. Please refer the image below where on the Haptik’s website, we try to connect with the user.
 

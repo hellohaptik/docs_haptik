@@ -7,7 +7,7 @@ The following definitions apply to the SLA:
 - **"Covered Service"** means Haptik's end user chat experience. Bot Builder, Analytics and other development tools are not covered under this SLA.
 - **"Downtime"** means more than a 5% Error Rate. Downtime is measured based on server side Error Rate.
 - **"Downtime Period"** means a period of one or more consecutive minutes of Downtime. Partial minutes or Intermittent Downtime for a period of less than one minute will not be counted towards any Downtime Periods.
-- **"Error Rate"** means the number of Valid Requests that result in a response with HTTP Status 500 and Code "Internal Error" divided by the total number of Valid Requests during that period. 
+- **"Error Rate"** means the number of Valid Requests that result in a response with HTTP Status 500 and Code "Internal Error" divided by the total number of Valid Requests during that period.
 - **"Monthly Uptime Percentage"** means total number of minutes in a month, minus the number of minutes of Downtime suffered from all Downtime Periods in a month, divided by the total number of minutes in a month.
 - **"Valid Requests"** are requests that conform to the Documentation, and that would normally result in a non-error response.
 
@@ -27,7 +27,7 @@ The total maximum number of Financial Credits to be issued by Haptik to Customer
 
 ## SLA Exclusions
 
-The SLA does not apply to 
+The SLA does not apply to
 
 1. Due to factors outside our reasonable control (for example, natural disaster, war, acts of terrorism, riots, government action, or a network or device failure external to our data centers, including at your site or between your site and our data center);
 2. That result from the use of services, hardware, or software not provided by us, including, but not limited to, issues resulting from inadequate bandwidth or related to third-party software or services;
@@ -56,18 +56,17 @@ available as a separate offering.
 
 ## Escalation Matrix
 
-| Level | Name          | Title                   | E-Mail                 |
-| ----- | ------------- | ----------------------- | ---------------------- |
-| 1     | Shrey Jain    | Product Manager         | shrey@haptik.ai        |
-| 2     | Madhan Mohan  | Sr.Engineering Manager  | madhan.mohan@haptik.ai |
-| 3     | Kartik Poddar | Business Head           | kartik@haptik.ai       |
-| 4     | Prateek Gupte | Director of Engineering | prateek@haptik.ai      |
-| 5     | Swapan Rajdev | CTO                     | swapan@haptik.ai       |
+| Level | Name          | Title                   | E-Mail                   |
+| ----- | ------------- | ----------------------- | ------------------------ |
+| 1     | Nameer Khan   | Product Manager         | nameer.khan@haptik.ai    |
+| 2     | Madhan Mohan  | Sr.Engineering Manager  | madhan.mohan@haptik.ai   |
+| 3     | Kartik Poddar | Business Head           | kartik@haptik.ai         |
+| 4     | Swapan Rajdev | CTO                     | swapan@haptik.ai         |
 
 
 
 ## Change Requests
 
 - Change requests will be assessed on a case by case basis.
-- Assessment will take into account a combination of scope and complexity of change, priority ascertained by client, original scope of the engagement and bandwidth available within Haptik's development team to take up the request. 
+- Assessment will take into account a combination of scope and complexity of change, priority ascertained by client, original scope of the engagement and bandwidth available within Haptik's development team to take up the request.
 - Final costing and timelines will be provided by Haptik based on these factors and work will be started once an agreement is reached with the Customer on the same.

@@ -10,7 +10,7 @@ Everytime you create a bot, you have to create a new Business or assign an exist
 
 A bot always has a Business tagged to it. Several bots can be grouped together into one Business. While most Businesses are comprised of multiple bots, it is also possible for a Business to consist of only a single bot.
 
-![Business and bots](1_business_bot_mapping.png)
+![Business and bots](/assets/1_business_bot_mapping.png)
 
 
 ##Business creation
@@ -20,7 +20,7 @@ There are two ways to create a Business.
 *The first way is to create a Business at the same time as you create a bot from the bot builder homepage
 *The second way to create a Business is through the Business manager page. To get started creating Businesses from the Business manager, navigate to the Business Manager tab from the Mogambo homepage and click the + New Business button on the page’s top left-hand corner.
 
-![Business and bots](2_business.png)
+![Business and bots](/docs/bot-builder/assets/2_business.png)
 
 Now, you’ll be taken to a page, where you now need to fill information in four main sections: 
 

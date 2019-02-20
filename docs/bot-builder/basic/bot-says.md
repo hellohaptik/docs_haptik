@@ -8,7 +8,7 @@ Once you've completed the User Says component of a node, you'll need to define t
 
 To get started with adding some Bot Says responses, navigate to a specific node and click on either Bot Says or Entities. (See Screenshot Below)
 
-![adding bot says](assets/bot_says_adding-bot-says.png)
+![adding bot says](/docs/bot-builder/assets/bot_says_adding-bot-says.png)
 
 Once you arrive at the Bot Says page, you'll see the following interface. This interface might differ slightly depending on the state of the node and the responses added to it.
 

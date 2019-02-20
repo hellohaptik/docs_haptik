@@ -16,7 +16,7 @@ The Bot Prompt visual consists of the following components:
 
 There can be multiple variations of the Prompt Title, Button Text and User Message for a single bot trigger. A random variation will be picked to be used. It is advisable to set at least 3 to 5 variations to keep the content from being repetitve.
 
-![sample_bot_prompt](bot-prompt-sample.png)
+![sample_bot_prompt](/docs/bot-configuration/assets/bot-prompt-sample.png)
 
 ## Bot Prompt Trigger Rules
 

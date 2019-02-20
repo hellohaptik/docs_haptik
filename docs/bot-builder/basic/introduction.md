@@ -1,5 +1,5 @@
 ---
-title: Getting started
+title: Introduction
 ---
 
 Welcome to Mogambo, Haptik's bot builder tool! Once you've mastered this software, you'll be able to build chatbots with minimal coding. To get you started, we've put together some materials that will guide you through the process of building a bot on Mogambo. Depending on your learning preference, you can pick and choose from the following forms of documentation:

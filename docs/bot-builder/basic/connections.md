@@ -19,12 +19,13 @@ The connections you create can prompt a user to transition from one node to the 
 This is when a conversation moves from one node to another based on a particular keyword/phrase or set of keywords sent by a user.
 
 - To set a connection based on a user input, click on the arrow linking the two nodes you need to link
-- Click on 'Connection Responses,' which will take you to the following screen:
+- Click on 'Connection Responses,' which will take you to the following screen.
 
 ![transition connections](/docs/bot-builder/assets/transition_messages.png)
 
 - Decide which type of user input you want to set as an indicator to transition to the next node.
   - **Independent Responses**: Adding potential user inputs here indicates to the bot that a user may transition to this next node from any point in the conversation as long as their input sufficiently matches the responses input by the bot builder.
+  - **Negative Responses**: Addiing user inputs for which, you do not want the connection to happen. 
   - **Responses from 'Previous_Node'**: This lets you limit the flow of conversation so that a user can only reach the next node if the bot has received a response from the specific preceding node.
 
 ### 2. Basis an entity presence:
@@ -39,12 +40,14 @@ When you’ve added an entity to a conversation, you can define the transition f
 
 ### 3. Basis a particular entity value
 
-(a.k.a. a **Step Transition)**: The last type of transition that you can create is where a user may only move to the next node if a user inputs a specific value(s) from within an entity in the first node.
+(a.k.a. a **Step Transition)**: The last type of transition that you can create is where a user may only move to the next node if a user inputs a specific value(s) from within an entity on a node.
 
-- To set a step transition value, click the arrow between the two nodes for which you're creating a connection. Select Step Transition Values, which will take you to this screen:
+- To set a step transition value, click the arrow between the two nodes for which you're creating a connection
+
+- Select Step Transition Values, which will take you to the screen below
 
 ![transition entity value](/docs/bot-builder/assets/transition_entity_values.png)
 
-     The entity (or entities) present in the first node will be listed in the left-hand column. In the column 
-     labeled Values, type the value from the entity (or entities) you want to set as the required transition 
-     value.
+- Here, you add the entity value and press *enter* key on your keyboard. You can add multiple values for this entity. 
+
+

@@ -21,7 +21,7 @@ This is when a conversation moves from one node to another based on a particular
 - To set a connection based on a user input, click on the arrow linking the two nodes you need to link
 - Click on 'Connection Responses,' which will take you to the following screen:
 
-![transition connections](transition_messages.png)
+![transition connections](/assets/transition_messages.png)
 
 - Decide which type of user input you want to set as an indicator to transition to the next node.
   - **Independent Responses**: Adding potential user inputs here indicates to the bot that a user may transition to this next node from any point in the conversation as long as their input sufficiently matches the responses input by the bot builder.

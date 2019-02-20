@@ -70,17 +70,15 @@ Business Name: This refers to the overarching topic of its conversational capabi
 
 Bot builders can define Tasks for each Business. Providing this taskbox helps guide users to initiate conversations that the chatbot can handle most effectively. 
 
-![Taskbox](/docs/bot-builder/assets/5_taskbox.jpg)
+As you can see below, there are 5 Tasks that users can initiate - Play Cricket Quiz, Check Live Score and others below them. Tasks are the activities that the chatbot can assist users with. The tasks associated with each Business can be viewed by the user while they are chatting in that particular Business (ex: refer the above image for Cricket Business). Providing this taskbox helps guide users to initiate conversations that the chatbot can handle most effectively. 
 
-As you can see above, there are 5 Tasks that users can initiate - Play Cricket Quiz, Check Live Score and others below them. Tasks are the activities that the chatbot can assist users with. The tasks associated with each Business can be viewed by the user while they are chatting in that particular Business (ex: refer the above image for Cricket Business). Providing this taskbox helps guide users to initiate conversations that the chatbot can handle most effectively. 
-
-    You can edit Business tasks from “Tasks(s)” tab. Click Tasks section after selecting a relevant Business. 
+    You can edit Business tasks from “Tasks(s)” tab. Click "Task(s)" section after selecting a relevant Business. 
 
 When the editing fields open, you’ll need to fill out the following information:
 
-**Taskbox Header Message**: This header will be shown to users to explain how to use the taskbox. In the sample taskbox above, the header is the text above the tasks that says, “Hi! Tap below to get started.” Refer the image to view this header message
-
 ![Taskbox Header](/docs/bot-builder/assets/6_taskbox_header_message.jpg)
+
+**Taskbox Header Message**: This header will be shown to users to explain how to use the taskbox. In the sample taskbox above, the header is the text above the tasks that says, “Hi! Tap below to get started.” Refer the image to view this header message
 
 **Create New Task**: When you click this box, a new popup will appear to fill out the following details:
 

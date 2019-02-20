@@ -28,6 +28,7 @@
       "basic/entities",
       "basic/bot-prompt",
       "basic/general-responses",
+      "basic/forms",
     ],
   },
   "headerLink": {

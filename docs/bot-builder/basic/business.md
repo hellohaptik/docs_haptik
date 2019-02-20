@@ -10,7 +10,7 @@ Everytime you create a bot, you have to create a new Business or assign an exist
 
 A bot always has a Business tagged to it. Several bots can be grouped together into one Business. While most Businesses are comprised of multiple bots, it is also possible for a Business to consist of only a single bot.
 
-![Business and bots](/assets/1_business_bot_mapping.png)
+![Business and bots](/docs/bot-builder/assets/1_business_bot_mapping.png)
 
 
 ##Business creation
@@ -29,7 +29,7 @@ Now, you’ll be taken to a page, where you now need to fill information in four
 *Partner Specific
 *Bot Prompt Triggers
 
-![General Settings](3_general_settings.png)
+![General Settings](/docs/bot-builder/assets/3_general_settings.png)
 
 ###Section 1: General settings
 
@@ -42,7 +42,7 @@ Business Via Name: This is auto-populated. You cannot change the Business Via Na
 Preview Text: The text that will be shown to users before they’ve started chatting with the bot. This field is applicable for Android/iOS SDKs only                                            
 Order: The order your Business will appear in the partner in which it’s deployed. This field is applicable for Android/iOS SDKs only. In the image below, Reminders is the first Business for Partner Haptik
 
-![Channels List](4_channel_list_view.jpg)
+![Channels List](/docs/bot-builder/assets/4_channel_list_view.jpg)
 
 Active Cities: Businesses can be activated or deactivated for various cities, in case you’d like to create geographically targeted clusters of bots. This field is applicable for Android/iOS SDKs only
 
@@ -66,7 +66,7 @@ User Feedback: Tick the checkbox here to setup collection of user feedback withi
 
 Bot builders can define Tasks for each Business. Providing this taskbox helps guide users to initiate conversations that the chatbot can handle most effectively. 
 
-![Taskbox](5_taskbox.jpg)
+![Taskbox](/docs/bot-builder/assets/5_taskbox.jpg)
 
 As you can see above, there are 5 Tasks that users can initiate - Play Cricket Quiz, Check Live Score and others below them. Tasks are the activities that the chatbot can assist users with. The tasks associated with each Business can be viewed by the user while they are chatting in that particular Business (ex: refer the above image for Cricket Business). Providing this taskbox helps guide users to initiate conversations that the chatbot can handle most effectively. 
 
@@ -75,7 +75,7 @@ You can edit a Business tasks from the “Tasks(s)” tab. Click the Tasks secti
 When the editing fields open, you’ll need to fill out the following information:
 Taskbox Header Message: This header will be shown to users to explain how to use the taskbox. In the sample taskbox above, the header is the text above the tasks that says, “Hi! Tap below to get started.” Refer the image to view this header message
 
-![Taskbox Header](6_taskbox_header_message.jpg)
+![Taskbox Header](/docs/bot-builder/assets/6_taskbox_header_message.jpg)
 
 Create New Task: When you click this box, a new popup will appear, as below:
 Image
@@ -103,11 +103,11 @@ This section is where you can deploy Businesses across a single or multiple Part
 
 To make this Business live on a new partner, click on Add New Partner. A modal with the full list of partners you have permissions to access will appear. To make this Business live on a Partner, check off the box next to the partner name and exit the modal.
 
-![Partners](8_partner_selection.png)
+![Partners](/docs/bot-builder/assets/8_partner_selection.png)
 
 To customize the settings for each partner the Business is live on, click the dropdown field Select Partner on the top left hand side of this section. Once you’ve selected a partner from this dropdown, the rest of the settings in this section will only be applied to how this Business appears in that particular partner. You can apply the following customized settings:
 
-![Partner Settings](9_partner_specific_settings.png)
+![Partner Settings](/docs/bot-builder/assets/9_partner_specific_settings.png)
 
 Upload Business Icon: When there are multiple Businesses clustered together in a partner in a homescreen, you can assign each Business an icon. Upload that icon here
 
@@ -127,13 +127,13 @@ Bot Break Messages: This is the message that will be sent to users when the bot 
 
 Bot prompts are pop-ups with content and a click action. It’s used to grab an user’s attention in a non-intrusive way. Please refer the image below where on the Haptik’s website, we try to connect with the user.
 
-![Bot Prompt](10_bot_prompt.png)
+![Bot Prompt](/docs/bot-builder/assets/10_bot_prompt.png)
 
 Check out the pop-up message on the bottom-right corner in the above image. It’s a type of bot prompt. In this section, we give you the power to configure these bot prompts. And its trigger is when you decide to push a bot prompt to the user.
 
 Now, let’s go through the steps to set bot prompt messages and their trigger rules. 
 
-![Bot Prompt Trigger](11_bot_prompt_trigger.png)
+![Bot Prompt Trigger](/docs/bot-builder/assets/11_bot_prompt_trigger.png)
 
 For adding a trigger, you click on Create a New Trigger button on the top right-hand corner of this section
 

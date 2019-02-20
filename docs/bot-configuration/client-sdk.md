@@ -51,6 +51,6 @@ Provide the facebook user id of the administrator of the facebook page to your h
 Once the administrator has been added to the facebook application you will be provided a link (Sample Link: https://developers.facebook.com/apps/<your app id here>/messenger/
 The administrator of the facebook page must then follow the link to generate a Page Access Token for this application which will be provided to us for usage.
 
-![img](fb_token.png)
+![img](/docs/bot-configuration/assets/fb_token.png)
 
 Provide this Page Access Token to your haptik representative.

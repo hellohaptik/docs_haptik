@@ -22,7 +22,7 @@ There are multiple field entries and selections while creating a form. Read on e
 
 	•	Task:  This field should generally indicate the Objective of the form. For example, if you are making a form to take delivery address, Task can be Delivery Address
 
-![Add Form](1_add_form.png)
+![Add Form](/docs/bot-builder/assets/1_add_form.png)
 
 	•	Subtitle: This field should convey the action needed from the user. For example if you are making a form to take delivery address, Subtitle can be Please help me with your Delivery address
 	
@@ -38,7 +38,7 @@ There are multiple field entries and selections while creating a form. Read on e
 	
 	•	Add fields: Clicking on Add fields opens a pop-up to add the respective field details for a form -
 
-![Create Form](2_create_form.png)
+![Create Form](/docs/bot-builder/assets/2_create_form.png)
 
 	•	Sort Position: Enter “0” for a field to be at the top of any form.Add subsequent numbers for the position of any field in a form
 	
@@ -61,7 +61,7 @@ There are multiple field entries and selections while creating a form. Read on e
 
 **Form actions**
 
-![Form actions](3_form_action.png)
+![Form actions](/docs/bot-builder/assets/3_form_action.png)
 
 	•	Add field: For an already created form, you can still go back and add field(s) in case you feel, you’d missed a field earlier 
 	•	Edit: When you click on edit and click the downward chevron arrow, you’d be able to edit the Task, Subtitle field texts as well as check/uncheck the Auto Open check box
@@ -73,7 +73,7 @@ There are multiple field entries and selections while creating a form. Read on e
 	•	Editing existing fields: You can directly click the chevron arrow icon and then click edit/cross icon on any particular field to edit or delete the field from any form. 
 	•	Using form in bot builder: To use the form on any node, we type {chatform}{id} in the raw HSL (after clicking Add a chat element). The id is the number assigned to each form in Admin Tools ->  Forms list view
 
-![Form ID](4_form_id.png)
+![Form ID](/docs/bot-builder/assets/4_form_id.png)
 
 As you can see from the image above, 689 is a form id for form titled “State List for 4kg Cylinder”
 

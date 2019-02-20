@@ -4,7 +4,7 @@ title: Making Your First Bot
 
 To start building your first bot, log in to the [Haptik platform](https://staging.hellohaptik.com/home/) using the credentials that were shared with you via email. Once you've successfully logged in, navigate to the Bot Builder Tool. You will be directed to the bot builder homepage.
 
-Click the "Create Bot" button, located in the upper right hand corner of the page:
+Click the "+ New Bot" button, located in the upper left hand corner of the page:
 
 ![createbot_header_may](/docs/bot-builder/assets/createbot_header_may.png)
 
@@ -26,6 +26,6 @@ One last feature to note is that while creating a new bot, you may set the test 
 
 If you're creating a new partner as well, follow the same steps in the Test Partner bar. Note that these actions will allocate these businesses and partners as the test business and test partner for your bot, as well as create actual businesses and partners.
 
-Click "Ok" to go on to the next page, where you'll be prompted to input the stories and sub-stories that will make up your conversation flow.
+Click "Create Bot" to go on to the next page, where you'll be prompted to input the stories and sub-stories that will make up your conversation flow.
 
 To read more about how to plan for and create stories and sub-stories, go to the next page about [creating a story flow](http://haptik-docs.readthedocs.io/en/latest/bot-builder/creating-story.html) section.

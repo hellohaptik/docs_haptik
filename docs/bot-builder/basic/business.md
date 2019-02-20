@@ -8,7 +8,7 @@ title: Business
 
 A Business is like a contact in your Whatsapp application. An user clicks on the particular contact (Business) and starts the conversation. Businesses are the broad buckets which connect with user’s specific category of intents. Say, an user chooses to interact with the Movies Business. And it has multiple bots from movie ticket booking bot to an offers bot and refunds/cancellations bot.
 
-    *Tip: User always talks to a Business*
+    User always talks to a Business.
 
 A bot always has a Business tagged to it. Several bots can be grouped together into one Business. While most Businesses are comprised of multiple bots, it is also possible for a Business to consist of only a single bot.
 
@@ -38,7 +38,7 @@ Now, you’ll be taken to a page, where you now need to fill information in four
 In this section, fill out information that will help you deploy this Business in the future.
 Business Name: This refers to the overarching topic of its conversational capabilities. For example, a Business Name called Flights would have a Flight booking, Flight cancellation and Flight Offers bots covering broad user intents. 
 
-    *Tip: You can change the Business name once you’ve saved it.*
+    You can change the Business name once you’ve saved it.
 
 - Business Via Name: This is auto-populated. You cannot change the Business Via Name
 
@@ -52,7 +52,7 @@ Business Name: This refers to the overarching topic of its conversational capabi
 
 - Enable OTP Verification: Clicking on this box means users must be OTP verified to enter the channel. This field is applicable for Android/iOS SDKs only
 
-      *Tip: Business | Channel | Via Name are all same*
+      Business | Channel | Via Name are all same.
 
 - Enable Human Assistance: Will make it possible for human chat assistants to intervene when bots in your Business break. This is helpful if you have a bot + human solution or a human-only solution
 
@@ -74,7 +74,7 @@ Bot builders can define Tasks for each Business. Providing this taskbox helps gu
 
 As you can see above, there are 5 Tasks that users can initiate - Play Cricket Quiz, Check Live Score and others below them. Tasks are the activities that the chatbot can assist users with. The tasks associated with each Business can be viewed by the user while they are chatting in that particular Business (ex: refer the above image for Cricket Business). Providing this taskbox helps guide users to initiate conversations that the chatbot can handle most effectively. 
 
-    You can edit a Business tasks from the “Tasks(s)” tab. Click the Tasks section after selecting the relevant Business. 
+    You can edit Business tasks from “Tasks(s)” tab. Click Tasks section after selecting a relevant Business. 
 
 When the editing fields open, you’ll need to fill out the following information:
 
@@ -123,7 +123,7 @@ To customize the settings for each partner the Business is live on, click the dr
 
 - Bot Break Messages: This is the message that will be sent to users when the bot breaks. 
 
-      *Tip: Bot break means when a bot isn’t able to come up with an appropriate response to the  user’s message within a chat flow*
+      Bot break means a bot isn’t able to come up with an appropriate response to the  user’s message.
 
 ### Section 4: Bot Prompt Triggers
 
@@ -141,7 +141,8 @@ For adding a trigger, you click on Create a New Trigger button on the top right-
 
 And then you type in the trigger message that is the text you’d want your user to read with the bot chat icon. This is for the user to get context on what can to expect on interacting with the bot prompt. Since, this is the first step (initiation), testing bot prompts is crucial
 
-    You can also configure rules to your trigger, by adding an URL-specific bot prompt message or adding on page time delay to open the particular bot prompt trigger.
+    You can also configure rules to your trigger, by adding URL-specific bot prompt messages or adding 
+    on page time delay to open the particular bot prompt trigger.
 
 
 

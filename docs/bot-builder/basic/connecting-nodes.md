@@ -46,4 +46,5 @@ When you’ve added an entity to a conversation, you can define the transition f
 ![transition entity value](/docs/bot-builder/assets/transition_entity_values.png)
 
      The entity (or entities) present in the first node will be listed in the left-hand column. In the column 
-     labeled Values, type the value from the entity (or entities) you want to set as the required transition value.
+     labeled Values, type the value from the entity (or entities) you want to set as the required transition 
+     value.

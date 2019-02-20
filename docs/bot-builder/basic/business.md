@@ -1,6 +1,8 @@
-#Business
+---
+title: Business
+---
 
-##Use case
+## Use case
 
 A Business is like a contact in your Whatsapp application. An user clicks on the particular contact (Business) and starts the conversation. Businesses are the broad buckets which connect with user’s specific category of intents. Say, an user chooses to interact with the Movies Business. And it has multiple bots from movie ticket booking bot to an offers bot and refunds/cancellations bot.
 
@@ -13,7 +15,7 @@ A bot always has a Business tagged to it. Several bots can be grouped together i
 ![Business and bots](/docs/bot-builder/assets/1_business_bot_mapping.png)
 
 
-##Business creation
+## Business creation
 
 There are two ways to create a Business. 
 
@@ -31,7 +33,7 @@ Now, you’ll be taken to a page, where you now need to fill information in four
 
 ![General Settings](/docs/bot-builder/assets/3_general_settings.png)
 
-###Section 1: General settings
+### Section 1: General settings
 
 In this section, fill out information that will help you deploy this Business in the future.
 Business Name: This refers to the overarching topic of its conversational capabilities. For example, a Business Name called Flights would have a Flight booking, Flight cancellation and Flight Offers bots covering broad user intents. 
@@ -62,7 +64,7 @@ Fallback Bots: When user input doesn’t match the User Says of any of the activ
 
 User Feedback: Tick the checkbox here to setup collection of user feedback within this business. You can choose to ask feedback once or multiple times (configurable) and also set a delay message (waiting period) after which the bot pushes the feedback message to the user here. You can access this feedback data from our analytics tool (Teja)
 
-###Section 2: Task(s)
+### Section 2: Task(s)
 
 Bot builders can define Tasks for each Business. Providing this taskbox helps guide users to initiate conversations that the chatbot can handle most effectively. 
 
@@ -97,7 +99,7 @@ Location Required: Enabling this box will require users to input their location 
 
 Click Save. You’ve created a task!
 
-###Section 3: Partner specific
+### Section 3: Partner specific
 
 This section is where you can deploy Businesses across a single or multiple Partners, and customize several chat settings for each partner. The section is located third from the top left-hand corner.
 
@@ -123,7 +125,7 @@ Bot Break Messages: This is the message that will be sent to users when the bot 
 
 *Tip: Bot break means when a bot isn’t able to come up with an appropriate response to the  user’s message within a chat flow*
 
-###Section 4: Bot Prompt Triggers
+### Section 4: Bot Prompt Triggers
 
 Bot prompts are pop-ups with content and a click action. It’s used to grab an user’s attention in a non-intrusive way. Please refer the image below where on the Haptik’s website, we try to connect with the user.
 

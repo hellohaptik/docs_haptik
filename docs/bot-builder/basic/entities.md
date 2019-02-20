@@ -37,11 +37,11 @@ The flow of Bot Says responses goes from top to bottom in terms of evaluation. *
 
 After selecting the node on which the entity is to be added, click on bot says or entities:
 
-![entities open node](entities_open_node.png)
+![entities open node](/docs/bot-builder/assets/entities_open_node.png)
 
 Click on Add Entities. One can search for a particular word that needs to be detected, all existing entities that are capable of detecting that word/variant will appear as the search result
 
-![entities add](entities_add.png)
+![entities add](/docs/bot-builder/assets/entities_add.png)
 
 Simply click select on one of the existing entities to add it to your node.
 
@@ -51,15 +51,15 @@ To create a new entity
 
 - Click on Create Entity if an appropriate entity doesn't exist.
 
-  ![entities create click](entities_create_click.png)
+  ![entities create click](/docs/bot-builder/assets/entities_create_click.png)
 
 - Enter the name (must be a lower case, underscrore separated text) and description of an Entity. Try to make the description as relevant as possible, as it will help you better search for your entity in the future.
 
-  ![entities create new](entities_create_new_step1.png)
+  ![entities create new](/docs/bot-builder/assets/entities_create_new_step1.png)
 
 - Enter the details of the data dictionary. You can use ‘tab’ to quicky add words and variants. Once variants for a particular word are entered, press enter to store and to add new words and variants.
 
-  ![entities create new 2](entities_create_new_step2.png)
+  ![entities create new 2](/docs/bot-builder/assets/entities_create_new_step2.png)
 
   **A few technical details**:
 

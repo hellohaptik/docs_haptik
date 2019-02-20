@@ -19,17 +19,17 @@ A bot always has a Business tagged to it. Several bots can be grouped together i
 
 There are two ways to create a Business. 
 
-*The first way is to create a Business at the same time as you create a bot from the bot builder homepage
-*The second way to create a Business is through the Business manager page. To get started creating Businesses from the Business manager, navigate to the Business Manager tab from the Mogambo homepage and click the + New Business button on the page’s top left-hand corner.
+- The first way is to create a Business at the same time as you create a bot from the bot builder homepage
+- The second way to create a Business is through the Business manager page. To get started creating Businesses from the Business manager, navigate to the Business Manager tab from the Mogambo homepage and click the + New Business button on the page’s top left-hand corner.
 
 ![Business and bots](/docs/bot-builder/assets/2_business.png)
 
 Now, you’ll be taken to a page, where you now need to fill information in four main sections: 
 
-*General Settings
-*Task(s)
-*Partner Specific
-*Bot Prompt Triggers
+- General Settings
+- Task(s)
+- Partner Specific
+- Bot Prompt Triggers
 
 ![General Settings](/docs/bot-builder/assets/3_general_settings.png)
 
@@ -40,29 +40,31 @@ Business Name: This refers to the overarching topic of its conversational capabi
 
 *Tip: You can change the Business name once you’ve saved it.*
 
-Business Via Name: This is auto-populated. You cannot change the Business Via Name
-Preview Text: The text that will be shown to users before they’ve started chatting with the bot. This field is applicable for Android/iOS SDKs only                                            
-Order: The order your Business will appear in the partner in which it’s deployed. This field is applicable for Android/iOS SDKs only. In the image below, Reminders is the first Business for Partner Haptik
+- Business Via Name: This is auto-populated. You cannot change the Business Via Name
+
+- Preview Text: The text that will be shown to users before they’ve started chatting with the bot. This field is applicable for Android/iOS SDKs only                                            
+
+- Order: The order your Business will appear in the partner in which it’s deployed. This field is applicable for Android/iOS SDKs only. In the image below, Reminders is the first Business for Partner Haptik
 
 ![Channels List](/docs/bot-builder/assets/4_channel_list_view.jpg)
 
-Active Cities: Businesses can be activated or deactivated for various cities, in case you’d like to create geographically targeted clusters of bots. This field is applicable for Android/iOS SDKs only
+- Active Cities: Businesses can be activated or deactivated for various cities, in case you’d like to create geographically targeted clusters of bots. This field is applicable for Android/iOS SDKs only
 
-Enable OTP Verification: Clicking on this box means users must be OTP verified to enter the channel. This field is applicable for Android/iOS SDKs only
+- Enable OTP Verification: Clicking on this box means users must be OTP verified to enter the channel. This field is applicable for Android/iOS SDKs only
 
 *Tip: Business | Channel | Via Name are all same*
 
-Enable Human Assistance: Will make it possible for human chat assistants to intervene when bots in your Business break. This is helpful if you have a bot + human solution or a human-only solution
+- Enable Human Assistance: Will make it possible for human chat assistants to intervene when bots in your Business break. This is helpful if you have a bot + human solution or a human-only solution
 
-Enable Small Talk: Allows certain common phrases to be understood and replied to by the bot. Say, the user types “Hi” or “Good morning”, when Small Talk is enabled, the bot will greet the user and respond back with an apt greeting (ex: “Good afternoon” detecting time of the day). Know that the Small Talk  module cannot be customized or changed
+- Enable Small Talk: Allows certain common phrases to be understood and replied to by the bot. Say, the user types “Hi” or “Good morning”, when Small Talk is enabled, the bot will greet the user and respond back with an apt greeting (ex: “Good afternoon” detecting time of the day). Know that the Small Talk  module cannot be customized or changed
 
-Active Bots: When an user sends message while conversing with this Business, Active Bots will be the bots whose User Says (combinations of predicted user inputs we add in bot builder) will be searched for a relevant match to the user’s input
+- Active Bots: When an user sends message while conversing with this Business, Active Bots will be the bots whose User Says (combinations of predicted user inputs we add in bot builder) will be searched for a relevant match to the user’s input
 
-Default Bots: When a user adds an input, this is the first bot whose User Says will be searched for a relevant match to the user’s input. Set the default bot to the conversation most relevant to the Business
+- Default Bots: When a user adds an input, this is the first bot whose User Says will be searched for a relevant match to the user’s input. Set the default bot to the conversation most relevant to the Business
 
-Fallback Bots: When user input doesn’t match the User Says of any of the active bots, the Bot Says response will be automatically sent from the fallback bot
+- Fallback Bots: When user input doesn’t match the User Says of any of the active bots, the Bot Says response will be automatically sent from the fallback bot
 
-User Feedback: Tick the checkbox here to setup collection of user feedback within this business. You can choose to ask feedback once or multiple times (configurable) and also set a delay message (waiting period) after which the bot pushes the feedback message to the user here. You can access this feedback data from our analytics tool (Teja)
+- User Feedback: Tick the checkbox here to setup collection of user feedback within this business. You can choose to ask feedback once or multiple times (configurable) and also set a delay message (waiting period) after which the bot pushes the feedback message to the user here. You can access this feedback data from our analytics tool (Teja)
 
 ### Section 2: Task(s)
 
@@ -75,27 +77,25 @@ As you can see above, there are 5 Tasks that users can initiate - Play Cricket Q
 You can edit a Business tasks from the “Tasks(s)” tab. Click the Tasks section after selecting the relevant Business. 
 
 When the editing fields open, you’ll need to fill out the following information:
-Taskbox Header Message: This header will be shown to users to explain how to use the taskbox. In the sample taskbox above, the header is the text above the tasks that says, “Hi! Tap below to get started.” Refer the image to view this header message
+
+**Taskbox Header Message**: This header will be shown to users to explain how to use the taskbox. In the sample taskbox above, the header is the text above the tasks that says, “Hi! Tap below to get started.” Refer the image to view this header message
 
 ![Taskbox Header](/docs/bot-builder/assets/6_taskbox_header_message.jpg)
 
-Create New Task: When you click this box, a new popup will appear, as below:
-Image
+**Create New Task**: When you click this box, a new popup will appear to fill out the following details:
 
-Fill out the following details:
-
-Task Title: Give the task a label. This is what will show up on the actual task button
+- Task Title: Give the task a label. This is what will show up on the actual task button
 User Says: When the user taps on a task, a user says message is generated and sent in tandem. Enter what the user says associated with this task will be in this field
 
-Live Cities: Indicate if this task should be live globally or only in certain geographies. This is applicable for Android/iOS SDKs only
+- Live Cities: Indicate if this task should be live globally or only in certain geographies. This is applicable for Android/iOS SDKs only
 
-Shorthand: This field is to be deprecated. This is applicable for Android/iOS SDKs only
+- Shorthand: This field is to be deprecated. This is applicable for Android/iOS SDKs only
 
-Visible on Fab Button: The fab button is a shortcut visible at a partner level (i.e. where several Businesses are clustered together) that lists key tasks from each Business. Check off this box if the task you’re creating should be added to the fab button. This is applicable for Android/iOS SDKs only
+- Visible on Fab Button: The fab button is a shortcut visible at a partner level (i.e. where several Businesses are clustered together) that lists key tasks from each Business. Check off this box if the task you’re creating should be added to the fab button. This is applicable for Android/iOS SDKs only
 
-Visible on Task Box: Check this box to make this task active on the taskbox associated with this channel. If you want to deactivate a task at any point, uncheck this box, and it will be removed from the taskbox
+- Visible on Task Box: Check this box to make this task active on the taskbox associated with this channel. If you want to deactivate a task at any point, uncheck this box, and it will be removed from the taskbox
 
-Location Required: Enabling this box will require users to input their location to move ahead with the task. This is applicable for Android/iOS SDKs only
+- Location Required: Enabling this box will require users to input their location to move ahead with the task. This is applicable for Android/iOS SDKs only
 
 Click Save. You’ve created a task!
 
@@ -111,17 +111,17 @@ To customize the settings for each partner the Business is live on, click the dr
 
 ![Partner Settings](/docs/bot-builder/assets/9_partner_specific_settings.png)
 
-Upload Business Icon: When there are multiple Businesses clustered together in a partner in a homescreen, you can assign each Business an icon. Upload that icon here
+- Upload Business Icon: When there are multiple Businesses clustered together in a partner in a homescreen, you can assign each Business an icon. Upload that icon here
 
-Make this Business Active/Archived: To make this Business live on a Partner, check off Make this Business Active. If you want to temporarily make the Business inactive on the partner, select Make this Business Archived 
+- Make this Business Active/Archived: To make this Business live on a Partner, check off Make this Business Active. If you want to temporarily make the Business inactive on the partner, select Make this Business Archived 
 
-Make this Business Sponsored: This is an app specific feature, wherein we show a sponsored text below the business icon on the native app screen. It’s how an user will be able to differentiate between sponsored (adverts) and non-sponsored businesses
+- Make this Business Sponsored: This is an app specific feature, wherein we show a sponsored text below the business icon on the native app screen. It’s how an user will be able to differentiate between sponsored (adverts) and non-sponsored businesses
 
-Hide Haptik branding on the SDK: Tick this off to hide the powered by Haptik branding across this business
+- Hide Haptik branding on the SDK: Tick this off to hide the *powered by Haptik* branding across this business
 
-Taskbox: The taskbox that will appear for each Business can be customized to the Business’s various partners. Select Add Tasks to start adding tasks to the Business’s taskbox on a particular partner. A modal with a list of all the tasks associated with the Business will appear; select the tasks you want to make live on a particular partner. Exit the modal
+- Taskbox: The taskbox that will appear for each Business can be customized to the Business’s various partners. Select Add Tasks to start adding tasks to the Business’s taskbox on a particular partner. A modal with a list of all the tasks associated with the Business will appear; select the tasks you want to make live on a particular partner. Exit the modal
 
-Bot Break Messages: This is the message that will be sent to users when the bot breaks. 
+- Bot Break Messages: This is the message that will be sent to users when the bot breaks. 
 
 *Tip: Bot break means when a bot isn’t able to come up with an appropriate response to the  user’s message within a chat flow*
 

@@ -56,7 +56,7 @@ module.exports = () => (
           description:
             'Everything required to get you from beginner to advanced in Bot Building & Development.',
           ctaText: 'Learn More',
-          ctaLink: '/docs_haptik/bot-builder/basic'
+          ctaLink: '/docs_haptik/bot-builder/basic/introduction'
         },
         {
           title: 'Live Chat',

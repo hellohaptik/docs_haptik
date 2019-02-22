@@ -1,0 +1,9 @@
+{
+  "sidebar": {
+    "Introduction": ["index"]
+  },
+  "headerLink": {
+    "doc": "index",
+    "label": "Bot Analytics"
+  }
+}

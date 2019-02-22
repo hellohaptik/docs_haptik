@@ -160,20 +160,19 @@
       }
     },
     "links": {
-      "Getting Started": "Getting Started",
       "Tools": "Tools",
       "Integrations": "Integrations"
     },
     "categories": {
+      "Getting Started": "Getting Started",
+      "Guides": "Guides",
+      "Resources": "Resources",
       "Introduction": "Introduction",
       "The Interface": "The Interface",
       "Custom Tools": "Custom Tools",
       "Docusaurus": "Docusaurus",
       "First Category": "First Category",
       "Second Category": "Second Category",
-      "Getting Started": "Getting Started",
-      "Guides": "Guides",
-      "Resources": "Resources",
       "HSL Elements": "HSL Elements",
       "Tools": "Tools",
       "Integrations": "Integrations"

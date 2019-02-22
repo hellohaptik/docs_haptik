@@ -16,7 +16,7 @@ We recommend starting the chatbot design process by creating an outline and a st
    Mapping the intended outcomes of the conversation will help you design a chatflow that drives the results you desire.
 
 2. **Create a conversation framework**:
-   Using the framework of *stories* and *sub-stories* to divide the entire conversation into smaller chunks associated with specific tasks is a helpful second step.
+   Using the framework of _stories_ and _sub-stories_ to divide the entire conversation into smaller chunks associated with specific tasks is a helpful second step.
 
    > **Stories** are clusters of chat flows that usually align with the overall goals of the chatbot. For example, a trip aggregator website wants to build a chatbot with the goals of helping users:
    >
@@ -51,19 +51,19 @@ We recommend starting the chatbot design process by creating an outline and a st
 
    - **Giving directional cues to the user**: By prompting users to respond in certain ways, bot builders can better anticipate users' inputs and accordingly develop a styled conversation flow that move in a pre-determined direction. For example:
 
-  ![Guided Reply](Intro_Design_GuidedReply.png "Guided Reply") <img src="Guided Reply" width="40%">
+![Guided Reply](assets/Intro_Design_GuidedReply.png 'Guided Reply')
 
-   - **Connect with the user on a personal level**: Incorporating personal touches into your chatbot's script, such as addressing users by name or asking users how they're doing, will keep users more engaged.
+- **Connect with the user on a personal level**: Incorporating personal touches into your chatbot's script, such as addressing users by name or asking users how they're doing, will keep users more engaged.
 
-   ![Connecting on a Personal Level](Intro_Design_PersonalLevel.png "Connecting on a Personal Level")
+![Connecting on a Personal Level](assets/Intro_Design_PersonalLevel.png 'Connecting on a Personal Level')
 
-   - **Don't keep the user waiting**: Certain user requests require some amount of processing time by the chatbot. When you anticipate this happening, create fillers to keep users engaged. Similarly, when your chatbot's conversations with users are just opening, don't immediately dive into a series of questions. Always maintain an equal flow of information so users don't become frustrated or disengaged.
+- **Don't keep the user waiting**: Certain user requests require some amount of processing time by the chatbot. When you anticipate this happening, create fillers to keep users engaged. Similarly, when your chatbot's conversations with users are just opening, don't immediately dive into a series of questions. Always maintain an equal flow of information so users don't become frustrated or disengaged.
 
-   ![Waiting](Intro_Design_Users_Waiting.png "Waiting")
+![Waiting](assets/Intro_Design_Users_Waiting.png 'Waiting')
 
-   - **Add appropriate emotions to your conversation**: Make sure to match the tone of each bot response to the emotions a user expects. For example, if the bot is expressing positive information, such as the completion of a hotel booking to a user, throw in a smiling emoji or fun gif (if your bot has a somewhat casual persona). If the bot is expressing negative news, such as the inability to process a request, express this to the user with a regretful tone.
+- **Add appropriate emotions to your conversation**: Make sure to match the tone of each bot response to the emotions a user expects. For example, if the bot is expressing positive information, such as the completion of a hotel booking to a user, throw in a smiling emoji or fun gif (if your bot has a somewhat casual persona). If the bot is expressing negative news, such as the inability to process a request, express this to the user with a regretful tone.
 
-   ![Appropriate Emotions](Design_Emotions.png "Appropriate Emotions")
+![Appropriate Emotions](assets/Design_Emotions.png 'Appropriate Emotions')
 
 **Getting Started**
 

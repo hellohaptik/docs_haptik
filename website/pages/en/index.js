@@ -94,20 +94,20 @@ module.exports = () => (
           title: 'iOS SDK',
           description: 'A sample application with an integrated SDK & relevant Documentation',
           ctaText: 'Read More',
-          ctaLink: '/HaptikLib-iOS'
+          ctaLink: 'https://hellohaptik.github.io/HaptikLib-iOS'
         },
         {
           title: 'Android SDK',
           description:
             'A sample application with an integrated SDK & relevant Documentation with aar & javadoc',
           ctaText: 'Learn More',
-          ctaLink: '/haptik-android-lib'
+          ctaLink: 'https://hellohaptik.github.io/haptik-android-lib'
         },
         {
           title: 'Web SDK',
           description: 'JavaScript documentation along with examples to begin.',
           ctaText: "Let's Begin",
-          ctaLink: '/javascript_sdk'
+          ctaLink: 'https://hellohaptik.github.io/javascript_sdk/'
         },
         {
           title: 'Webhooks',
@@ -128,11 +128,11 @@ module.exports = () => (
         },
         {
           title: 'Cordova',
-          url: '/docs_haptik/other/cordova'
+          url: 'https://hellohaptik.github.io/javascript_sdk/cordova-integration'
         },
         {
           title: 'React Native',
-          url: '/docs_haptik/other/react-native'
+          url: 'https://hellohaptik.github.io/javascript_sdk/native-support'
         }
       ]}
     />

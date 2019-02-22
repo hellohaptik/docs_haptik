@@ -12,16 +12,16 @@ const baseUrl = '/docs_haptik/';
 const siteConfig = {
   title: 'Haptik Docs',
   tagline: 'Haptik documentation in one place',
-  url: 'https://hellohaptik.github.io/',
+  url: 'https://documentation.haptik.ai',
   baseUrl: baseUrl,
   projectName: 'docs_haptik',
   organizationName: 'hellohaptik',
 
   headerLinks: [
-    {
-      page: '#getting-started',
-      label: 'Getting Started'
-    },
+    // {
+    //   page: '#getting-started',
+    //   label: 'Getting Started'
+    // },
     {
       page: '#tools',
       label: 'Tools'

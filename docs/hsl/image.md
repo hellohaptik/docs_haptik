@@ -29,7 +29,7 @@ width and image url needs to be specified.
 
 #### Sample Output
 
-![hsl_sample_image](hsl_sample_image.png)
+![hsl_sample_image](assets/hsl_sample_image.png)
 
 <table border="1" class="docutils">
    <thead>

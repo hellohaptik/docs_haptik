@@ -41,6 +41,21 @@ function isDirectory(directoryPath, callback) {
   });
 }
 
+function _rimraf(dir_path) {
+  if (fs.existsSync(dir_path)) {
+    fs.readdirSync(dir_path).forEach(function(entry) {
+      var entry_path = path.join(dir_path, entry);
+      if (fs.lstatSync(entry_path).isDirectory()) {
+        _rimraf(entry_path);
+      } else {
+        fs.unlinkSync(entry_path);
+      }
+    });
+    fs.rmdirSync(dir_path);
+    fs.mkdirSync(dir_path);
+  }
+}
+
 function generateSidebar(meta, pathToPrepend) {
   var generatedConfig = {};
   var sidebarConfig = meta.sidebar;
@@ -53,8 +68,8 @@ function generateSidebar(meta, pathToPrepend) {
   return generatedConfig;
 }
 
-function writeToFile(json, filePath, callback) {
-  fs.writeFile(filePath, JSON.stringify(json, null, 2), 'utf8', callback);
+function writeToFile(json, filePath) {
+  fs.writeFileSync(filePath, JSON.stringify(json, null, 2), 'utf8');
 }
 
 function _generate(docsPath, directory) {
@@ -67,7 +82,7 @@ function _generate(docsPath, directory) {
         } else if (file === 'meta.json') {
           readJSON(filePath, function(json) {
             sidebars[directory] = generateSidebar(json, docsPath);
-            writeToFile(sidebars, path.join(__dirname, '../sidebars.json'), function() {});
+            writeToFile(sidebars, path.join(__dirname, '../sidebars.json'));
           });
         }
       });
@@ -92,6 +107,7 @@ function _moveAssets(docsPath) {
 
 function generate() {
   _generate(PATH, 'docs');
+  _rimraf(PATH + '/assets/');
   _moveAssets(PATH);
 }
 

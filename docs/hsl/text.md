@@ -16,7 +16,7 @@ title: Text
 
 #### Sample Output
 
-![hsl_simple_text](hsl_simple_text.png)
+![hsl_simple_text](assets/hsl_simple_text.png)
 
 #### Sample Json for text element with quick replies
 
@@ -60,7 +60,7 @@ title: Text
 
 #### Sample Output
 
-![hsl_sample_text](hsl_sample_text.png)
+![hsl_sample_text](assets/hsl_sample_text.png)
 
 #### Text Element
 

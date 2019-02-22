@@ -48,27 +48,6 @@ function Row({ title, sections = [], others = [], id }) {
 module.exports = () => (
   <div className="home">
     <Row
-      id="getting-started"
-      title="Getting Started"
-      sections={[
-        {
-          title: 'Product Overview',
-          description:
-            'A quickstart guide explaining a high level overview of how all our tools work together',
-          ctaText: 'Read More',
-          ctaLink: '/docs_haptik/product-overview'
-        },
-        {
-          title: 'Technical Overview',
-          description:
-            'A simple guide for executives trying to understand the technology powering Haptik',
-          ctaText: 'Learn More',
-          ctaLink: '/docs_haptik/technical-overview'
-        }
-      ]}
-      others={[]}
-    />
-    <Row
       id="tools"
       title="Tools"
       sections={[
@@ -77,7 +56,7 @@ module.exports = () => (
           description:
             'Everything required to get you from beginner to advanced in Bot Building & Development.',
           ctaText: 'Learn More',
-          ctaLink: '/docs_haptik/bot-builder/basic'
+          ctaLink: '/docs_haptik/bot-builder/basic/introduction'
         },
         {
           title: 'Live Chat',
@@ -115,20 +94,20 @@ module.exports = () => (
           title: 'iOS SDK',
           description: 'A sample application with an integrated SDK & relevant Documentation',
           ctaText: 'Read More',
-          ctaLink: '/HaptikLib-iOS'
+          ctaLink: 'https://hellohaptik.github.io/HaptikLib-iOS'
         },
         {
           title: 'Android SDK',
           description:
             'A sample application with an integrated SDK & relevant Documentation with aar & javadoc',
           ctaText: 'Learn More',
-          ctaLink: '/haptik-android-lib'
+          ctaLink: 'https://hellohaptik.github.io/haptik-android-lib'
         },
         {
           title: 'Web SDK',
           description: 'JavaScript documentation along with examples to begin.',
           ctaText: "Let's Begin",
-          ctaLink: '/javascript_sdk'
+          ctaLink: 'https://hellohaptik.github.io/javascript_sdk/'
         },
         {
           title: 'Webhooks',
@@ -149,11 +128,11 @@ module.exports = () => (
         },
         {
           title: 'Cordova',
-          url: '/docs_haptik/other/cordova'
+          url: 'https://hellohaptik.github.io/javascript_sdk/cordova-integration'
         },
         {
           title: 'React Native',
-          url: '/docs_haptik/other/react-native'
+          url: 'https://hellohaptik.github.io/javascript_sdk/native-support'
         }
       ]}
     />

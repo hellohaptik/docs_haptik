@@ -79,7 +79,7 @@ title: Carousel
 
 #### Sample Output
 
-![hsl_sample_carousel](hsl_sample_carousel.png)
+![hsl_sample_carousel](assets/hsl_sample_carousel.png)
 
 #### Sample Json for mini actionable
 
@@ -117,7 +117,7 @@ title: Carousel
 
 #### Sample Output
 
-![hsl_mini_actionable_carousel](hsl_mini_actionable_carousel.png)
+![hsl_mini_actionable_carousel](assets/hsl_mini_actionable_carousel.png)
 
 #### Carousel
 

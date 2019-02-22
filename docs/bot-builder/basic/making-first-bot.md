@@ -32,4 +32,4 @@ If you're creating a new partner as well, follow the same steps in the Test Part
 
 Click "Create Bot" to go on to the next page, where you'll be prompted to input the stories and sub-stories that will make up your conversation flow.
 
-To read more about how to plan for and create stories and sub-stories, go to the next page about [creating a story flow](https://documentation.haptik.ai/bot-builder/basic/creating-story) section.
+To read more about how to plan for and create stories and sub-stories, go to the next page about [creating a story flow](https://docs.haptik.ai/bot-builder/basic/creating-story) section.

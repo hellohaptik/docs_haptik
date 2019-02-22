@@ -7,7 +7,7 @@
 
 // See https://docusaurus.io/docs/site-config for all the possible
 // site configuration options.
-const baseUrl = '/docs_haptik/';
+const baseUrl = '/';
 
 const siteConfig = {
   title: 'Haptik Docs',
@@ -73,7 +73,8 @@ const siteConfig = {
     myOtherFont: ['Roboto', 'sans-serif']
   },
 
-  gaTrackingId: 'UA-106563119-5'
+  gaTrackingId: 'UA-106563119-5',
+  cname: 'documentation.haptik.ai'
 };
 
 module.exports = siteConfig;

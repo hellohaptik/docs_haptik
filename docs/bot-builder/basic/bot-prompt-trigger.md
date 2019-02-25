@@ -1,4 +1,4 @@
-```
+
 # Bot Prompt Trigger
 
 Bot Prompts provide a way to allow the bot to initiate a conversation with the user. Well designed and well written bot prompts can drastically improve your message sending rate from users and help drive key objectives for customers.
@@ -59,4 +59,3 @@ Each Bot Prompt is provided a unique id. Using this unique id you can measure th
 | BOT_PROMPT_DISMISSED | Business-id    | Trigger-id                    |
 
 Use these 3 metrics to evaluate the effectiveness of your prompt trigger and keep an eye on the click rate, dismiss rate and show rate. It might take you some experimentation to understand what works best for that specific customer and bot.
-```

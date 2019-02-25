@@ -25,11 +25,11 @@ To jump straight to reading about any of the sub-components of nodes, click on t
 
 You will create your nodes inside the Mogambo graph. To make a node, click into the sub-story graph where you'd like your node to appear, and click on the 'Add Node' button on the top left-hand corner of the graph, as depicted here:
 
-![img](/docs/bot-builder/assets/add_node_button.png)
+![img](assets/add_node_button.png)
 
 This will cause a sidebar, as shown below, to appear on the right-hand side of the graph.
 
-![img](/docs/bot-builder/assets/new_node_sidebar.png)
+![img](assets/new_node_sidebar.png)
 
 You'll need to add the following inputs:
 
@@ -42,4 +42,4 @@ Click 'Save' when done.
 
 Post creation of a node, the node will be displayed as depicted below:
 
-![img](/docs/bot-builder/assets/new_node_complete.png)
+![img](assets/new_node_complete.png)

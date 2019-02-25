@@ -1,5 +1,7 @@
 {
-  "sidebar": {
-    "Introduction": ["index"]
-  }
+    "sidebar": {
+        "Introduction": [
+            "index"
+        ]
+    }
 }

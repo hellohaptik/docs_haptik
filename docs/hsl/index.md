@@ -6,9 +6,7 @@ This page will cover how to use HSL-Elements
 
 Haptik defines a superset of UI elements that are available across multiple platforms. These UI elements are then converted to their platform equivalent (js-sdk, android, ios, facebook-messenger, etc..) if they are not available on that specific platform. Eg. Forms are converted to quick replies on the Facebook platform and collected over free form.
 
-.. \_HSL-Elements:
-HSL Elements
-^^^^^^^^^^^^
+## HSL Elements
 
 Haptik is a chatbot platform where we build chat flows for various use cases. Chat flows are nothing but exchange of messages. These messages can range from being plain text messages to complex UI elements like carousel, smart actions etc.
 
@@ -18,13 +16,13 @@ All of Haptik’s frontend properties (Android SDK, iOS SDK, Web SDK) are config
 
 The basic anatomy of an HSL looks something like this.
 
-.. code-block:: javascript
-
+```javascript
 {
-"text": "str",
-"type": "str",
-"data": "dict"
+  "text": "str",
+  "type": "str",
+  "data": "dict"
 }
+```
 
 A HSL Object is made up 3 primary properties: text, type & data.
 
@@ -34,32 +32,33 @@ A HSL Object is made up 3 primary properties: text, type & data.
 
 A quick example for a button smart action.
 
-.. code-block:: javascript
-
-{  
- "text":"Hey there. This is a HSL Button Smart Action with 1 Actionable. Tapping on the actionable will send a message stored in the payload",
-"type":"BUTTON",
-"data":{  
- "items":[
+```javascript
 {
-"actionable_text":"Tap",
-"location_required":"false",
-"uri":"",
-"is_default":0,
-"type":"TEXT_ONLY",
-"payload":{
-"link":"",
-"message":"Hi, I just tapped on an actionable.",
-"gogo_message":""
-},
-"emoji":""
+  "text":"Hey there. This is a HSL Button Smart Action with 1 Actionable. Tapping on the actionable will send a message stored in the payload",
+  "type":"BUTTON",
+  "data":{
+    "items":[
+      {
+        "actionable_text":"Tap",
+        "location_required":"false",
+        "uri":"",
+        "is_default":0,
+        "type":"TEXT_ONLY",
+        "emoji":""
+        "payload":{
+          "link":"",
+          "message":"Hi, I just tapped on an actionable.",
+          "gogo_message":""
+        },
+      }
+    ]
+  }
 }
-]}
-}
+```
 
 The above message will render like this on front end:
 
-.. image:: hsl-button.jpeg
+![HSL Button](assets/hsl-button.jpeg)
 
 The next message was sent by tapping on the **Tap** actionable.
 

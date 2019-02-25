@@ -44,11 +44,11 @@
       "bot-builder/basic/bot-says": {
         "title": "Bot Says"
       },
-      "bot-builder/basic/connecting-nodes": {
-        "title": "Connections"
+      "bot-builder/basic/business": {
+        "title": "Business"
       },
-      "bot-builder/basic/creating-bot": {
-        "title": "Creating a Bot"
+      "bot-builder/basic/connections": {
+        "title": "Connections"
       },
       "bot-builder/basic/creating-nodes": {
         "title": "Creating Nodes"
@@ -56,8 +56,14 @@
       "bot-builder/basic/creating-story": {
         "title": "Creating a Story"
       },
+      "bot-builder/basic/design-guidelines": {
+        "title": "Design Guidelines"
+      },
       "bot-builder/basic/entities": {
         "title": "Entities"
+      },
+      "bot-builder/basic/forms": {
+        "title": "Forms"
       },
       "bot-builder/basic/general-nodes": {
         "title": "General Nodes"
@@ -65,11 +71,20 @@
       "bot-builder/basic/general-responses": {
         "title": "General Responses"
       },
-      "bot-builder/basic/index": {
-        "title": "Getting started"
-      },
       "bot-builder/basic/integrating-custom-code": {
         "title": "Integrating Custom Code"
+      },
+      "bot-builder/basic/introduction": {
+        "title": "Introduction"
+      },
+      "bot-builder/basic/making-first-bot": {
+        "title": "Making Your First Bot"
+      },
+      "bot-builder/basic/multiple-languages": {
+        "title": "Multiple Languages"
+      },
+      "bot-builder/basic/platforms-deployment": {
+        "title": "Supported Platforms"
       },
       "bot-builder/basic/testing-bot": {
         "title": "Testing your bot"
@@ -77,11 +92,11 @@
       "bot-builder/basic/user-says": {
         "title": "User Says"
       },
+      "bot-configuration/bot-hierarchy": {
+        "title": "bot-configuration/bot-hierarchy"
+      },
       "bot-configuration/bot-prompt": {
         "title": "bot-configuration/bot-prompt"
-      },
-      "bot-configuration/business-creation": {
-        "title": "bot-configuration/business-creation"
       },
       "bot-configuration/client-sdk": {
         "title": "bot-configuration/client-sdk"
@@ -145,21 +160,20 @@
       }
     },
     "links": {
-      "Getting Started": "Getting Started",
       "Tools": "Tools",
       "Integrations": "Integrations"
     },
     "categories": {
+      "Getting Started": "Getting Started",
+      "Guides": "Guides",
+      "Resources": "Resources",
       "Introduction": "Introduction",
       "The Interface": "The Interface",
       "Custom Tools": "Custom Tools",
-      "Getting Started": "Getting Started",
-      "HSL": "HSL",
-      "Advanced Concepts": "Advanced Concepts",
+      "HSL Elements": "HSL Elements",
       "Docusaurus": "Docusaurus",
       "First Category": "First Category",
       "Second Category": "Second Category",
-      "HSL Elements": "HSL Elements",
       "Tools": "Tools",
       "Integrations": "Integrations"
     }

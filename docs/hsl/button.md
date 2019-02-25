@@ -29,7 +29,7 @@ title: Button
 
 #### Sample Output
 
-![hsl_sample_button](hsl_sample_button.png)
+![hsl_sample_button](assets/hsl_sample_button.png)
 
 <table border="1" class="docutils">
    <thead>

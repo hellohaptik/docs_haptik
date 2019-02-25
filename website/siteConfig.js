@@ -7,21 +7,21 @@
 
 // See https://docusaurus.io/docs/site-config for all the possible
 // site configuration options.
-const baseUrl = '/docs_haptik/';
+const baseUrl = '/';
 
 const siteConfig = {
   title: 'Haptik Docs',
   tagline: 'Haptik documentation in one place',
-  url: 'https://hellohaptik.github.io/',
+  url: 'https://documentation.haptik.ai',
   baseUrl: baseUrl,
   projectName: 'docs_haptik',
   organizationName: 'hellohaptik',
 
   headerLinks: [
-    {
-      page: '#getting-started',
-      label: 'Getting Started'
-    },
+    // {
+    //   page: '#getting-started',
+    //   label: 'Getting Started'
+    // },
     {
       page: '#tools',
       label: 'Tools'
@@ -73,7 +73,8 @@ const siteConfig = {
     myOtherFont: ['Roboto', 'sans-serif']
   },
 
-  gaTrackingId: 'UA-106563119-5'
+  gaTrackingId: 'UA-106563119-5',
+  cname: 'documentation.haptik.ai'
 };
 
 module.exports = siteConfig;

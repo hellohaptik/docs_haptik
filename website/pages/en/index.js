@@ -56,33 +56,33 @@ module.exports = () => (
           description:
             'Everything required to get you from beginner to advanced in Bot Building & Development.',
           ctaText: 'Learn More',
-          ctaLink: '/docs_haptik/bot-builder/basic'
+          ctaLink: '/bot-builder/basic/introduction'
         },
         {
           title: 'Live Chat',
           description: 'Manage and plan your chat work with these resources & guides',
           ctaText: "Let's Begin",
-          ctaLink: '/docs_haptik/agent-chat'
+          ctaLink: '/agent-chat'
         },
         {
           title: 'Analytics',
           description: 'Learn how to uncover hidden insghts in your chat data & communication',
           ctaText: 'Get Started',
-          ctaLink: '/docs_haptik/bot-analytics'
+          ctaLink: '/bot-analytics'
         }
       ]}
       others={[
         {
           title: 'Security',
-          url: '/docs_haptik/other/security'
+          url: '/other/security'
         },
         {
           title: 'Support',
-          url: '/docs_haptik/other/support'
+          url: '/other/support'
         },
         {
           title: 'SLA',
-          url: '/docs_haptik/other/sla'
+          url: '/other/sla'
         }
       ]}
     />
@@ -94,45 +94,45 @@ module.exports = () => (
           title: 'iOS SDK',
           description: 'A sample application with an integrated SDK & relevant Documentation',
           ctaText: 'Read More',
-          ctaLink: '/HaptikLib-iOS'
+          ctaLink: 'https://hellohaptik.github.io/HaptikLib-iOS'
         },
         {
           title: 'Android SDK',
           description:
             'A sample application with an integrated SDK & relevant Documentation with aar & javadoc',
           ctaText: 'Learn More',
-          ctaLink: '/haptik-android-lib'
+          ctaLink: 'https://hellohaptik.github.io/haptik-android-lib'
         },
         {
           title: 'Web SDK',
           description: 'JavaScript documentation along with examples to begin.',
           ctaText: "Let's Begin",
-          ctaLink: '/javascript_sdk'
+          ctaLink: 'https://hellohaptik.github.io/javascript_sdk/'
         },
         {
           title: 'Webhooks',
           description:
             'A sample application with an integrated SDK & relevant Documentation with aar & javadoc',
           ctaText: 'Get Started',
-          ctaLink: '/docs_haptik/webhooks'
+          ctaLink: '/webhooks'
         }
       ]}
       others={[
         {
           title: 'HSL',
-          url: '/docs_haptik/hsl'
+          url: '/hsl'
         },
         {
           title: 'Facebook',
-          url: '/docs_haptik/other/facebook'
+          url: '/other/facebook'
         },
         {
           title: 'Cordova',
-          url: '/docs_haptik/other/cordova'
+          url: 'https://hellohaptik.github.io/javascript_sdk/cordova-integration'
         },
         {
           title: 'React Native',
-          url: '/docs_haptik/other/react-native'
+          url: 'https://hellohaptik.github.io/javascript_sdk/native-support'
         }
       ]}
     />

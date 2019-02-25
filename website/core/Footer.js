@@ -25,26 +25,26 @@ class Footer extends React.Component {
             />
           </a>
           <div className="footer-columns">
-            {this.renderFooterColumn('Getting Started', [
-              { title: 'Product Overview', url: '/docs_haptik/product-overview' },
-              { title: 'Technical Overview', url: '/docs_haptik/technical-overview' }
-            ])}
+            {/* {this.renderFooterColumn('Getting Started', [
+              { title: 'Product Overview', url: '/product-overview' },
+              { title: 'Technical Overview', url: '/technical-overview' }
+            ])} */}
             {this.renderFooterColumn('Tools', [
-              { title: 'Bot Builder', url: '/docs_haptik/bot-builder/basic' },
-              { title: 'Agent Chat', url: '/docs_haptik/agent-chat' },
-              { title: 'Analytics', url: '/docs_haptik/bot-analytics' }
+              { title: 'Bot Builder', url: '/bot-builder/basic' },
+              { title: 'Agent Chat', url: '/agent-chat' },
+              { title: 'Analytics', url: '/bot-analytics' }
             ])}
             {this.renderFooterColumn('Integrations', [
-              { title: 'iOS SDK', url: '/HaptikLib-iOS' },
-              { title: 'Android SDK', url: '/haptik-android-lib' },
-              { title: 'Web SDK', url: '/javascript_sdk' },
-              { title: 'Webhooks', url: '/docs_haptik/webhooks' },
-              { title: 'HSL', url: '/docs_haptik/hsl' }
+              { title: 'iOS SDK', url: 'https://hellohaptik.github.io/HaptikLib-iOS' },
+              { title: 'Android SDK', url: 'https://hellohaptik.github.io/haptik-android-lib' },
+              { title: 'Web SDK', url: 'https://hellohaptik.github.io/javascript_sdk' },
+              { title: 'Webhooks', url: '/webhooks' },
+              { title: 'HSL', url: '/hsl' }
             ])}
             {this.renderFooterColumn('Misc', [
-              { title: 'Security', url: '/docs_haptik/other/security' },
-              { title: 'Support', url: '/docs_haptik/other/support' },
-              { title: 'SLA', url: '/docs_haptik/other/sla' }
+              { title: 'Security', url: '/other/security' },
+              { title: 'Support', url: '/other/support' },
+              { title: 'SLA', url: '/other/sla' }
             ])}
           </div>
           <div className="footer-copyright" />

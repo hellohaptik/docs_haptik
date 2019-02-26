@@ -27,28 +27,28 @@ You can use the framework of stories and sub-stories as a skeleton for building 
 
 To add a story, just click 'Add a Story' button.
 
-![Add Story](assets/add_story_button.png)
+![Add Story](/docs/bot-builder/assets/add_story_button.png)
 
 Then, enter the name of the story in 'Enter Story Name' and click on the 'OK' button.
 
-![Story Dialogue](assets/input_story_dialog.png)
+![Story Dialogue](/docs/bot-builder/assets/input_story_dialog.png)
 
 Post creation of a story, the story will be displayed as depicted below.
 
-![New Story Complete](assets/new_story_complete.png)
+![New Story Complete](/docs/bot-builder/assets/new_story_complete.png)
 
 #### Creating a Sub-story
 
 To start adding substories, click on the story in which you want to start your work. This will take you to the bot builder graph.
 
-![creating_substory_new](assets/creating_substory_new.png)
+![creating_substory_new](/docs/bot-builder/assets/creating_substory_new.png)
 
 Next, enter the name of the sub-story in 'Sub Story Name' and click on the check mark button.
 
-![labeling_substory_new](assets/labeling_substory_new.png)
+![labeling_substory_new](/docs/bot-builder/assets/labeling_substory_new.png)
 
 Post creation of a sub-story, the sub-story will be displayed as depicted below.
 
-![complete_substory_new](assets/complete_substory_new.png)
+![complete_substory_new](/docs/bot-builder/assets/complete_substory_new.png)
 
 When you are done creating all the sub-stories your conversation requires, click "Add Node" under the substory you want to start building in.

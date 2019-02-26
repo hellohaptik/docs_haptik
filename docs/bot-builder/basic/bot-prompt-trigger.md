@@ -47,15 +47,3 @@ If `No. of Visits is greater than 1` we can use the greeting *Welcome Back* inst
 If `Form Field (PAN No) is empty AND Time on Page is greater than 30 seconds` we can ask the user if he needs help finding his PAN No.
 
 Make sure to understand the needs of users and customer before creating your bot prompts. When multiple bot prompts are present they are evaluated in the order of their priority. The prompt with the highest priority is evaluated first, and if the trigger conditions are met only then the prompt will be shown.
-
-## Measure and Improve
-
-Each Bot Prompt is provided a unique id. Using this unique id you can measure the performance of your trigger with these 3 events on Google Analytics.
-
-| Event Action         | Event Category | Trigger id (Custom Dimension) |
-| -------------------- | -------------- | ----------------------------- |
-| BOT_PROMPT_SHOWED    | Business-id    | Trigger-id                    |
-| BOT_PROMPT_CLICKED   | Business-id    | Trigger-id                    |
-| BOT_PROMPT_DISMISSED | Business-id    | Trigger-id                    |
-
-Use these 3 metrics to evaluate the effectiveness of your prompt trigger and keep an eye on the click rate, dismiss rate and show rate. It might take you some experimentation to understand what works best for that specific customer and bot.

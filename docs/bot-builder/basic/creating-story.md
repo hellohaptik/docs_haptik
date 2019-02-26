@@ -4,7 +4,7 @@ title: Creating a Story
 
 #### Components of a Story Flow
 
-Once you've configured your bot, you'll need to set up the stories and sub-stories that make up your chat flow. We've given a description of these units of organization here, but you can also see the Designing Bots section for more details about the role of stories and sub-stories in the creation of chatflows.
+Once you've configured your bot, you'll need to set up the stories and sub-stories that make up your chat flow. We've given a description of these units in Bot Hierarchy, but you can also see the Designing Bots section for more details about the role of stories and sub-stories in the creation of chatflows.
 
 - **Stories** are chatflows that usually align with the overall goals of the chatbot. For example, a trip aggregator website wants to build a chatbot with the goal of helping users:
 
@@ -25,11 +25,11 @@ You can use the framework of stories and sub-stories as a skeleton for building 
 
 #### Creating a Story
 
-To add a story, just click 'Add a Story' button: and enter the name of the story in 'Enter Story Name' and click on the 'OK' button.
+To add a story, just click 'Add a Story' button.
 
 ![Add Story](assets/add_story_button.png)
 
-Enter the name of the story in 'Enter Story Name' and click on the 'OK' button:
+Then, enter the name of the story in 'Enter Story Name' and click on the 'OK' button.
 
 ![Story Dialogue](assets/input_story_dialog.png)
 
@@ -39,7 +39,7 @@ Post creation of a story, the story will be displayed as depicted below.
 
 #### Creating a Sub-story
 
-To start adding substories, click on the story in which you want to start your work. This will take you to the bot builder graph:
+To start adding substories, click on the story in which you want to start your work. This will take you to the bot builder graph.
 
 ![creating_substory_new](assets/creating_substory_new.png)
 

@@ -2,7 +2,7 @@
 title: Making Your First Bot
 ---
 
-To start building your first bot, log in to the [Haptik platform](https://staging.hellohaptik.com/home/) using credentials that were shared with you via email. Once you've successfully logged in, navigate to the Bot Builder Tool. You will be directed to the bot builder homepage.
+To start building your first bot, log in to the Haptik platform using credentials that were shared with you via email. Once you've successfully logged in, navigate to the Bot Builder Tool. You will be directed to the bot builder homepage.
 
 Click the "*+ New Bot*" button, located in the upper left hand corner of the page:
 
@@ -14,7 +14,9 @@ Now, a pop-up will appear with prompts to configure your bot's basic details:
 
 Fill the bot details according to the instructions given here:
 
-- **Bot Name (in chatflow)**: Give your bot a name. Note that bot names may not be replicated. This is visible on the chat window for the end users.
+- **Bot Name (in chatflow)**: Give your bot a name. Note that bot names may not be replicated. This is visible on the chat window for the end users. 
+
+      Ex: When the user asks "Who are you?". The bot replies with "I'm <Bot Name>". 
 
 - **Bot Name (in backend)**: Only lower case characters, numbers, underscore and spaces are allowed in this field. This name is visible on the backend for bot builders.
 

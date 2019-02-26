@@ -1,17 +1,28 @@
 {
-  "sidebar": {
-    "Introduction": ["index"],
-    "The Interface": [
-      "admin_panel",
-      "athena_assignment",
-      "athena_lhs",
-      "athena_rhs",
-      "athena_smart_actions"
-    ],
-    "Custom Tools": ["custom-tools-intro", "custom-tools-how", "custom-tools-data-communication"]
-  },
-  "headerLink": {
-    "doc": "index",
-    "label": "Agent Chat"
-  }
+	"sidebar": {
+		"Getting Started": [
+			"/introduction",
+			"/for-team-leads",
+      "/for-chat-agents"
+		],
+		"Guides": [
+			"/navigating-interface-shortcuts",
+			"/claiming-and-closing-chats",
+			"/adding-agents-and-permissions",
+			"/adding-custom-tools"
+		],
+		"Resources": [
+			"/bot-agent-handover",
+      "/action-toolbars",
+      "/smart-actions",
+      "/businesses",
+      "/teams",
+			"/analytics"
+		]
+	},
+	"headerLink": {
+		"doc": "/index",
+		"label": "Live agent chat"
+	}
 }
+

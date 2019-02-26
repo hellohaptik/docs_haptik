@@ -8,6 +8,8 @@ On the Business side, any replies could be sent automatically by a Bot (Gogo) or
 
 To keep the transition from Bot to Agent smooth for best user experience, we allow multiple different ways a chat can be transferred from a Bot to a Human.
 
+## Handover rules
+
 ###**1. Human Assistance flag on Business Manager:**
 
 If the human assistance flag is on for a business, a chat will be moved to an agent whenever the bot doesn't understand the user's message. In this case, a bot-break message will not be sent to the user.

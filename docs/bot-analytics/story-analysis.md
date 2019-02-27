@@ -6,7 +6,7 @@ You must already know that *Stories* are sub-components within a created bot. In
 
 ![Teja Menu](/docs/bot-analytics/teja-lhs.png)
 
-Start by selecting a specific business and the custom date range. And then you can see a *data table* and *pie chart*. 
+Start by selecting a specific business and the custom date range. And then you can see a *data table* and *donut chart(s)*. 
 
 ### Data table
 

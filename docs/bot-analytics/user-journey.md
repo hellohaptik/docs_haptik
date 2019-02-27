@@ -23,7 +23,7 @@ The above table also has a *No Nodes* entry when no nodes were detected.
 
     Tip: You can also search for a node from the list. 
 
-#### Node Traversal graph
+### Node Traversal graph
 
 Every node has a user journey. To access, click ‘*View Journey*’ on *Nodes list* to view a node's traversal graph. This clicked node becomes your *Selected node*.
 
@@ -50,9 +50,10 @@ On the graph, your *selected node* is placed at the top. And there will be diver
        Incoming users on Node B: 56
        Dropping users on Node C: 34
         
-Above example helps you understand that the path from node A to node C isn't optimised as only 34 users ended on node C (out of 100 incoming users on node A). 
+Above example helps you understand that the path from node A to node C isn't optimised as only 34 users ended on node C 
+(out of 100 incoming users on node A). 
         
-4. You can click on the *Legend* button at the bottom to understand the different color codes and node shapes. 
+4. You can click on the *Legend* button at the bottom to understand the different color codes and node shapes.
 
        Tip: All start nodes are oval in shape. Other nodes are rectangular shaped and 
        drop-off endpoints are denoted with a dot. 

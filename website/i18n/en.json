@@ -20,6 +20,9 @@
       "agent-chat/athena_smart_actions": {
         "title": "Smart Actions"
       },
+      "agent-chat/claiming-and-closing": {
+        "title": "Claiming & Closing Chats"
+      },
       "agent-chat/custom-tools-data-communication": {
         "title": "Using conversation data"
       },
@@ -170,10 +173,10 @@
       "Introduction": "Introduction",
       "The Interface": "The Interface",
       "Custom Tools": "Custom Tools",
-      "HSL Elements": "HSL Elements",
       "Docusaurus": "Docusaurus",
       "First Category": "First Category",
       "Second Category": "Second Category",
+      "HSL Elements": "HSL Elements",
       "Tools": "Tools",
       "Integrations": "Integrations"
     }

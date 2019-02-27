@@ -35,7 +35,7 @@ class Footer extends React.Component {
               { title: 'Analytics', url: '/bot-analytics' }
             ])}
             {this.renderFooterColumn('Integrations', [
-              { title: 'iOS SDK', url: 'https://hellohaptik.github.io/HaptikLib-iOS' },
+              { title: 'iOS SDK', url: 'https://hellohaptik.github.io/haptik-ios-framework' },
               { title: 'Android SDK', url: 'https://hellohaptik.github.io/haptik-android-lib' },
               { title: 'Web SDK', url: 'https://hellohaptik.github.io/javascript_sdk' },
               { title: 'Webhooks', url: '/webhooks' },

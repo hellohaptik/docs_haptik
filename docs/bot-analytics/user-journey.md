@@ -13,11 +13,11 @@ This section lists all nodes in a table. And for each node, you get 3 metrics:
 2. Outgoing users
 3. Dropping users
 
-        Outgoing users on a node go through to another node 
-        from the selected node. And Dropping Users are the ones 
-        who dropped out of the conversation from the selected node. 
+       Outgoing users on a node go through to another node 
+       from the selected node. And Dropping Users are the ones 
+       who dropped out of the conversation from the selected node. 
 
-![Nodes table](/docs/bot-analytics/assets/node-list.png)
+![Nodes table](/docs/bot-analytics/node-list.png)
 
 The above table also has a *No Nodes* entry when no nodes were detected. 
 
@@ -31,11 +31,11 @@ Every node has a user journey. To access, click ‘*View Journey*’ on *Nodes l
 
 On the graph, your *selected node* is placed at the top. And there will be diverging line(s) i.e. routes from this node to other nodes in the bot. 
 
-![User Journey](/docs/bot-analytics/assets/node-traversal-graph.png)
+![User Journey](/docs/bot-analytics/node-traversal-graph.png)
 
 1. You can zoom in/out to check the flow from your node
 
-        Tip: Thicker the line from one node to another, higher the users traversing on this route.
+       Tip: Thicker the line from one node to another, higher the users traversing on this route.
 
 2. Now, you could hover on any node to get more data:
    - Incoming Count (number of users entering a node)
@@ -45,14 +45,15 @@ On the graph, your *selected node* is placed at the top. And there will be diver
 
 3. Click on any node shape possibly to expand them. This will help you access nodes and node paths in this graph view
  
-        Ex: Node A -> Node  B -> Node C 
-        Incoming users on Node A: 100
-        Incoming users on Node B: 56
-        Dropping users on Node C: 34
+       Ex: Node A -> Node  B -> Node C 
+       Incoming users on Node A: 100
+       Incoming users on Node B: 56
+       Dropping users on Node C: 34
         
 Above example helps you understand that the path from node A to node C isn't optimised as only 34 users ended on node C (out of 100 incoming users on node A). 
         
 4. You can click on the *Legend* button at the bottom to understand the different color codes and node shapes. 
 
-        Tip: All start nodes are oval in shape. Other nodes are rectangular shaped and drop-off endpoints are denoted with a dot. 
+       Tip: All start nodes are oval in shape. Other nodes are rectangular shaped and 
+       drop-off endpoints are denoted with a dot. 
 

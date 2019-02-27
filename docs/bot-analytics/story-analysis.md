@@ -18,10 +18,12 @@ You get a list of all sub-stories. And you can also expand each sub-story to see
 ![Story Analysis](/docs/bot-analytics/data-table.png)
   
 2. Automation
-  *Automation percent is a value that tells you the bot's impact. A high automation percentage implies that the bot is successful in handling most queries by itself. 
+  *Automation percent is a value that tells you the bot's impact. A high automation percentage implies that the bot is successful in handling most queries by itself.* 
+         
     Ex 1: 88% automation
     Ex 2: 24% automation
-  In above Example 2, the bot wasn't successfully able to complete chats on its own i.e. help respond to users queries.*
+    In above Example 2, the bot wasn't successfully able to complete chats on its own 
+    i.e. help respond to users queries.
   
 3. Users
   *The total count of users on a sub-story or node will help you gauge traction and engagement from one node to another.*

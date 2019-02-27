@@ -2,23 +2,23 @@
 title: Making Your First Bot
 ---
 
-To start building your first bot, log in to the Haptik platform using credentials that were shared with you via email. Once you've successfully logged in, navigate to the Bot Builder Tool. You will be directed to the bot builder homepage.
+To start building your first bot, log in to the Haptik platform using credentials that were shared with you via email. Once you've successfully logged in, navigate to the Bot Builder Tool. 
 
 Click the "*+ New Bot*" button, located in the upper left hand corner of the page:
 
-![createbot_header_may](assets/createbot_header_may.png)
+![createbot_header_may](/docs/bot-builder/assets/createbot_header_may.png)
 
 Now, a pop-up will appear with prompts to configure your bot's basic details:
 
-![createbot_popup_may](assets/createbot_popup_may.png)
+![createbot_popup_may](/docs/bot-builder/assets/createbot_popup_may.png)
 
 Fill the bot details according to the instructions given here:
 
-- **Bot Name (in chatflow)**: Give your bot a name. Note that bot names may not be replicated. This is visible on the chat window for the end users. 
+- **Bot Name (in chatflow)**: Give your bot a name. This is visible on the chat window for the end users. 
 
       Ex: When the user asks "Who are you?". The bot replies with "I'm <Bot Name>". 
 
-- **Bot Name (in backend)**: Only lower case characters, numbers, underscore and spaces are allowed in this field. This name is visible on the backend for bot builders.
+- **Bot Name (in backend)**: Only lower case characters, numbers, underscore and spaces are allowed in this field. This name is visible on the backend for bot builders. This field is unique and the bot name you enter here cannot be duplicated for another bot.
 
 - **Bot Description**: Describe thr purpose of your bot. This text here isn't visible anywhere on frontend. Moreover, this text field here works as a reference for everyone.
 

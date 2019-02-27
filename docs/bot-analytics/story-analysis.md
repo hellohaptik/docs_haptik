@@ -22,6 +22,7 @@ You get a list of all sub-stories. And you can also expand each sub-story to see
          
     Ex 1: 88% automation
     Ex 2: 24% automation
+    
     In above Example 2, the bot wasn't successfully able to complete chats on its own 
     i.e. help respond to users queries.
   

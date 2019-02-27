@@ -29,15 +29,19 @@ You get a list of all sub-stories. And you can also expand each sub-story to see
 4. Analyse
   *You can click the "Analyse" icon to land in the Message analysis section. Here, you could dive deeper into the conversations (chat flow).*
 
-### Pie chart
+### Donut charts
 
-These pie chart graphs help visualisation of data on nodes and sub-stories.
+These donut chart graphs help visualisation of data on nodes and sub-stories.
 
 ![Story Analysis](/docs/bot-analytics/pie-charts.png)
 
 **Total Conversations**
 
 Click *View Total Conversations* to get a graphical breakup of conversations per sub-story/node. 
+
+    1. To expand the donut chart for a particular sub-story, click a sub-story area on chart. 
+    2. On click, you get the node-wise donut graph below. This graph changes as you click on 
+    another sub-story on the top donut chart.  
 
 **Total Users**
 

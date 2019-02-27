@@ -34,7 +34,7 @@ You get a list of all sub-stories. And you can also expand each sub-story to see
 
 ### Donut charts
 
-These donut chart graphs help visualisation of data on nodes and sub-stories.
+These donut chart graphs help visualise data on nodes and sub-stories.
 
 ![Story Analysis](/docs/bot-analytics/pie-charts.png)
 

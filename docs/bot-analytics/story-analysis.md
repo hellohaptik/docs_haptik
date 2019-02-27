@@ -4,7 +4,7 @@ title: Story Analysis
 
 You must already know that *Stories* are sub-components within a created bot. In our analytics tool, you can click on "*Story Analysis*" to analyse any bot's performance on a sub-story level.
 
-![Teja Menu](/docs/bot-analytics/assets/teja-lhs.png)
+![Teja Menu](/docs/bot-analytics/teja-lhs.png)
 
 Start by selecting a specific business and the custom date range. And then you can see a *data table* and *pie chart*. 
 
@@ -15,7 +15,7 @@ You get a list of all sub-stories. And you can also expand each sub-story to see
 1. Conversations
   *This column gives you the total number of user conversations on a sub-story or node.*
   
-![Story Analysis](/docs/bot-analytics/assets/data-table.png)
+![Story Analysis](/docs/bot-analytics/data-table.png)
   
 2. Automation
   *Automation percent is a value that tells you the bot's impact. A high automation percentage implies that the bot is successful in handling most queries by itself. 
@@ -33,7 +33,7 @@ You get a list of all sub-stories. And you can also expand each sub-story to see
 
 These pie chart graphs help visualisation of data on nodes and sub-stories.
 
-![Story Analysis](/docs/bot-analytics/assets/pie-charts.png)
+![Story Analysis](/docs/bot-analytics/pie-charts.png)
 
 **Total Conversations**
 

@@ -73,7 +73,7 @@ const siteConfig = {
     myOtherFont: ['Roboto', 'sans-serif']
   },
 
-  gaTrackingId: 'UA-106563119-5',
+  gaTrackingId: 'UA-106563119-6',
   cname: 'docs.haptik.ai'
 };
 

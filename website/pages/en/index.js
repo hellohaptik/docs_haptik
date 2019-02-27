@@ -94,7 +94,7 @@ module.exports = () => (
           title: 'iOS SDK',
           description: 'A sample application with an integrated SDK & relevant Documentation',
           ctaText: 'Read More',
-          ctaLink: 'https://hellohaptik.github.io/HaptikLib-iOS'
+          ctaLink: 'https://hellohaptik.github.io/haptik-ios-framework'
         },
         {
           title: 'Android SDK',

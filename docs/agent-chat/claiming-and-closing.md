@@ -36,6 +36,10 @@ The priority value and presence in ‘Team Queue’ or individual ‘Agent queue
 ## Chat assignment
 The folowing section covers how an agent is assigned a chat on the agent chat tool. 
 
+> Once the chat is assigned to an agent, the user can see the handover to the agent on the SDK UI. <br/><br/>
+![all_custom_tools](assets/sdk_claim.png)
+
+
 ### Base Rules
 - If a conversation is waiting on user or the user does not reply for 8 minutes, we automatically mark that conversation as completed due to user inactivity.
 - A fresh message from an exisiting user would result in a new conversation
@@ -49,7 +53,7 @@ Agent chat tries assigning a chat automatically based on the following parameter
 - If the agent has less than 3 chats (default value), the chat is requested by the agent every 10 seconds (default global value, modification not in dev pipeline)
 - If the agent has more than 3 chats (default value), then the platform doesn't request for more chats till the agent has less than 3 concurrent chats. **
 
-> <b> ** </b> If the agent has some chats in waiting then the chat is put back in the users chat queue
+> <b> ** </b> If the agent has some chats in waiting then the chat is put back in the agent's chat queue
 
 
 ### Manual Chat assignment (Claiming)
@@ -87,10 +91,12 @@ If the chat is assigned to a team, then the chat will first get assigned to the 
 ## Closing & Completing Chats
 When an agent has completed a chat, the chat is marked complete and the chat is closed. This process can happen automatically or the chat agent can manually close a chat.
 
+> Once the chat is marked as complete/closed, the user can see the completion message on the SDK UI. <br/><br/> ![all_custom_tools](assets/sdk_close.png)
+
 ### Automatic Closing of Chats
 Chats are automatically closed if:
-- The agent goes offline or marks him/herself as `away`
-- No messages are exchanged between the agent and the user for **8 minutes**
+- Chats assigned to the agent which are currently in waiting when the agent logs out.
+- No messages are exchanged between the agent and the user and the chat is either with the bot or is in waiting for user state for **8 minutes**
 
 ### Manual Closing of Chats
 Chats can be manually marked complete
@@ -120,8 +126,9 @@ Chats can be manually marked complete
 When an agent marks a chat as complete. The agent can add some *completion notes* in the form of Chat disposition.
 
 ![all_custom_tools](assets/chat_disposition_1.png)
-<br/><br/>
+
 ![all_custom_tools](assets/chat_disposition_2.png)
+<br/><br/>
 
 Custom chat dispositions can be configured in the business settings under the business page. More on that [here]()
 

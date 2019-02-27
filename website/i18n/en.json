@@ -170,15 +170,15 @@
       "Getting Started": "Getting Started",
       "Guides": "Guides",
       "Resources": "Resources",
-      "Introduction": "Introduction",
-      "The Interface": "The Interface",
-      "Custom Tools": "Custom Tools",
       "Docusaurus": "Docusaurus",
       "First Category": "First Category",
       "Second Category": "Second Category",
-      "HSL Elements": "HSL Elements",
+      "Introduction": "Introduction",
+      "The Interface": "The Interface",
+      "Custom Tools": "Custom Tools",
       "Tools": "Tools",
-      "Integrations": "Integrations"
+      "Integrations": "Integrations",
+      "HSL Elements": "HSL Elements"
     }
   },
   "pages-strings": {

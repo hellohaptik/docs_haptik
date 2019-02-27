@@ -2,7 +2,7 @@
 
 Language support on our platform is divided into 2 parts. First, is the SDK side of things and second is the actual Bot Building part.
 
-**Business creation for a chosen language**
+**1. Business creation for a chosen language**
 
 Currently, only WebSDK supports switching between languages. What essentially happens behind the scenes is that we switch to a different Business.
 
@@ -16,7 +16,7 @@ What it means is that internally, the chat collection, messages, etc. everything
     Support for creating Businesses with language support isn't on *mogambo* yet. But it can be 
     easily created from the backend.
 
-**Bot Building**
+**2. Bot Building**
 
 Unlike Business, a single Bot can support multiple languages. This helps in ease of maintenance so that the story/substory/nodes/connections etc. need not be changed twice.
 

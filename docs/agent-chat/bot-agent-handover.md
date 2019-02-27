@@ -31,7 +31,6 @@ A chat has to be sent to a Team only. And any agent who is a part of the team ca
 
 For automated transitions, Business Manager in mogambo has a `Team Manager` section where you can configure the Team that the chat should be moved to.
 
-    Tip: API integration functions can also specify the team 
-    to which a chat is to be sent.
+    Tip: API integration functions can also specify the team to which a chat is to be sent.
 
 ------

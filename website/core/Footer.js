@@ -41,7 +41,7 @@ class Footer extends React.Component {
               { title: 'Webhooks', url: '/webhooks' },
               { title: 'HSL', url: '/hsl' }
             ])}
-            {this.renderFooterColumn('Misc', [
+            {this.renderFooterColumn('Miscellaneous', [
               { title: 'Security', url: '/other/security' },
               { title: 'Support', url: '/other/support' },
               { title: 'SLA', url: '/other/sla' }

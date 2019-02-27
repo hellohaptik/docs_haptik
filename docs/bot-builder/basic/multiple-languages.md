@@ -13,8 +13,8 @@ Currently, only WebSDK supports switching between languages. What essentially ha
 
 What it means is that internally, the chat collection, messages, etc. everything is new and not shared with the data of other language (business). Same applies for Taskbox as well because English and Hindi are 2 different businesses, the tasks in Hindi and tasks in English are completely independent.
 
-    Support for creating Businesses with language support isn't on *mogambo* yet. But it can be 
-    easily created from the backend.
+    Support for creating Businesses with language support isn't on *mogambo* yet. Mogambo
+    changes are a work in progress.
 
 **2. Bot Building**
 
@@ -28,5 +28,5 @@ Depending on the language chosen, the User Says/Bot Says section will fetch the 
 
 You can add more languages in the bot from the same dropdown menu in the header.
 
-    Note: We do not auto-translate the User Responses and Bot Responses currently on Mogambo 
-    (it can be done from the backend)
+    Note: We do not auto-translate the User Responses and Bot Responses currently on Mogambo. 
+    Mogambo changes are work in progress. Please bookmark this page for future updates. 

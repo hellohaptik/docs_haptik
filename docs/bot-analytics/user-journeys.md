@@ -1,5 +1,5 @@
 ---
-title: User Journey
+title: User Journeys
 ---
 
 This section in Teja (our analytics tool) helps you analyze how users move in the chat flow. How you'd want to see funnel performance in a website, you'd want to see the *User Journey* in chatbot conversations. 

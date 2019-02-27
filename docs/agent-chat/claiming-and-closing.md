@@ -91,7 +91,7 @@ If the chat is assigned to a team, then the chat will first get assigned to the 
 ## Closing & Completing Chats
 When an agent has completed a chat, the chat is marked complete and the chat is closed. This process can happen automatically or the chat agent can manually close a chat.
 
-> Once the chat is marked as complete/closed, the user can see the completion message on the SDK UI. <br/><br/> ![all_custom_tools](assets/sdk_close.png)
+> Once the chat is marked as complete/closed, the user can see the completion message on the SDK UI. <br/><br/> ![all_custom_tools](assets/sdk_complete.png)
 
 ### Automatic Closing of Chats
 Chats are automatically closed if:

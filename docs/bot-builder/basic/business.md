@@ -4,7 +4,8 @@ title: Business
 
 ## Use case
 
-    Everytime you create a bot, you have to create a new Business or assign an existing Business to it.
+    Everytime you create a bot, you have to create a new Business or assign an 
+    existing Business to it.
 
 A Business is like a contact in your Whatsapp application. An user clicks on the particular contact (Business) and starts the conversation. Businesses are the broad buckets which connect with user’s specific category of intents. Say, an user chooses to interact with the Movies Business. And it has multiple bots from movie ticket booking bot to an offers bot and refunds/cancellations bot.
 
@@ -71,7 +72,8 @@ Bot builders can define Tasks for each Business. Providing this taskbox helps gu
 
 As you can see below, there are 5 Tasks that users can initiate - Play Cricket Quiz, Check Live Score and others below them. Tasks are the activities that the chatbot can assist users with. The tasks associated with each Business can be viewed by the user while they are chatting in that particular Business (ex: refer the above image for Cricket Business). Providing this taskbox helps guide users to initiate conversations that the chatbot can handle most effectively.
 
-    You can edit Business tasks from “Tasks(s)” tab. Click "Task(s)" section after selecting a relevant Business.
+    You can edit Business tasks from “Tasks(s)” tab. Click "Task(s)" section after 
+    selecting a relevant Business.
 
 When the editing fields open, you’ll need to fill out the following information:
 
@@ -120,7 +122,8 @@ To customize the settings for each partner the Business is live on, click the dr
 
 - Bot Break Messages: This is the message that will be sent to users when the bot breaks.
 
-      Bot break means a bot isn’t able to come up with an appropriate response to the  user’s message.
+      Bot break means a bot isn’t able to come up with an appropriate response 
+      to the  user’s message.
 
 ### Section 4: Bot Prompt Triggers
 
@@ -138,5 +141,5 @@ For adding a trigger, you click on Create a New Trigger button on the top right-
 
 And then you type in the trigger message that is the text you’d want your user to read with the bot chat icon. This is for the user to get context on what can to expect on interacting with the bot prompt. Since, this is the first step (initiation), testing bot prompts is crucial
 
-    You can also configure rules to your trigger, by adding URL-specific bot prompt messages or adding
-    on page time delay to open the particular bot prompt trigger.
+    You can also configure rules to your trigger, by adding URL-specific bot 
+    prompt messages or adding on page time delay to open the particular bot prompt trigger.

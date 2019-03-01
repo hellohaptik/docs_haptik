@@ -17,7 +17,7 @@ This section lists all nodes in a table. And for each node, you get 3 metrics:
        from the selected node. And Dropping Users are the ones 
        who dropped out of the conversation from the selected node. 
 
-![Nodes table](/docs/bot-analytics/node-list.png)
+![Nodes table](/docs/bot-analytics/assets/user-journey-node-list.png)
 
 The above table also has a *No Nodes* entry when no nodes were detected. 
 
@@ -31,7 +31,7 @@ Every node has a user journey. To access, click ‘*View Journey*’ on *Nodes l
 
 On the graph, your *selected node* is placed at the top. And there will be diverging line(s) i.e. routes from this node to other nodes in the bot. 
 
-![User Journey](/docs/bot-analytics/node-traversal-graph.png)
+![User Journey](/docs/bot-analytics/assets/user-journey-node-traversal-graph.png)
 
 1. You can zoom in/out to check the flow from your node
 

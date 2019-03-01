@@ -20,7 +20,7 @@ For a bot that already allows human assistance, set the *Handover Message Flag* 
 
 ### **2. Assigning chat through an Integration function:**
 
-If an integration function exists, then we will transfer the chat to a team as per the function written in code. 
+If an integration function exists, then we will transfer the chat to a team as per the integration function. 
 
 Points 1, 2 above are automated methods for moving a chat from Bot to Agent. 
 

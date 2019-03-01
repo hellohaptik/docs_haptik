@@ -2,84 +2,154 @@
 title: User Says
 ---
 
+# Introduction
+
+By the end of this section, you will learn how you can train a bot to
+understand a User’s intent so that the bot can reply back with an
+appropriate response.
+
 ## What is User Says?
+Whenever a user sends a message, we try to detect the intent of the User
+using various Machine Learning algorithms. One such set of algorithms
+that we use at Haptik is the **Sentence Similarity** module, which is a
+suite of many different ML algorithms that help in finding the right
+node.
 
-**User Says** is where the node identifies that the user has given an input that warrants this particular node's response. The node identifies this by comparing the keywords in the user's input to the keywords in the intent associated with this node. If the keywords are similar enough, users proceed to this particular node.
+![User Responses Overview](assets/user-says/independent_responses.png)
 
-To open up the User Says of a node, click on the User Says tab on the right-hand sidebar as indicated below:
 
-![User Says Tab](assets/user_says_nodes.png)
+For example, if you want a node to get detected when a user types *
+“Status of my complaint”*, then you should add *“Status of my complaint”
+* as a *User Says* on that node.
 
-There are several actions bot builders must take to train their bot to be able to detect when users have given a response associated with the node:
+> **Tip**: Add multiple variations of the same intent to make the Bot
+> smarter and understand more variations.
+    For Example: “Status of my complaint”, “Complaint status”, “I want
+    to know about my complaint” etc.
 
-## 1. Define the user intent:
+Depending on how and when you want your node to get detected, there are
+3 types of User Responses that can be configured on a node:
 
-This is where bot builders construct the set of synonymous responses users are most likely to make in reply to the bot's previous messages. Remember, a user intent is not a single sentene - rather, it is a set of replies with the same meaning, but different wordings. An example of an intent is as follows:
+- Independent Responses
+- Dependent Responses
+- Negative Responses
 
-> **Ex.** A user wants to indicate to the bot that he would like to book a cab. The intent associated with this sentiment is:
->
-> - I want to book a cab
-> - Find me a taxi
-> - I'd like to make a cab booking
-> - And so forth
+## Independent Responses
+If you created a Start Node to get detected at the beginning of a
+conversation, then you would add the corresponding user responses for
+the node under this category.
 
-Whether you add user intents under the _Independent Responses_ tab or the _Responses from XYZ Node_ depends on what sort of connection you want to create between this node and the previous node. See the CONNECTIONS section for more information about this.
+> **Best Practices**: Use independent responses only on a Start Node
 
-- **To add a new intent**, just start typing into the input box situated at the top to add a User Response (see screenshots below). Just hit enter, and it will add it to the list. To save your changes and exit back to the graph click on the Save and Exit button on the top right corner to exit.
+For example, in a lead gen bot as below, we would add the following User
+Responses on the *“Show Services”* node and *“About Demat Account”*.
 
-![user says add intent](assets/user_says_adding_user_response.png)
+Show Services | About Demat Account
+--------------| -------------------
+What products do you offer | What is a demat account
+Can you show me the services you offer | Can you help me with info about demat account
+Show services | Tell me about demat account
 
-- **To modify an intent**, click on the user response you’d like to edit and go ahead and make any changes you’d like to make. To disable a user response, simply click on the cross on the right side of the user response. This will dim the response along with strikethrough. Make sure you hit save to actually save your changes to the Back End.
+> **Tip**: User Responses are case insensitive and ignore punctuations.
+>  So *don’t* and *dONt* are the same.
 
-![user says modify answer](assets/user_says_modifying_user_response.png)
-![user says delete response](assets/user_says_deleting_user_response.png)
+## Dependent Responses
+If you have connecting nodes, and you want the child node to be detected
+**only** when when the user says something on the parent node, then you
+can use Dependent Responses.
 
-## 2. Enable and disable synonyms:
+For example, after asking for Demat Account, if the User wants to know
+how to open an account, you could add "Open Account" as a Dependent User
+Response on "Open Demat Account" with "Demat".
 
-In addition to defining the various manners of wording phrases that would comprise an intent, bot builders must also define sets of synonyms a user could employ in a phrase. By selecting words from phrases in an intent and defining the synonyms that fit, users create synonym clusters that are then enabled for users.
+![Dependent Responses](assets/user-says/dependent_responses.png)
 
-- **To add synonyms,** highlight a word in your input user response that has appeared with a black underline. When you highlight the word, the context menu will open. Select _Search Synonyms_.
 
-![user says context menu](assets/user_says_context_search.png)
+## Negative Responses
+The above sections explained how you can select a node depending on what
+the user said. This section will explain how to filter out nodes
+depending on what the user says.
 
-The synonyms overlay opens:
+For example, if you have the following nodes:
+**Good Service** | **Bad Service**
+-----------------| ---------------
+Your service was *very* good | Your service was **not** good.
+Your service was excellent | Your service was bad
 
-![synonym overlay](assets/user_says_search_synonyms.png)
+Now when a user says "Your service was not good", even though the User's
+intent is very different, because of high similarity of the sentences in
+both the nodes, it is possible that an Incorrect node may get selected.
 
-Select the meaning that best fits the context. Synonyms are now enabled for the word. You can edit the synonyms list at this point. Note that you would be editing the global synonym dictionary. These synonyms would be added for **all** other bots that are using the same word. Please edit this list with extreme caution.
+To avoid this, you can add specific keywords under Negative Responses of
+the node which will filter out the node, if the keyword is a part of the
+user's message.
 
-![edit synonyms](assets/user_says_edit_synonyms.png)
+For Example, in the above scenario, if we add "bad" as a Negative
+Response on the "Good Service" node, then the Good Service node will not
+be considered if the User's message has "bad" in it's sentence.
 
-Close the overlay and hit Save and Exit to save your changes.
 
-- **To delete synonyms**, select a word(s) with a blue underline so that the context menu opens. Click on _View Synonyms_:
+> **Common Mistakes**: Adding similar responses on 2 different nodes
 
-![context view](assets/user_says_context_view.png)
 
-Delete the eneabled checkbox in the left pane to disable the synonym:
+## Synonyms
+Sometimes, you might have nodes which have sentences like “I want to buy
+this product”, “I want to purchase this product” etc. on a Shopping Node.
 
-![disable synonyms](assets/user_says_disable_synonym.png)
+If you notice these responses, the only difference is “buy” and
+“purchase” which are words with the same meanings i.e. they are synonyms.
 
-Hit save to save your changes.
+To simplify and reduce the effort of generating such User Responses
+where a common set of words with same meaning are needed, you can enable
+synonyms for specific words in the bot.
 
-**NOTE!** When you enable/disable synonyms for a particular word in a user response, they’re applied across all user responses in that section. You’ll notice that when you enable synonyms for call for example, all occurences of the word call get underlined blue. (This does not apply for tags)
+> Tip: Black Underline means synonyms are available. Blue underline
+> means Synonyms for that word have been enabled in the Bot.
 
-## 3. Add or remove tags:
+#### View Synonyms
+For words which have Synonyms, you can double click on the word and
+select “View Synonyms” from the menu.
 
-Tags are what we call the keywords that the bot uses to identify the user's intent. Bot builders must manually set tags. Tags are highlighted with a yellow color.
+This will open up a list of all available Synonyms for the word you
+selected.
 
-- **To add a tag,** select an untagged word so that a context menu opens. Select the _add tag_ option. Once you've added the tag, hit save to save your changes.
+![Synonyms](assets/user-says/view_synonyms.gif)
 
-![add tags](assets/user_says_add_tags.png)
+#### Add Synonyms
+After viewing the synonyms, just select the "Enable" checkbox in the
+View Synonyms modal.
 
-- **To remove a tag,** select a tagged word so that a context menu opens. Select the _remove tag_ options. Hit save to save your changes.
+So for our Shopping Node example, if you Double click on “buy” -> Select
+“Add Synonyms” from the context menu -> Enable a specific Synonym
+cluster, then you can avoid adding variations of the word "buy".
 
-![remove tags](assets/user_says_remove_tags.png)
+> **Common Mistake**: Ensure that you add the correct set of synonyms as
+> 1 word can have multiple meanigs. For example, “speaker” could mean
+> the electronic devices as well as a human speaking at an event.
 
-## 4. Train Bot:
+## Spell Correction
+To account for user’s mistakes, the Sentence Similarity module accounts
+for some spelling mistakes that a user could make.
+For example, if a user types “Show me servises” or “Show me serveces”,
+they would still be matched to the “Show Services” node as per the above
+examples.
 
-Every time a bot builder adds new inputs to a node's User Says, they must train the bot. To do this, click on the Train Bot button on the GUI's uppper right hand corner, as shown:
+## Train Bot
+The User Responses added on the node above are processed using the
+Sentence Similarity Module to generate the machine learning models.
+These models are then used on User’s every message to select the node
+which matches the requirements.
 
-![train_bot_button](assets/train_bot_button.png)
+![Train Bot](assets/user-says/train_bot_header.png)
 
-Only when you train the bot will the bot be able to recognize user inputs as triggers to move on to a node - so **don't forget to train the bot!**
+
+To generate these models, you will have to click on Train Bot. This will
+send an email with the result of the training process. It will also
+contain details of any probable errors which could come up because of
+incorrectly entered data.
+
+> **Common Mistakes**: Bot Builders often forget to click on Train Bot
+> after making changes in the User Says of a node.
+
+> **Tips**: Check email for conflicting responses or other errors in the
+> User Responses in the bot.

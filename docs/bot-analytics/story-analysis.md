@@ -36,7 +36,7 @@ You get a list of all sub-stories. And you can also expand each sub-story to see
 
 These donut chart graphs help visualise data on nodes and sub-stories.
 
-![Story Analysis](/docs/bot-analytics/assets/story-analysis-pie-charts.png)
+![Donut Chart](/docs/bot-analytics/assets/story-analysis-donut-chart.png)
 
 **Total Conversations**
 

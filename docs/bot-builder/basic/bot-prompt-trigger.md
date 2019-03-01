@@ -1,5 +1,7 @@
 
-# Bot Prompt Trigger
+---
+title: Bot Prompt Trigger
+---
 
 Bot Prompts provide a way to allow the bot to initiate a conversation with the user. Well designed and well written bot prompts can drastically improve your message sending rate from users and help drive key objectives for customers.
 

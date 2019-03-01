@@ -1,4 +1,7 @@
-## Bot Hierarchy
+
+---
+title: Bot Hierarchy
+---
 
 ### 1. Outside a Bot 
 

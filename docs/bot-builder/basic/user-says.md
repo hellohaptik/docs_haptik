@@ -9,10 +9,11 @@ understand a User’s intent so that the bot can reply back with an
 appropriate response.
 
 ## What is User Says?
-Whenever a user sends a message, we try to detect the intent of the User
-using various Machine Learning algorithms. One such set of algorithms
-that we use at Haptik is the **Sentence Similarity** module, which is a
-suite of many different ML algorithms that help in finding the right
+Whenever a user sends a message, we try to understand what the User is
+trying to say using various Machine Learning algorithms and find the
+corresponding node on mogambo. One such set of algorithms that we use at
+Haptik is the **Sentence Similarity** module, which is a suite of many
+different ML algorithms that help in finding the right
 node.
 
 ![User Responses Overview](assets/user-says/independent_responses.png)
@@ -142,11 +143,14 @@ which matches the requirements.
 
 ![Train Bot](assets/user-says/train_bot_header.png)
 
-
 To generate these models, you will have to click on Train Bot. This will
 send an email with the result of the training process. It will also
 contain details of any probable errors which could come up because of
 incorrectly entered data.
+
+For example, if you add very similar sentences in two different nodes,
+then the resulting email will show details about the conflicting nodes
+and responses.
 
 > **Common Mistakes**: Bot Builders often forget to click on Train Bot
 > after making changes in the User Says of a node.

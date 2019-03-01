@@ -1,5 +1,5 @@
 ---
-title: Handling Multiple Languages
+title: Multiple Languages
 ---
 
 Language support on our platform is divided into 2 parts. First, is the SDK side of things and second is the actual Bot Building part.

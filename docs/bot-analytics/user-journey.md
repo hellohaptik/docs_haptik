@@ -8,7 +8,7 @@ Assuming you've selected a particular business/channel and custom date range, yo
 
 ### Nodes list
 
-This section lists all nodes in a table. And for each node, you get 3 metrics:
+This section lists nodes in a table. And for each node, you get 3 metrics:
 1. Incoming users
 2. Outgoing users
 3. Dropping users
@@ -19,9 +19,7 @@ This section lists all nodes in a table. And for each node, you get 3 metrics:
 
 ![Nodes table](/docs/bot-analytics/assets/user-journey-node-list.png)
 
-The above table also has a *No Nodes* entry when no nodes were detected. 
-
-    Tip: You can also search for a node from the list. 
+    Tip: You can also key in the node name on search bar to find a node.
 
 ### Node Traversal graph
 

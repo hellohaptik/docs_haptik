@@ -26,7 +26,7 @@ Points 1, 2 above are automated methods for moving a chat from Bot to Agent.
 
     Tip: In these automated methods, you cannot assign directly to an agent. We send it to a team first.
 
-### **3. Claiming a chat from Athena**
+### **3. Claiming a chat from Athena:**
 
 You can send a chat to any specific agent using the *Reassign* Chat button from Athena (Live agent chat tool). 
 

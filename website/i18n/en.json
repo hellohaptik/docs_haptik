@@ -113,6 +113,18 @@
       "bot-configuration/webhooks": {
         "title": "bot-configuration/webhooks"
       },
+      "contributing/faq": {
+        "title": "FAQs"
+      },
+      "contributing/index": {
+        "title": "Overview"
+      },
+      "contributing/making-changes": {
+        "title": "Making Changes to the Documentation"
+      },
+      "contributing/styleguide": {
+        "title": "Styleguide"
+      },
       "hsl/button": {
         "title": "Button"
       },
@@ -173,12 +185,13 @@
       "Docusaurus": "Docusaurus",
       "First Category": "First Category",
       "Second Category": "Second Category",
+      "Contributing": "Contributing",
+      "HSL Elements": "HSL Elements",
       "Introduction": "Introduction",
-      "The Interface": "The Interface",
-      "Custom Tools": "Custom Tools",
       "Tools": "Tools",
       "Integrations": "Integrations",
-      "HSL Elements": "HSL Elements"
+      "The Interface": "The Interface",
+      "Custom Tools": "Custom Tools"
     }
   },
   "pages-strings": {

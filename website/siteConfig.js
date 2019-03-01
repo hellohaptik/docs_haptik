@@ -12,7 +12,7 @@ const baseUrl = '/';
 const siteConfig = {
   title: 'Haptik Docs',
   tagline: 'Haptik documentation in one place',
-  url: 'https://documentation.haptik.ai',
+  url: 'https://docs.haptik.ai',
   baseUrl: baseUrl,
   projectName: 'docs_haptik',
   organizationName: 'hellohaptik',
@@ -73,8 +73,8 @@ const siteConfig = {
     myOtherFont: ['Roboto', 'sans-serif']
   },
 
-  gaTrackingId: 'UA-106563119-5',
-  cname: 'documentation.haptik.ai'
+  gaTrackingId: 'UA-106563119-6',
+  cname: 'docs.haptik.ai'
 };
 
 module.exports = siteConfig;

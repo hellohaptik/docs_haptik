@@ -24,5 +24,24 @@
 		"doc": "index",
 		"label": "Live agent chat"
 	}
+=======
+  "sidebar": {
+    "Introduction": ["index"],
+    "The Interface": [
+      "admin_panel",
+      "athena_assignment",
+      "athena_lhs",
+      "athena_rhs",
+      "athena_smart_actions"
+    ],
+    "Guides": [
+      "claiming-and-closing"
+    ],
+    "Custom Tools": ["custom-tools-intro", "custom-tools-how", "custom-tools-data-communication"]
+  },
+  "headerLink": {
+    "doc": "index",
+    "label": "Agent Chat"
+  }
 }
 

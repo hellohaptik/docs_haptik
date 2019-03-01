@@ -35,13 +35,13 @@ class Footer extends React.Component {
               { title: 'Analytics', url: '/bot-analytics' }
             ])}
             {this.renderFooterColumn('Integrations', [
-              { title: 'iOS SDK', url: 'https://hellohaptik.github.io/HaptikLib-iOS' },
+              { title: 'iOS SDK', url: 'https://hellohaptik.github.io/haptik-ios-framework' },
               { title: 'Android SDK', url: 'https://hellohaptik.github.io/haptik-android-lib' },
               { title: 'Web SDK', url: 'https://hellohaptik.github.io/javascript_sdk' },
               { title: 'Webhooks', url: '/webhooks' },
               { title: 'HSL', url: '/hsl' }
             ])}
-            {this.renderFooterColumn('Misc', [
+            {this.renderFooterColumn('Miscellaneous', [
               { title: 'Security', url: '/other/security' },
               { title: 'Support', url: '/other/support' },
               { title: 'SLA', url: '/other/sla' }

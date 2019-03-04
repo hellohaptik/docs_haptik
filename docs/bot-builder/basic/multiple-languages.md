@@ -8,15 +8,15 @@ Language support on our platform is divided into 2 parts. First, is the SDK side
 
 Currently, only WebSDK supports switching between languages. What essentially happens behind the scenes is that we switch to a different Business.
 
-    For example, to build a multi language Bot, we create 2 Businesses (english and hindi). 
-    When an SDK gets deployed, it opens up with 1 default business (let's say English bot). 
-    And as the user taps on *Change Language* in the SDK, the underlying business is changed 
-    from English to Hindi.
+    For example, to build a multi language Bot, we create 2 Businesses (english and 
+    hindi). When an SDK gets deployed, it opens up with 1 default business (let's 
+    say English bot). And as the user taps on *Change Language* in the SDK, the 
+    underlying business is changed from English to Hindi.
 
 What it means is that internally, the chat collection, messages, etc. everything is new and not shared with the data of other language (business). Same applies for Taskbox as well because English and Hindi are 2 different businesses, the tasks in Hindi and tasks in English are completely independent.
 
-    Support for creating Businesses with language support isn't on *mogambo* yet. Mogambo
-    changes are a work in progress.
+    Support for creating Businesses with language support isn't on *mogambo* yet. 
+    Mogambo changes are a work in progress.
 
 **2. Bot Building**
 
@@ -26,9 +26,10 @@ When a single bot supports multiple languages, the only things that change when 
 
 Depending on the language chosen, the User Says/Bot Says section will fetch the correct data as per that language for the node. 
 
-![Language selection on Mogambo](/docs/bot-builder/assets/language-change.gif)
+![Language selection on Mogambo](/docs/bot-builder/assets/language-change.png)
 
 You can add more languages in the bot from the same dropdown menu in the header.
 
-    Note: We do not auto-translate the User Responses and Bot Responses currently on Mogambo. 
-    Mogambo changes are work in progress. Please bookmark this page for future updates. 
+    Note: We do not auto-translate the User Responses and Bot Responses currently 
+    on Mogambo. Mogambo changes are work in progress. Please bookmark this page 
+    for future updates. 

@@ -21,12 +21,12 @@ Android SDK and Related Documentation - https://drive.google.com/drive/folders/0
 
 ## iOS SDK
 
-A sample application with an integrated SDK can be found on the github repo: https://github.com/hellohaptik/HaptikLib-iOS
+A sample application with an integrated SDK can be found on the github repo: https://github.com/hellohaptik/haptik-ios-framework
 
 The relevant documentation is within the repository itself at the links below:
 
-Integration Guide - https://github.com/hellohaptik/HaptikLib-iOS/blob/master/Integration%20Guide.md
-Feature Guides - https://github.com/hellohaptik/HaptikLib-iOS/tree/master/Feature%20Guides
+Integration Guide - https://github.com/hellohaptik/haptik-ios-framework/blob/master/Integration%20Guide.md
+Feature Guides - https://github.com/hellohaptik/haptik-ios-framework/tree/master/Feature%20Guides
 
 
 

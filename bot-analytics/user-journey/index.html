@@ -1,0 +1,109 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>User Journey · Haptik Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;This section in Teja (our analytics tool) helps you analyze how users move in the chat flow. How you&#x27;d want to see funnel performance in a website, you&#x27;d want to see the &lt;em&gt;User Journey&lt;/em&gt; in chatbot conversations.&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="User Journey · Haptik Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.haptik.ai/index.html"/><meta property="og:description" content="&lt;p&gt;This section in Teja (our analytics tool) helps you analyze how users move in the chat flow. How you&#x27;d want to see funnel performance in a website, you&#x27;d want to see the &lt;em&gt;User Journey&lt;/em&gt; in chatbot conversations.&lt;/p&gt;
+"/><meta property="og:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.haptik.ai/img/image_0.png"/><link rel="shortcut icon" href="/img/image_0.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-106563119-6', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="/js/index.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/image_0.png" alt="Haptik Docs"/><h2 class="headerTitleWithLogo">Haptik Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/#tools" target="_self">Tools</a></li><li class=""><a href="/#integrations" target="_self">Integrations</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Resources</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Resources</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-analytics/story-analysis">Story Analysis</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/bot-analytics/user-journey">User Journey</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">User Journey</h1></header><article><div><span><p>This section in Teja (our analytics tool) helps you analyze how users move in the chat flow. How you'd want to see funnel performance in a website, you'd want to see the <em>User Journey</em> in chatbot conversations.</p>
+<p>Assuming you've selected a particular business/channel and custom date range, you'd see a table view, listing nodes.</p>
+<h3><a class="anchor" aria-hidden="true" id="nodes-list"></a><a href="#nodes-list" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Nodes list</h3>
+<p>This section lists nodes in a table. And for each node, you get 3 metrics:</p>
+<ol>
+<li><p>Incoming users</p></li>
+<li><p>Outgoing users</p></li>
+<li><p>Dropping users</p>
+<pre><code class="hljs">Outgoing users on a node go through to another node 
+from the selected node. And Dropping Users are the ones 
+who dropped out of the conversation from the selected node. 
+</code></pre></li>
+</ol>
+<p><img src="/docs/bot-analytics/assets/user-journey-node-list.png" alt="Nodes table"></p>
+<pre><code class="hljs">Tip: You can also key in the node name on search bar to find a node.
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="node-traversal-graph"></a><a href="#node-traversal-graph" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Node Traversal graph</h3>
+<p>Every node has a user journey. To access, click ‘<em>View Journey</em>’ on <em>Nodes list</em> to view a node's traversal graph. This clicked node becomes your <em>Selected node</em>.</p>
+<pre><code class="hljs">Tip: Please note that there can be multiple ways for an user to reach any node.  
+</code></pre>
+<p>On the graph, your <em>selected node</em> is placed at the top. And there will be diverging line(s) i.e. routes from this node to other nodes in the bot.</p>
+<p><img src="/docs/bot-analytics/assets/user-journey-node-traversal-graph.png" alt="User Journey"></p>
+<ol>
+<li><p>You can zoom in/out to check the flow from your node</p>
+<pre><code class="hljs">Tip: Thicker the line from one node to another, higher the users traversing on this route.
+</code></pre></li>
+<li><p>Now, you could hover on any node to get more data:</p>
+<ul>
+<li>Incoming Count (number of users entering a node)</li>
+<li>Incoming % (percentage of users entering a node from your <em>selected node</em>)</li>
+<li>Break count (instances when the bot wasn't able to respond to the user)</li>
+<li>Automation (percentage of instances from total, when bot was able to handle user queries)</li>
+</ul></li>
+<li><p>Click on any node shape possibly to expand them. This will help you access nodes and node paths in this graph view</p>
+<pre><code class="hljs">Ex: Node A -&gt; Node  B -&gt; Node C 
+Incoming users on Node A: 100
+Incoming users on Node B: 56
+Dropping users on Node C: 34
+</code></pre></li>
+</ol>
+<p>Above example helps you understand that the path from node A to node C isn't optimised as only 34 users ended on node C
+(out of 100 incoming users on node A).</p>
+<ol start="4">
+<li><p>You can click on the <em>Legend</em> button at the bottom to understand the different color codes and node shapes.</p>
+<pre><code class="hljs">Tip: All start nodes are oval in shape. Other nodes are rectangular shaped and 
+drop-off endpoints are denoted with a dot. 
+</code></pre></li>
+</ol>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-3-4</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/bot-analytics/user-ratings"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/bot-analytics/sample-metrics"><span>Next</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="/bot-builder/basic" class="footer-column-link">Bot Builder</a><a href="/agent-chat" class="footer-column-link">Agent Chat</a><a href="/bot-analytics" class="footer-column-link">Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://hellohaptik.github.io/haptik-ios-framework" class="footer-column-link">iOS SDK</a><a href="https://hellohaptik.github.io/haptik-android-lib" class="footer-column-link">Android SDK</a><a href="https://hellohaptik.github.io/javascript_sdk" class="footer-column-link">Web SDK</a><a href="/webhooks" class="footer-column-link">Webhooks</a><a href="/hsl" class="footer-column-link">HSL</a></div></div><div class="footer-column"><div class="footer-column-title">Miscellaneous</div><div class="footer-column-links"><a href="/other/security" class="footer-column-link">Security</a><a href="/other/support" class="footer-column-link">Support</a><a href="/other/sla" class="footer-column-link">SLA</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2019 Haptik Inc.</section></footer></div></body></html>

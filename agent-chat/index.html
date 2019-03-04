@@ -8,58 +8,8 @@
 
               ga('create', 'UA-106563119-6', 'auto');
               ga('send', 'pageview');
-            </script><script type="text/javascript" src="/js/index.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/image_0.png" alt="Haptik Docs"/><h2 class="headerTitleWithLogo">Haptik Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/#tools" target="_self">Tools</a></li><li class=""><a href="/#integrations" target="_self">Integrations</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Introduction</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Introduction</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/agent-chat/">Getting started</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">The Interface</h3><ul class=""><li class="navListItem"><a class="navItem" href="/agent-chat/admin_panel">Admin Panel</a></li><li class="navListItem"><a class="navItem" href="/agent-chat/athena_assignment">Chat Assignment</a></li><li class="navListItem"><a class="navItem" href="/agent-chat/athena_lhs">The left hand side</a></li><li class="navListItem"><a class="navItem" href="/agent-chat/athena_rhs">The right hand side</a></li><li class="navListItem"><a class="navItem" href="/agent-chat/athena_smart_actions">Smart Actions</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Guides</h3><ul class=""><li class="navListItem"><a class="navItem" href="/agent-chat/claiming-and-closing">Claiming &amp; Closing Chats</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Custom Tools</h3><ul class=""><li class="navListItem"><a class="navItem" href="/agent-chat/custom-tools-intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/agent-chat/custom-tools-how">Adding your own custom tool</a></li><li class="navListItem"><a class="navItem" href="/agent-chat/custom-tools-data-communication">Using conversation data</a></li></ul></div></div></section></div><script>
-            var coll = document.getElementsByClassName('collapsible');
-            var checkActiveCategory = true;
-            for (var i = 0; i < coll.length; i++) {
-              var links = coll[i].nextElementSibling.getElementsByTagName('*');
-              if (checkActiveCategory){
-                for (var j = 0; j < links.length; j++) {
-                  if (links[j].classList.contains('navListItemActive')){
-                    coll[i].nextElementSibling.classList.toggle('hide');
-                    coll[i].childNodes[1].classList.toggle('rotate');
-                    checkActiveCategory = false;
-                    break;
-                  }
-                }
-              }
-
-              coll[i].addEventListener('click', function() {
-                var arrow = this.childNodes[1];
-                arrow.classList.toggle('rotate');
-                var content = this.nextElementSibling;
-                content.classList.toggle('hide');
-              });
-            }
-
-            document.addEventListener('DOMContentLoaded', function() {
-              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
-              createToggler('#tocToggler', 'body', 'tocActive');
-
-              const headings = document.querySelector('.toc-headings');
-              headings && headings.addEventListener('click', function(event) {
-                if (event.target.tagName === 'A') {
-                  document.body.classList.remove('tocActive');
-                }
-              }, false);
-
-              function createToggler(togglerSelector, targetSelector, className) {
-                var toggler = document.querySelector(togglerSelector);
-                var target = document.querySelector(targetSelector);
-
-                if (!toggler) {
-                  return;
-                }
-
-                toggler.onclick = function(event) {
-                  event.preventDefault();
-
-                  target.classList.toggle(className);
-                };
-              }
-            });
-        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Getting started</h1></header><article><div><span><p>Chat Solutions at Haptik can be powered entirely by Artificial Intelligence(AI) or by a combination of AI and Chat Agents.</p>
+            </script><script type="text/javascript" src="/js/index.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/image_0.png" alt="Haptik Docs"/><h2 class="headerTitleWithLogo">Haptik Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/#tools" target="_self">Tools</a></li><li class=""><a href="/#integrations" target="_self">Integrations</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Getting started</h1></header><article><div><span><p>Chat Solutions at Haptik can be powered entirely by Artificial Intelligence(AI) or by a combination of AI and Chat Agents.</p>
 <p>Chat flows are built by the Haptik product team to best cater to the needs of the client and the solution being deployed. Chat flows are designed to guide the user through a specific problem and are the most important factor to ensure the best experience for all users.</p>
 <p>In case a bot is unable to respond to a query which is outside the chat flow, the chat is handed over to a chat agent. Agents receive and send message over an web based tool called Athena. Athena has the same capabilities of the AI along with additional functionality for smooth operational deployment such as monitoring, review, assignment of chats by managers etc.</p>
 <p>Assistants can be assigned 3 chats at a time. Below is the image for the same.</p>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-1-31</em></div><div class="docs-prevnext"><a class="docs-next button" href="/agent-chat/admin_panel"><span>Admin Panel</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="/bot-builder/basic" class="footer-column-link">Bot Builder</a><a href="/agent-chat" class="footer-column-link">Agent Chat</a><a href="/bot-analytics" class="footer-column-link">Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://hellohaptik.github.io/haptik-ios-framework" class="footer-column-link">iOS SDK</a><a href="https://hellohaptik.github.io/haptik-android-lib" class="footer-column-link">Android SDK</a><a href="https://hellohaptik.github.io/javascript_sdk" class="footer-column-link">Web SDK</a><a href="/webhooks" class="footer-column-link">Webhooks</a><a href="/hsl" class="footer-column-link">HSL</a></div></div><div class="footer-column"><div class="footer-column-title">Miscellaneous</div><div class="footer-column-links"><a href="/other/security" class="footer-column-link">Security</a><a href="/other/support" class="footer-column-link">Support</a><a href="/other/sla" class="footer-column-link">SLA</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2019 Haptik Inc.</section></footer></div></body></html>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-3-4</em></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="/bot-builder/basic" class="footer-column-link">Bot Builder</a><a href="/agent-chat" class="footer-column-link">Agent Chat</a><a href="/bot-analytics" class="footer-column-link">Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://hellohaptik.github.io/haptik-ios-framework" class="footer-column-link">iOS SDK</a><a href="https://hellohaptik.github.io/haptik-android-lib" class="footer-column-link">Android SDK</a><a href="https://hellohaptik.github.io/javascript_sdk" class="footer-column-link">Web SDK</a><a href="/webhooks" class="footer-column-link">Webhooks</a><a href="/hsl" class="footer-column-link">HSL</a></div></div><div class="footer-column"><div class="footer-column-title">Miscellaneous</div><div class="footer-column-links"><a href="/other/security" class="footer-column-link">Security</a><a href="/other/support" class="footer-column-link">Support</a><a href="/other/sla" class="footer-column-link">SLA</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2019 Haptik Inc.</section></footer></div></body></html>

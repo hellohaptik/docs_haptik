@@ -20,6 +20,9 @@
       "agent-chat/athena_smart_actions": {
         "title": "Smart Actions"
       },
+      "agent-chat/bot-agent-handover": {
+        "title": "Bot agent handover"
+      },
       "agent-chat/claiming-and-closing": {
         "title": "Claiming & Closing Chats"
       },
@@ -38,11 +41,26 @@
       "bot-analytics/index": {
         "title": "Getting started"
       },
+      "bot-analytics/story-analysis": {
+        "title": "Story Analysis"
+      },
+      "bot-analytics/user-journey": {
+        "title": "User Journey"
+      },
+      "bot-analytics/user-ratings": {
+        "title": "User Ratings"
+      },
       "bot-builder/advanced/demo-links": {
         "title": "Demo Page"
       },
       "bot-builder/advanced/integrating-webviews-into-sdk": {
         "title": "Integrating WebViews"
+      },
+      "bot-builder/basic/bot-hierarchy": {
+        "title": "Bot Hierarchy"
+      },
+      "bot-builder/basic/bot-prompt-trigger": {
+        "title": "Bot Prompt Trigger"
       },
       "bot-builder/basic/bot-says": {
         "title": "Bot Says"
@@ -87,7 +105,7 @@
         "title": "Multiple Languages"
       },
       "bot-builder/basic/platforms-deployment": {
-        "title": "Supported Platforms"
+        "title": "Platforms Deployment"
       },
       "bot-builder/basic/testing-bot": {
         "title": "Testing your bot"
@@ -173,12 +191,10 @@
       "Docusaurus": "Docusaurus",
       "First Category": "First Category",
       "Second Category": "Second Category",
-      "Introduction": "Introduction",
-      "The Interface": "The Interface",
-      "Custom Tools": "Custom Tools",
+      "HSL Elements": "HSL Elements",
       "Tools": "Tools",
       "Integrations": "Integrations",
-      "HSL Elements": "HSL Elements"
+      "Introduction": "Introduction"
     }
   },
   "pages-strings": {

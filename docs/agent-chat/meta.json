@@ -1,27 +1,27 @@
 {
     "sidebar": {
-	  "Getting Started": [
-			"agent-chat/introduction",
-			"agent-chat/for-team-leads",
-      "agent-chat/for-chat-agents"
-		],
-		"Guides": [
-			"agent-chat/navigating-interface-shortcuts",
-			"agent-chat/claiming-and-closing-chats",
-			"agent-chat/adding-agents-and-permissions",
-			"agent-chat/adding-custom-tools"
-		],
-		"Resources": [
-			"agent-chat/bot-agent-handover",
-      "agent-chat/action-toolbars",
-      "agent-chat/smart-actions",
-      "agent-chat/businesses",
-      "agent-chat/teams",
-      "agent-chat/analytics"
-		]
-	},
-	"headerLink": {
-		"doc": "agent-chat/index",
-		"label": "Live agent chat"
-	}
+        "Getting Started": [
+            "index",
+            "for-team-leads",
+            "for-chat-agents"
+        ],
+        "Guides": [
+            "navigating-interface-shortcuts",
+            "claiming-and-closing-chats",
+            "adding-agents-and-permissions",
+            "adding-custom-tools"
+        ],
+        "Resources": [
+            "bot-agent-handover",
+            "action-toolbars",
+            "smart-actions",
+            "businesses",
+            "teams",
+            "analytics"
+        ]
+    },
+    "headerLink": {
+        "doc": "index",
+        "label": "Live agent chat"
+    }
 }

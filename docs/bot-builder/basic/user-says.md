@@ -5,7 +5,7 @@ title: User Says
 # Introduction
 
 By the end of this section, you will learn how you can train a bot to
-understand a User’s intent so that the bot can reply back with an
+understand a User’s message so that the bot can reply back with an
 appropriate response.
 
 ## What is User Says?
@@ -23,7 +23,7 @@ For example, if you want a node to get detected when a user types *
 “Status of my complaint”*, then you should add *“Status of my complaint”
 * as a *User Says* on that node.
 
-> **Tip**: Add multiple variations of the same intent to make the Bot
+> **Tip**: Add multiple variations of the response to make the Bot
 > smarter and understand more variations.
     For Example: “Status of my complaint”, “Complaint status”, “I want
     to know about my complaint” etc.
@@ -77,8 +77,8 @@ For example, if you have the following nodes:
 Your service was *very* good | Your service was **not** good.
 Your service was excellent | Your service was bad
 
-Now when a user says "Your service was not good", even though the User's
-intent is very different, because of high similarity of the sentences in
+Now when a user says "Your service was not good", even though the User meant
+something very different, because of high similarity of the sentences in
 both the nodes, it is possible that an Incorrect node may get selected.
 
 To avoid this, you can add specific keywords under Negative Responses of

@@ -26,7 +26,7 @@ When a single bot supports multiple languages, the only things that change when 
 
 Depending on the language chosen, the User Says/Bot Says section will fetch the correct data as per that language for the node. 
 
-![Language selection on Mogambo](/docs/bot-builder/assets/language-change.png)
+![Language selection on Mogambo](/assets/language-change.png)
 
 You can add more languages in the bot from the same dropdown menu in the header.
 

@@ -6,11 +6,11 @@ To start building your first bot, log in to the Haptik platform using credential
 
 Click the "*+ New Bot*" button, located in the upper left hand corner of the page:
 
-![createbot_header_may](assets/createbot_header_may.png)
+![createbot_header_may](/assets/createbot_header_may.png)
 
 Now, a pop-up will appear with prompts to configure your bot's basic details:
 
-![createbot_popup_may](assets/createbot_popup_may.png)
+![createbot_popup_may](/assets/createbot_popup_may.png)
 
 Fill the bot details according to the instructions given here:
 
@@ -28,7 +28,7 @@ Fill the bot details according to the instructions given here:
 
 One last feature to note is that while creating a new bot, you may set the test business and test partner from a list of pre-existing businesses and partners that you have access to, or you can create one here. To create a new business from the bot creation flow, first name your bot. Then navigate to the Test Business bar and type the name of the business you want to create. Select the bar below that appears that prompts you to create new business, as shown below:
 
-![create_new_business](assets/create_new_business.png)
+![create_new_business](/assets/create_new_business.png)
 
 If you're creating a new partner as well, follow the same steps in the Test Partner bar. Note that these actions will allocate these businesses and partners as the test business and test partner for your bot, as well as create actual businesses and partners.
 

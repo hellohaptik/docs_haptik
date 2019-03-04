@@ -1,5 +1,5 @@
 ---
-title: Supported Platforms
+title: Platforms Deployment
 ---
 
 ## How to Deploy the Bot to External Platforms?

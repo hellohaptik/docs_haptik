@@ -1,5 +1,5 @@
 ---
-title: Claiming and Closing chats
+title: Claiming and Closing chats 
 ---
 
 ## Introduction

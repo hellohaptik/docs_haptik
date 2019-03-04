@@ -8,7 +8,7 @@ Once you've completed the User Says component of a node, you'll need to define t
 
 To get started with adding some Bot Says responses, navigate to a specific node and select the 2nd tab *Bot Says*. (See Screenshot Below)
 
-![image](../assets/bot-says/initial_response.gif)
+![image](assets/bot-says/initial_response.gif)
 
 Once you arrive at the Bot Says page, you'll see the above interface. This interface might differ slightly depending on the state of the node and the responses added to it.
 
@@ -34,7 +34,7 @@ If you don't know what Entities are, but want to know how to use them, you shoul
 In the below example, the Bot will start with the response from "Initial Bot Reply".
 Then, it will start looking for the Entities in the Entity Response. If the bot knows the Entity's value, then it will skip the response and move to the next Entity Response or Final Responses.
 
-![image](../assets/bot-says/entity_response.gif)
+![image](assets/bot-says/entity_response.gif)
 
 > Note: You can set an Entity Response only for Mandatory Entities. To know more about the difference between Mandatory and Non-Mandatory entities, refer [this](../entities).
 
@@ -45,7 +45,7 @@ Once all the entities have been collected, the bot finally replies with the resp
 
 In cases where the node is a Start node or an Intermediate node,the Final Bot Reply section is useful to send a response to direct the user to the remaining flow.
 
-![image](../assets/bot-says/final_bot_reply.gif)
+![image](assets/bot-says/final_bot_reply.gif)
 
 
 ## Follow Up Message
@@ -54,7 +54,7 @@ If the user is inactive for a specific set time, then the the bot replies with t
 
 > Tip: Use Follow Up messages to collect feedback or increase engagement on your bot.
 
-![bot says delay](../assets/bot-says/follow_up.gif)
+![bot says delay](assets/bot-says/follow_up.gif)
 
 <hr>
 
@@ -63,7 +63,7 @@ Each of the above four types of response (Initial Bot Reply, Entities, Final Bot
 ### Variants
 A bot response can consist of multiple variants. Each variant is an independent message. All variants should imply the same meaning. The bot chooses a variant randomly and avoids being repetitive even when asked the same question.
 
-![image](../assets/bot-says/variants.gif)
+![image](assets/bot-says/variants.gif)
 
 
 ### Message:
@@ -71,13 +71,13 @@ A variant can consist of multiple message bubbles. This is where all the HSL mes
 
 ### Quick Replies
 In addition to providing the bot response, a bot builder will also want to include prompts for how to reply back to the bot again. We call these pre-defined prompts Quick Replies. For example, for a yes or no question, you can add "yes" and "no" as quick replies so that when the bot addresses the question to the user, the user is automatically buttons saying "yes" and "no," which they can select from quickly.
-![image](../assets/bot-says/message_qrs.gif)
+![image](assets/bot-says/message_qrs.gif)
 
 ## ProTips
 You can create personalised responses by using specific tags in the bot response.
 To view the ProTips, you can follow the steps below.
 
-![image](../assets/bot-says/protip.gif)
+![image](assets/bot-says/protip.gif)
 
 There are 2 categories of ProTips available:
 1. Customizing message appearance:

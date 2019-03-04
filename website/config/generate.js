@@ -52,7 +52,6 @@ function _rimraf(dir_path) {
       }
     });
     fs.rmdirSync(dir_path);
-    fs.mkdirSync(dir_path);
   }
 }
 
@@ -91,6 +90,11 @@ function _generate(docsPath, directory) {
 }
 
 function _moveAssets(docsPath) {
+  const dir_path = docsPath + '/assets/';
+  if (!fs.existsSync(dir_path)) {
+    fs.mkdirSync(dir_path);
+  }
+
   readDirectory(docsPath, function(files) {
     files.forEach(function(file, index) {
       var filePath = path.join(docsPath, file);

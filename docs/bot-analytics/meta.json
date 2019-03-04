@@ -1,24 +1,24 @@
 {
   "sidebar": {
     "Getting Started": [
-      "introduction",
-      "for-analysts",
-      "core-concepts"
+      "bot-analytics/introduction",
+      "bot-analytics/for-analysts",
+      "bot-analytics/core-concepts"
     ],
     "Guides": [
-      "basic-analysis",
-      "using-message-analysis"
+      "bot-analytics/basic-analysis",
+      "bot-analytics/using-message-analysis"
     ],
     "Resources": [
-      "story-analysis",
-      "user-reviews",
-      "user-ratings",
-      "user-journey",
-      "sample-metrics"
+      "bot-analytics/story-analysis",
+      "bot-analytics/user-reviews",
+      "bot-analytics/user-ratings",
+      "bot-analytics/user-journey",
+      "bot-analytics/sample-metrics"
     ]
   },
   "headerLink": {
-    "doc": "index",
+    "doc": "bot-analytics/index",
     "label": "Bot Analytics"
   }
 }

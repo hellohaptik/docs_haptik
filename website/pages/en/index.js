@@ -93,20 +93,20 @@ module.exports = () => (
         {
           title: 'iOS SDK',
           description: 'A sample application with an integrated SDK & relevant Documentation',
-          ctaText: 'Read More',
+          ctaText: 'Get Started',
           ctaLink: 'https://hellohaptik.github.io/haptik-ios-framework'
         },
         {
           title: 'Android SDK',
           description:
             'A sample application with an integrated SDK & relevant Documentation with aar & javadoc',
-          ctaText: 'Learn More',
+          ctaText: 'Get Started',
           ctaLink: 'https://hellohaptik.github.io/haptik-android-lib'
         },
         {
           title: 'Web SDK',
           description: 'JavaScript documentation along with examples to begin.',
-          ctaText: "Let's Begin",
+          ctaText: 'Get Started',
           ctaLink: 'https://hellohaptik.github.io/javascript_sdk/'
         },
         {

@@ -1,19 +1,19 @@
 {
   "sidebar": {
     "Getting Started": [
-      "index",
-      "analysts",
+      "introduction",
+      "for-analysts",
       "core-concepts"
     ],
     "Guides": [
       "basic-analysis",
-      "message-analysis"
+      "using-message-analysis"
     ],
     "Resources": [
       "story-analysis",
       "user-reviews",
       "user-ratings",
-      "user-journeys",
+      "user-journey",
       "sample-metrics"
     ]
   },

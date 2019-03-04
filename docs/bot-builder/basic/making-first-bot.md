@@ -6,11 +6,11 @@ To start building your first bot, log in to the Haptik platform using credential
 
 Click the "*+ New Bot*" button, located in the upper left hand corner of the page:
 
-![createbot_header_may](/docs/bot-builder/assets/createbot_header_may.png)
+![createbot_header_may](assets/createbot_header_may.png)
 
 Now, a pop-up will appear with prompts to configure your bot's basic details:
 
-![createbot_popup_may](/docs/bot-builder/assets/createbot_popup_may.png)
+![createbot_popup_may](assets/createbot_popup_may.png)
 
 Fill the bot details according to the instructions given here:
 

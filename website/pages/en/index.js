@@ -73,10 +73,6 @@ module.exports = () => (
       ]}
       others={[
         {
-          title: 'Contributing',
-          url: '/contributing/index'
-        },
-        {
           title: 'Security',
           url: '/other/security'
         },

@@ -1,11 +1,18 @@
+const MAP = {
+  'haptik-ios-framework': 'iOS',
+  'haptik-android-lib': 'Android'
+};
+
 function getTitle() {
   const pathArray = window.location.pathname.split('/');
-  const path = pathArray[pathArray.indexOf('docs_haptik') + 1];
+  const path = pathArray[1];
 
-  return path
-    .split('-')
-    .map(word => word[0].toUpperCase() + word.slice(1))
-    .join(' ');
+  return MAP[path]
+    ? MAP[path]
+    : path
+        .split('-')
+        .map(word => word[0].toUpperCase() + word.slice(1))
+        .join(' ');
 }
 
 document.addEventListener('DOMContentLoaded', function() {

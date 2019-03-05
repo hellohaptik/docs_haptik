@@ -15,7 +15,7 @@ The Haptik bot builder platform has a three-tiered organizational system to help
 
 The following image might help you envision this organizational system: 
 
-![bot_org_structure](/docs/bot-builder/assets/partner_business_bot.png)
+![bot_org_structure](/assets/partner_business_bot.png)
 
 Below are two examples of Haptik's two main partners that serve two different functions:
 

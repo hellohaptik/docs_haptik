@@ -4,68 +4,91 @@ title: Bot Says
 
 ## What is Bot Says?
 
-Once you've completed the User Says component of a node, you'll need to define the node's **Bot Says** component. Bot Says is where nodes store the replies that are deployed in response to what the user has input, as detected by User Says. Bot Says also houses **variants** and **entities**.
+Once you've completed the User Says component of a node, you'll need to define the node's **Bot Says** component. Bot Says is where a Node stores the replies that are sent in response to the user's message.
 
-To get started with adding some Bot Says responses, navigate to a specific node and click on either Bot Says or Entities. (See Screenshot Below)
+To get started with adding some Bot Says responses, navigate to a specific node and select the 2nd tab *Bot Says*. (See Screenshot Below)
 
-![adding bot says](assets/bot_says_adding-bot-says.png)
+![image](assets/bot-says/initial_response.gif)
 
-Once you arrive at the Bot Says page, you'll see the following interface. This interface might differ slightly depending on the state of the node and the responses added to it.
-
-![bot says screen](assets/bot_says_bot-says-screen.png)
+Once you arrive at the Bot Says page, you'll see the above interface. This interface might differ slightly depending on the state of the node and the responses added to it.
 
 Bot Says supports four types of responses:
 
 ## Initial Bot Says
 
-The initial bot reply. It's the first message that the bot sends out when the node is activated. (**Note** that this is not active when there is only one entity present. For multiple entities, consider it to be the opening message. For more on the possible entity scenarios that can arise, see "Scenarios" section below. The initial bot says looks like:
+The initial bot reply is the first message that the bot sends out when the node is detected.
 
-![bot says card](assets/bot_says_bot-says-card.png)
-![bot says card expanded](assets/bot_says_bot-says-card-expanded.png)
+Note that this is not active when there is only one entity present. When you have multiple entities, consider the Initial Bot Reply to be the opening message for the node.
 
-## Entities
 
-If you want to gather any sort of user input that isn't confined to a very limited set of possible responses, you'll need to create an entity. An entity represents the set of values from which a user’s response must come in order for that user to progress onwards in a conversation. Depending on the context of the conversation, the required response can either be a single value or limited group of specific values from the entity, or any value from within the entity. Entities are always added in connection with the bot’s query the required response is associated with, so that they may detect whether the required response was given. Entities look like:
+## Entity Responses
+You can extract specific details from a user's message using an Entity.
+An Entity Response is the response that the bot will send when it doesn't know the Entity's value.
 
-![bot says entity](assets/bot_says_entity.png)
+For example, if you want to collect the User's name, you could ask *"What is your name?"* in the Entity Response. Now If the User replies back with *"My name is Bruce Wayne"*, then "Bruce Wayne" will be extracted as an entity by our NER. These entities can then be used to create personalized and advanced flows for every user and hence, build better bots.
 
-> For more information about entities, read on to the next page.
+If you don't know what Entities are, but want to know how to use them, you should start from here.
+
+> Tip: You can create your own Entities or use System Entities provided as a part of the Haptik Platform.
+
+In the below example, the Bot will start with the response from "Initial Bot Reply".
+Then, it will start looking for the Entities in the Entity Response. If the bot knows the Entity's value, then it will skip the response and move to the next Entity Response or Final Responses.
+
+![image](assets/bot-says/entity_response.gif)
+
+> Note: You can set an Entity Response only for Mandatory Entities. To know more about the difference between Mandatory and Non-Mandatory entities, refer [this](../entities).
+
 
 ## Final Bot Reply
 
-Once all the entities/data has been collected, the bot finally replies with the final bot reply. Think of it as the closing message for the node.
+Once all the entities have been collected, the bot finally replies with the responses from this section. This is usally a the closing message for that node.
 
-![bot says final reply](assets/bot_says_final-reply.png)
+In cases where the node is a Start node or an Intermediate node,the Final Bot Reply section is useful to send a response to direct the user to the remaining flow.
 
-## Delay Message
+![image](assets/bot-says/final_bot_reply.gif)
 
-If the user is inactive for a specific set time, then the the bot replies with the Delay message. The delay can be set using the slider, it can be set between 20 seconds and 20 minutes.
 
-![bot says delay](assets/bot_says_delay.png)
+## Follow Up Message
 
-Each of the above four types of response (initial bot reply, entities, final bot reply, and delay messages) are composed of **variants,** **chat bubbles**, **quick replies**, and **mandatory words**:
+If the user is inactive for a specific set time, then the the bot replies with the Follow Up message. The delay interval for this message can be set using the slider, and can be set between 20 seconds to 20 minutes.
 
-- **Variants**: A bot response can consist of multiple variants. Each variant is an independent message. All variants should imply the same meaning. The bot rotates through them randomly with different users. This way, the bot avoids being repetitive even when asked the same question.
+> Tip: Use Follow Up messages to collect feedback or increase engagement on your bot.
 
-![bot says variants](assets/bot_says_variants.png)
+![bot says delay](assets/bot-says/follow_up.gif)
 
-- **Chat Bubble** variant can consist of multiple message bubbles. This is where all the messages go. Each message is a separate _text_ from the bot. Instead of putting a long message into just one message bubble. It is good practice to split it into multiple bubbles to make it feel more like a natural conversation.
+<hr>
 
-![bot says message bubble](assets/bot_says_message-bubble.png)
+Each of the above four types of response (Initial Bot Reply, Entities, Final Bot Reply, and Delay Message) are composed of **Variants**, **Message** and **Quick replies**.
 
-- Each of theses message bubbles can contain either text or HSL.There’s an indicator at the corner of each bubble to indicate if the HSL (if entered) is valid or not.
-  - **Green** - Valid
-  - **Red** - Invalid
-  - **Yellow** - Deprecated
-  - In addition the message can also contain certain _variables_ or dynamic values. Click on the protip for an always up to date list.
+### Variants
+A bot response can consist of multiple variants. Each variant is an independent message. All variants should imply the same meaning. The bot chooses a variant randomly and avoids being repetitive even when asked the same question.
 
-![pro tip](assets/bot_says_protip.png)
+![image](assets/bot-says/variants.gif)
 
-- **Quick Replies:** are often cases where, in addition to providing the bot response, a bot builder will also want to include prompts for how to reply back to the bot again. We call these pre-defined prompts Quick Replies. For example, for a yes or no question, you can add "yes" and "no" as quick replies so that when the bot addresses the question to the user, the user is automatically buttons saying "yes" and "no," which they can select from quickly.
 
-- Bot builders can add **Mandatory Words** that function as tags. These specific responses will only match if the tags match exactly. Use these tags when:
+### Message:
+A variant can consist of multiple message bubbles. This is where all the HSL messages go. Each message is a separate _text_ from the bot. Instead of putting a long message into just one message bubble. It is good practice to split it into multiple You can use the HSL builder to simplify creation of complicated responses like Carousel, Images and Buttons.
 
-  - You have multiple nodes that are similar to each other
-  - You want to trigger a node only if a specific keyword exists
+### Quick Replies
+In addition to providing the bot response, a bot builder will also want to include prompts for how to reply back to the bot again. We call these pre-defined prompts Quick Replies. For example, for a yes or no question, you can add "yes" and "no" as quick replies so that when the bot addresses the question to the user, the user is automatically buttons saying "yes" and "no," which they can select from quickly.
+![image](assets/bot-says/message_qrs.gif)
 
-  Note that bot responses are _not_ required to involve mandatory words. These tags are circumstance specific.
+## ProTips
+You can create personalised responses by using specific tags in the bot response.
+To view the ProTips, you can follow the steps below.
+
+![image](assets/bot-says/protip.gif)
+
+There are 2 categories of ProTips available:
+1. Customizing message appearance:
+   - You can customize the appearance of the response by using combinations of **\***, **~**, **`** and **_** to make the text Bold, Strikethrough, Underline, and Italic respectively.
+2. Customizing message content
+   - You can customize the message response using keywords like %name, %timeofday, %date etc.
+
+For ex, if you use "*Good %timeofday*", the bot will reply back Good Morning/Afternoon/Evening depending on the time of the day.
+
+If you scroll to the bottom, you will see **%entitytag_<entity_name>**. You can use this tag to use the value of any entity collected in the Bot Flow.
+
+For example: If you collect the user's name using the Person Name entity and you want to use it in a follow up message, you can use the above feature.
+
+So a response like "*Hey %entitytag_person_name! Nice talking to you.*" would become "Hey Bruce Wayne! Nice talking to you".

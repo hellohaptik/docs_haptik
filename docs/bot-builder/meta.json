@@ -12,7 +12,7 @@
 			"basic/platforms-deployment"
 		],
 		"Resources": [
-			"basic/heirarchy",
+			"basic/bot-hierarchy",
 			"basic/business",
 			"basic/creating-bot",
 			"basic/creating-story",
@@ -26,9 +26,10 @@
 			"basic/connections",
 			"basic/integrations",
 			"basic/entities",
-			"basic/bot-prompt",
+			"basic/bot-prompt-trigger",
 			"basic/general-responses",
-			"basic/forms"
+			"basic/forms",
+			"basic/platforms-deployment"
 		]
 	},
 	"headerLink": {

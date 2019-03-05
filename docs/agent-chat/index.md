@@ -4,10 +4,12 @@ title: Introduction
 
 Chat Solutions at Haptik can be powered entirely by Artificial Intelligence (AI) or by a combination of AI and Chat Agents. We have built a tool for it, called "**Athena**". This tool is created for operationally managing user chats.
 
-## How to use Athena?
-To use this tool, users are to be created with a specific set of permissions. The user can then start monitoring and taking daily chats on their business. *Athena* has the same capabilities of the AI along with additional functionality for smooth operational deployment such as chat flow analytics, review, assignment of chats by managers etc.
+## Using Athena
 
-## How Athena works?
+To use this tool, users are to be created with a specific set of permissions. The users can then start monitoring and taking daily chats on their business. *Athena* has the same capabilities of the AI along with additional functionalities such as chat flow analytics, assignment of chats by managers etc.
+
+## Main components
+
 There are three sections in *Athena*. 
 
 1. My Chats

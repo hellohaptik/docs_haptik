@@ -240,3 +240,12 @@ from sys import argv
 
 3. Code Upload
    ^^^^^^^^^^^^^^ -_Coming Soon_
+   
+   
+ ## Best Practices
+
+**1. Assign Chat to Agent** In some scenarios, where integration response fails or some unknown exception occurs then instead of sending bot break message we can also directly assign chat to an agent for better user experience.
+
+**2.Key Value Store** - is used to configure the bot response which comes from the backend. Integration functions return response from the backend and to make that response editable by anyone(instead of hardcode) developer use **key or some unique ID** at the backend to send that response and message copy corresponding to that **key or ID** can be changed from the Key Value store(With GUI) by anyone who has access to the content store.
+
+**3. Advanced UI Elements**  - Haptik defines a superset of UI elements that are available across multiple platforms. These UI elements are then converted to their platform equivalent (js-sdk, android, ios, facebook-messenger, etc..) if they are not available on that specific platform. Eg. Forms are converted to quick replies on the Facebook platform and collected over free form. [for more detail read here](https://docs.haptik.ai/hsl/)

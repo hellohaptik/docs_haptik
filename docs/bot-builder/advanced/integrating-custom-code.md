@@ -161,7 +161,7 @@ The HTTP request will contain an X-Hub-Signature header which contains the SHA1 
 
 .. code-block:: python
 
-3. ```python
+```python
    # !/usr/bin/env python
    
    """

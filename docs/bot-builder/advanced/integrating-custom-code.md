@@ -178,10 +178,10 @@ The HTTP request will contain an X-Hub-Signature header which contains the SHA1 
    from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
    
    class WebhookServer(BaseHTTPRequestHandler):
-   def \_set_headers(self, status_code, content_type):
-   self.send_response(status_code)
-   self.send_header('Content-type', content_type)
-   self.end_headers()
+       def _set_headers(self, status_code, content_type):
+           self.send_response(status_code)
+           self.send_header('Content-type', content_type)
+           self.end_headers()
    
       def do_GET(self):
           self._set_headers(status_code=200, content_type='text/html')
@@ -244,6 +244,7 @@ The HTTP request will contain an X-Hub-Signature header which contains the SHA1 
 ## 3. Code Upload
 
 -*Coming Soon*
+
 
 
 ## Best Practices

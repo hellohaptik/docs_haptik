@@ -113,7 +113,7 @@ To connect your bot to KooKoo, head to the Platform Settings screen in Bot Build
 5) Set `max_record_time` of your choice. Max Record Time is the max time in seconds for which KooKoo should keep recording a message before sending to the backend. For example, if you set `max_record_time` to 10 seconds, KooKoo will truncate any message the user says to only 10 seconds before sending to the backend irrespective of the `silence_period` elasping. It is recommended to keep `max_record_time` to 10 seconds.
 6) Turn the switch on to activate the connection.
 
-![KooKoo Bot Builder Settings](assets/platform_deployments_kookoo_Bot Builder_settings.png)
+![KooKoo Bot Builder Settings](assets/platform_deployments_kookoo_bot_builder_settings.png)
 
 ### Setup KooKoo Application
 To continue setting up our KooKoo connection we need to create a new KooKoo account with the following steps:

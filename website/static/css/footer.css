@@ -43,7 +43,6 @@
 
 .footer-column {
   margin-right: 8%;
-  min-width: 100px;
   margin-bottom: 32px;
 }
 
@@ -55,11 +54,11 @@
 
 
 .footer-column-title {
-  font-size: 24px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 600;
   color: #FFF;
-  margin-bottom: 16px;
-  opacity: 0.5;
+  margin-bottom: 8px;
+  opacity: 1;
 }
 
 .footer-column-links {
@@ -68,16 +67,20 @@
 
 .footer-column-link {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   color: #FFF;
+  font-weight: 300;
 }
 .footer-column-link:hover {
   color: #FFF;
 }
 
 .copyright {
-  background: #000;
-  color: #FFF !important;
-  opacity: 0.8;
-  padding: 8px 0;
+  background: #FFF;
+  color: #000 !important;
+  opacity: 1;
+  padding: 8px 5%;
+  text-align: left !important;
+  font-weight: 300;
+  justify-content: flex-start;
 }

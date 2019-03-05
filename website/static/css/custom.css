@@ -64,6 +64,10 @@ a {
   }
 }
 
+.home {
+  padding-bottom: 0 !important;
+}
+
 
 .fbOpenSource {
   width: auto !important;

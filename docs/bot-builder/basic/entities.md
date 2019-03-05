@@ -77,4 +77,4 @@ To create a new entity
 
 - On clicking 'Save', the entity will be created
 
-- You can add the newly created entity to the existing node, or you can edit the newly created entity
+- You can add the newly created entity to the existing node, or you can edit the newly created entity.

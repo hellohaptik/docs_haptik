@@ -11,14 +11,14 @@ A combinition of these permissions is what we term as 'Permission Groups' Agents
 
 By default we have two configured **permission groups** for clients, namely:
 
-### 1. Enterprise Chat Assistant:
+### Enterprise Chat Assistant:
 
 	- can receive chats
 	- can mark chats as complete/waiting for user
 	- can report an abusive/troll user
 	- can logout
 
-### 2. Enterprise Chat Assistant TL:
+### Enterprise Chat Assistant TL:
 
 	- can receive chats
 	- can access business overwise
@@ -41,11 +41,11 @@ While these are the default set of permission groups avaiable, if a client wishe
 ## How to add agents with permission
 
 
-### 1. Log in to Haptik and select Select Administrator.
+### Log in to Haptik and select Select Administrator.
 
 ![Logged in screen](assets/haptik_logged_in_screen.png)
 
-### 2. Select Expert Dashboard under Expert Management as shown in the below screenshot.
+### Select Expert Dashboard under Expert Management as shown in the below screenshot.
 
 ![Expert Management](assets/expert_management.png)
 
@@ -53,7 +53,7 @@ While these are the default set of permission groups avaiable, if a client wishe
 
 ![Expert Dashboard](assets/expert_dashboard.png)
 
-### 3. Click Add Agent tab.
+### Click Add Agent tab.
 
 On select you will see the below screen shot where you can start entering agent information.
 
@@ -74,11 +74,11 @@ Fields (RHS)
 	- Assign Client Access: checkmark the client/s that this agent will receive chats from.
 	- Assign Groups: select appropriate permission groups
 
-### 4. Click on Save. 
+### Click on Save. 
 
 Your agent has been created.
 
-### 5. Upload Profile Picture (while creating agent).
+### Upload Profile Picture (while creating agent).
 You will then be redirected to a page where you can upload the agents profile picture.
 
 >  This profile picture along with the display name value appears on our SDK's when an agent joins a conversation with a user.
@@ -93,7 +93,7 @@ You can choose to skip above step for later.
 
 **Note:** Initial image will be optionaly uploaded by the lead, updating the image is handled directly from individual agent profile pages.
 
-### 5. Upload Profile Picture (using profile page).
+### Upload Profile Picture (using profile page).
 
 An agent can access his user profile page by simply clicking on 'User Profile' as in below screen shot of our live chat tool.
 

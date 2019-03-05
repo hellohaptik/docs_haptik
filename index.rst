@@ -3,6 +3,9 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+ You're viewing an older version of the documentation. Please visit the `new documentation <https://docs.haptik.ai/>`_
+ for updated, comprehensive guides & resources on the topic
+ 
 Welcome to the Haptik Platform Documentation
 ============================================
 

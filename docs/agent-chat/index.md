@@ -1,11 +1,29 @@
 ---
-title: Getting started
+title: Introduction
 ---
 
-Chat Solutions at Haptik can be powered entirely by Artificial Intelligence(AI) or by a combination of AI and Chat Agents.
+Chat Solutions at Haptik can be powered entirely by Artificial Intelligence (AI) or by a combination of AI and Chat Agents. We have built a tool for it, called "**Athena**". This tool is created for operationally managing user chats.
 
-Chat flows are built by the Haptik product team to best cater to the needs of the client and the solution being deployed. Chat flows are designed to guide the user through a specific problem and are the most important factor to ensure the best experience for all users.
+## How to use Athena?
+To use this tool, users are to be created with a specific set of permissions. The user can then start monitoring and taking daily chats on their business. *Athena* has the same capabilities of the AI along with additional functionality for smooth operational deployment such as chat flow analytics, review, assignment of chats by managers etc.
 
-In case a bot is unable to respond to a query which is outside the chat flow, the chat is handed over to a chat agent. Agents receive and send message over an web based tool called Athena. Athena has the same capabilities of the AI along with additional functionality for smooth operational deployment such as monitoring, review, assignment of chats by managers etc.
+## How Athena works?
+There are three sections in *Athena*. 
 
-Assistants can be assigned 3 chats at a time. Below is the image for the same.
+1. My Chats
+2. Businesses
+3. Teams
+
+You will read about the above concepts in subsequent sections.
+
+*My Chats* is a section, where you converse with users i.e. agents receive and send messages. 
+
+    Tip: In case a bot is unable to respond to a query, which is outside the chat flow, 
+    the chat is handed over to a chat agent. 
+
+Chat flows are designed to guide the user through a specific problem and to ensure the best experience for all users. And *Athena* helps connect users to agents for answering their queries. 
+
+    Tip: "Agents" are people who chat with users on Athena.
+
+*Businesses* and *Teams* are sections to analyse your business/team data and configure respective settings for incoming chats. 
+

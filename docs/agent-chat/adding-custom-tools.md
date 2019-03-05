@@ -29,7 +29,7 @@ title: Adding your own custom tool
         3. Task: Can be ignored, and left blank 
         4. Tool Name: Can be any string (this is what will apear to the agents) 
         5. URL: An external link to your tool 
-        6. Select "Link" 
+        6. Tick: "Link" or "Tool" 
         7. Hit Submit
 
 ![add_external_tool](assets/add_external_tool.png)
@@ -38,7 +38,7 @@ title: Adding your own custom tool
 
 ![agent_view_tool](assets/agent_view_tool.png)
 
-- Simply Click on the tool, and the URL will open on the RHS
+- Simply click on the tool, and the URL will open on the RHS
 
 ![agent_view_tool_url](assets/agent_view_tool_url.png)
 
@@ -51,7 +51,7 @@ title: Adding your own custom tool
 
 - An external tool appears for a business, if a user wishes to use the same tool across multiple businesses, they can do so by adding a the same entry for the other businesses.
 
-- Please make sure your `X-Frame-Options` is set to allow our host, so that your tool can open within our Iframe.
+- Please make sure your `X-Frame-Options` is set to allow our host, so that your tool can open within our iframe.
 
 ```json
 Header set X-Frame-Options "allow-from https://staging.hellohaptik.com"

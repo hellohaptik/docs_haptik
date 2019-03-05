@@ -1,4 +1,7 @@
 ## Connections
+
+> You're viewing an older version of the documentation. Please visit the [new documentation](https://docs.haptik.ai/) for updated, comprehensive guides & resources on the topic
+
 This section will cover the following topics:  
 [What are connections?](#what-are-connections)  
 [Connections based on user inputs](#basis-message-input-by-user)  

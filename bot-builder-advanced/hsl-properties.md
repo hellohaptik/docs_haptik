@@ -1,5 +1,7 @@
 ## HSL Properties
 
+> You're viewing an older version of the documentation. Please visit the [new documentation](https://docs.haptik.ai/) for updated, comprehensive guides & resources on the topic
+
 This doc will describe the various valid attributes and their values that can be used while generating the HSL jsons as and when applicable.
 
 ### HSL Data Attribute/Parameter Descriptions

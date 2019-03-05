@@ -1,5 +1,7 @@
 ## Introduction
 
+> You're viewing an older version of the documentation. Please visit the [new documentation](https://docs.haptik.ai/) for updated, comprehensive guides & resources on the topic
+
 #### What Are Custom Tools
 
 When a client wishes to use some of their internal tools within our agent dashboard for ease of data access, the can do so.

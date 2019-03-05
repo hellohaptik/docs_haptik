@@ -1,5 +1,7 @@
 ## Designing a Chatbot
 
+> You're viewing an older version of the documentation. Please visit the [new documentation](https://docs.haptik.ai/) for updated, comprehensive guides & resources on the topic
+
 We recommend starting the chatbot design process by creating an outline and a strategy. The chatbots your company creates will be an extension of your brand; therefore, their design warrants as much attention as the design of any other customer touch-point. To get you started, we’ve put together a guide to chatbot design, complete with tips from our own in-house design experts.
 
 1. **Start by identifying your goals**:

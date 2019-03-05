@@ -1,4 +1,7 @@
 ## Bot Says
+
+> You're viewing an older version of the documentation. Please visit the [new documentation](https://docs.haptik.ai/) for updated, comprehensive guides & resources on the topic
+
 In this section, we'll cover:  
 [What is Bot Says?](#what-is-bot-says)  
 [Initial Bot Replies](#initial=bot-says)  

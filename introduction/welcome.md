@@ -1,5 +1,7 @@
 ## Introduction
 
+> You're viewing an older version of the documentation. Please visit the [new documentation](https://docs.haptik.ai/) for updated, comprehensive guides & resources on the topic
+
 #### Welcome to Mogambo!
 
 Welcome to Mogambo, Haptik's bot builder tool! Once you've mastered this software, you'll be able to build chatbots with minimal coding. To get you started, we've put together some materials that will guide you through the process of building a bot on Mogambo. Depending on your learning preference, you can pick and choose from the following forms of documentation:

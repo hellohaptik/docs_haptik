@@ -1,5 +1,7 @@
 ## Creating a Story Flow
 
+> You're viewing an older version of the documentation. Please visit the [new documentation](https://docs.haptik.ai/) for updated, comprehensive guides & resources on the topic
+
 #### Components of a Story Flow
 
 Once you've configured your bot, you'll need to set up the stories and sub-stories that make up your chat flow. We've given a description of these units of organization here, but you can also see the Designing Bots section for more details about the role of stories and sub-stories in the creation of chatflows. 

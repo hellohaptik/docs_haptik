@@ -1,5 +1,7 @@
 ## Create a New Bot
 
+> You're viewing an older version of the documentation. Please visit the [new documentation](https://docs.haptik.ai/) for updated, comprehensive guides & resources on the topic
+
 To start building your first bot, log in to the [Haptik platform](https://staging.hellohaptik.com/home/) using the credentials that were shared with you via email. Once you've successfully logged in, navigate to the Bot Builder Tool. You will be directed to the bot builder homepage.
 
 Click the "Create Bot" button, located in the upper right hand corner of the page:

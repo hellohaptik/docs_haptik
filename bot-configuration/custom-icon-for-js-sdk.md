@@ -1,5 +1,7 @@
 ## Haptik JS SDK Custom Icon Demo
 
+> You're viewing an older version of the documentation. Please visit the [new documentation](https://docs.haptik.ai/) for updated, comprehensive guides & resources on the topic
+
 The below file, is a running example of hosting our js-sdk on your website with a custom icon instead of
 the default haptik icon.
 

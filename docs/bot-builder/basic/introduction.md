@@ -18,7 +18,7 @@ Creating the conversation flow your bots will use might seem straightforward, bu
 
 We've detailed out the process of creating bots step-by-step, all the way from chatflow design to bot deployment. Read up the various articles from the left-hand navigation. 
 
-    **Tool Tips**: For those of you who want to jump right in, we've built tooltips directly into Mogambo. 
+    Tool Tips: For those of you who want to jump right in, we've built tooltips directly into Mogambo. 
     By hovering over the tooltips, which are indicated by the small "i" or "?" in circles, you'll be able 
     to view brief descriptions of how to use most of the major components in Mogambo. 
 

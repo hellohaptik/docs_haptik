@@ -25,8 +25,6 @@ Some examples of when you would use an entity in Bot Says:
 
 The flow of Bot Says responses goes from top to bottom in terms of evaluation. **The order of the entities, and their order relative to Bot Says inputs, matters**. First the initial bot reply comes, then the entities, and then finally the final bot reply. The delay message is sent only after a certain level of inactivity. The initial/final bot replies might be not needed in some scenarios. **Note** that to change the order of the Bot Says inputs, simply click and drag the reorder handle.
 
-![bot says drag](assets/bot_says_drag.png)
-
 > **Entity Scenarios**
 >
 > - _If there are no entities_: If it’s a simple node that doesn’t need to collect entities or data, a simple bot says is all that’s needed. You won’t be able to add a final bot reply as that would be redundant as there are no middle steps.
@@ -35,11 +33,11 @@ The flow of Bot Says responses goes from top to bottom in terms of evaluation. *
 
 #### Adding an entity:
 
-After selecting the node on which the entity is to be added, click on bot says or entities:
+After selecting the node on which the entity is to be added, click on "*Add an Entity*":
 
 ![entities open node](assets/entities_open_node.png)
 
-Click on *Add Entities*. One can search for a particular word that needs to be detected, all existing entities that are capable of detecting that word/variant will appear as the search result.
+On the popup below, one can search for an entity, from the already existing list of entities.
 
 ![entities add](assets/entities_add.png)
 
@@ -50,8 +48,6 @@ Simply click select on one of the existing entities to add it to your node.
 To create a new entity
 
 - Click on Create Entity if an appropriate entity doesn't exist.
-
-  ![entities create click](assets/entities_create_click.png)
 
 - Enter the name (must be a lower case, underscore separated text) and description of an Entity. Try to make the description as relevant as possible, as it will help you better search for your entity in the future.
 

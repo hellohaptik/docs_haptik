@@ -30,7 +30,7 @@ The flow of Bot Says responses goes from top to bottom in terms of evaluation. *
 > **Entity Scenarios**
 >
 > - _If there are no entities_: If it’s a simple node that doesn’t need to collect entities or data, a simple bot says is all that’s needed. You won’t be able to add a final bot reply as that would be redundant as there are no middle steps.
-> - _If there is one entity_: If there’s only one entity, then there is no initial bot reply as that entite’s responses serve as the initial bot reply.
+> - _If there is one entity_: If there’s only one entity, then there is no initial bot reply as that entity’s responses serve as the initial bot reply.
 > - _If there are multiple entities_: If there are multiple entities, then all the responses are required. (Intial Bot Says, Entity Responses as well as the final bot reply).
 
 #### Adding an entity:
@@ -39,7 +39,7 @@ After selecting the node on which the entity is to be added, click on bot says o
 
 ![entities open node](assets/entities_open_node.png)
 
-Click on Add Entities. One can search for a particular word that needs to be detected, all existing entities that are capable of detecting that word/variant will appear as the search result
+Click on *Add Entities*. One can search for a particular word that needs to be detected, all existing entities that are capable of detecting that word/variant will appear as the search result.
 
 ![entities add](assets/entities_add.png)
 
@@ -53,7 +53,7 @@ To create a new entity
 
   ![entities create click](assets/entities_create_click.png)
 
-- Enter the name (must be a lower case, underscrore separated text) and description of an Entity. Try to make the description as relevant as possible, as it will help you better search for your entity in the future.
+- Enter the name (must be a lower case, underscore separated text) and description of an Entity. Try to make the description as relevant as possible, as it will help you better search for your entity in the future.
 
   ![entities create new](assets/entities_create_new_step1.png)
 

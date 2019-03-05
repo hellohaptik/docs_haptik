@@ -24,7 +24,7 @@ To deploy a live webhook that can receive webhook events, your code must be host
 2. Select Integration
 3. Select API and put API endpoint like shown in image
 
-![add integration endpoint](../assets/endpoint.png)
+![add integration endpoint](/assets/endpoint.png)
 
 Specify the security challenge that will be verified
 

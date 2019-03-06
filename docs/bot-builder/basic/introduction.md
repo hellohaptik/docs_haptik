@@ -7,7 +7,7 @@ Welcome to **Bot Builder**, Haptik's tool for making bots! Once you've mastered 
     Tip: A bot is a program that communicates with you, commonly using a chat or voice interface.
 
 **How is *Bot Builder* used?**
-On *Bot Builder*, you can create a bot i.e. formulate different conversation flows. Instead of creating bots on your own, our Bot maker gives you a framework and components to build the bot without much effort. 
+On *Bot Builder*, you can create a bot i.e. formulate different conversation flows. Instead of creating bots on your own, our Bot Builder gives you a framework and components to build the bot without much effort. 
 
 **How does the Bot building process work?** 
 Creating the conversation flow in your bots might seem straightforward, but there are a few things bot builders do to engage users as they interact with bots - 
@@ -20,7 +20,7 @@ We've detailed out the process of creating bots step-by-step, all the way from c
 
     Tool Tips: For those of you who want to jump right in, we've built tooltips directly into Bot Builder. 
     By hovering over the tooltips, which are indicated by the small "i" or "?" in circles, you'll be able 
-    to view brief descriptions of how to use most of the major components in Bot maker. 
+    to view brief descriptions of how to use most of the major components in Bot Builder. 
 
 #### Getting Started
 

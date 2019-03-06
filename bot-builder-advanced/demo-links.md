@@ -1,5 +1,7 @@
 # Demo Page
 
+> You're viewing an older version of the documentation. Please visit the [new documentation](https://docs.haptik.ai/) for updated, comprehensive guides & resources on the topic
+
 The Demo Page is an easy way to showcase and test a bot you have developed. 
 
 SImply visit the page https://toolassets.haptikapi.com/js-sdk/html/demoqp.html (Make sure to match the security level of HTTP or HTTPs to your server) and input the test credentials to test your bot.

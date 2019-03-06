@@ -2,6 +2,8 @@
 
 ## User Profile
 
+> You're viewing an older version of the documentation. Please visit the [new documentation](https://docs.haptik.ai/) for updated, comprehensive guides & resources on the topic
+
 Here everything from User’s name, his current location, Mobile number, Address is displayed. If the user has not provided his information it will displayed as a Guest User.
 
 

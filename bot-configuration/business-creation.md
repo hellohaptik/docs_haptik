@@ -1,5 +1,7 @@
 ## Business Creation
 
+> You're viewing an older version of the documentation. Please visit the [new documentation](https://docs.haptik.ai/) for updated, comprehensive guides & resources on the topic
+
 #### Organizational Hierarhcy
 
 The Haptik bot builder platform has a three-tiered organizational system that will help keep bots organized in such a manner that allows bot developers to easily deploy bots across multiple channels. The three tiers of this system are called **bots**, **businesses**, and **partners**:

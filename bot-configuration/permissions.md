@@ -1,5 +1,7 @@
 # Permissions
 
+> You're viewing an older version of the documentation. Please visit the [new documentation](https://docs.haptik.ai/) for updated, comprehensive guides & resources on the topic
+
 This section contains informaiton as to how permissions are maintained within the Haptik Tools. You can control the granularity of access each user has to various tools in the system. Jump straight to:  
 [Partner Assignment](#partner-assignment)  
 [Features](#features)  

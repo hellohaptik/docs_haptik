@@ -1,5 +1,7 @@
 ## Glossary
 
+> You're viewing an older version of the documentation. Please visit the [new documentation](https://docs.haptik.ai/) for updated, comprehensive guides & resources on the topic
+
 **API** - A software intermediary that allows two applications to communicate. In the context of Mogambo, bot builders can use APIs to connect data from another application to a chat flow. 
 
 **Button** - One possible bot reply format. A button represents a single task in a *taskbar* (see more information below) that bots can deploy to prompt users to navigate in one of several directions. Looks like this: 

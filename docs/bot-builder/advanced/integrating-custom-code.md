@@ -1,6 +1,7 @@
 ---
 title: Integrating Custom Code
 
+
 ---
 
 Once a particular node has been detected and the mandatory entities have been collected, these entities can be given to custom code to execute your own business logic. There are 3 different ways to execute this business logic.
@@ -139,7 +140,71 @@ The following additional fields can be specified by the Webhook to control behav
 >
 > If the node is **not an end node**, then the chat **remains in Bot state** after sending the response irrespective of the status.
 
-**response** -Response will be array of string(s) if we want to return multiple bot responses.
+**response** -Response will be array of string(s) or hsl(haptik specific language).
+
+for example: 
+
+1. Response with single line
+
+   ```json
+   {
+       "status": true,
+       "response": ["phone number seems invalid, please try again"]
+   }
+   ```
+
+2. Response with multi-line
+
+3. ```json
+   {
+       "status": true,
+       "response": ["phone number seems invalid", "please try again"]
+   }
+   ```
+
+3. Response with advanced UI elements [for more detail read here](https://haptik-docs.readthedocs.io/en/latest/bot-builder-advanced/message-elements.html)
+
+![Bot response with advanced UI elements](/assets/advanced-ui-element.png)
+
+   
+ ```json
+   {
+     "status": true,
+     "response": [
+       '{
+         "text": "COMPLETE BLOOD COUNT; CBC",
+         "type": "BUTTON",
+         "data": {
+           "items": [
+             {
+               "actionable_text": "View Price",
+               "location_required": false,
+               "is_default": 0,
+               "uri": "LAUNCH_CHANNEL",
+               "type": "TEXT_ONLY",
+               "payload": {
+                 "gogo_message": "",
+                 "message": "I want to check the price of this test"
+               }
+             },
+             {
+               "actionable_text": "View Details",
+               "location_required": false,
+               "is_default": 0,
+               "uri": "LINK",
+               "type": "APP_ACTION",
+               "payload": {
+                 "url": "XYZ.COM",
+                 "gogo_message": ""
+               }
+             }
+           ]
+         },
+         "isNew": false
+       }'
+     ]
+   }
+   ```
 
 As per our pipeline, if there is no response at specific stages, then it will be treated as a Botbreak scenario. So if your Bot Says section on Mogambo doesn't have any response or the integration function doesn't return any response, then a Botbreak message will be sent or the chat will be moved to Pending state depending on whether Human assistance is disabled or enabled respectively.
 
@@ -233,7 +298,7 @@ The HTTP request will contain an X-Hub-Signature header which contains the SHA1 
           run(port=int(argv[1]))
       else:
           run() 
-   ```
+```
 
 
 

@@ -175,7 +175,61 @@ The following additional fields can be specified by the Webhook to control behav
 <p>If the node is an <strong>end node</strong> and if the integration response returns <strong>status False</strong>, then the chat will remain in <strong>Bot state</strong>.</p>
 <p>If the node is <strong>not an end node</strong>, then the chat <strong>remains in Bot state</strong> after sending the response irrespective of the status.</p>
 </blockquote>
-<p><strong>response</strong> -Response will be array of string(s) if we want to return multiple bot responses.</p>
+<p><strong>response</strong> -Response will be array of string(s) or hsl(haptik specific language).</p>
+<p>for example:</p>
+<ol>
+<li><p>Response with single line</p>
+<pre><code class="hljs css language-json">{
+    <span class="hljs-attr">"status"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"response"</span>: [<span class="hljs-string">"phone number seems invalid, please try again"</span>]
+}
+</code></pre></li>
+<li><p>Response with multi-line</p></li>
+<li><pre><code class="hljs css language-json">{
+    <span class="hljs-attr">"status"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"response"</span>: [<span class="hljs-string">"phone number seems invalid"</span>, <span class="hljs-string">"please try again"</span>]
+}
+</code></pre></li>
+<li><p>Response with advanced UI elements <a href="https://haptik-docs.readthedocs.io/en/latest/bot-builder-advanced/message-elements.html">for more detail read here</a></p></li>
+</ol>
+<p><img src="/assets/advanced-ui-element.png" alt="Bot response with advanced UI elements"></p>
+<pre><code class="hljs css language-json">  {
+    <span class="hljs-attr">"status"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"response"</span>: [
+      '{
+        <span class="hljs-attr">"text"</span>: <span class="hljs-string">"COMPLETE BLOOD COUNT; CBC"</span>,
+        <span class="hljs-attr">"type"</span>: <span class="hljs-string">"BUTTON"</span>,
+        <span class="hljs-attr">"data"</span>: {
+          <span class="hljs-attr">"items"</span>: [
+            {
+              <span class="hljs-attr">"actionable_text"</span>: <span class="hljs-string">"View Price"</span>,
+              <span class="hljs-attr">"location_required"</span>: <span class="hljs-literal">false</span>,
+              <span class="hljs-attr">"is_default"</span>: <span class="hljs-number">0</span>,
+              <span class="hljs-attr">"uri"</span>: <span class="hljs-string">"LAUNCH_CHANNEL"</span>,
+              <span class="hljs-attr">"type"</span>: <span class="hljs-string">"TEXT_ONLY"</span>,
+              <span class="hljs-attr">"payload"</span>: {
+                <span class="hljs-attr">"gogo_message"</span>: <span class="hljs-string">""</span>,
+                <span class="hljs-attr">"message"</span>: <span class="hljs-string">"I want to check the price of this test"</span>
+              }
+            },
+            {
+              <span class="hljs-attr">"actionable_text"</span>: <span class="hljs-string">"View Details"</span>,
+              <span class="hljs-attr">"location_required"</span>: <span class="hljs-literal">false</span>,
+              <span class="hljs-attr">"is_default"</span>: <span class="hljs-number">0</span>,
+              <span class="hljs-attr">"uri"</span>: <span class="hljs-string">"LINK"</span>,
+              <span class="hljs-attr">"type"</span>: <span class="hljs-string">"APP_ACTION"</span>,
+              <span class="hljs-attr">"payload"</span>: {
+                <span class="hljs-attr">"url"</span>: <span class="hljs-string">"XYZ.COM"</span>,
+                <span class="hljs-attr">"gogo_message"</span>: <span class="hljs-string">""</span>
+              }
+            }
+          ]
+        },
+        <span class="hljs-attr">"isNew"</span>: <span class="hljs-literal">false</span>
+      }'
+    ]
+  }
+</code></pre>
 <p>As per our pipeline, if there is no response at specific stages, then it will be treated as a Botbreak scenario. So if your Bot Says section on Mogambo doesn't have any response or the integration function doesn't return any response, then a Botbreak message will be sent or the chat will be moved to Pending state depending on whether Human assistance is disabled or enabled respectively.</p>
 <blockquote>
 <p>So if human_assistance is OFF on business manager =&gt; Botbreak message will be sent.</p>

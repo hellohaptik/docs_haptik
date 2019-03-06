@@ -7,7 +7,7 @@ The Analytics tool built by haptik enables you to get a comprehensive idea of ho
 
 Through this document we will explore the different types of metrics available for tracking and analysing inside the analytics tool.
 
-The Analytics tool consists of multiple section with each section containing metrics and data about a different aspect of your chatbot. The multiple sections are:
+The Analytics tool consists of multiple sections with each section containing metrics and data about a different aspect of your chatbot. The multiple sections are:
 
 * Overview
 * Compare Clients
@@ -82,7 +82,7 @@ On the top you can see the total task completion rate in percentage format. Belo
 
 ![Overview Task Completion](assets/basic-overview-task-completion.png)
 
->Tip: You can make changes to the task flow for improving the experience. This metric can guide you in understand how those changes are performing.
+>Tip: You can make changes to the task flow for improving the experience. This metric can guide you to understand how those changes are performing.
 
 ## ***Bot Automation***
 The next tab is Bot Automation. This tab tells you about what percentage of the incoming user messages the bot was automatically able to respond to.

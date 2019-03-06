@@ -2,58 +2,65 @@
 title: Adding Agents & Permissions
 ---
 
+## Permissions
+All our functionalities are linked to a permission, if the permission is allocated, the functionality is accessable
+to the user.
+
 ## Permission Groups
 
+A combinition of these permissions is what we term as 'Permission Groups'
 
-All our functionalities are linked to a permission.
+Agents can be assigned these 'Permission Groups' via the haptik administrator. By default we have two configured '**Permission Groups**' for clients, namely:
 
-A combinition of these permissions is what we term as 'Permission Groups' Agents can be assigned these 'Permission Groups' via the haptik administrator.
-
-By default we have two configured **permission groups** for clients, namely:
-
-### Enterprise Chat Assistant:
+### Enterprise Chat Assistant
 
 	- can receive chats
 	- can mark chats as complete/waiting for user
 	- can report an abusive/troll user
 	- can logout
 
-### Enterprise Chat Assistant TL:
+### Enterprise Chat Assistant TL
 
 	- can receive chats
 	- can access business overwise
 	- can modify/create a team
 	- can add/edit chat disposition settings
-	- review chats of agents
+	- can review chats of agents
 	- can assign a chat to an agent or a team
 	- can claim chats for himself
 	- can logout
 
->  Permissions that can be added on request 
+>  While these are the default set of permission groups available, if a client wishes to have these permissions segregated differently, they can do so.
 
-	- Adding canned responses
-	- Adding external tools
-	- Receive daily expert performance csv
 
-While these are the default set of permission groups avaiable, if a client wishes to have these permissions segregated differently, they can do so.
+### Permissions that can be allocated
+
+These permissions could be added to a client specific permission group, if requested for
+
+	- can add canned responses (pre-defined replies that agents could use)
+	- can add external tools
+	- will receive daily expert performance csv via mail
+
+
+
 <!-- TODO: add a link to permission group editing here -->
 
 ## How to add agents with permission
 
 
-### Log in to Haptik and select Select Administrator.
+### Step 1: Log in and select Administrator
 
 ![Logged in screen](assets/haptik_logged_in_screen.png)
 
-### Select Expert Dashboard under Expert Management as shown in the below screenshot.
+### Step 2: Select the Expert Dashboard admin tool
 
 ![Expert Management](assets/expert_management.png)
 
->  Over here you can add/edit/view your agents.
+>  Over here you can add/edit/view your agents
 
 ![Expert Dashboard](assets/expert_dashboard.png)
 
-### Click Add Agent tab.
+### Step 3: Click *Add Agent* tab
 
 On select you will see the below screen shot where you can start entering agent information.
 
@@ -74,12 +81,14 @@ Fields (RHS)
 	- Assign Client Access: checkmark the client/s that this agent will receive chats from.
 	- Assign Groups: select appropriate permission groups
 
-### Click on Save. 
+### Step 4: Click on Save
 
 Your agent has been created.
 
-### Upload Profile Picture (while creating agent).
-You will then be redirected to a page where you can upload the agents profile picture.
+### Step 5: Upload Profile Picture of Agent
+
+#### Option 1: While creating agent
+After clicking on save you will be redirected to a page where you can upload the agents profile picture.
 
 >  This profile picture along with the display name value appears on our SDK's when an agent joins a conversation with a user.
 
@@ -93,7 +102,7 @@ You can choose to skip above step for later.
 
 **Note:** Initial image will be optionaly uploaded by the lead, updating the image is handled directly from individual agent profile pages.
 
-### Upload Profile Picture (using profile page).
+#### Option 2: Using profile page
 
 An agent can access his user profile page by simply clicking on 'User Profile' as in below screen shot of our live chat tool.
 

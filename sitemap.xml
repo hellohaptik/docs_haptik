@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 <url> <loc>https://docs.haptik.ai/index</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.haptik.ai/en/index" /> </url>
+<url> <loc>https://docs.haptik.ai/agent-chat/adding-custom-tools</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.haptik.ai/agent-chat/adding-custom-tools" /> </url>
 <url> <loc>https://docs.haptik.ai/agent-chat/admin_panel</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.haptik.ai/agent-chat/admin_panel" /> </url>
 <url> <loc>https://docs.haptik.ai/agent-chat/athena_assignment</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.haptik.ai/agent-chat/athena_assignment" /> </url>
 <url> <loc>https://docs.haptik.ai/agent-chat/athena_lhs</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.haptik.ai/agent-chat/athena_lhs" /> </url>
@@ -9,7 +10,6 @@
 <url> <loc>https://docs.haptik.ai/agent-chat/bot-agent-handover</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.haptik.ai/agent-chat/bot-agent-handover" /> </url>
 <url> <loc>https://docs.haptik.ai/agent-chat/claiming-and-closing</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.haptik.ai/agent-chat/claiming-and-closing" /> </url>
 <url> <loc>https://docs.haptik.ai/agent-chat/custom-tools-data-communication</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.haptik.ai/agent-chat/custom-tools-data-communication" /> </url>
-<url> <loc>https://docs.haptik.ai/agent-chat/custom-tools-how</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.haptik.ai/agent-chat/custom-tools-how" /> </url>
 <url> <loc>https://docs.haptik.ai/agent-chat/custom-tools-intro</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.haptik.ai/agent-chat/custom-tools-intro" /> </url>
 <url> <loc>https://docs.haptik.ai/agent-chat/</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.haptik.ai/agent-chat/" /> </url>
 <url> <loc>https://docs.haptik.ai/bot-analytics/</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.haptik.ai/bot-analytics/" /> </url>

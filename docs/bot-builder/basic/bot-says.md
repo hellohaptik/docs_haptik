@@ -16,27 +16,30 @@ To get started with adding some Bot Says responses, navigate to a specific node 
 
 Once you arrive at the Bot Says page, you'll see the above interface. This interface might differ slightly depending on the state of the node and the responses added to it.
 
+## Types of Responses
 Depending on how the node is build, the Bot Says section can have four types of responses:
 
-## Initial Bot Says
+### Initial Response
 
 This is the first message that the bot sends out when the node is detected and it doesn't know about any entity on the node.
 
-When you have multiple entities, consider the Initial Bot Reply to be the opening message for the node. In some cases, this can be the same as the response in "Entity Response" of the first Entity on the node.
+![image](assets/bot-builder-bot-says/single_entity_response.gif)
+
+When you have multiple entities, consider the Initial Response to be the opening message for the node. In some cases, this can be the same as the response in "Entity Response" of the first Entity on the node.
 
 When there is only one entity present, this section is disabled as it is the same as *Entity Response* of the first Entity on the node. For Example, if you want to collect the answer to a question, your Bot Says would look something like below:
 
 ![image](assets/bot-builder-bot-says/single_entity_response.gif)
 
 
-## Entity Responses
+### Entity Responses
 If you have Entities present on a node, then Entity Response is the response that the bot will send when it doesn't know the Entity's value.
 
 For example, if you want to collect the User's name, you could ask *"What is your name?"* in the Entity Response. Now If the User replies back with *"My name is Bruce Wayne"*, then "Bruce Wayne" will be extracted as an entity by our NER. These entities can then be used to create personalized and advanced flows for every user and hence, build better bots.
 
 > **Tip:** You can create your own Entities or use System Entities provided as a part of the Haptik Platform.
 
-In the below example, the Bot will start with the response from "Initial Bot Reply".
+In the below example, the Bot will start with the response from "Initial Response".
 Then, it will start looking for the Entities in the Entity Response. If the bot knows the Entity's value, then it will skip the response and move to the next Entity Response or Final Responses.
 
 ![image](assets/bot-builder-bot-says/entity_response.gif)
@@ -44,23 +47,17 @@ Then, it will start looking for the Entities in the Entity Response. If the bot 
 > **Note:** You can set an Entity Response only for Mandatory Entities. To know more about the difference between Mandatory and Non-Mandatory entities, refer [this](../entities).
 
 
-## Final Bot Reply
+### Final Response
 
 Once all the entities have been collected, the bot finally replies with the responses from this section. This is usally a the closing message for that node.
 
-In cases where the node is a Start node or an Intermediate node,the Final Bot Reply section is useful to send a response to continue the user to the next part of the flow.
+In cases where the node is a Start node or an Intermediate node,the Final Response section is useful to send a response to continue the user to the next part of the flow.
 
-> Note: Final Bot Reply isn't applicable if the node doesn't have any entities as the Initial Bot Reply itself acts like the Final Bot Reply.
+> Note: Final Response isn't applicable if the node doesn't have any entities as the Initial Response itself acts like the Final Response.
 
 ![image](assets/bot-builder-bot-says/final_bot_reply.gif)
 
-### Priority of Responses:
-As explained above, the Response to be sent is chosen from a Top to Down order i.e.
-1. If no entity value is known, then send the response Initial Bot Reply Section
-2. Depending on the order of Mandatory Entities, the response will be sent from the Entity whose value is not known. So in the above example, where add person_name, utils_city, email and phone_number as mandatory Entities, it will send the same.
-3. Once value of all Mandatory entities is known, the Final Bot Reply is sent, if applicable.
-
-## Follow Up Message
+### Follow Up Message
 
 If the user is inactive for a specific interval, then the the bot replies with the Follow Up message. The delay interval for this message can be set using the slider, and can be set between 20 seconds to 20 minutes.
 
@@ -70,10 +67,18 @@ If the user is inactive for a specific interval, then the the bot replies with t
 
 > Note: Follow up message will be sent only if the user has not replied back after reaching that node and the chat is in Bot or Complete state.
 
+## Priority of Responses:
+As explained above, the Response to be sent is chosen from a Top to Down order i.e.
+1. If no entity value is known, then send the response Initial Response Section
+2. Depending on the order of Mandatory Entities, the response will be sent from the Entity whose value is not known. So in the above example, where add person_name, utils_city, email and phone_number as mandatory Entities, it will send the same.
+3. Once value of all Mandatory entities is known, the Final Response is sent, if applicable.
+
 
 <hr>
 
-Each of the above four types of response (Initial Bot Reply, Entities, Final Bot Reply, and Delay Message) are composed of **Variants**, **Message** and **Quick replies**.
+## Structure of a Response
+Each of the abo
+ve four types of response (Initial Response, Entity Response, Final Response, and Delay Message) are composed of **Variants**, **Message** and **Quick replies**.
 
 ### Variants
 A bot response can consist of multiple variants where each variant is an independent message. All variants should imply the same meaning as the bot chooses a variant randomly to avoid being repetitive even when asked the same question.
@@ -83,7 +88,7 @@ Each variant is composed of Messages and Quick Replies.
 ![image](assets/bot-builder-bot-says/variants.gif)
 
 
-### Message:
+### Message
 A variant can have multiple message bubbles. Each message is a separate _text_ from the bot. Instead of putting a long message into just one message bubble, you can split it into multiple shorter messages. However, you should avoid adding more than 3-4 messages in a single variant.
 
 > Tip: You can use the HSL builder to simplify creation of complicated responses like Carousel, Images and Buttons.

@@ -3,11 +3,11 @@ title: Basic Analysis
 ---
 
 ## Introduction
-The Analytics tool built by haptik enables you to get a comprehensive idea of how your chatbot is performing, how users are using it, where it's failing, what the user think of it etc. 
+The Analytics tool built by haptik enables you to get a comprehensive idea of how your chatbot is performing.You can get deep insights into how users are using it. You can also get to know what are the failure points or featutres that can be improved. Finally you can also find out what the user thinks of the chatbot experience.
 
 Through this document we will explore the different types of metrics available for tracking and analysing inside the analytics tool.
 
-The Analytics tool consists of multiple section with each section containing metrics and data about a different aspect of your chatbot. These different sections are:
+The Analytics tool consists of multiple section with each section containing metrics and data about a different aspect of your chatbot. The multiple sections are:
 
 * Overview
 * Compare Clients
@@ -67,7 +67,7 @@ The graph for this data is an upcoming feature and will be documented here once 
 ![Overview Users](assets/basic-overview-users.png)
 
 ## ***User Messages***
-The next tab in the Overview section is the User Messages tab. This tab measures what tasks where most initiated by user. It shows a list of tasks in the chatbot along with the number of users who initiated the task.
+The next tab in the Overview section is the User Messages tab. This tab measures what tasks were most initiated by user. It shows a list of tasks in the chatbot along with the number of users who initiated the task.
 
 ![Overview User Message](assets/basic-overview-user-messages.png)
 
@@ -82,7 +82,7 @@ On the top you can see the total task completion rate in percentage format. Belo
 
 ![Overview Task Completion](assets/basic-overview-task-completion.png)
 
->Tip: Make improvements to the task flow and analyze the change of task completion rate to see how the improvement is performing.
+>Tip: You can make changes to the task flow for improving the experience. This metric can guide you in understand how those changes are performing.
 
 ## ***Bot Automation***
 The next tab is Bot Automation. This tab tells you about what percentage of the incoming user messages the bot was automatically able to respond to.
@@ -96,4 +96,4 @@ On the top of the tab you can see the average rating given across all tasks and 
 
 ![Overview User Rating](assets/basic-overview-user-rating.png)
 
-> Tip: You can try to improve the task flow and see how the user rating changes for the task accordingly to measure your improvements.
+> Tip: You can try to improve the task flow by making changes. The user rating changes for the task will help you measure the effectiveness of the changes.

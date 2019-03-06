@@ -25,21 +25,19 @@ Some examples of when you would use an entity in Bot Says:
 
 The flow of Bot Says responses goes from top to bottom in terms of evaluation. **The order of the entities, and their order relative to Bot Says inputs, matters**. First the initial bot reply comes, then the entities, and then finally the final bot reply. The delay message is sent only after a certain level of inactivity. The initial/final bot replies might be not needed in some scenarios. **Note** that to change the order of the Bot Says inputs, simply click and drag the reorder handle.
 
-![bot says drag](assets/bot_says_drag.png)
-
 > **Entity Scenarios**
 >
 > - _If there are no entities_: If it’s a simple node that doesn’t need to collect entities or data, a simple bot says is all that’s needed. You won’t be able to add a final bot reply as that would be redundant as there are no middle steps.
-> - _If there is one entity_: If there’s only one entity, then there is no initial bot reply as that entite’s responses serve as the initial bot reply.
+> - _If there is one entity_: If there’s only one entity, then there is no initial bot reply as that entity’s responses serve as the initial bot reply.
 > - _If there are multiple entities_: If there are multiple entities, then all the responses are required. (Intial Bot Says, Entity Responses as well as the final bot reply).
 
 #### Adding an entity:
 
-After selecting the node on which the entity is to be added, click on bot says or entities:
+After selecting the node on which the entity is to be added, click on "*Add an Entity*":
 
 ![entities open node](assets/entities_open_node.png)
 
-Click on Add Entities. One can search for a particular word that needs to be detected, all existing entities that are capable of detecting that word/variant will appear as the search result
+On the popup below, one can search for an entity, from the already existing list of entities.
 
 ![entities add](assets/entities_add.png)
 
@@ -51,9 +49,7 @@ To create a new entity
 
 - Click on Create Entity if an appropriate entity doesn't exist.
 
-  ![entities create click](assets/entities_create_click.png)
-
-- Enter the name (must be a lower case, underscrore separated text) and description of an Entity. Try to make the description as relevant as possible, as it will help you better search for your entity in the future.
+- Enter the name (must be a lower case, underscore separated text) and description of an Entity. Try to make the description as relevant as possible, as it will help you better search for your entity in the future.
 
   ![entities create new](assets/entities_create_new_step1.png)
 
@@ -77,4 +73,4 @@ To create a new entity
 
 - On clicking 'Save', the entity will be created
 
-- You can add the newly created entity to the existing node, or you can edit the newly created entity
+- You can add the newly created entity to the existing node, or you can edit the newly created entity.

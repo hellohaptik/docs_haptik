@@ -30,6 +30,9 @@
 			"basic/general-responses",
 			"basic/forms",
 			"basic/platforms-deployment"
+		],
+		"Advanced": [
+			"advanced/integrating-custom-code"	
 		]
 	},
 	"headerLink": {

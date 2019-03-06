@@ -20,10 +20,17 @@ title: Adding your own custom tool
 
 ![external_tool_screen](assets/external_tool_screen.png)
 
-- As an example we have already added an external url (https://material.io/design/)
-  which should appear for Flight Hindi Voice Business as "Test External Link"
+    Ex: We added an external url (https://material.io/design/) which should appear 
+    for Flight Hindi Voice Business as "Test External Link".
 
-- On clicking "Add External Tool" - Business: Select your unique business name. (Will be availabe in dropdown) - Partner: Select your unique partner name. (Will be availabe in dropdown) - Task: can be ignored, and left black - Tool Name: can be any string (this is what will apear to the agents) - Url: an external link to your tool - Select "Link" - Hit Submit
+- Now, click "*Add External Tool*", to land on the screen below. Here, you enter the following details:
+        1. Business: Select your unique business name. (will be available in dropdown) 
+        2. Partner: Select your unique partner name. (will be available in dropdown) 
+        3. Task: Can be ignored, and left blank 
+        4. Tool Name: Can be any string (this is what will apear to the agents) 
+        5. URL: An external link to your tool 
+        6. Tick: "Link" or "Tool" 
+        7. Hit Submit
 
 ![add_external_tool](assets/add_external_tool.png)
 
@@ -31,7 +38,7 @@ title: Adding your own custom tool
 
 ![agent_view_tool](assets/agent_view_tool.png)
 
-- Simply Click on the tool, and the url will open on the RHS
+- Simply click on the tool, and the URL will open on the RHS
 
 ![agent_view_tool_url](assets/agent_view_tool_url.png)
 
@@ -42,9 +49,9 @@ title: Adding your own custom tool
 
 #### Important Tech Note
 
-- An external tool appears for a business, if a user wishes to use the same tool across multiple businesses, they can do so by adding a the same entry for the other business.
+- An external tool appears for a business, if a user wishes to use the same tool across multiple businesses, they can do so by adding a the same entry for the other businesses.
 
-- Please make sure your `X-Frame-Options` is set to allow our host, So that your tool can open within our Iframe.
+- Please make sure your `X-Frame-Options` is set to allow our host, so that your tool can open within our iframe.
 
 ```json
 Header set X-Frame-Options "allow-from https://staging.hellohaptik.com"

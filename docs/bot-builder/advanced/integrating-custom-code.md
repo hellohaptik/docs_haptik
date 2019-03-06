@@ -115,8 +115,6 @@ Consider the following example for detailed explanation:
 A `200 OK` HTTP Response must be sent back to the Haptik Servers, Failing which a bot break response will be sent to the user. Webhook response must be sent in 30 seconds or less, failing which a bot break response will be sent to the user.
 The following additional fields can be specified by the Webhook to control behaviour of the bot and send messages to the user.
 
-.. code:: json
-
 ```json
 {
     "response": [
@@ -158,8 +156,6 @@ As per our pipeline, if there is no response at specific stages, then it will be
 The HTTP request will contain an X-Hub-Signature header which contains the SHA1 signature of the request payload, using the secret_key entered for the node, and prefixed with sha1=. Your API can verify this signature to validate the integrity and origin of the payload.
 
 **Sample python code for webhook**
-
-.. code-block:: python
 
 ```python
    # !/usr/bin/env python

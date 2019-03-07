@@ -2,13 +2,12 @@
 title: Adding Agents & Permissions
 ---
 
-## Permissions
-All our functionalities are linked to a permission, if the permission is allocated, the functionality is accessable
-to the user.
+## Features
+All our functionalities are linked to a feature, if the feature is allocated to a user, the functionality is accessable.
 
 ## Permission Groups
 
-A combinition of these permissions is what we term as 'Permission Groups'
+A combinition of these features is what we term as 'Permission Groups'
 
 Agents can be assigned these 'Permission Groups' via the haptik administrator. By default we have two configured '**Permission Groups**' for clients, namely:
 
@@ -33,20 +32,17 @@ Agents can be assigned these 'Permission Groups' via the haptik administrator. B
 >  While these are the default set of permission groups available, if a client wishes to have these permissions segregated differently, they can do so.
 
 
-### Permissions that can be allocated
+### Features that can be allocated
 
-These permissions could be added to a client specific permission group, if requested for
+These features could be added to a client specific permission group, if requested or required.
 
 	- can add canned responses (pre-defined replies that agents could use)
 	- can add external tools
 	- will receive daily expert performance csv via mail
 
-
-
 <!-- TODO: add a link to permission group editing here -->
 
 ## How to add agents with permission
-
 
 ### Step 1: Log in and select Administrator
 

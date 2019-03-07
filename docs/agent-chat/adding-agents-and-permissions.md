@@ -29,7 +29,7 @@ Agents can be assigned these 'Permission Groups' via the haptik administrator. B
 	- can claim chats for himself
 	- can logout
 
->  While these are the default set of permission groups available, if a client wishes to have these permissions segregated differently, they can do so.
+>  While these are the default set of permission groups available, if a client wishes to have these features segregated differently, they can do so.
 
 
 ### Features that can be allocated
@@ -42,13 +42,13 @@ These features could be added to a client specific permission group, if requeste
 
 <!-- TODO: add a link to permission group editing here -->
 
-## How to add agents with permission
+## How to Add Agents
 
-### Step 1: Log in and select Administrator
+### Step 1: Log in and select *Administrator*
 
 ![Logged in screen](assets/haptik_logged_in_screen.png)
 
-### Step 2: Select the Expert Dashboard admin tool
+### Step 2: Select the *Expert Dashboard* admin tool
 
 ![Expert Management](assets/expert_management.png)
 
@@ -77,7 +77,7 @@ Fields (RHS)
 	- Assign Client Access: checkmark the client/s that this agent will receive chats from.
 	- Assign Groups: select appropriate permission groups
 
-### Step 4: Click on Save
+### Step 4: Click on *Save*
 
 Your agent has been created.
 
@@ -102,7 +102,11 @@ You can choose to skip above step for later.
 
 An agent can access his user profile page by simply clicking on 'User Profile' as in below screen shot of our live chat tool.
 
-Over here he can view his permissions and modify his display picture.
-
 ![Chat bot with profile](assets/how_to_access_profile.png)
+
+He can view his saved details along with allocated permission group information
+Agent can also modify his display picture.
+
+<!-- TODO: add profile page screen shot here -->
+
 

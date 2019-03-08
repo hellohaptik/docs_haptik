@@ -5,6 +5,9 @@
     "previous": "Previous",
     "tagline": "Haptik documentation in one place",
     "docs": {
+      "agent-chat/adding-custom-tools": {
+        "title": "Adding your own custom tool"
+      },
       "agent-chat/admin_panel": {
         "title": "Admin Panel"
       },
@@ -29,14 +32,11 @@
       "agent-chat/custom-tools-data-communication": {
         "title": "Using conversation data"
       },
-      "agent-chat/custom-tools-how": {
-        "title": "Adding your own custom tool"
-      },
       "agent-chat/custom-tools-intro": {
         "title": "Introduction"
       },
       "agent-chat/index": {
-        "title": "Getting started"
+        "title": "Introduction"
       },
       "bot-analytics/index": {
         "title": "Getting started"
@@ -52,6 +52,9 @@
       },
       "bot-builder/advanced/demo-links": {
         "title": "Demo Page"
+      },
+      "bot-builder/advanced/integrating-custom-code": {
+        "title": "Integrating Custom Code"
       },
       "bot-builder/advanced/integrating-webviews-into-sdk": {
         "title": "Integrating WebViews"
@@ -138,7 +141,7 @@
         "title": "Overview"
       },
       "contributing/making-changes": {
-        "title": "Making Changes to the Documentation"
+        "title": "Updating Documentation"
       },
       "contributing/styleguide": {
         "title": "Styleguide"
@@ -204,12 +207,11 @@
       "First Category": "First Category",
       "Second Category": "Second Category",
       "Contributing": "Contributing",
+      "Advanced": "Advanced",
       "HSL Elements": "HSL Elements",
-      "Introduction": "Introduction",
       "Tools": "Tools",
       "Integrations": "Integrations",
-      "The Interface": "The Interface",
-      "Custom Tools": "Custom Tools"
+      "Introduction": "Introduction"
     }
   },
   "pages-strings": {

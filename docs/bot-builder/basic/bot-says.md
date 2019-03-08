@@ -17,7 +17,7 @@ To get started with adding some Bot Says responses, navigate to a specific node 
 Once you arrive at the Bot Says page, you'll see the above interface. This interface might differ slightly depending on the state of the node and the responses added to it.
 
 ## Types of Responses
-Depending on how the node is build, the Bot Says section can have four types of responses:
+Depending on how the node is built, the Bot Says section can have four types of responses:
 
 ### Initial Response
 
@@ -33,9 +33,9 @@ When there is only one entity present, this section is disabled as it is the sam
 
 
 ### Entity Responses
-If you have Entities present on a node, then Entity Response is the response that the bot will send when it doesn't know the Entity's value.
+If you have Entities present on a node, then Entity Response is the response that the bot will send when it doesn't know that Entity's value.
 
-For example, if you want to collect the User's name, you could ask *"What is your name?"* in the Entity Response. Now If the User replies back with *"My name is Bruce Wayne"*, then "Bruce Wayne" will be extracted as an entity by our NER. These entities can then be used to create personalized and advanced flows for every user and hence, build better bots.
+For example, if you want to collect the User's name, you could ask *"What is your name?"* in the Entity Response. Now If the User replies back with *"My name is Bruce Wayne"*, then "Bruce Wayne" will be extracted as an entity by our [NER](https://github.com/hellohaptik/chatbot_ner). These entities can then be used to create personalized and advanced flows for every user and hence, build better bots.
 
 > **Tip:** You can create your own Entities or use System Entities provided as a part of the Haptik Platform.
 
@@ -44,7 +44,18 @@ Then, it will start looking for the Entities in the Entity Response. If the bot 
 
 ![image](assets/bot-builder-bot-says/entity_response.gif)
 
+#### Mandatory vs Non-Mandatory Entities
+Depending on your flow, some entities could be required to move to the next step and some could be optional. To allow for this requirement, you can use the concept of Mandatory and Non-Mandatory entities.
+
+![Non Mandatory Entities](assets/bot-builder-bot-says/mandatory_entity.gif)
+
+For example, in a Lead Generation Bot, Phone Number may be optional but Email could be compulsory. To handle such scenario, you can mark the *phone_number* entity as Non-Mandatory by clicking on the Star Icon.
+
+What that would mean is, if the User provided the phone number, it will be captured under the *phone_number* entity. But if it wasn't provided, the user will still be able to continue with the flow as long as the other Mandatory entities are provided.
+
 > **Note:** You can set an Entity Response only for Mandatory Entities. To know more about the difference between Mandatory and Non-Mandatory entities, refer [this](../entities).
+
+Since Non-Mandatory entities are not compulsory for the node, you don't need to add a specific response for this entity. And the request to collect the answer can be combined with responses for other Mandatory Entities by using [Chat Forms](../entities) or other [HSLs](https://docs.haptik.ai/hsl/)
 
 
 ### Final Response
@@ -65,7 +76,7 @@ If the user is inactive for a specific interval, then the the bot replies with t
 
 ![bot says delay](assets/bot-builder-bot-says/follow_up.gif)
 
-> Note: Follow up message will be sent only if the user has not replied back after reaching that node and the chat is in Bot or Complete state.
+> **Note:** Follow up message will be sent only if the user has not replied back after reaching that node and the chat is in Bot or Complete state. To know more about all the States of a chat, please refer here (TODO).
 
 ## Priority of Responses:
 As explained above, the Response to be sent is chosen from a Top to Down order i.e.
@@ -73,12 +84,17 @@ As explained above, the Response to be sent is chosen from a Top to Down order i
 2. Depending on the order of Mandatory Entities, the response will be sent from the Entity whose value is not known. So in the above example, where add person_name, utils_city, email and phone_number as mandatory Entities, it will send the same.
 3. Once value of all Mandatory entities is known, the Final Response is sent, if applicable.
 
+> **Tip:** You can change the Priority of Mandatory entities by reordering them.
+
+![reordering entities](assets/bot-builder-bot-says/sorting_entities.gif)
 
 <hr>
 
 ## Structure of a Response
-Each of the abo
-ve four types of response (Initial Response, Entity Response, Final Response, and Delay Message) are composed of **Variants**, **Message** and **Quick replies**.
+Each of the above response (Initial Response, Entity Response, Final Response, and Follow Up Response) are composed of the following:
+- Variants
+- Message
+- Quick replies
 
 ### Variants
 A bot response can consist of multiple variants where each variant is an independent message. All variants should imply the same meaning as the bot chooses a variant randomly to avoid being repetitive even when asked the same question.

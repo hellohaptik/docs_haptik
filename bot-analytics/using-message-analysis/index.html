@@ -1,0 +1,198 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Message Analysis · Haptik Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;In the analytics tool you can go to the &amp;quot;&lt;em&gt;Message Analysis&lt;/em&gt;&amp;quot; section to analyse the bot performance at a message level.&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Message Analysis · Haptik Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.haptik.ai/index.html"/><meta property="og:description" content="&lt;p&gt;In the analytics tool you can go to the &amp;quot;&lt;em&gt;Message Analysis&lt;/em&gt;&amp;quot; section to analyse the bot performance at a message level.&lt;/p&gt;
+"/><meta property="og:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.haptik.ai/img/image_0.png"/><link rel="shortcut icon" href="/img/image_0.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-106563119-6', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="/js/index.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/image_0.png" alt="Haptik Docs"/><h2 class="headerTitleWithLogo">Haptik Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/#tools" target="_self">Tools</a></li><li class=""><a href="/#integrations" target="_self">Integrations</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Guides</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-analytics/">Getting started</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Guides</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-analytics/basic-analysis">Basic Analysis</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/bot-analytics/using-message-analysis">Message Analysis</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Resources</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-analytics/story-analysis">Story Analysis</a></li><li class="navListItem"><a class="navItem" href="/bot-analytics/user-ratings">User Ratings</a></li><li class="navListItem"><a class="navItem" href="/bot-analytics/user-journey">User Journey</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Message Analysis</h1></header><article><div><span><p>In the analytics tool you can go to the &quot;<em>Message Analysis</em>&quot; section to analyse the bot performance at a message level.</p>
+<p><img src="/assets/message-analysis-left-menu.png" alt="Message Analysis Left Menu"></p>
+<p>You can start by selecting a specific channel or bot and setting the time period. And then you should see a page with options to filter and analyse the messages sent and received by your bot.</p>
+<p>The top half of the page consists of multiple filters. We will go through each of these filters and understand how they can be used later in this document.</p>
+<p><img src="/assets/message-analysis-filters.png" alt="Message Analysis Filters"></p>
+<p>Below the filters you have a table of data where you can see the messages processed by clicking on the <code>View Messages</code> link. Or you can choose to see the conversations of your bot by clicking on the <code>View Conversations</code> link.</p>
+<blockquote>
+<p>Tip: A conversation is a set of messages processed to perform a task.</p>
+</blockquote>
+<p>The data in the tables are paginated and you can scroll to different pages of the table by using the navigation icons below the table.</p>
+<p><img src="/assets/message-analysis-table-pagination.png" alt="Pagination Navigation"></p>
+<h2><a class="anchor" aria-hidden="true" id="view-messages"></a><a href="#view-messages" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>View Messages</h2>
+<p>The View Messages section of the page which can be accessed by clicking on the <code>View Messages</code> link above the table. The table shows data about the messages processed by your bot.</p>
+<p>The columns of the table can be configured by you in case of Viewing Messages. We will discuss these configurations in a later <a href="#select-columns">section</a>. But by default the tool selects a few columns for you.</p>
+<p>These columns are:</p>
+<ul>
+<li><strong>Story</strong> - The <code>Story</code> in the bot builder that the message belongs to. A <code>Story</code> is a subcomponent within a bot.</li>
+<li><strong>Created At</strong> - This column tells you when the message was recieved by the bot.</li>
+<li><strong>Chat Link</strong> - This column provides a link to open and view the conversation related to the message. Clicking on the link will open a page that shows the conversation as well as the user details.<br>
+<img src="/assets/message-analysis-chat-link.png" alt="Chat Link"></li>
+<li><strong>Body</strong> - This column shows you the actual message that was sent.</li>
+<li><strong>Message Type</strong> - This column shows you how the message was sent. A message can be sent in two ways. One is the regular way, which is the user typing or clicking on a special chat element. The second is by tapping a task button from the taskbox.</li>
+<li><strong>Last Nodes</strong> - This column shows the last node that the user was on before sending this message. This information can be useful to understand what the context was for the user sending the current message.</li>
+<li><strong>Stop Logic Data</strong> - This column shows you what the reason was for the conversation flow to stop at this point. This reason could be one of the following:
+<ol>
+<li>Response Sent</li>
+<li>Missing Intent</li>
+<li>Missing Intent/Entities</li>
+<li>Casual Response sent</li>
+<li>Casual Response unchanged</li>
+<li>Negative Intent</li>
+<li>Smalltalk Response Sent</li>
+<li>Smalltalk Response Unchanged</li>
+<li>Error</li>
+<li>Outlier Response</li>
+<li>Retry Ideal Flow</li>
+</ol></li>
+<li><strong>Total User Messages</strong> - This column shows the total number of messages in the conversation to which the message belongs.</li>
+<li><strong>Full Name</strong> - This column shows the full name of the user who sent the message.</li>
+</ul>
+<p><img src="/assets/message-analysis-view-messages.png" alt="View Messages"></p>
+<h2><a class="anchor" aria-hidden="true" id="view-conversations"></a><a href="#view-conversations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>View Conversations</h2>
+<p>The View Conversations section of the page which can be accessed by clicking on the <code>View Conversations</code> link above the table. The table shows data at a conversation level, rather than at a message level.</p>
+<p>In case of viewing conversations the columns of the table are fixed and they are:</p>
+<ul>
+<li><strong>Last Node</strong> - This column gives you information about the previous node before the user started the current conversation. This information can help you understand the context of the current conversation.</li>
+<li><strong>Chat Link</strong> - This column provides a link to open and view the complete conversation. This is similar to the chat link in the View Messages table.</li>
+<li><strong>Full Name</strong> - This column provides the full name of the user who was part of the conversation.</li>
+<li><strong>Time of Creation</strong> - This column provides information about when the conversation started.</li>
+<li><strong>Total Number of Responses From</strong> - This column provides a overview of the sources of the different messages in the conversation.
+<ol>
+<li>User - This section tells you how many messages of the conversation came from the user.</li>
+<li>Bot - This section tells you how many messages of the conversation came from the bot.</li>
+<li>Assistant - This section tells you how many messages of the conversation came from a human agent.</li>
+<li>Others - This section tells you how many messages came from other sources. These could include notifications, reminders, feedback messages etc.</li>
+</ol></li>
+<li><strong>Broken Messages</strong> - This column gives you information about how many messages broke in the conversation. A message is considered to be broken if the bot cannot respond to it.</li>
+</ul>
+<p><img src="/assets/message-analysis-view-conversations.png" alt="View Conversations"></p>
+<h3><a class="anchor" aria-hidden="true" id="downloading-the-data"></a><a href="#downloading-the-data" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Downloading the data</h3>
+<p>There is an option to download the Message or Conversation data in CSV format if needed. This can be done by clicking on the <code>Download CSV</code> button above the table showing the data.</p>
+<p><img src="/assets/message-analysis-download.png" alt="Download CSV Button"></p>
+<h2><a class="anchor" aria-hidden="true" id="filters"></a><a href="#filters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Filters</h2>
+<p>As mentioned above, the Message Analysis page provides you with many filter options. You can use these filters to select what data you see in the Conversation/Message table on the page.</p>
+<p>In this section of the document we will go over each of these filter options. We will see how you can use one or a combination of these options to select the data you view in the tables.</p>
+<h3><a class="anchor" aria-hidden="true" id="search-body"></a><a href="#search-body" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Search Body</h3>
+<p>The first filter option is <code>Search Body</code>. You can use this option to filter the table based on the message body.</p>
+<p>For example you can filter by all messages containing the word &quot;ticket&quot; by entering it in the <code>Search Body</code> input field and then clicking on the magnifying glass icon inside the input field.</p>
+<p><img src="/assets/message-analysis-search-body.png" alt="Search Body"></p>
+<h3><a class="anchor" aria-hidden="true" id="select-nodes"></a><a href="#select-nodes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Select Nodes</h3>
+<p>The next filter option is <code>Select Nodes</code>. This option allows you to filter by the bot builder nodes the message or conversation uses.</p>
+<p>This is a dropdown field. You can click on the field and the dropdown options should show the different nodes in the bot. You can pick one of the nodes from the list and the table will be filtered to only data relevant to that node.</p>
+<p><img src="/assets/message-analysis-select-nodes.png" alt="Select Nodes"></p>
+<h3><a class="anchor" aria-hidden="true" id="conv-id"></a><a href="#conv-id" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Conv ID</h3>
+<p>The next filter is <code>Conv ID</code>. This filter lets you see data related to a particular conversation. You can enter the conversation id of the conversation you want to view the data for in the input field and click on the magnifying glass icon to filter the data.</p>
+<p><img src="/assets/message-analysis-conversation-id.png" alt="Conversation ID"></p>
+<h3><a class="anchor" aria-hidden="true" id="confidence-score"></a><a href="#confidence-score" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Confidence Score</h3>
+<p>The next filter we will look at is <code>Confidence Score</code>. This option lets you filter messages that the AI was able to categorise by the degree of confidence configured by you.</p>
+<p>The <code>Confidence Score</code> is a draggable option where you can set a range of confidence scores rather than a specific confidence score.</p>
+<p><img src="/assets/message-analysis-confidence-score.png" alt="Confidence Score"></p>
+<h3><a class="anchor" aria-hidden="true" id="message-by"></a><a href="#message-by" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Message By</h3>
+<p>The message analysis page also lets you filter the data in the table based on the source of the message. You can use the dropdown option to select the source which can be one of:</p>
+<ul>
+<li>All - Shows all messages.</li>
+<li>Bot - Only shows messages sent by the bot.</li>
+<li>User - Only shows messages sent by the user.</li>
+<li>Assistant - Only shows messages sent by the chat agent.</li>
+</ul>
+<p><img src="/assets/message-analysis-message-by.png" alt="Message By"></p>
+<h3><a class="anchor" aria-hidden="true" id="stop-logic"></a><a href="#stop-logic" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Stop Logic</h3>
+<p>This option lets you filter by the different stop logic options discussed in the earlier <a href="#view-messages">section</a>.</p>
+<p><img src="/assets/message-analysis-stop-logic-filter.png" alt="Stop Logic Filter"></p>
+<h3><a class="anchor" aria-hidden="true" id="message-id"></a><a href="#message-id" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Message ID</h3>
+<p>This option lets you filter based on the Message ID. You can enter the Message ID of the message you want to see in the input field. Then on clicking the magnifying glass icon in the input box the data should get filtered.</p>
+<p><img src="/assets/message-analysis-message-id-filter.png" alt="Message ID filter"></p>
+<h3><a class="anchor" aria-hidden="true" id="broken-messages-only"></a><a href="#broken-messages-only" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Broken Messages Only</h3>
+<p>This option lets you switch betweeen seeing only bot break messages and seeing all messages.</p>
+<p><img src="/assets/message-analysis-broken-messages-filter.png" alt="Bot Break Filter"></p>
+<h3><a class="anchor" aria-hidden="true" id="select-stories"></a><a href="#select-stories" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Select Stories</h3>
+<p>This option lets you filter the data based on which story on the bot builder the conversation or message belonged to.</p>
+<p><img src="/assets/message-analysis-select-stories.png" alt="Select Stories"></p>
+<h3><a class="anchor" aria-hidden="true" id="user-id"></a><a href="#user-id" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>User ID</h3>
+<p>This option lets you filter the data based on the user id. This can be helpful to understand the messages/conversations of a partcular user.</p>
+<p>You can enter the user id you want to filter by inside the input field. Then on clicking the magnifying glass icon, the data should be filtered.</p>
+<p><img src="/assets/message-analysis-user-id.png" alt="User Id Filter"></p>
+<h3><a class="anchor" aria-hidden="true" id="select-columns"></a><a href="#select-columns" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Select Columns</h3>
+<p>The final option we will be looking at is the <code>Select Columns</code> option which lets you filter what columns are shown in the View Messages table.</p>
+<p>The columns that you can select from are:</p>
+<ul>
+<li>Chat Link</li>
+<li>Message ID</li>
+<li>Body</li>
+<li>Story</li>
+<li>Last Nodes</li>
+<li>Predicted Bot</li>
+<li>Stop Logic Data</li>
+<li>Redis Cache</li>
+<li>Coll_Conv</li>
+<li>Created At</li>
+<li>Full Name</li>
+<li>New Conversation</li>
+<li>Total User Messages</li>
+<li>Unigram</li>
+<li>Bigram</li>
+<li>Trigram</li>
+<li>Confidence Score</li>
+</ul>
+<blockquote>
+<p>Note: If you apply filters on a column that is not selected the data will still be filtered.</p>
+</blockquote>
+<p><img src="/assets/message-analysis-select-columns.png" alt="Select Columns"></p>
+<h3><a class="anchor" aria-hidden="true" id="clear-filters"></a><a href="#clear-filters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Clear Filters</h3>
+<p>Apart from the filter options, you also have a button to clear all filters you have applied.</p>
+<blockquote>
+<p>Note: When you apply multiple filters, it is possible for the filters to cancel out each other or overlap each other. In such cases you might not see any data or see unexpected data. In such cases it is useful to use this button to clear all filters.</p>
+</blockquote>
+<p><img src="/assets/message-analysis-clear-filters.png" alt="Clear Filters"></p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-3-8</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/bot-analytics/basic-analysis"><span class="arrow-prev">← </span><span>Basic Analysis</span></a><a class="docs-next button" href="/bot-analytics/story-analysis"><span>Story Analysis</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#view-messages">View Messages</a></li><li><a href="#view-conversations">View Conversations</a><ul class="toc-headings"><li><a href="#downloading-the-data">Downloading the data</a></li></ul></li><li><a href="#filters">Filters</a><ul class="toc-headings"><li><a href="#search-body">Search Body</a></li><li><a href="#select-nodes">Select Nodes</a></li><li><a href="#conv-id">Conv ID</a></li><li><a href="#confidence-score">Confidence Score</a></li><li><a href="#message-by">Message By</a></li><li><a href="#stop-logic">Stop Logic</a></li><li><a href="#message-id">Message ID</a></li><li><a href="#broken-messages-only">Broken Messages Only</a></li><li><a href="#select-stories">Select Stories</a></li><li><a href="#user-id">User ID</a></li><li><a href="#select-columns">Select Columns</a></li><li><a href="#clear-filters">Clear Filters</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="/bot-builder/basic" class="footer-column-link">Bot Builder</a><a href="/agent-chat" class="footer-column-link">Agent Chat</a><a href="/bot-analytics" class="footer-column-link">Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://hellohaptik.github.io/haptik-ios-framework" class="footer-column-link">iOS SDK</a><a href="https://hellohaptik.github.io/haptik-android-lib" class="footer-column-link">Android SDK</a><a href="https://hellohaptik.github.io/javascript_sdk" class="footer-column-link">Web SDK</a><a href="/webhooks" class="footer-column-link">Webhooks</a><a href="/hsl" class="footer-column-link">HSL</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="/contributing/index" class="footer-column-link">Contributing</a><a href="/other/security" class="footer-column-link">Security</a><a href="/other/support" class="footer-column-link">Support</a><a href="/other/sla" class="footer-column-link">SLA</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2019 Haptik Inc.</section></footer></div></body></html>

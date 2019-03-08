@@ -2,23 +2,21 @@
 title: Integrating Custom Code
 ---
 
-Once a particular node has been detected and the mandatory entities have been collected, these entities can be given to custom code to execute your own business logic. There are 3 different ways to execute this business logic.
+Once a particular node has been detected and the mandatory entities have been collected, these entities can be given to custom code to execute your own business logic. 
 
-1. API Functions
-   ^^^^^^^^^^^^^^^^
+There are 3 different ways to execute this business logic.
 
+## API Functions
 _This is internal to Haptik Developers_
 
-2. Webhooks
-   ^^^^^^^^^^^
-
+## Webhooks
 A node can be configured to call a webhook once the required entities have been collected.
 
 To deploy a live webhook that can receive webhook events, your code must be hosted on a public HTTP server that has the following:
 
-- A Valid SSL Certificate
+* A Valid SSL Certificate
 
-- An open port that accepts `GET` and `POST` requests
+* An open port that accepts `GET` and `POST` requests
 
 Select the API Functions section
 Select the type as WebHook
@@ -43,116 +41,96 @@ POST
 - - X-Hub-Signature
   - sha1=signature (The HMAC hex digest of the request body. This header will be sent if the node is configured with a secret. The HMAC hex digest is generated using the sha1 hash function and the secret as the HMAC key.)
 
+
+|    Header      | Description  |
+| -------------  | -------------|
+| Content-Type   | application/json |
+| X-Hub-Signature| sha1=signature (The HMAC hex digest of the request body. This header will be sent if the node is configured with a secret. The HMAC hex digest is generated using the sha1 hash function and the secret as the HMAC key.)|
+
 **Request Parameters**
 
-.. code:: json
-
+```json
 {
-"node":"system name of the node",
-"event":"API_INTEGRATION",
-"user":{
-"user_name":"haptik username",
-"full_name":"",
-"device_platform": 5
-},
-"entities":{
-"product_id":[
-{
-"detection":"message",
-"original_text":"71",
-"entity_value":"71"
+    "node":"system name of the node",
+    "event":"API_INTEGRATION",
+    "user":{
+                "user_name":"haptik username",
+                "full_name":"",
+                "device_platform": 5
+            },
+    "entities":{
+                    "product_id":[
+                        {
+                        "detection":"message",
+                        "original_text":"71",
+                        "entity_value":"71"
+                        }
+                    ],
+                    "email":[
+                        {
+                        "detection":"user_profile",
+                        "original_text":"test@test.com",
+                        "entity_value":"test@test.com"
+                        }
+                    ],
+                    "product_name":[
+                        {
+                        "detection":"default",
+                        "original_text":"headphones",
+                        "entity_value":"headphones"
+                        }
+                    ]
+                }
 }
-],
-"email":[
-{
-"detection":"user_profile",
-"original_text":"test@test.com",
-"entity_value":"test@test.com"
-}
-],
-"product_name":[
-{
-"detection":"default",
-"original_text":"headphones",
-"entity_value":"headphones"
-}
-]
-}
-}
-
-.. list-table::
-:widths: 15 10 30
-:header-rows: 1
-
-- - Name
-  - Type
-  - Description
-- - node
-  - String
-  - Unique system name of the calling node
-- - event
-  - String
-  - event type e.g. API_INTEGRATION
-- - user
-  - Dictionary
-  - Dictionary containing user data
-- - entities
-  - Dictionary
-  - The entities dictionary will have a key for each entity that is detected e.g. movie_name, venue, phone_number, etc. The value for each entity is a list of dictionary as shown below.
+```
+|Name|Type|Description|
+|----|----|-----------|
+|node|String|Unique system name of calling node|
+|event|String|event type e.g. API_INTEGRATION|
+|user|Dictionary|Dictionary containing user data|
+|entities|Dictionary|The entities dictionary will have a key for each entity that is detected e.g. movie_name, venue, phone_number, etc. The value for each entity is a list of dictionary as shown below.|
 
 **entity output format**
 
-.. code:: json
-
+```json
 [
-{
-"entity_value": entity_value,
-"detection": detection_method,
-"original_text": original_text
-}
+    {
+        "entity_value": "entity_value",
+        "detection": "detection_method",
+        "original_text": "original_text"
+    }
 ]
+```
 
-Consider the following example for detailed explanation:
+Consider the following example for detailed explanation:  
+**"I want to order from mcd"**
 
-"I want to order from mcd"
-
-- entity_value: This will store the value of entity (i.e entity value) that is detected. For example, Mc’Donalds.
-- detection: This will store how the entity is detected i.e. whether from message, structured value or fallback value.
-- original_text: This will store the actual value that is detected. For example, mcd.
+* entity_value: This will store the value of entity (i.e entity value) that is detected. For example, Mc’Donalds.
+* detection: This will store how the entity is detected i.e. whether from message, structured value or fallback value.
+* original_text: This will store the actual value that is detected. For example, mcd.
 
 **Response Parameters**
 
 A `200 OK` HTTP Response must be sent back to the Haptik Servers, Failing which a bot break response will be sent to the user. Webhook response must be sent in 30 seconds or less, failing which a bot break response will be sent to the user.
 The following additional fields can be specified by the Webhook to control behaviour of the bot and send messages to the user.
 
-.. code:: json
-
+```json
 {
 "response": [
-"message1",
-"message2",
-....
-],
+            "message1",
+            "message2",
+            "...."
+            ],
 "response_message_type": 16,
-"status": True/False,
+"status": "True/False",
 }
+```
 
-.. list-table::
-:widths: 15 10 30
-:header-rows: 1
-
-- - Name
-  - Type
-  - Description
-- - response
-  - Array
-  - List of messages to be sent to the user
-- - response_message_type
-  - Integer
-  - Message Type of the Message. Please refer the Message Type Documentation
-- - status
-  - Boolean
-  - If status is True, then the decorator will assign the response to success_response. If status is False, then the decorator will assign the response to failure_response.
+|Name|Type|Description|
+|----|----|-----------|
+|response|Array|List of messages to be sent to the user|
+|response_message_type|Integer|Message Type of the Message. Please refer the Message Type Documentation|
+|status|Boolean|If status is True, then the decorator will assign the response to success_response. If status is False, then the decorator will assign the response to failure_response.|
 
 **Validate Webhook**
 
@@ -160,7 +138,7 @@ The HTTP request will contain an X-Hub-Signature header which contains the SHA1 
 
 **Sample python code for webhook**
 
-.. code-block:: python
+```python
 
 #!/usr/bin/env python
 """
@@ -237,6 +215,7 @@ from sys import argv
            run(port=int(argv[1]))
        else:
            run()
+```
 
-3. Code Upload
-   ^^^^^^^^^^^^^^ -_Coming Soon_
+## Code Upload
+_Coming Soon_

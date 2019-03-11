@@ -1,16 +1,17 @@
 ---
 title: Integrating Custom Code
-
-
 ---
 
-Once a particular node has been detected and the mandatory entities have been collected, these entities can be given to custom code to execute your own business logic. There are 3 different ways to execute this business logic.
+## Node Integrations
+Once a particular node has been detected and the mandatory entities have been collected, these entities can be given to custom code to execute your own business logic.
 
-## 1. API Functions
+There are 2 different ways to execute this business logic.
+
+### API Functions
 
 _This is internal to Haptik Developers_
 
-## 2. Webhooks
+### Webhooks
 
 A node can be configured to call a webhook once the required entities have been collected.
 
@@ -142,7 +143,7 @@ The following additional fields can be specified by the Webhook to control behav
 
 **response** -Response will be array of string(s) or hsl(haptik specific language).
 
-for example: 
+for example:
 
 1. Response with single line
 
@@ -154,19 +155,18 @@ for example:
    ```
 
 2. Response with multi-line
-
-3. ```json
-   {
-       "status": true,
-       "response": ["phone number seems invalid", "please try again"]
-   }
-   ```
+    ```json
+    {
+        "status": true,
+        "response": ["phone number seems invalid", "please try again"]
+    }
+    ```
 
 3. Response with advanced UI elements [for more detail read here](https://haptik-docs.readthedocs.io/en/latest/bot-builder-advanced/message-elements.html)
 
 ![Bot response with advanced UI elements](/assets/advanced-ui-element.png)
 
-   
+
  ```json
    {
      "status": true,
@@ -211,10 +211,6 @@ As per our pipeline, if there is no response at specific stages, then it will be
 > So if human_assistance is OFF on business manager => Botbreak message will be sent.
 >
 > If human_assistance is ON on business manager => Chat will be moved to pending and assigned to an agent.
-
-
-
-
 
 **Validate Webhook**
 
@@ -303,13 +299,96 @@ if __name__ == "__main__":
         run()
 ```
 
+## Additional APIs
+
+### Move a chat to pending
+
+This API allows you to move chats for a Bot to an Agent via a `POST` request to the Haptik Platform.
+
+Example URL: `https://<base-url>/integration/external/v1.0/send_to_agent/`
+
+> Note: The `base-url` will be provided by Haptik at the time of integration.
 
 
-## 3. Code Upload
+#### Headers
 
--*Coming Soon*
+```
+Authorization: Bearer <TOKEN>
+client-id: <CLIENT_ID>
+Content-Type: application/json
+```
 
+- Authorization - The Authorization header of each HTTP request should be “Bearer” followed by your token which will be provided by Haptik
+- client-id - The client id for your account which will be provided by Haptik
+- Content-Type - application/json
 
+#### Request
+
+```json
+{
+    "team_name": "<Name of the team>",
+    "user_name": "<haptik user name>",
+    "business_id": "<business id>",
+}
+```
+
+- user_name - Identifier for the User provided by Haptik when invoking the Integration API
+- business_id - This is a numeric identifier for the channel where the User is messaging
+- team_name - Name of the team to which the chat is to be assigned. Can be fetched from the Teams page of Agent Chat Tool.
+
+#### Response
+
+A successful request to the API will return a `200` status code with a JSON response object.
+
+```json
+{
+    "success": true
+}
+```
+- success: Indicates if the API was a success or failure
+
+#### Error Response
+
+If there is any error in the Headers or the Request body, then the Error message will be returned in a JSON as shown below:
+
+```json
+{
+  "error_message": "user is not registered"
+}
+```
+
+Here is a list of some possible error messages
+|Error Message|Details|
+--------------|-------|
+|client_id missing in headers|client-id is not passed in the Headers of the request|
+|invalid client_id in headers|Incorrect client-id is passed in the headers
+|invalid authorization in headers|The Authorization header is not correct
+|token missing in headers|The Authorization token is not provided
+|invalid token provided|The Authorization token provided is incorrect
+|user_name missing in the request|The user_name is not provided in the request body
+|business_id missing in the request|The business_id is not provided in the request body
+|team_name missing in the request|The team_name is not provided in the request body
+|invalid user_name|The user_name provided is not valid for the Partner
+|invalid business_id provided|The business_id provided is not valid for the Partner
+|business "<business_id>" is inactive|The business is inactive for the Partner
+|invalid team_name provided|The team_name is not valid for the Partner
+|team "<team_name>" is inactive|The associated Team is inactive
+|user has not sent a message|The user has not had any chat on that Business
+
+#### Sample CURL command
+
+```
+curl -X POST \
+    https://<base-url>/integration/external/v1.0/send_to_agent/ \
+  -H 'Authorization: Bearer <TOKEN>' \
+  -H 'client-id: <CLIENT_ID>' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "team_name": "<Name of the team>",
+    "user_name": "<haptik user name>",
+    "business_id": "<business id>"
+}'
+```
 
 ## Best Practices
 

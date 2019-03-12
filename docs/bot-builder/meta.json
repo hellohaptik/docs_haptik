@@ -29,8 +29,7 @@
 			"basic/bot-prompt-trigger",
 			"basic/general-responses",
 			"basic/platforms-deployment",
-                        "basic/forms",
-			"basic/testing-bot"
+                        "basic/forms"
 		],
 		"Advanced": [
 			"advanced/integrating-custom-code"	

@@ -16,7 +16,7 @@ Haptik is the **Sentence Similarity** module, which is a suite of many
 different ML algorithms that help in finding the right
 node.
 
-![User Responses Overview](assets/user-says/independent_responses.png)
+![User Responses Overview](assets/bot-builder-user-says/independent_responses.png)
 
 
 For example, if you want a node to get detected when a user types *
@@ -63,7 +63,7 @@ For example, after asking for Demat Account, if the User wants to know
 how to open an account, you could add "Open Account" as a Dependent User
 Response on "Open Demat Account" with "Demat".
 
-![Dependent Responses](assets/user-says/dependent_responses.png)
+![Dependent Responses](assets/bot-builder-user-says/dependent_responses.png)
 
 
 ## Negative Responses
@@ -114,7 +114,7 @@ select “View Synonyms” from the menu.
 This will open up a list of all available Synonyms for the word you
 selected.
 
-![Synonyms](assets/user-says/view_synonyms.gif)
+![Synonyms](assets/bot-builder-user-says/view_synonyms.gif)
 
 #### Add Synonyms
 After viewing the synonyms, just select the "Enable" checkbox in the
@@ -141,7 +141,7 @@ Sentence Similarity Module to generate the machine learning models.
 These models are then used on User’s every message to select the node
 which matches the requirements.
 
-![Train Bot](assets/user-says/train_bot_header.png)
+![Train Bot](assets/bot-builder-user-says/train_bot_header.png)
 
 To generate these models, you will have to click on Train Bot. This will
 send an email with the result of the training process. It will also

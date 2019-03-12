@@ -238,81 +238,84 @@ The following additional fields can be specified by the Webhook to control behav
 <p><strong>Validate Webhook</strong></p>
 <p>The HTTP request will contain an X-Hub-Signature header which contains the SHA1 signature of the request payload, using the secret_key entered for the node, and prefixed with sha1=. Your API can verify this signature to validate the integrity and origin of the payload.</p>
 <p><strong>Sample python code for webhook</strong></p>
-<pre><code class="hljs css language-python">   <span class="hljs-comment"># !/usr/bin/env python</span>
-   
-   <span class="hljs-string">"""
-   Simple HTTP server in python for handling haptik webhooks.
-   
-   Usage::
-   ./test_server.py [&lt;port&gt;]
-   
-   """</span>
-   <span class="hljs-keyword">import</span> cgi
-   <span class="hljs-keyword">import</span> json
-   <span class="hljs-keyword">import</span> hmac
-   <span class="hljs-keyword">import</span> hashlib
-   <span class="hljs-keyword">from</span> BaseHTTPServer <span class="hljs-keyword">import</span> BaseHTTPRequestHandler, HTTPServer
-   
-   <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WebhookServer</span><span class="hljs-params">(BaseHTTPRequestHandler)</span>:</span>
-       <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_set_headers</span><span class="hljs-params">(self, status_code, content_type)</span>:</span>
-           self.send_response(status_code)
-           self.send_header(<span class="hljs-string">'Content-type'</span>, content_type)
-           self.end_headers()
-   
-      <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">do_GET</span><span class="hljs-params">(self)</span>:</span>
-          self._set_headers(status_code=<span class="hljs-number">200</span>, content_type=<span class="hljs-string">'text/html'</span>)
-          self.wfile.write(<span class="hljs-string">"&lt;html&gt;&lt;body&gt;&lt;h1&gt;Test Server&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;"</span>)
-   
-      <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">do_POST</span><span class="hljs-params">(self)</span>:</span>
-          content_type, pdict = cgi.parse_header(self.headers.getheader(<span class="hljs-string">'Content-Type'</span>))
-   
-          <span class="hljs-keyword">if</span> content_type != <span class="hljs-string">'application/json'</span>:
-              self.send_response(<span class="hljs-number">400</span>)
-              self.end_headers()
-              <span class="hljs-keyword">return</span>
-   
-          length = int(self.headers.getheader(<span class="hljs-string">'Content-Length'</span>))
-          <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> length:
-              self.send_response(<span class="hljs-number">400</span>)
-              self.end_headers()
-              <span class="hljs-keyword">return</span>
-   
-          body = self.rfile.read(length)
-          data = json.loads(body)
-          secret_key = <span class="hljs-string">'test'</span>
-          hash_value = hmac.new(secret_key, body, hashlib.sha1).hexdigest()
-          sha1_signature = <span class="hljs-string">'sha1='</span> + str(hash_value)
-          request_signature = self.headers.getheader(<span class="hljs-string">'X-Hub-Signature'</span>)
-          <span class="hljs-keyword">if</span> sha1_signature != request_signature:
-              self.send_response(<span class="hljs-number">401</span>)
-              self.end_headers()
-              <span class="hljs-keyword">return</span>
-          entities = data[<span class="hljs-string">'entities'</span>]
-          product_name = entities[<span class="hljs-string">'product_name'</span>][<span class="hljs-number">0</span>][<span class="hljs-string">'entity_value'</span>] <span class="hljs-keyword">if</span> entities.get(<span class="hljs-string">'product_name'</span>) <span class="hljs-keyword">else</span> <span class="hljs-literal">None</span>
-          <span class="hljs-keyword">if</span> product_name == <span class="hljs-string">'speaker'</span>:
-              message = <span class="hljs-string">'The Wireless Radio Alarm Clock Speaker can be yours only for Rs.1599'</span>
-          <span class="hljs-keyword">elif</span> product_name == <span class="hljs-string">'powerbank'</span>:
-              message = <span class="hljs-string">'The Ambrane Powerbank can be yours only for Rs.1799'</span>
-          <span class="hljs-keyword">else</span>:
-              self.send_response(<span class="hljs-number">400</span>)
-              self.end_headers()
-              <span class="hljs-keyword">return</span>
-          response = {<span class="hljs-string">"status"</span>: <span class="hljs-literal">True</span>, <span class="hljs-string">"response"</span>: [message]}
-          self._set_headers(status_code=<span class="hljs-number">200</span>, content_type=<span class="hljs-string">'application/json'</span>)
-          self.wfile.write(json.dumps(response))
-   
-   <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">run</span><span class="hljs-params">(server_class=HTTPServer, handler_class=WebhookServer, port=<span class="hljs-number">80</span>)</span>:</span>
-   server_address = (<span class="hljs-string">''</span>, port)
-   httpd = server_class(server_address, handler_class)
-   <span class="hljs-keyword">print</span> <span class="hljs-string">'Starting test server...'</span>
-   httpd.serve_forever()
-   
-   <span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">"__main__"</span>:
-   <span class="hljs-keyword">from</span> sys <span class="hljs-keyword">import</span> argv
-      <span class="hljs-keyword">if</span> len(argv) == <span class="hljs-number">2</span>:
-          run(port=int(argv[<span class="hljs-number">1</span>]))
-      <span class="hljs-keyword">else</span>:
-          run() 
+<pre><code class="hljs css language-python"><span class="hljs-comment"># !/usr/bin/env python</span>
+
+<span class="hljs-string">"""
+Simple HTTP server in python for handling haptik webhooks.
+
+Usage::
+./test_server.py [&lt;port&gt;]
+
+"""</span>
+<span class="hljs-keyword">import</span> cgi
+<span class="hljs-keyword">import</span> json
+<span class="hljs-keyword">import</span> hmac
+<span class="hljs-keyword">import</span> hashlib
+<span class="hljs-keyword">from</span> BaseHTTPServer <span class="hljs-keyword">import</span> BaseHTTPRequestHandler, HTTPServer
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WebhookServer</span><span class="hljs-params">(BaseHTTPRequestHandler)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_set_headers</span><span class="hljs-params">(self, status_code, content_type)</span>:</span>
+        self.send_response(status_code)
+        self.send_header(<span class="hljs-string">'Content-type'</span>, content_type)
+        self.end_headers()
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">do_GET</span><span class="hljs-params">(self)</span>:</span>
+        self._set_headers(status_code=<span class="hljs-number">200</span>, content_type=<span class="hljs-string">'text/html'</span>)
+        self.wfile.write(<span class="hljs-string">"&lt;html&gt;&lt;body&gt;&lt;h1&gt;Test Server&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;"</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">do_POST</span><span class="hljs-params">(self)</span>:</span>
+        content_type, pdict = cgi.parse_header(self.headers.getheader(<span class="hljs-string">'Content-Type'</span>))
+
+        <span class="hljs-keyword">if</span> content_type != <span class="hljs-string">'application/json'</span>:
+            self.send_response(<span class="hljs-number">400</span>)
+            self.end_headers()
+            <span class="hljs-keyword">return</span>
+
+        length = int(self.headers.getheader(<span class="hljs-string">'Content-Length'</span>))
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> length:
+            self.send_response(<span class="hljs-number">400</span>)
+            self.end_headers()
+            <span class="hljs-keyword">return</span>
+
+        body = self.rfile.read(length)
+        data = json.loads(body)
+        secret_key = <span class="hljs-string">'test'</span>
+        hash_value = hmac.new(secret_key, body, hashlib.sha1).hexdigest()
+        sha1_signature = <span class="hljs-string">'sha1='</span> + str(hash_value)
+        request_signature = self.headers.getheader(<span class="hljs-string">'X-Hub-Signature'</span>)
+        <span class="hljs-keyword">if</span> sha1_signature != request_signature:
+            self.send_response(<span class="hljs-number">401</span>)
+            self.end_headers()
+            <span class="hljs-keyword">return</span>
+
+        entities = data[<span class="hljs-string">'entities'</span>]
+        product_name = entities[<span class="hljs-string">'product_name'</span>][<span class="hljs-number">0</span>][<span class="hljs-string">'entity_value'</span>] <span class="hljs-keyword">if</span> entities.get(<span class="hljs-string">'product_name'</span>) <span class="hljs-keyword">else</span> <span class="hljs-literal">None</span>
+        <span class="hljs-keyword">if</span> product_name == <span class="hljs-string">'speaker'</span>:
+            message = <span class="hljs-string">'The Wireless Radio Alarm Clock Speaker can be yours only for Rs.1599'</span>
+        <span class="hljs-keyword">elif</span> product_name == <span class="hljs-string">'powerbank'</span>:
+            message = <span class="hljs-string">'The Ambrane Powerbank can be yours only for Rs.1799'</span>
+        <span class="hljs-keyword">else</span>:
+            self.send_response(<span class="hljs-number">400</span>)
+            self.end_headers()
+            <span class="hljs-keyword">return</span>
+
+        response = {<span class="hljs-string">"status"</span>: <span class="hljs-literal">True</span>, <span class="hljs-string">"response"</span>: [message]}
+        self._set_headers(status_code=<span class="hljs-number">200</span>, content_type=<span class="hljs-string">'application/json'</span>)
+        self.wfile.write(json.dumps(response))
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">run</span><span class="hljs-params">(server_class=HTTPServer, handler_class=WebhookServer, port=<span class="hljs-number">80</span>)</span>:</span>
+        server_address = (<span class="hljs-string">''</span>, port)
+        httpd = server_class(server_address, handler_class)
+        <span class="hljs-keyword">print</span> <span class="hljs-string">'Starting test server...'</span>
+        httpd.serve_forever()
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">"__main__"</span>:
+    <span class="hljs-keyword">from</span> sys <span class="hljs-keyword">import</span> argv
+    <span class="hljs-keyword">if</span> len(argv) == <span class="hljs-number">2</span>:
+        run(port=int(argv[<span class="hljs-number">1</span>]))
+    <span class="hljs-keyword">else</span>:
+        run()
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="3-code-upload"></a><a href="#3-code-upload" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. Code Upload</h2>
 <p>-<em>Coming Soon</em></p>
@@ -320,4 +323,4 @@ The following additional fields can be specified by the Webhook to control behav
 <p><strong>1. Assign Chat to Agent</strong> In some scenarios, where integration response fails or some unknown exception occurs then instead of sending bot break message we can also directly assign chat to an agent for better user experience. <Coming Soon></p>
 <p><strong>2.Handle textual content</strong> - Everytime we want to change bot's response, a code change is required. To avoid that pain, we can use <strong>key value stores</strong>. Any person with zero to little tech knowledge can change bot response from key value store (with GUI) by updating the message copy corresponding to that unique message key or ID. This message key can be shared with the developer and fetch the response using that key.</p>
 <p><strong>3. HSLs</strong>  - Haptik defines a superset of UI elements that are available across multiple platforms. These UI elements are then converted to their platform equivalent (js-sdk, android, ios, facebook-messenger, etc..) if they are not available on that specific platform. Eg. Forms are converted to quick replies on the Facebook platform and collected over free form. <a href="https://docs.haptik.ai/hsl/">for more detail read here</a></p>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-3-11</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/bot-builder/basic/platforms-deployment"><span class="arrow-prev">← </span><span>Platforms Deployment</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#1-api-functions">1. API Functions</a></li><li><a href="#2-webhooks">2. Webhooks</a></li><li><a href="#3-code-upload">3. Code Upload</a></li><li><a href="#best-practices">Best Practices</a></li></ul></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="/bot-builder/basic" class="footer-column-link">Bot Builder</a><a href="/agent-chat" class="footer-column-link">Agent Chat</a><a href="/bot-analytics" class="footer-column-link">Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://hellohaptik.github.io/haptik-ios-framework" class="footer-column-link">iOS SDK</a><a href="https://hellohaptik.github.io/haptik-android-lib" class="footer-column-link">Android SDK</a><a href="https://hellohaptik.github.io/javascript_sdk" class="footer-column-link">Web SDK</a><a href="/webhooks" class="footer-column-link">Webhooks</a><a href="/hsl" class="footer-column-link">HSL</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="/contributing/index" class="footer-column-link">Contributing</a><a href="/other/security" class="footer-column-link">Security</a><a href="/other/support" class="footer-column-link">Support</a><a href="/other/sla" class="footer-column-link">SLA</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2019 Haptik Inc.</section></footer></div></body></html>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-3-12</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/bot-builder/basic/platforms-deployment"><span class="arrow-prev">← </span><span>Platforms Deployment</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#1-api-functions">1. API Functions</a></li><li><a href="#2-webhooks">2. Webhooks</a></li><li><a href="#3-code-upload">3. Code Upload</a></li><li><a href="#best-practices">Best Practices</a></li></ul></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="/bot-builder/basic" class="footer-column-link">Bot Builder</a><a href="/agent-chat" class="footer-column-link">Agent Chat</a><a href="/bot-analytics" class="footer-column-link">Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://hellohaptik.github.io/haptik-ios-framework" class="footer-column-link">iOS SDK</a><a href="https://hellohaptik.github.io/haptik-android-lib" class="footer-column-link">Android SDK</a><a href="https://hellohaptik.github.io/javascript_sdk" class="footer-column-link">Web SDK</a><a href="/webhooks" class="footer-column-link">Webhooks</a><a href="/hsl" class="footer-column-link">HSL</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="/contributing/index" class="footer-column-link">Contributing</a><a href="/other/security" class="footer-column-link">Security</a><a href="/other/support" class="footer-column-link">Support</a><a href="/other/sla" class="footer-column-link">SLA</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2019 Haptik Inc.</section></footer></div></body></html>

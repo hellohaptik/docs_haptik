@@ -1,9 +1,8 @@
 ### Teams in Agent Chat ###
 
-_Last Updated: 15th February 2019 by Vaibhav Verma_
+Read this article to know about the  **Team in Agent Chat
 
-This article will help you learn about the team feature in Agent Chat.
-
+## What is a team?
 A team is a group of agents who are trained to handle user queries related to a specific topic. 
 
 

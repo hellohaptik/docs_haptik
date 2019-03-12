@@ -223,81 +223,84 @@ The HTTP request will contain an X-Hub-Signature header which contains the SHA1 
 **Sample python code for webhook**
 
 ```python
-   # !/usr/bin/env python
-   
-   """
-   Simple HTTP server in python for handling haptik webhooks.
-   
-   Usage::
-   ./test_server.py [<port>]
-   
-   """
-   import cgi
-   import json
-   import hmac
-   import hashlib
-   from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
-   
-   class WebhookServer(BaseHTTPRequestHandler):
-       def _set_headers(self, status_code, content_type):
-           self.send_response(status_code)
-           self.send_header('Content-type', content_type)
-           self.end_headers()
-   
-      def do_GET(self):
-          self._set_headers(status_code=200, content_type='text/html')
-          self.wfile.write("<html><body><h1>Test Server</h1></body></html>")
-   
-      def do_POST(self):
-          content_type, pdict = cgi.parse_header(self.headers.getheader('Content-Type'))
-   
-          if content_type != 'application/json':
-              self.send_response(400)
-              self.end_headers()
-              return
-   
-          length = int(self.headers.getheader('Content-Length'))
-          if not length:
-              self.send_response(400)
-              self.end_headers()
-              return
-   
-          body = self.rfile.read(length)
-          data = json.loads(body)
-          secret_key = 'test'
-          hash_value = hmac.new(secret_key, body, hashlib.sha1).hexdigest()
-          sha1_signature = 'sha1=' + str(hash_value)
-          request_signature = self.headers.getheader('X-Hub-Signature')
-          if sha1_signature != request_signature:
-              self.send_response(401)
-              self.end_headers()
-              return
-          entities = data['entities']
-          product_name = entities['product_name'][0]['entity_value'] if entities.get('product_name') else None
-          if product_name == 'speaker':
-              message = 'The Wireless Radio Alarm Clock Speaker can be yours only for Rs.1599'
-          elif product_name == 'powerbank':
-              message = 'The Ambrane Powerbank can be yours only for Rs.1799'
-          else:
-              self.send_response(400)
-              self.end_headers()
-              return
-          response = {"status": True, "response": [message]}
-          self._set_headers(status_code=200, content_type='application/json')
-          self.wfile.write(json.dumps(response))
-   
-   def run(server_class=HTTPServer, handler_class=WebhookServer, port=80):
-   server_address = ('', port)
-   httpd = server_class(server_address, handler_class)
-   print 'Starting test server...'
-   httpd.serve_forever()
-   
-   if __name__ == "__main__":
-   from sys import argv
-      if len(argv) == 2:
-          run(port=int(argv[1]))
-      else:
-          run() 
+# !/usr/bin/env python
+
+"""
+Simple HTTP server in python for handling haptik webhooks.
+
+Usage::
+./test_server.py [<port>]
+
+"""
+import cgi
+import json
+import hmac
+import hashlib
+from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
+
+
+class WebhookServer(BaseHTTPRequestHandler):
+    def _set_headers(self, status_code, content_type):
+        self.send_response(status_code)
+        self.send_header('Content-type', content_type)
+        self.end_headers()
+
+    def do_GET(self):
+        self._set_headers(status_code=200, content_type='text/html')
+        self.wfile.write("<html><body><h1>Test Server</h1></body></html>")
+
+    def do_POST(self):
+        content_type, pdict = cgi.parse_header(self.headers.getheader('Content-Type'))
+
+        if content_type != 'application/json':
+            self.send_response(400)
+            self.end_headers()
+            return
+
+        length = int(self.headers.getheader('Content-Length'))
+        if not length:
+            self.send_response(400)
+            self.end_headers()
+            return
+
+        body = self.rfile.read(length)
+        data = json.loads(body)
+        secret_key = 'test'
+        hash_value = hmac.new(secret_key, body, hashlib.sha1).hexdigest()
+        sha1_signature = 'sha1=' + str(hash_value)
+        request_signature = self.headers.getheader('X-Hub-Signature')
+        if sha1_signature != request_signature:
+            self.send_response(401)
+            self.end_headers()
+            return
+
+        entities = data['entities']
+        product_name = entities['product_name'][0]['entity_value'] if entities.get('product_name') else None
+        if product_name == 'speaker':
+            message = 'The Wireless Radio Alarm Clock Speaker can be yours only for Rs.1599'
+        elif product_name == 'powerbank':
+            message = 'The Ambrane Powerbank can be yours only for Rs.1799'
+        else:
+            self.send_response(400)
+            self.end_headers()
+            return
+
+        response = {"status": True, "response": [message]}
+        self._set_headers(status_code=200, content_type='application/json')
+        self.wfile.write(json.dumps(response))
+
+    def run(server_class=HTTPServer, handler_class=WebhookServer, port=80):
+        server_address = ('', port)
+        httpd = server_class(server_address, handler_class)
+        print 'Starting test server...'
+        httpd.serve_forever()
+
+if __name__ == "__main__":
+    from sys import argv
+    if len(argv) == 2:
+        run(port=int(argv[1]))
+    else:
+        run()
 ```
 
 

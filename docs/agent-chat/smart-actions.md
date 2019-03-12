@@ -2,34 +2,31 @@
 title: Smart Actions
 ---
 
-Action toolbar is at the bottom of the athena right below the text field
-
-## User Details
-
-User details are also available in the Action Toolbar. Just click on the face symbol and you can see a pop up window like the same which is shown at the left hand side. So on Athena User Profile is visible at the left hand side as well as at the Action Toolbar.
+Smart Actions' toolbar is at the bottom on the message composer box right below the text typing area.
 
 ## Report Bug / Send Feedback
 
-If you are facing some issues in Athena click on the icon to send the associated logs to the technical team. If there is a snapshot please attach it and describe the issue in detail. The report directly goes to the technical team of Athena, they try to resolve it as soon as possible
+If you are facing some issues in our *Live chat* tool, click on the icon to send the associated logs to the technical team. If there is a snapshot please attach it and describe the issue in detail. The report directly goes to a concerned representative, and they try to resolve it as soon as possible.
 
-![](assets/bug_feedback.png)
+![Bug feedback](assets/bug_feedback.png)
 
 ## Report Inappropriate Chat
 
-Report inappropriate chat is used to flag a troll/spam user. Before marking troll you need to take consent of your team leader. User marked thrice as inappropriate won’t be able to use the Haptik app anymore from the associated account. You will get a pop up window this like when you click on the icon.
-
-## Quick Links
-
-Quick links is the list of websites which we use in a particular channel. Depends on the channel the links will automatically get updated. Make sure that you always open websites by using these quick links and do not Google any website name. It is a quick and easy way to set context for a particular channel
+Report inappropriate chat is used to flag a troll/spam user. Before marking troll you need to take consent of your team leader. User marked thrice as inappropriate won’t be able to use the Haptik app anymore from the associated account. You will get a pop up window to add a reason when you click on the *Report Inappropriate* icon.
 
 ## Notes
 
-Notes section is used to save link of the product suggested or information given from any website. These notes are shared with other assistants for a particular user. It is helpful for another assistant to get the details quickly by just checking notes. Even numbers are saved in Notes for reference. Make sure that you save notes wherever and whenever required.
-The user won’t be able to see on the app as it is only for assistants.
+Notes section is used to save link of the product suggested or information given from any website. These notes are shared with other assistants for a particular user. It is helpful for another assistant to get the details quickly by just checking notes. Even numbers are saved in *Notes* for reference. Make sure that you save notes wherever and whenever required.
+
+    The user won’t be able to see *Notes* on the app as it is only for assistants.
+
+## User Details
+
+User details are available in the Toolbar. Just click on the face symbol and you open a new window. Now you can access User's Profile Details like their Name, Email and Device/OS information etc.
 
 ## User Info Link
 
-This tool will help you to get the link of the ongoing chat. As soon as you click on the tool it will take you to the next tab where the chat link will be visible. This is used for sharing chat link of users
+This tool will help you to get the link of the ongoing chat. As soon as you click on the tool, it will take you to the next tab where the *User Info* link will be visible. This is used for sharing chat link of users.
 
 # Smart Actions
 

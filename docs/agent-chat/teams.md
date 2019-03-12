@@ -1,32 +1,30 @@
-### Teams in Agent Chat ###
+# Teams in Agent Chat
 
-Read this article to know about the  **Team in Agent Chat
+Read this document to know about the **Team** feature in Agent Chat. Team is a feature used by Team Leaders who are responsible to manage a team of agents.
 
 ## What is a team?
-A team is a group of agents who are trained to handle user queries related to a specific topic. 
+A team is a group of agents who are trained to handle user queries related to a specific topic. The team can be divided based on the subject matter/location of a user/expertese of agents etc. The logic for team routing can be defined as per the requirement. 
 
 
-# Involvement of a team in a Chat Service
+## Business Configurations for Enabeling Chat Assignment to a Team
+
+A team can receive chats from a business in 2 possible configurations
+
+- If a Business is **Bot + Human Assisted** 
+https://www.dropbox.com/s/u0ulqf4l192z7cv/Screenshot%202019-03-12%2016.52.37.png?dl=0
+
+- If a Business is **Completely Human Assisted**
+https://www.dropbox.com/s/kja50v665n1xauz/Screenshot%202019-03-12%2016.51.47.png?dl=0
+
+_Note: If a Business is **Completely Bot Assisted**, the chat will never be assigned to a team._
+https://www.dropbox.com/s/kja50v665n1xauz/Screenshot%202019-03-12%2016.51.47.png?dl=0
 
 
-A business is eligible to assign chats to a team based on the specific configuration in the business manager. Following are the possible configurations:
 
 
+## Example
 
-1. A Business can be Completely Bot Assisted (No Team routing)
-2. A Business can be Bot + Human Assisted.
-3. A Business can be Completely Human Assisted.
-
-
-### Example
-
-
-
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Teams-Documentation1.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/Teams-Documentation1.png "image_tooltip")
-
+https://www.dropbox.com/s/ppy6zhv5fjcatzs/Screenshot%202019-03-12%2017.09.32.png?dl=0
 
 In the above example, Airtel is a partner. There are three teams, which lie under Airtel as a Partner. Teams are not directly associated with a business. They are associated with nodes in the chatflow for a particular bot.
 
@@ -35,7 +33,7 @@ Note: Every Business has a default team in case no team is detected.
 Note: For no bot condition, the default team is the only team a partner can have)
 
 
-# Chat routing to a team
+## Chat routing to a team
 
 There are three ways in which a chat can be assigned to a team
 
@@ -47,17 +45,31 @@ There are three ways in which a chat can be assigned to a team
 
 
 
-# Team Setup
+## How to create a team?
 
 
 
-1. Write Team name
-2. Select Partner
-3. Select Team Status (Online/ Offline)
-4. Setup Team Offline message
-5. Setup Team Delay Message and Delay Time
+### Step 1 - Write Team name
 
-# Manage Agents
+The team name is used for internal purpouse for the Team Leaders & Agents. A user will never see the team name of know about the team assigned to him.
+
+### Step 2 - Select Team Owner(Client)
+
+Select the company to which the team belongs. This is used by agencies who deal with multiple clients at a given time.
+
+### Step 3 - Select Team Status (Online/ Offline)
+
+Team status defines if the team can receive chats from a business or not.
+
+Online - Team will receive chats from a business
+Offline - Team will not receive chats from a business
+
+### Step 4 - Setup Team Offline message
+
+If a team status id defined as offline, the team should configure 
+### Step 5 - Setup Team Delay Message and Delay Time
+
+## How to Manage Agents of a Team
 
 
 
@@ -68,7 +80,7 @@ There are three ways in which a chat can be assigned to a team
 5. View agent chats
 
 
-# Team Chats
+## Team Chats
 
 
 
@@ -85,7 +97,7 @@ There are three ways in which a chat can be assigned to a team
     5. View User details
 
 
-# Team Analytics
+## Team Analytics
 
 
 
@@ -93,8 +105,21 @@ There are three ways in which a chat can be assigned to a team
 2. View agent level statistics
 3. Set duration
 
+## What is a Default Team?
 
-# Tips to manage a Team
+There can be a situatuion when the team routing logic fails and no team is shortlisted to assign a chat. In that case, the chat is assigned to the default team.
+
+### Step 1 - Create A Team in Agent Chat
+
+Make a team in agent chat which is supposed to take chats which are not assigned to any team(due any technical reason).
+
+### Step 2 - Select Default team in business Manager
+
+Open General Settings in business manager & set the default team.
+
+https://www.dropbox.com/s/zlr76opfokzrzav/Screenshot%202019-03-12%2016.54.15.png?dl=0
+
+## Tips to manage a Team
 
 ✅ Track No. of Delayed Chats and reduce them at peak hours
 

@@ -1,5 +1,5 @@
 ---
-title: Chat Assignment
+title: Businesses
 ---
 
 ## Chat assignment logic

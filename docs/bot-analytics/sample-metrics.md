@@ -4,14 +4,14 @@ title: Sample Metrics
 
 We looked at the different types of metrics you can measure and track in the other parts of this documentation. However, all these options can make it confusing to understand what you should be focussing on and how they relate to the particular bot you are building.
 
-In this document we will look at four common type of chatbots and what metrics should we focussing more on for those bots.
+In this document we will look at four common type of chatbots and what metrics should we be focussing more on for those bots.
 
 ## Lead Generation Chatbots
-The first category we will look at is `Lead Generation Chatbots`. These are chatbots where you are trying to collect information from potential leads for your product.
+The first category we will look at is `Lead Generation Chatbots`. These are chatbots where you are trying to collect information from potential leads for your product or service.
 
-Typically in such bots you will have users go through a series of conversational steps. In each of steps you will collect some information from the user and at the end of all the steps store the information either in a database or a CRM. In some cases you might even send email reports whenever a user goes through all the steps.
+Typically in such bots you will have users go through a series of conversational steps. In each of these steps you will collect some information from the user and at the end of all the steps store the information either in a database or a CRM. In some cases you might even send email reports whenever a user goes through all the steps.
 
-In such bots the most important metric for you to look at would be the funnel completion rate. By funnel completion we mean, how many users who start giving the information go through all the steps. This also includes analyzing at what step do most users break off and other such things.
+In such bots the most important metric for you to look at would be the funnel completion rate. By funnel completion we mean, how many users who start giving the information go through all the steps. This also includes analyzing at what step do most users drop off from.
 
 You can analyze these details from the `User Journey` section of the Analytics Tool. You can learn the specifics of this section [here](https://docs.haptik.ai/bot-analytics/user-journey).
 

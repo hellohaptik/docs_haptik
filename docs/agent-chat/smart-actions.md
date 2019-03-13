@@ -13,7 +13,7 @@ Smart Actions' toolbar is at the bottom on the message composer box right below 
 
 If you are facing some issues in our *Live chat* tool, click on the icon to send the associated logs to our technical team. If there is a snapshot, please attach it and describe the issue in detail. The report directly goes to a concerned representative, and they try to resolve it as soon as possible.
 
-![Bug feedback](assets/bug-feedback.png)
+![Bug feedback](assets/smart-action-report-bug.png)
 
 ## Report Inappropriate Chat
 

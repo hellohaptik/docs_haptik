@@ -92,27 +92,27 @@ module.exports = () => (
       sections={[
         {
           title: 'iOS SDK',
-          description: 'A sample application with an integrated SDK & relevant Documentation',
+          description: 'Objective-C framework to bring the chatbot magic in your app for iOS 9 & higher',
           ctaText: 'Get Started',
           ctaLink: 'https://hellohaptik.github.io/haptik-ios-framework'
         },
         {
           title: 'Android SDK',
           description:
-            'A sample application with an integrated SDK & relevant Documentation with aar & javadoc',
+            'Java framework to supercharge your Android app with AI powered chatbot capabilities',
           ctaText: 'Get Started',
           ctaLink: 'https://hellohaptik.github.io/haptik-android-lib'
         },
         {
           title: 'Web SDK',
-          description: 'JavaScript documentation along with examples to begin.',
+          description: 'Supercharge your app with AI powered Chatbots enabled by our powerful Javascript SDK',
           ctaText: 'Get Started',
           ctaLink: 'https://hellohaptik.github.io/javascript_sdk/'
         },
         {
           title: 'Webhooks',
           description:
-            'A sample application with an integrated SDK & relevant Documentation with aar & javadoc',
+            'API docs to help you build powerful chatbot solutions with great customisations',
           ctaText: 'Get Started',
           ctaLink: '/webhooks'
         }

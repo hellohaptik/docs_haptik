@@ -28,8 +28,8 @@
 			"basic/entities",
 			"basic/bot-prompt-trigger",
 			"basic/general-responses",
-			"basic/forms",
-			"basic/platforms-deployment"
+			"basic/platforms-deployment",
+                        "basic/forms"
 		],
 		"Advanced": [
 			"advanced/integrating-custom-code"	

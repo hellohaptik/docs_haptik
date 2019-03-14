@@ -1,6 +1,7 @@
 ---
 title: Integrating Custom Code
 
+
 ---
 
 Once a particular node has been detected and the mandatory entities have been collected, these entities can be given to custom code to execute your own business logic. There are 3 different ways to execute this business logic.
@@ -139,7 +140,71 @@ The following additional fields can be specified by the Webhook to control behav
 >
 > If the node is **not an end node**, then the chat **remains in Bot state** after sending the response irrespective of the status.
 
-**response** -Response will be array of string(s) if we want to return multiple bot responses.
+**response** -Response will be array of string(s) or hsl(haptik specific language).
+
+for example: 
+
+1. Response with single line
+
+   ```json
+   {
+       "status": true,
+       "response": ["phone number seems invalid, please try again"]
+   }
+   ```
+
+2. Response with multi-line
+
+3. ```json
+   {
+       "status": true,
+       "response": ["phone number seems invalid", "please try again"]
+   }
+   ```
+
+3. Response with advanced UI elements [for more detail read here](https://haptik-docs.readthedocs.io/en/latest/bot-builder-advanced/message-elements.html)
+
+![Bot response with advanced UI elements](/assets/advanced-ui-element.png)
+
+   
+ ```json
+   {
+     "status": true,
+     "response": [
+       '{
+         "text": "COMPLETE BLOOD COUNT; CBC",
+         "type": "BUTTON",
+         "data": {
+           "items": [
+             {
+               "actionable_text": "View Price",
+               "location_required": false,
+               "is_default": 0,
+               "uri": "LAUNCH_CHANNEL",
+               "type": "TEXT_ONLY",
+               "payload": {
+                 "gogo_message": "",
+                 "message": "I want to check the price of this test"
+               }
+             },
+             {
+               "actionable_text": "View Details",
+               "location_required": false,
+               "is_default": 0,
+               "uri": "LINK",
+               "type": "APP_ACTION",
+               "payload": {
+                 "url": "XYZ.COM",
+                 "gogo_message": ""
+               }
+             }
+           ]
+         },
+         "isNew": false
+       }'
+     ]
+   }
+   ```
 
 As per our pipeline, if there is no response at specific stages, then it will be treated as a Botbreak scenario. So if your Bot Says section on Mogambo doesn't have any response or the integration function doesn't return any response, then a Botbreak message will be sent or the chat will be moved to Pending state depending on whether Human assistance is disabled or enabled respectively.
 
@@ -158,82 +223,85 @@ The HTTP request will contain an X-Hub-Signature header which contains the SHA1 
 **Sample python code for webhook**
 
 ```python
-   # !/usr/bin/env python
-   
-   """
-   Simple HTTP server in python for handling haptik webhooks.
-   
-   Usage::
-   ./test_server.py [<port>]
-   
-   """
-   import cgi
-   import json
-   import hmac
-   import hashlib
-   from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
-   
-   class WebhookServer(BaseHTTPRequestHandler):
-       def _set_headers(self, status_code, content_type):
-           self.send_response(status_code)
-           self.send_header('Content-type', content_type)
-           self.end_headers()
-   
-      def do_GET(self):
-          self._set_headers(status_code=200, content_type='text/html')
-          self.wfile.write("<html><body><h1>Test Server</h1></body></html>")
-   
-      def do_POST(self):
-          content_type, pdict = cgi.parse_header(self.headers.getheader('Content-Type'))
-   
-          if content_type != 'application/json':
-              self.send_response(400)
-              self.end_headers()
-              return
-   
-          length = int(self.headers.getheader('Content-Length'))
-          if not length:
-              self.send_response(400)
-              self.end_headers()
-              return
-   
-          body = self.rfile.read(length)
-          data = json.loads(body)
-          secret_key = 'test'
-          hash_value = hmac.new(secret_key, body, hashlib.sha1).hexdigest()
-          sha1_signature = 'sha1=' + str(hash_value)
-          request_signature = self.headers.getheader('X-Hub-Signature')
-          if sha1_signature != request_signature:
-              self.send_response(401)
-              self.end_headers()
-              return
-          entities = data['entities']
-          product_name = entities['product_name'][0]['entity_value'] if entities.get('product_name') else None
-          if product_name == 'speaker':
-              message = 'The Wireless Radio Alarm Clock Speaker can be yours only for Rs.1599'
-          elif product_name == 'powerbank':
-              message = 'The Ambrane Powerbank can be yours only for Rs.1799'
-          else:
-              self.send_response(400)
-              self.end_headers()
-              return
-          response = {"status": True, "response": [message]}
-          self._set_headers(status_code=200, content_type='application/json')
-          self.wfile.write(json.dumps(response))
-   
-   def run(server_class=HTTPServer, handler_class=WebhookServer, port=80):
-   server_address = ('', port)
-   httpd = server_class(server_address, handler_class)
-   print 'Starting test server...'
-   httpd.serve_forever()
-   
-   if __name__ == "__main__":
-   from sys import argv
-      if len(argv) == 2:
-          run(port=int(argv[1]))
-      else:
-          run() 
-   ```
+# !/usr/bin/env python
+
+"""
+Simple HTTP server in python for handling haptik webhooks.
+
+Usage::
+./test_server.py [<port>]
+
+"""
+import cgi
+import json
+import hmac
+import hashlib
+from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
+
+
+class WebhookServer(BaseHTTPRequestHandler):
+    def _set_headers(self, status_code, content_type):
+        self.send_response(status_code)
+        self.send_header('Content-type', content_type)
+        self.end_headers()
+
+    def do_GET(self):
+        self._set_headers(status_code=200, content_type='text/html')
+        self.wfile.write("<html><body><h1>Test Server</h1></body></html>")
+
+    def do_POST(self):
+        content_type, pdict = cgi.parse_header(self.headers.getheader('Content-Type'))
+
+        if content_type != 'application/json':
+            self.send_response(400)
+            self.end_headers()
+            return
+
+        length = int(self.headers.getheader('Content-Length'))
+        if not length:
+            self.send_response(400)
+            self.end_headers()
+            return
+
+        body = self.rfile.read(length)
+        data = json.loads(body)
+        secret_key = 'test'
+        hash_value = hmac.new(secret_key, body, hashlib.sha1).hexdigest()
+        sha1_signature = 'sha1=' + str(hash_value)
+        request_signature = self.headers.getheader('X-Hub-Signature')
+        if sha1_signature != request_signature:
+            self.send_response(401)
+            self.end_headers()
+            return
+
+        entities = data['entities']
+        product_name = entities['product_name'][0]['entity_value'] if entities.get('product_name') else None
+        if product_name == 'speaker':
+            message = 'The Wireless Radio Alarm Clock Speaker can be yours only for Rs.1599'
+        elif product_name == 'powerbank':
+            message = 'The Ambrane Powerbank can be yours only for Rs.1799'
+        else:
+            self.send_response(400)
+            self.end_headers()
+            return
+
+        response = {"status": True, "response": [message]}
+        self._set_headers(status_code=200, content_type='application/json')
+        self.wfile.write(json.dumps(response))
+
+    def run(server_class=HTTPServer, handler_class=WebhookServer, port=80):
+        server_address = ('', port)
+        httpd = server_class(server_address, handler_class)
+        print 'Starting test server...'
+        httpd.serve_forever()
+
+if __name__ == "__main__":
+    from sys import argv
+    if len(argv) == 2:
+        run(port=int(argv[1]))
+    else:
+        run()
+```
 
 
 
@@ -245,8 +313,8 @@ The HTTP request will contain an X-Hub-Signature header which contains the SHA1 
 
 ## Best Practices
 
-**1. Assign Chat to Agent** In some scenarios, where integration response fails or some unknown exception occurs then instead of sending bot break message we can also directly assign chat to an agent for better user experience.
+**1. Assign Chat to Agent** In some scenarios, where integration response fails or some unknown exception occurs then instead of sending bot break message we can also directly assign chat to an agent for better user experience. <Coming Soon>
 
-**2.Handle textual content** - is used to configure the bot response which comes from the backend. Everytime we want to change bot's response code change is required, to avoid that pain we can use one **key value store**. Any person with zero to little tech knowledge can change bot response from key value store(with GUI) by updating the message copy corresponding to that unique message key or ID and share with the developer and dev fetches the response from that key and return the response.
+**2.Handle textual content** - Everytime we want to change bot's response, a code change is required. To avoid that pain, we can use **key value stores**. Any person with zero to little tech knowledge can change bot response from key value store (with GUI) by updating the message copy corresponding to that unique message key or ID. This message key can be shared with the developer and fetch the response using that key.
 
-**3. Advanced UI Elements**  - Haptik defines a superset of UI elements that are available across multiple platforms. These UI elements are then converted to their platform equivalent (js-sdk, android, ios, facebook-messenger, etc..) if they are not available on that specific platform. Eg. Forms are converted to quick replies on the Facebook platform and collected over free form. [for more detail read here](
+**3. HSLs**  - Haptik defines a superset of UI elements that are available across multiple platforms. These UI elements are then converted to their platform equivalent (js-sdk, android, ios, facebook-messenger, etc..) if they are not available on that specific platform. Eg. Forms are converted to quick replies on the Facebook platform and collected over free form. [for more detail read here](https://docs.haptik.ai/hsl/)

@@ -15,7 +15,7 @@ Once you have the credentials the next step is to open the web link provided by 
 ![Login Page](assets/for-analysts-login.png)
 
 ## Opening Analytics
-After you have logged in with the credentials. You will be presented with a screen with all the tools you have access to. From this menu click on the `Analytics` option to open the analytics tool.
+After you have logged in with the credentials. You will be presented a screen with all the tools you have access to. From this menu click on the `Analytics` option to open the analytics tool.
 
 ![Menu](assets/for-analysts-menu.png)
 
@@ -23,4 +23,4 @@ After clicking on `Analytics` you should be able to see the analytics dashboard 
 
 ![Analytics Dashboard](assets/for-analysts-main.png)
 
-You can learn about getting started with using the tool [here](https://docs.haptik.ai/bot-analytics/).
+You can learn about getting started with using the tool [here](https://docs.haptik.ai/bot-analytics/basic-analysis).

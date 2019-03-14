@@ -1,5 +1,5 @@
 ---
-title: A Guide To Designing Chat Experiences
+title: Designing Chat Experiences
 ---
 
 # 

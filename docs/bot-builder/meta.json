@@ -1,7 +1,7 @@
 {
 	"sidebar": {
 		"Getting Started": [
-			"basic/introduction",
+			"basic/introduction"
 		],
 		"Guides": [
 			"basic/making-first-bot",

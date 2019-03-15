@@ -305,7 +305,7 @@ if __name__ == "__main__":
 
 This API allows you to move chats for a Bot to an Agent via a `POST` request to the Haptik Platform.
 
-Example URL: `https://<base-url>/integration/external/v1.0/send_to_agent/`
+Example URL: `https://<base-url>/integration/external/v1.0/send_chat_to_agent/`
 
 > Note: The `base-url` will be provided by Haptik at the time of integration.
 
@@ -379,7 +379,7 @@ Here is a list of some possible error messages
 
 ```
 curl -X POST \
-    https://<base-url>/integration/external/v1.0/send_to_agent/ \
+    https://<base-url>/integration/external/v1.0/send_chat_to_agent/ \
   -H 'Authorization: Bearer <TOKEN>' \
   -H 'client-id: <CLIENT_ID>' \
   -H 'Content-Type: application/json' \

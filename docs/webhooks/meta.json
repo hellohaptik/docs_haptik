@@ -1,7 +1,18 @@
 {
     "sidebar": {
         "Introduction": [
-            "index"
+            "index",
+            "webhook-payload"
+        ],
+        "How to Create a Webhook": [
+        	"protocols",
+        	"re-enable-webhook"
+        ],
+        "Independent Integrations": [
+        	"api-security-rules",
+        	"create-haptik-user",
+        	"send-message-to-user"
         ]
     }
 }
+

@@ -1,8 +1,7 @@
 {
 	"sidebar": {
 		"Getting Started": [
-			"basic/introduction",
-			"basic/for-bot-builders"
+			"basic/introduction"
 		],
 		"Guides": [
 			"basic/making-first-bot",
@@ -14,22 +13,18 @@
 		"Resources": [
 			"basic/bot-hierarchy",
 			"basic/business",
-			"basic/creating-bot",
 			"basic/creating-story",
 			"basic/story-templates",
 			"basic/creating-nodes",
-			"basic/connecting-nodes",
+			"basic/connections",
 			"basic/general-nodes",
 			"basic/bot-says",
 			"basic/user-says",
 			"basic/chat-elements",
-			"basic/connections",
-			"basic/integrations",
 			"basic/entities",
 			"basic/bot-prompt-trigger",
 			"basic/general-responses",
-			"basic/forms",
-			"basic/platforms-deployment"
+                        "basic/forms"
 		],
 		"Advanced": [
 			"advanced/integrating-custom-code"	

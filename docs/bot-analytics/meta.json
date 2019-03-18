@@ -2,8 +2,7 @@
   "sidebar": {
     "Getting Started": [
       "index",
-      "for-analysts",
-      "core-concepts"
+      "for-analysts"
     ],
     "Guides": [
       "basic-analysis",

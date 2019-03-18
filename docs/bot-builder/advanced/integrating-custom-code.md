@@ -1,16 +1,17 @@
 ---
 title: Integrating Custom Code
-
-
 ---
 
-Once a particular node has been detected and the mandatory entities have been collected, these entities can be given to custom code to execute your own business logic. There are 3 different ways to execute this business logic.
+## Node Integrations
+Once a particular node has been detected and the mandatory entities have been collected, these entities can be given to custom code to execute your own business logic.
 
-## 1. API Functions
+There are 2 different ways to execute this business logic.
+
+### API Functions
 
 _This is internal to Haptik Developers_
 
-## 2. Webhooks
+### Webhooks
 
 A node can be configured to call a webhook once the required entities have been collected.
 
@@ -142,7 +143,7 @@ The following additional fields can be specified by the Webhook to control behav
 
 **response** -Response will be array of string(s) or hsl(haptik specific language).
 
-for example: 
+for example:
 
 1. Response with single line
 
@@ -154,19 +155,18 @@ for example:
    ```
 
 2. Response with multi-line
-
-3. ```json
-   {
-       "status": true,
-       "response": ["phone number seems invalid", "please try again"]
-   }
-   ```
+    ```json
+    {
+        "status": true,
+        "response": ["phone number seems invalid", "please try again"]
+    }
+    ```
 
 3. Response with advanced UI elements [for more detail read here](https://haptik-docs.readthedocs.io/en/latest/bot-builder-advanced/message-elements.html)
 
 ![Bot response with advanced UI elements](/assets/advanced-ui-element.png)
 
-   
+
  ```json
    {
      "status": true,
@@ -212,10 +212,6 @@ As per our pipeline, if there is no response at specific stages, then it will be
 >
 > If human_assistance is ON on business manager => Chat will be moved to pending and assigned to an agent.
 
-
-
-
-
 **Validate Webhook**
 
 The HTTP request will contain an X-Hub-Signature header which contains the SHA1 signature of the request payload, using the secret_key entered for the node, and prefixed with sha1=. Your API can verify this signature to validate the integrity and origin of the payload.
@@ -223,95 +219,181 @@ The HTTP request will contain an X-Hub-Signature header which contains the SHA1 
 **Sample python code for webhook**
 
 ```python
-   # !/usr/bin/env python
-   
-   """
-   Simple HTTP server in python for handling haptik webhooks.
-   
-   Usage::
-   ./test_server.py [<port>]
-   
-   """
-   import cgi
-   import json
-   import hmac
-   import hashlib
-   from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
-   
-   class WebhookServer(BaseHTTPRequestHandler):
-       def _set_headers(self, status_code, content_type):
-           self.send_response(status_code)
-           self.send_header('Content-type', content_type)
-           self.end_headers()
-   
-      def do_GET(self):
-          self._set_headers(status_code=200, content_type='text/html')
-          self.wfile.write("<html><body><h1>Test Server</h1></body></html>")
-   
-      def do_POST(self):
-          content_type, pdict = cgi.parse_header(self.headers.getheader('Content-Type'))
-   
-          if content_type != 'application/json':
-              self.send_response(400)
-              self.end_headers()
-              return
-   
-          length = int(self.headers.getheader('Content-Length'))
-          if not length:
-              self.send_response(400)
-              self.end_headers()
-              return
-   
-          body = self.rfile.read(length)
-          data = json.loads(body)
-          secret_key = 'test'
-          hash_value = hmac.new(secret_key, body, hashlib.sha1).hexdigest()
-          sha1_signature = 'sha1=' + str(hash_value)
-          request_signature = self.headers.getheader('X-Hub-Signature')
-          if sha1_signature != request_signature:
-              self.send_response(401)
-              self.end_headers()
-              return
-          entities = data['entities']
-          product_name = entities['product_name'][0]['entity_value'] if entities.get('product_name') else None
-          if product_name == 'speaker':
-              message = 'The Wireless Radio Alarm Clock Speaker can be yours only for Rs.1599'
-          elif product_name == 'powerbank':
-              message = 'The Ambrane Powerbank can be yours only for Rs.1799'
-          else:
-              self.send_response(400)
-              self.end_headers()
-              return
-          response = {"status": True, "response": [message]}
-          self._set_headers(status_code=200, content_type='application/json')
-          self.wfile.write(json.dumps(response))
-   
-   def run(server_class=HTTPServer, handler_class=WebhookServer, port=80):
-   server_address = ('', port)
-   httpd = server_class(server_address, handler_class)
-   print 'Starting test server...'
-   httpd.serve_forever()
-   
-   if __name__ == "__main__":
-   from sys import argv
-      if len(argv) == 2:
-          run(port=int(argv[1]))
-      else:
-          run() 
+# !/usr/bin/env python
+
+"""
+Simple HTTP server in python for handling haptik webhooks.
+
+Usage::
+./test_server.py [<port>]
+
+"""
+import cgi
+import json
+import hmac
+import hashlib
+from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
+
+
+class WebhookServer(BaseHTTPRequestHandler):
+    def _set_headers(self, status_code, content_type):
+        self.send_response(status_code)
+        self.send_header('Content-type', content_type)
+        self.end_headers()
+
+    def do_GET(self):
+        self._set_headers(status_code=200, content_type='text/html')
+        self.wfile.write("<html><body><h1>Test Server</h1></body></html>")
+
+    def do_POST(self):
+        content_type, pdict = cgi.parse_header(self.headers.getheader('Content-Type'))
+
+        if content_type != 'application/json':
+            self.send_response(400)
+            self.end_headers()
+            return
+
+        length = int(self.headers.getheader('Content-Length'))
+        if not length:
+            self.send_response(400)
+            self.end_headers()
+            return
+
+        body = self.rfile.read(length)
+        data = json.loads(body)
+        secret_key = 'test'
+        hash_value = hmac.new(secret_key, body, hashlib.sha1).hexdigest()
+        sha1_signature = 'sha1=' + str(hash_value)
+        request_signature = self.headers.getheader('X-Hub-Signature')
+        if sha1_signature != request_signature:
+            self.send_response(401)
+            self.end_headers()
+            return
+
+        entities = data['entities']
+        product_name = entities['product_name'][0]['entity_value'] if entities.get('product_name') else None
+        if product_name == 'speaker':
+            message = 'The Wireless Radio Alarm Clock Speaker can be yours only for Rs.1599'
+        elif product_name == 'powerbank':
+            message = 'The Ambrane Powerbank can be yours only for Rs.1799'
+        else:
+            self.send_response(400)
+            self.end_headers()
+            return
+
+        response = {"status": True, "response": [message]}
+        self._set_headers(status_code=200, content_type='application/json')
+        self.wfile.write(json.dumps(response))
+
+    def run(server_class=HTTPServer, handler_class=WebhookServer, port=80):
+        server_address = ('', port)
+        httpd = server_class(server_address, handler_class)
+        print 'Starting test server...'
+        httpd.serve_forever()
+
+if __name__ == "__main__":
+    from sys import argv
+    if len(argv) == 2:
+        run(port=int(argv[1]))
+    else:
+        run()
 ```
 
+## Additional APIs
+
+### Move a chat to pending
+
+This API allows you to move chats for a Bot to an Agent via a `POST` request to the Haptik Platform.
+
+Example URL: `https://<base-url>/integration/external/v1.0/send_chat_to_agent/`
+
+> Note: The `base-url` will be provided by Haptik at the time of integration.
 
 
-## 3. Code Upload
+#### Headers
 
--*Coming Soon*
+```
+Authorization: Bearer <TOKEN>
+client-id: <CLIENT_ID>
+Content-Type: application/json
+```
 
+- Authorization - The Authorization header of each HTTP request should be “Bearer” followed by your token which will be provided by Haptik
+- client-id - The client id for your account which will be provided by Haptik
+- Content-Type - application/json
 
+#### Request
+
+```json
+{
+    "team_name": "<Name of the team>",
+    "user_name": "<haptik user name>",
+    "business_id": <business_id>,
+}
+```
+
+- user_name (string): Identifier for the User provided by Haptik when invoking the Integration API
+- business_id (number): This is a numeric identifier for the channel where the User is messaging
+- team_name (string): Name of the team to which the chat is to be assigned. Can be fetched from the Teams page of Agent Chat Tool.
+
+#### Response
+
+A successful request to the API will return a `200` status code with a JSON response object.
+
+```json
+{
+    "success": true
+}
+```
+- success: Indicates if the API was a success or failure
+
+#### Error Response
+
+If there is any error in the Headers or the Request body, then the Error message will be returned in a JSON as shown below:
+
+```json
+{
+  "error_message": "user is not registered"
+}
+```
+
+Here is a list of some possible error messages
+|Error Message|Details|
+--------------|-------|
+|client_id missing in headers|client-id is not passed in the Headers of the request|
+|invalid client_id in headers|Incorrect client-id is passed in the headers
+|invalid authorization in headers|The Authorization header is not correct
+|token missing in headers|The Authorization token is not provided
+|invalid token provided|The Authorization token provided is incorrect
+|user_name missing in the request|The user_name is not provided in the request body
+|business_id missing in the request|The business_id is not provided in the request body
+|team_name missing in the request|The team_name is not provided in the request body
+|invalid user_name|The user_name provided is not valid for the Partner
+|invalid business_id provided|The business_id provided is not valid for the Partner
+|business "<business_id>" is inactive|The business is inactive for the Partner
+|invalid team_name provided|The team_name is not valid for the Partner
+|team "<team_name>" is inactive|The associated Team is inactive
+|user has not sent a message|The user has not had any chat on that Business
+
+#### Sample CURL command
+
+```
+curl -X POST \
+    https://<base-url>/integration/external/v1.0/send_chat_to_agent/ \
+  -H 'Authorization: Bearer <TOKEN>' \
+  -H 'client-id: <CLIENT_ID>' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "team_name": "<Name of the team>",
+    "user_name": "<haptik user name>",
+    "business_id": <business_id>
+}
+```
 
 ## Best Practices
 
-**1. Assign Chat to Agent** In some scenarios, where integration response fails or some unknown exception occurs then instead of sending bot break message we can also directly assign chat to an agent for better user experience.
+**1. Assign Chat to Agent** In some scenarios, where integration response fails or some unknown exception occurs then instead of sending bot break message we can also directly assign chat to an agent for better user experience. <Coming Soon>
 
-**2.Handle textual content** - is used to configure the bot response which comes from the backend. Everytime we want to change bot's response code change is required, to avoid that pain we can use one **key value store**. Any person with zero to little tech knowledge can change bot response from key value store(with GUI) by updating the message copy corresponding to that unique message key or ID and share with the developer and dev fetches the response from that key and return the response.
+**2.Handle textual content** - Everytime we want to change bot's response, a code change is required. To avoid that pain, we can use **key value stores**. Any person with zero to little tech knowledge can change bot response from key value store (with GUI) by updating the message copy corresponding to that unique message key or ID. This message key can be shared with the developer and fetch the response using that key.
 
-**3. Advanced UI Elements**  - Haptik defines a superset of UI elements that are available across multiple platforms. These UI elements are then converted to their platform equivalent (js-sdk, android, ios, facebook-messenger, etc..) if they are not available on that specific platform. Eg. Forms are converted to quick replies on the Facebook platform and collected over free form. [for more detail read here](
+**3. HSLs**  - Haptik defines a superset of UI elements that are available across multiple platforms. These UI elements are then converted to their platform equivalent (js-sdk, android, ios, facebook-messenger, etc..) if they are not available on that specific platform. Eg. Forms are converted to quick replies on the Facebook platform and collected over free form. [for more detail read here](https://docs.haptik.ai/hsl/)

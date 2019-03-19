@@ -3,7 +3,7 @@ title: Chat Elements
 ---
 
 ## What are Chat Elements?
- In the *Bot Says* documentation, we saw how we can respond to the users based on different inputs. In this document we will look at the different ways in which we can respond to the user.
+ In the *Bot Says* documentation, we saw how we can respond to the users based on different inputs. In this document we will look at the different ways in which the bot can respond to the user.
 
  > Tip: In the haptik platform these elements can also be called as HSL elements. HSL stands for Haptik Specific Langauge.
 
@@ -17,11 +17,11 @@ After you click the button, a new menu should slide out with an input field wher
 ![Text Elements](assets/bot-builder-chat-elements/chat-elements-text-responses.gif)
 
 ## ***Quick Replies***
-The second type of chat elements we will look are `Quick Replies`. Quick Replies provide a way to present buttons to the user.The users can tap these buttons to send a message to the bot. 
+The second type of chat elements we will look are `Quick Replies`. Quick Replies provide a way to present buttons to the user. The users can tap these buttons to send a message to the bot. 
 
 ![Quick Reply Preview](assets/bot-builder-chat-elements/chat-elements-quick-reply-preview.png)
 
-Once the users tap on these buttons they automatically disappear and a text message automatically gets sent by the user.
+Once the users tap on these buttons they automatically disappear and a text message gets sent by the user.
 
 There are two ways to use Quick Replies:
 

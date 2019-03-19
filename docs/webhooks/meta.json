@@ -11,7 +11,8 @@
         "Independent Integrations": [
         	"api-security-rules",
         	"create-haptik-user",
-        	"send-message-to-user"
+        	"send-message-to-haptik",
+            "send-image-to-haptik"
         ]
     }
 }

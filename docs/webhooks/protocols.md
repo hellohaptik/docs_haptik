@@ -2,7 +2,7 @@
 title: Protocols
 ---
 
-Due to the critical and confidential nature of the data being exchanged, all clients must adhere to the stated rules for implementing a web hook to eliminate potential risks.
+Due to the critical and confidential nature of the data being exchanged, all clients must adhere to the stated rules for implementing a webhook to eliminate potential risks.
 
 ## Webhook Requirements
 

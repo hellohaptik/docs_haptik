@@ -1,5 +1,5 @@
 ---
-title: How to send messages to user
+title: How to send messages to haptik
 ---
 
 ## Log Message to Haptik via Rest Api

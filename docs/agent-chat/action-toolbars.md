@@ -20,7 +20,7 @@ Report inappropriate chat is used to flag a troll/spam user. Before marking trol
 
 Notes section is used to save link of the product suggested or any other information given from any website. These notes are shared with other assistants for a particular user. It is helpful for another assistant to get the details quickly by just checking notes. Even numbers are saved in *Notes* for reference. Make sure that you save notes wherever and whenever required.
 
-    The user won’t be able to see *Notes* on the app as it is only for assistants.
+> The user won’t be able to see *Notes* on the app as it is only for assistants.
 
 Please note *Assistant* and *Agent* is the same as the person replying back to the user queries on our chat window.
 

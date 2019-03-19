@@ -2,7 +2,7 @@
 title: Smart Actions
 ---
 
-> Please note that we plan to deprecate smart actions. Some smart actions are specific
+> Please note that we plan to deprecate smart actions. Some smart actions are specific to the Native SDKs and don't work on our Web SDK.
 
 To open smart action, click on the icon at the left hand side of the action toolbar.
 ![](assets/smart_action_button.png)

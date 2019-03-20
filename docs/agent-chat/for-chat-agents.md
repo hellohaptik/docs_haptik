@@ -25,5 +25,4 @@ A chat agent can:
   
   Depending on the permissions and features assigned to a Chat agent user, more actions could become accessible. 
   
-    Tip: We also have a system to enforce Data level permissioning i.e. an agent user 
-    is allowed to view/edit data for which business can be controlled using this.
+>Tip: We also have a system to enforce Data level permissioning i.e. an agent user is allowed to view/edit data for which business can be controlled using this.

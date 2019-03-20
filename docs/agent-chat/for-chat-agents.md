@@ -6,9 +6,7 @@ title: For Chat Agents
 
 The Chat agent gets an email with credentials to the *Live Chat* tool. 
 
-![Live Chat credentials](assets/live_chat_tool_credentials.png)
-
-Using the above email details, a Chat agent logs in and clicks on **Agent Chat**. Now, the Chat agent can essentially click on the *My Chats* tab i.e. the first option depicted in the left-hand menu.
+Using the credentials, a Chat agent logs in and clicks on **Agent Chat**. Now, the Chat agent can essentially click on the *My Chats* tab i.e. the first option depicted in the left-hand menu.
 
 ## My Chats
 

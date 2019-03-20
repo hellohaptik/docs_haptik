@@ -1,35 +1,19 @@
 ---
-title: Team Lead
+title: For Team Lead
 ---
 
-## Introduction
 
-When a team lead logs into athena, he can essentially view three high level tabs as depicted in the image below:
+When a team lead logs into the *Live agent* tool, he/she can essentially view three high level sections as depicted in the image below:
 
 ![athena_tabs](assets/athena_tabs.png)
 
-	- My Chats
-	- Business Overview
-	- Team Overview
+The three sections are explained individually in detail below.
 
-The above three tabs are explained individually in detail below.
+## Section 1: My Chats
 
-## My Chats
+In this tab the team lead can look at information relating to the chats assigned to him/her personally. To know more, [read on here](https://docs.haptik.ai/agent-chat/for-chat-agents)
 
-![my_chats](assets/my_chats.png)
-
-In this tab the team lead can look at information relating to the chats assigned to him/her personally. Functionalities that a team lead can perform here:
-	
-  * View his current live chats
-  * Exchange messages with the user
-  * Send smart actions
-  * Assign chat to a person or a team
-  * Use external tools
-  * Mark chat as complete
-  * Adding disposition data
-  * Mark chat as waiting for user
-
-## Business Overview
+## Section 2: Business Overview
 
 ![business_tab](assets/business_tab.png)
 
@@ -44,7 +28,7 @@ The Business Overview page provides information at a business level. Over here a
 * Select and re-assign an existing claimed or unclaimed chat to an   individual or a team allocated to business
 
 
-## Team Overview
+## Section 3: Team Overview
 In the team Overview tab information is available at a team level. Here the team lead can: 
 
 1) **Manage agents** - A team lead can add/remove agents from a team using this option.

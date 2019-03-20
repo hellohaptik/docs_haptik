@@ -2,9 +2,13 @@
 title: For Chat Agents
 ---
 
-## Introduction
+## Logging in
 
-When a Chat agent logs into athena, he can essentially click on the *My Chats* tab i.e. the first option depicted in the left-hand menu bar.
+The Chat agent gets an email with credentials to the *Live Chat* tool. 
+
+![Live Chat credentials](assets/live_chat_tool_credentials.png)
+
+Using the above email details, a Chat agent logs in and clicks on **Agent Chat**. Now, the Chat agent can essentially click on the *My Chats* tab i.e. the first option depicted in the left-hand menu.
 
 ## My Chats
 
@@ -24,4 +28,4 @@ A chat agent can:
   Depending on the permissions and features assigned to a Chat agent user, more actions could become accessible. 
   
     Tip: We also have a system to enforce Data level permissioning i.e. an agent user 
-    is allowed to view/edit the data for which client can be controlled using this.
+    is allowed to view/edit data for which business can be controlled using this.

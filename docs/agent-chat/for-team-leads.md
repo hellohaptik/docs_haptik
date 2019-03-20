@@ -16,7 +16,7 @@ The above three tabs are explained individually in detail below.
 
 ## My Chats
 
-In this tab the team lead can look at information relating to the chats assigned to him/her personally. 
+In this tab the team lead can look at information relating to the chats assigned to him/her personally. To know more, [read on here](https://docs.haptik.ai/agent-chat/for-chat-agents)
 
 ## Business Overview
 

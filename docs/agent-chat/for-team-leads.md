@@ -16,18 +16,7 @@ The above three tabs are explained individually in detail below.
 
 ## My Chats
 
-![my_chats](assets/my_chats.png)
-
-In this tab the team lead can look at information relating to the chats assigned to him/her personally. Functionalities that a team lead can perform here:
-	
-  * View his current live chats
-  * Exchange messages with the user
-  * Send smart actions
-  * Assign chat to a person or a team
-  * Use external tools
-  * Mark chat as complete
-  * Adding disposition data
-  * Mark chat as waiting for user
+In this tab the team lead can look at information relating to the chats assigned to him/her personally. 
 
 ## Business Overview
 

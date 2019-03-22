@@ -11,6 +11,7 @@ A team is a group of agents who are trained to handle user queries related to a 
 A team can receive chats from a business in 2 possible configurations
 
 - If a Business is **Bot + Human Assisted** 
+
 ![bot_settings](assets/teams_bot_settings.png)
 
 - If a Business is **Completely Human Assisted**
@@ -98,8 +99,6 @@ Make a team in agent chat which is supposed to take chats which are not assigned
 ### Step 2 - Select Default team in business Manager
 
 Open General Settings in business manager & set the default team.
-
-https://www.dropbox.com/s/zlr76opfokzrzav/Screenshot%202019-03-12%2016.54.15.png?dl=0
 
 ## Tips to manage a Team
 

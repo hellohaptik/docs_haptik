@@ -53,7 +53,7 @@ For example, in a Lead Generation Bot, Phone Number may be optional but Email co
 
 What that would mean is, if the User provided the phone number, it will be captured under the *phone_number* entity. But if it wasn't provided, the user will still be able to continue with the flow as long as the other Mandatory entities are provided.
 
-> **Note:** You can set an Entity Response only for Mandatory Entities. To know more about the difference between Mandatory and Non-Mandatory entities, refer [this](../entities).
+> **Note:** You can set an Entity Response only for Mandatory Entities. To know more about the difference between Mandatory and Non-Mandatory entities, refer [this](https://docs.haptik.ai/bot-builder/basic/entities).
 
 Since Non-Mandatory entities are not compulsory for the node, you don't need to add a specific response for this entity. And the request to collect the answer can be combined with responses for other Mandatory Entities by using [Chat Forms](../entities) or other [HSLs](https://docs.haptik.ai/hsl/)
 

@@ -12,7 +12,7 @@ The URL to enable webhook will be generated on the Haptik Platform Dashboard.
 
 ### URL
 
-`https://staging-messenger.haptikapi.com/v1.0/webhook/`
+`https://**************/v1.0/webhook/`
 
 ### Headers
 

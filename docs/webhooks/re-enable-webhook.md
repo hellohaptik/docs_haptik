@@ -1,5 +1,5 @@
 ---
-title: How to Re-Enable webhook
+title: How to re-enable webhook
 ---
 
 ## Enable Webhook via REST API

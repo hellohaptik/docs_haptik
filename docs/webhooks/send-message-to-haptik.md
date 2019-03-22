@@ -1,5 +1,5 @@
 ---
-title: How to send messages to haptik
+title: How to send message to haptik
 ---
 
 ## Log Message to Haptik via Rest Api
@@ -76,7 +76,7 @@ If the Authorization header is missing or invalid, then the API will return a `4
 }
 ```
 
-### Sample CURL command
+## Sample CURL command
 
 ```
 curl -X POST \

@@ -156,7 +156,7 @@ Example:
 }
 ```
 
-### Example Payload for 'Chat Complete'
+### Chat Complete
 
 <b>event_name = chat_complete</b>
 

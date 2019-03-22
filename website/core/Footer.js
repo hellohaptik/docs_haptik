@@ -30,7 +30,7 @@ class Footer extends React.Component {
               { title: 'Technical Overview', url: '/technical-overview' }
             ])} */}
             {this.renderFooterColumn('Tools', [
-              { title: 'Bot Builder', url: '/bot-builder/basic' },
+              { title: 'Bot Builder', url: '/bot-builder/basic/introduction' },
               { title: 'Agent Chat', url: '/agent-chat' },
               { title: 'Analytics', url: '/bot-analytics' }
             ])}

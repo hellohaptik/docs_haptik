@@ -1,5 +1,5 @@
 ---
-title: How to send image to haptik
+title: How to send image to Haptik
 ---
 
 ## Image Upload
@@ -90,7 +90,7 @@ If the user with auth_id is not registered, then the API will return a `403` sta
 }
 ```
 
-If the Authorization header is missing or invalid, then the API will return a `401` status code.
+If the Authorization Header is missing or invalid, then the API will return a `401` status code.
 
 ```json
 {

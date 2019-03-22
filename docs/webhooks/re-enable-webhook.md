@@ -1,12 +1,12 @@
 ---
-title: How to re-enable webhook
+title: How to re-enable Webhook
 ---
 
 ## Enable Webhook via REST API
 
 If the webhook is automatically disabled by Haptik due to [mentioned reasons](https://docs.haptik.ai/webhooks/protocols#error-handling-and-recovering).
 
-You will have to use this api to enable the webhook again via a `POST` request to the Haptik Platform.
+You will have to use this API to enable the webhook again via a `POST` request to the Haptik Platform.
 
 The URL to enable webhook will be generated on the Haptik Platform Dashboard.
 
@@ -38,7 +38,7 @@ Content-Type: application/json
 
 ### Response
 
-A successful request to the enable webhook API will return a `200` status code with a JSON response object.
+A successful API request to the enable webhook will return a `200` status code with a JSON response object.
 
 ```json
 {

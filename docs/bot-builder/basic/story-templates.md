@@ -17,11 +17,11 @@ Clicking on this link should open the list of available templates. These templat
 ### Banking Sector Templates
 1) **Lead Gen Qualification** - Collects personal information from users and sends responses basis the end user's eligibility for the product. 
 2) **Lead Gen No Qualification** - This template has two nodes. The first collects personal data from users and second node sends follow-up to users who indicate that they're not interested in a callback. 
-3) **Lead Gen Intro** - Provides introductory details of sponsored financial products, sponsoring partner benefits, and buying instructions. Join with a lead gen qualification template to create a full lead flow flow. 
+3) **Lead Gen Intro** - Provides introductory details of sponsored financial products, sponsoring partner benefits, and buying instructions. Join with a lead gen qualification template to create a full lead flow. 
 
 ### Customer Support Templates
-1) **Order Status** - This template allows a user to check an order status. User has three tries to enter a valid order ID. Once user exhausts the three attempts, he is prompted to provide contact details so customer support can connect with them.
-2) **Order Cancellation** - This template allows end users to cancel an order. User must input a valid order ID, review the order which will be cancelled, and confirm the cancellation. When prompted to input order ID, user can ask for instructions for finding order ID.
+1) **Order Status** - This template allows a user to check an order status. User has three attempts to enter a valid order ID. Once user exhausts the three attempts, he is prompted to provide contact details so customer support can connect with them.
+2) **Order Cancellation** - This template allows end users to cancel an order. User must input a valid order ID, review the order which will be cancelled, and confirm the cancellation. When prompted to input order ID, user can ask instructions for finding order ID.
 3) **Nearby Search** - This template lets users input a locality and search for the nearest location of a particular outlet. If search returns no nearby locations, the user is prompted to try again with a different locality. 
 4) **How To Flow** - This template walks users through step-by-step instructions to resolve a problem. At the end of the flow, if the issue remains unresolved, the user is prompted to input contact details which are sent to customer support team.
 
@@ -53,7 +53,7 @@ Apart from this the template information modal has 4 different sections. Below t
 
 The final section which you can find on the right side of the modal is the **demo chat**.
 
-* **Demo Chat** - This section of the modal lets you chat and try out the templates conversational flow.
+* **Demo Chat** - This section of the modal lets you chat and try out the templates' conversational flow.
 ![Story Template Demo](assets/bot-builder-story-templates/story-templates-demo.gif) 
 
 Finally you can click on the `Use Template` button on the top right of the modal to start using the template. On clicking this the template will be imported as a sub story in your bot. You can edit the parts of template you need modified and start using it in your bot.

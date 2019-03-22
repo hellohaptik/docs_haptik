@@ -1,12 +1,12 @@
 ---
-title: How to create haptik user
+title: How to create a Haptik User
 ---
 
 ## Create Haptik User API
 
-Eventually when you will be sending messages via haptik, you will provide Haptik with a unique id for every user (auth_id). This is supposed to be the unique identifier for the user in your system.
+Eventually when you will be sending messages via Haptik, you will provide Haptik with a unique id for every user (auth_id). This is supposed to be the unique identifier for the user in your system.
 
-Before sending any message to Haptik, you need to register the user, during this phase you could also provide additional information like
+Before sending any message to Haptik, you need to register the user, during this phase you could also provide additional information like:
 
 	- name
 	- mobile number
@@ -18,9 +18,9 @@ If the user with auth_id already exists then the user details will be updated in
 
 ### URL
 
-Staging endpoing: `https://staging-messenger.haptikapi.com/v1.0/user/`
+Staging endpoint: `https://staging-messenger.haptikapi.com/v1.0/user/`
 
-**Note: ** prod url's will be shared individually
+**Note: ** Production URL will be shared individually
 
 ### Headers
 

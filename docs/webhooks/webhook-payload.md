@@ -1,11 +1,11 @@
 ---
-title: Payload information
+title: Payload Information
 ---
 
-The Haptik Platform sends an event to your registered webhook under the below situations
-	- bot replies to a user message
-	- an agent replies to a user message via our [agent chat tool](https://docs.haptik.ai/agent-chat/).
-	- client integrates our [api](https://docs.haptik.ai/webhooks/#log-message-to-haptik-system-via-rest-api) to send messages to a user.
+The Haptik Platform sends an event to your registered webhook under the below situations:
+	- Bot replies to a user message
+	- An agent replies to a user message via our [agent chat tool](https://docs.haptik.ai/agent-chat/).
+	- Client integrates our [api](https://docs.haptik.ai/webhooks/#log-message-to-haptik-system-via-rest-api) to send messages to a user.
 
 Payload sent to your registered webhook will always be in json.
 

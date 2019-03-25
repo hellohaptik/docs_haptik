@@ -12,23 +12,23 @@
 			"basic/platforms-deployment"
 		],
 		"Resources": [
-			"basic/bot-heirarchy",
+			"basic/bot-hierarchy",
 			"basic/business",
-			"basic/creating-bot",
 			"basic/creating-story",
 			"basic/story-templates",
 			"basic/creating-nodes",
-			"basic/connecting-nodes",
-			"basic/general-nodes",
-			"basic/bot-says",
-			"basic/user-says",
-			"basic/chat-elements",
 			"basic/connections",
-			"basic/integrations",
+			"basic/general-nodes",
+			"basic/user-says",
+			"basic/bot-says",
+			"basic/chat-elements",
 			"basic/entities",
 			"basic/bot-prompt-trigger",
 			"basic/general-responses",
-			"basic/forms"
+                        "basic/forms"
+		],
+		"Advanced": [
+			"advanced/integrating-custom-code"	
 		]
 	},
 	"headerLink": {

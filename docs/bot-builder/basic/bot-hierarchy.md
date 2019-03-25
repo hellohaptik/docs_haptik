@@ -3,9 +3,9 @@ title: Bot Hierarchy
 ---
 
 
-### 1. Outside a Bot 
+## 1. Outside a Bot 
 
-###### Partner -> Business -> Bot
+##### Partner -> Business -> Bot
 
 The Haptik bot builder platform has a three-tiered organizational system to help organize bots. This three-tier hierarchy allows bot developers to easily deploy bots across multiple channels. The three tiers of this system are called **bots**, **businesses**, and **partners**:
 
@@ -15,7 +15,7 @@ The Haptik bot builder platform has a three-tiered organizational system to help
 
 The following image might help you envision this organizational system: 
 
-![bot_org_structure](/docs/bot-configuration/assets/partner_business_bot.png)
+![bot_org_structure](/assets/partner_business_bot.png)
 
 Below are two examples of Haptik's two main partners that serve two different functions:
 
@@ -23,9 +23,9 @@ Below are two examples of Haptik's two main partners that serve two different fu
 
 > The second partner is the Haptik company website, which is there to provide the general public with information about the company. This chatbot is comprised of businesses such as About Chatbots, Haptik Products, Case Studies, etc. Within the business called Haptik Products, users can interact with bots covering solutions for advertisers, solutions for enterprises, and so forth. 
 
-### 2. Inside a Bot 
+## 2. Inside a Bot 
 
-###### Bot -> Story -> Sub-story -> Node
+##### Bot -> Story -> Sub-story -> Node
 
     A Story is like a folder on your computer. 
 

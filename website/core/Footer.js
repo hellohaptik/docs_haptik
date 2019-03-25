@@ -30,7 +30,7 @@ class Footer extends React.Component {
               { title: 'Technical Overview', url: '/technical-overview' }
             ])} */}
             {this.renderFooterColumn('Tools', [
-              { title: 'Bot Builder', url: '/bot-builder/basic' },
+              { title: 'Bot Builder', url: '/bot-builder/basic/introduction' },
               { title: 'Agent Chat', url: '/agent-chat' },
               { title: 'Analytics', url: '/bot-analytics' }
             ])}
@@ -41,9 +41,10 @@ class Footer extends React.Component {
               { title: 'Webhooks', url: '/webhooks' },
               { title: 'HSL', url: '/hsl' }
             ])}
-            {this.renderFooterColumn('Miscellaneous', [
+            {this.renderFooterColumn('Others', [
+              { title: 'Contributing', url: '/contributing/index' },
               { title: 'Security', url: '/other/security' },
-              { title: 'Support', url: '/other/support' },
+              { title: 'Support', url: 'https://forms.gle/Z2SowBSFpWLayXQz9' },
               { title: 'SLA', url: '/other/sla' }
             ])}
           </div>

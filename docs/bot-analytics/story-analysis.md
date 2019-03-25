@@ -4,7 +4,7 @@ title: Story Analysis
 
 You must already know that *Stories* are sub-components within a created bot. In our analytics tool, you can click on "*Story Analysis*" to analyse any bot's performance on a sub-story level.
 
-![Teja Menu](/docs/bot-analytics/assets/story-analysis-teja-lhs.png)
+![Teja Menu](assets/story-analysis-teja-lhs.png)
 
 Start by selecting a specific business and the custom date range. And then you can see a *data table* and *donut chart(s)*. 
 
@@ -15,7 +15,7 @@ You get a list of all sub-stories. And you can also expand each sub-story to see
 1. Conversations
   *This column gives you the total number of user conversations on a sub-story or node.*
   
-![Story Analysis](/docs/bot-analytics/assets/story-analysis-data-table.png)
+![Story Analysis](assets/story-analysis-data-table.png)
   
 2. Automation
   *Automation percent is a value that tells you the bot's impact. A high automation percentage implies that the bot is successful in handling most queries by itself.* 
@@ -36,7 +36,7 @@ You get a list of all sub-stories. And you can also expand each sub-story to see
 
 These donut chart graphs help visualise data on nodes and sub-stories.
 
-![Donut Chart](/docs/bot-analytics/assets/story-analysis-donut-chart.png)
+![Donut Chart](assets/story-analysis-donut-chart.png)
 
 **Total Conversations**
 

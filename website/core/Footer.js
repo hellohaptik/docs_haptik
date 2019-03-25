@@ -44,7 +44,7 @@ class Footer extends React.Component {
             {this.renderFooterColumn('Others', [
               { title: 'Contributing', url: '/contributing/index' },
               { title: 'Security', url: '/other/security' },
-              { title: 'Support', url: '/other/support' },
+              { title: 'Support', url: 'https://forms.gle/Z2SowBSFpWLayXQz9' },
               { title: 'SLA', url: '/other/sla' }
             ])}
           </div>

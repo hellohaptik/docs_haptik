@@ -5,14 +5,17 @@
     "previous": "Previous",
     "tagline": "Haptik documentation in one place",
     "docs": {
+      "agent-chat/action-toolbars": {
+        "title": "Toolbar Actions"
+      },
+      "agent-chat/adding-agents-and-permissions": {
+        "title": "Adding Agents & Permissions"
+      },
       "agent-chat/adding-custom-tools": {
         "title": "Adding your own custom tool"
       },
       "agent-chat/admin_panel": {
         "title": "Admin Panel"
-      },
-      "agent-chat/athena_assignment": {
-        "title": "Chat Assignment"
       },
       "agent-chat/athena_lhs": {
         "title": "The left hand side"
@@ -20,11 +23,11 @@
       "agent-chat/athena_rhs": {
         "title": "The right hand side"
       },
-      "agent-chat/athena_smart_actions": {
-        "title": "Smart Actions"
-      },
       "agent-chat/bot-agent-handover": {
-        "title": "Bot agent handover"
+        "title": "Bot Agent Handover"
+      },
+      "agent-chat/businesses": {
+        "title": "Businesses"
       },
       "agent-chat/claiming-and-closing": {
         "title": "Claiming & Closing Chats"
@@ -35,11 +38,35 @@
       "agent-chat/custom-tools-intro": {
         "title": "Introduction"
       },
+      "agent-chat/for-chat-agents": {
+        "title": "For Chat Agents"
+      },
+      "agent-chat/for-team-leads": {
+        "title": "For Team Lead"
+      },
       "agent-chat/index": {
         "title": "Introduction"
       },
+      "agent-chat/navigating-interface-shortcuts": {
+        "title": "Shortcuts for navigation"
+      },
+      "agent-chat/smart-actions": {
+        "title": "Smart Actions"
+      },
+      "agent-chat/teams": {
+        "title": "agent-chat/teams"
+      },
+      "bot-analytics/basic-analysis": {
+        "title": "Basic Analysis"
+      },
+      "bot-analytics/for-analysts": {
+        "title": "Using the Analytics Tool"
+      },
       "bot-analytics/index": {
-        "title": "Getting started"
+        "title": "Introduction"
+      },
+      "bot-analytics/sample-metrics": {
+        "title": "Sample Metrics"
       },
       "bot-analytics/story-analysis": {
         "title": "Story Analysis"
@@ -49,6 +76,12 @@
       },
       "bot-analytics/user-ratings": {
         "title": "User Ratings"
+      },
+      "bot-analytics/user-reviews": {
+        "title": "User reviews"
+      },
+      "bot-analytics/using-message-analysis": {
+        "title": "Message Analysis"
       },
       "bot-builder/advanced/demo-links": {
         "title": "Demo Page"
@@ -71,6 +104,9 @@
       "bot-builder/basic/business": {
         "title": "Business"
       },
+      "bot-builder/basic/chat-elements": {
+        "title": "Chat Elements"
+      },
       "bot-builder/basic/connections": {
         "title": "Connections"
       },
@@ -81,10 +117,13 @@
         "title": "Creating a Story"
       },
       "bot-builder/basic/design-guidelines": {
-        "title": "Design Guidelines"
+        "title": "Designing Chat Experiences"
       },
       "bot-builder/basic/entities": {
         "title": "Entities"
+      },
+      "bot-builder/basic/for-bot-builders": {
+        "title": "For Bot Builders"
       },
       "bot-builder/basic/forms": {
         "title": "Forms"
@@ -94,9 +133,6 @@
       },
       "bot-builder/basic/general-responses": {
         "title": "General Responses"
-      },
-      "bot-builder/basic/integrating-custom-code": {
-        "title": "Integrating Custom Code"
       },
       "bot-builder/basic/introduction": {
         "title": "Introduction"
@@ -109,6 +145,9 @@
       },
       "bot-builder/basic/platforms-deployment": {
         "title": "Platforms Deployment"
+      },
+      "bot-builder/basic/story-templates": {
+        "title": "Story Templates"
       },
       "bot-builder/basic/testing-bot": {
         "title": "Testing your bot"
@@ -138,7 +177,7 @@
         "title": "FAQs"
       },
       "contributing/index": {
-        "title": "Overview"
+        "title": "Quickstart"
       },
       "contributing/making-changes": {
         "title": "Updating Documentation"
@@ -176,7 +215,7 @@
       "other/security": {
         "title": "Security"
       },
-      "other/sla_agreement": {
+      "other/sla": {
         "title": "SLA Agreement"
       },
       "other/support": {
@@ -191,8 +230,35 @@
       "product-overview/index": {
         "title": "Getting started"
       },
+      "webhooks/api-security-rules": {
+        "title": "API Security"
+      },
+      "webhooks/create-haptik-user": {
+        "title": "How to create a Haptik User"
+      },
       "webhooks/index": {
-        "title": "Getting started"
+        "title": "What is a Webhook"
+      },
+      "webhooks/protocols": {
+        "title": "Protocols"
+      },
+      "webhooks/re-enable-webhook": {
+        "title": "How to re-enable Webhook"
+      },
+      "webhooks/rules-webhook-creation": {
+        "title": "webhooks/rules-webhook-creation"
+      },
+      "webhooks/send-image-to-haptik": {
+        "title": "How to send image to Haptik"
+      },
+      "webhooks/send-message-to-haptik": {
+        "title": "How to send message to Haptik"
+      },
+      "webhooks/temp-backup": {
+        "title": "webhooks/temp-backup"
+      },
+      "webhooks/webhook-payload": {
+        "title": "Payload Information"
       }
     },
     "links": {
@@ -203,15 +269,17 @@
       "Getting Started": "Getting Started",
       "Guides": "Guides",
       "Resources": "Resources",
+      "HSL Elements": "HSL Elements",
+      "Contributing": "Contributing",
       "Docusaurus": "Docusaurus",
       "First Category": "First Category",
       "Second Category": "Second Category",
-      "Contributing": "Contributing",
-      "Advanced": "Advanced",
-      "HSL Elements": "HSL Elements",
       "Tools": "Tools",
       "Integrations": "Integrations",
-      "Introduction": "Introduction"
+      "Introduction": "Introduction",
+      "How to Create a Webhook": "How to Create a Webhook",
+      "Independent Integrations": "Independent Integrations",
+      "Advanced": "Advanced"
     }
   },
   "pages-strings": {

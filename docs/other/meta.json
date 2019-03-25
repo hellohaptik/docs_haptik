@@ -1,6 +1,6 @@
 {
   "sidebar": {
-    "Tools": ["security", "support", "sla"],
+    "Tools": ["security", "sla"],
     "Integrations": ["facebook"]
   }
 }

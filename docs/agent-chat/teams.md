@@ -1,3 +1,7 @@
+---
+title: Teams
+---
+
 # Teams in Agent Chat
 
 Read this document to know about the **Team** feature in Agent Chat. Team is a feature used by Team Leaders who are responsible to manage a team of agents.

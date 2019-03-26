@@ -21,7 +21,7 @@ Conversations can be thought of as sessions. In one session a user might try to 
 ## Tasks
 Tasks are high level goals that the bot builder has configured as flows in the chatbot. These tasks are generally available in the taskbox of a chatbot. These can be thought of as high level menu items of a chatbot.
 
-![Taskbar](assets/core-concepts-taskbar.png)
+![Taskbox](assets/core-concepts-taskbox.png)
 
 ## Bot Breaks
 There will be times when the bot will not be able to understand the message sent by the user. Such messages are called Bot Break Messages.

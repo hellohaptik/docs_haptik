@@ -19,7 +19,7 @@ Conversations can be thought of as sessions. In one session a user might try to 
 > Note: Conversation is a collection of Chats.
 
 ## Tasks
-Tasks are high level goals that the bot builder has configured as flows in the chatbot. These tasks are generally available in the taskbar of a chatbot. These can be thought of as high level menu items of a chatbot.
+Tasks are high level goals that the bot builder has configured as flows in the chatbot. These tasks are generally available in the taskbox of a chatbot. These can be thought of as high level menu items of a chatbot.
 
 ![Taskbar](assets/core-concepts-taskbar.png)
 

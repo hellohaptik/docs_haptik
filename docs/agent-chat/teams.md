@@ -99,8 +99,6 @@ Make a team in agent chat which is supposed to take chats which are not assigned
 
 Open General Settings in business manager & set the default team.
 
-https://www.dropbox.com/s/zlr76opfokzrzav/Screenshot%202019-03-12%2016.54.15.png?dl=0
-
 ## Tips to manage a Team
 
 ✅ Track No. of Delayed Chats and reduce them at peak hours
@@ -114,3 +112,9 @@ https://www.dropbox.com/s/zlr76opfokzrzav/Screenshot%202019-03-12%2016.54.15.png
 ✅ View Individual Chats to get quality feedback
 
 ✅ Analyze end of day conversation wise reports
+
+You can filter the summary and agent metrics by *Custom time* or *Custom date*. Refer the image below for how to check hourly/daily **Team analytics**.
+
+![Hourly_Metrics](assets/teams_hourly_analytics.png)
+
+    Tip: You can choose 1 hr in the Custom time filter to get the metric values for the last 1 hour.

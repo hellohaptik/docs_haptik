@@ -126,7 +126,7 @@ On your KooKoo dashboard you should find Sandbox Phone numbers. You can call any
 
 ![KooKoo Bot Testing](assets/platform_deployments_kookoo_testing.png)
 
-## Deploying to Webhook
+## Deploying to Web
 If you want to use a custom platform or want to connect to a platform not currently supported you can use the Webhook Integration. Briefly this is how the webhook integration works:
 
 1) Your application receives the message from the user.
@@ -147,3 +147,17 @@ You can get more detailed information about the request/response parameters and 
 
 ### Testing the connection
 You can test the connection by making a POST request to the callback URL. After making the request you should get a reply sent as a request on the webhook URL setup by you.
+
+## Sending Notifications in a Bot with Web SDK Integration
+If you integrate your bot into an Android or iOS app using Web SDK then it is not possible to send push notifications out of the box. In such cases if you want to send push notifications you can use the Web SDK settings from the platform deployments page.
+
+### Setting up notifications
+1) Go to the Platform Settings page and scroll to the Web SDK section.
+2) Enter the Callback URL. This is as a unique identifier for your business.
+3) Then enter the Secret Key which is used to authenticate your business.
+4) Finally enter the Webhook URL. This is the URL the notifications will be sent as a request to.
+5) Save the configuration and activate it by turning the switch on next to the partner you want to setup the bot for.
+
+![Web SDK settings](assets/platform_deployments_web_sdk_notifications.png)
+
+

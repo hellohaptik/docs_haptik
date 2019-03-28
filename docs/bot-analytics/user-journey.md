@@ -2,57 +2,62 @@
 title: User Journey
 ---
 
-This section in Teja (our analytics tool) helps you analyze how users move in the chat flow. How you'd want to see funnel performance in a website, you'd want to see the *User Journey* in chatbot conversations. 
+This section in our analytics tool helps you analyze how users move in the chat flow. How you'd want to see funnel performance in a website, you'd want to see the *User Journey* in chatbot conversations. 
 
-Assuming you've selected a particular business/channel and custom date range, you'd see a table view, listing nodes. 
+Assuming you've selected a particular business/channel and custom date range, you'd see a view, listing all nodes. 
 
-### Nodes list
+## Nodes list
 
-This section lists nodes in a table. And for each node, you get 3 metrics:
-1. Incoming users
-2. Outgoing users
-3. Dropping users
+On this nodes list, you see all start or non-start nodes here.
 
-       Outgoing users on a node go through to another node 
-       from the selected node. And Dropping Users are the ones 
-       who dropped out of the conversation from the selected node. 
+For more details on a node, you can click the *Select metric* filter to list with - 
+
+1. Incoming traffic 
+2. Bot Breaks
+3. Drop Offs 
+4. Outgoing traffic
+
+The node with the highest no. (metric value) will have the max bar length and consider this as 100%. And every other node bar length is relative to this value.
+
+Above this nodes list, you have the colored legends, sort and metric filter drop-downs.
+
+       Outgoing traffic value counts users  who go through to another node from the selected node. 
+       
+       Dropping Users are the ones who dropped out of the conversation from the selected node. 
 
 ![Nodes table](/assets/user-journey-node-list.png)
 
-    Tip: You can also key in the node name on search bar to find a node.
+## Detailed Node view
 
-### Node Traversal graph
+Select/Click on a specific node to view the node level details. The white section that you get for a selected node is divided into 3 sections:
 
-Every node has a user journey. To access, click ‘*View Journey*’ on *Nodes list* to view a node's traversal graph. This clicked node becomes your *Selected node*.
+![Nodes table](/assets/user-journey-node-detailed-view.png)
 
-    Tip: Please note that there can be multiple ways for an user to reach any node.  
+1. Incoming Traffic: Node-wise incoming users and *Start of Conversation* users is the count of users reaching the selected node 
+2. Center section: Check a Node’s metrics totalled i.e. Incoming & Outgoing users’ count volume, Drop-offs and Bot Breaks here
+3. Outgoing Traffic: Node-wise Outgoing users and *End of Conversation* value is the count of users who leave from the selected node 
 
-On the graph, your *selected node* is placed at the top. And there will be diverging line(s) i.e. routes from this node to other nodes in the bot. 
+Example - Say a node called “C” was selected; we get the traffic from Nodes A, B to C in the 1st section on the left-hand side. And the traffic from C to other nodes will be displayed in the right-hand side section.
 
-![User Journey](/assets/user-journey-node-traversal-graph.png)
+## On-hover Node details
 
-1. You can zoom in/out to check the flow from your node
+*Sort Node* list click gives you the power to sort nodes list from the selected metric values in *Low to High*, *High to Low* or alphabetic order.
 
-       Tip: Thicker the line from one node to another, higher the users traversing on this route.
+*Select Metric* as the name suggests lets you select the metric value that you want to see in the non-expanded view of all node rows in the list
 
-2. Now, you could hover on any node to get more data:
-   - Incoming Count (number of users entering a node)
-   - Incoming % (percentage of users entering a node from your *selected node*)
-   - Break count (instances when the bot wasn't able to respond to the user)
-   - Automation (percentage of instances from total, when bot was able to handle user queries)
+*Start of Conversation* hover gives count and % traffic from overall incoming traffic on a node
 
-3. Click on any node shape possibly to expand them. This will help you access nodes and node paths in this graph view
- 
-       Ex: Node A -> Node  B -> Node C 
-       Incoming users on Node A: 100
-       Incoming users on Node B: 56
-       Dropping users on Node C: 34
-        
-Above example helps you understand that the path from node A to node C isn't optimised as only 34 users ended on node C 
-(out of 100 incoming users on node A). 
-        
-4. You can click on the *Legend* button at the bottom to understand the different color codes and node shapes.
+*Incoming Nodes* hover gives count and % traffic from overall incoming traffic on a node
 
-       Tip: All start nodes are oval in shape. Other nodes are rectangular shaped and 
-       drop-off endpoints are denoted with a dot. 
+*End of Conversation* hover gives count and % traffic from overall outgoing traffic on a node
+
+*Outgoing Nodes* hover gives count and % traffic from overall incoming traffic on a node
+
+*Incoming Traffic Volume bar* gives you a breakup of direct and nodes’ incoming traffic
+
+*Drop-offs* provide the total drop-off count & % value of the total incoming traffic
+
+*Bot Breaks* provide the total break count & % value of the total incoming traffic
+
+*Outgoing Traffic Volume* bar gives you a breakup of direct and nodes’ outgoing traffic
 

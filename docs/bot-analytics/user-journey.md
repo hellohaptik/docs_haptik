@@ -25,13 +25,13 @@ Above this nodes list, you have the colored legends, sort and metric filter drop
        
        Dropping Users are the ones who dropped out of the conversation from the selected node. 
 
-![Nodes table](/assets/user-journey-node-list.png)
+![Nodes table](/bot-analytics/assets/user-journey-node-list.png)
 
 ## Detailed Node view
 
 Select/Click on a specific node to view the node level details. The white section that you get for a selected node is divided into 3 sections:
 
-![Nodes view](/assets/user-journey-node-detailed-view.png)
+![Nodes view](/bot-analytics/assets/user-journey-node-detailed-view.png)
 
 1. Incoming Traffic: Node-wise incoming users and *Start of Conversation* users is the count of users reaching the selected node 
 2. Center section: Check a Node’s metrics totalled i.e. Incoming & Outgoing users’ count volume, Drop-offs and Bot Breaks here

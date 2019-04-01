@@ -44,7 +44,7 @@ There are three ways in which a chat can be assigned to a team
 
 The team name is used for internal purpose for the Team Leaders & Agents. A user will never see the team name of the team assigned to him.
 
-### Step 2 - Select Team Owner(Client)
+### Step 2 - Select Team Owner (Client)
 
 Select the company to which the team belongs. This is used by agencies who deal with multiple clients at a given time.
 

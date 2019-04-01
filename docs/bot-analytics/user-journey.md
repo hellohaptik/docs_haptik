@@ -41,23 +41,14 @@ Example - Say a node called “C” was selected; we get the traffic from Nodes 
 
 ## On-hover Node details
 
-* *Sort Node* click lets you sort nodes from selected metric values in *Low to High*, *High to Low* or alphabetic orders.
-
-* *Select Metric* drop-down lets you choose a metric value that you want to see in the non-expanded node list view.
-
-* *Start of Conversation* hover gives count and percent traffic from overall incoming traffic on a node.
-
-* *Incoming Nodes* hover gives count and percent traffic from overall incoming traffic on a node.
-
-* *End of Conversation* hover gives count and percent traffic from overall outgoing traffic on a node.
-
-* *Outgoing Nodes* hover gives count and percent traffic from overall outgoing traffic on a node.
-
-* *Incoming Traffic Volume bar* gives you a breakup of direct and nodes’ incoming traffic.
-
-* *Drop-offs* provide the total drop-off count and percent value of the total incoming traffic.
-
-* *Bot Breaks* provide the total break count and percent value of the total incoming traffic.
-
+* *Sort Node* click lets you sort nodes from selected metric values in *Low to High*, *High to Low* or alphabetic orders
+* *Select Metric* drop-down lets you choose a metric value that you want to see in the non-expanded node list view
+* *Start of Conversation* hover gives count and percent traffic from overall incoming traffic on a node
+* *Incoming Nodes* hover gives count and percent traffic from overall incoming traffic on a node
+* *End of Conversation* hover gives count and percent traffic from overall outgoing traffic on a node
+* *Outgoing Nodes* hover gives count and percent traffic from overall outgoing traffic on a node
+* *Incoming Traffic Volume bar* gives you a breakup of direct and nodes’ incoming traffic
+* *Drop-offs* provide the total drop-off count and percent value of the total incoming traffic
+* *Bot Breaks* provide the total break count and percent value of the total incoming traffic
 * *Outgoing Traffic Volume* bar gives you a breakup of direct and nodes’ outgoing traffic.
 

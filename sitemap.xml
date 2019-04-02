@@ -19,6 +19,7 @@
 <url> <loc>https://docs.haptik.ai/agent-chat/smart-actions</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.haptik.ai/agent-chat/smart-actions" /> </url>
 <url> <loc>https://docs.haptik.ai/agent-chat/teams</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.haptik.ai/agent-chat/teams" /> </url>
 <url> <loc>https://docs.haptik.ai/bot-analytics/basic-analysis</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.haptik.ai/bot-analytics/basic-analysis" /> </url>
+<url> <loc>https://docs.haptik.ai/bot-analytics/core-concepts</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.haptik.ai/bot-analytics/core-concepts" /> </url>
 <url> <loc>https://docs.haptik.ai/bot-analytics/for-analysts</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.haptik.ai/bot-analytics/for-analysts" /> </url>
 <url> <loc>https://docs.haptik.ai/bot-analytics/</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.haptik.ai/bot-analytics/" /> </url>
 <url> <loc>https://docs.haptik.ai/bot-analytics/sample-metrics</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.haptik.ai/bot-analytics/sample-metrics" /> </url>
@@ -85,5 +86,6 @@
 <url> <loc>https://docs.haptik.ai/webhooks/send-image-to-haptik</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.haptik.ai/webhooks/send-image-to-haptik" /> </url>
 <url> <loc>https://docs.haptik.ai/webhooks/send-message-to-haptik</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.haptik.ai/webhooks/send-message-to-haptik" /> </url>
 <url> <loc>https://docs.haptik.ai/webhooks/temp-backup</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.haptik.ai/webhooks/temp-backup" /> </url>
+<url> <loc>https://docs.haptik.ai/webhooks/using-platform-deployments</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.haptik.ai/webhooks/using-platform-deployments" /> </url>
 <url> <loc>https://docs.haptik.ai/webhooks/webhook-payload</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.haptik.ai/webhooks/webhook-payload" /> </url>
 </urlset>

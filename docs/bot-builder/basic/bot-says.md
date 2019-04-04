@@ -55,7 +55,7 @@ What that would mean is, if the User provided the phone number, it will be captu
 
 > **Note:** You can set an Entity Response only for Mandatory Entities. To know more about the difference between Mandatory and Non-Mandatory entities, refer [this](https://docs.haptik.ai/bot-builder/basic/entities).
 
-Since Non-Mandatory entities are not compulsory for the node, you don't need to add a specific response for this entity. And the request to collect the answer can be combined with responses for other Mandatory Entities by using [Chat Forms](../entities) or other [HSLs](https://docs.haptik.ai/hsl/)
+Since Non-Mandatory entities are not compulsory for the node, you don't need to add a specific response for this entity. And the request to collect the answer can be combined with responses for other Mandatory Entities by using [Chat Forms](https://docs.haptik.ai/bot-builder/basic/entities) or other [HSLs](https://docs.haptik.ai/hsl/)
 
 
 ### Final Response

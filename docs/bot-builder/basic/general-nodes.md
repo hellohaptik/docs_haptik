@@ -82,8 +82,6 @@ Because General Nodes are very simple in terms of features (no entities/api call
 
 To simplify the process of creating these FAQ General nodes, there is an option to upload a TSV file (Tab separated file).
 
-Here is a [sample TSV file](https://docs.haptik.ai/bot-builder/basic/general_nodes_faq.tsv) which can be used to create FAQ based general nodes.
-
 A General node is created for every Question/Answer pair in the file.
 
 - The question is treated as ‘User Says’

@@ -55,7 +55,7 @@ In this phase, the bot is sent out to stakeholders and a random group of users w
 
 ##### Production
 
-Owner: customer success / same team as above
+Owner: Customer Success
 
 In this phase the bot is sent to production, but someone still keeps an eye out on usage patterns to make sure the bot is able to answer majority of the users queries.
 

@@ -36,7 +36,7 @@ In this phase a content creator starts to define how the bot should respond to t
 
 Owner: Engineer / AI trainer
 
-In this phase, the PM, engineers and AI trainers should identify all the tasks required to develop a build a bot. Ideally these task should be small achievable tasks and should be taken up in 1-2 week sprints. Below are the main tasks the team should aim to achieve in this phase
+In this phase, the PM, engineers and AI trainers should identify all the tasks required to build a bot. Ideally these task should be small achievable tasks and should be taken up in 1-2 week sprints. Below are the main tasks the team should aim to achieve in this phase
 
 - Use the Haptik bot builder to build out all the conversation flows as per the SOW
 - Use internal and external API's to build out business logic for the bot to complete its tasks

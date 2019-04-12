@@ -20,7 +20,8 @@ In this phase the owner solutions and architects the bot which needs to be built
 - Identify internal and external dependencies to get the bot built
 - Basic architecture and tech evaluation to avoid major unknowns in the future
 
-Outcome: Detailed SOW with all internal and external stakeholder dependencies and timelines (comes from the developer). Get requirements, dependencies, architecture, but design, timelines signed off by all stakeholders. We can share some sample SOWs that we have created in the past. 
+Outcome: Detailed SOW with all internal and external stakeholder dependencies and timelines (comes from the developer). Get requirements, dependencies, architecture, design and timelines signed off by all stakeholders. 
+We can share some sample SOWs that we have created in the past. 
 
 ##### Content creation
 

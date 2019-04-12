@@ -116,7 +116,7 @@ To take care of the phases above it is important to create a team (we call it a 
 - Test bots on completion of development & coordinate with developers for fixes. Own the QA phase.
 - Drive completion of UAT phase
 
-1. - Evaluate, prioritize, and create the necessary ticket for bugs raised by internal and external stake holders and work towards getting final sign-off. Raise alerts on out of scope or new requirements with PMs.
+- Evaluate, prioritize, and create the necessary ticket for bugs raised by internal and external stake holders and work towards getting final sign-off. Raise alerts on out of scope or new requirements with PMs.
    - Work closely with PMs to ensure UAT tickets are planned for and completed.
    - Coordinate with internal and external teams for setting up meetings, follow-ups during UAT phase
 

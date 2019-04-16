@@ -12,7 +12,8 @@
         	"api-security-rules",
         	"create-haptik-user",
         	"send-message-to-haptik",
-            "send-image-to-haptik"
+            "send-image-to-haptik",
+            "using-platform-deployments"
         ]
     }
 }

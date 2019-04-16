@@ -20,13 +20,37 @@ To deploy a live webhook that can receive webhook events, your code must be host
 - A Valid SSL Certificate
 - An open port that accepts `GET` and `POST` requests
 
-#### How to add integration endpoint
+
+There are two steps involved involved in setting up webhooks. The first is to define the base URL for the webhook and the second step is putting in the exact endpoint/path to be used.
+
+#### Setting up base URL
+The base URL is the default URL for all your integration webhooks. You can specify the exact paths at a node level but this will be the base domain that your integrations use by default. The base URLs have to be set specific to different environment. This means that you will have to set up a base URL for your test or staging environment and a base URL for the production environment.
+
+In your test or staging environment you can configure which environment's base URL to use. However, in production only the production environment's base URL will be used. This is to ensure that the bots in production are only referring to prodcution code.
+
+You can set these environment specific URLs while creating the bot as shown below.
+
+![environment specific base URL for new bots](assets/integrating_custom_code_env_base_url_new_bot.png)
+
+
+For existing bots you can set or update these URLs by using the `edit bot` option from the top menubar in the bot builder tool.
+
+![environment specific base URL edit bot](assets/integrating_custom_code_env_base_url_edit_bot.gif)
+
+#### Adding integration endpoint
 
 1. Click on node on which you want to add integration function
 2. Select Integration
 3. Select API and put API endpoint like shown in image
 
-![add integration endpoint](/assets/endpoint.png)
+![adding integration endpoint](assets/integrating_custom_code_endpoint.png)
+
+***Note***: The endpoint uses the environemnt specific base URL of the bot. You can see the URL in the label of the textbox.
+
+#### Overriding environment specific base URL
+There might be times where you want to use an API endpoint on a domain which is different from the base URL. In such cases you can override the base URL as shown below. Just select the override base URL option and enter the full URL including the path in the text box.
+
+![overriding base URL](assets/integrating_custom_code_env_override_url.gif)
 
 Specify the security challenge that will be verified
 

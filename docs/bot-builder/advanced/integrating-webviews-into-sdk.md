@@ -1,17 +1,25 @@
 ---
-title: Integrating WebViews
+title: Integrating Webviews
 ---
 
 ## Overview
+Haptik platfrom allows you to open a standard webview, where you can load a webpage right inside the chat window. This let's you offer new and 
+better experiences that might not be possible using current HSLs. Using a webview is a quicker way to build custom UI elements compared to building a new HSL.
 
-The existing functionality of the Android and iOS SDKs can be extended
-by using native webview of each of the devices. This can be used to
-render custom content, take payments or other experiences which may be
-difficult to offer with messages.
+Webviews can be used to render custom content, take payments or other experiences which may be
+difficult to offer with HSL messages. 
 
-![img](assets/Apps-Webview.png)
 
 ## Displaying the Webview
+
+### Web SDK
+You can display a webview by using buttons of type `Open Screen`. To set this up go to bot says and add a new chat element with a button. Then choose the button type as 
+`Open Screen`
+
+### Android and iOS SDK
+On the android and iOS SDK, the existing functionality can be extended by using native webview of each of the devices.
+
+![img](assets/Apps-Webview.png)
 
 The Webview is displayed by sending a a Smart Action message with the
 `SELF_SERVE_WEB` URI
@@ -44,6 +52,10 @@ The Webview is displayed by sending a a Smart Action message with the
 
 ## Closing the Webview
 
+### Web SDK
+-- ToDO --
+
+### Android and iOS SDK
 The webview can be closed by redirecting itself to a url on the
 `haptik-webview` domain. The Native application will listen to the a
 change on the URL and the webview will be closed and a message, if

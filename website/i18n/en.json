@@ -54,10 +54,13 @@
         "title": "Smart Actions"
       },
       "agent-chat/teams": {
-        "title": "agent-chat/teams"
+        "title": "Teams"
       },
       "bot-analytics/basic-analysis": {
         "title": "Basic Analysis"
+      },
+      "bot-analytics/core-concepts": {
+        "title": "Core Concepts"
       },
       "bot-analytics/for-analysts": {
         "title": "Using the Analytics Tool"
@@ -90,7 +93,7 @@
         "title": "Integrating Custom Code"
       },
       "bot-builder/advanced/integrating-webviews-into-sdk": {
-        "title": "Integrating WebViews"
+        "title": "Integrating Webviews"
       },
       "bot-builder/basic/bot-hierarchy": {
         "title": "Bot Hierarchy"
@@ -257,6 +260,9 @@
       "webhooks/temp-backup": {
         "title": "webhooks/temp-backup"
       },
+      "webhooks/using-platform-deployments": {
+        "title": "webhooks/using-platform-deployments"
+      },
       "webhooks/webhook-payload": {
         "title": "Payload Information"
       }
@@ -269,17 +275,17 @@
       "Getting Started": "Getting Started",
       "Guides": "Guides",
       "Resources": "Resources",
-      "HSL Elements": "HSL Elements",
-      "Contributing": "Contributing",
       "Docusaurus": "Docusaurus",
       "First Category": "First Category",
       "Second Category": "Second Category",
-      "Tools": "Tools",
-      "Integrations": "Integrations",
+      "Advanced": "Advanced",
+      "HSL Elements": "HSL Elements",
       "Introduction": "Introduction",
       "How to Create a Webhook": "How to Create a Webhook",
       "Independent Integrations": "Independent Integrations",
-      "Advanced": "Advanced"
+      "Tools": "Tools",
+      "Integrations": "Integrations",
+      "Contributing": "Contributing"
     }
   },
   "pages-strings": {

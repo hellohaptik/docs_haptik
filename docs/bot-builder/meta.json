@@ -28,7 +28,8 @@
                         "basic/forms"
 		],
 		"Advanced": [
-			"advanced/integrating-custom-code"	
+			"advanced/integrating-custom-code",
+			"advanced/integrating-webviews-into-sdk"	
 		]
 	},
 	"headerLink": {

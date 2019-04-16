@@ -24,11 +24,15 @@ To deploy a live webhook that can receive webhook events, your code must be host
 There are two steps involved involved in setting up webhooks. The first is to define the base URL for the webhook and the second step is putting in the exact endpoint/path to be used.
 
 #### Setting up base URL
-The base URL is the default URL for all your integration webhooks. You can specify the exact paths at a node level but this will be the base domain that your integrations use by default. The base URLs have to be set specific to different environment. This means that you will have to set up a base URL for your testenvironment and a base URL for the production environment.
+The base URL is the default URL for all your integration webhooks. You can specify the exact paths at a node level but this will be the base domain that your integrations use by default. The base URLs have to be set specific to different environment. This means that you will have to set up a base URL for your test environment and a base URL for the production environment.
 
-In your test environment you can configure which environment's base URL to use. However, in production only the production environment's base URL will be used. This is to ensure that the bots in production are only referring to prodcution code.
+In your test environment you can configure which environment's base URL to use. However, in production only the production environment's base URL will be used. This is to ensure that the bots in production are only referring to production code.
 
 You can set these environment specific URLs while creating the bot as shown below.
+
+1. Click on Create Bot
+2. Fill details and scroll down to the `Bot deployment environment` section.
+3. Enter the environment specific base URLs.
 
 ![environment specific base URL for new bots](assets/integrating_custom_code_env_base_url_new_bot.png)
 

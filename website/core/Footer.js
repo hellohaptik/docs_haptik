@@ -42,10 +42,10 @@ class Footer extends React.Component {
               { title: 'HSL', url: '/hsl' }
             ])}
             {this.renderFooterColumn('Others', [
-              { title: 'Contributing', url: '/contributing/index' },
-              { title: 'Security', url: '/other/security' },
+              { title: 'Contributing', url: 'https://docs.haptik.ai/contributing/index' },
+              { title: 'Security', url: 'https://docs.haptik.ai/other/security' },
               { title: 'Support', url: 'https://forms.gle/Z2SowBSFpWLayXQz9' },
-              { title: 'SLA', url: '/other/sla' }
+              { title: 'SLA', url: 'https://docs.haptik.ai/other/sla' }
             ])}
           </div>
           <div className="footer-copyright" />

@@ -13,15 +13,22 @@ difficult to offer with HSL messages.
 ## Displaying the Webview
 
 ### Web SDK
-You can display a webview by using buttons of type `Open Screen`. To set this up go to bot says and add a new chat element with a button. Then choose the button type as 
-`Open Screen`
+You can display a webview by using buttons of type `Open Screen`. To set this follow these steps:
+
+1) Go to bot says and add any new chat element which contains buttons. 
+2) Choose the button type as `Open Screen`.
+3) Choose screen to open as `Webview`.
+4) Enter the link to open.
+5) Set the height of the webview. This should be a number between 0 and 1. Here 0 corresponds to 0%, 1 corresponds to 100%.
+
+![Creating a Webview Button](assets/integrating_webviews_hsl_button.gif)
 
 ### Android and iOS SDK
 On the android and iOS SDK, the existing functionality can be extended by using native webview of each of the devices.
 
 ![img](assets/Apps-Webview.png)
 
-The Webview is displayed by sending a a Smart Action message with the
+Apart from the HSL button configuration the Webview can also be displayed by sending a a Smart Action message with the
 `SELF_SERVE_WEB` URI
 
 **Smart Action Syntax**
@@ -53,7 +60,7 @@ The Webview is displayed by sending a a Smart Action message with the
 ## Closing the Webview
 
 ### Web SDK
--- ToDO --
+-- ToDo --
 
 ### Android and iOS SDK
 The webview can be closed by redirecting itself to a url on the

@@ -20,15 +20,19 @@ To deploy a live webhook that can receive webhook events, your code must be host
 - A Valid SSL Certificate
 - An open port that accepts `GET` and `POST` requests
 
+There are two ways to use webhooks to integrate external code in your bot. The two ways are:
 
-There are two steps involved involved in setting up webhooks. The first is to define the base URL for the webhook and the second step is putting in the exact endpoint/path to be used.
+#### 1. Relative URLs
 
-#### Setting up base URL
-The base URL is the default URL for all your integration webhooks. You can specify the exact paths at a node level but this will be the base domain that your integrations use by default. The base URLs have to be set specific to different environment. This means that you will have to set up a base URL for your test environment and a base URL for the production environment.
+In the first method, you can set a common base URL for the bot. And then you can add relative paths in the node where the integration is required. This method allows you to set two base URLs, one for the test environment and one for the production environment.
+
+Having environment specific base URLs allows you to easily test your bot with code from different environments. Also because only the production base URL will be used in production, this helps you avoid issues of accidentally having a production bot linked to non production code.
 
 In your test environment you can configure which environment's base URL to use. However, in production only the production environment's base URL will be used. This is to ensure that the bots in production are only referring to production code.
 
-You can set these environment specific URLs while creating the bot as shown below.
+
+##### Setting up base URL
+You can set the environment specific base URLs while creating the bot as shown below.
 
 1. Click on Create Bot
 2. Fill details and scroll down to the `Bot deployment environment` section.
@@ -41,7 +45,7 @@ For existing bots you can set or update these URLs by using the `edit bot` optio
 
 ![environment specific base URL edit bot](assets/integrating_custom_code_env_base_url_edit_bot.gif)
 
-#### Adding integration endpoint
+##### Adding integration endpoint
 
 1. Click on node on which you want to add integration function
 2. Select Integration
@@ -51,8 +55,8 @@ For existing bots you can set or update these URLs by using the `edit bot` optio
 
 ***Note***: The endpoint uses the environemnt specific base URL of the bot. You can see the URL in the label of the textbox.
 
-#### Overriding environment specific base URL
-There might be times where you want to use an API endpoint on a domain which is different from the base URL. In such cases you can override the base URL as shown below. Just select the override base URL option and enter the full URL including the path in the text box.
+### 2. Using Absolute URLs
+The second method is to use absolute URLs. There might be times where you want to use an API endpoint on a domain which is different from the base URL. In such cases you can override the base URL as shown below. Just select the override base URL option and enter the full URL including the path in the text box.
 
 ![overriding base URL](assets/integrating_custom_code_env_override_url.gif
 )

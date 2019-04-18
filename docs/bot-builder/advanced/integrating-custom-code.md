@@ -55,7 +55,7 @@ For existing bots you can set or update these URLs by using the `edit bot` optio
 
 ***Note***: The endpoint uses the environemnt specific base URL of the bot. You can see the URL in the label of the textbox.
 
-#### 2. Using Absolute URLs
+#### 2. Override base URLs and use absolute URLs
 The second method is to use absolute URLs. There might be times where you want to use an API endpoint on a domain which is different from the base URL. In such cases you can override the base URL as shown below. Just select the override base URL option and enter the full URL including the path in the text box.
 
 ![overriding base URL](assets/integrating_custom_code_env_override_url.gif

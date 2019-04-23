@@ -87,30 +87,18 @@ http://haptik-webview//perform-action?action=close&message={message}&message_typ
 | message_type | The type of message to be sent | 0| 
 
 
-#### Message Types in iOS
+#### Message Types
 
 |Message Type | Code |
 |-------------|------|
-|MessageTypeRegular  | 0|
-|MessageTypeImage    | 1|
-|MessageTypeForm     | 17|
-|MessageTypeNote     | 21|
-|MessageTypeLocation | 26|
-|MessageTypeTabList  | 31|
-|MessageTypeCarousel | 33|
-|MessageTypeLaunchBot| 47|
-
-#### Message Types in Android
-
-|Message Type | Code |
-|-------------|------|
-|LOCATION_MESSAGE_TYPE|26|
-|NOTE_MESSAGE_TYPE|21|
-|NO_TYPE|-1|
-|IMAGE_MESSAGE_TYPE|1|
-|FORM_MESSAGE_TYPE|17|
-|CAROUSEL_MESSAGE_TYPE|33|
-|BOT_REPLY_MESSAGE_TYPE|18|
-|TASK_TAP_MESSAGE_TYPE|38|
-|ATHENA_SMART_ACTION_MESSAGE_TYPE|31|
-|TRIGGER_BOT_MESSAGE_TYPE|47|
+|Regular Message | 0|
+|Image    | 1|
+|Form     | 17|
+|Note     | 21|
+|Location | 26|
+|TabList  | 31|
+|Carousel | 33|
+|LaunchBot| 47|
+|No Type  | -1|
+|Bot Reply Message|18|
+|Task Tap Message|38|

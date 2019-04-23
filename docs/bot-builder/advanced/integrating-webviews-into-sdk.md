@@ -60,7 +60,13 @@ Apart from the HSL button configuration the Webview can also be displayed by sen
 ## Closing the Webview
 
 ### Web SDK
--- ToDo --
+On the Web SDK the webview can be closed and data transferred back to the bot by using the following javascript code:
+
+```javascript
+if (window.parent) window.parent.postMessage('<http://haptik-webview//perform-action?action=close&message=HelloWorld!!',> '*')|
+```
+
+The action parameter in the URL is used for closing the bot and the message parameter contains the message that needs to be sent when the webview is closed.
 
 ### Android and iOS SDK
 The webview can be closed by redirecting itself to a url on the
@@ -72,18 +78,39 @@ present will be sent to the user
 http://haptik-webview//perform-action?action=close&message={message}&message_type={message_type}
 ```
 
-+-----------------------+-----------------------+-----------------------+
-| Query Parameters | Value | Sample |
-+=======================+=======================+=======================+
-| action | close | |
-+-----------------------+-----------------------+-----------------------+
-| message | The message to be | "Thanks for providing |
-| | sent when the webview | the information" |
-| | is closed. | |
-+-----------------------+-----------------------+-----------------------+
-| message_type | The type of message | 16 |
-| | to be sent. For more | |
-| | information refer to | |
-| | the message types | |
-| | documentation. | |
-+-----------------------+-----------------------+-----------------------+
+|Query Parameters | Value | Sample |
+|-----------------|-------|--------|
+| action | The action to be taken on the webview | close|
+| message| The message to be sent when the webview is closed | "Thanks for providing the information"|
+| message_type | The type of message to be sent | 0| 
+
+
+#### Message Types in iOS
+
+|Message Type | Code |
+|-------------|------|
+|MessageTypeRegular  | 0|
+|MessageTypeImage    | 1|
+|MessageTypeForm     | 17|
+|MessageTypeNote     | 21|
+|MessageTypePayment  | 23|
+|MessageTypeLocation | 26|
+|MessageTypeTabList  | 31|
+|MessageTypeCarousel | 33|
+|MessageTypeBanner   | 40|
+|MessageTypeLaunchBot| 47|
+
+#### Message Types in Android
+
+|Message Type | Code |
+|-------------|------|
+|LOCATION_MESSAGE_TYPE|26|
+|NOTE_MESSAGE_TYPE|21|
+|NO_TYPE|-1|
+|IMAGE_MESSAGE_TYPE|1|
+|FORM_MESSAGE_TYPE|17|
+|CAROUSEL_MESSAGE_TYPE|33|
+|BOT_REPLY_MESSAGE_TYPE|18|
+|TASK_TAP_MESSAGE_TYPE|38|
+|ATHENA_SMART_ACTION_MESSAGE_TYPE|31|
+|TRIGGER_BOT_MESSAGE_TYPE|47|

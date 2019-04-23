@@ -275,15 +275,15 @@
       "Getting Started": "Getting Started",
       "Guides": "Guides",
       "Resources": "Resources",
-      "Advanced": "Advanced",
       "Docusaurus": "Docusaurus",
       "First Category": "First Category",
       "Second Category": "Second Category",
-      "Introduction": "Introduction",
-      "HSL Elements": "HSL Elements",
+      "Advanced": "Advanced",
       "Tools": "Tools",
       "Integrations": "Integrations",
       "Contributing": "Contributing",
+      "HSL Elements": "HSL Elements",
+      "Introduction": "Introduction",
       "How to Create a Webhook": "How to Create a Webhook",
       "Independent Integrations": "Independent Integrations"
     }

@@ -11,9 +11,9 @@
     ],
     "Resources": [
       "story-analysis",
-      "user-reviews",
-      "user-ratings",
       "user-journey",
+      "user-ratings",
+      "user-reviews",
       "sample-metrics"
     ]
   },

@@ -15,6 +15,7 @@ A team is a group of agents who are trained to handle user queries related to a 
 A team can receive chats from a business in 2 possible configurations
 
 - If a Business is **Bot + Human Assisted** 
+
 ![bot_settings](assets/teams_bot_settings.png)
 
 - If a Business is **Completely Human Assisted**
@@ -44,7 +45,7 @@ There are three ways in which a chat can be assigned to a team
 
 The team name is used for internal purpose for the Team Leaders & Agents. A user will never see the team name of the team assigned to him.
 
-### Step 2 - Select Team Owner(Client)
+### Step 2 - Select Team Owner (Client)
 
 Select the company to which the team belongs. This is used by agencies who deal with multiple clients at a given time.
 

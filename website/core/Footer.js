@@ -30,22 +30,22 @@ class Footer extends React.Component {
               { title: 'Technical Overview', url: '/technical-overview' }
             ])} */}
             {this.renderFooterColumn('Tools', [
-              { title: 'Bot Builder', url: '/bot-builder/basic/introduction' },
-              { title: 'Agent Chat', url: '/agent-chat' },
-              { title: 'Analytics', url: '/bot-analytics' }
+              { title: 'Bot Builder', url: 'https://docs.haptik.ai/bot-builder/basic/introduction' },
+              { title: 'Agent Chat', url: 'https://docs.haptik.ai/agent-chat/' },
+              { title: 'Analytics', url: 'https://docs.haptik.ai/bot-analytics/' }
             ])}
             {this.renderFooterColumn('Integrations', [
               { title: 'iOS SDK', url: 'https://hellohaptik.github.io/haptik-ios-framework' },
               { title: 'Android SDK', url: 'https://hellohaptik.github.io/haptik-android-lib' },
               { title: 'Web SDK', url: 'https://hellohaptik.github.io/javascript_sdk' },
-              { title: 'Webhooks', url: '/webhooks' },
-              { title: 'HSL', url: '/hsl' }
+              { title: 'Webhooks', url: 'https://docs.haptik.ai/webhooks/' },
+              { title: 'HSL', url: 'https://docs.haptik.ai/hsl/' }
             ])}
             {this.renderFooterColumn('Others', [
-              { title: 'Contributing', url: '/contributing/index' },
-              { title: 'Security', url: '/other/security' },
+              { title: 'Contributing', url: 'https://docs.haptik.ai/contributing/index' },
+              { title: 'Security', url: 'https://docs.haptik.ai/other/security' },
               { title: 'Support', url: 'https://forms.gle/Z2SowBSFpWLayXQz9' },
-              { title: 'SLA', url: '/other/sla' }
+              { title: 'SLA', url: 'https://docs.haptik.ai/other/sla' }
             ])}
           </div>
           <div className="footer-copyright" />

@@ -57,6 +57,8 @@ Apart from the HSL button configuration the Webview can also be displayed by sen
 }
 ```
 
+***Note***: The Webview needs to be CORS enabled or the link might not work in the chat window.
+
 ## Closing the Webview
 
 ### Web SDK
@@ -93,11 +95,9 @@ http://haptik-webview//perform-action?action=close&message={message}&message_typ
 |MessageTypeImage    | 1|
 |MessageTypeForm     | 17|
 |MessageTypeNote     | 21|
-|MessageTypePayment  | 23|
 |MessageTypeLocation | 26|
 |MessageTypeTabList  | 31|
 |MessageTypeCarousel | 33|
-|MessageTypeBanner   | 40|
 |MessageTypeLaunchBot| 47|
 
 #### Message Types in Android

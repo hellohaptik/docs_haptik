@@ -13,7 +13,7 @@ Typically in such bots you will have users go through a series of conversational
 
 In such bots the most important metric for you to look at would be the funnel completion rate. By funnel completion we mean, how many users who start giving the information go through all the steps. This also includes analyzing at what step do most users drop off from.
 
-You can analyze these details from the `User Journey` section of the Analytics Tool. You can learn the specifics of this section [here](https://docs.haptik.ai/bot-analytics/user-journey).
+You can analyze these details from the `Node Traffic` section of the Analytics Tool. You can learn the specifics of this section [here](https://docs.haptik.ai/bot-analytics/user-journey).
 
 ## Concierge Chatbots
 The next category we will look at is `Concierge Chatbots`. These are chatbots where you are trying to provide specific services like flight booking, restaurant reservation etc.
@@ -60,4 +60,4 @@ The final category of chatbots we will be looking at is `Feedback Bots`. These b
 
 They are similar to `Lead Generation Chatbots` because you still expect the users to go through a series of steps. So even in this case the important metric to look for is funnel completion rate.
 
-You can get this data from the `User Journey` page and you can learn more about it from [here](https://docs.haptik.ai/bot-analytics/user-journey).
+You can get this data from the `Node Traffic` page and you can learn more about it from [here](https://docs.haptik.ai/bot-analytics/user-journey).

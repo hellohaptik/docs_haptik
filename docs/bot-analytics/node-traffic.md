@@ -1,8 +1,8 @@
 ---
-title: User Journey
+title: Node Traffic
 ---
 
-This section in our analytics tool helps you analyze how users move in the chat flow. How you'd want to see funnel performance in a website, you'd want to see the *User Journey* in chatbot conversations. 
+This section in our analytics tool helps you analyze how users move in the chat flow. How you'd want to see funnel performance in a website, you'd want to see the *Node Traffic* in chatbot conversations. 
 
 Assuming you've selected a particular business/channel and custom date range, you'd see a view, listing all nodes. 
 

@@ -11,7 +11,7 @@
     ],
     "Resources": [
       "story-analysis",
-      "user-journey",
+      "node-traffic",
       "user-ratings",
       "user-reviews",
       "sample-metrics"

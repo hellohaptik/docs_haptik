@@ -51,6 +51,10 @@ To create a new entity
 
 - Enter the name (must be a lower case, underscore separated text) and description of an Entity. Try to make the description as relevant as possible, as it will help you better search for your entity in the future.
 
+- Choose the privacy of the entity based on whether the entity collects any personal information like name, phone number, insurance number. Any information that can be used to identify the user is considered personal.
+
+    > This feature is currently a work-in-progress. Currently this is treated just as a flag but in the future all personal entities will be encrypted.
+
   ![entities create new](assets/entities_create_new_step1.png)
 
 - Enter the details of the data dictionary. You can use ‘tab’ to quicky add words and variants. Once variants for a particular word are entered, press enter to store and to add new words and variants.
@@ -74,3 +78,11 @@ To create a new entity
 - On clicking 'Save', the entity will be created
 
 - You can add the newly created entity to the existing node, or you can edit the newly created entity.
+
+
+#### Listing all entities of the bot:
+You can also view all the entities used in the bot in a single place along with their privacy information. This is useful if you want to quickly review all entities and their privacy settings.
+
+You can view this by clickin on `More` in the top navigation bar and selecting `List of Entities`. You should then be able to view all entities used in the bot.
+
+![list of entities in bot](assets/list_of_entities_in_bot.png)

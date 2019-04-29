@@ -123,10 +123,6 @@ module.exports = () => (
           url: '/other/facebook'
         },
         {
-          title: 'Cordova',
-          url: 'https://hellohaptik.github.io/javascript_sdk/cordova-integration'
-        },
-        {
           title: 'React Native',
           url: 'https://hellohaptik.github.io/javascript_sdk/native-support'
         }

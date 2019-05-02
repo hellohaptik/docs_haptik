@@ -119,6 +119,13 @@ For example, if the bot asks a Question "Did you like our product?", you can add
 > **Tip:** You should use Quick Replies to help the user navigate within a flow.
 
 
+## Using entity values inside bot says
+You can use the value collected in the entity inside your bot says to personalize the messages. For example: If you collect the user's name using the Person Name entity and you want to use it in a follow up message, you can use the above feature.
+
+To use the entity value click on the `Add Entities` dropdown on the top of the bot says textbox and pick the entity value you want to add.
+
+![bot says entity picker](assets/bot-builder-bot-says/entity_picker_bot_says.gif)
+
 ## ProTips
 You can create personalised responses by using specific tags in the bot response.
 To view the ProTips, you can follow the steps below.
@@ -134,7 +141,5 @@ There are 2 categories of ProTips available:
 For ex, if you use "*Good %timeofday*", the bot will reply back Good Morning/Afternoon/Evening depending on the time of the day.
 
 If you scroll to the bottom, you will see **%entitytag_<entity_name>**. You can use this tag to use the value of any entity collected in the Bot Flow.
-
-For example: If you collect the user's name using the Person Name entity and you want to use it in a follow up message, you can use the above feature.
 
 So a response like "*Hey %entitytag_person_name! Nice talking to you.*" would become "Hey Bruce Wayne! Nice talking to you".

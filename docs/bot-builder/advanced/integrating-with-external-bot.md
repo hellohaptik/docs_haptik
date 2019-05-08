@@ -16,9 +16,9 @@ The second step is to create a node in the bot. The job of this node is to take 
 ![Create Node](assets/integrating_external_bot_node.gif)
 
 #### Accepting all inputs
-We get the node to capture all the input messages by using a catchall entity. You can do this by adding an entity called "Feedback_regex". This entity uses regex to capture the complete user message in the entity called "Feedback_regex". 
+We get the node to capture all the input messages by using a catchall entity. You can do this by adding an entity called "feedback_regex". This entity uses regex to capture the complete user message in the entity called "feedback_regex". 
 
-You can add entity by going to `bot_says` section of the node. In the `bot says` section click on the `+ Add an Entity` and then search for `Feedback_regex`. Finally click on `Add to Bot Says` to add it to the node.
+You can add entity by going to `bot_says` section of the node. In the `bot says` section click on the `+ Add an Entity` and then search for `feedback_regex`. Finally click on `Add to Bot Says` to add it to the node.
 
 ![Add Entity](assets/integrating_external_bot_regex.gif)
 
@@ -27,7 +27,7 @@ Once the user message is captured it can be sent to the external bot using the `
 
 ![Base Url Setup](assets/integrating_external_bot_base_url.gif)
 
-Once that is done, we can add the specific path where we need to send the message to. It should be noted that the endpoint will recieve the message in a parameter called `Feedback_regex` because that is what the entity is called. The external bot can then use this message and return a bot response in a `HSL` format. This `HSL` will then be sent back to the user who sent the message.
+Once that is done, we can add the specific path where we need to send the message to. It should be noted that the endpoint will recieve the message in a parameter called `feedback_regex` because that is what the entity is called. The external bot can then use this message and return a bot response in a `HSL` format. This `HSL` will then be sent back to the user who sent the message.
 
 ![Integrations](assets/integrating_external_bot_integration.gif)
 

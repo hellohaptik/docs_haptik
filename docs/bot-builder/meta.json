@@ -29,7 +29,8 @@
 		],
 		"Advanced": [
 			"advanced/integrating-custom-code",
-			"advanced/integrating-webviews-into-sdk"	
+			"advanced/integrating-webviews-into-sdk",
+			"advanced/integrating-with-external-bot"	
 		]
 	},
 	"headerLink": {

@@ -1,6 +1,6 @@
 {
   "sidebar": {
-    "Tools": ["Security", "SLA", "sdk-authentication"],
+    "Tools": ["Security", "SLA"],
     "Integrations": ["facebook"]
   }
 }

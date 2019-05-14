@@ -12,6 +12,8 @@ difficult to offer with HSL messages.
 
 ## Displaying the Webview
 
+![Webview Demo](assets/webview_demo.png)
+
 ### Web SDK
 You can display a webview by using buttons of type `Open Screen`. To set this follow these steps:
 

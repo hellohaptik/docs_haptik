@@ -111,6 +111,13 @@ module.exports = () => (
             'API docs to help you build powerful chatbot solutions with great customisations',
           ctaText: 'Get Started',
           ctaLink: '/webhooks'
+        },
+        {
+          title: 'WhatsApp',
+          description:
+            'API docs to help you build conversational experiences on WhatsApp',
+          ctaText: 'Get Started',
+          ctaLink: '/whatsapp'
         }
       ]}
       others={[

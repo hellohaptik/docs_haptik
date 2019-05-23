@@ -1,0 +1,113 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Sending Notifications · Haptik Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;As explained in the &lt;code&gt;Types of Conversations&lt;/code&gt; section, you can have the bot initiate a conversation with the user. This is done by sending them a pre-approved message template.&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Sending Notifications · Haptik Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.haptik.ai/"/><meta property="og:description" content="&lt;p&gt;As explained in the &lt;code&gt;Types of Conversations&lt;/code&gt; section, you can have the bot initiate a conversation with the user. This is done by sending them a pre-approved message template.&lt;/p&gt;
+"/><meta property="og:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.haptik.ai/img/image_0.png"/><link rel="shortcut icon" href="/img/image_0.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-106563119-6', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="/js/index.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/image_0.png" alt="Haptik Docs"/><h2 class="headerTitleWithLogo">Haptik Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/#tools" target="_self">Tools</a></li><li class=""><a href="/#integrations" target="_self">Integrations</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Sending Notifications</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Introduction</h3><ul class=""><li class="navListItem"><a class="navItem" href="/whatsapp/">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/whatsapp/business-setup">Business Setup</a></li><li class="navListItem"><a class="navItem" href="/whatsapp/technical-setup">Technical Setup</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Types of Conversations</h3><ul class=""><li class="navListItem"><a class="navItem" href="/whatsapp/types-of-conversations">Types of Conversations</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Deploying the Bot</h3><ul class=""><li class="navListItem"><a class="navItem" href="/whatsapp/bot-deploy-whatsapp">Deploy Bot to WhatsApp</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Sending Notifications</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/whatsapp/sending-notifications">Sending Notifications</a></li><li class="navListItem"><a class="navItem" href="/whatsapp/getting-user-opt-ins">Getting User Opt-Ins</a></li><li class="navListItem"><a class="navItem" href="/whatsapp/allowed-notification-types">Allowed Notification Types</a></li><li class="navListItem"><a class="navItem" href="/whatsapp/disallowed-notification-types">Disallowed Notification Types</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Sending Notifications</h1></header><article><div><span><p>As explained in the <code>Types of Conversations</code> section, you can have the bot initiate a conversation with the user. This is done by sending them a pre-approved message template.</p>
+<h2><a class="anchor" aria-hidden="true" id="highly-structured-message-hsm-templates"></a><a href="#highly-structured-message-hsm-templates" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Highly Structured Message (HSM) Templates</h2>
+<p>The templates that can be sent to WhatsApp users are called Highly Structured Messages. In short they are often referred to as HSMs.</p>
+<p>A HSM is a template message with placeholders for dynamic data. All HSMs need to be approved by WhatsApp before they can be sent to the user.</p>
+<h2><a class="anchor" aria-hidden="true" id="setting-up-a-hsm"></a><a href="#setting-up-a-hsm" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Setting up a HSM</h2>
+<p>To setup a HSM you first need to get access to the FB Business Manager Tool of the business. If you don't already have access, you can request it by sending an email to <code>platform@haptik.ai</code> with the subject as <code>Request access to FB Business Manager</code> and in the body mention the business and the reason for access request.</p>
+<p>Once you have access, you can go to the Message Templates section of the business manager tool and create your HSM.</p>
+<p><img src="/assets/message_templates_home.png" alt="Message Template Home"></p>
+<p>On the <code>Message Templates</code> page click on the <strong>Create Message Template</strong> button to create a new template.</p>
+<p><img src="/assets/create_message_template.gif" alt="Creating a template"></p>
+<p>The steps involved in creating a HSM template are:</p>
+<ol>
+<li>Set the name of the template.</li>
+<li>Choose the category of template. You can read more about the allowed categories in the next section.</li>
+<li>Select the language of the template. For a given template type, you can have multipe language versions of it.</li>
+<li>Insert the content of the template. Inside the content you can use rich text elements like <code>Bold</code>, <code>Italics</code> etc and you can also insert variables in it.</li>
+<li>Once satisfied, click on submit to submit the HSM for approval.</li>
+</ol>
+<blockquote>
+<p><strong>NOTE:</strong> Once approved, the HSM content cannot be edited.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="sending-a-hsm-as-a-notification"></a><a href="#sending-a-hsm-as-a-notification" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sending a HSM as a notification</h2>
+<p>After you have submitted your HSM and approval has been granted, you can start sending the HSM as notifications to opted-in users.</p>
+<p>You can do this by making a <code>POST</code> request to the notification endpoint provided to you by the <code>DevOps/Platform</code> team.</p>
+<p>The request signature is as below:</p>
+<pre><code class="hljs css language-bash">curl -X POST \
+  &lt;base_url&gt;/whatsapp/notification/ \
+  -H <span class="hljs-string">'Authorization: Bearer &lt;token&gt;'</span> \
+  -H <span class="hljs-string">'Content-Type: application/json'</span> \
+  -H <span class="hljs-string">'client-id: &lt;client-id&gt;'</span> \
+  -d <span class="hljs-string">'{
+    "business_id": &lt;business_id as a number&gt;,
+    "to": "&lt;phone_number&gt;",
+    "type": "hsm",
+    "hsm": {
+        "namespace": "&lt;from whatsapp dashboard&gt;",
+        "element_name": "&lt;from whatsapp dashboard&gt; ",
+        "language": {
+            "policy": "deterministic",
+            "code": "en_US"
+        },
+        "localizable_params": [
+            {"default": "Param 1 value"},
+            {"default": "Param 2 value"}
+        ]
+    }
+}
+'</span>
+</code></pre>
+<p>In the request body, <code>business_id</code>, <code>token</code> and <code>client_id</code> will be provided by Haptik.</p>
+<p>Details regarding the other fields in the body can be found <a href="https://developers.facebook.com/docs/whatsapp/message-templates/sending/">here</a>.</p>
+<p>Acceptable formats for phone number can be found <a href="https://developers.facebook.com/docs/whatsapp/api/contacts#phone">here</a>.</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-5-23</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/whatsapp/bot-deploy-whatsapp"><span class="arrow-prev">← </span><span class="function-name-prevnext">Deploy Bot to WhatsApp</span></a><a class="docs-next button" href="/whatsapp/getting-user-opt-ins"><span>Getting User Opt-Ins</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#highly-structured-message-hsm-templates">Highly Structured Message (HSM) Templates</a></li><li><a href="#setting-up-a-hsm">Setting up a HSM</a></li><li><a href="#sending-a-hsm-as-a-notification">Sending a HSM as a notification</a></li></ul></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Bot Builder</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://hellohaptik.github.io/haptik-ios-framework" class="footer-column-link">iOS SDK</a><a href="https://hellohaptik.github.io/haptik-android-lib" class="footer-column-link">Android SDK</a><a href="https://hellohaptik.github.io/javascript_sdk" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Webhooks</a><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/contributing/index" class="footer-column-link">Contributing</a><a href="https://docs.haptik.ai/other/security" class="footer-column-link">Security</a><a href="https://forms.gle/Z2SowBSFpWLayXQz9" class="footer-column-link">Support</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2019 Haptik Inc.</section></footer></div></body></html>

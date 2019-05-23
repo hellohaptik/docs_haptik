@@ -1,0 +1,73 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Disallowed Notification Types · Haptik Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;There are some cases where you are not allowed to send notifications. Below are examples of notification types that WhatsApp does not accept at this point of time.&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Disallowed Notification Types · Haptik Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.haptik.ai/"/><meta property="og:description" content="&lt;p&gt;There are some cases where you are not allowed to send notifications. Below are examples of notification types that WhatsApp does not accept at this point of time.&lt;/p&gt;
+"/><meta property="og:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.haptik.ai/img/image_0.png"/><link rel="shortcut icon" href="/img/image_0.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-106563119-6', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="/js/index.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/image_0.png" alt="Haptik Docs"/><h2 class="headerTitleWithLogo">Haptik Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/#tools" target="_self">Tools</a></li><li class=""><a href="/#integrations" target="_self">Integrations</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Sending Notifications</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Introduction</h3><ul class=""><li class="navListItem"><a class="navItem" href="/whatsapp/">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/whatsapp/business-setup">Business Setup</a></li><li class="navListItem"><a class="navItem" href="/whatsapp/technical-setup">Technical Setup</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Types of Conversations</h3><ul class=""><li class="navListItem"><a class="navItem" href="/whatsapp/types-of-conversations">Types of Conversations</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Deploying the Bot</h3><ul class=""><li class="navListItem"><a class="navItem" href="/whatsapp/bot-deploy-whatsapp">Deploy Bot to WhatsApp</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Sending Notifications</h3><ul class=""><li class="navListItem"><a class="navItem" href="/whatsapp/sending-notifications">Sending Notifications</a></li><li class="navListItem"><a class="navItem" href="/whatsapp/getting-user-opt-ins">Getting User Opt-Ins</a></li><li class="navListItem"><a class="navItem" href="/whatsapp/allowed-notification-types">Allowed Notification Types</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/whatsapp/disallowed-notification-types">Disallowed Notification Types</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Disallowed Notification Types</h1></header><article><div><span><p>There are some cases where you are not allowed to send notifications. Below are examples of notification types that WhatsApp does not accept at this point of time.</p>
+<p>This might change in future releases.</p>
+<ul>
+<li>Sales, discounts, promotions, product recommendations or offers.</li>
+<li>Recurring Content.</li>
+<li>Customer re-engagement.</li>
+<li>Media files (videos, images, .gifs)</li>
+<li>Businesses asking customers to review their app.</li>
+<li>Businesses asking their customers to share notifications with multiple customers.</li>
+<li>Businesses sending alerts or reminders that a customer might have indicated an interest in seeing but is not related to a purchase or an event.</li>
+<li>Product or marketing/brand surveys.</li>
+</ul>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-5-23</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/whatsapp/allowed-notification-types"><span class="arrow-prev">← </span><span>Allowed Notification Types</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Bot Builder</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://hellohaptik.github.io/haptik-ios-framework" class="footer-column-link">iOS SDK</a><a href="https://hellohaptik.github.io/haptik-android-lib" class="footer-column-link">Android SDK</a><a href="https://hellohaptik.github.io/javascript_sdk" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Webhooks</a><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/contributing/index" class="footer-column-link">Contributing</a><a href="https://docs.haptik.ai/other/security" class="footer-column-link">Security</a><a href="https://forms.gle/Z2SowBSFpWLayXQz9" class="footer-column-link">Support</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2019 Haptik Inc.</section></footer></div></body></html>

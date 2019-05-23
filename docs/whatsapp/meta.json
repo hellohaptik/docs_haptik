@@ -1,0 +1,22 @@
+{
+    "sidebar": {
+        "Introduction": [
+            "index",
+            "business-setup",
+        	"technical-setup"
+        ],
+        "Types of Conversations": [
+        	"types-of-conversations"
+        ],
+        "Deploying the Bot": [
+            "bot-deploy-whatsapp"
+        ],
+        "Sending Notifications":[
+            "sending-notifications",
+            "getting-user-opt-ins",
+            "allowed-notification-types",
+            "disallowed-notification-types"
+        ]
+    }
+}
+

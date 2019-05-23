@@ -11,7 +11,7 @@ The templates that can be sent to WhatsApp users are called Highly Structured Me
 A HSM is a template message with placeholders for dynamic data. All HSMs need to be approved by WhatsApp before they can be sent to the user.
 
 ## Setting up a HSM
-To setup a HSM you first need to get access to the FB Business Manager Tool of the business. If you don't already have access, you can request it by sending an email to `platform@haptik.co` with the subject as `Request access to FB Business Manager` and in the body mention the business and the reason for access request.
+To setup a HSM you first need to get access to the FB Business Manager Tool of the business. If you don't already have access, you can request it by sending an email to `platform@haptik.ai` with the subject as `Request access to FB Business Manager` and in the body mention the business and the reason for access request.
 
 Once you have access, you can go to the Message Templates section of the business manager tool and create your HSM. 
 

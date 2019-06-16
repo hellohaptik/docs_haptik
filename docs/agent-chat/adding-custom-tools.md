@@ -10,7 +10,7 @@ title: Adding your own custom tool
 - Enter your login credentials
 - Once logged in, you will see the below page (may vary based on permissions)
 
-![home_screen](assets/home_screen.png)
+![home_screen](assets/haptik_logged_in_screen.png)
 
 - Select Administrator, the below screen will apear (may vary based on permissions)
 

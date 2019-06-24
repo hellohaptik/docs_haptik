@@ -332,6 +332,48 @@ if __name__ == "__main__":
         run()
 ```
 
+
+### Custom Code
+
+A node can also be configured to execute custom code once the required entities have been collected.
+
+To be able to do so, you can use the in-built code editor in Mogambo or paste Python3.7 specific code into the editor and save.
+
+The only requirement is, the code should follow the below format. If any syntax errors or exceptions are raised by the main function, this will result in a botBreak message.
+
+```python
+import  json
+
+def main(event, context):
+    """
+    event['body'] is a string dict with the following keys:
+    node, event, user, entities.
+
+    Currently, we pass user_id, user_name, full_name, device_platform and language_code in the user dictionary.
+
+    Args:
+        event (dict): Data corresponding to this event
+        context
+
+    Returns
+        (dict): response with statusCode and the response for the User
+    """
+    body = json.loads(event['body'])
+    entities = body['entities']
+    user_data = body['user']
+
+    final_response = {'status': True, 'response': ['Test Response']}
+    """
+    WRITE YOUR CODE HERE and update the final_response dict
+    """
+
+    response = {'statusCode': 200, 'body': json.dumps(final_response), 'headers': {'Content-Type': 'application/json'}}
+    return response
+```
+
+#### Pre-Transfer
+
+`Train Bot` prepares the code for production. Hence, you should make sure to call `Train Bot` if there are any changes in the custom code integration before transferring the bot to production.
 ## Additional APIs
 
 ### Move a chat to pending

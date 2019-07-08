@@ -216,6 +216,8 @@ Example:
     "device_platform": "<DEVICE_PLATFORM>",
     "user_name": "<USER_NAME>"
    },
-   "conversation_no": "<CONVERSATION_NO>"
+   "data": {
+    "conversation_id": "<CONVERSATION_ID>"
+   }
 }
    ```

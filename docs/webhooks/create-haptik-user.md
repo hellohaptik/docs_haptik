@@ -11,7 +11,7 @@ Before sending any message to Haptik, you need to register the user, during this
 	- name
 	- mobile number
 	- email
-	- language_code
+	- language preference
 
 The User API allows you to register the user via a `PUT` request to the Haptik Platform.
 

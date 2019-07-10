@@ -11,8 +11,9 @@ Before sending any message to Haptik, you need to register the user, during this
 	- name
 	- mobile number
 	- email
+	- language_code
 
-The User API allows you to register the user via a `POST` request to the Haptik Platform.
+The User API allows you to register the user via a `PUT` request to the Haptik Platform.
 
 If the user with auth_id already exists then the user details will be updated in Haptik's system automatically.
 
@@ -42,7 +43,8 @@ Content-Type: application/json
   "auth_code": "<AUTH_CODE>",
   "mobile_no": "<MOBILE_NO>",
   "email": "<EMAIL>",
-  "name": "<NAME>"
+  "name": "<NAME>",
+  "language_code": "<LANGUAGE_CODE>"
 }
 ```
 
@@ -51,6 +53,9 @@ Content-Type: application/json
 - mobile_no - Mobile no of the user (optional)
 - email - Email of the user (optional)
 - name - Name of the user (optional)
+- language_code - This is a language indentifier for user's preferred language based on `ISO 639-1` (standardized nomenclature used to classify language)
+                  Eg: `en` for `English`, 
+                      `hi` for `Hindi`(optional)
 
 ### Response
 
@@ -83,5 +88,5 @@ curl -X POST \
   -H 'Authorization: Bearer <TOKEN>' \
   -H 'client-id: <CLIENT_ID>' \
   -H 'Content-Type: application/json' \
-  -d '{"auth_id": "<AUTH_ID>", "name": "guest user"}'
+  -d '{"auth_id": "<AUTH_ID>", "name": "guest user", "language_code":"<LANGUAGE_CODE>"}'
 ```

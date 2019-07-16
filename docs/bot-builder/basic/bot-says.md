@@ -122,9 +122,15 @@ For example, if the bot asks a Question "Did you like our product?", you can add
 ## Using entity values inside bot says
 You can use the value collected in the entity inside your bot says to personalize the messages. For example: If you collect the user's name using the Person Name entity and you want to use it in a follow up message, you can use the above feature.
 
-To use the entity value click on the `Add Entities` dropdown on the top of the bot says textbox and pick the entity value you want to add.
+### Using Simple Entities in bot says
+To use the entity value of simple text entities click on the `Add Entities` dropdown on the top of the bot says textbox and pick the entity value you want to add.
 
 ![bot says entity picker](assets/bot-builder-bot-says/entity_picker_bot_says.gif)
+
+### Using Complex Entities in bot says
+To use entity value of complex entities like date which can be represented in multiple formats click on the `Add Entities` dropdown on the top of the bot says textbox and pick the complext entity in the format you want it to be shown in.
+
+![bot says complex entity picker](assets/bot-builder-bot-says/complex_entity_picker_bot_says.gif)
 
 ## ProTips
 You can create personalised responses by using specific tags in the bot response.

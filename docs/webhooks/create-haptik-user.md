@@ -1,8 +1,8 @@
 ---
-title: How to create a Haptik User
+title: How to create/update a Haptik User
 ---
 
-## Create Haptik User API
+## Create or Update Haptik User API
 
 Eventually when you will be sending messages via Haptik, you will provide Haptik with a unique id for every user (auth_id). This is supposed to be the unique identifier for the user in your system.
 
@@ -11,10 +11,9 @@ Before sending any message to Haptik, you need to register the user, during this
 	- name
 	- mobile number
 	- email
+	- language preference
 
-The User API allows you to register the user via a `POST` request to the Haptik Platform.
-
-If the user with auth_id already exists then the user details will be updated in Haptik's system automatically.
+The User API allows you to register the user via a `POST` request or update the user info via `PUT` request to the Haptik Platform.
 
 ### URL
 
@@ -42,7 +41,8 @@ Content-Type: application/json
   "auth_code": "<AUTH_CODE>",
   "mobile_no": "<MOBILE_NO>",
   "email": "<EMAIL>",
-  "name": "<NAME>"
+  "name": "<NAME>",
+  "language_code": "<LANGUAGE_CODE>"
 }
 ```
 
@@ -51,6 +51,9 @@ Content-Type: application/json
 - mobile_no - Mobile no of the user (optional)
 - email - Email of the user (optional)
 - name - Name of the user (optional)
+- language_code - This is a language indentifier for user's preferred language based on `ISO 639-1` (standardized nomenclature used to classify language)
+                  Eg: `en` for `English`, 
+                      `hi` for `Hindi`(optional)
 
 ### Response
 
@@ -76,12 +79,21 @@ If the Authorization header is missing or invalid, then the API will return a `4
 ```
 
 ## Sample CURL command
-
+### Create User
 ```
 curl -X POST \
    https://staging-messenger.haptikapi.com/v1.0/user/ \
   -H 'Authorization: Bearer <TOKEN>' \
   -H 'client-id: <CLIENT_ID>' \
   -H 'Content-Type: application/json' \
-  -d '{"auth_id": "<AUTH_ID>", "name": "guest user"}'
+  -d '{"auth_id": "<AUTH_ID>", "name": "guest user", "language_code":"<LANGUAGE_CODE>"}'
+```
+### Update User
+```
+curl -X PUT \
+   https://staging-messenger.haptikapi.com/v1.0/user/ \
+  -H 'Authorization: Bearer <TOKEN>' \
+  -H 'client-id: <CLIENT_ID>' \
+  -H 'Content-Type: application/json' \
+  -d '{"auth_id": "<AUTH_ID>", "name": "guest user", "language_code":"<LANGUAGE_CODE>"}'
 ```

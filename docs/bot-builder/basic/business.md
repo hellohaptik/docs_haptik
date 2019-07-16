@@ -24,10 +24,9 @@ There are two ways to create a Business.
 
 ![Business and bots](assets/2_business.png)
 
-Now, you’ll be taken to a page, where you now need to fill information in four main sections:
+Now, you’ll be taken to a page, where you now need to fill information in three main sections:
 
 - General Settings
-- Task(s)
 - Partner Specific
 - Bot Prompt Triggers
 
@@ -48,7 +47,11 @@ Business Name: This refers to the overarching topic of its conversational capabi
 
 ![Channels List](assets/4_channel_list_view.jpg)
 
+- Active Partners: Businesses can be activated or deactivated for various partners, as per what you select here
+
 - Active Cities: Businesses can be activated or deactivated for various cities, in case you’d like to create geographically targeted clusters of bots. This field is applicable for Android/iOS SDKs only
+
+- Default Team: You can configure the default team for this bot here. Team is a group of agents who get assigned chats from this bot. You can read about Teams on our [Live agent tool documentation link](https://docs.haptik.ai/agent-chat/)
 
 - Enable OTP Verification: Clicking on this box means users must be OTP verified to enter the channel. This field is applicable for Android/iOS SDKs only
 
@@ -66,7 +69,31 @@ Business Name: This refers to the overarching topic of its conversational capabi
 
 - User Feedback: Tick the checkbox here to setup collection of user feedback within this business. You can choose to ask feedback once or multiple times (configurable) and also set a delay message (waiting period) after which the bot pushes the feedback message to the user here. You can access this feedback data from our analytics tool (Teja)
 
-### Section 2: Task(s)
+### Section 2: Partner specific
+
+This is where you make changes across a single or multiple Partners, and customize several settings for each partner. The section is located second on the top left-hand corner.
+
+To customize the settings for each partner the Business is live on, click the dropdown field *Select Partner*. Once you’ve selected a partner from this dropdown, the rest of the settings in this section will only be applied to how this Business appears in that particular partner. You can apply customized settings across following 5 sub-sections here -
+
+1. SDK Configurations
+2. Taskbox
+3. Bot Break Messages
+4. Outlier Messages
+5. Platform Deployments
+
+![Partner Settings](assets/9_partner_specific_settings.png)
+
+Check the list of customizable settings below. 
+
+- Upload Business Icon: When there are multiple Businesses clustered together in a partner in a homescreen, you can assign each Business an icon. Upload that icon here
+
+- Make this Business Active/Archived: To make this Business live on a Partner, check off Make this Business Active. If you want to temporarily make the Business inactive on the partner, select Make this Business Archived
+
+- Make this Business Sponsored: This is an app specific feature, wherein we show a sponsored text below the business icon on the native app screen. It’s how an user will be able to differentiate between sponsored (adverts) and non-sponsored businesses
+
+- Hide Haptik branding on the SDK: Tick this off to hide the _powered by Haptik_ branding across this business
+
+- Taskbox: The taskbox that will appear for each Business can be customized to the Business’s various partners. Select Add Tasks to start adding tasks to the Business’s taskbox on a particular partner. A modal with a list of all the tasks associated with the Business will appear; select the tasks you want to make live on a particular partner. Exit the modal
 
 Bot builders can define Tasks for each Business. Providing this taskbox helps guide users to initiate conversations that the chatbot can handle most effectively.
 
@@ -79,9 +106,9 @@ When the editing fields open, you’ll need to fill out the following informatio
 
 ![Taskbox Header](assets/6_taskbox_header_message.jpg)
 
-**Taskbox Header Message**: This header will be shown to users to explain how to use the taskbox. In the sample taskbox above, the header is the text above the tasks that says, “Hi! Tap below to get started.” Refer the image to view this header message
+- Taskbox Header Message: This header will be shown to users to explain how to use the taskbox. In the sample taskbox above, the header is the text above the tasks that says, “Hi! Tap below to get started.” Refer the image to view this header message
 
-**Create New Task**: When you click this box, a new popup will appear to fill out the following details:
+- Create New Task: When you click this box, a new popup will appear to fill out the following details:
 
 - Task Title: Give the task a label. This is what will show up on the actual task button
   User Says: When the user taps on a task, a user says message is generated and sent in tandem. Enter what the user says associated with this task will be in this field
@@ -98,34 +125,12 @@ When the editing fields open, you’ll need to fill out the following informatio
 
 Click Save. You’ve created a task!
 
-### Section 3: Partner specific
-
-This section is where you can deploy Businesses across a single or multiple Partners, and customize several chat settings for each partner. The section is located third from the top left-hand corner.
-
-To make this Business live on a new partner, click on Add New Partner. A modal with the full list of partners you have permissions to access will appear. To make this Business live on a Partner, check off the box next to the partner name and exit the modal.
-
-![Partners](assets/8_partner_selection.png)
-
-To customize the settings for each partner the Business is live on, click the dropdown field Select Partner on the top left hand side of this section. Once you’ve selected a partner from this dropdown, the rest of the settings in this section will only be applied to how this Business appears in that particular partner. You can apply the following customized settings:
-
-![Partner Settings](assets/9_partner_specific_settings.png)
-
-- Upload Business Icon: When there are multiple Businesses clustered together in a partner in a homescreen, you can assign each Business an icon. Upload that icon here
-
-- Make this Business Active/Archived: To make this Business live on a Partner, check off Make this Business Active. If you want to temporarily make the Business inactive on the partner, select Make this Business Archived
-
-- Make this Business Sponsored: This is an app specific feature, wherein we show a sponsored text below the business icon on the native app screen. It’s how an user will be able to differentiate between sponsored (adverts) and non-sponsored businesses
-
-- Hide Haptik branding on the SDK: Tick this off to hide the _powered by Haptik_ branding across this business
-
-- Taskbox: The taskbox that will appear for each Business can be customized to the Business’s various partners. Select Add Tasks to start adding tasks to the Business’s taskbox on a particular partner. A modal with a list of all the tasks associated with the Business will appear; select the tasks you want to make live on a particular partner. Exit the modal
-
 - Bot Break Messages: This is the message that will be sent to users when the bot breaks.
 
       Bot break means a bot isn’t able to come up with an appropriate response 
       to the  user’s message.
 
-### Section 4: Bot Prompt Triggers
+### Section 3: Bot Prompt Triggers
 
 Bot prompts are pop-ups with content and a click action. It’s used to grab an user’s attention in a non-intrusive way. Please refer the image below where on the Haptik’s website, we try to connect with the user.
 

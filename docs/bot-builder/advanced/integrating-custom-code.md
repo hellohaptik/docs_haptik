@@ -83,9 +83,13 @@ POST
   "node": "system name of the node",
   "event": "API_INTEGRATION",
   "user": {
+    "user_id": user_id,
     "user_name": "haptik username",
     "full_name": "",
-    "device_platform": 5
+    "device_platform": 5,
+    "language_code": user.language_code,
+    "auth_id": auth_id,
+    "auth_code": auth_code
   },
   "entities": {
     "product_id": [

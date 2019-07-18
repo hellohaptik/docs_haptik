@@ -2,27 +2,42 @@
 title: Multiple Languages
 ---
 
-Language support on our platform is divided into 2 parts. First, is the SDK side of things and second is the actual Bot Building part.
+# How does it work?
 
-**1. Business creation for a chosen language**
+Language support on our platform is divided into 2 parts -
+1. *Business*: Manage business level settings and content for multiple languages  
+2. *Bot*: Configure bot content (user says, bot says etc. for your language). 
 
-Currently, only WebSDK supports switching between languages. What essentially happens behind the scenes is that we switch to a different Business.
+## Part 1 - Create multi-language businesses
 
-    For example, to build a multi language Bot, we create 2 Businesses (english and 
-    hindi). When an SDK gets deployed, it opens up with 1 default business (let's 
-    say English bot). And as the user taps on *Change Language* in the SDK, the 
-    underlying business is changed from English to Hindi.
+Every Business supports 1 Language only. So if you want multiple languages supported, you will have to create Businesses for every language, as explained below.
 
-What it means is that internally, the chat collection, messages, etc. everything is new and not shared with the data of other language (business). Same applies for Taskbox as well because English and Hindi are 2 different businesses, the tasks in Hindi and tasks in English are completely independent.
+1. Create 1 business for every language that you want to support in the SDK. For example, your bot supports English and Hindi, so we need 2 businesses. If you need support for 5 languages, create 5 businesses. Select language in Business manager as shown on the red box in image below. 
 
-    Support for creating Businesses with language support isn't on *mogambo* yet. 
-    Mogambo changes are a work in progress.
+![Language selection on business manager](/assets/language_selection.png)
 
-**2. Bot Building**
+2. The SDKs use Business via_name to combine the different langauge Businesses. So decide on a fixed prefix for the business via_name and use that for all the Businesses. For example, in Pathlabs Business, we have the via_name prefix as **drlalpathlabschannel**. So the corresponding via_name for the English and Hindi businesses would be **drlalpathlabschannel*_en*** and **drlalpathlabschannel*_hi*** respectively. You can set this via name in the business manager. This is highlighted in the image above as well.
+
+       To summarize, the via_name should be changed to "**fixed_prefix_<language_code>"** 
+
+Once the above is completed, if you want to test the changes that you have just made, you can refer to the below link and update the specific fields here -
+
+*https://toolassets.haptikapi.com/js-sdk/html/demoqp.html?default-language=language_code&business-via-name=via_name_prefix>**&client-id=**<client_id>**&api-key=**<api_key>**&base-url=**<base_url>*
+
+       When an SDK gets deployed, it opens up with 1 default business (let's say English bot). 
+       And as the user taps on *Change Language* in the SDK, the underlying 
+       business is changed from English to Hindi. What it means is that, 
+       the chat collection, messages, etc. everything is new and not shared 
+       with the data of other language (business). Same applies for Taskbox 
+       as well because English and Hindi are 2 different businesses, the 
+       tasks in Hindi and tasks in English are completely independent.
+
+
+## Part 2 - Add languages to the bot view
 
 Unlike Business, a single Bot can support multiple languages. This helps in ease of maintenance so that the story/substory/nodes/connections etc. need not be changed twice.
 
-When a single bot supports multiple languages, the only things that change when switching a language is the User Responses, Bot Responses and Entities. You can use the Language Selection dropdown in the header of Mogambo.
+When a single bot supports multiple languages, the only things that change when switching a language is the User says, Bot says and Entities. You can use the Language Selection dropdown in the header of Mogambo.
 
 Depending on the language chosen, the User Says/Bot Says section will fetch the correct data as per that language for the node. 
 

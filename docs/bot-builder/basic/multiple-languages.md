@@ -22,7 +22,7 @@ Every Business supports 1 Language only. So if you want multiple languages suppo
 
 Once the above is completed, if you want to test the changes that you have just made, you can refer to the below link and update the specific fields here -
 
-*https://toolassets.haptikapi.com/js-sdk/html/demoqp.html?default-language=language_code&business-via-name=via_name_prefix>**&client-id=**<client_id>**&api-key=**<api_key>**&base-url=**<base_url>*
+*https://toolassets.haptikapi.com/js-sdk/html/demoqp.html?default-language=language_code&business-via-name=via_name_prefix>&client-id=<*client_id*>&api-key=<*api_key*>&base-url=<*base_url*>*
 
        When an SDK gets deployed, it opens up with 1 default business (let's say English bot). 
        And as the user taps on *Change Language* in the SDK, the underlying 

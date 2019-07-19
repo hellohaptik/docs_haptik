@@ -16,7 +16,7 @@ Every Business supports 1 Language only. So if you want multiple languages suppo
 
 ![Language selection on business manager](/assets/language_selection.png)
 
-2. The SDKs use Business via_name to combine the different langauge Businesses. So decide on a fixed prefix for the business via_name and use that for all the Businesses. For example, in Pathlabs Business, we have the via_name prefix as **drlalpathlabschannel**. So the corresponding via_name for the English and Hindi businesses would be **drlalpathlabschannel*_en*** and **drlalpathlabschannel*_hi*** respectively. You can set this via name in the business manager. This is highlighted in the image above as well.
+2. The SDKs use Business via_name to combine the different langauge Businesses. So decide on a fixed prefix for the business via_name and use that for all the Businesses. For example, in Pathlabs Business, we have the via_name prefix as **drlalpathlabschannel**. So the corresponding via_name for the English and Hindi businesses would be **drlalpathlabschannel_en** and **drlalpathlabschannel_hi** respectively. You can set this via name in the business manager. This is highlighted in the image above as well.
 
        To summarize, the via_name should be changed to "**fixed_prefix_<language_code>"** 
 

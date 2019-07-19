@@ -12,7 +12,7 @@ Our tool helps you build an experience that is
 
 ## Adaptability
 
-While your bot is built for certain actions, you can add to the existing set of user intents. We give you actionable insights from [Story analysis](https://docs.haptik.ai/bot-analytics/story-analysis) and incoming/outgoing traffic details on the [User Journey here](https://docs.haptik.ai/bot-analytics/user-journey).
+While your bot is built for certain actions, you can add to the existing set of user intents. We give you actionable insights from [Story analysis](https://docs.haptik.ai/bot-analytics/story-analysis) and incoming/outgoing traffic details on the [Node Traffic here](https://docs.haptik.ai/bot-analytics/node-traffic).
 
 ## Responsiveness
 

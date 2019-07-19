@@ -14,7 +14,7 @@ The Analytics tool consists of multiple sections with each section containing me
 * Story Analysis
 * Message Analysis
 * Word Analysis
-* User Journey
+* Node Traffic
 * User Ratings
 * User Reviews
 

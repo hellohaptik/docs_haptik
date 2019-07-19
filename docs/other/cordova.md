@@ -2,4 +2,4 @@
 title: Cordova
 ---
 
-This is the support page
+Please note that **we do not support Cordova integrations** anymore. 

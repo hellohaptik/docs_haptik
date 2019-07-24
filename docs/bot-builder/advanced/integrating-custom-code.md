@@ -187,7 +187,7 @@ for example:
    ```json
    {
        "status": true,
-       "response": 
+       "response": ["phone number seems invalid, please try again"]
    }
    ```
 

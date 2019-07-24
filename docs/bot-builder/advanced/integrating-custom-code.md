@@ -187,7 +187,7 @@ for example:
    ```json
    {
        "status": true,
-       "response": ["phone number seems invalid, please try again"]
+       "response": 
    }
    ```
 
@@ -197,6 +197,17 @@ for example:
         "status": true,
         "response": ["phone number seems invalid", "please try again"]
     }
+    ```
+    
+3. Response for Multi-Lingual Bot
+    ```python
+    language_code = request_body['user']['language_code'] #assuming request_body contains post-data
+    if  language_code == 'en':
+      response = ["phone number seems invalid, please try again"]
+    elif language_code == 'hi':
+      response = ["फ़ोन नंबर अमान्य लगता है, कृपया पुनः प्रयास करें"]
+    else:
+      response = <Any Message as per use case>  
     ```
 
 3. Response with advanced UI elements [for more detail read here](https://haptik-docs.readthedocs.io/en/latest/bot-builder-advanced/message-elements.html)

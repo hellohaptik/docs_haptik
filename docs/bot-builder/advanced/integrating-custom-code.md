@@ -184,19 +184,35 @@ for example:
 
 1. Response with single line
 
-   ```json
+   ```python
    {
-       "status": true,
+       "status": True,
        "response": ["phone number seems invalid, please try again"]
    }
    ```
 
 2. Response with multi-line
-    ```json
+    ```python
     {
-        "status": true,
+        "status": True,
         "response": ["phone number seems invalid", "please try again"]
     }
+    ```
+    
+3. Response for Multi-Lingual Bot
+    ```python
+    language_code = request_body['user']['language_code'] #assuming request_body contains post-data
+    if  language_code == 'en':
+      message = ["phone number seems invalid, please try again"]
+    elif language_code == 'hi':
+      message = ["फ़ोन नंबर अमान्य लगता है, कृपया पुनः प्रयास करें"]
+    else:
+      message = <Any Message as per use case>  
+
+   {
+      "status": True,
+      "response": message # One we created above from conditional logic^^
+   }
     ```
 
 3. Response with advanced UI elements [for more detail read here](https://haptik-docs.readthedocs.io/en/latest/bot-builder-advanced/message-elements.html)

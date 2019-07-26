@@ -27,7 +27,7 @@ To start with, explore the [designing chat experiences link](https://docs.haptik
 
 Once you are clear on the bot solution, follow the steps as mentioned below -
 
-1. Create a rough requirement diagrom of the possible user conversations
+1. Create a rough requirement diagram of the possible user conversations
 2. Demo the bot by writing scripts while talking to people as per your flow diagram in step 1
 3. Now, create a bot in our staging environment. This is our UAT stage 
 4. [Testing/Debugging the bot](https://docs.haptik.ai/bot-builder/basic/testing-bot) to avoid any unpredictabilities

@@ -99,7 +99,9 @@ Example:
  "version": "1.0",
  "timestamp": "2018-10-04T12:41:27.980Z",
  "user": {
-   "auth_id": "<AUTH_ID>"
+   "auth_id": "<AUTH_ID>",
+   "device_platform": "<DEVICE_PLATFORM>",
+   "user_name": "<USER_NAME>"
  },
  "business_id": 343,
  "event_name": "message",
@@ -135,7 +137,9 @@ Example:
  "version": "1.0",
  "timestamp": "2018-10-04T12:41:27.980Z",
  "user": {
-   "auth_id": "<AUTH_ID>"
+   "auth_id": "<AUTH_ID>",
+   "device_platform": "<DEVICE_PLATFORM>",
+   "user_name": "<USER_NAME>"
  },
  "business_id": 343,
  "event_name": "chat_pinned",
@@ -160,7 +164,7 @@ Example:
 
 <b>event_name = chat_complete</b>
 
-A chat has been marked as complete either by a bot or by an agent.
+A chat has been marked as complete by an agent from athena.
 **Note:** When a chat is marked complete any assigned agent is cleared.
 
 Example:
@@ -170,7 +174,9 @@ Example:
  "version": "1.0",
  "timestamp": "2018-10-04T12:41:27.980Z",
  "user": {
-   "auth_id": "<AUTH_ID>"
+   "auth_id": "<AUTH_ID>",
+   "device_platform": "<DEVICE_PLATFORM>",
+   "user_name": "<USER_NAME>"
  },
  "business_id": 343,
  "event_name": "chat_complete",
@@ -188,5 +194,30 @@ Example:
      "data": {}
    }
  }
+}
+   ```
+
+### Webhook Conversation Complete
+
+<b>event_name = webhook_conversation_complete</b>
+
+A Conversation has been marked complete by an agent or a bot after chat data encryption.
+
+Example:
+
+```json
+{
+  "version": "1.0",
+  "timestamp": "2019-07-03T11:42:44.077Z",
+  "business_id": 343,
+  "event_name": "webhook_conversation_complete",
+  "user": {
+    "auth_id": "<AUTH_ID>",
+    "device_platform": "<DEVICE_PLATFORM>",
+    "user_name": "<USER_NAME>"
+   },
+   "data": {
+    "conversation_id": "<CONVERSATION_ID>"
+   }
 }
    ```

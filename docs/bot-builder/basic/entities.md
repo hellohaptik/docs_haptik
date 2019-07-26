@@ -83,6 +83,11 @@ To create a new entity
 #### Listing all entities of the bot:
 You can also view all the entities used in the bot in a single place along with their privacy information. This is useful if you want to quickly review all entities and their privacy settings.
 
-You can view this by clickin on `More` in the top navigation bar and selecting `List of Entities`. You should then be able to view all entities used in the bot.
+You can view entities by clicking on `More` in the top navigation bar and selecting a `List of Entities`. You should then be able to view all entities used in the bot.
 
 ![list of entities in bot](assets/list_of_entities_in_bot.png)
+
+Now you can add entities by clicking `Add entity` in the Edit text section of `Bot says`. For Example, you could pick Date/Time in multiple formats from the entity picker inside Bot says. 
+
+![add entity](assets/add_entity.png) ![pick entity](assets/pick_entity.png)
+

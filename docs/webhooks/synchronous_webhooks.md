@@ -71,4 +71,4 @@ A successful request to the log message sent API will return a 200 status code w
 - version - The version of the API.
 - timestamp = The time at which the message was sent.
 - agent - Information about the agent who replied to the message. In case of bot the agent is `gogo`.
--  message - This is a list containing teh responses to the query sent as input in the POST request. Each of the items is a HSL format reply.
+-  message - This is a list containing the responses to the query sent as input in the POST request. Each of the items is a HSL format reply.

@@ -13,7 +13,8 @@
         	"create-haptik-user",
         	"send-message-to-haptik",
             "send-image-to-haptik",
-            "using-platform-deployments"
+            "using-platform-deployments",
+            "synchronous_webhooks"
         ]
     }
 }

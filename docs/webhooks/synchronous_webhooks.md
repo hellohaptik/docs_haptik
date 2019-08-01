@@ -43,50 +43,32 @@ Content-Type: application/json
 A successful request to the log message sent API will return a 200 status code with a JSON response object. It will contain the response to the text message sent in the POST request.
 
 ```javascript
-[
-   {
-       "model": "api.chatmessaged",
-       "pk": 2581793992,
-       "fields": {
-           "coll_id": 57639927,
-           "body": "Hi",
-           "direction": true,
-           "received": false,
-           "active": true,
-           "created_at": "2019-07-29T07:35:39.221Z",
-           "modified_at": "2019-07-29T07:35:39.221Z",
-           "id_hash": "9d165297420ff96f257aaea2797d216f",
-           "emailed": false,
-           "ticket_no": 0,
-           "agent_name": null,
-           "claim_name": "gogo",
-           "app_auto_reply": 0,
-           "sort_id": 12,
-           "business_via_name": "haptikwebsitechannel",
-           "body_processed": null,
-           "ares_flag": 0,
-           "clarification_flag": false,
-           "message_type": 0,
-           "conversation_no": 2,
-           "id": 2581793992,
-           "business_id": 494,
-           "business_name": "haptikwebsitechannel"
-       },
-       "bot_messages": [
-           "Hello there!"
-       ]
-   }
-]
+{
+    "version": "1.0",
+    "timestamp": "2018-10-04T12:41:27.980Z",
+    "agent": {
+        "id": 4415,
+        "name": "gogo",
+        "profile_image": "https://assets.haptikapi.com/content/42e123411bk1109823bf.jpg",
+        "is_automated": true
+    },
+    "message": [
+        {
+            "id": 1982371,
+            "body": {
+                "text": "Hi",
+                "type": "TEXT",
+                "data": {
+                    "quick_replies": []
+                }
+            }
+        }
+    ]
+}
 ```
 
 #### Response Parameters
-- model - The ML model used to process the input text message.
-- fields - Fields is a JSON object containing meta-data about the message sent. This includes data like:
-        *  body - The text body of the input text message.
-        *  created_at - The time at which the message was sent.
-        *  modified_at - The time at which the message was modified.
-        *  agent_name  - The name of the agent if agent was involved in chat.
-        *  business_id - The unique identifier of the business to which the text query was sent to.
-        *  business_name - The name of the business to which the text query was sent.
-    Along with this it also includes some system metadata.
--  bot_messages - This is a list containing teh responses to the query sent as input in the POST request.
+- version - The version of the API.
+- timestamp = The time at which the message was sent.
+- agent - Information about the agent who replied to the message. In case of bot the agent is `gogo`.
+-  message - This is a list containing teh responses to the query sent as input in the POST request. Each of the items is a HSL format reply.

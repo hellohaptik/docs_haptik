@@ -32,6 +32,9 @@
       "agent-chat/claiming-and-closing": {
         "title": "Claiming & Closing Chats"
       },
+      "agent-chat/closing-categories": {
+        "title": "Closing Categories"
+      },
       "agent-chat/custom-tools-data-communication": {
         "title": "Using conversation data"
       },
@@ -46,6 +49,9 @@
       },
       "agent-chat/index": {
         "title": "Introduction"
+      },
+      "agent-chat/integrating-external-bot": {
+        "title": "Integrating with External Bot"
       },
       "agent-chat/navigating-interface-shortcuts": {
         "title": "Shortcuts for navigation"
@@ -68,20 +74,20 @@
       "bot-analytics/index": {
         "title": "Introduction"
       },
+      "bot-analytics/node-traffic": {
+        "title": "Node Traffic"
+      },
       "bot-analytics/sample-metrics": {
         "title": "Sample Metrics"
       },
       "bot-analytics/story-analysis": {
         "title": "Story Analysis"
       },
-      "bot-analytics/user-journey": {
-        "title": "User Journey"
-      },
       "bot-analytics/user-ratings": {
         "title": "User Ratings"
       },
       "bot-analytics/user-reviews": {
-        "title": "User reviews"
+        "title": "User Reviews"
       },
       "bot-analytics/using-message-analysis": {
         "title": "Message Analysis"
@@ -94,6 +100,9 @@
       },
       "bot-builder/advanced/integrating-webviews-into-sdk": {
         "title": "Integrating Webviews"
+      },
+      "bot-builder/advanced/integrating-with-external-bot": {
+        "title": "Integrating with External Bot"
       },
       "bot-builder/basic/bot-hierarchy": {
         "title": "Bot Hierarchy"
@@ -237,7 +246,7 @@
         "title": "API Security"
       },
       "webhooks/create-haptik-user": {
-        "title": "How to create a Haptik User"
+        "title": "How to create/update a Haptik User"
       },
       "webhooks/index": {
         "title": "What is a Webhook"
@@ -257,6 +266,9 @@
       "webhooks/send-message-to-haptik": {
         "title": "How to send message to Haptik"
       },
+      "webhooks/synchronous_webhooks": {
+        "title": "Synchronous Webhooks"
+      },
       "webhooks/temp-backup": {
         "title": "webhooks/temp-backup"
       },
@@ -264,6 +276,36 @@
         "title": "webhooks/using-platform-deployments"
       },
       "webhooks/webhook-payload": {
+        "title": "Payload Information"
+      },
+      "whatsapp/allowed-notification-types": {
+        "title": "Allowed Notification Types"
+      },
+      "whatsapp/bot-deploy-whatsapp": {
+        "title": "Deploy Bot to WhatsApp"
+      },
+      "whatsapp/business-setup": {
+        "title": "Business Setup"
+      },
+      "whatsapp/disallowed-notification-types": {
+        "title": "Disallowed Notification Types"
+      },
+      "whatsapp/getting-user-opt-ins": {
+        "title": "Getting User Opt-Ins"
+      },
+      "whatsapp/index": {
+        "title": "Getting Started"
+      },
+      "whatsapp/sending-notifications": {
+        "title": "Sending Notifications"
+      },
+      "whatsapp/technical-setup": {
+        "title": "Technical Setup"
+      },
+      "whatsapp/types-of-conversations": {
+        "title": "Types of Conversations"
+      },
+      "whatsapp/webhook-payload": {
         "title": "Payload Information"
       }
     },
@@ -275,15 +317,18 @@
       "Getting Started": "Getting Started",
       "Guides": "Guides",
       "Resources": "Resources",
+      "Contributing": "Contributing",
+      "Advanced": "Advanced",
       "Docusaurus": "Docusaurus",
       "First Category": "First Category",
       "Second Category": "Second Category",
-      "Advanced": "Advanced",
+      "Introduction": "Introduction",
       "Tools": "Tools",
       "Integrations": "Integrations",
-      "Contributing": "Contributing",
+      "Types of Conversations": "Types of Conversations",
+      "Deploying the Bot": "Deploying the Bot",
+      "Sending Notifications": "Sending Notifications",
       "HSL Elements": "HSL Elements",
-      "Introduction": "Introduction",
       "How to Create a Webhook": "How to Create a Webhook",
       "Independent Integrations": "Independent Integrations"
     }

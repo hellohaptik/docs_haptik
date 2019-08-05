@@ -103,6 +103,15 @@ Each variant is composed of Messages and Quick Replies.
 
 ![image](assets/bot-builder-bot-says/variants.gif)
 
+3rd party platforms that we currently support have certain limitations on chat elements (HSLs). For ex, Whatsapp doesn't have quick replies. The only workaround is to create an entirely separate bot duplicating the existing effort.
+
+When showing variants, we now also show the platforms enabled for that particular variant. Clicking on it opens a small tooltip which allows you to add/remove platforms or just select the platforms for your variant here. Refer the image below.   
+
+![image](assets/bot-builder-bot-says/DPSV.PNG) 
+
+Adding device specific variants to our chat elements helps build one flow for one or many platforms. Depending on the platform the user is using to chat, the device specific variants would be served to the end user. This would give power to the bot builder to modify existing bots and add incremental support for a platform without much effort. 
+
+    The limitation here is that the flow must be the same across platforms. 
 
 ### Message
 A variant can have multiple message bubbles. Each message is a separate _text_ from the bot. Instead of putting a long message into just one message bubble, you can split it into multiple shorter messages. However, you should avoid adding more than 3-4 messages in a single variant.

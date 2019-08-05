@@ -136,6 +136,12 @@ Then, it will start looking for the Entities in the Entity Response. If the bot 
 <p>A bot response can consist of multiple variants where each variant is an independent message. All variants should imply the same meaning as the bot chooses a variant randomly to avoid being repetitive even when asked the same question.</p>
 <p>Each variant is composed of Messages and Quick Replies.</p>
 <p><img src="/assets/bot-builder-bot-says/variants.gif" alt="image"></p>
+<p>3rd party platforms that we currently support have certain limitations on chat elements (HSLs). For ex, Whatsapp doesn't have quick replies. The only workaround is to create an entirely separate bot duplicating the existing effort.</p>
+<p>When showing variants, we now also show the platforms enabled for that particular variant. Clicking on it opens a small tooltip which allows you to add/remove platforms or just select the platforms for your variant here. Refer the image below.</p>
+<p><img src="/assets/bot-builder-bot-says/DPSV.PNG" alt="image"></p>
+<p>Adding device specific variants to our chat elements helps build one flow for one or many platforms. Depending on the platform the user is using to chat, the device specific variants would be served to the end user. This would give power to the bot builder to modify existing bots and add incremental support for a platform without much effort.</p>
+<pre><code class="hljs">The limitation here is that the flow must be the same across platforms. 
+</code></pre>
 <h3><a class="anchor" aria-hidden="true" id="message"></a><a href="#message" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Message</h3>
 <p>A variant can have multiple message bubbles. Each message is a separate <em>text</em> from the bot. Instead of putting a long message into just one message bubble, you can split it into multiple shorter messages. However, you should avoid adding more than 3-4 messages in a single variant.</p>
 <blockquote>

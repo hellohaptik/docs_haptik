@@ -9,7 +9,8 @@
             "navigating-interface-shortcuts",
             "claiming-and-closing",
             "adding-agents-and-permissions",
-            "adding-custom-tools"
+            "adding-custom-tools",
+            "integrating-external-bot"
         ],
         "Resources": [
             "bot-agent-handover",

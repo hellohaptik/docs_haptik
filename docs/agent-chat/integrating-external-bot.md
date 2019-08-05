@@ -9,7 +9,6 @@ There might be times when there is an existing bot with a flow already built on 
 ## Steps to integrate
 
 ### Using Webhooks
-> Note: This is the recommended way to integrate with an external bot
 
 This is a straigthforward method where the client can integrate with haptik's tool using simple webhooks.
 

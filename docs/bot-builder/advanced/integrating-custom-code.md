@@ -513,12 +513,13 @@ Content-Type: application/json
 "user_name": "<haptik user name>",
 "business_id": <business_id>,
 "limit": "<number of messages>"(optional)
-
+"respose_type": "<response_type>"(optional)
 ```
+Note: Supported response types are `json` and `text`. The default response type is `json`.
 
 #### Response
 
-A successful request to the API will return a `200` status code with a JSON response object containg chat data.
+A successful request to the API will return a `200` status code with a JSON response object containing chat data.
 
 ```json
 {  
@@ -533,9 +534,7 @@ A successful request to the API will return a `200` status code with a JSON resp
             "sender": "bot",
             "message_id": 1743
         }
-    ],
-    "chat_text": "user: Search places to visit{task}\nbot: TEXT\n"
-
+    ]
 }
 ```
 - success: Indicates if the API was a success or failure

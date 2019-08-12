@@ -201,7 +201,7 @@ Example:
 
 <b>event_name = webhook_conversation_complete</b>
 
-A Conversation has been marked complete by an agent or a bot after chat data encryption.
+A Conversation has been marked complete by an agent or a bot.
 
 Example:
 
@@ -217,7 +217,8 @@ Example:
     "user_name": "<USER_NAME>"
    },
    "data": {
-    "conversation_id": "<CONVERSATION_ID>"
+    "conversation_id": "<CONVERSATION_ID>",
+    "closing_categories": "<CLOSING_CATEGORIES>"
    }
 }
    ```

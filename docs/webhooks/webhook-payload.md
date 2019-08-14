@@ -218,7 +218,7 @@ Example:
    },
    "data": {
     "conversation_id": "<CONVERSATION_ID>",
-    "closing_categories": "<CLOSING_CATEGORIES>"
+    "closing_categories": {"reason": "", "subReason": "", "comment": ""}
    }
 }
    ```

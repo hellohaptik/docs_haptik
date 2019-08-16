@@ -509,7 +509,7 @@ Content-Type: application/json
 #### Request Params
 
 ```
-"conversation_id": "<Conversation id of the user>",
+"conversation_no": "<Conversation no of the chat for the user>",
 "user_name": "<haptik user name>",
 "business_id": <business_id>,
 "limit": "<number of messages>"(optional)
@@ -519,7 +519,7 @@ Note: Supported response types are `json` and `text`. The default response type 
 
 #### Response
 
-A successful request to the API will return a `200` status code with a JSON response object containing chat data.
+A successful request to the API will return a `200` status code with a default JSON response object containing chat data.
 
 ```json
 {  
@@ -537,7 +537,20 @@ A successful request to the API will return a `200` status code with a JSON resp
     ]
 }
 ```
+
+Text type response 
+```
+{  
+  "chat_text": "user: Search places to visit{task}\nbot: TEXT\n"
+}
+
+```
+
 - success: Indicates if the API was a success or failure
+- sender values: 
+    `bot`: message is sent by the bot
+    `user`: message is sent by the user
+    `agent(<AGENT_NAME>)`: message is sent by the agent <AGENT_NAME> : name of the agent who sent the message
 
 #### Error Response
 
@@ -556,7 +569,7 @@ Here is a list of some possible error messages
 |invalid token|The Authorization token provided is incorrect
 |user_name missing|The user_name is not provided in the request params
 |business_id missing|The business_id is not provided in the request params
-|conversation_id missing|The conversation_id is not provided in the request params
+|conversation_no missing|The conversation_no is not provided in the request params
 |invalid user_name|The user_name provided is not valid for the Partner
 |user has not sent a message|The user has not had any chat on that Business
 
@@ -566,7 +579,7 @@ Here is a list of some possible error messages
 ```
 curl -X POST \
   https://<base-url>/integration/external/v1.0/get_chat_history/?user_name=<user_name>
-  &conversation_id=<conversation_id>&business_id=<business_id>&limit=<limit> \
+  &conversation_no=<conversation_no>&business_id=<business_id>&limit=<limit> \
   -H 'Authorization: Bearer <TOKEN>' \
   -H 'client-id: <CLIENT_ID>' \
   -H 'Content-Type: application/json' \

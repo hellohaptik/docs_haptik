@@ -91,6 +91,7 @@ POST
     "auth_id": "Authentication ID, If AuthInfo Is present else empty string",
     "auth_code": "Authentication Code, If AuthInfo Is present else empty string"
   },
+  "conversation_no": 1,
   "entities": {
     "product_id": [
       {
@@ -128,6 +129,8 @@ POST
 **3. event** - event type e.g. API_INTEGRATION
 
 **4. user** - Dictionary containing user data
+
+**5. conversation_no** - Identifier for the current conversation of the user with this Business
 
 **entity output format**
 
@@ -198,7 +201,7 @@ for example:
         "response": ["phone number seems invalid", "please try again"]
     }
     ```
-    
+
 3. Response for Multi-Lingual Bot
     ```python
     language_code = request_body['user']['language_code'] #assuming request_body contains post-data
@@ -207,7 +210,7 @@ for example:
     elif language_code == 'hi':
       message = ["फ़ोन नंबर अमान्य लगता है, कृपया पुनः प्रयास करें"]
     else:
-      message = <Any Message as per use case>  
+      message = <Any Message as per use case>
 
    {
       "status": True,

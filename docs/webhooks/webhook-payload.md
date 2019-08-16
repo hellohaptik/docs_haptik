@@ -76,7 +76,7 @@ Payload sent to your registered webhook will always be in json.
       <tr>
          <td>message.body</td>
          <td>
-         Will comprize of HSL elements. For a complete description of HSL elements refer 
+         Will comprize of HSL elements. For a complete description of HSL elements refer
          <a href="https://docs.haptik.ai/hsl/">here</a>
          </td>
       </tr>
@@ -217,7 +217,7 @@ Example:
     "user_name": "<USER_NAME>"
    },
    "data": {
-    "conversation_id": "<CONVERSATION_ID>",
+    "conversation_no": "<CONVERSATION_NO>",
     "closing_categories": {"reason": "", "subReason": "", "comment": ""}
    }
 }

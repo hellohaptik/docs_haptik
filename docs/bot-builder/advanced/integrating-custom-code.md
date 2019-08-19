@@ -360,7 +360,7 @@ if __name__ == "__main__":
 
 A node can also be configured to execute custom code once the required entities have been collected.
 
-To be able to do so, you can use the in-built code editor in Mogambo or paste Python3.7 specific code into the editor and save.
+To be able to do so, you can use the in-built code editor in Mogambo or paste Python3.6 specific code into the editor and save.
 
 The only requirement is, the code should follow the below format. If any syntax errors or exceptions are raised by the main function, this will result in a botBreak message.
 
@@ -393,6 +393,26 @@ def main(event, context):
     response = {'statusCode': 200, 'body': json.dumps(final_response), 'headers': {'Content-Type': 'application/json'}}
     return response
 ```
+
+##### Supported Packages 
+1. *Default* - [List of Packages here](https://gist.github.com/gene1wood/4a052f39490fae00e0c3#file-all_aws_lambda_modules_python3-6-txt)
+2. *Extra packages* -  
+chardet-3.0.4 
+gspread-3.1.0 
+httplib2-0.13.1 
+idna-2.8 
+mysqlclient-1.4.2 
+oauth2client-4.1.3 
+pyasn1-0.4.6 
+pyasn1-modules-0.2.6 
+pytz-2019.2 
+redis-3.2.1 
+requests-2.22.0 
+rsa-4.0 
+six-1.12.0 
+unicodecsv-0.14.1 
+urllib3-1.25.3
+
 
 #### Pre-Transfer
 

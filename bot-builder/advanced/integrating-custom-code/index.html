@@ -364,7 +364,7 @@ Usage::
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="custom-code"></a><a href="#custom-code" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Custom Code</h3>
 <p>A node can also be configured to execute custom code once the required entities have been collected.</p>
-<p>To be able to do so, you can use the in-built code editor in Mogambo or paste Python3.7 specific code into the editor and save.</p>
+<p>To be able to do so, you can use the in-built code editor in Mogambo or paste Python3.6 specific code into the editor and save.</p>
 <p>The only requirement is, the code should follow the below format. If any syntax errors or exceptions are raised by the main function, this will result in a botBreak message.</p>
 <pre><code class="hljs css language-python"><span class="hljs-keyword">import</span>  json
 
@@ -394,6 +394,26 @@ Usage::
     response = {<span class="hljs-string">'statusCode'</span>: <span class="hljs-number">200</span>, <span class="hljs-string">'body'</span>: json.dumps(final_response), <span class="hljs-string">'headers'</span>: {<span class="hljs-string">'Content-Type'</span>: <span class="hljs-string">'application/json'</span>}}
     <span class="hljs-keyword">return</span> response
 </code></pre>
+<h5><a class="anchor" aria-hidden="true" id="supported-packages"></a><a href="#supported-packages" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Supported Packages</h5>
+<ol>
+<li><em>Default</em> - <a href="https://gist.github.com/gene1wood/4a052f39490fae00e0c3#file-all_aws_lambda_modules_python3-6-txt">List of Packages here</a></li>
+<li><em>Extra packages</em> -<br>
+chardet-3.0.4
+gspread-3.1.0
+httplib2-0.13.1
+idna-2.8
+mysqlclient-1.4.2
+oauth2client-4.1.3
+pyasn1-0.4.6
+pyasn1-modules-0.2.6
+pytz-2019.2
+redis-3.2.1
+requests-2.22.0
+rsa-4.0
+six-1.12.0
+unicodecsv-0.14.1
+urllib3-1.25.3</li>
+</ol>
 <h4><a class="anchor" aria-hidden="true" id="pre-transfer"></a><a href="#pre-transfer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pre-Transfer</h4>
 <p><code>Train Bot</code> prepares the code for production. Hence, you should make sure to call <code>Train Bot</code> if there are any changes in the custom code integration before transferring the bot to production.</p>
 <h2><a class="anchor" aria-hidden="true" id="additional-apis"></a><a href="#additional-apis" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Additional APIs</h2>
@@ -474,8 +494,92 @@ Content-Type: application/json
     <span class="hljs-string">"business_id"</span>: &lt;business_id&gt;
 }
 </code></pre>
+<h3><a class="anchor" aria-hidden="true" id="get-chat-history"></a><a href="#get-chat-history" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Get Chat History</h3>
+<p>This API allows you to get the chat history of the user for a conversation via a <code>GET</code> request to the Haptik Platform.</p>
+<p>Example URL: <code>https://&lt;base-url&gt;/integration/external/v1.0/get_chat_history/</code></p>
+<blockquote>
+<p>Note: The <code>base-url</code> will be provided by Haptik at the time of integration.</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="headers-1"></a><a href="#headers-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Headers</h4>
+<pre><code class="hljs"><span class="hljs-symbol">Authorization:</span> Bearer <span class="hljs-params">&lt;TOKEN&gt;</span>
+client-id: <span class="hljs-params">&lt;CLIENT_ID&gt;</span>
+Content-Type: application/json
+</code></pre>
+<ul>
+<li>Authorization - The Authorization header of each HTTP request should be “Bearer” followed by your token which will be provided by Haptik</li>
+<li>client-id - The client id for your account which will be provided by Haptik</li>
+<li>Content-Type - application/json</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="request-params"></a><a href="#request-params" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Request Params</h4>
+<pre><code class="hljs"><span class="hljs-string">"conversation_no"</span>: <span class="hljs-string">"&lt;Conversation no of the chat for the user&gt;"</span>,
+<span class="hljs-string">"user_name"</span>: <span class="hljs-string">"&lt;haptik user name&gt;"</span>,
+<span class="hljs-string">"business_id"</span>: &lt;business_id&gt;,
+<span class="hljs-string">"limit"</span>: <span class="hljs-string">"&lt;number of messages&gt;"</span>(<span class="hljs-keyword">optional</span>)
+<span class="hljs-string">"respose_type"</span>: <span class="hljs-string">"&lt;response_type&gt;"</span>(<span class="hljs-keyword">optional</span>)
+</code></pre>
+<p>Note: Supported response types are <code>json</code> and <code>text</code>. The default response type is <code>json</code>.</p>
+<h4><a class="anchor" aria-hidden="true" id="response-1"></a><a href="#response-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Response</h4>
+<p>A successful request to the API will return a <code>200</code> status code with a default JSON response object containing chat data.</p>
+<pre><code class="hljs css language-json">{  
+  <span class="hljs-attr">"chat_json"</span>: [
+        {
+            <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Search places to visit{task}"</span>,
+            <span class="hljs-attr">"sender"</span>: <span class="hljs-string">"user"</span>,
+            <span class="hljs-attr">"message_id"</span>: <span class="hljs-number">1742</span>
+        },
+        {
+            <span class="hljs-attr">"text"</span>: <span class="hljs-string">"TEXT"</span>,
+            <span class="hljs-attr">"sender"</span>: <span class="hljs-string">"bot"</span>,
+            <span class="hljs-attr">"message_id"</span>: <span class="hljs-number">1743</span>
+        }
+    ]
+}
+</code></pre>
+<p>Text type response</p>
+<pre><code class="hljs">{  
+  <span class="hljs-attr">"chat_text"</span>: <span class="hljs-string">"user: Search places to visit{task}\nbot: TEXT\n"</span>
+}
+
+</code></pre>
+<ul>
+<li>success: Indicates if the API was a success or failure</li>
+<li>sender values:
+<code>bot</code>: message is sent by the bot
+<code>user</code>: message is sent by the user
+<code>agent(&lt;AGENT_NAME&gt;)</code>: message is sent by the agent &lt;AGENT_NAME&gt; : name of the agent who sent the message</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="error-response-1"></a><a href="#error-response-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Error Response</h4>
+<p>If there is any error in the Headers or the Request body, then the Error message will be returned in a JSON as shown below:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"error_message"</span>: <span class="hljs-string">"user has not sent a message"</span>
+}
+</code></pre>
+<p>Here is a list of some possible error messages</p>
+<table>
+<thead>
+<tr><th>Error Message</th><th>Details</th></tr>
+</thead>
+<tbody>
+<tr><td>invalid client_id</td><td>Incorrect client-id is passed in the headers</td></tr>
+<tr><td>invalid token</td><td>The Authorization token provided is incorrect</td></tr>
+<tr><td>user_name missing</td><td>The user_name is not provided in the request params</td></tr>
+<tr><td>business_id missing</td><td>The business_id is not provided in the request params</td></tr>
+<tr><td>conversation_no missing</td><td>The conversation_no is not provided in the request params</td></tr>
+<tr><td>invalid user_name</td><td>The user_name provided is not valid for the Partner</td></tr>
+<tr><td>user has not sent a message</td><td>The user has not had any chat on that Business</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="sample-curl-command-1"></a><a href="#sample-curl-command-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sample CURL command</h4>
+<pre><code class="hljs">curl -<span class="hljs-keyword">X</span> POST \
+  http<span class="hljs-variable">s:</span>//<span class="hljs-symbol">&lt;base-url&gt;</span>/integration/external/v1.<span class="hljs-number">0</span>/get_chat_history/?user_name=<span class="hljs-symbol">&lt;user_name&gt;</span>
+  &amp;conversation_no=<span class="hljs-symbol">&lt;conversation_no&gt;</span>&amp;business_id=<span class="hljs-symbol">&lt;business_id&gt;</span>&amp;limit=<span class="hljs-symbol">&lt;limit&gt;</span> \
+  -H <span class="hljs-string">'Authorization: Bearer &lt;TOKEN&gt;'</span> \
+  -H <span class="hljs-string">'client-id: &lt;CLIENT_ID&gt;'</span> \
+  -H <span class="hljs-string">'Content-Type: application/json'</span> \
+}
+</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="best-practices"></a><a href="#best-practices" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Best Practices</h2>
 <p><strong>1. Assign Chat to Agent</strong> In some scenarios, where integration response fails or some unknown exception occurs then instead of sending bot break message we can also directly assign chat to an agent for better user experience. <Coming Soon></p>
 <p><strong>2.Handle textual content</strong> - Everytime we want to change bot's response, a code change is required. To avoid that pain, we can use <strong>key value stores</strong>. Any person with zero to little tech knowledge can change bot response from key value store (with GUI) by updating the message copy corresponding to that unique message key or ID. This message key can be shared with the developer and fetch the response using that key.</p>
 <p><strong>3. HSLs</strong>  - Haptik defines a superset of UI elements that are available across multiple platforms. These UI elements are then converted to their platform equivalent (js-sdk, android, ios, facebook-messenger, etc..) if they are not available on that specific platform. Eg. Forms are converted to quick replies on the Facebook platform and collected over free form. <a href="https://docs.haptik.ai/hsl/">for more detail read here</a></p>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-8-16</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/bot-builder/basic/forms"><span class="arrow-prev">← </span><span>Forms</span></a><a class="docs-next button" href="/bot-builder/advanced/integrating-webviews-into-sdk"><span>Integrating Webviews</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#node-integrations">Node Integrations</a><ul class="toc-headings"><li><a href="#api-functions">API Functions</a></li><li><a href="#webhooks">Webhooks</a></li><li><a href="#custom-code">Custom Code</a></li></ul></li><li><a href="#additional-apis">Additional APIs</a><ul class="toc-headings"><li><a href="#move-a-chat-to-pending">Move a chat to pending</a></li></ul></li><li><a href="#best-practices">Best Practices</a></li></ul></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Bot Builder</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://hellohaptik.github.io/haptik-ios-framework" class="footer-column-link">iOS SDK</a><a href="https://hellohaptik.github.io/haptik-android-lib" class="footer-column-link">Android SDK</a><a href="https://hellohaptik.github.io/javascript_sdk" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Webhooks</a><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/contributing/index" class="footer-column-link">Contributing</a><a href="https://docs.haptik.ai/other/security" class="footer-column-link">Security</a><a href="https://forms.gle/Z2SowBSFpWLayXQz9" class="footer-column-link">Support</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2019 Haptik Inc.</section></footer></div></body></html>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-8-21</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/bot-builder/basic/forms"><span class="arrow-prev">← </span><span>Forms</span></a><a class="docs-next button" href="/bot-builder/advanced/integrating-webviews-into-sdk"><span>Integrating Webviews</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#node-integrations">Node Integrations</a><ul class="toc-headings"><li><a href="#api-functions">API Functions</a></li><li><a href="#webhooks">Webhooks</a></li><li><a href="#custom-code">Custom Code</a></li></ul></li><li><a href="#additional-apis">Additional APIs</a><ul class="toc-headings"><li><a href="#move-a-chat-to-pending">Move a chat to pending</a></li><li><a href="#get-chat-history">Get Chat History</a></li></ul></li><li><a href="#best-practices">Best Practices</a></li></ul></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Bot Builder</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://hellohaptik.github.io/haptik-ios-framework" class="footer-column-link">iOS SDK</a><a href="https://hellohaptik.github.io/haptik-android-lib" class="footer-column-link">Android SDK</a><a href="https://hellohaptik.github.io/javascript_sdk" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Webhooks</a><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/contributing/index" class="footer-column-link">Contributing</a><a href="https://docs.haptik.ai/other/security" class="footer-column-link">Security</a><a href="https://forms.gle/Z2SowBSFpWLayXQz9" class="footer-column-link">Support</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2019 Haptik Inc.</section></footer></div></body></html>

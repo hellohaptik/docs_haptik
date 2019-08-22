@@ -1,0 +1,41 @@
+---
+title: Building Voice bots
+---
+
+
+# What is voice bot?
+
+Voice bot works by using voice as an input. For example, we see voice input in Whatsapp to send voice messages and in Music/e-commerce apps for discovery.
+In a voice-bot, the  primary mode of communication is voice. Users Listen to the command(s) given by the speaker and perform the required action. Voicebot is commonly integrated on voice assistants like Amazon Alexa and Google Assistant.
+
+# How does it work?
+
+For a Voice Bot you can tap on *+Add a chat element*. Once you click on it, a slide bar opens on the right hand side. 
+
+Click on preferred chat element. Here for your element, you can configure the voice bot via two fields
+1. Bot Says: This is the text on UI as a bot message bubble i.e. Add bot says, which will be sent as text to the user.
+2. Voice Says: This is what the bot says out loud i.e. the output from your device speaker. You tap on +Voice support and add message details. Once the message is added, tap on the Done button at the top.
+ 
+It will look as depicted in the image below.
+
+![Voice Says](assets/voice-says.png)
+
+You can use any chat element and add voice says except for Raw Json. For this specific chat element, bot says and voice says will be the same. You will not get an option to separately feed in voice says.
+Once the details are added, click on save on the top right to save the data.
+
+Note - If changes are made in Bot says, you have to save the data to test the bot. If changes are made in User says, you will have to save, then train the bot and later you can test the bot. 
+
+## SSML tags
+
+You can use a bunch of tags to modify the Text to speech experience. This is crucial to control how and what the bot says out the bot response. 
+
+For example, you can add pauses in the bot speech or emphasise on a certain part of the bot speech -
+
+SSML tags are to be added in the Voice Says field box as shown in the image above. For understanding how SSML tags are to be added, check the details below -
+
+1. Adding a break
+> **Syntax:** <speak> Not sure. <break time="2s"/> Please reach out on our email-id. </speak>
+
+2. Adding emphasis
+> **Syntax:** <speak> You can contact us on <emphasis level="strong"> our landline </emphasis> on weekdays. </speak>
+

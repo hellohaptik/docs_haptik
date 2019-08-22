@@ -15,3 +15,5 @@ We can borrow the definition of a session from other applications. “A session 
 
 ## What is a session for every chat regardless of the SDK/Client?
 A session is considered closed when 8 minutes passes from the last message. This would mean that we calculate sessions purely on the basis of inactivity i.e. we close a session after 8 minutes of inactivity from the last user, bot or agent message. Hence measuring sessions should be a job of the analytics tool as well as the frontend.
+
+Please note that we have permissioned this out. Every user on our platform has access to certain features. Your user account's permission group need to have *teja_edit_columns_for_messages* feature added for viewing the sessions count on our analytics tool. 

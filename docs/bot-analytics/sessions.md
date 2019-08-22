@@ -2,7 +2,9 @@
 title: Sessions
 ---
 
-We need a standard way to track and measure a user session. This will allow us to track the stickiness of the user. What is the repeat rate of the user. etc
+We needed a standard way to track and measure a user's activity. Hence, we introduced "Sessions" as a metric on our analytics tool. This will allow us to track the stickiness of the user. What is the repeat rate of the user. etc
+
+![Sessions](assets/sessions.png)
 
 ## How to define a session?
 We can borrow the definition of a session from other applications. “A session is a period of time within which a user interacts with an application. Usually triggered by the opening of an application, a session records the length and frequency of use in an application to show developers, marketers and product managers how much time users spend within an application.”

@@ -34,13 +34,13 @@ You can use a bunch of tags to modify the Text to speech experience. This is cru
 
 For example, you can add pauses in the bot speech or emphasise on a certain part of the bot speech -
 
-SSML tags are to be added in the Voice Says field box as shown in the image above. For understanding how SSML tags are to be added, check the details below -
+SSML tags are to be added in the Voice Says field box as shown in the image above. For understanding how SSML tags are to be added, check the syntax details below -
 
 1. Adding a break
-*<speak> Not sure. <break time="2s"/> Please reach out on our email-id. </speak>*
+`<speak> Not sure. <break time="2s"/> Please reach out on our email-id. </speak>`
 
 2. Adding emphasis
-*<speak> You can contact us on <emphasis level="strong"> our landline </emphasis> on weekdays. </speak>*
+`<speak> You can contact us on <emphasis level="strong"> our landline </emphasis> on weekdays. </speak>`
 
 ## Using HSLs for voice
 

@@ -5,11 +5,11 @@ title: Building Voice bots
 ## What is a voice bot?
 
 Voice bot works by using voice as an input. For example, we see voice input in Whatsapp to send voice messages and in Music/e-commerce apps for discovery.
-In a voice-bot, the  primary mode of communication is voice. Users Listen to the command(s) given by the speaker and perform the required action. Voice bot is commonly integrated on voice assistants like Amazon Alexa and Google Assistant. You can also enable voice input in your website (JS SDK) bot. 
+In a voice-bot, the  primary mode of communication is voice. Users Listen to the command(s) given by the speaker and perform the required action. Voice bot is commonly integrated on voice assistants like Amazon Alexa and Google Assistant. You can also enable voice input in your **website (JS SDK) bot**. 
 
 ## How does it work?
 
-To configure a Voice Bot on our bot builder, go to any node and set voice-specific bot responses. On a node, you can tap on *+Add a chat element* in Bot says. Once you click on it, a slide bar opens on the right hand side. 
+To configure a Voice Bot on our bot builder, go to any node and set voice-specific bot responses. On a node, you can tap on `+Add a chat element` in Bot says. Once you click on it, a slide bar opens on the right hand side. 
 
 Click on preferred chat element. Here for your element, you can configure the voice bot via two fields
 1. Bot Says: This is the text on UI as a bot message bubble i.e. Add bot says, which will be sent as text to the user.

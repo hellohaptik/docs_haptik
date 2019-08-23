@@ -37,11 +37,15 @@ For example, you can add pauses in the bot speech or emphasise on a certain part
 SSML tags are to be added in the Voice Says field box as shown in the image above. For understanding how SSML tags are to be added, check the syntax details below -
 
 1. Adding a break
+
 `<speak> Not sure. <break time="2s"/> Please reach out on our email-id. </speak>`
+
 As per the SSML tags used above, after Bot says "Not sure." there will be a break time of 2 seconds and then bot speaks the rest. 
 
 2. Adding emphasis
+
 `<speak> You can contact us on <emphasis level="strong"> our landline </emphasis> on weekdays. </speak>`
+
 As per the SSML tags used above, after Bot says "You can contact us on" there will be emphasis on "our landline" phrase and then bot speaks the rest of the text. 
 
 ## Using HSLs for voice
@@ -59,7 +63,7 @@ To test a Voice Bot, we will have to add "&bot-type=VOICE" in the demo QP link f
 
 1. Voice Bot may sometimes not pronounce the words properly. Misspelling the word in “Voice says” may help at times
 2. Bot may also not pronounce Hindi words properly. Accordingly, edit the text in "Voice text" field
-3. Bot tends to read out some special characters. Avoid using "<b>" and similar tags which aren't SSML
+3. Bot tends to read out some special characters. Avoid using "<b>" and special characters which aren't SSML tags
 4. Too much of content may lead to bore the users. Do not use long message copies for Voice support. To make the bot pause while reading out a sentence add respective punctuations like commas, full stops
 5. Bot does not read two separate messages together, it takes a pause before reading the second message
 6. Add spaces between numbers so that the Bot will read them individually. Example - you type “99” in voice support, bot will read it as “ninety nine”. Instead type “9 9” in voice support, and the bot will read it as “nine nine”

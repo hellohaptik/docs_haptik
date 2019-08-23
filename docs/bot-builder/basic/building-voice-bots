@@ -5,7 +5,7 @@ title: Building Voice bots
 # What is a voice bot?
 
 Voice bot works by using voice as an input. For example, we see voice input in Whatsapp to send voice messages and in Music/e-commerce apps for discovery.
-In a voice-bot, the  primary mode of communication is voice. Users Listen to the command(s) given by the speaker and perform the required action. Voicebot is commonly integrated on voice assistants like Amazon Alexa and Google Assistant.
+In a voice-bot, the  primary mode of communication is voice. Users Listen to the command(s) given by the speaker and perform the required action. Voice bot is commonly integrated on voice assistants like Amazon Alexa and Google Assistant. You can also enable voice input in your website (JS SDK) bot. 
 
 # How does it work?
 

@@ -38,9 +38,11 @@ SSML tags are to be added in the Voice Says field box as shown in the image abov
 
 1. Adding a break
 `<speak> Not sure. <break time="2s"/> Please reach out on our email-id. </speak>`
+As per the SSML tags used above, after Bot says "Not sure." there will be a break time of 2 seconds and then bot speaks the rest. 
 
 2. Adding emphasis
 `<speak> You can contact us on <emphasis level="strong"> our landline </emphasis> on weekdays. </speak>`
+As per the SSML tags used above, after Bot says "You can contact us on" there will be emphasis on "our landline" phrase and then bot speaks the rest of the text. 
 
 ## Using HSLs for voice
 

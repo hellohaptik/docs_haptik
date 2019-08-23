@@ -57,7 +57,7 @@ We can use less of Quick replies & buttons or try directing the user with every 
 
 When testing a Bot on our platform, we generate a demo link to share and test it.
 
-To test a Voice Bot, we will have to add "&bot-type=VOICE" in the demo QP link for testing. You can also add &bot-type=VOICE&&voice-bot-initial-input=TEXT at the end of the demo QP link to change the voice input method to secondary. You can also have voice input as primary i.e. mic placed at the center of the composer area.
+To test a Voice Bot, we will have to add `"&bot-type=VOICE"` in the demo QP link for testing. You can also add `&bot-type=VOICE&&voice-bot-initial-input=TEXT` at the end of the demo QP link to change the voice input method to secondary. You can also have voice input as primary i.e. mic placed at the center of the composer area.
 
 ## Do’s & Don'ts
 

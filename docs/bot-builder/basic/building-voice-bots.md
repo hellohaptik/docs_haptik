@@ -37,10 +37,10 @@ For example, you can add pauses in the bot speech or emphasise on a certain part
 SSML tags are to be added in the Voice Says field box as shown in the image above. For understanding how SSML tags are to be added, check the details below -
 
 1. Adding a break
-> **Syntax:** <speak> Not sure. <break time="2s"/> Please reach out on our email-id. </speak>
+> *<speak> Not sure. <break time="2s"/> Please reach out on our email-id. </speak>*
 
 2. Adding emphasis
-> **Syntax:** <speak> You can contact us on <emphasis level="strong"> our landline </emphasis> on weekdays. </speak>
+> *<speak> You can contact us on <emphasis level="strong"> our landline </emphasis> on weekdays. </speak>*
 
 ## Using HSLs for voice
 
@@ -51,13 +51,13 @@ We can use less of Quick replies & buttons or try directing the user with every 
 
 When testing a Bot on our platform, we generate a demo link to share and test it.
 
-To test a Voice Bot, we will have to add "&bot-type=VOICE" in the demo QP link for testing. You can also add &bot-type=VOICE&&voice-bot-initial-input=TEXT at the end of the demo QP link to change the voice input method to secondary.
+To test a Voice Bot, we will have to add "&bot-type=VOICE" in the demo QP link for testing. You can also add &bot-type=VOICE&&voice-bot-initial-input=TEXT at the end of the demo QP link to change the voice input method to secondary. You can also have voice input as primary i.e. mic placed at the center of the composer area.
 
 # Do’s & Don'ts
 
 1. Voice Bot may sometimes not pronounce the words properly. Misspelling the word in “Voice says” may help at times
 2. Bot may also not pronounce Hindi words properly. Accordingly, edit the text in "Voice text" field
-3. Bot tends to read out some special characters. Avoid using "<b>" and rather use "*" for bold text 
+3. Bot tends to read out some special characters. Avoid using "<b>" and similar tags which aren't SSML
 4. Too much of content may lead to bore the users. Do not use long message copies for Voice support. To make the bot pause while reading out a sentence add respective punctuations like commas, full stops
 5. Bot does not read two separate messages together, it takes a pause before reading the second message
 6. Add spaces between numbers so that the Bot will read them individually. Example - you type “99” in voice support, bot will read it as “ninety nine”. Instead type “9 9” in voice support, and the bot will read it as “nine nine”

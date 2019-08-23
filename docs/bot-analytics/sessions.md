@@ -4,6 +4,8 @@ title: Sessions
 
 We needed a standard way to track and measure a user's activity. Hence, we introduced "Sessions" as a metric on our analytics tool. This will allow us to track the stickiness of the user. What is the repeat rate of the user. etc
 
+    We started tracking Sessions from 22 Aug 2019. Before this date, we didn't have sessions as a metric. 
+
 ![Sessions](assets/sessions.png)
 
 ## How to define a session?

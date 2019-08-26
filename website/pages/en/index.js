@@ -130,7 +130,7 @@ module.exports = () => (
           url: '/other/facebook'
         },
         {
-          title: 'React Native',
+          title: 'Native support',
           url: 'https://hellohaptik.github.io/javascript_sdk/native-support'
         }
       ]}

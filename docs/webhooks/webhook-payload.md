@@ -218,7 +218,7 @@ Example:
    },
    "data": {
     "conversation_no": "<CONVERSATION_NO>",
-    "chat_link": "<Chat_Link>",
+    "chat_link": "<CHAT_LINK>",
     "closing_categories": {"reason": "", "subReason": "", "comment": ""}
    }
 }

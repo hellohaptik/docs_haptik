@@ -384,14 +384,48 @@ def main(event, context):
     body = json.loads(event['body'])
     entities = body['entities']
     user_data = body['user']
-
-    final_response = {'status': True, 'response': ['Test Response']}
-    """
-    WRITE YOUR CODE HERE and update the final_response dict
-    """
-
+    final_response = {'status': True, 'response': write_here()}
     response = {'statusCode': 200, 'body': json.dumps(final_response), 'headers': {'Content-Type': 'application/json'}}
     return response
+
+def write_here(*args):
+    """
+   WRITE YOUR CODE HERE and update the final_response dict
+   """
+    # hsl_list = ['Hello', {}]
+    button_hsl = {
+        "text": "COMPLETE BLOOD COUNT; CBC",
+        "type": "BUTTON",
+        "data": {
+            "items": [
+                {
+                    "actionable_text": "View Price",
+                    "location_required": False,
+                    "is_default": 0,
+                    "uri": "LAUNCH_CHANNEL",
+                    "type": "TEXT_ONLY",
+                    "payload": {
+                        "gogo_message": "",
+                        "message": "I want to check the price of this test"
+                    }
+                },
+                {
+                    "actionable_text": "View Details",
+                    "location_required": False,
+                    "is_default": 0,
+                    "uri": "LINK",
+                    "type": "APP_ACTION",
+                    "payload": {
+                        "url": "XYZ.COM",
+                        "gogo_message": ""
+                    }
+                }
+            ]
+        },
+        "isNew": False
+    }
+    return [json.dumps(button_hsl)]
+
 ```
 
 ##### Supported Packages 

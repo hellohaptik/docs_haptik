@@ -369,18 +369,18 @@ import  json
 
 def main(event, context):
     """
-   event['body'] is a string dict with the following keys:
-   node, event, user, entities.
+    event['body'] is a string dict with the following keys:
+    node, event, user, entities.
 
-   Currently, we pass user_id, user_name, full_name, device_platform and language_code in the user dictionary.
+    Currently, we pass user_id, user_name, full_name, device_platform and language_code in the user dictionary.
 
-   Args:
-       event (dict): Data corresponding to this event
-       context
+    Args:
+        event (dict): Data corresponding to this event
+        context
 
-   Returns
-       (dict): response with statusCode and the response for the User
-   """
+    Returns
+        (dict): response with statusCode and the response for the User
+    """
     body = json.loads(event['body'])
     entities = body['entities']
     user_data = body['user']

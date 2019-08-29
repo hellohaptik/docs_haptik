@@ -35,3 +35,28 @@ The easiest way to test your bot is directly on the bot building tool itself. To
 On the Bot-Builder tool, you will see a **Log** icon near the messages you sent once the bot has processed the particular message. Clicking on this icon will provide you details on how the bot is behaving, what nodes were detected, what entities were collected and their value etc.
 
 This information is useful to understand why a bot is behaving in a certain way and how to fix the bot to get the desired results.
+
+## Searching your Bot
+======================
+
+To find something on the bot, you can click the **Search** click on the top bar within your bot view. For reference, check the image below.
+
+![image](assets/search-bot.png)
+
+Now, the bot builder can search for
+
+1. User Says
+2. Bot Says
+3. Nodes
+4. Stories
+5. Substories
+
+And the following filters should work while searching - 
+
+1. Active/Inactive 
+
+       Ex: So you can search from active stories or inactive nodes independently. 
+       
+2. Case-sensitive 
+       
+This search functionality is really useful in complex bots with multiple nods and 50+ user says. Especially, while debugging and when you want to go back and change/modify something on the bot. 

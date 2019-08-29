@@ -59,4 +59,4 @@ And the following filters should work while searching -
        
 2. Case-sensitive 
        
-This search functionality is really useful in complex bots with multiple nods and 50+ user says. Especially, while debugging and when you want to go back and change/modify something on the bot. 
+This search functionality is really useful in complex bots with multiple nodes and 50+ user says. Especially, while debugging to go back and change/modify something on the bot. 

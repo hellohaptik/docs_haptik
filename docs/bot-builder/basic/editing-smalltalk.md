@@ -14,7 +14,7 @@ Other than the stories you create for your particular bot flows, `Smalltalk` wil
 
 ![Smalltalk Story](/assets/smalltalk-story.png)
 
-Smalltalk has 4 personas. These personas should be selected basis your bot audience. That is as per your target user, you'd want the smalltalk responses to be casual or formal. This means teh smalltalk content we created has been created keeping in mind different categories of bots. **You choose the smalltalk persona while creating a bot.** 
+Smalltalk has 4 personas. These personas should be selected basis your bot audience. That is as per your target user, you'd want the smalltalk responses to be casual or formal. This means the smalltalk bot response copies we created, are as per the different personas of bots. **You choose the smalltalk persona while creating a bot.** 
 
 1. Default
 2. Casual
@@ -31,4 +31,4 @@ As a bot builder, you would be able to disable Smalltalk story as a whole. Or as
 
 ![Smalltalk](/assets/smalltalk.png)
 
-The idea here is to give bot builder full power over the Smalltalk story (module). 
+The gives bot builder full power over the Smalltalk story. 

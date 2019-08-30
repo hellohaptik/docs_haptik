@@ -70,3 +70,9 @@ And the following filters should work while searching -
 4. Case-sensitive 
        
    *You use this filter to search some strict case phrases. This search functionality is really useful in complex bots with multiple nodes and user says. Especially, while debugging to go back and change/modify something on the bot.*
+   
+5. Regex
+
+   *You can use multiple expressions to search for only numbers or email-ids.* 
+
+    Ex: Searching `o(a|d)+` will match the results with pattern oa or od.

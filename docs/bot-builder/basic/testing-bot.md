@@ -55,8 +55,18 @@ And the following filters should work while searching -
 
 1. Active/Inactive 
 
-       Ex: So you can search from active stories or inactive nodes independently. 
+   *This filter can help search from active stories or inactive nodes independently.* 
        
-2. Case-sensitive 
+2. Type of node
+
+   *You can narrow down your search from Graph/regular nodes to General nodes and so on.*
+    
+       Smalltalk isn't a filter here. We will add this later. As Smalltalk UI on Mogambo is due to release.
+
+3. Language
+   
+   *To check copies in Hindi/English mode specifically* 
        
-This search functionality is really useful in complex bots with multiple nodes and 50+ user says. Especially, while debugging to go back and change/modify something on the bot. 
+4. Case-sensitive 
+       
+   *You use this filter to search some strict case phrases. This search functionality is really useful in complex bots with multiple nodes and user says. Especially, while debugging to go back and change/modify something on the bot.*

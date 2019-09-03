@@ -160,13 +160,15 @@ and responses.
 
 ## Autocomplete suggestions 
 
-For all bots on Web SDK, as users start typing, the Taskbox will turn dynamic in autocomplete suggestions mode (refer the image below). We match the user's typed letters with user says sentences on the bot.
+For all bots on Web SDK, as users start typing, the Taskbox can turn dynamic in autocomplete suggestions mode (refer the image below). We match the user's typed letters with user says sentences on the bot. 
+
+      You have to enable autcomplete feature manually on your bot. 
 
 ![Autocomplete suggestions](assets/bot-builder-user-says/autocomplete.png)
 
 Two steps to make autocomplete feature live on a bot -
 
-**Step 1** - The bot builder needs to flag (refer image below) a particular user says sentence on every node. And this sentence will be suggested as user types in the message composer. This control is provided to suggest the grammatically correct i.e. apt user says sentence from a node. 
+**Step 1** - The bot builder needs to flag (refer image below) a particular user says sentence on every `start node`. And this sentence will be suggested as user types in the message composer. This control is provided to suggest the grammatically correct i.e. apt user says sentence from a node. 
 
 ![Marking Autocomplete suggestions](assets/bot-builder-user-says/user-says.png)
 
@@ -174,6 +176,5 @@ Two steps to make autocomplete feature live on a bot -
 
 We built this feature to -
 1. Help users discover the scope of our bot while an user starts typing
-2. Avoid bot breaks as user selects our suggestion than type a random freeform message
-3. Autocomplete suggestions while user types to improve the message event count. 
+2. Avoid bot breaks as user selects our suggestion than type a random freeform message.
 

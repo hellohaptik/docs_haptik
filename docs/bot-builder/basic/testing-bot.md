@@ -39,7 +39,7 @@ This information is useful to understand why a bot is behaving in a certain way 
 ## Searching your Bot
 ======================
 
-To find something on the bot, you can click the **Search** click on the top bar within your bot view. For reference, check the image below.
+To find something on the bot, you can click the **Search** area on the top bar within your bot view. For reference, check the image below.
 
 ![image](assets/search-bot.png)
 
@@ -48,8 +48,9 @@ Now, the bot builder can search for
 1. User Says
 2. Bot Says
 3. Nodes
-4. Stories
-5. Substories
+4. Sub story
+5. Story
+6. General responses (will be deprecated)
 
 And the following filters should work while searching - 
 
@@ -59,7 +60,7 @@ And the following filters should work while searching -
        
 2. Type of node
 
-   *You can narrow down your search from Graph/regular nodes to General nodes and so on.*
+   *You can narrow down your search from Graph (regular) nodes to General nodes and so on.*
     
        Smalltalk isn't a filter here. We will add this later. As Smalltalk UI on Mogambo is due to release.
 
@@ -69,7 +70,7 @@ And the following filters should work while searching -
        
 4. Case-sensitive 
        
-   *You use this filter to search some strict case phrases. This search functionality is really useful in complex bots with multiple nodes and user says. Especially, while debugging to go back and change/modify something on the bot.*
+   *You use this filter to search some strict case phrases. This search functionality is really useful in complex bots with multiple nodes and user says. Especially, while debugging to go back and modify something on the bot.*
    
 5. Regex
 

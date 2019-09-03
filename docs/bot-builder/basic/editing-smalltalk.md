@@ -31,4 +31,4 @@ As a bot builder, you would be able to disable Smalltalk story as a whole. Or as
 
 ![Smalltalk](/assets/smalltalk.png)
 
-The gives bot builder full power over the Smalltalk story. 
+This gives bot builder full power over the Smalltalk story. 

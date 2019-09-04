@@ -154,7 +154,14 @@ Example:
    "body": {
      "text": "Prateek has entered the Conversation",
      "type": "SYSTEM",
-     "data": {}
+     "data": {
+        "event_name": "chat_pinned",
+        "payload": {
+          "profile_image": "<PROFILE_IMAGE_URL>",
+          "agent_name": "<AGENT_NAME>",
+          "team_name": "<TEAM_NAME>"
+        }
+      }
    }
  }
 }

@@ -236,7 +236,7 @@ for example:
    }
     ```
 
-3. Response with advanced UI elements [for more detail read here](https://haptik-docs.readthedocs.io/en/latest/bot-builder-advanced/message-elements.html)
+4. Response with advanced UI elements [for more detail read here](https://haptik-docs.readthedocs.io/en/latest/bot-builder-advanced/message-elements.html)
 
 ![Bot response with advanced UI elements](/assets/advanced-ui-element.png)
 
@@ -279,6 +279,23 @@ for example:
      ]
    }
    ```
+
+
+5. Response When conversation and permanent user data needs to be updated
+    ```python
+    {
+        "status": True,
+        "response": ["phone number seems invalid", "please try again"],
+        "conversation_data": {
+          "insurance_no": "CDQP12324",
+          "payment_mode": "COD" 
+        },
+        "permanent_user_data": {
+          "phone_number": 8826755986,
+          "date_of_birth": "21/07/1995"
+        },
+    }
+    ```
 
 As per our pipeline, if there is no response at specific stages, then it will be treated as a Botbreak scenario. So if your Bot Says section on Mogambo doesn't have any response or the integration function doesn't return any response, then a Botbreak message will be sent or the chat will be moved to Pending state depending on whether Human assistance is disabled or enabled respectively.
 

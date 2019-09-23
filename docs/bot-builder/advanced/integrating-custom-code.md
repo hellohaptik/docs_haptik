@@ -92,8 +92,14 @@ POST
     "auth_code": "Authentication Code, If AuthInfo Is present else empty string"
   },
   "conversation_no": 1,
-  "conversation_data": {},
-  "permanent_user_data": {},
+  "conversation_data": {
+    "insurance_no": "CDQP12324",
+    "payment_mode": "COD" 
+  },
+  "permanent_user_data": {
+    "phone_number": 8826755986,
+    "date_of_birth": "21/07/1995"
+  },
   "entities": {
     "product_id": [
       {

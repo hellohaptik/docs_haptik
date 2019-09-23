@@ -142,6 +142,7 @@ POST
 
 **6. conversation_data** - Conversation data stores the current context of the conversation.Things like insurance number or product id which are the current scope of the conversation will go under conversation data. This data get stored in redis with expiry time of 3 hours.
 
+
 **7. permanent_user_data** -  Permanent data stores user's data like address, PAN number, Aadhar number which are independent of the current context of the bot conversation permanent user data will be available across bots and businesses as long as the underlying user is the same in the database. 
 
 > Conversation data and permanent user data can be set from the backend as well.
@@ -296,6 +297,8 @@ for example:
         },
     }
     ```
+
+>Please Note, all keys of conversation and permanent user data has 500 character limit. 
 
 As per our pipeline, if there is no response at specific stages, then it will be treated as a Botbreak scenario. So if your Bot Says section on Mogambo doesn't have any response or the integration function doesn't return any response, then a Botbreak message will be sent or the chat will be moved to Pending state depending on whether Human assistance is disabled or enabled respectively.
 

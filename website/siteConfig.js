@@ -22,6 +22,7 @@ const siteConfig = {
     //   page: '#getting-started',
     //   label: 'Getting Started'
     // },
+    {search:true},
     {
       page: '#tools',
       label: 'Tools'
@@ -46,6 +47,12 @@ const siteConfig = {
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.
     theme: 'default'
+  },
+
+  algolia:{
+    apiKey:'224c7079e67e84a978d8b4621f6af16d',
+    indexName:'haptik',
+    algoliaOptions: {}
   },
 
   // Add custom scripts here that would be placed in <script> tags.

@@ -9,7 +9,8 @@
         	"types-of-conversations"
         ],
         "Deploying the Bot": [
-            "bot-deploy-whatsapp"
+            "bot-deploy-whatsapp",
+            "whatsapp-language-settings"
         ],
         "Sending Notifications":[
             "sending-notifications",

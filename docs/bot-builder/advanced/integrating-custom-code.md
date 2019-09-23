@@ -92,6 +92,8 @@ POST
     "auth_code": "Authentication Code, If AuthInfo Is present else empty string"
   },
   "conversation_no": 1,
+  "conversation_data": {},
+  "permanent_user_data": {},
   "entities": {
     "product_id": [
       {
@@ -132,6 +134,12 @@ POST
 
 **5. conversation_no** - Identifier for the current conversation of the user with this Business
 
+**6. conversation_data** - Conversation data stores the current context of the conversation. This can be things like insurance number or product id which is the current scope of the conversation. This data get stored in redis with expiry time of 1 hour.
+
+**7. permanent_user_data** -  Permanent data stores user data like address, PAN number, Aadhar number which are independent of the current context of the bot conversation permanent user data will be available across bots and businesses as long as the underlying user is the same in the database. 
+
+> Conversation data and permanent user data can be set from the backend as well.
+
 **entity output format**
 
 ```json
@@ -165,8 +173,12 @@ The following additional fields can be specified by the Webhook to control behav
         ....
     ],
     "status": True/False,
+    "conversation_data": {}, // Optional
+    "permanent_user_data": {} // Optional
 }
 ```
+
+> conversation_data and permanent_user_data keys are only required if you want to update the conversation and permanent user data from the backend
 
 | Name     | Type    | Description                                                  |
 | -------- | ------- | ------------------------------------------------------------ |

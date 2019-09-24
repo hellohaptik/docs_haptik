@@ -1,5 +1,5 @@
 ---
-title: Sending Notifications
+title: WhatsApp Language Settings
 ---
 
 ## What is supported?

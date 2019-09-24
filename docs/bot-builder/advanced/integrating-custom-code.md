@@ -298,7 +298,7 @@ for example:
     }
     ```
 
->Please Note, all keys of conversation and permanent user data has 500 character limit. 
+>The total size of conversation_data and permanent_user_data cannot be more than 500 characters
 
 As per our pipeline, if there is no response at specific stages, then it will be treated as a Botbreak scenario. So if your Bot Says section on Mogambo doesn't have any response or the integration function doesn't return any response, then a Botbreak message will be sent or the chat will be moved to Pending state depending on whether Human assistance is disabled or enabled respectively.
 

@@ -140,10 +140,14 @@ POST
 
 **5. conversation_no** - Identifier for the current conversation of the user with this Business
 
-**6. conversation_data** - Conversation data stores the current context of the conversation.Things like insurance number or product id which are the current scope of the conversation will go under conversation data. This data get stored in redis with expiry time of 3 hours.
+**6. conversation_data** - Conversation data stores the current context of the conversation.Things like insurance number or product id which are the current scope of the conversation will go under conversation data. 
+
+This data will be stored in redis with expiry time of 3 hours.
 
 
-**7. permanent_user_data** -  Permanent data stores user's data like address, PAN number, Aadhar number which are independent of the current context of the bot conversation permanent user data will be available across bots and businesses as long as the underlying user is the same in the database. 
+**7. permanent_user_data** -  Permanent data stores user's data like address, PAN number, Aadhar number which are independent of the current context of the bot conversation.
+
+Permanent user data will be available across bots and businesses as long as the underlying user is the same in the database. 
 
 > Conversation data and permanent user data can be set from the backend as well.
 

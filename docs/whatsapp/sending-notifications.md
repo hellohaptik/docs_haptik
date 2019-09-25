@@ -66,6 +66,20 @@ curl -X POST \
 
 In the request body, `business_id`, `token` and `client_id` will be provided by Haptik.
 
+If the number does not exist on WhatsApp you will get the below message as response body:
+```
+{
+    "error_message": "unable to verify contact details"
+}
+```
+
+When API call is successful you will get the below but does not mean message was delivered but Notifications API was triggered and WhatsApp sent the message to defined number. Sent vs Delivered messages only stats are available on WhatsApp dashboard.
+```
+{
+    "id": "gBEGkZWCBgc2AgmGMsdscnOKLeyVg"
+}
+```
+
 Details regarding the other fields in the body can be found [here](https://developers.facebook.com/docs/whatsapp/message-templates/sending/). 
 
 Acceptable formats for phone number can be found [here](https://developers.facebook.com/docs/whatsapp/api/contacts#phone).

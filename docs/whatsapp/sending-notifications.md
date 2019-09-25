@@ -73,7 +73,7 @@ If the number does not exist on WhatsApp you will get the below message as respo
 }
 ```
 
-WHen API call is successful you will get the below but does not mean message was delivered but Notifications API was triggered and WhatsApp sent the message to defined number. Sent vs Delivered messages only stats are available on WA dashboard.
+When API call is successful you will get the below but does not mean message was delivered but Notifications API was triggered and WhatsApp sent the message to defined number. Sent vs Delivered messages only stats are available on WhatsApp dashboard.
 ```
 {
     "id": "gBEGkZWCBgc2AgmGMsdscnOKLeyVg"

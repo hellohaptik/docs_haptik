@@ -80,6 +80,9 @@
       "bot-analytics/sample-metrics": {
         "title": "Sample Metrics"
       },
+      "bot-analytics/sessions": {
+        "title": "Sessions"
+      },
       "bot-analytics/story-analysis": {
         "title": "Story Analysis"
       },
@@ -113,6 +116,9 @@
       "bot-builder/basic/bot-says": {
         "title": "Bot Says"
       },
+      "bot-builder/basic/building-voice-bots": {
+        "title": "Building Voice bots"
+      },
       "bot-builder/basic/business": {
         "title": "Business"
       },
@@ -130,6 +136,9 @@
       },
       "bot-builder/basic/design-guidelines": {
         "title": "Designing Chat Experiences"
+      },
+      "bot-builder/basic/editing-smalltalk": {
+        "title": "Editing Smalltalk"
       },
       "bot-builder/basic/entities": {
         "title": "Entities"
@@ -317,20 +326,20 @@
       "Getting Started": "Getting Started",
       "Guides": "Guides",
       "Resources": "Resources",
-      "Contributing": "Contributing",
-      "Advanced": "Advanced",
       "Docusaurus": "Docusaurus",
       "First Category": "First Category",
       "Second Category": "Second Category",
-      "Introduction": "Introduction",
+      "Contributing": "Contributing",
+      "HSL Elements": "HSL Elements",
       "Tools": "Tools",
       "Integrations": "Integrations",
+      "Introduction": "Introduction",
+      "How to Create a Webhook": "How to Create a Webhook",
+      "Independent Integrations": "Independent Integrations",
+      "Advanced": "Advanced",
       "Types of Conversations": "Types of Conversations",
       "Deploying the Bot": "Deploying the Bot",
-      "Sending Notifications": "Sending Notifications",
-      "HSL Elements": "HSL Elements",
-      "How to Create a Webhook": "How to Create a Webhook",
-      "Independent Integrations": "Independent Integrations"
+      "Sending Notifications": "Sending Notifications"
     }
   },
   "pages-strings": {

@@ -96,31 +96,31 @@ Example:
 
 ```json
 {
- "version": "1.0",
- "timestamp": "2018-10-04T12:41:27.980Z",
- "user": {
-   "auth_id": "<AUTH_ID>",
-   "device_platform": "<DEVICE_PLATFORM>",
-   "user_name": "<USER_NAME>"
- },
- "business_id": 343,
- "event_name": "message",
- "agent": {
-   "id": 4415,
-   "name": "gogo",
-   "profile_image": "https://assets.haptikapi.com/content/42e123411bk1109823bf.jpg",
-   "is_automated": true
- },
- "message": {
-   "id": 1982371,
-   "body": {
-     "text": "Hi",
-     "type": "TEXT",
-     "data": {
-       "quick_replies": []
-     }
-   }
- }
+    "version": "1.0",
+    "timestamp": "2018-10-04T12:41:27.980Z",
+    "user": {
+        "auth_id": "<AUTH_ID>",
+        "device_platform": "<DEVICE_PLATFORM>",
+        "user_name": "<USER_NAME>"
+    },
+    "business_id": 343,
+    "event_name": "message",
+    "agent": {
+        "id": 4415,
+        "name": "gogo",
+        "profile_image": "https://assets.haptikapi.com/content/42e123411bk1109823bf.jpg",
+        "is_automated": true
+    },
+    "message": {
+        "id": 1982371,
+        "body": {
+            "text": "Hi",
+            "type": "TEXT",
+            "data": {
+                "quick_replies": []
+            }
+        }
+    }
 }
 ```
 
@@ -134,36 +134,36 @@ Example:
 
 ```json
 {
- "version": "1.0",
- "timestamp": "2018-10-04T12:41:27.980Z",
- "user": {
-   "auth_id": "<AUTH_ID>",
-   "device_platform": "<DEVICE_PLATFORM>",
-   "user_name": "<USER_NAME>"
- },
- "business_id": 343,
- "event_name": "chat_pinned",
- "agent": {
-   "id": 235,
-   "name": "Prateek",
-   "profile_image": "https://assets.haptikapi.com/content/42e123411bk1109823bf.jpg",
-   "is_automated": false
- },
- "message": {
-   "id": 1982314,
-   "body": {
-     "text": "Prateek has entered the Conversation",
-     "type": "SYSTEM",
-     "data": {
-        "event_name": "chat_pinned",
-        "payload": {
-          "profile_image": "<PROFILE_IMAGE_URL>",
-          "agent_name": "<AGENT_NAME>",
-          "team_name": "<TEAM_NAME>"
+    "version": "1.0",
+    "timestamp": "2018-10-04T12:41:27.980Z",
+    "user": {
+        "auth_id": "<AUTH_ID>",
+        "device_platform": "<DEVICE_PLATFORM>",
+        "user_name": "<USER_NAME>"
+    },
+    "business_id": 343,
+    "event_name": "chat_pinned",
+    "agent": {
+        "id": 235,
+        "name": "Prateek",
+        "profile_image": "https://assets.haptikapi.com/content/42e123411bk1109823bf.jpg",
+        "is_automated": false
+    },
+    "message": {
+        "id": 1982314,
+        "body": {
+            "text": "Prateek has entered the Conversation",
+            "type": "SYSTEM",
+            "data": {
+                "event_name": "chat_pinned",
+                "payload": {
+                    "profile_image": "<PROFILE_IMAGE_URL>",
+                    "agent_name": "<AGENT_NAME>",
+                    "team_name": "<TEAM_NAME>"
+                }
+            }
         }
-      }
-   }
- }
+    }
 }
 ```
 
@@ -178,31 +178,31 @@ Example:
 
 ```json
 {
- "version": "1.0",
- "timestamp": "2018-10-04T12:41:27.980Z",
- "user": {
-   "auth_id": "<AUTH_ID>",
-   "device_platform": "<DEVICE_PLATFORM>",
-   "user_name": "<USER_NAME>"
- },
- "business_id": 343,
- "event_name": "chat_complete",
- "agent": {
-   "id": 4415,
-   "name": "gogo",
-   "profile_image": "https://assets.haptikapi.com/content/42e123411bk1109823bf.jpg",
-   "is_automated": true
- },
- "message": {
-   "id": 1982471,
-   "body": {
-     "text": "The conversation has been completed",
-     "type": "SYSTEM",
-     "data": {}
-   }
- }
+    "version": "1.0",
+    "timestamp": "2018-10-04T12:41:27.980Z",
+    "user": {
+        "auth_id": "<AUTH_ID>",
+        "device_platform": "<DEVICE_PLATFORM>",
+        "user_name": "<USER_NAME>"
+    },
+    "business_id": 343,
+    "event_name": "chat_complete",
+    "agent": {
+        "id": 4415,
+        "name": "gogo",
+        "profile_image": "https://assets.haptikapi.com/content/42e123411bk1109823bf.jpg",
+        "is_automated": true
+    },
+    "message": {
+        "id": 1982471,
+        "body": {
+            "text": "The conversation has been completed",
+            "type": "SYSTEM",
+            "data": {}
+        }
+    }
 }
-   ```
+```
 
 ### Webhook Conversation Complete
 
@@ -214,19 +214,30 @@ Example:
 
 ```json
 {
-  "version": "1.0",
-  "timestamp": "2019-07-03T11:42:44.077Z",
-  "business_id": 343,
-  "event_name": "webhook_conversation_complete",
-  "user": {
-    "auth_id": "<AUTH_ID>",
-    "device_platform": "<DEVICE_PLATFORM>",
-    "user_name": "<USER_NAME>"
-   },
-   "data": {
-    "conversation_no": "<CONVERSATION_NO>",
-    "chat_link": "<CHAT_LINK>",
-    "closing_categories": {"reason": "", "subReason": "", "comment": ""}
-   }
+    "version": "1.0",
+    "timestamp": "2019-07-03T11:42:44.077Z",
+    "business_id": 343,
+    "event_name": "webhook_conversation_complete",
+    "user": {
+        "auth_id": "<AUTH_ID>",
+        "device_platform": "<DEVICE_PLATFORM>",
+        "user_name": "<USER_NAME>"
+    },
+    "data": {
+        "conversation_no": "<CONVERSATION_NO>",
+        "closing_categories": {
+            "reason": "",
+            "subReason": "",
+            "comment": ""
+        },
+        "conversation_data": {
+            "insurance_no": "CDQP12324",
+            "payment_mode": "COD"
+        },
+        "permanent_user_data": {
+            "phone_number": 8826755986,
+            "date_of_birth": "21/07/1995"
+        }
+    }
 }
-   ```
+```

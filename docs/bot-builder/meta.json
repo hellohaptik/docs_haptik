@@ -29,8 +29,12 @@
 			"basic/general-responses",
                         "basic/forms"
 		],
+		"Integrations":[
+			"integrations/introduction",
+			"integrations/integrating-apis",
+			"integrations/integrating-custom-code"
+		],
 		"Advanced": [
-			"advanced/integrating-custom-code",
 			"advanced/integrating-webviews-into-sdk",
 			"advanced/integrating-with-external-bot"	
 		]

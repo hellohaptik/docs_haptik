@@ -87,6 +87,14 @@ POST
     "auth_code": "Authentication Code, If AuthInfo Is present else empty string"
   },
   "conversation_no": 1,
+  "conversation_data": {
+    "insurance_no": "CDQP12324",
+    "payment_mode": "COD" 
+  },
+  "permanent_user_data": {
+    "phone_number": 8826755986,
+    "date_of_birth": "21/07/1995"
+  },
   "entities": {
     "product_id": [
       {
@@ -127,6 +135,17 @@ POST
 
 **5. conversation_no** - Identifier for the current conversation of the user with this Business
 
+**6. conversation_data** - Conversation data stores the current context of the conversation.Things like insurance number or product id which are the current scope of the conversation will go under conversation data. 
+
+This data will be stored in redis with expiry time of 3 hours.
+
+
+**7. permanent_user_data** -  Permanent data stores user's data like address, PAN number, Aadhar number which are independent of the current context of the bot conversation.
+
+Permanent user data will be available across bots and businesses as long as the underlying user is the same in the database. 
+
+> Conversation data and permanent user data can be set from the backend as well.
+
 **entity output format**
 
 ```json
@@ -160,8 +179,12 @@ The following additional fields can be specified by the API to control behaviour
         ....
     ],
     "status": True/False,
+    "conversation_data": {}, // Optional
+    "permanent_user_data": {} // Optional
 }
 ```
+
+> conversation_data and permanent_user_data keys are only required if you want to update the conversation and permanent user data from the backend
 
 | Name     | Type    | Description                                                  |
 | -------- | ------- | ------------------------------------------------------------ |
@@ -256,6 +279,25 @@ for example:
      ]
    }
    ```
+
+
+5. Response When conversation and permanent user data needs to be updated
+    ```python
+    {
+        "status": True,
+        "response": ["phone number seems invalid", "please try again"],
+        "conversation_data": {
+          "insurance_no": "CDQP12324",
+          "payment_mode": "COD" 
+        },
+        "permanent_user_data": {
+          "phone_number": 8826755986,
+          "date_of_birth": "21/07/1995"
+        },
+    }
+    ```
+
+>The total size of conversation_data and permanent_user_data cannot be more than 500 characters
 
 As per our pipeline, if there is no response at specific stages, then it will be treated as a Botbreak scenario. So if your Bot Says section on Mogambo doesn't have any response or the integration function doesn't return any response, then a Botbreak message will be sent or the chat will be moved to Pending state depending on whether Human assistance is disabled or enabled respectively.
 

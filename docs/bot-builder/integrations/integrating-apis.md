@@ -91,7 +91,7 @@ POST
     "insurance_no": "CDQP12324",
     "payment_mode": "COD" 
   },
-  "permanent_user_data": {
+  "user_details": {
     "phone_number": 8826755986,
     "date_of_birth": "21/07/1995"
   },
@@ -140,11 +140,11 @@ POST
 This data will be stored in redis with expiry time of 3 hours.
 
 
-**7. permanent_user_data** -  Permanent data stores user's data like address, PAN number, Aadhar number which are independent of the current context of the bot conversation.
+**7. user_details** -  User details stores user's data like address, PAN number, Aadhar number which are independent of the current context of the bot conversation.
 
-Permanent user data will be available across bots and businesses as long as the underlying user is the same in the database. 
+Data inside user details will be available across bots and businesses as long as the underlying user is the same in the database. 
 
-> Conversation data and permanent user data can be set from the backend as well.
+> Conversation data and User details can be set from the backend as well.
 
 **entity output format**
 
@@ -180,11 +180,11 @@ The following additional fields can be specified by the API to control behaviour
     ],
     "status": True/False,
     "conversation_data": {}, // Optional
-    "permanent_user_data": {} // Optional
+    "user_details": {} // Optional
 }
 ```
 
-> conversation_data and permanent_user_data keys are only required if you want to update the conversation and permanent user data from the backend
+> conversation_data and user_details keys are only required if you want to update the conversation and user details from the backend
 
 | Name     | Type    | Description                                                  |
 | -------- | ------- | ------------------------------------------------------------ |
@@ -281,7 +281,7 @@ for example:
    ```
 
 
-5. Response When conversation and permanent user data needs to be updated
+5. Response When conversation and User details needs to be updated
     ```python
     {
         "status": True,
@@ -290,14 +290,14 @@ for example:
           "insurance_no": "CDQP12324",
           "payment_mode": "COD" 
         },
-        "permanent_user_data": {
+        "user_details": {
           "phone_number": 8826755986,
           "date_of_birth": "21/07/1995"
         },
     }
     ```
 
->The total size of conversation_data and permanent_user_data cannot be more than 500 characters
+>The total size of conversation_data and user_details cannot be more than 500 characters
 
 As per our pipeline, if there is no response at specific stages, then it will be treated as a Botbreak scenario. So if your Bot Says section on Mogambo doesn't have any response or the integration function doesn't return any response, then a Botbreak message will be sent or the chat will be moved to Pending state depending on whether Human assistance is disabled or enabled respectively.
 

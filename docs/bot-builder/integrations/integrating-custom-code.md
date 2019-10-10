@@ -44,7 +44,11 @@ def main(event, context):
     entities = body['entities']
     user_data = body['user']
     final_response = {'status': True, 'response': write_here()}
-    response = {'statusCode': 200, 'body': json.dumps(final_response), 'headers': {'Content-Type': 'application/json'}}
+    response = {
+                'statusCode': 200, 
+                'body': json.dumps(final_response), 
+                'headers': {'Content-Type': 'application/json'}
+               }
     return response
 
 def write_here(*args):

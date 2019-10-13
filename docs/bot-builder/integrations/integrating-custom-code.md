@@ -111,8 +111,8 @@ unicodecsv-0.14.1
 urllib3-1.25.3
 
 
-### Using Custom Variables
-You can use custom variables to maintain and change bot state through the `event` dictionary passed to the `main` function. The body of the `event` dictionary contains two dictionaries called `user_details` and `conversation_data`.
+### Using Context Variables
+You can use context variables to maintain and change bot state through the `event` dictionary passed to the `main` function. The body of the `event` dictionary contains two dictionaries called `user_details` and `conversation_data`.
 
 You can extract these into local variables in your `main` function as shown below
 

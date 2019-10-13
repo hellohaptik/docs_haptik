@@ -43,12 +43,10 @@ def main(event, context):
     body = json.loads(event['body'])
     entities = body['entities']
     user_data = body['user']
-    final_response = {'status': True, 'response': write_here()}
-    response = {
-                'statusCode': 200, 
-                'body': json.dumps(final_response), 
-                'headers': {'Content-Type': 'application/json'}
-               }
+    user_details = body['user_details']
+    conversation_data = body['conversation_data']
+    final_response = {'status': True, 'response': write_here(), 'user_details':user_details, 'conversation_data':conversation_data}
+    response = {'statusCode': 200, 'body': json.dumps(final_response), 'headers': {'Content-Type': 'application/json'}}
     return response
 
 def write_here(*args):
@@ -111,6 +109,43 @@ rsa-4.0
 six-1.12.0 
 unicodecsv-0.14.1 
 urllib3-1.25.3
+
+
+### Using Custom Variables
+You can use custom variables to maintain and change bot state through the `event` dictionary passed to the `main` function. The body of the `event` dictionary contains two dictionaries called `user_details` and `conversation_data`.
+
+You can extract these into local variables in your `main` function as shown below
+
+```python
+user_details = body['user_details']
+conversation_data = body['conversation_data']
+```
+
+You can then alter these dictionaries by editing, adding or deleting key/value pairs based on your functional requirements. This can be done as shown below
+
+```python
+user_details['language_code'] = 'mr'
+conversation_data['policy_id'] = 12345
+```
+
+Finally, to save these changes and persist them to the corresponding bot states, you to need add them to the returned JSON from the main function.
+
+This can be done as shown below
+
+```python
+final_response = {
+                    'status': True, 
+                    'response': write_here(), 
+                    'user_details':user_details, 
+                    'conversation_data':conversation_data
+                  }
+response = {
+                'statusCode': 200, 
+                'body': json.dumps(final_response), 
+                'headers': {'Content-Type': 'application/json'}
+            }
+return response
+```
 
 ### Live Testing your Code
 The full screen code editor allows you to live test your code with a configurable input. This will help you evaluate if your code is working as expected.

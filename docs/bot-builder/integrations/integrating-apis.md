@@ -117,6 +117,10 @@ POST
         "entity_value": "headphones"
       }
     ]
+  },
+  "env_variables": {
+    "CREATE_LEAD_API": "https://abc.com/create-lead",
+    "CRM_INTEGRATION_API": "https://abc.com/crm-integration-api"
   }
 }
 ```
@@ -145,6 +149,9 @@ This data will be stored in redis with expiry time of 3 hours.
 Permanent user data will be available across bots and businesses as long as the underlying user is the same in the database. 
 
 > Conversation data and permanent user data can be set from the backend as well.
+
+**8. env_variables** - env_variables key returns environment variable values of current environment. ENV variables can be added/edited by developer from code executor UI.
+
 
 **entity output format**
 

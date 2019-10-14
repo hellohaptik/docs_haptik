@@ -44,8 +44,8 @@ def main(event, context):
     entities = body['entities']
     user_data = body['user']
     user_details = body['user_details']
-    conversation_data = body['conversation_data']
-    final_response = {'status': True, 'response': write_here(), 'user_details':user_details, 'conversation_data':conversation_data}
+    conversation_detials = body['conversation_details']
+    final_response = {'status': True, 'response': write_here(), 'user_details':user_details, 'conversation_details':conversation_details}
     response = {'statusCode': 200, 'body': json.dumps(final_response), 'headers': {'Content-Type': 'application/json'}}
     return response
 
@@ -112,20 +112,20 @@ urllib3-1.25.3
 
 
 ### Using Context Variables
-You can use context variables to maintain and change bot state through the `event` dictionary passed to the `main` function. The body of the `event` dictionary contains two dictionaries called `user_details` and `conversation_data`.
+You can use context variables to maintain and change bot state through the `event` dictionary passed to the `main` function. The body of the `event` dictionary contains two dictionaries called `user_details` and `conversation_details`.
 
 You can extract these into local variables in your `main` function as shown below
 
 ```python
 user_details = body['user_details']
-conversation_data = body['conversation_data']
+conversation_details = body['conversation_details']
 ```
 
 You can then alter these dictionaries by editing, adding or deleting key/value pairs based on your functional requirements. This can be done as shown below
 
 ```python
 user_details['language_code'] = 'mr'
-conversation_data['policy_id'] = 12345
+conversation_details['policy_id'] = 12345
 ```
 
 Finally, to save these changes and persist them to the corresponding bot states, you to need add them to the returned JSON from the main function.
@@ -137,7 +137,7 @@ final_response = {
                     'status': True, 
                     'response': write_here(), 
                     'user_details':user_details, 
-                    'conversation_data':conversation_data
+                    'conversation_details':conversation_details
                   }
 response = {
                 'statusCode': 200, 

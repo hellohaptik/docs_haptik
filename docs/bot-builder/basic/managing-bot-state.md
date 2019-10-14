@@ -11,7 +11,7 @@ The Bot Builder Platform allows you to set and access data for both of these sco
 Based on the scope of the bucket your data will be available within all nodes of the bot. The two scopes that are currently supported are:
 
 * **User Details** for user level data.
-* **Conversation Data** for conversation level data.
+* **Conversation Details** for conversation level data.
   
 ![Data Scopes](assets/bot-builder-manage-state/scope.png)
 
@@ -22,7 +22,7 @@ Data stored in this context variable will be saved at a user level and will be a
 
 This context variable should be used for storing permanent details about the user that are not specific to a given conversation like their email, phone number or other such details.
 
-### Conversation Data
+### Conversation Details
 
 Data stored in this context variable will be saved at a conversation level for a given user. This means that the data will only be available till the conversation is active and is not marked as complete. Once the conversation is marked as complete, any data stored in this scope for the given user will be lost.
 

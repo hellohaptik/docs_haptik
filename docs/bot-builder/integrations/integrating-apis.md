@@ -87,7 +87,7 @@ POST
     "auth_code": "Authentication Code, If AuthInfo Is present else empty string"
   },
   "conversation_no": 1,
-  "conversation_data": {
+  "conversation_details": {
     "insurance_no": "CDQP12324",
     "payment_mode": "COD" 
   },
@@ -135,7 +135,7 @@ POST
 
 **5. conversation_no** - Identifier for the current conversation of the user with this Business
 
-**6. conversation_data** - Conversation data stores the current context of the conversation.Things like insurance number or product id which are the current scope of the conversation will go under conversation data. 
+**6. conversation_details** - Conversation details stores the current context of the conversation.Things like insurance number or product id which are the current scope of the conversation will go under conversation details. 
 
 This data will be stored in redis with expiry time of 3 hours.
 
@@ -144,7 +144,7 @@ This data will be stored in redis with expiry time of 3 hours.
 
 Data inside user details will be available across bots and businesses as long as the underlying user is the same in the database. 
 
-> Conversation data and User details can be set from the backend as well.
+> Conversation details and User details can be set from the backend as well.
 
 **entity output format**
 
@@ -179,12 +179,12 @@ The following additional fields can be specified by the API to control behaviour
         ....
     ],
     "status": True/False,
-    "conversation_data": {}, // Optional
+    "conversation_details": {}, // Optional
     "user_details": {} // Optional
 }
 ```
 
-> conversation_data and user_details keys are only required if you want to update the conversation and user details from the backend
+> conversation_details and user_details keys are only required if you want to update the conversation and user details from the backend
 
 | Name     | Type    | Description                                                  |
 | -------- | ------- | ------------------------------------------------------------ |
@@ -286,7 +286,7 @@ for example:
     {
         "status": True,
         "response": ["phone number seems invalid", "please try again"],
-        "conversation_data": {
+        "conversation_details": {
           "insurance_no": "CDQP12324",
           "payment_mode": "COD" 
         },
@@ -297,7 +297,7 @@ for example:
     }
     ```
 
->The total size of conversation_data and user_details cannot be more than 500 characters
+>The total size of conversation_details and user_details cannot be more than 500 characters
 
 As per our pipeline, if there is no response at specific stages, then it will be treated as a Botbreak scenario. So if your Bot Says section on Mogambo doesn't have any response or the integration function doesn't return any response, then a Botbreak message will be sent or the chat will be moved to Pending state depending on whether Human assistance is disabled or enabled respectively.
 

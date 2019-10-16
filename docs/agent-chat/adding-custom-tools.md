@@ -64,7 +64,7 @@ Athena SDK gives you access to specific data of the User and Chat inside your Cu
 To be able to use the SDK, simply add the below JS file in the HTML and you will be able to access the below specified functions using `window.AthenaSDK`.
 
 ```
-<script src="https://toolassets.haptikapi.com/athena/js/athena-sdk.js"></script>
+<script src="https://toolassets.haptikapi.com/athena2/prod/athena-sdk.v1.js"></script>
 ```
 
 ## getConversationData(callbackFn)

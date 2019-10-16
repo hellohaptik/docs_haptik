@@ -61,38 +61,31 @@ Header set X-Frame-Options "allow-from https://staging.hellohaptik.com"
 
 Athena SDK gives you access to specific data of the User and Chat inside your Custom Tool.
 
-To be able to use the SDK, simply add the below JS file in the HTML and you will be able to access the below specified functions using `window.AthenaSDK`.
-
-```
+Import the SDK via script tag
+```html
 <script src="https://toolassets.haptikapi.com/athena2/prod/athena-sdk.v1.js"></script>
 ```
 
-## getConversationData(callbackFn)
-This function will fetch the Conversation Data associated with the current Chat and return the data.
-
-Args:
-- **callbackFn** (function) will receive an object of the following format:
-```json
-{
-    "success": true,
-    "response": {
-        "key 1": "value 1",
-        "key 2": "value 2"
-    },
-    "error": "",
-    "meta": {}
-}
+then use this like
+```javascript
+const SDK = window.AthenaSDK;
 ```
-
-If there are any errors, the `success` flag will be `false` and the corresponding `error` message will be set.
-
 ## setConversationData(data, callbackFn)
 This function will update the Conversation Data associated with the current Chat.
 
 Args:
 - **data** (object): The data that is to be set as Conversation Data for the User
-- **callbackFn** (function): will receive an object of the following format:
-Response:
+- **callbackFn** (function): will receive a response object
+
+Usage:
+```javascript
+const payload = { "product" : "software" }
+
+SDK.setConversationData(payload, (response) => {
+    // do something with data
+});
+```
+Response format:
 ```json
 {
     "success": true,
@@ -104,17 +97,24 @@ Response:
 
 If there are any errors, the `success` flag will be `false` and the corresponding `error` message will be set.
 
-## getUserDetails(callbackFn)
-This function will fetch the User Details of the current User.
+## getConversationData(callbackFn)
+This function will fetch the Conversation Data associated with the current Chat and return the data.
 
 Args:
-- **callbackFn** (function): will receive an object of the following format:
+- **callbackFn** (function) will receive a response object
+
+Usage:
+```javascript
+SDK.getConversationData((response)=>{
+    // do some thing with response
+})
+```
+Response format :-
 ```json
 {
     "success": true,
     "response": {
-        "key 1": "value 1",
-        "key 2": "value 2"
+        "product" : "software"
     },
     "error": "",
     "meta": {}
@@ -122,15 +122,24 @@ Args:
 ```
 
 If there are any errors, the `success` flag will be `false` and the corresponding `error` message will be set.
-
 
 ## setUserDetails(data, callbackFn)
 This function will update the User Details data associated with the current User.
 
 Args:
 - **data** (object): The data to be updated in User Details for the User
-- **callbackFn** (function): will receive an object of the following format:
-Response:
+- **callbackFn** (function): will receive a response object
+
+Usage:
+```javascript
+const payload = { "email" : "john@gmail.com" }
+
+SDK.setUserDetails(payload, (response) => {
+    // do something with data
+});
+```
+
+Response format:
 ```json
 {
     "success": true,
@@ -139,6 +148,32 @@ Response:
     "meta": {}
 }
 ```
+
+## getUserDetails(callbackFn)
+This function will fetch the User Details of the current User.
+
+Args:
+- **callbackFn** (function): will receive a response object
+
+Usage:
+```javascript
+SDK.getUserDetails((response)=>{
+    // do some thing with response
+})
+```
+Response format:
+```json
+{
+    "success": true,
+    "response": {
+        "email" : "john@gmail.com"
+    },
+    "error": "",
+    "meta": {}
+}
+```
+
+If there are any errors, the `success` flag will be `false` and the corresponding `error` message will be set.
 
 ## Sample Integrations
 

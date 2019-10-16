@@ -18,7 +18,7 @@ You can analyze these details from the `Node Traffic` section of the Analytics T
 ## Concierge Chatbots
 The next category we will look at is `Concierge Chatbots`. These are chatbots where you are trying to provide specific services like flight booking, restaurant reservation etc.
 
-In such bots the important metrics to look at are: 
+In such bots the important metrics to look at are:
 1) How many tasks are getting started?
 2) How many of the started tasks are getting completed?
 3) What is the general user review and feedback for these tasks?
@@ -43,7 +43,7 @@ You can learn more about the `Task Performance` section [here](https://docs.hapt
 ## Support
 The third type of bots we will look at are `Support Chatbots`. In these bots you are trying to help your users with any issues they are facing with your service.
 
-The important things to look for here are 
+The important things to look for here are
 1) Are the users satisfied with the support provided?
 2) What are the common support requests you get? (You can use this to improve your core service itself)
 
@@ -60,4 +60,4 @@ The final category of chatbots we will be looking at is `Feedback Bots`. These b
 
 They are similar to `Lead Generation Chatbots` because you still expect the users to go through a series of steps. So even in this case the important metric to look for is funnel completion rate.
 
-You can get this data from the `Node Traffic` page and you can learn more about it from [here](https://docs.haptik.ai/bot-analytics/user-journey).
+You can get this data from the `Node Traffic` page and you can learn more about it from [here](https://docs.haptik.ai/bot-analytics/node-traffic).

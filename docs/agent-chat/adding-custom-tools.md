@@ -2,9 +2,9 @@
 title: Adding your own custom tool
 ---
 
-## Adding Custom Tools
+# Adding Custom Tools
 
-#### Steps
+## Steps
 
 - Go to: [https://staging.hellohaptik.com/home/](https://staging.hellohaptik.com/home/)
 - Enter your login credentials
@@ -20,16 +20,16 @@ title: Adding your own custom tool
 
 ![external_tool_screen](assets/external_tool_screen.png)
 
-    Ex: We added an external url (https://material.io/design/) which should appear 
+    Ex: We added an external url (https://material.io/design/) which should appear
     for Flight Hindi Voice Business as "Test External Link".
 
 - Now, click "*Add External Tool*", to land on the screen below. Here, you enter the following details:
-        1. Business: Select your unique business name. (will be available in dropdown) 
-        2. Partner: Select your unique partner name. (will be available in dropdown) 
-        3. Task: Can be ignored, and left blank 
-        4. Tool Name: Can be any string (this is what will apear to the agents) 
-        5. URL: An external link to your tool 
-        6. Tick: "Link" or "Tool" 
+        1. Business: Select your unique business name. (will be available in dropdown)
+        2. Partner: Select your unique partner name. (will be available in dropdown)
+        3. Task: Can be ignored, and left blank
+        4. Tool Name: Can be any string (this is what will apear to the agents)
+        5. URL: An external link to your tool
+        6. Tick: "Link" or "Tool"
         7. Hit Submit
 
 ![add_external_tool](assets/add_external_tool.png)
@@ -42,12 +42,12 @@ title: Adding your own custom tool
 
 ![agent_view_tool_url](assets/agent_view_tool_url.png)
 
-#### Important Design Note
+## Important Design Note
 
 - The RHS section, where the tool loads is restricted to exactly 26% of the page ~ 360px in width in most cases.
 - Please make sure that the tool is responsive to all required screen resolutions
 
-#### Important Tech Note
+## Important Tech Note
 
 - An external tool appears for a business, if a user wishes to use the same tool across multiple businesses, they can do so by adding a the same entry for the other businesses.
 
@@ -56,3 +56,125 @@ title: Adding your own custom tool
 ```json
 Header set X-Frame-Options "allow-from https://staging.hellohaptik.com"
 ```
+
+# Using Athena SDK
+
+Athena SDK gives you access to specific data of the User and Chat inside your Custom Tool.
+
+Import the SDK via script tag
+```html
+<script src="https://toolassets.haptikapi.com/athena2/prod/athena-sdk.v1.js"></script>
+```
+
+then use this like
+```javascript
+const SDK = window.AthenaSDK;
+```
+## setConversationData(data, callbackFn)
+This function will update the Conversation Data associated with the current Chat.
+
+Args:
+- **data** (object): The data that is to be set as Conversation Data for the User
+- **callbackFn** (function): will receive a response object
+
+Usage:
+```javascript
+const payload = { "product" : "software" }
+
+SDK.setConversationData(payload, (response) => {
+    // do something with data
+});
+```
+Response format:
+```json
+{
+    "success": true,
+    "response": true,
+    "error": "",
+    "meta": {}
+}
+```
+
+If there are any errors, the `success` flag will be `false` and the corresponding `error` message will be set.
+
+## getConversationData(callbackFn)
+This function will fetch the Conversation Data associated with the current Chat and return the data.
+
+Args:
+- **callbackFn** (function) will receive a response object
+
+Usage:
+```javascript
+SDK.getConversationData((response)=>{
+    // do some thing with response
+})
+```
+Response format :-
+```json
+{
+    "success": true,
+    "response": {
+        "product" : "software"
+    },
+    "error": "",
+    "meta": {}
+}
+```
+
+If there are any errors, the `success` flag will be `false` and the corresponding `error` message will be set.
+
+## setUserDetails(data, callbackFn)
+This function will update the User Details data associated with the current User.
+
+Args:
+- **data** (object): The data to be updated in User Details for the User
+- **callbackFn** (function): will receive a response object
+
+Usage:
+```javascript
+const payload = { "email" : "john@gmail.com" }
+
+SDK.setUserDetails(payload, (response) => {
+    // do something with data
+});
+```
+
+Response format:
+```json
+{
+    "success": true,
+    "response": true,
+    "error": "",
+    "meta": {}
+}
+```
+
+## getUserDetails(callbackFn)
+This function will fetch the User Details of the current User.
+
+Args:
+- **callbackFn** (function): will receive a response object
+
+Usage:
+```javascript
+SDK.getUserDetails((response)=>{
+    // do some thing with response
+})
+```
+Response format:
+```json
+{
+    "success": true,
+    "response": {
+        "email" : "john@gmail.com"
+    },
+    "error": "",
+    "meta": {}
+}
+```
+
+If there are any errors, the `success` flag will be `false` and the corresponding `error` message will be set.
+
+## Sample Integrations
+
+You can refer to [this sample](https://toolassets.haptikapi.com/integrations/sample/index.html) integration tool as a reference point.

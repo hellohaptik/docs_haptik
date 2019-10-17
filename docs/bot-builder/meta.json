@@ -32,8 +32,10 @@
 		],
 		"Integrations":[
 			"integrations/introduction",
+			"integrations/integration-parameters",
 			"integrations/integrating-apis",
-			"integrations/integrating-custom-code"
+			"integrations/integrating-custom-code",
+			"integrations/additional-apis"
 		],
 		"Advanced": [
 			"advanced/integrating-webviews-into-sdk",

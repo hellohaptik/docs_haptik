@@ -111,42 +111,6 @@ unicodecsv-0.14.1
 urllib3-1.25.3
 
 
-### Using Context Variables
-You can use context variables to maintain and change bot state through the `event` dictionary passed to the `main` function. The body of the `event` dictionary contains two dictionaries called `user_details` and `conversation_details`.
-
-You can extract these into local variables in your `main` function as shown below
-
-```python
-user_details = body['user_details']
-conversation_details = body['conversation_details']
-```
-
-You can then alter these dictionaries by editing, adding or deleting key/value pairs based on your functional requirements. This can be done as shown below
-
-```python
-user_details['language_code'] = 'mr'
-conversation_details['policy_id'] = 12345
-```
-
-Finally, to save these changes and persist them to the corresponding bot states, you to need add them to the returned JSON from the main function.
-
-This can be done as shown below
-
-```python
-final_response = {
-                    'status': True, 
-                    'response': write_here(), 
-                    'user_details':user_details, 
-                    'conversation_details':conversation_details
-                  }
-response = {
-                'statusCode': 200, 
-                'body': json.dumps(final_response), 
-                'headers': {'Content-Type': 'application/json'}
-            }
-return response
-```
-
 ### Live Testing your Code
 The full screen code editor allows you to live test your code with a configurable input. This will help you evaluate if your code is working as expected.
 

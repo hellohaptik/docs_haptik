@@ -44,7 +44,7 @@ def main(event, context):
     entities = body['entities']
     user_data = body['user']
     user_details = body['user_details']
-    conversation_detials = body['conversation_details']
+    conversation_details = body['conversation_details']
     final_response = {'status': True, 'response': write_here(), 'user_details':user_details, 'conversation_details':conversation_details}
     response = {'statusCode': 200, 'body': json.dumps(final_response), 'headers': {'Content-Type': 'application/json'}}
     return response

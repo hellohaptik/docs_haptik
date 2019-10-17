@@ -101,7 +101,10 @@ Example:
     "user": {
         "auth_id": "<AUTH_ID>",
         "device_platform": "<DEVICE_PLATFORM>",
-        "user_name": "<USER_NAME>"
+        "user_name": "<USER_NAME>",
+        "phone_model": "<PHONE_MODEL>",
+        "os_version": "<OS_VERSION>",
+        "package_name": "<PACKAGE_NAME>",
     },
     "business_id": 343,
     "event_name": "message",
@@ -139,7 +142,10 @@ Example:
     "user": {
         "auth_id": "<AUTH_ID>",
         "device_platform": "<DEVICE_PLATFORM>",
-        "user_name": "<USER_NAME>"
+        "user_name": "<USER_NAME>",
+        "phone_model": "<PHONE_MODEL>",
+        "os_version": "<OS_VERSION>",
+        "package_name": "<PACKAGE_NAME>",
     },
     "business_id": 343,
     "event_name": "chat_pinned",
@@ -183,7 +189,10 @@ Example:
     "user": {
         "auth_id": "<AUTH_ID>",
         "device_platform": "<DEVICE_PLATFORM>",
-        "user_name": "<USER_NAME>"
+        "user_name": "<USER_NAME>",
+        "phone_model": "<PHONE_MODEL>",
+        "os_version": "<OS_VERSION>",
+        "package_name": "<PACKAGE_NAME>",
     },
     "business_id": 343,
     "event_name": "chat_complete",
@@ -221,7 +230,10 @@ Example:
     "user": {
         "auth_id": "<AUTH_ID>",
         "device_platform": "<DEVICE_PLATFORM>",
-        "user_name": "<USER_NAME>"
+        "user_name": "<USER_NAME>",
+        "phone_model": "<PHONE_MODEL>",
+        "os_version": "<OS_VERSION>",
+        "package_name": "<PACKAGE_NAME>",
     },
     "data": {
         "conversation_no": "<CONVERSATION_NO>",

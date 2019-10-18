@@ -63,7 +63,7 @@ Athena SDK gives you access to specific data of the User and Chat inside your Cu
 
 Import the SDK via script tag
 ```html
-<script src="https://toolassets.haptikapi.com/athena2/prod/athena-sdk.v1.js"></script>
+<script src="https://toolassets.haptikapi.com/athena2/prod/athena-sdk.v2.js"></script>
 ```
 
 then use this like
@@ -175,6 +175,7 @@ Response format:
 
 ## getChatDisposition(callbackFn)
 This function will fetch chat disposition data for the current business
+Note: This is available in v2 of athena SDK
 
 Args:
 - **callbackFn** (function): will receive a response object

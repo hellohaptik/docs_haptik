@@ -43,7 +43,9 @@ def main(event, context):
     body = json.loads(event['body'])
     entities = body['entities']
     user_data = body['user']
-    final_response = {'status': True, 'response': write_here()}
+    user_details = body['user_details']
+    conversation_details = body['conversation_details']
+    final_response = {'status': True, 'response': write_here(), 'user_details':user_details, 'conversation_details':conversation_details}
     response = {'statusCode': 200, 'body': json.dumps(final_response), 'headers': {'Content-Type': 'application/json'}}
     return response
 
@@ -107,6 +109,7 @@ rsa-4.0
 six-1.12.0 
 unicodecsv-0.14.1 
 urllib3-1.25.3
+
 
 ### Live Testing your Code
 The full screen code editor allows you to live test your code with a configurable input. This will help you evaluate if your code is working as expected.

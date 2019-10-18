@@ -10,7 +10,8 @@
 			"basic/testing-bot",
 			"basic/multiple-languages",
 			"basic/building-voice-bots",
-			"basic/platforms-deployment"
+			"basic/platforms-deployment",
+			"basic/managing-bot-state"
 		],
 		"Resources": [
 			"basic/bot-hierarchy",
@@ -31,8 +32,10 @@
 		],
 		"Integrations":[
 			"integrations/introduction",
+			"integrations/integration-parameters",
 			"integrations/integrating-apis",
-			"integrations/integrating-custom-code"
+			"integrations/integrating-custom-code",
+			"integrations/additional-apis"
 		],
 		"Advanced": [
 			"advanced/integrating-webviews-into-sdk",

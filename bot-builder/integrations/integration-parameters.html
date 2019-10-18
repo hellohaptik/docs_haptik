@@ -1,0 +1,298 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Integration Parameters · Haptik Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="### Introduction"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Integration Parameters · Haptik Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.haptik.ai/"/><meta property="og:description" content="### Introduction"/><meta property="og:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.haptik.ai/img/image_0.png"/><link rel="shortcut icon" href="/img/image_0.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-106563119-6', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="/js/index.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/image_0.png" alt="Haptik Docs"/><h2 class="headerTitleWithLogo">Haptik Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="/#tools" target="_self">Tools</a></li><li class=""><a href="/#integrations" target="_self">Integrations</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Integrations</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/basic/introduction">Introduction</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/for-bot-builders">For Bot Builders</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Guides</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/basic/making-first-bot">Making Your First Bot</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/design-guidelines">Designing Chat Experiences</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/testing-bot">Testing your bot</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/multiple-languages">Multiple Languages</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/building-voice-bots">Building Voice bots</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/platforms-deployment">Platforms Deployment</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/managing-bot-state">Managing Bot State</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Resources</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/basic/bot-hierarchy">Bot Hierarchy</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/business">Business</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/creating-story">Creating a Story</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/editing-smalltalk">Editing Smalltalk</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/story-templates">Story Templates</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/creating-nodes">Creating Nodes</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/connections">Connections</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/general-nodes">General Nodes</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/user-says">User Says</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/bot-says">Bot Says</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/chat-elements">Chat Elements</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/entities">Entities</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/bot-prompt-trigger">Bot Prompt Trigger</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/general-responses">General Responses</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/forms">Forms</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Integrations</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/integrations/introduction">Introduction</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/bot-builder/integrations/integration-parameters">Integration Parameters</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/integrations/integrating-apis">Integrating APIs</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/integrations/integrating-custom-code">Integrating Custom Code</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/integrations/additional-apis">Additional APIs</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Advanced</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/advanced/integrating-webviews-into-sdk">Integrating Webviews</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/advanced/integrating-with-external-bot">Integrating with External Bot</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Integration Parameters</h1></header><article><div><span><h3><a class="anchor" aria-hidden="true" id="introduction"></a><a href="#introduction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introduction</h3>
+<p>In this section we will take a look at the request and response parameters that are passed to the integration functions.</p>
+<p>These parameters are passed as request data to the API integrations and are passed as function parameters to the main function in custom code integration.</p>
+<h3><a class="anchor" aria-hidden="true" id="request-parameters"></a><a href="#request-parameters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Request Parameters</h3>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"node"</span>: <span class="hljs-string">"system name of the node"</span>,
+  <span class="hljs-attr">"event"</span>: <span class="hljs-string">"API_INTEGRATION"</span>,
+  <span class="hljs-attr">"user"</span>: {
+    <span class="hljs-attr">"user_id"</span>: <span class="hljs-string">"User ID"</span>,
+    <span class="hljs-attr">"user_name"</span>: <span class="hljs-string">"haptik username"</span>,
+    <span class="hljs-attr">"full_name"</span>: <span class="hljs-string">""</span>,
+    <span class="hljs-attr">"device_platform"</span>: <span class="hljs-number">5</span>,
+    <span class="hljs-attr">"language_code"</span>: <span class="hljs-string">"User's current language"</span>,
+    <span class="hljs-attr">"auth_id"</span>: <span class="hljs-string">"Authentication ID, If AuthInfo Is present else empty string"</span>,
+    <span class="hljs-attr">"auth_code"</span>: <span class="hljs-string">"Authentication Code, If AuthInfo Is present else empty string"</span>
+  },
+  <span class="hljs-attr">"conversation_no"</span>: <span class="hljs-number">1</span>,
+  <span class="hljs-attr">"conversation_details"</span>: {
+    <span class="hljs-attr">"insurance_no"</span>: <span class="hljs-string">"CDQP12324"</span>,
+    <span class="hljs-attr">"payment_mode"</span>: <span class="hljs-string">"COD"</span> 
+  },
+  <span class="hljs-attr">"user_details"</span>: {
+    <span class="hljs-attr">"phone_number"</span>: <span class="hljs-number">8826755986</span>,
+    <span class="hljs-attr">"date_of_birth"</span>: <span class="hljs-string">"21/07/1995"</span>
+  },
+  <span class="hljs-attr">"entities"</span>: {
+    <span class="hljs-attr">"product_id"</span>: [
+      {
+        <span class="hljs-attr">"detection"</span>: <span class="hljs-string">"message"</span>,
+        <span class="hljs-attr">"original_text"</span>: <span class="hljs-string">"71"</span>,
+        <span class="hljs-attr">"entity_value"</span>: <span class="hljs-string">"71"</span>
+      }
+    ],
+    <span class="hljs-attr">"email"</span>: [
+      {
+        <span class="hljs-attr">"detection"</span>: <span class="hljs-string">"user_profile"</span>,
+        <span class="hljs-attr">"original_text"</span>: <span class="hljs-string">"test@test.com"</span>,
+        <span class="hljs-attr">"entity_value"</span>: <span class="hljs-string">"test@test.com"</span>
+      }
+    ],
+    <span class="hljs-attr">"product_name"</span>: [
+      {
+        <span class="hljs-attr">"detection"</span>: <span class="hljs-string">"default"</span>,
+        <span class="hljs-attr">"original_text"</span>: <span class="hljs-string">"headphones"</span>,
+        <span class="hljs-attr">"entity_value"</span>: <span class="hljs-string">"headphones"</span>
+      }
+    ]
+  },
+  <span class="hljs-attr">"env_variables"</span>: {
+    <span class="hljs-attr">"CREATE_LEAD_API"</span>: <span class="hljs-string">"https://abc.com/create-lead"</span>,
+    <span class="hljs-attr">"CRM_INTEGRATION_API"</span>: <span class="hljs-string">"https://abc.com/crm-integration-api"</span>
+  }
+}
+</code></pre>
+<p><strong>1. node</strong> - Unique system name of the calling node</p>
+<blockquote>
+<p><strong>Nodes</strong> are the interlinked building blocks of a bot. Each node acts like a gatekeeper who detects user inputs, sends out appropriate responses, and directs users to the next node. They are the points where conversation converges or diverges basis the information users input to the bot. Nodes are comprised of several important sub-components, which house important pieces of information. <a href="https://docs.haptik.ai/bot-builder/basic/creating-nodes#what-is-a-node">Read More</a></p>
+</blockquote>
+<p><strong>2. entities</strong> - The entities dictionary will have a key for each entity that is detected e.g. movie_name, venue, phone_number, etc. The value for each entity is a list of dictionary as shown below.</p>
+<blockquote>
+<p><strong>Entities</strong>: An entity represents the set of values from which a user’s response must come in order for that user to progress onwards in a conversation. Depending on the context of the conversation, the required response can either be a single value or limited group of specific values from the entity, or any value from within the entity. Entities are always added in connection with the bot’s query the required response is associated with, so that they may detect whether the required response was given. <a href="https://docs.haptik.ai/bot-builder/basic/entities">Read More</a></p>
+</blockquote>
+<p><strong>3. event</strong> - event type e.g. API_INTEGRATION</p>
+<p><strong>4. user</strong> - Dictionary containing user data</p>
+<p><strong>5. conversation_no</strong> - Identifier for the current conversation of the user with this Business</p>
+<p><strong>6. conversation_details</strong> - Conversation details stores the current context of the conversation.Things like insurance number or product id which are the current scope of the conversation will go under conversation details.</p>
+<p>This data will be stored in redis with expiry time of 3 hours.</p>
+<p><strong>7. user_details</strong> -  user_details stores user's data like address, PAN number, Aadhar number which are independent of the current context of the bot conversation.</p>
+<p>Data inside user_details will be available across bots and businesses as long as the underlying user is the same in the database.</p>
+<blockquote>
+<p>conversation_details and user_details can be set from the backend as well.</p>
+</blockquote>
+<p><strong>8. env_variables</strong> - env_variables key returns environment variable values of current environment. ENV variables can be added/edited by developer from code executor UI.</p>
+<p><strong>entity output format</strong></p>
+<pre><code class="hljs css language-json">[
+    {
+        <span class="hljs-attr">"entity_value"</span>: entity_value,
+        <span class="hljs-attr">"detection"</span>: detection_method,
+        <span class="hljs-attr">"original_text"</span>: original_text
+    }
+]
+</code></pre>
+<p>Consider the following example for detailed explanation:</p>
+<p>&quot;I want to order from mcd&quot;</p>
+<ul>
+<li>entity_value: This will store the value of entity (i.e entity value) that is detected. For example, Mc’Donalds.</li>
+<li>detection: This will store how the entity is detected i.e. whether from message, structured value or fallback value.</li>
+<li>original_text: This will store the actual value that is detected. For example, mcd.</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="response-parameters"></a><a href="#response-parameters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Response Parameters</h3>
+<p>A <code>200 OK</code> HTTP Response must be sent back to the Haptik Servers, Failing which a bot break response will be sent to the user. API response must be sent in 30 seconds or less, failing which a bot break response will be sent to the user.
+The following additional fields can be specified by the API to control behaviour of the bot and send messages to the user.</p>
+<pre><code class="hljs css language-json">{
+    "response": [
+        "message1",
+        "message2",
+        ....
+    ],
+    "status": True/False,
+    "conversation_details": {}, // Optional
+    "user_details": {} // Optional
+}
+</code></pre>
+<blockquote>
+<p>conversation_details and user_details keys are only required if you want to update the conversation and user details from the backend</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>response</td><td>array</td><td>List of messages to be sent to the user</td></tr>
+<tr><td>status</td><td>boolean</td><td>If status is True, then the decorator will assign the response to success_response. If status is False, then the decorator will assign the response to failure_response</td></tr>
+</tbody>
+</table>
+<p><strong>status</strong> - Depending on whether the node is an end node or not, the True/False flag can affect the status of the chat.</p>
+<blockquote>
+<p>If the node is an <strong>end node</strong> and if the integration response returns <strong>status True</strong>, then the chat will be <strong>moved to complete state.</strong></p>
+<p>If the node is an <strong>end node</strong> and if the integration response returns <strong>status False</strong>, then the chat will remain in <strong>Bot state</strong>.</p>
+<p>If the node is <strong>not an end node</strong>, then the chat <strong>remains in Bot state</strong> after sending the response irrespective of the status.</p>
+</blockquote>
+<p><strong>response</strong> -Response will be array of string(s) or hsl(haptik specific language).</p>
+<p>for example:</p>
+<ol>
+<li><p>Response with single line</p>
+<pre><code class="hljs css language-python">{
+    <span class="hljs-string">"status"</span>: <span class="hljs-literal">True</span>,
+    <span class="hljs-string">"response"</span>: [<span class="hljs-string">"phone number seems invalid, please try again"</span>]
+}
+</code></pre></li>
+<li><p>Response with multi-line</p>
+<pre><code class="hljs css language-python">{
+    <span class="hljs-string">"status"</span>: <span class="hljs-literal">True</span>,
+    <span class="hljs-string">"response"</span>: [<span class="hljs-string">"phone number seems invalid"</span>, <span class="hljs-string">"please try again"</span>]
+}
+</code></pre></li>
+<li><p>Response for Multi-Lingual Bot</p>
+<pre><code class="hljs css language-python">language_code = request_body[<span class="hljs-string">'user'</span>][<span class="hljs-string">'language_code'</span>] <span class="hljs-comment">#assuming request_body contains post-data</span>
+<span class="hljs-keyword">if</span>  language_code == <span class="hljs-string">'en'</span>:
+  message = [<span class="hljs-string">"phone number seems invalid, please try again"</span>]
+<span class="hljs-keyword">elif</span> language_code == <span class="hljs-string">'hi'</span>:
+  message = [<span class="hljs-string">"फ़ोन नंबर अमान्य लगता है, कृपया पुनः प्रयास करें"</span>]
+<span class="hljs-keyword">else</span>:
+  message = &lt;Any Message <span class="hljs-keyword">as</span> per use case&gt;
+
+{
+  <span class="hljs-string">"status"</span>: <span class="hljs-literal">True</span>,
+  <span class="hljs-string">"response"</span>: message <span class="hljs-comment"># One we created above from conditional logic^^</span>
+}
+</code></pre></li>
+<li><p>Response with advanced UI elements <a href="https://haptik-docs.readthedocs.io/en/latest/bot-builder-advanced/message-elements.html">for more detail read here</a></p></li>
+</ol>
+<p><img src="/assets/advanced-ui-element.png" alt="Bot response with advanced UI elements"></p>
+<pre><code class="hljs css language-json">  {
+    <span class="hljs-attr">"status"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"response"</span>: [
+      '{
+        <span class="hljs-attr">"text"</span>: <span class="hljs-string">"COMPLETE BLOOD COUNT; CBC"</span>,
+        <span class="hljs-attr">"type"</span>: <span class="hljs-string">"BUTTON"</span>,
+        <span class="hljs-attr">"data"</span>: {
+          <span class="hljs-attr">"items"</span>: [
+            {
+              <span class="hljs-attr">"actionable_text"</span>: <span class="hljs-string">"View Price"</span>,
+              <span class="hljs-attr">"location_required"</span>: <span class="hljs-literal">false</span>,
+              <span class="hljs-attr">"is_default"</span>: <span class="hljs-number">0</span>,
+              <span class="hljs-attr">"uri"</span>: <span class="hljs-string">"LAUNCH_CHANNEL"</span>,
+              <span class="hljs-attr">"type"</span>: <span class="hljs-string">"TEXT_ONLY"</span>,
+              <span class="hljs-attr">"payload"</span>: {
+                <span class="hljs-attr">"gogo_message"</span>: <span class="hljs-string">""</span>,
+                <span class="hljs-attr">"message"</span>: <span class="hljs-string">"I want to check the price of this test"</span>
+              }
+            },
+            {
+              <span class="hljs-attr">"actionable_text"</span>: <span class="hljs-string">"View Details"</span>,
+              <span class="hljs-attr">"location_required"</span>: <span class="hljs-literal">false</span>,
+              <span class="hljs-attr">"is_default"</span>: <span class="hljs-number">0</span>,
+              <span class="hljs-attr">"uri"</span>: <span class="hljs-string">"LINK"</span>,
+              <span class="hljs-attr">"type"</span>: <span class="hljs-string">"APP_ACTION"</span>,
+              <span class="hljs-attr">"payload"</span>: {
+                <span class="hljs-attr">"url"</span>: <span class="hljs-string">"XYZ.COM"</span>,
+                <span class="hljs-attr">"gogo_message"</span>: <span class="hljs-string">""</span>
+              }
+            }
+          ]
+        },
+        <span class="hljs-attr">"isNew"</span>: <span class="hljs-literal">false</span>
+      }'
+    ]
+  }
+</code></pre>
+<ol start="5">
+<li>Response When conversation and User details needs to be updated
+<pre><code class="hljs css language-python">{
+    <span class="hljs-string">"status"</span>: <span class="hljs-literal">True</span>,
+    <span class="hljs-string">"response"</span>: [<span class="hljs-string">"phone number seems invalid"</span>, <span class="hljs-string">"please try again"</span>],
+    <span class="hljs-string">"conversation_details"</span>: {
+      <span class="hljs-string">"insurance_no"</span>: <span class="hljs-string">"CDQP12324"</span>,
+      <span class="hljs-string">"payment_mode"</span>: <span class="hljs-string">"COD"</span> 
+    },
+    <span class="hljs-string">"user_details"</span>: {
+      <span class="hljs-string">"phone_number"</span>: <span class="hljs-number">8826755986</span>,
+      <span class="hljs-string">"date_of_birth"</span>: <span class="hljs-string">"21/07/1995"</span>
+    },
+}
+</code></pre></li>
+</ol>
+<blockquote>
+<p>The total size of conversation_details and user_details cannot be more than 500 characters</p>
+</blockquote>
+<p>As per our pipeline, if there is no response at specific stages, then it will be treated as a Botbreak scenario. So if your Bot Says section on Mogambo doesn't have any response or the integration function doesn't return any response, then a Botbreak message will be sent or the chat will be moved to Pending state depending on whether Human assistance is disabled or enabled respectively.</p>
+<blockquote>
+<p>So if human_assistance is OFF on business manager =&gt; Botbreak message will be sent.</p>
+<p>If human_assistance is ON on business manager =&gt; Chat will be moved to pending and assigned to an agent.</p>
+</blockquote>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-10-18</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/bot-builder/integrations/introduction"><span class="arrow-prev">← </span><span>Introduction</span></a><a class="docs-next button" href="/bot-builder/integrations/integrating-apis"><span>Integrating APIs</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Bot Builder</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://hellohaptik.github.io/haptik-ios-framework" class="footer-column-link">iOS SDK</a><a href="https://hellohaptik.github.io/haptik-android-lib" class="footer-column-link">Android SDK</a><a href="https://hellohaptik.github.io/javascript_sdk" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Webhooks</a><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/contributing/index" class="footer-column-link">Contributing</a><a href="https://docs.haptik.ai/other/security" class="footer-column-link">Security</a><a href="https://forms.gle/Z2SowBSFpWLayXQz9" class="footer-column-link">Support</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2019 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '224c7079e67e84a978d8b4621f6af16d',
+                indexName: 'haptik',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

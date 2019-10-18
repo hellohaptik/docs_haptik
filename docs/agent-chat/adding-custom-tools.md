@@ -173,6 +173,30 @@ Response format:
 }
 ```
 
+## getChatDisposition(callbackFn)
+This function will fetch chat disposition data for the current business
+
+Args:
+- **callbackFn** (function): will receive a response object
+
+Usage:
+```javascript
+SDK.getChatDisposition((response)=>{
+    // do some thing with response
+})
+```
+Response format:
+```json
+{
+  "success": true,
+  "response": {
+    "category": ["reason"]
+  },
+  "error": "",
+  "meta": {}
+}
+```
+
 If there are any errors, the `success` flag will be `false` and the corresponding `error` message will be set.
 
 ## Sample Integrations

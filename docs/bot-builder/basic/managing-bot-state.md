@@ -37,4 +37,4 @@ The Context Variables are available as part of the `Event` payload that is passe
 Post the execution of the integration function, the data is committed to a permanent store and the permanance is based on the scope the data belongs to.
 
 
-You can read more about using context variables with `API Integrations` [here](https://docs.haptik.ai/bot-builder/integrations/integrating-apis) and read more about using it with custom code executor [here](https://docs.haptik.ai/bot-builder/integrations/integrating-custom-code).
+You can read more about using context variables within integrations `API Integrations` [here](https://docs.haptik.ai/bot-builder/integrations/integration-parameters) and read more about using it with custom tools in agent chat tool [here](https://docs.haptik.ai/agent-chat/adding-custom-tools).

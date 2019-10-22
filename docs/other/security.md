@@ -4,7 +4,7 @@ title: Security
 
 #### We protect your data.
 
-All data is written to multiple disks instantly, backed up daily, and stored in multiple locations. Messages that our users send are stored on servers that use modern techniques to remove bottlenecks and points of failure. Sensitive Data is backed up every 5 mins across multiple data centers.
+All data is written to multiple disks instantly, backed up daily, and stored in multiple locations. Messages that our users send are stored on servers that use modern techniques to remove bottlenecks and points of failure. Data is backed up and is available over multiple AWS data centers.
 
 #### Your data is sent using HTTPS.
 
@@ -33,4 +33,4 @@ The entire Haptik Systems and Infrastructure are further secured with a VPN. No 
 
 #### Authentication
 
-Clients login to Haptik using a password which is known only to them. Passwords are not stored; instead, as is standard practice, only a secure hash of the password is stored in the database. Because the hash is relatively expensive to compute, and because a “salting” method is used, brute-force guessing attempts are relatively ineffective, and password reverse-engineering is difficult even if the hash value were to be obtained by a malicious party.
+Clients login to Haptik using a password which is known only to them through an identity service. Passwords are not stored; instead, as is standard practice, only a secure hash of the password is stored in the database. Because the hash is relatively expensive to compute, and because a “salting” method is used, brute-force guessing attempts are relatively ineffective, and password reverse-engineering is difficult even if the hash value were to be obtained by a malicious party.

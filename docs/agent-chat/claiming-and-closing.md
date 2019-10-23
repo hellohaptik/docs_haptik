@@ -130,7 +130,7 @@ To add to that, one can edit the flag only if they have the below mentioned perm
 ```
 athena_business_settings_edit
 ```
-This should be added to the respective group as mentioned in [adding agents and permissions](https://docs.haptik.ai/agent-chat/adding-agents-and-permissions) 
+This should be added to the respective Permission Group as mentioned in [adding agents and permissions](https://docs.haptik.ai/agent-chat/adding-agents-and-permissions).
 
 ### Chat Disposition
 When an agent marks a chat as complete. The agent can add some *completion notes* in the form of Chat disposition.

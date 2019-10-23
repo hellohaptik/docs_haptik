@@ -126,7 +126,7 @@ The above mentioned functionality is enabled by default for every business. To d
 
 ![business settings](assets/business_settings.png)
 
-To add to that, one can edit the flag only if they have the below mentioned permission
+To add to that, one can edit the flag only if they have access to the below mentioned feature.
 ```
 athena_business_settings_edit
 ```

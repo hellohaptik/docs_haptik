@@ -12,6 +12,9 @@ Before sending any message to Haptik, you need to register the user, during this
 	- mobile number
 	- email
 	- language preference
+	- phone model
+	- os version
+	- package name
 
 The User API allows you to register the user via a `POST` request or update the user info via `PUT` request to the Haptik Platform.
 
@@ -47,13 +50,16 @@ Content-Type: application/json
 ```
 
 - auth_id - This is an alphanumeric User identifier from your System
-- auth_code - We treat this value as the client token (optional)
-- mobile_no - Mobile no of the user (optional)
-- email - Email of the user (optional)
-- name - Name of the user (optional)
-- language_code - This is a language indentifier for user's preferred language based on `ISO 639-1` (standardized nomenclature used to classify language)
-                  Eg: `en` for `English`, 
+- auth_code (optional) - We treat this value as the client token
+- mobile_no (optional) - Mobile no of the user
+- email (optional) - Email of the user
+- name (optional) - Name of the user
+- language_code (optional) - This is a language indentifier for user's preferred language based on `ISO 639-1` (standardized nomenclature used to classify language)
+                  Eg: `en` for `English`,
                       `hi` for `Hindi`(optional)
+- phone model (optional) - Phone model/type that the user is using
+- os version (optional) - OS version of where the user is coming from (Android, iOS, Windows etc.)
+- package name (optional)- An identifier to differentiate between different Apps on the device (WhatsApp or custom client app)
 
 ### Response
 

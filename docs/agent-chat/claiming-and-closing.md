@@ -121,6 +121,16 @@ Chats can be manually marked complete
 
 - Once the user marks the conversation appropriately. The conversation is removed from the agent's queue and the My Chats page.
 
+## Enable manual closing of chat
+The above mentioned functionality is enabled by default for every business. To disable it, one have to edit the flag under Businesses > Business Settings > Show close chat button.
+
+![business settings](assets/business_settings.png)
+
+To add to that, one can edit the flag only if they have the below mentioned permission
+```
+athena_business_settings_edit
+```
+This should be added to the respective group as mentioned in [adding agents and permissions](https://docs.haptik.ai/agent-chat/adding-agents-and-permissions) 
 
 ### Chat Disposition
 When an agent marks a chat as complete. The agent can add some *completion notes* in the form of Chat disposition.

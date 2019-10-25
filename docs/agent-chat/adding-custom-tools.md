@@ -232,4 +232,4 @@ Response format:
 
 ## Sample Integrations
 
-You can refer to [this sample](https://toolassets.haptikapi.com/integrations/sample/index.html) integration tool as a reference point.
+You can refer to [this sample](https://toolassets.haptikapi.com/integrations/sample/index.v2.1.html) integration tool as a reference point.

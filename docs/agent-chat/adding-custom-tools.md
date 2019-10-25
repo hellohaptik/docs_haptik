@@ -63,7 +63,7 @@ Athena SDK gives you access to specific data of the User and Chat inside your Cu
 
 Import the SDK via script tag
 ```html
-<script src="https://toolassets.haptikapi.com/athena2/prod/athena-sdk.v2.js"></script>
+<script src="https://toolassets.haptikapi.com/athena2/prod/athena-sdk.v2.1.js"></script>
 ```
 
 then use this like
@@ -200,6 +200,36 @@ Response format:
 
 If there are any errors, the `success` flag will be `false` and the corresponding `error` message will be set.
 
+## setChatStatus(closingCategory, callbackFn)
+This function will update the User Details data associated with the current User.
+
+Args:
+- **closingCategory** (object): Provide closing category object with reason, subReason and comment (can be empty), if it's required for that business. Otherwise, provide an empty object.
+- **callbackFn** (function): will receive a response object
+
+Usage:
+```javascript
+const closingCategory = {
+    "reason" : "payment",
+    "subReason" : "not reflected",
+    "comment" : "please follow up asap!" 
+}
+
+SDK.setChatStatus(closingCategory, (response) => {
+    // do something with data
+});
+```
+
+Response format:
+```json
+{
+    "success": true,
+    "response": true,
+    "error": "",
+    "meta": {}
+}
+```
+
 ## Sample Integrations
 
-You can refer to [this sample](https://toolassets.haptikapi.com/integrations/sample/index.html) integration tool as a reference point.
+You can refer to [this sample](https://toolassets.haptikapi.com/integrations/sample/index.v2.1.html) integration tool as a reference point.

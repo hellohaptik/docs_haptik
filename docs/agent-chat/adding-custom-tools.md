@@ -204,7 +204,7 @@ If there are any errors, the `success` flag will be `false` and the correspondin
 This function will update the User Details data associated with the current User.
 
 Args:
-- **closingCategory** (object): Provide closing category object with reason, subReason and comment (can be empty), if it's required for that business.
+- **closingCategory** (object): Provide closing category object with reason, subReason and comment (can be empty), if it's required for that business. Otherwise, provide an empty object.
 - **callbackFn** (function): will receive a response object
 
 Usage:

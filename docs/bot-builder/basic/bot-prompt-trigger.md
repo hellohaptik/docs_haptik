@@ -48,4 +48,5 @@ If `No. of Visits is greater than 1` we can use the greeting *Welcome Back* inst
 
 If `Form Field (PAN No) is empty AND Time on Page is greater than 30 seconds` we can ask the user if he needs help finding his PAN No.
 
-Make sure to understand the needs of users and customer before creating your bot prompts. When multiple bot prompts are present they are evaluated in the order of their priority. The prompt with the highest priority is evaluated first, and if the trigger conditions are met only then the prompt will be shown.
+Make sure to understand the needs of users and customer before creating your bot prompts. When multiple bot prompts are present they are evaluated in the order of their priority. The prompt with the highest priority is evaluated first, and if the trigger conditions are met only then the prompt will be shown. After making changes in Bot Prompt, wait upto 6 hours for the change to reflect.
+

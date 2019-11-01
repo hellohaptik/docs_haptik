@@ -123,7 +123,7 @@ When the editing fields open, you’ll need to fill out the following informatio
 
 - Location Required: Enabling this box will require users to input their location to move ahead with the task. This is applicable for Android/iOS SDKs only
 
-Click Save. You’ve created a task!
+Click Save. You’ve created a task! If you make any changes in Taskboxes, it will take 30 mins to reflect.
 
 - Bot Break Messages: This is the message that will be sent to users when the bot breaks.
 

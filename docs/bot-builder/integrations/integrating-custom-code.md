@@ -128,7 +128,18 @@ When you click on the `Run` button, the code will be executed using the sample i
 
 ![Code Run](assets/integrating_custom_code_run.gif)
 
+### Using Environment Variables
+It is also possible to set environment variables for the code executor to store values like database username and passwords that you don't want to expose inside the code.
 
+**The environment variables are stored at a bot level.** This means that varibales stored in one node are automatically available to all nodes inside the bot.
+
+You can set these variables by opening the code editor, clickin on the `More` button in the top right corner and selecting the `Variables` option.
+
+![Environment Variables in Code Editor](assets/env_variables_create.gif)
+
+In the variables menu that opens, you can set the variable name and values for the vraible on the staging and production environments. For example you can create a variable called `MONGO_URI` and set its staging value as `mongodb://mongodb0.example.com:27017/admin` and it's production value as `mongodb://mongodb1.example.com:27017/admin`.
+
+These environment variables are then available within the request parameters for the integration functions. You can read about the request parameter structure [here](https://docs.haptik.ai/bot-builder/integrations/integration-parameters)
 ### Pre-Transfer
 
 `Train Bot` prepares the code for production. Hence, you should make sure to call `Train Bot` if there are any changes in the custom code integration before transferring the bot to production.

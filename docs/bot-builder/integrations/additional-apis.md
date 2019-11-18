@@ -183,7 +183,7 @@ Here is a list of some possible error messages
 #### Sample CURL command
 
 ```
-curl -X POST \
+curl -X GET \
   https://<base-url>/integration/external/v1.0/get_chat_history/?user_name=<user_name>
   &conversation_no=<conversation_no>&business_id=<business_id>&limit=<limit> \
   -H 'Authorization: Bearer <TOKEN>' \

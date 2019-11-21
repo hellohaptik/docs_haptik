@@ -39,7 +39,7 @@ Business Name: This refers to the overarching topic of its conversational capabi
 
     You can change the Business name once you’ve saved it.
 
-- Business Via Name: You need to add a Business Via Name as it's an editable field. `Businesss_via_name` should be changed to "fixed-prefix_<language-code>" for multilingual bots. Read more here - [Building multilingual bots](https://docs.haptik.ai/bot-builder/basic/multiple-languages)
+- Business Via Name: You need to add a Business Via Name as it's an editable field. `Businesss_via_name` should be changed to `fixed-prefix_<language-code>` for multilingual bots. For more details, read [Building multilingual bots](https://docs.haptik.ai/bot-builder/basic/multiple-languages).
     
 - Preview Text: The text that will be shown to users before they’ve started chatting with the bot. This field is applicable for Android/iOS SDKs only
 

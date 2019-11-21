@@ -49,9 +49,9 @@ The data is represented in the form of a line graph with 4 different lines. The 
 1) Number of Users
 2) Number of Conversations
 3) Number of User Messages
-4) Bot Automation Percentage
+4) Bot Automation
 
-The bot automation percentage tells you how many of the messages the bot was automatically able to respond to without human intervention.
+The Bot automation metric gives you the percentage of conversations without bot breaks or human intervention (agent). 
 
 > Knowledge Tip: A conversation is a set of messages used to accomplish a task.
 
@@ -85,7 +85,7 @@ On the top you can see the total task completion rate in percentage format. Belo
 >Tip: You can make changes to the task flow for improving the experience. This metric can guide you to understand how those changes are performing.
 
 ## ***Bot Automation***
-The next tab is Bot Automation. This tab tells you about what percentage of the incoming user messages the bot was automatically able to respond to.
+The next tab is Bot Automation. This tab tells you about what percentage of the conversations did not have an agent involved as well as no bot breaks. 
 
 The graph for this tab is an upcoming feature and will be documented here once it is ready.
 

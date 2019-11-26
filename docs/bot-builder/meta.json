@@ -22,9 +22,10 @@
 			"basic/creating-nodes",
 			"basic/connections",
 			"basic/general-nodes",
-			"basic/user-says",
+			"basic/user-says-guidelines",
 			"basic/bot-says",
 			"basic/chat-elements",
+			"basic/intent",
 			"basic/entities",
 			"basic/bot-prompt-trigger",
 			"basic/general-responses",
@@ -39,7 +40,10 @@
 		],
 		"Advanced": [
 			"advanced/integrating-webviews-into-sdk",
-			"advanced/integrating-with-external-bot"	
+			"advanced/integrating-with-external-bot",
+			"advanced/debugging-guidelines",
+			"advanced/migration-guide",
+			"advanced/nlu-change-log"
 		]
 	},
 	"headerLink": {

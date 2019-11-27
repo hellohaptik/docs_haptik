@@ -53,6 +53,14 @@ As per the SSML tags used above, after Bot says "You can contact us on" there wi
 Voice input does not work to read out Quick replies and buttons. Using a lot of quick replies in voice bots will be a little difficult as the bot will not read out content of the quick replies.
 We can use less of Quick replies & buttons or try directing the user with every message on what to do next to proceed ahead with the chat.
 
+## Sending ASR break message
+
+Sometimes, we get an incorrect response for the user’s voice input, if the user speaks in a low voice or in a noisy environment. We need to detect such scenarios and get the right user input.
+
+If the ASR captures half-baked response ie the voice input is wrongly captured, the chances of getting a correct bot response match goes for a toss. When we are not able to capture user’s said speech due to background noise, training data scarcity, unclear user input or when users start speaking away from the phone mic; we ask user to rephrase their query one more time. 
+
+![ASR break](assets/ASR_Break.png)
+
 ## Bot Testing
 
 When testing a Bot on our platform, we generate a demo link to share and test it.

@@ -14,15 +14,6 @@
       "agent-chat/adding-custom-tools": {
         "title": "Adding your own custom tool"
       },
-      "agent-chat/admin_panel": {
-        "title": "Admin Panel"
-      },
-      "agent-chat/athena_lhs": {
-        "title": "The left hand side"
-      },
-      "agent-chat/athena_rhs": {
-        "title": "The right hand side"
-      },
       "agent-chat/bot-agent-handover": {
         "title": "Bot Agent Handover"
       },
@@ -34,12 +25,6 @@
       },
       "agent-chat/closing-categories": {
         "title": "Closing Categories"
-      },
-      "agent-chat/custom-tools-data-communication": {
-        "title": "Using conversation data"
-      },
-      "agent-chat/custom-tools-intro": {
-        "title": "Introduction"
       },
       "agent-chat/for-chat-agents": {
         "title": "For Chat Agents"
@@ -97,9 +82,6 @@
       },
       "bot-builder/advanced/demo-links": {
         "title": "Demo Page"
-      },
-      "bot-builder/advanced/integrating-custom-code": {
-        "title": "Integrating Custom Code"
       },
       "bot-builder/advanced/integrating-webviews-into-sdk": {
         "title": "Integrating Webviews"
@@ -161,6 +143,9 @@
       "bot-builder/basic/making-first-bot": {
         "title": "Making Your First Bot"
       },
+      "bot-builder/basic/managing-bot-state": {
+        "title": "Managing Bot State"
+      },
       "bot-builder/basic/multiple-languages": {
         "title": "Multiple Languages"
       },
@@ -175,6 +160,21 @@
       },
       "bot-builder/basic/user-says": {
         "title": "User Says"
+      },
+      "bot-builder/integrations/additional-apis": {
+        "title": "Additional APIs"
+      },
+      "bot-builder/integrations/integrating-apis": {
+        "title": "Integrating APIs"
+      },
+      "bot-builder/integrations/integrating-custom-code": {
+        "title": "Integrating Custom Code"
+      },
+      "bot-builder/integrations/integration-parameters": {
+        "title": "Integration Parameters"
+      },
+      "bot-builder/integrations/introduction": {
+        "title": "Introduction"
       },
       "bot-configuration/bot-hierarchy": {
         "title": "bot-configuration/bot-hierarchy"
@@ -316,6 +316,9 @@
       },
       "whatsapp/webhook-payload": {
         "title": "Payload Information"
+      },
+      "whatsapp/whatsapp-language-settings": {
+        "title": "WhatsApp Language Settings"
       }
     },
     "links": {
@@ -326,17 +329,16 @@
       "Getting Started": "Getting Started",
       "Guides": "Guides",
       "Resources": "Resources",
+      "Integrations": "Integrations",
+      "Advanced": "Advanced",
+      "Contributing": "Contributing",
       "Docusaurus": "Docusaurus",
       "First Category": "First Category",
       "Second Category": "Second Category",
-      "Contributing": "Contributing",
       "HSL Elements": "HSL Elements",
-      "Tools": "Tools",
-      "Integrations": "Integrations",
       "Introduction": "Introduction",
       "How to Create a Webhook": "How to Create a Webhook",
       "Independent Integrations": "Independent Integrations",
-      "Advanced": "Advanced",
       "Types of Conversations": "Types of Conversations",
       "Deploying the Bot": "Deploying the Bot",
       "Sending Notifications": "Sending Notifications"

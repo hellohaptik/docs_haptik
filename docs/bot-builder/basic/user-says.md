@@ -188,10 +188,10 @@ When multiple intents are closely tied, there’s a good chance of user landing 
 
 #### How Disambiguation works?
 
-When we get an ambiguous message from a user on a bot, we send a disambiguation message with possible nodes as options. For reference, when user types “plans” in a bot with multiple intents around the keyword, we disambiguate by sending the message below -
+When we get an ambiguous message from a user on a bot, we send a disambiguation message with possible nodes as options. For example, when user types `plans` in a Web SDK bot with multiple intents around this keyword, we disambiguate by sending the message below. Also, on another bot on Whatsapp, with user sending `SIP` if the bot had multiple similar intents related to SIP, we disambiguate by sending text options (as buttons are not supported on Whatsapp) -
 
 ![Disambiguate](assets/bot-builder-user-says/disambiguate.png)
 
-    Tip: The button options above are diffent nodes. And this node level copy to be marked on User says. 
+    Tip: The button options above are different nodes. And this node level copy to be marked on User says. 
 
 Only one User says variant will marked as the copy to shown when a node is chosen as a button option in the disambiguation message. Also note that the `Node name` in Node settings section on a node is the default copy in disambiguation message if bot builders don’t mark any user says on a node. 

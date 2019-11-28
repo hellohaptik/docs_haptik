@@ -1,17 +1,75 @@
 ---
 title: Entities
 ---
-
 In this section, we'll cover the following topics:  
-[What is an Entity?](#what-is-an-entity-again)  
+[What is an Entity?](#what-is-an-entity)  
+[Intent vs Entity](#intent-vs-entity)  
 [When to Use Entities](#when-is-the-appropriate-time-to-use-an-entity)  
 [How Adding Entities Affects Bot Says](#how-does-using-an-entity-affect-the-other-bot-says-responses?)  
 [How to Add an Entity](#adding-an-entity)  
-[Creating a New Entity](#making-a-new-entity)
+[Creating a New Entity](#making-a-new-entity)  
+[Mandatory and Optional Entities](#mandatory-and-optional-entities)  
+[Entity Types](#entity-types)
 
-#### What is an entity again?
+
+### What is an entity?
 
 **Entities**: An entity represents the set of values from which a user’s response must come in order for that user to progress onwards in a conversation. Depending on the context of the conversation, the required response can either be a single value or limited group of specific values from the entity, or any value from within the entity. Entities are always added in connection with the bot’s query the required response is associated with, so that they may detect whether the required response was given.
+
+Entities are auto-tagged in the user utterance as long as the entity dictionary is pre-populated. You can find more details about Entity tagging here.
+
+### Intent vs Entity
+
+It is important to understand the difference between intent and an entity. 
+
+Intent represents an action that the user wants to perform and the entity represents a keyword that you want to be extracted from the user utterance. 
+
+<table>
+  <tr>
+    <td>Intent</td>
+    <td>User utterance</td>
+    <td>Entity extracted</td>
+    <td>Explanation</td>
+  </tr>
+  <tr>
+    <td>Book_flight</td>
+    <td>Book a flight from Mumbai to Delhi</td>
+    <td>From: Mumbai,
+To: Delhi</td>
+    <td>Departure and arrival locations are important information for Book_flight intent</td>
+  </tr>
+  <tr>
+    <td>Play_content</td>
+    <td>Play Avengers on Hotstar </td>
+    <td>Content_name: Avengers,
+App_name: Hotstar</td>
+    <td>Content name and App name information are extracted from the user utterance</td>
+  </tr>
+  <tr>
+    <td>Need_support</td>
+    <td>Customer care number</td>
+    <td>-</td>
+    <td>No entity to be extracted from the utterance</td>
+  </tr>
+  <tr>
+    <td>Apply_loan</td>
+    <td>I would like to apply for a home loan</td>
+    <td>Loan_type: home loan</td>
+    <td>Loan type entity is extracted from the user utterance. Entity value transition can be used here to traverse to the next node </td>
+  </tr>
+  <tr>
+    <td>Cylinder_price</td>
+    <td>What is the price of 12 kg cylinder</td>
+    <td>Cylinder_size: 12kg</td>
+    <td>Cylinder size entity is extracted from the user utterance to fetch the price</td>
+  </tr>
+  <tr>
+    <td>Login_issues</td>
+    <td>I am unable to login</td>
+    <td>-</td>
+    <td>No entity to be extracted from the utterance. </td>
+  </tr>
+</table>
 
 #### When is the appropriate time to use an entity?
 
@@ -86,3 +144,211 @@ You can also view all the entities used in the bot in a single place along with 
 You can view this by clickin on `More` in the top navigation bar and selecting `List of Entities`. You should then be able to view all entities used in the bot.
 
 ![list of entities in bot](assets/list_of_entities_in_bot.png)
+
+
+
+### **Mandatory and Optional Entities**
+
+An intent is the desired outcome of the whole user utterance, while entities are data extracted from the user utterance.
+
+Intents are mandatory as they are important pieces of the puzzle to identify the user action or goal.  
+
+Entities are optional. You do not need to create entities for every node in your bot, but only for those where it required for the bot to perform an action.
+
+> *IMPORTANT: If there is transition based on entity value or entity presence, entity should be non-mandatory. Use Default or Final Response to send the bot message to ask the question*
+
+For example, your reminder bot could consist of three entities -
+
+![Mandatory Entity](assets/bot-builder-user-says/mandatory_entity.png)
+
+<table>
+  <tr>
+    <td>Entity</td>
+    <td>Type</td>
+    <td>Description</td>
+  </tr>
+  <tr>
+    <td>date</td>
+    <td>mandatory</td>
+    <td>‘date’ entity is mandatory to set up meeting reminder</td>
+  </tr>
+  <tr>
+    <td>time</td>
+    <td>mandatory</td>
+    <td>‘time’ entity is mandatory to set up meeting reminder</td>
+  </tr>
+  <tr>
+    <td>phone_number</td>
+    <td>optional</td>
+    <td>‘Phone_number’ entity is an optional entity. This is only needed if the user wants a message notification before the meeting</td>
+  </tr>
+</table>
+
+
+#### **How does this work?**
+
+Add user utterance to the ‘**Meeting reminder node**’.
+
+![Meeting Reminder Node](assets/bot-builder-user-says/entity_node_usersays.png)
+
+When user wants to setup a reminder, the conversation would go as follows -
+
+1. User utterance consists of all the information needed to schedule a meeting.
+
+![User freeform](assets/bot-builder-user-says/entity_user_utterance1.png)
+
+2. User utterance only consists of the action information and the entities are missing. In such cases, bot will prompt the user to enter details for mandatory entities.
+
+![User chatform](assets/bot-builder-user-says/entity_user_utterance2.png)
+
+> **_Myth_**: Don't add entity values in user says
+> 
+> **_Reality_**: Add entity values in user says. If the values are added to the entity dictionary, entities get auto-tagged in the user says. 
+
+
+For example:
+
+<table>
+  <tr>
+    <td>User says</td>
+    <td>Entity captured</td>
+  </tr>
+  <tr>
+    <td>What is the weather like tomorrow in San Francisco</td>
+    <td>$location - ‘San Francisco’
+$time - ‘tomorrow’</td>
+  </tr>
+</table>
+
+
+### Entity Types
+
+#### **Currency Entity**
+
+**Currency** entity is meant for matching amounts of money with an indication of a currency type like, "50 rupees" or "three hundred and fifty dollars". It returns an object type value consisting of two attribute-value pairs: {"unit": "euro","value":"700000"}
+
+#### **Free-text Entities**
+
+Free-text entities allows bot builders to define entities based on their context in the utterance. You do this by adding the user utterance in Entity Pattern section and tagging the entities in the user utterance.
+
+When you define a free-text entity, a model is trained on both the tagged term and the context in which the term is used in the sentence you tag. This model enables us to calculate a confidence score that identifies how likely a word or phrase is to be an instance of an entity, based on how it is used in the user input.
+
+![Free-text Entity English](assets/bot-builder-user-says/free_text_entity_en.png)
+
+Free-text entity tags can be added to Indic languages as well. We currently support 8 Indic languages (Hindi, Gujarati, Marathi, Tamil, Telugu, Kannada, Malayalam, Bengali)
+
+![Free-text Entity Hindi](assets/bot-builder-user-says/free_text_entity_hi.png)
+
+Entities such as person_name (Bob Marley, Nick Jonas, Mark Norman Sr.), content_name (Harry Potter, Matrix Reloaded, Bumble Bee, John Wick) have infinite number of possibilities that need to be added to the entity dictionary. Free-text entities will help you tackle such scenarios by not making it a content heavy task.
+
+#### **How does it work?**
+
+First, you define a category of terms as an entity (content). Next, you go to the Entity Patterns section of the node, add user says variations, find any mentions of the entity in the utterance, and add a tag.
+
+![Free-text Entity - Add Tag](assets/bot-builder-user-says/free_text_entity_add_tag.png)
+
+For example, you might go to the #play_content node, and find a user says, ‘Play harry potter on Hotstar’. You can tag ‘harry potter’ as a mention of the @content entity.
+
+For training purposes, the term you tagged, ‘harry potter’, is added as a value of the @content entity dictionary.
+
+At run time, model evaluates terms based on the context in which they are used in the sentence only. If the structure of a user says that mentions the term matches the structure of an intent user example in which a mention is tagged, then the model interprets the term to be a mention of that entity type. 
+
+For example, the user input might include the utterance, ‘Play matrix reloaded on Hotstar’. Due to the similarity of the structure of this sentence to the user example that you tagged (Play harry potter on Hotstar), model recognizes ‘matrix reloaded’ as a @content entity mention.
+
+When a context based entity model is used for an entity, model does not look for exact text or pattern matches for the entity in the user input, but focuses instead on the context of the sentence in which the entity is mentioned.
+
+The entities that are tagged in the ‘Entity Patterns’, get auto-tagged in the user says section of the node.
+
+![Free-text Entity Auto Tag](assets/bot-builder-user-says/free_text_entity_usersays.png)
+
+If you choose to define entity values by using entity patterns, add at least 15-20 tags per entity to give the free-text entity model adequate data to generate accurate results.
+
+### **Entity types and language support**
+
+<table>
+  <tr>
+    <td>Entity type</td>
+    <td>Description</td>
+    <td>Example</td>
+    <td>Supported languages - ISO 639-1code</td>
+  </tr>
+  <tr>
+    <td>Time</td>
+    <td>Detect time from given text.</td>
+    <td>tomorrow morning at 5, कल सुबह ५ बजे, kal subah 5 baje</td>
+    <td>'en', 'hi', 'gu', 'bn', 'mr', 'ta'</td>
+  </tr>
+  <tr>
+    <td>Date</td>
+    <td>Detect date from given text</td>
+    <td>next monday, agle somvar, अगले सोमवार</td>
+    <td>'en', 'hi', 'gu', 'bn', 'mr', 'ta'</td>
+  </tr>
+  <tr>
+    <td>Number</td>
+    <td>Detect number and respective units in given text</td>
+    <td>50 rs per person, ५ किलो चावल, मुझे एक लीटर ऑइल चाहिए</td>
+    <td>'en', 'hi', 'gu', 'bn', 'mr', 'ta'</td>
+  </tr>
+  <tr>
+    <td>Phone number</td>
+    <td>Detect phone number in given text</td>
+    <td>9833530536, +91 9833530536, ९८३३४३०५३५</td>
+    <td>'en', 'hi', 'gu', 'bn', 'mr', 'ta'</td>
+  </tr>
+  <tr>
+    <td>Email</td>
+    <td>Detect email in text</td>
+    <td>hello@haptik.co</td>
+    <td>'en'</td>
+  </tr>
+  <tr>
+    <td>Text</td>
+    <td>Detect custom entities in text string using full text search in Datastore or based on contextual model</td>
+    <td>Order me a pizza,मुंबईमें मौसम कैसा है</td>
+    <td>Search supported for 'en', 'hi', 'gu', 'bn', 'mr', 'ta', Contextual model supported for 'en' only</td>
+  </tr>
+  <tr>
+    <td>PNR</td>
+    <td>Detect PNR (serial) codes in given text.</td>
+    <td>My flight PNR is 4SGX3E</td>
+    <td>'en'</td>
+  </tr>
+  <tr>
+    <td>Regex</td>
+    <td>Detect entities using custom regex patterns</td>
+    <td>My flight PNR is 4SGX3E</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>City</td>
+    <td>CityDetector detects cities from the text</td>
+    <td>From Mumbai, To Mumbai, via Mumbai, atms in Mumbai</td>
+    <td>'en'</td>
+  </tr>
+  <tr>
+    <td>Budget</td>
+    <td>Detects the budget from the text. This detector captures additional attributes like max_budget, min_budget whether the budget is normal_budget</td>
+    <td>shirts between 2000 to 3000</td>
+    <td>'en'</td>
+  </tr>
+  <tr>
+    <td>Shopping size</td>
+    <td>Detects size which are used for shopping from the text</td>
+    <td>Suggest me shirt of size X-Large</td>
+    <td>'en'</td>
+  </tr>
+  <tr>
+    <td>Currency</td>
+    <td>Detects currency and the value from the given text</td>
+    <td>My Salary is $100000</td>
+    <td>'en'</td>
+  </tr>
+  <tr>
+    <td>Number Range</td>
+    <td>Detects number range from the given text</td>
+    <td>Suggest a phone in the price range of 10000 to 15000</td>
+    <td>'en', 'hi', 'gu', 'bn', 'mr', 'ta'</td>
+  </tr>
+</table>
+

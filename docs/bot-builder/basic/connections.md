@@ -4,7 +4,10 @@ title: Connections
 
 This section will cover the following topics:  
 [What are connections?](#what-are-connections)  
-[Connection Transition](#connection-transition)  
+[Static Node to Static Node Connection Transition](#static-node-to-static-node-connection-transition)  
+[Static Node to Code Node Connection Transition](#static-node-to-code-node-connection-transition) 
+[Code Node to Output Node Connection Transition](#code-node-to-output-node-connection-transition) 
+[Output Node to Static Node Connection Transition](#output-node-to-static-node-connection-transition) 
 [Dependent Response](#dependent-response)   
 [Connection Guidelines](#connection-guidelines)   
 
@@ -13,7 +16,10 @@ This section will cover the following topics:
 Connections represent the path a conversation takes from node to node. Depending on the response a user inputs to the bot, they traverse down a different connection to the appropriate next node. Bot builders must modify every connection they create to indicate which user inputs correspond to which nodes.
 
 
-### Connection Transition 
+### Static Node to Static Node Connection Transition 
+You might want to transition from one static node to another based on the user's input to branch into a different information collection flow.
+
+![Static-to-Static Connection](assets/bot-builder-connections/static-to-static.png)
 
 The connections you create can prompt a user to transition from one node to the next in the following three ways:
 
@@ -57,23 +63,20 @@ When you’ve added an entity to a conversation, you can define the transition f
 
 * The entities from the first node should automatically appear in a drop down menu. Select from the list to complete the creation of a transition based on entity presence.
 
-### Dependent Response
 
-If you have connecting nodes, and you want the child node to be detected only when the user says something on the parent node, then you can use Dependent Responses.
+### Static Node to Code Node Connection Transition 
 
-**How to add Dependent Responses?**
+Transition from a static node to code node happens automatically once all the required entities are collected.
 
-To add dependent responses to transition from parent node to the connecting child node, follow the steps mentioned below -  
+![Static-to-Code Connection](assets/bot-builder-connections/static-to-code.png)
 
-1. Click on connection between the two nodes
+### Code Node to Output Node Connection Transition 
 
-![Dependent Response Connection](assets/bot-builder-user-says/dependent_response_connection.png)
+![Code-to-Output Connection](assets/bot-builder-connections/code-to-output.png)
 
-1. This should show a Menu on the right side of the screen, which will allow you to add user says utterances, that will transition user from parent node to the connecting child node.
+### Output Node to Static Node Connection Transition 
 
-![Dependent Response User Says](assets/bot-builder-user-says/dependent_response_usersays.png)
-
-For example, consider a use case where you want to confirm the **‘scheduled pickup time’** with the user. You will have two connecting child nodes - confirm pickup and refuse pickup. All user says variations added here are ‘Dependent Response’. The right child node is detected when user utterance matches the dependent response.
+![Output-to-Static Connection](assets/bot-builder-connections/output-to-static.png)
 
 
 ### Connection Guidelines

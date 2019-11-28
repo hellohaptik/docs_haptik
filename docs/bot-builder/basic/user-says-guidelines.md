@@ -466,7 +466,7 @@ All the above are their own **nodes** in our system, with their corresponding in
 
 ### **Best practices for building the bot** 
 
-### **DOs**
+#### **DOs**
 
 * **Define distinct intent**
 
@@ -508,7 +508,7 @@ All the above are their own **nodes** in our system, with their corresponding in
 
   If a non-english word occurs less than 3 times in the whole bot, we'll consider it to be a spelling mistake
 
-### **DONTs**
+#### **DONTs**
 
 * **Expansion of scope of intent**
 

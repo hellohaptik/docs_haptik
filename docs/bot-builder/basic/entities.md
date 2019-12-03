@@ -26,10 +26,10 @@ Intent represents an action that the user wants to perform and the entity repres
 
 <table>
   <tr>
-    <td>Intent</td>
-    <td>User utterance</td>
-    <td>Entity extracted</td>
-    <td>Explanation</td>
+    <td><b>Intent</b></td>
+    <td><b>User utterance</b></td>
+    <td><b>Entity extracted</b></td>
+    <td><b>Explanation</b></td>
   </tr>
   <tr>
     <td>Book_flight</td>
@@ -85,9 +85,9 @@ The flow of Bot Says responses goes from top to bottom in terms of evaluation. *
 
 > **Entity Scenarios**
 >
-> - _If there are no entities_: If it’s a simple node that doesn’t need to collect entities or data, a simple bot says is all that’s needed. You won’t be able to add a final bot reply as that would be redundant as there are no middle steps.
-> - _If there is one entity_: If there’s only one entity, then there is no initial bot reply as that entity’s responses serve as the initial bot reply.
-> - _If there are multiple entities_: If there are multiple entities, then all the responses are required. (Intial Bot Says, Entity Responses as well as the final bot reply).
+> - _**If there are no entities**_: If it’s a simple node that doesn’t need to collect entities or data, a simple bot says is all that’s needed. You won’t be able to add a final bot reply as that would be redundant as there are no middle steps.
+> - _**If there is one entity**_: If there’s only one entity, then there is no initial bot reply as that entity’s responses serve as the initial bot reply.
+> - _**If there are multiple entities**_: If there are multiple entities, then all the responses are required. (Intial Bot Says, Entity Responses as well as the final bot reply).
 
 #### Adding an entity:
 
@@ -155,17 +155,18 @@ Intents are mandatory as they are important pieces of the puzzle to identify the
 
 Entities are optional. You do not need to create entities for every node in your bot, but only for those where it required for the bot to perform an action.
 
-> *IMPORTANT: If there is transition based on entity value or entity presence, entity should be non-mandatory. Use Default or Final Response to send the bot message to ask the question*
+> *IMPORTANT: If there is transition based on entity value or entity presence, it is recommended to make the entity non-mandatory. Use Default or Final Response to respond to the user message*
 
 For example, your reminder bot could consist of three entities -
 
 ![Mandatory Entity](assets/bot-builder-user-says/mandatory_entity.png)
 
+
 <table>
   <tr>
-    <td>Entity</td>
-    <td>Type</td>
-    <td>Description</td>
+    <td><b>Entity</b></td>
+    <td><b>Type</b></td>
+    <td><b>Description</b></td>
   </tr>
   <tr>
     <td>date</td>
@@ -210,8 +211,8 @@ For example:
 
 <table>
   <tr>
-    <td>User says</td>
-    <td>Entity captured</td>
+    <td><b>User says</b></td>
+    <td><b>Entity captured</b></td>
   </tr>
   <tr>
     <td>What is the weather like tomorrow in San Francisco</td>
@@ -225,7 +226,23 @@ $time - ‘tomorrow’</td>
 
 #### **Currency Entity**
 
-**Currency** entity is meant for matching amounts of money with an indication of a currency type like, "50 rupees" or "three hundred and fifty dollars". It returns an object type value consisting of two attribute-value pairs: {"unit": "euro","value":"700000"}
+**Currency** entity is meant for matching amounts of money with an indication of a currency type like, "50 rupees",  "three hundred and fifty dollars". It returns an object type value consisting of two attribute-value pairs: 
+
+<table>
+  <tr>
+    <td><b>User says</b></td>
+    <td><b>Entity captured</b></td>
+  </tr>
+  <tr>
+    <td>I want to pay 50 rupees for the form</td>
+    <td>{"unit": "rupees","value":"50.00"}</td>
+  </tr>
+    <tr>
+    <td>I want to transfer three hunders and fifty dollars to Jane</td>
+    <td>{"unit": "dollars","value":"350.00"}</td>
+  </tr>
+</table>
+
 
 #### **Free-text Entities**
 
@@ -267,10 +284,10 @@ If you choose to define entity values by using entity patterns, add at least 15-
 
 <table>
   <tr>
-    <td>Entity type</td>
-    <td>Description</td>
-    <td>Example</td>
-    <td>Supported languages - ISO 639-1code</td>
+    <td><b>Entity type</b></td>
+    <td><b>Description</b></td>
+    <td><b>Example</b></td>
+    <td><b>Supported languages - ISO 639-1code</b></td>
   </tr>
   <tr>
     <td>Time</td>

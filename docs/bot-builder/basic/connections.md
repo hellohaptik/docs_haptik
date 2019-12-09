@@ -5,8 +5,8 @@ title: Connections
 This section will cover the following topics:  
 [What are connections?](#what-are-connections)  
 [Static Node to Static Node Connection Transition](#static-node-to-static-node-connection-transition)  
-[Static Node to Code Node Connection Transition](#static-node-to-code-node-connection-transition) 
-[Code Node to Output Node Connection Transition](#code-node-to-output-node-connection-transition) 
+[Static Node to Code Node Connection Transition](#static-node-to-code-node-connection-transition)  
+[Code Node to Output Node Connection Transition](#code-node-to-output-node-connection-transition)  
 [Output Node to Static Node Connection Transition](#output-node-to-static-node-connection-transition) 
 [Dependent Response](#dependent-response)   
 [Connection Guidelines](#connection-guidelines)   
@@ -15,6 +15,10 @@ This section will cover the following topics:
 
 Connections represent the path a conversation takes from node to node. Depending on the response a user inputs to the bot, they traverse down a different connection to the appropriate next node. Bot builders must modify every connection they create to indicate which user inputs correspond to which nodes.
 
+### Creating Connections?
+You can create a connection between two nodes by clicking on the parent node, holding shift and dragging to the child node as shown below:
+
+![Creating Connections](assets/bot-builder-connections/creating-connections.gif)
 
 ### Static Node to Static Node Connection Transition 
 You might want to transition from one static node to another based on the user's input to branch into a different information collection flow.
@@ -23,7 +27,7 @@ You might want to transition from one static node to another based on the user's
 
 The connections you create can prompt a user to transition from one node to the next in the following three ways:
 
-**1. Basis message input by user:**
+**1. Transition Basis message input by user:**
 
 This is when a conversation moves from one node to another based on a particular keyword/phrase or set of keywords sent by a user.
 
@@ -41,7 +45,7 @@ This is when a conversation moves from one node to another based on a particular
 
     * Responses from 'Previous_Node': This lets you limit the flow of conversation so that a user can only reach the next node if the bot has received a response from the specific preceding node.
 
-**2. Basis a particular entity value**
+**2. Transition Basis a particular entity value**
 
 (a.k.a. a Step Transition): The last type of transition that you can create is where a user may only move to the next node if a user inputs a specific value(s) from within an entity on a node.
 
@@ -53,7 +57,7 @@ This is when a conversation moves from one node to another based on a particular
 
 * Here, you add the entity value and press the enter key on your keyboard. You can add multiple values for this entity.
 
-**3. Basis a particular entity presence**
+**3. Transition Basis a particular entity presence**
 
 When you’ve added an entity to a conversation, you can define the transition from the node with the entity to the next as only being possible if the user has input a response that falls within the entity. This is particularly helpful when you are setting a conversational flow in which a user needs to input something like a phone number or email ID. All values within the entities are accepted, but the bot will be able to determine whether or not the user has input the correct type of value (i.e. a 9 digit number or a complete email address).
 
@@ -66,17 +70,46 @@ When you’ve added an entity to a conversation, you can define the transition f
 
 ### Static Node to Code Node Connection Transition 
 
-Transition from a static node to code node happens automatically once all the required entities are collected.
+Transition from a static node to code node happens automatically once all the required entities are collected. 
+
+However, if the static node is connected to another static node and has a user says or entity based transition and the condition for these transitions get satisfied then the transition will happen to the connnected static node and not the connected node.
 
 ![Static-to-Code Connection](assets/bot-builder-connections/static-to-code.png)
 
 ### Code Node to Output Node Connection Transition 
 
+You can transition from a code node to any output node basis a set of rules/conditions applied on the output JSON from the code node.
+
 ![Code-to-Output Connection](assets/bot-builder-connections/code-to-output.png)
+
+**1. Transition Basis Rules on Output JSON:**
+
+You can apply a combination of rules combined by either `AND` or `OR` to traverse from one node to the other.
+
+You can add rules in the following way:
+
+* Click on the connection between a code node and an output node to open the RHS window.
+* Select the condition combination type as `AND` or `OR`.
+* Next select the variable from the JSON on which you want to add condition. For example, choose the `Salary` field from the JSON output.
+* Next select the conditional operator that you want to apply from the dropdown. For example, choose the operator as `Greater Than`. 
+* Finally enter the value to complete the rule. For example we can enter the value as `25000`. Now the rule becomes `Salary Greater Than 25000` and the node will be traversed whenever this condition is true.
+* You can add another rule using the `+ Add Condition` button from the top menu of the RHS window. 
 
 ### Output Node to Static Node Connection Transition 
 
+You can transition from an output node to a static node based on the user input by using user says based transition.
+
+**1. Transition Basis message input by user:**
+
+This is when a conversation moves from one node to another based on a particular keyword/phrase or set of keywords sent by a user.
+
+* Create a connection fromt the parent node to the child node.
+* Click on the connection linking the two nodes.
+* Add the 'User Says' in the RHS screen shown below.
+
 ![Output-to-Static Connection](assets/bot-builder-connections/output-to-static.png)
+
+
 
 
 ### Connection Guidelines

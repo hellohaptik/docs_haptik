@@ -4,18 +4,20 @@ title: Creating Nodes
 
 On this page, we'll cover the following topics:
 
-[What is a node?](#what-is-a-node)  
-[Different types of nodes](#different-types-of-nodes)  
+[What is a Node?](#what-is-a-node)  
+[Different types of Nodes](#different-types-of-nodes)  
 [Purpose and Subcomponents of Static Node](#subcomponents-of-static-nodes)  
 [Purpose and Subcomponents of Code Node](#subcomponents-of-code-nodes)  
 [Purpose and Subcomponents of Output Node](#subcomponents-of-output-nodes)    
-[Creating a node](#creating-a-node)
+[Creating a Node](#creating-a-node)
 
 ### What is a Node?
 
 **Nodes** are the interlinked building blocks of a bot. Each node acts like a gatekeeper who detects user inputs, sends out appropriate responses, and directs users to the next node. They are the points where conversation converges or diverges basis the information users input to the bot. Nodes are comprised of several important sub-components, which house important pieces of information. Read on in this section to learn more about the significance of the components **User Says, Bot Says,** and **Entities,** and **APIs**.
 
-To jump straight to reading about any of the sub-components of nodes, click on the link below. Otherwise, keep reading below to learn about how to get started creating nodes.
+To jump straight to reading about any of the sub-components of nodes, click on the link in the subcomponents section of any node. 
+
+Otherwise, keep reading below to learn about the different node types and how to get started creating nodes.
 
 ### Different Types of Nodes
 The bot builder tool provides three types of nodes. Each node has a specific purpose and the different nodes can be used together in different combinations based on the use case.
@@ -57,12 +59,12 @@ Additionally, this gives you more power with respect to what you can do with the
 
 The purpose of output node is to take the JSON output from the code node and build dynamic bot says that use parameters from this output in the HSL.
 
-Bot Builders can take advantage of an easy-to-use JSON picker in the dynamic bot says section to build the HSL using parameters from the output JSON.
+Bot Builders can take advantage of an easy-to-use JSON picker in the bot says section to build the HSL using parameters from the output JSON.
 
 ![RHS of Output Ndoe](assets/bot-builder-nodes/output-node.png)
 
 #### Subcomponents
-1. [Dynamic Bot Says](dynamic-bot-says.md)
+1. [Bot Says](bot-says.md)
 
 ### Creating a Node
 

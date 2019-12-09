@@ -178,7 +178,7 @@ We built this feature to -
 1. Help users discover the scope of our bot while an user starts typing
 2. Avoid bot breaks as user selects our suggestion than type a random freeform message.
 
-## Disambiguation
+## Disambiguation (Did you mean? response for user queries)
 
 The power to disambiguate poorly constructed user messages can make bots work 10X better as compared to the traditional bot platforms.  
 
@@ -194,4 +194,12 @@ When we get an ambiguous message from a user on a bot, we send a disambiguation 
 
     Tip: The button options above are different nodes. And this node level copy to be marked on User says. 
 
-Only one User says variant will marked as the copy to shown when a node is chosen as a button option in the disambiguation message. Also note that the `Node name` in Node settings section on a node is the default copy in disambiguation message if bot builders don’t mark any user says on a node. 
+`Did you mean?` response goes as 
+1. Button HSL on Haptik SDK   
+2. Text on WhatsApp   
+3. Voice key in HSL played out
+
+Only one User says variant marked as the copy on a chosen node as a button option in the disambiguation message. Also note that the `Node name` in Node settings section on a node is the default copy in disambiguation message if bot builders don’t mark any user says on a node. 
+
+
+

@@ -16,13 +16,13 @@ Oh no! Your bot’s not working the way you expected it to? Follow this step by 
 
 	There could multiple things going wrong here
 
-	* User says error: User says added on a particular node should be added on another node.
+	* _User says error_: User says added on a particular node should be added on another node.
 
     	* If user query is in the scope of the bot, add independent responses in the desired node to make sure that the node is detected.
 
     	* If user query is out of the scope of the bot, add negative responses in the detected node to make sure the node is not detected for this user says next time.
 
-	* Connections error: User transitioned from Node A to a start node instead of moving to connected Node B. This happens because B was not a start node 
+	* _Connections error_: User transitioned from Node A to a start node instead of moving to connected Node B. This happens because B was not a start node 
 
  
 
@@ -36,9 +36,9 @@ Oh no! Your bot’s not working the way you expected it to? Follow this step by 
 
 	When entities are not detected on a node - 
 
-	* For local entities with entity values - Check if the right values are populated in the entity dictionary on the detected node.
+	* For _local entities_ with entity values - Check if the right values are populated in the entity dictionary on the detected node.
 
-	* For system entities - Check if the entity is present on the detected node. 
+	* For _system entities_ - Check if the entity is present on the detected node. 
 
     	* If it is not present, add it to the node.
 
@@ -48,7 +48,8 @@ Oh no! Your bot’s not working the way you expected it to? Follow this step by 
 
 	When wrong entity is detected, check if the right entity is present on the detected node.
 
-	In any of the cases mentioned above, the following information / concepts might be useful while building debugging guidelines
+
+In any of the cases mentioned above, the following information / concepts might be useful while building debugging guidelines
 
 ![Debug Debug Chart](assets/debug_flow_chart.png)
 

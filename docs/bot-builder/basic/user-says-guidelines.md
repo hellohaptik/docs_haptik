@@ -10,7 +10,7 @@ By the end of this section, you will learn how you can train a bot to understand
 
 User says are the inputs from the user that the assistant needs to interpret the user’s goal. it is important to add and train the bot with a variety of different sample user says for each node, so that the bot can identify the correct intents and extract entities from the user utterance.
 
-Whenever a user sends a message, we try to understand what the User is trying to say using various Machine Learning algorithms and find the corresponding node. One of the key modules which is used for node identification is intent detection module, which is a suit of many ML algorithms that help in finding the right node.
+Whenever a user sends a message, we try to understand what the User is trying to say using various Machine Learning algorithms and find the corresponding node. One of the key modules which is used for node identification is intent detection module, which is a suit of many Machine Learning algorithms that help in finding the right node.
 
 For example, if you want a node to get detected when a user says "Status of my complaint", then you should add variations of the utterance in the user says section on that node.
 
@@ -22,7 +22,7 @@ For example, if you want a node to get detected when a user says "Status of my c
 
 
 
-### **Things that affect User Says**
+### **Things that improve accuracy of Node detection**
 
 * Add a minimum of 10 variations to increase the accuracy of node detection. If you have any node with one or very few example utterances, the system will not be able to accurately detect the node. This is especially important when you have multiple nodes that are very close in their meaning.
 
@@ -380,7 +380,7 @@ Depending on how and when you want your node to get detected, there are 2 types 
 
 If you created a Start Node to get detected at the beginning of a conversation, then you would add the corresponding user responses for the node under this category.
 
-*IMPORTANT: Independent responses are available only on a Start Node. User says section will be disabled on non-start nodes.*
+> *IMPORTANT: Independent responses are available only on a Start Node. User says section will be disabled on non-start nodes.*
 
 For example, in a lead gen bot as below, we would add the following User Responses on the "Show Services" node and “About Demat Account”.
 
@@ -466,7 +466,7 @@ All the above are their own **nodes** in our system, with their corresponding in
 
 ### **Best practices for building the bot** 
 
-### **DOs**
+#### **DOs**
 
 * **Define distinct intent**
 
@@ -508,7 +508,7 @@ All the above are their own **nodes** in our system, with their corresponding in
 
   If a non-english word occurs less than 3 times in the whole bot, we'll consider it to be a spelling mistake
 
-### **DONTs**
+#### **DONTs**
 
 * **Expansion of scope of intent**
 
@@ -588,8 +588,8 @@ All the above are their own **nodes** in our system, with their corresponding in
 
   <table>
     <tr>
-      <td>Wrong </td>
-      <td>Right </td>
+      <td><b>Wrong</b></td>
+      <td><b>Right</b></td>
     </tr>
     <tr>
       <td>thanx | thankss | thankks</td>
@@ -633,7 +633,7 @@ All the above are their own **nodes** in our system, with their corresponding in
 
 > *Tip:*
 >  
->  *Smalltalk can handle general chit-chat with the user. Bot builder can now edit bot says in Smalltalk to be bot specific content. Intents such as Greetings, User upset, user dropout are already present in Smalltalk.*
+>  *Smalltalk can handle general chit-chat with the user. Bot builders can now edit bot says in Smalltalk to include bot specific content. Intents such as Greetings, User upset, user dropout are already present in Smalltalk.*
 >  
 >  *Send a note to Platform support if any intent is missing or content needs to be edited.*
 

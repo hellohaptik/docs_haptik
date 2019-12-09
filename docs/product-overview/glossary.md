@@ -2,13 +2,9 @@
 
 **API** - A software intermediary that allows two applications to communicate. In the context of Mogambo, bot builders can use APIs to connect data from another application to a chat flow. 
 
-**Button** - One possible bot reply format. A button represents a single task in a *taskbar* (see more information below) that bots can deploy to prompt users to navigate in one of several directions. Looks like this: 
+**Button** - One possible bot reply format. A button represents a single task that bots can deploy to prompt users to navigate in one of several directions. 
 
-![demo_buttons](demo_buttons.png)
-
-**Carousel** - Another possible bot reply format. A carousel is comprised of a set of selections a user may make, presented in a horizontal scroll format. Each item is enabled with an icon to give bot builders the opportunity to supplement the selection list with more detail. A carousel is usually used to prompt users to make a selection of some sort (such as the hotel they’d like to book, the destination they’d like to visit, etc). Looks like this: 
-
-![demo_carousel](demo_carousel.png)
+**Carousel** - Another possible bot reply format. A carousel is comprised of a set of selections a user may make, presented in a horizontal scroll format. Each item is enabled with an icon to give bot builders the opportunity to supplement the selection list with more detail. A carousel is usually used to prompt users to make a selection of some sort (such as the hotel they’d like to book, the destination they’d like to visit, etc). 
 
 **Chat Bubble** - The bubble in which a bot reply is shown. 
 
@@ -41,15 +37,13 @@ When a user sends a message to your bot, our pipeline identifies keywords in the
 
 **Quick Reply** - Another possible bot reply format. Quick replies are a limited selection of preset user responses presented by the bot that the user can tap to choose from. Looks like: 
 
-![demo_quickreply](demo_quickreply.png) 
-
 **Story** - Stories are major tasks that usually align with the overall goals of the chatbot. 
 
 **Sub-story** - Sub-stories are the smaller tasks that help accomplish the broader story goals. 
 
 **Supervised Learning** - A machine learning process in which a system is presented with a dataset containing inputs and desired outputs that are classified into these two categories. After a certain amount of time spent observing the correlation between the inputs and outputs, the system develops an algorithm that defines the relationship between the inputs and outputs and allows it to classify inputs into categories in the future. 
 
-**Task Box** - A box of main tasks a particular bot can help a user with. Bot builders can design their chatbot to always give users acccess to the task box, which will appear as an icon in the bottom left-hand corner of the chat interface. 
+**Taskbox** - A box of main tasks a particular bot can help a user with. Bot builders can design their bot to always give users access to the `Taskbox`, which will appear as an icon in the bottom left-hand corner of the chat interface. 
 
 **User Flow** - The path a user takes to perform a certain task. Often associated with a certain persona and/or entry point. There are often several paths users can take to accomplish the task.
 

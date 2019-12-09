@@ -47,13 +47,9 @@ Business Name: This refers to the overarching topic of its conversational capabi
 
 ![Channels List](assets/4_channel_list_view.jpg)
 
-- Active Partners: Businesses can be activated or deactivated for various partners, as per what you select here
-
-- Active Cities: Businesses can be activated or deactivated for various cities, in case you’d like to create geographically targeted clusters of bots. This field is applicable for Android/iOS SDKs only
+- Partners: Businesses can be activated or deactivated for various partner(s), as per what you select here
 
 - Default Team: You can configure the default team for this bot here. Team is a group of agents who get assigned chats from this bot. You can read about Teams on our [Live agent tool documentation link](https://docs.haptik.ai/agent-chat/)
-
-- Enable OTP Verification: Clicking on this box means users must be OTP verified to enter the channel. This field is applicable for Android/iOS SDKs only
 
       Business | Channel | Via Name are all same.
 
@@ -87,10 +83,6 @@ Check the list of customizable settings below.
 
 - Upload Business Icon: When there are multiple Businesses clustered together in a partner in a homescreen, you can assign each Business an icon. Upload that icon here
 
-- Make this Business Active/Archived: To make this Business live on a Partner, check off Make this Business Active. If you want to temporarily make the Business inactive on the partner, select Make this Business Archived
-
-- Make this Business Sponsored: This is an app specific feature, wherein we show a sponsored text below the business icon on the native app screen. It’s how an user will be able to differentiate between sponsored (adverts) and non-sponsored businesses
-
 - Hide Haptik branding on the SDK: Tick this off to hide the _powered by Haptik_ branding across this business
 
 - Taskbox: The taskbox that will appear for each Business can be customized to the Business’s various partners. Select Add Tasks to start adding tasks to the Business’s taskbox on a particular partner. A modal with a list of all the tasks associated with the Business will appear; select the tasks you want to make live on a particular partner. Exit the modal
@@ -113,15 +105,7 @@ When the editing fields open, you’ll need to fill out the following informatio
 - Task Title: Give the task a label. This is what will show up on the actual task button
   User Says: When the user taps on a task, a user says message is generated and sent in tandem. Enter what the user says associated with this task will be in this field
 
-- Live Cities: Indicate if this task should be live globally or only in certain geographies. This is applicable for Android/iOS SDKs only
-
-- Shorthand: This field is to be deprecated. This is applicable for Android/iOS SDKs only
-
-- Visible on Fab Button: The fab button is a shortcut visible at a partner level (i.e. where several Businesses are clustered together) that lists key tasks from each Business. Check off this box if the task you’re creating should be added to the fab button. This is applicable for Android/iOS SDKs only
-
 - Visible on Task Box: Check this box to make this task active on the taskbox associated with this channel. If you want to deactivate a task at any point, uncheck this box, and it will be removed from the taskbox
-
-- Location Required: Enabling this box will require users to input their location to move ahead with the task. This is applicable for Android/iOS SDKs only
 
 Click Save. You’ve created a task! If you make any changes in Taskboxes, it will take 30-60 mins to reflect.
 

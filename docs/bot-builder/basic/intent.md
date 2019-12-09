@@ -10,25 +10,25 @@ For example:
 
 <table>
   <tr>
-    <td>Intents</td>
-    <td>Example user utterances</td>
+    <td><b>Intents</b></td>
+    <td><b>Example user says</b></td>
   </tr>
   <tr>
     <td>Book_flight</td>
-    <td>"I want to book a flight to Delhi next week"
-"I would like to purchase a plane ticket to Singapore for Friday"
+    <td>"I want to book a flight to Delhi next week"<br />
+"I would like to purchase a plane ticket to Singapore for Friday"<br />
 "Book a flight to Srilanka on Nov 24"</td>
   </tr>
   <tr>
     <td>Reschedule_flight</td>
-    <td>"I need to reschedule my flight to Mumbai from Nov 28 to Dec 1"
-“Reschedule flight to Delhi to next week” 
+    <td>"I need to reschedule my flight to Mumbai from Nov 28 to Dec 1"<br />
+“Reschedule flight to Delhi to next week”<br />
 “I have to change travel date from 30 Nov to 5 Dec”</td>
   </tr>
   <tr>
     <td>Play_content</td>
-    <td>“Play harry potter on Netflix”
-“I want to watch Mission Impossible”
+    <td>“Play harry potter on Netflix”<br /> 
+“I want to watch Mission Impossible”<br /> 
 “On Hotstar play Avengers”</td>
   </tr>
 </table>

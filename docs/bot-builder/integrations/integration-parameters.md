@@ -75,6 +75,44 @@ These parameters are passed as request data to the API integrations and are pass
 
 **4. user** - Dictionary containing user data
 
+User data will be available across bots and businesses as long as the underlying user is the same in the database. 
+The dictionary contains following parameters:
+
+**user_name**: user_name of the user in Haptik's system
+
+**full_name**: full_name of the user
+
+**device_platform**: device platform of the user. Please find the mappings below:
+
+| Device Platform     | Type    | 
+| -------- | ------- | 
+| 0 |  Android App  | 
+| 1 |  IOS App  | 
+| 2 |  Android SDK  | 
+| 3 |  Facebook  | 
+| 4 |  Jio  | 
+| 5 |  Web SDK  |
+| 6 |  IOS SDK  |  
+| 7 |  Skype  | 
+| 8 |  Alexa  | 
+| 9 |  Voice  |
+| 10 |  Twilio  | 
+| 11 |  Kookoo  | 
+| 12 |  Phonecom  | 
+| 13 |  Webhook  | 
+| 14 |  Whatsapp  | 
+| 15 |  Jio Chat Connector  | 
+| 16 |  Haptik IVR  | 
+| 17 |  ISON  |
+| 18|  JIO IVR  |  
+
+**language_code**: Current Language of the User
+
+**auth_id**: Authentication ID, unique identifier of the user if passed via SDK else empty
+
+**auth_code**: Authentication Code, if AuthInfo is present else empty string
+  
+
 **5. conversation_no** - Identifier for the current conversation of the user with this Business
 
 **6. conversation_details** - Conversation details stores the current context of the conversation.Things like insurance number or product id which are the current scope of the conversation will go under conversation details. 

@@ -32,7 +32,7 @@ For example, if you want a node to get detected when a user says "Status of my c
 Consider the following sentence structures - 
 
 
-* **Length of user says** - Add the sentence with context. Do not add fragments without context.
+* **Length of user says** - Add the sentence with context. Do not add [Fragments](#fragments) without context.
 
     <table>
       <tr>
@@ -86,7 +86,7 @@ Consider the following sentence structures -
 
 
 
-* **Position of the entity in user says** - Add variations where entities are placed at the beginning or middle or end of the user utterance
+* **Position of the entity in user says** - Add variations where [entities](entities#what-is-an-entity) are placed at the beginning or middle or end of the user utterance
 
     <table>
       <tr>
@@ -131,24 +131,29 @@ Consider the following sentence structures -
 
 ### **Entity Tagging**
 
-As long as one entity value is tagged in the user says, the system will automatically define alternative values. This identification of entities will be done by itself. If you wish to collect these entities in the user says for use later on, use context entities. TBD: Use when you have infinite variations of a particular entity (Movie names, song names etc)
+With the feature entity tagging in user says, bot builders no longer have to add similar variations in the user says with all the entity values mentioned in the entity dictionary. 
+
+Instead, they have to enter one user says variation with the entity value. The entities get tagged in the user says if they are added to the dictionary. 
+
+#### **How does this work?**
+Our system auto-tags entities in the user says, if the entity values are populated in the entity dictionary. 
+
+As long as one entity value is tagged in the user says, the system will automatically define user says variations with other entity values. 
+
+If you have infinite variations of a particular entity (Movie names, song names etc) and wish to collect these entities in the user says, use [free-text entities](entities#free-text-entities).
 
   <table>
     <tr>
-      <td>play harry potter on Netflix</td>
+      <td>play <b>harry potter</b> on <b>Netflix</b></td>
     </tr>
     <tr>
-      <td>play harry potter on Hotstar</td>
+      <td>play <b>harry potter</b> on <b>Hotstar</b></td>
     </tr>
     <tr>
-      <td>play harry potter on Jio Cinema</td>
+      <td>play <b>harry potter</b> on <b>Jio Cinema</b></td>
     </tr>
   </table>
-
-
-With the feature entity tagging in user says, bot builders no longer have to add similar variations in the user says with all the entity values mentioned in the dictionary. 
-
-Instead, they have to enter one user says variation with the entity value. The entity get auto tagged in the user says if they are added to the dictionary.  
+ 
 
 
 > **_IMPORTANT_**
@@ -176,7 +181,7 @@ If you notice these utterances, the only difference is "buy" and “purchase” 
 
 To simplify and reduce the effort of generating such user says where a common set of words with the same meaning are needed, you can enable synonyms for specific words in the bot.
 
-> **Tip**: _Tip: Dotted Blue Underline means synonyms are available. Solid Blue underline means Synonyms for that word have been enabled in the Bot._
+> **Tip**: _Dotted Blue Underline means synonyms for the word is available, but not enabled on the bot. Solid Blue underline means synonyms for that word is enabled on the Bot._
 
 #### View Synonyms
 
@@ -529,7 +534,7 @@ All the above are their own **nodes** in our system, with their corresponding in
     </table>
 
 
-* **Fragments**
+* **<a name="fragments">Fragments</a>**
 
   User says should refer to an action or request. Should not be partial fragments. Partial or incomplete phrases decrease the chance of user getting a relevant bot response. We’d want a bot builder to add full sentences as User says, so our classifier understands the correct intent on a node. And in cases when there are similar intents on a bot, our disambiguation feature should handle ambiguous user queries. Read more on disambiguation later in this guide. 
 

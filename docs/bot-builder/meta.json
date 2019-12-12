@@ -41,9 +41,7 @@
 		"Advanced": [
 			"advanced/integrating-webviews-into-sdk",
 			"advanced/integrating-with-external-bot",
-			"advanced/debugging-guidelines",
-			"advanced/migration-guide",
-			"advanced/nlu-change-log"
+			"advanced/debugging-guidelines"
 		]
 	},
 	"headerLink": {

@@ -26,7 +26,7 @@ In bots on `Superman V2.0`, Graph nodes and General (FAQ) nodes are at the same 
 
 ## Domain General Nodes vs Story General Nodes
 
-    Story general nodes is deprecated.
+   > Warning: Story general nodes is deprecated.
 
 In the new pipeline i.e. V2.0, Domain General nodes, Bot General nodes and FAQ nodes are same. We have repurposed General nodes as a whole to `FAQ nodes`. 
 

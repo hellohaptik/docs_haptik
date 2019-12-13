@@ -89,6 +89,10 @@ then what you should do is:
     * how
     * good
 
+**We strongly advice you to prefer solving the problem by adding variations
+ in user-says than by adding variations in negative-response. Irrespective,
+  the number of sentences in your user says should be at least 2-3 times
+   higher than the number of sentences in negative-response**
 
 #### **Disambiguate message**
 

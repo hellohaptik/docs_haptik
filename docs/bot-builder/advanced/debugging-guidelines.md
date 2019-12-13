@@ -53,6 +53,43 @@ In any of the cases mentioned above, the following information / concepts might 
 
 ![Debug Debug Chart](assets/debug_flow_chart.png)
 
+
+
+
+**Debugging Example**
+
+Lets say you have a node which has following sentences:
+
+* Benefits of SIP
+* SIP's benefits
+* tell me about benefits of SIP
+
+And while you were testing your bot, following testing
+ guidelines, you found out that the bot is giving false
+  positives for following sentences:
+
+* Benefits of bvdfbv fjdb
+* cricket's benefits
+* benefits
+
+then what you should do is:
+
+* Add variations of your sentence with different sentence
+ structure + different words with the sentence meaning the same, Eg:
+    * Tell me about the advantages of SIP
+    * how will i benefit with SIP
+    * How is SIP beneficial
+    * Good things about SIP
+    * I’ve heard SIP is good. Can you tell me how?
+
+* Add negative variations in negative response, Eg:
+    * Bhdcbdhvb SIP
+    * SIP
+    * Benefits njvjdfvnj jnvjdfvjfv SIP SIP
+    * how
+    * good
+
+
 #### **Disambiguate message**
 
 How you see the Node list for a user’s message (clicking "*Log*" icon on image above), the bot builder would be able to see all nodes considered for disambiguation message and their specific metadata in “*Log”* view. 

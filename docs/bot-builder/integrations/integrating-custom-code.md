@@ -115,6 +115,7 @@ You can use standard python logging library inside the code editor. See the belo
 
 ```python
 import  json
+import logging
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 

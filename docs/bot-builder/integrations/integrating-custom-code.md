@@ -3,7 +3,7 @@ title: Integrating Custom Code
 ---
 
 ## Node Integrations
-Another way to use the entities collected and run some buisness logic on them by using custom python code.
+Another way to use the entities collected and run some business logic on them by using custom python code.
 
 
 ### Custom Code
@@ -110,6 +110,20 @@ six-1.12.0
 unicodecsv-0.14.1 
 urllib3-1.25.3
 
+### Logger support in Code Executor
+You can use standard python logging library inside the code editor. See the below snippet for reference
+
+```python
+import  json
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
+
+def main(event, context):
+    final_response = {'status': True}
+    logger.info(final_response)
+    response = {'statusCode': 200, 'body': json.dumps(final_response), 'headers': {'Content-Type': 'application/json'}}
+    return response
+```
 
 ### Live Testing your Code
 The full screen code editor allows you to live test your code with a configurable input. This will help you evaluate if your code is working as expected.

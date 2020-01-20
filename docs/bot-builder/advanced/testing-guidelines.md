@@ -25,4 +25,4 @@ Example: If sentence is "Benefits of SIP", then test your bot on:
     * cricket benefits (Gibberish/noise + Phrase)
     * benefits (Phrase)
     
-Solve any of the issues you encounter using debugging guidelines.
+Solve any of the issues you encounter using [debugging guidelines](https://docs.haptik.ai/bot-builder/advanced/debugging-guidelines).

@@ -19,7 +19,8 @@ Like every Software Product follows a [Software Development Life Cycle](https://
      which is a development technique where you must first write a test
       that fails before doing any new development.
 
-    Once you have a reasonably sized Test set, you can move to the next step. Checkout the Testing Guidelines to see
+    Once you have a reasonably sized Test set, you can move to the next step. Checkout the
+    [Testing Guidelines](https://docs.haptik.ai/bot-builder/advanced/testing-guidelines) to see
      how you can prepare test cases.
 
 > **_Pro Tip -_**
@@ -30,8 +31,8 @@ Like every Software Product follows a [Software Development Life Cycle](https://
 
 2. **Development**
 
-    * Add user says, following user-says guidelines, preferably for max
-     2-3 nodes together at a time or those nodes which are related to each
+    * Add user says, following [user-says guidelines](https://docs.haptik.ai/bot-builder/basic/user-says-guidelines),
+     preferably for max 2-3 nodes together at a time or those nodes which are related to each
       other
 
     * Test on the test set which you had created earlier in addition to

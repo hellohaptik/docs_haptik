@@ -12,25 +12,17 @@ Oh no! Your bot’s not working the way you expected it to? Follow this step by 
 
 	Example scenarios - The bot was detected successfully or no active bot was detected, thus default bot was selected No active bot was detected and no default bot was configured. Thus, the fallback bot was selected.
 
-2. **Wrong Node** detected
+2. **Wrong Node** or **No Node** detected
 
-	There could multiple things going wrong here
+	There could be multiple things going wrong here
 
-	* _User says error_: User says added on a particular node should be added on another node.
+	* _User says error_: You should be able to solve all Intent Detection issues following the given flow-chart 
 
-    	* If user query is in the scope of the bot, add independent responses in the desired node to make sure that the node is detected.
-
-    	* If user query is out of the scope of the bot, add negative responses in the detected node to make sure the node is not detected for this user says next time.
+    	![Intent Detection Bug](assets/debug_intent_detection.png)
 
 	* _Connections error_: User transitioned from Node A to a start node instead of moving to connected Node B. This happens because B was not a start node 
-
  
-
-3. **No Node** detected 
-
-	In cases where no node is detected, chances are that the right node does not have variation that matches the user says. Add the user says to the relevant node and if you want the node to be detected on a new user message, make the node a start node.
-
-4. **No Entity** detected 
+3. **No Entity** detected 
 
 	![Wrong Entity Detected](assets/debug_no_entity.png)
 
@@ -44,7 +36,7 @@ Oh no! Your bot’s not working the way you expected it to? Follow this step by 
 
     	* If it is present and entity was not detected, reach out to ML support.
 
-5. **Wrong Entity** detected 
+4. **Wrong Entity** detected 
 
 	When wrong entity is detected, check if the right entity is present on the detected node.
 

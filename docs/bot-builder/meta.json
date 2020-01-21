@@ -41,6 +41,8 @@
 		"Advanced": [
 			"advanced/integrating-webviews-into-sdk",
 			"advanced/integrating-with-external-bot",
+			"advanced/development-guidelines",
+			"advanced/testing-guidelines",
 			"advanced/debugging-guidelines"
 		]
 	},

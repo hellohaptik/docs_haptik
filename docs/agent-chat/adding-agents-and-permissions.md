@@ -3,11 +3,11 @@ title: Adding Agents & Permissions
 ---
 
 ## Features
-All our functionalities are linked to a feature, if the feature is allocated to a user, the functionality is accessable.
+All our functionalities are linked to a feature, if the feature is allocated to a user, the functionality is accessible.
 
 ## Permission Groups
 
-A combinition of these features is what we term as 'Permission Groups'
+A combination of these features is what we term as 'Permission Groups'
 
 Agents can be assigned these 'Permission Groups' via the haptik administrator. By default we have two configured '**Permission Groups**' for clients, namely:
 
@@ -36,7 +36,7 @@ Agents can be assigned these 'Permission Groups' via the haptik administrator. B
 
 These features could be added to a client specific permission group, if requested or required.
 
-	- can add canned responses (pre-defined replies that agents could use)
+	- can add canned responses (predefined replies that agents could use)
 	- can add external tools
 	- will receive daily expert performance csv via mail
 
@@ -58,7 +58,7 @@ These features could be added to a client specific permission group, if requeste
 
 ### Step 3: Click *Add Agent* tab
 
-On select you will see the below screen shot where you can start entering agent information.
+On select you will see the below screenshot where you can start entering agent information.
 
 ![Adding Agent](assets/add_agent.png)
 
@@ -94,13 +94,13 @@ An example of the agent image appearing on our JS-SDK (javascript software devel
 
 ![Chat bot with profile](assets/chat_bot_with_profile.png)
 
-You can choose to skip above step for later.
+You can choose to skip the above step for later.
 
-**Note:** Initial image will be optionaly uploaded by the lead, updating the image is handled directly from individual agent profile pages.
+**Note:** Initial image will be optionally uploaded by the lead, updating the image is handled directly from individual agent profile pages.
 
 #### Option 2: Using profile page
 
-An agent can access his user profile page by simply clicking on 'User Profile' as in below screen shot of our live chat tool.
+An agent can access his user profile page by simply clicking on 'User Profile' as in below screenshot of our live chat tool.
 
 ![Chat bot with profile](assets/how_to_access_profile.png)
 

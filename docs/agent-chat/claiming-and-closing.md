@@ -28,21 +28,21 @@ The priority value and presence in ‘Team Queue’ or individual ‘Agent queue
   - **If Bot breaks and agent-assistance is disabled for business** then the Bot break message or the outlier message as defined in business config is sent as a message by the bot
 - Previously assigned agent
   - If the agent is ‘online’ or ‘offline’, then the chat is added to the agent's queue.
-  - If the agent is 'away', the chat is treated as a fresh conversation.
+  - If the agent is 'away' or logged out, the chat is treated as a fresh conversation.
 
 > While these Queues are maintained in our Backend, conversation assignment for a particular agent is handled based on Activities performed on Athena by said agent.
 
 
 ## Chat assignment
-The folowing section covers how an agent is assigned a chat on the agent chat tool. 
+The following section covers how an agent is assigned a chat.
 
 > Once the chat is assigned to an agent, the user can see the handover to the agent on the SDK UI. <br/><br/>
 ![all_custom_tools](assets/sdk_claim.png)
 
 
 ### Base Rules
-- If a conversation is waiting on user or the user does not reply for 8 minutes, we automatically mark that conversation as completed due to user inactivity.
-- A fresh message from an exisiting user would result in a new conversation
+- If a conversation is waiting on user or the user does not reply for 8 minutes, we automatically mark that conversation as completed due to user inactivity
+- A fresh message from an existing user would result in a new conversation
 - Currently we allow a maximum of **3 chats** (default value) to be handled simultaneously per agent. We can change this value to anything between 1-5 per agent.
 
 ### Automatic Chat assignment
@@ -50,8 +50,8 @@ Agent chat tries assigning a chat automatically based on the following parameter
 - On login or switching to ‘online’
 - Every time an agent marks a chat as ‘Complete’
 - Every time an agent marks a chat as ‘Waiting for User’
-- If the agent has less than 3 chats (default value), the chat is requested by the agent every 10 seconds (default global value, modification not in dev pipeline)
-- If the agent has more than 3 chats (default value), then the platform doesn't request for more chats till the agent has less than 3 concurrent chats. **
+- If the agent has less than 3 chats (configurable value), the chat is requested by the agent every 10 seconds (default global value, modification not in dev pipeline)
+- If the agent has more than 3 chats (configurable value), then the platform doesn't request for more chats till the agent has less than 3 concurrent chats**.
 
 > <b> ** </b> If the agent has some chats in waiting then the chat is put back in the agent's chat queue
 
@@ -78,15 +78,9 @@ If the chat is assigned to a team, then the chat will first get assigned to the 
   ![all_custom_tools](assets/claim_5.png)
   <br/><br/>
 
-- A right hand side drawer should popup allowing you to assign a chat either to yourself, to a team or to an individual agent
-  
-  ![all_custom_tools](assets/claim_3.png)
+- A right hand side drawer should popup allowing you to assign a chat either to yourself, to a team or to an individual agent.
   <br/><br/>
-
-- To assign, simply tap on the button relevant button. It should assign the chat to that entity.
   
-  ![all_custom_tools](assets/claim_4.png)
-  <br/><br/>
 
 ## Closing & Completing Chats
 When an agent has completed a chat, the chat is marked complete and the chat is closed. This process can happen automatically or the chat agent can manually close a chat.
@@ -95,8 +89,8 @@ When an agent has completed a chat, the chat is marked complete and the chat is 
 
 ### Automatic Closing of Chats
 Chats are automatically closed if:
-- Chats assigned to the agent which are currently in waiting when the agent logs out.
-- No messages are exchanged between the agent and the user and the chat is either with the bot or is in waiting for user state for **8 minutes**
+- Chats assigned to the agent which are currently in waiting when the agent logs out
+- No messages are exchanged between the agent and the user and the chat is either with the bot or is in waiting for user state for **8 minutes**.
 
 ### Manual Closing of Chats
 Chats can be manually marked complete
@@ -140,7 +134,7 @@ When an agent marks a chat as complete. The agent can add some *completion notes
 ![all_custom_tools](assets/chat_disposition_2.png)
 <br/><br/>
 
-Custom chat dispositions can be configured in the business settings under the business page. More on that [here]()
+Custom chat dispositions can be configured in the business settings under the business page.
 
 This chat disposition data is shown as a part of the chat history when viewing the chat on the businesses/teams pages.
 <br/><br/>

@@ -28,7 +28,7 @@ The priority value and presence in ‘Team Queue’ or individual ‘Agent queue
   - **If Bot breaks and agent-assistance is disabled for business** then the Bot break message or the outlier message as defined in business config is sent as a message by the bot
 - Previously assigned agent
   - If the agent is ‘online’ or ‘offline’, then the chat is added to the agent's queue.
-  - If the agent is 'away' or logged out, the chat is treated as a fresh conversation.
+  - If the agent is logged out, the chat is treated as a fresh conversation.
 
 > While these Queues are maintained in our Backend, conversation assignment for a particular agent is handled based on Activities performed on Athena by said agent.
 

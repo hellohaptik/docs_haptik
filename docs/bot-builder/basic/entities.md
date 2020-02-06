@@ -273,7 +273,7 @@ have infinite number of possibilities that need to be added to the entity dictio
 
 ![Free-text Entity - Add Tag](assets/bot-builder-user-says/free_text_entity_add_tag.png)
 
-4. If you are adding <a href="#Negative examples">Negative examples</a> (See Guidelines)then don't tag anything.
+4. If you are adding <a href="#negative-examples">Negative examples</a> (See Guidelines) then don't tag anything.
 
 For example, you might go to the #play_content node, and find a user says, ‘Play harry potter on Hotstar’. You can tag ‘harry potter’ as a mention of the @content entity.
 
@@ -285,7 +285,7 @@ For example, the user input might include the utterance, ‘Play matrix reloaded
 
 When a context based entity model is used for an entity, model does not look for exact text or pattern matches for the entity in the user input, but focuses instead on the context of the sentence in which the entity is mentioned.
 
-The entities that are tagged in the ‘Entity Patterns’, get auto-tagged in the user says section of the node.
+​	The entities that are tagged in the ‘Entity Patterns’, get auto-tagged in the user says section of the node.
 
 ![Free-text Entity Auto Tag](assets/bot-builder-user-says/free_text_entity_usersays.png)
 

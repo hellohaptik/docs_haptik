@@ -273,6 +273,8 @@ have infinite number of possibilities that need to be added to the entity dictio
 
 ![Free-text Entity - Add Tag](assets/bot-builder-user-says/free_text_entity_add_tag.png)
 
+4. If you are adding <a href="#Negative examples">Negative examples</a> (See Guidelines)then don't tag anything.
+
 For example, you might go to the #play_content node, and find a user says, ‘Play harry potter on Hotstar’. You can tag ‘harry potter’ as a mention of the @content entity.
 
 For training purposes, the term you tagged, ‘harry potter’, is added as a value of the @content entity dictionary.
@@ -289,7 +291,8 @@ The entities that are tagged in the ‘Entity Patterns’, get auto-tagged in th
 
 If you choose to define entity values by using entity patterns, then you can follow certain guidelines to ensure better performance.
 
-### **Guidelines for training data**
+#### **Guidelines for training data**
+
 There are two things needed for training a model - 
 **Training patterns(User utterances)** for training the model. Minimum 10 sentences.
 Eg  - `I want to buy apples`,  `I need to purchase apples.` 
@@ -297,27 +300,39 @@ Eg  - `I want to buy apples`,  `I need to purchase apples.`
 **Entity Examples** - A list of examples for each entity . Minimum 10 examples.
 Examples - **Grocery_item**: `Guava juice`, `apples`, `ashirwaad atta`
 
-## **Training patterns**
+##### **Training patterns**
+
 1. Longer Sentences 
-Enables model to perform better on paraphrases. Example - 
-`tell me apple price on bigbasket` instead of `apple price on bigbasket`
-What is the price of apple today?  instead of price of apple
+  Enables model to perform better on paraphrases. Example - 
+  `tell me apple price on bigbasket` instead of `apple price on bigbasket`
+  What is the price of apple today?  instead of price of apple
+
 2. Variety in usage of synonyms especially verbs.
-Examples -  
-If `I want to buy apples` is already present 
-`I need to purchase apples` is better than  `i want to purchase apples`. You can add the latter too if you want.
+  Examples -  
+  If `I want to buy apples` is already present 
+  `I need to purchase apples` is better than  `i want to purchase apples`. You can add the latter too if you want.
+
 3. Try and vary the position of the entity across sentences in training data
-Prevents the model from getting biased towards a particular position
-Examples -  
-`I would like 2 packets of cow milk` - *entity in the end*.  
-`Help me purchase some bananas from that shop` - *entity in middle* 
+  Prevents the model from getting biased towards a particular position
+  Examples -  
+  `I would like 2 packets of cow milk` - *entity in the end*.  
+  `Help me purchase some bananas from that shop` - *entity in middle* 
+
 4. Spelling errors in the training data are harmful.
 
 5. Number of sentences should increase if context of model expands  
-For example in *Grocery Shopping*, if context is limited to `buying grocery` then 10 sentences like `I want to buy apples` are fine.
-But if context expands to say `information about items` in addition to `buying grocery` then add at least 10 - 15 more variations like  `price of butter` or `What is the price of apple on grofers?`
+  For example in *Grocery Shopping*, if context is limited to `buying grocery` then 10 sentences like `I want to buy apples` are fine.
+  But if context expands to say `information about items` in addition to `buying grocery` then add at least 10 - 15 more variations like  `price of butter` or `What is the price of apple on grofers?`
 
-## **Entity examples**
+6. <h6>Negative examples</h6> You can add negative training data as well.
+
+  - These examples are used to make the model more robust to some confusing cases.
+  - Cases where the example might be similar to the training patterns is some aspects, but the desired entity is absent.
+  - Here the model will end up giving false positives.
+  - This can be solved by adding negative examples.
+
+##### **Entity examples**
+
 This is a list of examples for each entity. This list is used to multiply data while training. For eg. If you have the following training examples.
 
 | SENTENCE                                     | GROCERY_ITEM |
@@ -344,10 +359,11 @@ Guava juice(2 tokens), Cadbury dairy milk silk(4 tokens)
 2. Sometimes it ends up happening that all of the examples are non english words. Try to prevent this.
 For example in case of person name detection, if all the names seen by the model are non-english, it will get biased towards non-english words.
 
-## **Work around on failures**
+#### **Work around on failures**
 
 If a corner case occurs and your system fails. 
 You should take the following steps.
+
 1. Add that data point to your training data.
 2. Add some paraphrases of that data point.  
 
@@ -372,6 +388,13 @@ Now system handles all the followig examples too.
 | where to get vanilla ice cream from?     |
 | where can in buy vanilla ice cream from? |
 
+##### **Negative Examples**
+
+Negative examples are useful in case the system detects something it shouldn't have.
+
+For example - If a model trained to detect  person names from questions like `Who is virat kohli?` detects `machu pechu` as name from `What is machu pechu?`.
+
+**To solve this just add `What is machu pechu?` in the entity patterns and don't tag anything**
 
 ### **Entity types and language support**
 

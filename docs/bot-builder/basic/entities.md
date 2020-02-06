@@ -252,15 +252,24 @@ When you define a free-text entity, a model is trained on both the tagged term a
 
 ![Free-text Entity English](assets/bot-builder-user-says/free_text_entity_en.png)
 
-Free-text entity tags can be added to Indic languages as well. We currently support 8 Indic languages (Hindi, Gujarati, Marathi, Tamil, Telugu, Kannada, Malayalam, Bengali)
+Free-text entity tags can be added only in English for now.
 
 ![Free-text Entity Hindi](assets/bot-builder-user-says/free_text_entity_hi.png)
 
-Entities such as person_name (Bob Marley, Nick Jonas, Mark Norman Sr.), content_name (Harry Potter, Matrix Reloaded, Bumble Bee, John Wick) have infinite number of possibilities that need to be added to the entity dictionary. Free-text entities will help you tackle such scenarios by not making it a content heavy task.
+Entities such as
+1. person_name (Bob Marley, Nick Jonas, Mark Norman Sr.)
+2. content_name (Harry Potter, Matrix Reloaded, Bumble Bee, John Wick)
+
+have infinite number of possibilities that need to be added to the entity dictionary. Free-text entities will help you tackle such scenarios by not making it a content heavy task.
 
 #### **How does it work?**
 
-First, you define a category of terms as an entity (content). Next, you go to the Entity Patterns section of the node, add user says variations, find any mentions of the entity in the utterance, and add a tag.
+1. Define a category of terms as an entity (content).
+   - While defining your entity make sure that it comprises of names of some type of objects.
+   - Free-text entities was buit to extract names of things, in other words nouns(proper and common).
+   - It doesn't work on phrase detection tasks like extracting `set up a reminder` from `I want to set up a reminder`
+2. You go to the Entity Patterns section of the node, add user says variations.
+3. Find any mentions of the entity in the utterance, and add a tag.
 
 ![Free-text Entity - Add Tag](assets/bot-builder-user-says/free_text_entity_add_tag.png)
 
@@ -278,7 +287,91 @@ The entities that are tagged in the ‘Entity Patterns’, get auto-tagged in th
 
 ![Free-text Entity Auto Tag](assets/bot-builder-user-says/free_text_entity_usersays.png)
 
-If you choose to define entity values by using entity patterns, add at least 15-20 tags per entity to give the free-text entity model adequate data to generate accurate results.
+If you choose to define entity values by using entity patterns, then you can follow certain guidelines to ensure better performance.
+
+### **Guidelines for training data**
+There are two things needed for training a model - 
+**Training patterns(User utterances)** for training the model. Minimum 10 sentences.
+Eg  - `I want to buy apples`,  `I need to purchase apples.` 
+
+**Entity Examples** - A list of examples for each entity . Minimum 10 examples.
+Examples - **Grocery_item**: `Guava juice`, `apples`, `ashirwaad atta`
+
+## **Training patterns**
+1. Longer Sentences 
+Enables model to perform better on paraphrases. Example - 
+`tell me apple price on bigbasket` instead of `apple price on bigbasket`
+What is the price of apple today?  instead of price of apple
+2. Variety in usage of synonyms especially verbs.
+Examples -  
+If `I want to buy apples` is already present 
+`I need to purchase apples` is better than  `i want to purchase apples`. You can add the latter too if you want.
+3. Try and vary the position of the entity across sentences in training data
+Prevents the model from getting biased towards a particular position
+Examples -  
+`I would like 2 packets of cow milk` - *entity in the end*.  
+`Help me purchase some bananas from that shop` - *entity in middle* 
+4. Spelling errors in the training data are harmful.
+
+5. Number of sentences should increase if context of model expands  
+For example in *Grocery Shopping*, if context is limited to `buying grocery` then 10 sentences like `I want to buy apples` are fine.
+But if context expands to say `information about items` in addition to `buying grocery` then add at least 10 - 15 more variations like  `price of butter` or `What is the price of apple on grofers?`
+
+## **Entity examples**
+This is a list of examples for each entity. This list is used to multiply data while training. For eg. If you have the following training examples.
+
+| SENTENCE                                     | GROCERY_ITEM |
+|----------------------------------------------|--------------|
+| I want to buy an apple from grofers          | apple        |
+| Help me purchase some bananas from that shop | bananas      |
+| I would like 2 packets of cow milk           | cow milk     |
+
+Then entity examples for this data would be
+
+|GROCERY_ITEM           |
+|-----------------------|
+|Guava juice            |
+|Shuddha ashirwad atta  |
+|Pure cow ghee          |
+|Cadbury dairy milk silk|
+|Grape wine             |
+
+**Objective of adding entity examples is to try and cover entity values with multiple spans. For eg. `apple` is a single word and `cadbury dairy milk silk` has 4 words. This helps the model generalize better.**
+
+Tips -  
+1. Try and add entity values of variable spans. For example -
+Guava juice(2 tokens), Cadbury dairy milk silk(4 tokens)  
+2. Sometimes it ends up happening that all of the examples are non english words. Try to prevent this.
+For example in case of person name detection, if all the names seen by the model are non-english, it will get biased towards non-english words.
+
+## **Work around on failures**
+
+If a corner case occurs and your system fails. 
+You should take the following steps.
+1. Add that data point to your training data.
+2. Add some paraphrases of that data point.  
+
+Example: 
+A model trained was trained on following data points.
+
+| Data             |
+|----------------------------------|
+| I want to eat apple              |
+| I am hungry. Need to have banana |
+| is apple good for health         |
+| how many calories in icecream?   |
+| tell me apple price on bigbasket |
+
+It failed on the query - `where can i buy stuffed cheese paratha from?` and this query was added to training data
+
+Now system handles all the followig examples too. 
+
+| Examples                                 |
+|------------------------------------------|
+| where to buy vanilla ice cream from?     |
+| where to get vanilla ice cream from?     |
+| where can in buy vanilla ice cream from? |
+
 
 ### **Entity types and language support**
 

@@ -243,16 +243,36 @@ $time - ‘tomorrow’</td>
   </tr>
 </table>
 
+#### **Text Entity**
 
-#### **Free-text Entities**
+**Text** entity is meant to extract words/phrases from user utterances.
 
-Free-text entities allows bot builders to define entities based on their context in the utterance. You do this by adding the user utterance in Entity Pattern section and tagging the entities in the user utterance.
+There are two ways in which text entities can be used.
+1. Dictionary
+2. Entity Patterns
 
-When you define a free-text entity, a model is trained on both the tagged term and the context in which the term is used in the sentence you tag. This model enables us to calculate a confidence score that identifies how likely a word or phrase is to be an instance of an entity, based on how it is used in the user input.
+##### **Dictionary**
+
+`Dictionary` allowes bot builders to do a full-text search on user queries to extract matching strings and phrases.
+`Dictionary` has two concepts - 
+1. values - value of an entity.
+2. variants - For a given value, different variations of those words or phrases.
+
+Example -  For **City** entity.
+![Entity-Dictionary](assets/bot-builder-user-says/entity-dictionary.png)
+
+
+##### **Entity patterns**
+
+If your entity can have infinitely many possible values, instead of using `Dictionary`, `Entity patterns` should be used 
+
+Entity patterns allows bot builders to define entities based on their context in the utterance. You do this by adding the user utterance in `Entity Patterns` section and tagging the entities in the user utterance.
+
+When you define entity patterns, a model is trained on both the tagged term and the context in which the term is used in the sentence you tag. This model enables us to calculate a confidence score that identifies how likely a word or phrase is to be an instance of an entity, based on how it is used in the user input.
 
 ![Free-text Entity English](assets/bot-builder-user-says/free_text_entity_en.png)
 
-Free-text entity tags can be added only in English for now.
+Entity patterns can be added only in English for now.
 
 ![Free-text Entity Hindi](assets/bot-builder-user-says/free_text_entity_hi.png)
 
@@ -260,15 +280,19 @@ Entities such as
 1. person_name (Bob Marley, Nick Jonas, Mark Norman Sr.)
 2. content_name (Harry Potter, Matrix Reloaded, Bumble Bee, John Wick)
 
-have infinite number of possibilities that need to be added to the entity dictionary. Free-text entities will help you tackle such scenarios by not making it a content heavy task.
 
-#### **How does it work?**
+###### **How does it work?**
 
-1. Define a category of terms as an entity (content).
-   - While defining your entity make sure that it comprises of names of some type of objects.
-   - Free-text entities was buit to extract names of things, in other words nouns(proper and common).
+1. Defining an entity.
+
+   - When using entity patterns for entity extraction, entity should be defined as name of any object which can have infinitely many values.
+
+   - `Entity Patterns` was buit to extract names of things, in other words nouns(proper or common).
+   
    - It doesn't work on phrase detection tasks like extracting `set up a reminder` from `I want to set up a reminder`
-2. You go to the Entity Patterns section of the node, add user says variations.
+
+2. You go to the `Entity Patterns` section of the node, add user says variations.
+
 3. Find any mentions of the entity in the utterance, and add a tag.
 
 ![Free-text Entity - Add Tag](assets/bot-builder-user-says/free_text_entity_add_tag.png)
@@ -297,43 +321,49 @@ There are two things needed for training a model -
 **Training patterns(User utterances)** for training the model. Minimum 10 sentences.
 Eg  - `I want to buy apples`,  `I need to purchase apples.` 
 
-**Entity Examples** - A list of examples for each entity . Minimum 10 examples.
+**Dictionary** - A list of examples for each entity . Minimum 10 examples.
 Examples - **Grocery_item**: `Guava juice`, `apples`, `ashirwaad atta`
 
 ##### **Training patterns**
 
 1. Longer Sentences 
-  Enables model to perform better on paraphrases. Example - 
-  `tell me apple price on bigbasket` instead of `apple price on bigbasket`
-  What is the price of apple today?  instead of price of apple
+    Enables model to perform better on paraphrases. Example - 
+    `tell me apple price on bigbasket` instead of `apple price on bigbasket`
+    What is the price of apple today?  instead of price of apple
 
 2. Variety in usage of synonyms especially verbs.
-  Examples -  
-  If `I want to buy apples` is already present 
-  `I need to purchase apples` is better than  `i want to purchase apples`. You can add the latter too if you want.
+    Examples -  
+    If `I want to buy apples` is already present 
+    `I need to purchase apples` is better than  `i want to purchase apples`. You can add the latter too if you want.
 
 3. Try and vary the position of the entity across sentences in training data
-  Prevents the model from getting biased towards a particular position
-  Examples -  
-  `I would like 2 packets of cow milk` - *entity in the end*.  
-  `Help me purchase some bananas from that shop` - *entity in middle* 
+    Prevents the model from getting biased towards a particular position
+    Examples -  
+    `I would like 2 packets of cow milk` - *entity in the end*.  
+    `Help me purchase some bananas from that shop` - *entity in middle* 
 
 4. Spelling errors in the training data are harmful.
 
 5. Number of sentences should increase if context of model expands  
-  For example in *Grocery Shopping*, if context is limited to `buying grocery` then 10 sentences like `I want to buy apples` are fine.
-  But if context expands to say `information about items` in addition to `buying grocery` then add at least 10 - 15 more variations like  `price of butter` or `What is the price of apple on grofers?`
+    For example in *Grocery Shopping*, if context is limited to `buying grocery` then 10 sentences like `I want to buy apples` are fine.
+    But if context expands to say `information about items` in addition to `buying grocery` then add at least 10 - 15 more variations like  `price of butter` or `What is the price of apple on grofers?`
 
 6. <h6>Negative examples</h6> You can add negative training data as well.
+    Negative examples are useful in case the system detects something it shouldn't have.
+    
+   - These examples are used to make the model more robust to some confusing cases as mentioned in the example.
+   - Here the model will end up giving false positives.
+   - Cases where the example might be similar to the training patterns is some aspects, but the desired entity is absent.
 
-  - These examples are used to make the model more robust to some confusing cases.
-  - Cases where the example might be similar to the training patterns is some aspects, but the desired entity is absent.
-  - Here the model will end up giving false positives.
-  - This can be solved by adding negative examples.
+    For example - If a model trained to detect  person names from questions like `Who is virat kohli?` detects `machu pechu` as name from `What is machu pechu?`.
+    **To solve this just add `What is machu pechu?` in the entity patterns and don't tag anything**
 
-##### **Entity examples**
+  
+##### **Dictionary**
 
-This is a list of examples for each entity. This list is used to multiply data while training. For eg. If you have the following training examples.
+This is a list of examples for each entity. This list is used to multiply data while training. Bot builders should enter these examples as variants in the `Dictionary`.
+These examples are used to multiply training data to enable the model to se multiple spans, while resucing the effort of the bot builder.
+For eg. If you have the following training examples.
 
 | SENTENCE                                     | GROCERY_ITEM |
 |----------------------------------------------|--------------|
@@ -351,7 +381,7 @@ Then entity examples for this data would be
 |Cadbury dairy milk silk|
 |Grape wine             |
 
-**Objective of adding entity examples is to try and cover entity values with multiple spans. For eg. `apple` is a single word and `cadbury dairy milk silk` has 4 words. This helps the model generalize better.**
+**Objective of adding examples in Dictionary is to try and cover entity values with multiple spans. For eg. `apple` is a single word and `cadbury dairy milk silk` has 4 words. This helps the model generalize better.**
 
 Tips -  
 1. Try and add entity values of variable spans. For example -

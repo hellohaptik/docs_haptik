@@ -264,9 +264,7 @@ Example -  For **City** entity.
 
 ##### **Entity patterns**
 
-If your entity can have infinitely many possible values, instead of using `Dictionary`, `Entity patterns` should be used 
-
-Entity patterns allows bot builders to define entities based on their context in the utterance. You do this by adding the user utterance in `Entity Patterns` section and tagging the entities in the user utterance.
+`Entity patterns` allows bot builders to define entities based on their context in the utterance. You do this by adding the user utterance in `Entity Patterns` section and tagging the entities in the user utterance.
 
 When you define entity patterns, a model is trained on both the tagged term and the context in which the term is used in the sentence you tag. This model enables us to calculate a confidence score that identifies how likely a word or phrase is to be an instance of an entity, based on how it is used in the user input.
 
@@ -283,11 +281,11 @@ Entities such as
 
 ###### **How does it work?**
 
-1. Defining an entity.
+1. When to use?
 
-   - When using entity patterns for entity extraction, entity should be defined as name of any object which can have infinitely many values.
+   - Infinitely many entity values present. Using `Dictionary` isn't sustainable.
 
-   - `Entity Patterns` was buit to extract names of things, in other words nouns(proper or common).
+   - `Entity Patterns` was built to extract names of things, in other words nouns(proper or common).
    
    - It doesn't work on phrase detection tasks like extracting `set up a reminder` from `I want to set up a reminder`
 

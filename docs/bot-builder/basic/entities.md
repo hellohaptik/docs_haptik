@@ -314,7 +314,8 @@ If you choose to define entity values by using entity patterns, then you can fol
 
 #### **Guidelines for training data**
 
-There are two things needed for training a model - 
+There are two things needed for training a model -
+
 **Training patterns(User utterances)** for training the model. Minimum 10 sentences.
 Eg  - `I want to buy apples`,  `I need to purchase apples.` 
 

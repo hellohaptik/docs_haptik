@@ -272,7 +272,6 @@ When you define entity patterns, a model is trained on both the tagged term and 
 
 Entity patterns can be added only in English for now.
 
-![Free-text Entity Hindi](assets/bot-builder-user-says/free_text_entity_hi.png)
 
 Entities such as
 1. person_name (Bob Marley, Nick Jonas, Mark Norman Sr.)
@@ -346,15 +345,6 @@ Examples - **Grocery_item**: `Guava juice`, `apples`, `ashirwaad atta`
     For example in *Grocery Shopping*, if context is limited to `buying grocery` then 10 sentences like `I want to buy apples` are fine.
     But if context expands to say `information about items` in addition to `buying grocery` then add at least 10 - 15 more variations like  `price of butter` or `What is the price of apple on grofers?`
 
-6. <h6>Negative examples</h6> You can add negative training data as well.
-    Negative examples are useful in case the system detects something it shouldn't have.
-    
-   - These examples are used to make the model more robust to some confusing cases as mentioned in the example.
-   - Here the model will end up giving false positives.
-   - Cases where the example might be similar to the training patterns is some aspects, but the desired entity is absent.
-
-    For example - If a model trained to detect  person names from questions like `Who is virat kohli?` detects `machu pechu` as name from `What is machu pechu?`.
-    **To solve this just add `What is machu pechu?` in the entity patterns and don't tag anything**
 
   
 ##### **Dictionary**

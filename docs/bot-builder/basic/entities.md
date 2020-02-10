@@ -458,7 +458,7 @@ For example - If a model trained to detect  person names from questions like `Wh
     <td>Text</td>
     <td>Detect custom entities in text string using full text search in Datastore or based on contextual model</td>
     <td>Order me a pizza,मुंबईमें मौसम कैसा है</td>
-    <td>Search supported for 'en', 'hi', 'gu', 'bn', 'mr', 'ta', Contextual model supported for 'en' only</td>
+    <td>Search supported for 'en', 'hi', 'gu', 'bn', 'mr', 'ta', Entity Patterns supported for 'en' only</td>
   </tr>
   <tr>
     <td>PNR</td>

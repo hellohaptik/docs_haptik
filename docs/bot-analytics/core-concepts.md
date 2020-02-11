@@ -8,15 +8,19 @@ As we learnt recently, the analytics tool provides you with different metrics to
 ## Messages
 Messages are basically what the user and the bot use to communicate with each other. The user tells the bot what they want through a message and the bot responds to the user through a message again.
 
-## Chats
-Users send messages to the bot to achieve a goal. For example the goal might be to find the available flights. To get to this goal there might be a sequence of to and fro messages between the bot and the user. This collection of two way messages to achieve a goal is called a chat.
-
-> Note: A Chat is a collection of Messages.
-
 ## Conversations
-Conversations can be thought of as sessions. In one session a user might try to achieve multiple goals. For example they might first try to find available flights, then book one of those flights and finally do a web checkin for the booked flight. To achieve each of these goals the user completes a chat. The collection of these chats together is called a Conversation.
+In one conversation, a user might try to achieve multiple goals. A conversation is defined by 3 conditions -
+1. End nodes
+2. Agent marking it complete
+3. Integration function clears context
+4. Conversation is also marked auto-complete after 8 minutes of user inactivity.  
 
-> Note: Conversation is a collection of Chats.
+End nodes are marked as per how a task is defined in the bot flow. For example an user might first try to find available flights, then book one of those flights and finally do a web checkin for the booked flight. To achieve each of these goals the user completes a chat. The collection of these tasks together is called a Conversation.
+
+## Session
+A session is defined as a series of interactions between the bot and the end-user. And is calculated after 8 minutes of inactivity (That is no interaction between bot and user). You can read more about Sessions in the next section. 
+
+> Note: One Session will have multiple conversations. 
 
 ## Tasks
 Tasks are high level goals that the bot builder has configured as flows in the chatbot. These tasks are generally available in the taskbox of a chatbot. These can be thought of as high level menu items of a chatbot.

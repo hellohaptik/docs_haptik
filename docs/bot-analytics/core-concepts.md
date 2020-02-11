@@ -18,7 +18,7 @@ In one conversation, a user might try to achieve multiple goals. A conversation 
 End nodes are marked as per how a task is defined in the bot flow. For example an user might first try to find available flights, then book one of those flights and finally do a web checkin for the booked flight. To achieve each of these goals the user completes a chat. The collection of these tasks together is called a Conversation.
 
 ## Session
-A session is defined as a series of interactions between the IVA and the end-user and is calculated after 8 minutes of inactivity (No interaction between IVA and user). You can read more about Sessions in the next section. 
+A session is defined as a series of interactions between the bot and the end-user. And is calculated after 8 minutes of inactivity (That is no interaction between bot and user). You can read more about Sessions in the next section. 
 
 > Note: One Session will have multiple conversations. 
 

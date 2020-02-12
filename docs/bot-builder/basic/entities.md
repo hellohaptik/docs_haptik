@@ -277,6 +277,8 @@ Entities such as
 1. person_name (Bob Marley, Nick Jonas, Mark Norman Sr.)
 2. content_name (Harry Potter, Matrix Reloaded, Bumble Bee, John Wick)
 
+have infinite number of possibilities that need to be added to the entity dictionary. Entity Patterns will help you tackle such scenarios by not making it a content heavy task.
+
 
 ###### **How does it work?**
 

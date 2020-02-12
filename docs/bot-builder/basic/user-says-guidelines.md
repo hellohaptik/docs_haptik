@@ -642,13 +642,13 @@ All the above are their own **nodes** in our system, with their corresponding in
 >  
 >  *Send a note to Platform support if any intent is missing or content needs to be edited.*
 
+
 ## **Disambiguation**
 
-**When do we need Disambiguation?**
+**Why do we need Disambiguation?**
 
-* When there are two multiple intents in a bot, there’s a good chance of sending the wrong node response to end user. Especially, when keyword(s) in these intents are same.
-
-* And when bot builders add similar user says on multiple nodes. To correct this behaviour and improve end user experience, we use disambiguation.
+* When there are multiple intents in a bot, there’s a good chance of sending the wrong node response to end user. Especially, when keyword(s) in these intents are same
+* When bot builders add similar user says on multiple nodes. To correct this behaviour and improve end user experience, we use disambiguation
 
 **How Disambiguation works?**
 
@@ -656,25 +656,20 @@ When we get an ambiguous message from a user on a bot, we send a disambiguation 
 
 ![How Disambiguation Works](assets/bot-builder-user-says/disambiguation_working.png)
 
->*Tip:*
+On Whatsapp, the above message goes as a text message with node options in bullet points. Now, the user can send `1` or `2` as a response, basis which we will detect the chosen node option. 
+
+Disambiguation (Did you mean? response) goes as
+- Button HSL on Haptik SDK
+- Text on WhatsApp
+- Voice key in HSL played out
+
 >  
->To make sure, disambiguation works right on your bot, please account for the points below - 
+>To understand how disambiguation works on your bot, account for these points - 
 >  
->* Avoid adding single words in User says
+> 1. We do not send a disambiguation response for consecutive user messages. This means if for last user message we got a disambiguation response, the next user message would never get a disambiguation response
+> 
+> 2. For disambiguation node options, we should not consider dependent or negative responses. Infact, we only consider independent responses on start nodes to choose nodes in a disambiguation response. 
 >  
-> ![How Disambiguation Works](assets/bot-builder-user-says/disambiguate_single_word.png)
-> 
->* Make sure you add at least 10 to 15 User says per node for our classifier to work
-> 
-> * When there’s a parent node that transitions to multiple child nodes, and the difference in intent is only on the basis of one keyword, there’s a good chance of disambiguation. Check the example of user says on parent/child nodes below - 
-> 
->    * Parent node: Suggest a plan 
->  
->    * Child node 1: Suggest a **data** plan 
-> 
->    * Child node 2: Suggest a **voice** plan
-> 
->As you can see from the example above, the child node intents and parent node intent are differentiated by the presence of only a single word.  
 
 **Setting up Disambiguation**
 
@@ -682,5 +677,7 @@ The Node-wise copy is controlled from the "Disambiguate message" flag in User Sa
 
 ![Setup Disambiguation](assets/bot-builder-user-says/set_up_disambiguate.png)
 
-> *Note*: If Disambiguate message is not marked on node, we pick *Node name* field as default. 
+> *Note*: If Disambiguate message is not marked on node, we pick *Node name* field as default. Bot builders can catch this and then go back to mark all node-wise user says for disambiguation response. 
+   
+
 

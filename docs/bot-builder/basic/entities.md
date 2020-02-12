@@ -316,7 +316,8 @@ If you choose to define entity values by using entity patterns, then you can fol
 
 #### **Guidelines for training data**
 
-There are two things needed for training a model - 
+There are two things needed for training a model -
+
 **Training patterns(User utterances)** for training the model. Minimum 10 sentences.
 Eg  - `I want to buy apples`,  `I need to purchase apples.` 
 
@@ -459,7 +460,7 @@ For example - If a model trained to detect  person names from questions like `Wh
     <td>Text</td>
     <td>Detect custom entities in text string using full text search in Datastore or based on contextual model</td>
     <td>Order me a pizza,मुंबईमें मौसम कैसा है</td>
-    <td>Search supported for 'en', 'hi', 'gu', 'bn', 'mr', 'ta', Contextual model supported for 'en' only</td>
+    <td>Search supported for 'en', 'hi', 'gu', 'bn', 'mr', 'ta', Entity Patterns supported for 'en' only</td>
   </tr>
   <tr>
     <td>PNR</td>

@@ -251,18 +251,20 @@ There are two ways in which text entities can be used.
 1. Dictionary
 2. Entity Patterns
 
-##### **Dictionary**
+##### Dictionary
 
-`Dictionary` allowes bot builders to do a full-text search on user queries to extract matching strings and phrases.
+`Dictionary` allows bot builders to do a full-text search on user queries to extract matching strings and phrases.
 `Dictionary` has two concepts - 
+
 1. values - value of an entity.
 2. variants - For a given value, different variations of those words or phrases.
 
-Example -  For **City** entity.
+Example -  For **city** entity.
 ![Entity-Dictionary](assets/bot-builder-user-says/entity-dictionary.png)
 
-
 ##### **Entity patterns**
+
+> **Entity patterns can be added only in English for now.**
 
 `Entity patterns` allows bot builders to define entities based on their context in the utterance. You do this by adding the user utterance in `Entity Patterns` section and tagging the entities in the user utterance.
 
@@ -270,97 +272,96 @@ When you define entity patterns, a model is trained on both the tagged term and 
 
 ![Free-text Entity English](assets/bot-builder-user-says/free_text_entity_en.png)
 
-Entity patterns can be added only in English for now.
+**When to use?**
 
+- When some entity can take infinitely many values and using `Dictionary` isn't sustainable Examples:
+  - person_name (Bob Marley, Nick Jonas, Mark Norman Sr.)
+  - content_name (Harry Potter, Matrix Reloaded, Bumble Bee, John Wick)
+-  To extract names of things, in other words nouns (proper or common).
+- Phrase extraction tasks like extracting `set up a reminder` from `I want to set up a reminder`
 
-Entities such as
-1. person_name (Bob Marley, Nick Jonas, Mark Norman Sr.)
-2. content_name (Harry Potter, Matrix Reloaded, Bumble Bee, John Wick)
+**How does it work?**
 
-have infinite number of possibilities that need to be added to the entity dictionary. Entity Patterns will help you tackle such scenarios by not making it a content heavy task.
-
-
-###### **How does it work?**
-
-1. When to use?
-
-   - Infinitely many entity values present. Using `Dictionary` isn't sustainable.
-
-   - `Entity Patterns` was built to extract names of things, in other words nouns(proper or common).
-   
-   - It doesn't work on phrase detection tasks like extracting `set up a reminder` from `I want to set up a reminder`
-
-2. You go to the `Entity Patterns` section of the node, add user says variations.
-
-3. Find any mentions of the entity in the utterance, and add a tag.
+1. Go to the `Entity Patterns` section of the entity,
+2.  Add a user says variation and tag mentions of your entity by highlighting the phrases and selecting "Add Tag"
 
 ![Free-text Entity - Add Tag](assets/bot-builder-user-says/free_text_entity_add_tag.png)
 
-4. If you are adding <a href="#negative-examples">Negative examples</a> (See Guidelines) then don't tag anything.
-
-For example, you might go to the #play_content node, and find a user says, ‘Play harry potter on Hotstar’. You can tag ‘harry potter’ as a mention of the @content entity.
-
-For training purposes, the term you tagged, ‘harry potter’, is added as a value of the @content entity dictionary.
+3. For <a href="#negative-examples">Negative examples</a> (See Guidelines) i.e. examples with no entities in them  don't tag anything.
+4. After you are done adding/updating variations, please Train the bot.
 
 At run time, model evaluates terms based on the context in which they are used in the sentence only. If the structure of a user says that mentions the term matches the structure of an intent user example in which a mention is tagged, then the model interprets the term to be a mention of that entity type. 
 
-For example, the user input might include the utterance, ‘Play matrix reloaded on Hotstar’. Due to the similarity of the structure of this sentence to the user example that you tagged (Play harry potter on Hotstar), model recognizes ‘matrix reloaded’ as a @content entity mention.
+For example, the user input might include the utterance, **‘Play matrix reloaded on Hotstar’**. Due to the similarity of the structure of this sentence to the user example that you tagged (**Play harry potter on Hotstar**), model recognises **‘matrix reloaded’** as a **content** entity mention.
 
 When a context based entity model is used for an entity, model does not look for exact text or pattern matches for the entity in the user input, but focuses instead on the context of the sentence in which the entity is mentioned.
 
-​	The entities that are tagged in the ‘Entity Patterns’, get auto-tagged in the user says section of the node.
+The entities that are tagged in the ‘Entity Patterns’, get auto-tagged in the user says section of the node.
 
 ![Free-text Entity Auto Tag](assets/bot-builder-user-says/free_text_entity_usersays.png)
 
-If you choose to define entity values by using entity patterns, then you can follow certain guidelines to ensure better performance.
+In the screenshot above, the phrases with a green underline are entity values of different entities added on the node. You can highlight the phrase and see which entity was detected for the phrase.
 
-#### **Guidelines for training data**
+If you choose to define entity values by using entity patterns, then you should follow the following guidelines to ensure better performance.
 
-There are two things needed for training a model -
+#### **Guidelines for adding Entity Patterns variations**
 
-**Training patterns(User utterances)** for training the model. Minimum 10 sentences.
-Eg  - `I want to buy apples`,  `I need to purchase apples.` 
+There are two things needed for training a good model -
 
-**Dictionary** - A list of examples for each entity . Minimum 10 examples.
-Examples - **Grocery_item**: `Guava juice`, `apples`, `ashirwaad atta`
+ **Patterns (User utterances)** - We recommend a minimum of 10 sentences.
+Examples  - **grocery_item**: `I want to buy apples`,  `I need to purchase apples.` 
 
-##### **Training patterns**
+**Dictionary** - A set of examples for each entity . We recommend a minimum of 10 examples.
+Examples - **grocery_item**: `Guava juice`, `apples`, `ashirwaad atta`
 
-1. Longer Sentences 
-    Enables model to perform better on paraphrases. Example - 
-    `tell me apple price on bigbasket` instead of `apple price on bigbasket`
-    What is the price of apple today?  instead of price of apple
+##### **Patterns**
 
-2. Variety in usage of synonyms especially verbs.
+1. Use longer sentences whenever possible. This enables model to perform better on paraphrases. 
+    
+    Examples - 
+    
+- `Tell me apple price on bigbasket` instead of `apple price on bigbasket`
+    - `What is the price of apple today?`  instead of `price of apple`
+    
+2. Ensure variety in usage of synonyms especially verbs.
+
     Examples -  
-    If `I want to buy apples` is already present 
-    `I need to purchase apples` is better than  `i want to purchase apples`. You can add the latter too if you want.
 
-3. Try and vary the position of the entity across sentences in training data
-    Prevents the model from getting biased towards a particular position
+    - If `I want to buy apples` is already present, `I need to purchase apples` is better than  `i want to purchase apples`.
+
+3. Vary the position of the entity across sentences in training data. This prevents the model from getting biased towards a particular position.
+
     Examples -  
-    `I would like 2 packets of cow milk` - *entity in the end*.  
-    `Help me purchase some bananas from that shop` - *entity in middle* 
 
-4. Spelling errors in the training data are harmful.
+    - I would like 2 packets of **cow milk**  - Entity mention in the end
+    - Help me purchase some **bananas** from that shop  - Entity mention in the middle
 
-5. Number of sentences should increase if context of model expands  
-    For example in *Grocery Shopping*, if context is limited to `buying grocery` then 10 sentences like `I want to buy apples` are fine.
-    But if context expands to say `information about items` in addition to `buying grocery` then add at least 10 - 15 more variations like  `price of butter` or `What is the price of apple on grofers?`
+4. If the entity values can vary in length in number of words, then add few variations each for different number of words
 
+     Examples - 
 
-  
+    - Add **shuddha ashirwad atta** to my cart - (3 words)
+    - Add **bananas** to my bag - (1 word)
+
+5. Avoid spelling errors.
+
+6. Ensure each different type of context has minimum 10 variations.
+
+    For example in *Grocery Shopping*, shopping items can be mentioned in the context of "buy" intent, in such case you entity patterns should have variations that are similar to `I want to buy apples` .
+
+    But if context expands to say "information" intent ( E.g. "Tell me about apples") and you want the entity to pick up items in such cases, then add at least 10 more variations like  `price of butter` or `What is the price of apple on grofers?`
+
 ##### **Dictionary**
 
-This is a list of examples for each entity. This list is used to multiply data while training. Bot builders should enter these examples as variants in the `Dictionary`.
-These examples are used to multiply training data to enable the model to se multiple spans, while resucing the effort of the bot builder.
-For eg. If you have the following training examples.
+List of variations entered in the `Dictionary` tab of the entity are used to automatically multiply data while training. This helps in making the model more robust to different types of values, while reducing the effort of the bot builder.
 
-| SENTENCE                                     | GROCERY_ITEM |
-|----------------------------------------------|--------------|
-| I want to buy an apple from grofers          | apple        |
-| Help me purchase some bananas from that shop | bananas      |
-| I would like 2 packets of cow milk           | cow milk     |
+E.g. If you have the following training examples.
+
+| Patterns                                     | **grocery_item** |
+| -------------------------------------------- | ---------------- |
+| I want to buy an apple from grofers          | apple            |
+| Help me purchase some bananas from that shop | bananas          |
+| I would like 2 packets of cow milk           | cow milk         |
 
 Then entity examples for this data would be
 
@@ -372,50 +373,44 @@ Then entity examples for this data would be
 |Cadbury dairy milk silk|
 |Grape wine             |
 
-**Objective of adding examples in Dictionary is to try and cover entity values with multiple spans. For eg. `apple` is a single word and `cadbury dairy milk silk` has 4 words. This helps the model generalize better.**
+As before, if possible, add entity values of variable lengths. For example - Guava juice (2 words), Cadbury dairy milk silk (4 words)  
 
-Tips -  
-1. Try and add entity values of variable spans. For example -
-Guava juice(2 tokens), Cadbury dairy milk silk(4 tokens)  
-2. Sometimes it ends up happening that all of the examples are non english words. Try to prevent this.
-For example in case of person name detection, if all the names seen by the model are non-english, it will get biased towards non-english words.
+#### Troubleshooting
 
-#### **Work around on failures**
+**1. Entity Detection Failure** - Bot should have detected entity but it didn't
 
-If a corner case occurs and your system fails. 
-You should take the following steps.
-
-1. Add that data point to your training data.
+1. Add that data point to your Entity Patterns.
 2. Add some paraphrases of that data point.  
 
 Example: 
-A model trained was trained on following data points.
 
-| Data             |
+Let's say your entity had following Patterns
+
+| Patterns      |
 |----------------------------------|
-| I want to eat apple              |
-| I am hungry. Need to have banana |
-| is apple good for health         |
-| how many calories in icecream?   |
-| tell me apple price on bigbasket |
+| I want to eat **apple**          |
+| I am hungry. Need to have **banana** |
+| is **apple** good for health     |
+| how many calories in **icecream**? |
+| tell me **apple** price on bigbasket |
 
-It failed on the query - `where can i buy stuffed cheese paratha from?` and this query was added to training data
+And it failed on following query "Where can i buy **stuffed cheese paratha** from ?"
 
-Now system handles all the followig examples too. 
+To fix this, add this patterns to the entity and train the bot. After this, the bot should be able to extract entity from similar phrases like
 
-| Examples                                 |
-|------------------------------------------|
-| where to buy vanilla ice cream from?     |
-| where to get vanilla ice cream from?     |
-| where can in buy vanilla ice cream from? |
+|                                              |
+| -------------------------------------------- |
+| where to buy **vanilla ice cream** from?     |
+| where to get **vanilla ice cream** from?     |
+| where can in buy **vanilla ice cream** from? |
 
-##### **Negative Examples**
+**2. False Detection Failure** - Bot is either not detecting entity or detecting the wrong phrases as entity.
 
-Negative examples are useful in case the system detects something it shouldn't have.
+Example:
 
-For example - If a model trained to detect  person names from questions like `Who is virat kohli?` detects `machu pechu` as name from `What is machu pechu?`.
+"Show me Apple phones" and the bot is detecting "Apple" as a grocery item.
 
-**To solve this just add `What is machu pechu?` in the entity patterns and don't tag anything**
+To fix this, Enter such phrases in the Entity Patterns of your entity without tagging anything. Such examples with nothing highlighted in them are treated as **Negative examples** and the bot learns to not extract values in such contexts.
 
 ### **Entity types and language support**
 

@@ -250,24 +250,159 @@ $time - ‘tomorrow’</td>
     <td>{"unit": "dollars","value":"350.00"}</td>
   </tr>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="free-text-entities"></a><a href="#free-text-entities" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Free-text Entities</strong></h4>
-<p>Free-text entities allows bot builders to define entities based on their context in the utterance. You do this by adding the user utterance in Entity Pattern section and tagging the entities in the user utterance.</p>
-<p>When you define a free-text entity, a model is trained on both the tagged term and the context in which the term is used in the sentence you tag. This model enables us to calculate a confidence score that identifies how likely a word or phrase is to be an instance of an entity, based on how it is used in the user input.</p>
+<h4><a class="anchor" aria-hidden="true" id="text-entity"></a><a href="#text-entity" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Text Entity</strong></h4>
+<p><strong>Text</strong> entity is meant to extract words/phrases from user utterances.</p>
+<p>There are two ways in which text entities can be used.</p>
+<ol>
+<li>Dictionary</li>
+<li>Entity Patterns</li>
+</ol>
+<h5><a class="anchor" aria-hidden="true" id="dictionary"></a><a href="#dictionary" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dictionary</h5>
+<p><code>Dictionary</code> allows bot builders to do a full-text search on user queries to extract matching strings and phrases.
+<code>Dictionary</code> has two concepts -</p>
+<ol>
+<li>values - value of an entity.</li>
+<li>variants - For a given value, different variations of those words or phrases.</li>
+</ol>
+<p>Example -  For <strong>city</strong> entity.
+<img src="/assets/bot-builder-user-says/entity-dictionary.png" alt="Entity-Dictionary"></p>
+<h5><a class="anchor" aria-hidden="true" id="entity-patterns"></a><a href="#entity-patterns" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Entity patterns</strong></h5>
+<blockquote>
+<p><strong>Entity patterns can be added only in English for now.</strong></p>
+</blockquote>
+<p><code>Entity patterns</code> allows bot builders to define entities based on their context in the utterance. You do this by adding the user utterance in <code>Entity Patterns</code> section and tagging the entities in the user utterance.</p>
+<p>When you define entity patterns, a model is trained on both the tagged term and the context in which the term is used in the sentence you tag. This model enables us to calculate a confidence score that identifies how likely a word or phrase is to be an instance of an entity, based on how it is used in the user input.</p>
 <p><img src="/assets/bot-builder-user-says/free_text_entity_en.png" alt="Free-text Entity English"></p>
-<p>Free-text entity tags can be added to Indic languages as well. We currently support 8 Indic languages (Hindi, Gujarati, Marathi, Tamil, Telugu, Kannada, Malayalam, Bengali)</p>
-<p><img src="/assets/bot-builder-user-says/free_text_entity_hi.png" alt="Free-text Entity Hindi"></p>
-<p>Entities such as person_name (Bob Marley, Nick Jonas, Mark Norman Sr.), content_name (Harry Potter, Matrix Reloaded, Bumble Bee, John Wick) have infinite number of possibilities that need to be added to the entity dictionary. Free-text entities will help you tackle such scenarios by not making it a content heavy task.</p>
-<h4><a class="anchor" aria-hidden="true" id="how-does-it-work"></a><a href="#how-does-it-work" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>How does it work?</strong></h4>
-<p>First, you define a category of terms as an entity (content). Next, you go to the Entity Patterns section of the node, add user says variations, find any mentions of the entity in the utterance, and add a tag.</p>
+<p><strong>When to use?</strong></p>
+<ul>
+<li>When some entity can take infinitely many values and using <code>Dictionary</code> isn't sustainable Examples:
+<ul>
+<li>person_name (Bob Marley, Nick Jonas, Mark Norman Sr.)</li>
+<li>content_name (Harry Potter, Matrix Reloaded, Bumble Bee, John Wick)</li>
+</ul></li>
+<li>To extract names of things, in other words nouns (proper or common).</li>
+<li>Phrase extraction tasks like extracting <code>set up a reminder</code> from <code>I want to set up a reminder</code></li>
+</ul>
+<p><strong>How does it work?</strong></p>
+<ol>
+<li>Go to the <code>Entity Patterns</code> section of the entity,</li>
+<li>Add a user says variation and tag mentions of your entity by highlighting the phrases and selecting &quot;Add Tag&quot;</li>
+</ol>
 <p><img src="/assets/bot-builder-user-says/free_text_entity_add_tag.png" alt="Free-text Entity - Add Tag"></p>
-<p>For example, you might go to the #play_content node, and find a user says, ‘Play harry potter on Hotstar’. You can tag ‘harry potter’ as a mention of the @content entity.</p>
-<p>For training purposes, the term you tagged, ‘harry potter’, is added as a value of the @content entity dictionary.</p>
+<ol start="3">
+<li>For <a href="#negative-examples">Negative examples</a> (See Guidelines) i.e. examples with no entities in them  don't tag anything.</li>
+<li>After you are done adding/updating variations, please Train the bot.</li>
+</ol>
 <p>At run time, model evaluates terms based on the context in which they are used in the sentence only. If the structure of a user says that mentions the term matches the structure of an intent user example in which a mention is tagged, then the model interprets the term to be a mention of that entity type.</p>
-<p>For example, the user input might include the utterance, ‘Play matrix reloaded on Hotstar’. Due to the similarity of the structure of this sentence to the user example that you tagged (Play harry potter on Hotstar), model recognizes ‘matrix reloaded’ as a @content entity mention.</p>
+<p>For example, the user input might include the utterance, <strong>‘Play matrix reloaded on Hotstar’</strong>. Due to the similarity of the structure of this sentence to the user example that you tagged (<strong>Play harry potter on Hotstar</strong>), model recognises <strong>‘matrix reloaded’</strong> as a <strong>content</strong> entity mention.</p>
 <p>When a context based entity model is used for an entity, model does not look for exact text or pattern matches for the entity in the user input, but focuses instead on the context of the sentence in which the entity is mentioned.</p>
 <p>The entities that are tagged in the ‘Entity Patterns’, get auto-tagged in the user says section of the node.</p>
 <p><img src="/assets/bot-builder-user-says/free_text_entity_usersays.png" alt="Free-text Entity Auto Tag"></p>
-<p>If you choose to define entity values by using entity patterns, add at least 15-20 tags per entity to give the free-text entity model adequate data to generate accurate results.</p>
+<p>In the screenshot above, the phrases with a green underline are entity values of different entities added on the node. You can highlight the phrase and see which entity was detected for the phrase.</p>
+<p>If you choose to define entity values by using entity patterns, then you should follow the following guidelines to ensure better performance.</p>
+<h4><a class="anchor" aria-hidden="true" id="guidelines-for-adding-entity-patterns-variations"></a><a href="#guidelines-for-adding-entity-patterns-variations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Guidelines for adding Entity Patterns variations</strong></h4>
+<p>There are two things needed for training a good model -</p>
+<p><strong>Patterns (User utterances)</strong> - We recommend a minimum of 10 sentences.
+Examples  - <strong>grocery_item</strong>: <code>I want to buy apples</code>,  <code>I need to purchase apples.</code></p>
+<p><strong>Dictionary</strong> - A set of examples for each entity . We recommend a minimum of 10 examples.
+Examples - <strong>grocery_item</strong>: <code>Guava juice</code>, <code>apples</code>, <code>ashirwaad atta</code></p>
+<h5><a class="anchor" aria-hidden="true" id="patterns"></a><a href="#patterns" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Patterns</strong></h5>
+<ol>
+<li><p>Use longer sentences whenever possible. This enables model to perform better on paraphrases.</p>
+<p>Examples -</p></li>
+</ol>
+<ul>
+<li><code>Tell me apple price on bigbasket</code> instead of <code>apple price on bigbasket</code>
+<ul>
+<li><code>What is the price of apple today?</code>  instead of <code>price of apple</code></li>
+</ul></li>
+</ul>
+<ol start="2">
+<li><p>Ensure variety in usage of synonyms especially verbs.</p>
+<p>Examples -</p>
+<ul>
+<li>If <code>I want to buy apples</code> is already present, <code>I need to purchase apples</code> is better than  <code>i want to purchase apples</code>.</li>
+</ul></li>
+<li><p>Vary the position of the entity across sentences in training data. This prevents the model from getting biased towards a particular position.</p>
+<p>Examples -</p>
+<ul>
+<li>I would like 2 packets of <strong>cow milk</strong>  - Entity mention in the end</li>
+<li>Help me purchase some <strong>bananas</strong> from that shop  - Entity mention in the middle</li>
+</ul></li>
+<li><p>If the entity values can vary in length in number of words, then add few variations each for different number of words</p>
+<p>Examples -</p>
+<ul>
+<li>Add <strong>shuddha ashirwad atta</strong> to my cart - (3 words)</li>
+<li>Add <strong>bananas</strong> to my bag - (1 word)</li>
+</ul></li>
+<li><p>Avoid spelling errors.</p></li>
+<li><p>Ensure each different type of context has minimum 10 variations.</p>
+<p>For example in <em>Grocery Shopping</em>, shopping items can be mentioned in the context of &quot;buy&quot; intent, in such case you entity patterns should have variations that are similar to <code>I want to buy apples</code> .</p>
+<p>But if context expands to say &quot;information&quot; intent ( E.g. &quot;Tell me about apples&quot;) and you want the entity to pick up items in such cases, then add at least 10 more variations like  <code>price of butter</code> or <code>What is the price of apple on grofers?</code></p></li>
+</ol>
+<h5><a class="anchor" aria-hidden="true" id="dictionary-1"></a><a href="#dictionary-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Dictionary</strong></h5>
+<p>List of variations entered in the <code>Dictionary</code> tab of the entity are used to automatically multiply data while training. This helps in making the model more robust to different types of values, while reducing the effort of the bot builder.</p>
+<p>E.g. If you have the following training examples.</p>
+<table>
+<thead>
+<tr><th>Patterns</th><th><strong>grocery_item</strong></th></tr>
+</thead>
+<tbody>
+<tr><td>I want to buy an apple from grofers</td><td>apple</td></tr>
+<tr><td>Help me purchase some bananas from that shop</td><td>bananas</td></tr>
+<tr><td>I would like 2 packets of cow milk</td><td>cow milk</td></tr>
+</tbody>
+</table>
+<p>Then entity examples for this data would be</p>
+<table>
+<thead>
+<tr><th>GROCERY_ITEM</th></tr>
+</thead>
+<tbody>
+<tr><td>Guava juice</td></tr>
+<tr><td>Shuddha ashirwad atta</td></tr>
+<tr><td>Pure cow ghee</td></tr>
+<tr><td>Cadbury dairy milk silk</td></tr>
+<tr><td>Grape wine</td></tr>
+</tbody>
+</table>
+<p>As before, if possible, add entity values of variable lengths. For example - Guava juice (2 words), Cadbury dairy milk silk (4 words)</p>
+<h4><a class="anchor" aria-hidden="true" id="troubleshooting"></a><a href="#troubleshooting" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Troubleshooting</h4>
+<p><strong>1. Entity Detection Failure</strong> - Bot should have detected entity but it didn't</p>
+<ol>
+<li>Add that data point to your Entity Patterns.</li>
+<li>Add some paraphrases of that data point.</li>
+</ol>
+<p>Example:</p>
+<p>Let's say your entity had following Patterns</p>
+<table>
+<thead>
+<tr><th>Patterns</th></tr>
+</thead>
+<tbody>
+<tr><td>I want to eat <strong>apple</strong></td></tr>
+<tr><td>I am hungry. Need to have <strong>banana</strong></td></tr>
+<tr><td>is <strong>apple</strong> good for health</td></tr>
+<tr><td>how many calories in <strong>icecream</strong>?</td></tr>
+<tr><td>tell me <strong>apple</strong> price on bigbasket</td></tr>
+</tbody>
+</table>
+<p>And it failed on following query &quot;Where can i buy <strong>stuffed cheese paratha</strong> from ?&quot;</p>
+<p>To fix this, add this patterns to the entity and train the bot. After this, the bot should be able to extract entity from similar phrases like</p>
+<table>
+<thead>
+<tr><th></th></tr>
+</thead>
+<tbody>
+<tr><td>where to buy <strong>vanilla ice cream</strong> from?</td></tr>
+<tr><td>where to get <strong>vanilla ice cream</strong> from?</td></tr>
+<tr><td>where can in buy <strong>vanilla ice cream</strong> from?</td></tr>
+</tbody>
+</table>
+<p><strong>2. False Detection Failure</strong> - Bot is either not detecting entity or detecting the wrong phrases as entity.</p>
+<p>Example:</p>
+<p>&quot;Show me Apple phones&quot; and the bot is detecting &quot;Apple&quot; as a grocery item.</p>
+<p>To fix this, Enter such phrases in the Entity Patterns of your entity without tagging anything. Such examples with nothing highlighted in them are treated as <strong>Negative examples</strong> and the bot learns to not extract values in such contexts.</p>
 <h3><a class="anchor" aria-hidden="true" id="entity-types-and-language-support"></a><a href="#entity-types-and-language-support" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Entity types and language support</strong></h3>
 <table>
   <tr>
@@ -310,7 +445,7 @@ $time - ‘tomorrow’</td>
     <td>Text</td>
     <td>Detect custom entities in text string using full text search in Datastore or based on contextual model</td>
     <td>Order me a pizza,मुंबईमें मौसम कैसा है</td>
-    <td>Search supported for 'en', 'hi', 'gu', 'bn', 'mr', 'ta', Contextual model supported for 'en' only</td>
+    <td>Search supported for 'en', 'hi', 'gu', 'bn', 'mr', 'ta', Entity Patterns supported for 'en' only</td>
   </tr>
   <tr>
     <td>PNR</td>
@@ -355,7 +490,7 @@ $time - ‘tomorrow’</td>
     <td>'en', 'hi', 'gu', 'bn', 'mr', 'ta'</td>
   </tr>
 </table>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2/12/2020</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/bot-builder/basic/intent"><span class="arrow-prev">← </span><span>Intent</span></a><a class="docs-next button" href="/bot-builder/basic/bot-prompt-trigger"><span>Bot Prompt Trigger</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Bot Builder</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://hellohaptik.github.io/haptik-ios-framework" class="footer-column-link">iOS SDK</a><a href="https://hellohaptik.github.io/haptik-android-lib" class="footer-column-link">Android SDK</a><a href="https://hellohaptik.github.io/javascript_sdk" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Webhooks</a><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/contributing/index" class="footer-column-link">Contributing</a><a href="https://docs.haptik.ai/other/security" class="footer-column-link">Security</a><a href="https://forms.gle/Z2SowBSFpWLayXQz9" class="footer-column-link">Support</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2020 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2/13/2020</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/bot-builder/basic/intent"><span class="arrow-prev">← </span><span>Intent</span></a><a class="docs-next button" href="/bot-builder/basic/bot-prompt-trigger"><span>Bot Prompt Trigger</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Bot Builder</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://hellohaptik.github.io/haptik-ios-framework" class="footer-column-link">iOS SDK</a><a href="https://hellohaptik.github.io/haptik-android-lib" class="footer-column-link">Android SDK</a><a href="https://hellohaptik.github.io/javascript_sdk" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Webhooks</a><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/contributing/index" class="footer-column-link">Contributing</a><a href="https://docs.haptik.ai/other/security" class="footer-column-link">Security</a><a href="https://forms.gle/Z2SowBSFpWLayXQz9" class="footer-column-link">Support</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2020 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

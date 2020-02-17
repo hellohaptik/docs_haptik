@@ -60,9 +60,9 @@ If the Authorization header is missing or invalid, then the API will return a `4
 
 ```
 curl -X POST \
-   https://staging-messenger.haptikapi.com/v1.0/webhook/ \
-  -H 'Authorization: Bearer <TOKEN>' \
-  -H 'client-id: <CLIENT_ID>' \
-  -H 'Content-Type: application/json' \
-  -d '{"enabled": true}'
+   <BASE_URL_MESSAGE_DELIVERY>/v1.0/webhook/ \
+  -header 'Authorization: Bearer <AUTH_TOKEN>' \
+  -header 'client-id: <CLIENT_ID>' \
+  -header 'Content-Type: application/json' \
+  -data-raw '{"enabled": true, "business_id": "<BUSINESS_ID>", "device_platform": 13}'
 ```

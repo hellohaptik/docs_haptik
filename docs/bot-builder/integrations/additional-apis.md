@@ -192,6 +192,137 @@ curl -X GET \
 }
 ```
 
+## FAQ Node Creation APIs for KMS
+We have many clients who uses FAQ bots, So, everytime when we want to change QAs, a new csv containing question and answer in certain format(given below) needs to be uploaded.
+
+Since, frequency of this activity varies from business to business but to smoothen this tedious process we've developed an API which can be integrated with client KMS(knowledge Management Systems) via some intermediate layer and everytime the data gets changed in KMS this API should get called and keep data in sync with the haptik systems.
+
+This API allows you to create/update/delete faq nodes via a `POST` request to Haptik Platform. 
+
+> Note: The `base-url` will be provided by Haptik at the time of integration.
+
+FAQ Node creation process consists of two parts:
+1. **Submit the CSV**: To handle the large csv files, this API takes the request data and after validation submit it to celery worker, returns the `task id`, which execute the job asynchronously.
+
+2. **Polling API** to fetch the status of submitted `task id`
+
+
+Example URL: `https://<base-url>/mogambo_api/nodes/faq/create/`
+
+![CSV Format](assets/faq_node_csv_format.png)
+
+```
+List of columns
+
+1. node_name: Node Name
+
+2. question(user says): user says to detect this faq node, to put multiple user says on single node pass questions as pipe(|)  separated values(ref the sample row in image above)
+
+3. answer(bot says): A node can have single or multiple bot says, to pass multiple bot says use `<m>` tag as delimiter
+```
+
+#### Headers
+
+```
+Authorization: Bearer <TOKEN>
+client-id: <CLIENT_ID>
+Content-Type: multipart/form-data
+```
+
+- Authorization - The Authorization header of each HTTP request should be “Bearer” followed by your token which will be provided by Haptik
+- client-id - The client id for your account which will be provided by Haptik
+- Content-Type - multipart/form-data
+
+#### Request Body
+
+```form-data
+"domain_name": "<Name of the Domain>",
+"csv_file": "csv file",
+```
+
+#### Response
+
+A successful request to the API will return a `200` status code with a JSON response object.
+
+```json
+{
+    "success": true,
+    "body": {
+        "task_id": "fe139ce5-f4c3-4383-bacb-64a546cb0b6c"
+    },
+    "error": "",
+    "meta": {}
+}
+```
+
+- success flag Indicates if the API was a success or failure
+- task_id: Job id for the submitted task
+
+#### Error Response
+
+If there is any error in the Headers or the Request body, then the Error message will be returned in a JSON as shown below:
+
+```json
+{
+  "error_message": "invalid doman"
+}
+```
+
+| Error Code | Error Message|
+|----------|:-------------:|
+| 401 | Unauthorized Access or invalid token|
+| 400 | Invalid or bad request body   |
+| 403 | Access Forbidden |
+
+#### Sample Curl Command to submit csv file and get job id
+```
+curl -X POST \
+  https://<base-url>/mogambo_api/nodes/faq/create/ \
+  -H 'authorization: Bearer <token>' \
+  -H 'client-id: <client-id>' \
+  -H 'content-type: multipart/form-data; 
+  -F 'domain_name=<domain_name>' \
+  -F csv_file=@csv_file.csv
+```
+
+> Note: This API follows the upsert behavior viz everytime when new csv gets uploaded it make the existing faq nodes for that domain inactive and create new nodes for the rows mentioned in the CSV
+
+## Polling API to fetch submitted task Status
+This API allows you to see the status of submitted task id
+
+Example URL: `https://<base-url>/mogambo_api/nodes/faq/create/status<task_id>`
+
+> task_id: Id of task which got created by when we submitted csv
+
+#### Headers
+```
+Authorization: Bearer <TOKEN>
+client-id: <CLIENT_ID>
+```
+
+#### Response
+A successful request to the API will return a `200` status code with a JSON response object.
+
+```json
+{
+    "success": true,
+    "body": {
+        "status": "all nodes has been created successfully"
+    },
+    "error": "",
+    "meta": {}
+}
+```
+- success flag Indicates if the API was a success or failure
+
+#### Possible Statuses:
+
+**Error/Exception**: shows the exception/error occured for the last node and stops the execution
+
+**In Progress**: Node Creation is in progress
+
+**Success**: Nodes has been created successfully
+
 ## Best Practices
 
 **1. Assign Chat to Agent** In some scenarios, where integration response fails or some unknown exception occurs then instead of sending bot break message we can also directly assign chat to an agent for better user experience. <Coming Soon>

@@ -206,7 +206,6 @@ FAQ Node creation process consists of two parts:
 
 2. **Polling API** to fetch the status of submitted `task id`
 
-
 Example URL: `https://<base-url>/mogambo_api/nodes/faq/create/`
 
 ![CSV Format](assets/faq_node_csv_format.png)
@@ -288,11 +287,13 @@ curl -X POST \
 > Note: This API follows the upsert behavior viz everytime when new csv gets uploaded it make the existing faq nodes for that domain inactive and create new nodes for the rows mentioned in the CSV
 
 ## Polling API to fetch submitted task Status
+
 This API allows you to see the status of submitted task id
+via a `GET` request to Haptik Platform. 
 
 Example URL: `https://<base-url>/mogambo_api/nodes/faq/create/status<task_id>`
 
-> task_id: Id of task which got created by when we submitted csv
+> task_id: Id of task which gets created when we submit csv to node creation api
 
 #### Headers
 ```

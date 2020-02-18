@@ -193,16 +193,16 @@ curl -X GET \
 ```
 
 ## FAQ Node Creation APIs for KMS
-We have many clients who uses FAQ bots, So, everytime when we want to change QAs, a new csv containing question and answer in certain format(given below) needs to be uploaded.
+We have many clients who uses FAQ bots, So, everytime when we want to change Q&A, a new csv with node name, question and answer in certain format(given below) needs to be uploaded.
 
-Since, frequency of this activity varies from business to business but to smoothen this tedious process we've developed an API which can be integrated with client KMS(knowledge Management Systems) via some intermediate layer and everytime the data gets changed in KMS this API should get called and keep data in sync with the haptik systems.
+Although, frequency of this activity varies from business to business but it's a repeatable to smoothen this tedious process we've developed an API which can be integrated with the client KMS(knowledge Management Systems) via any intermediate layer and everytime when data gets changed in KMS, KMS should get call this API to keep data in sync with the haptik systems.
 
 This API allows you to create/update/delete faq nodes via a `POST` request to Haptik Platform. 
 
 > Note: The `base-url` will be provided by Haptik at the time of integration.
 
-FAQ Node creation process consists of two parts:
-1. **Submit the CSV**: To handle the large csv files, this API takes the request data and after validation submit it to celery worker, returns the `task id`, which execute the job asynchronously.
+FAQ Node creation process API consists of two parts:
+1. **Submit the CSV**: To handle the large csv files, this API takes the request data and after validation submit it to celery worker and returns the `task id`, which executes the task asynchronously.
 
 2. **Polling API** to fetch the status of submitted `task id`
 
@@ -211,11 +211,9 @@ Example URL: `https://<base-url>/mogambo_api/nodes/faq/create/`
 ![CSV Format](assets/faq_node_csv_format.png)
 
 ```
-List of columns
+1. node_name: Name of the node, node name should be unique
 
-1. node_name: Node Name
-
-2. question(user says): user says to detect this faq node, to put multiple user says on single node pass questions as pipe(|)  separated values(ref the sample row in image above)
+2. question(user says): user says to detect this faq node, multiple user says for single node can be passed as pipe(|)  separated values(ref the sample row in image above)
 
 3. answer(bot says): A node can have single or multiple bot says, to pass multiple bot says use `<m>` tag as delimiter
 ```

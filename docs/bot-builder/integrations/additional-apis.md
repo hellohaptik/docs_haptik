@@ -233,7 +233,7 @@ Content-Type: multipart/form-data
 #### Request Body
 
 ```form-data
-"domain_name": "<Name of the Domain>",
+"domain_name": "<Name of the Domain/Bot>",
 "csv_file": "csv file",
 ```
 

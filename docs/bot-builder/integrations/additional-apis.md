@@ -195,7 +195,7 @@ curl -X GET \
 ## FAQ Node Creation APIs for KMS
 We have many clients who need FAQ bots. Every time when we want to change the content of these FAQs (Q&As), a new CSV with Node name, Question and Answer in a defined format needs to be uploaded. (Format given below)
 
-Although, frequency of this activity varies from business to business but it's a repeatable to smoothen this tedious process we've developed an API which can be integrated with the client KMS(knowledge Management Systems) via any intermediate layer and everytime when data gets changed in KMS, KMS should get call this API to keep data in sync with the haptik systems.
+We have developed an API that can be integrated with the client KMS(Knowledge Management Systems) via any intermediate layer and every time when data gets changed in KMS, it should call this API to keep data in sync with the Haptik systems.
 
 This API allows you to create/update/delete faq nodes via a `POST` request to Haptik Platform. 
 

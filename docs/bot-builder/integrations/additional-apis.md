@@ -192,6 +192,136 @@ curl -X GET \
 }
 ```
 
+## FAQ Node Creation APIs for KMS
+We have many clients who need FAQ bots. Every time when we want to change the content of these FAQs (Q&As), a new CSV with Node name, Question and Answer in a defined format needs to be uploaded. (Format given below)
+
+We have developed an API that can be integrated with the client KMS(Knowledge Management Systems) via any intermediate layer and every time when data gets changed in KMS, it should call this API to keep data in sync with the Haptik systems.
+
+This API allows you to create/update/delete faq nodes via a `POST` request to Haptik Platform. 
+
+> Note: The `base-url` will be provided by Haptik at the time of integration.
+
+FAQ Node creation process API consists of two parts:
+1. **Submit the CSV**: To handle the large csv files, this API takes the request data and after validation submit it to celery worker and returns the `task id`, which executes the task asynchronously.
+
+2. **Polling API** to fetch the status of submitted `task id`
+
+Example URL: `https://<base-url>/mogambo_api/nodes/faq/create/`
+
+![CSV Format](assets/faq_node_csv_format.png)
+
+```
+1. node_name: Name of the node, node name should be unique
+
+2. Question(User Says): Independent Responses under User Says to detect this FAQ node. Multiple user says for single node can be passed as pipe(|) separated values(refer the sample row in image above)
+
+3. answer(bot says): A node can have single or multiple bot says, to pass multiple bot says use `<m>` tag as delimiter
+```
+
+#### Headers
+
+```
+Authorization: Bearer <TOKEN>
+client-id: <CLIENT_ID>
+Content-Type: multipart/form-data
+```
+
+- Authorization - The Authorization header of each HTTP request should be “Bearer” followed by your token which will be provided by Haptik
+- client-id - The client id for your account which will be provided by Haptik
+- Content-Type - multipart/form-data
+
+#### Request Body
+
+```form-data
+"domain_name": "<Name of the Domain/Bot>",
+"csv_file": filename.csv,
+```
+
+#### Response
+
+A successful request to the API will return a `200` status code with a JSON response object.
+
+```json
+{
+    "success": true,
+    "body": {
+        "task_id": "fe139ce5-f4c3-4383-bacb-64a546cb0b6c"
+    },
+    "error": "",
+    "meta": {}
+}
+```
+
+- success flag Indicates if the API was a success or failure
+- task_id: Job id for the submitted task
+
+#### Error Response
+
+If there is any error in the Headers or the Request body, then the Error message will be returned in a JSON as shown below:
+
+```json
+{
+  "error_message": "invalid doman"
+}
+```
+
+| Error Code | Error Message|
+|----------|:-------------:|
+| 401 | Unauthorized Access or invalid token|
+| 400 | Invalid or bad request body   |
+| 403 | Access Forbidden |
+
+#### Sample Curl Command to submit csv file and get job id
+```
+curl -X POST \
+  https://<base-url>/mogambo_api/nodes/faq/create/ \
+  -H 'authorization: Bearer <token>' \
+  -H 'client-id: <client-id>' \
+  -H 'content-type: multipart/form-data; 
+  -F 'domain_name=<domain_name>' \
+  -F csv_file=@filename.csv
+```
+
+> Note: This API follows the upsert [UPDATE and INSERT] behaviour i.e. every time when new CSV gets uploaded it makes the existing FAQ nodes for that domain inactive, creates new nodes for the rows mentioned in the CSV and updates Nodes with same names with the new User Says and Bot Says from the CSV. 
+
+## Polling API to fetch submitted task Status
+
+This API allows you to see the status of submitted task id
+via a `GET` request to Haptik Platform. 
+
+Example URL: `https://<base-url>/mogambo_api/nodes/faq/create/status<task_id>/`
+
+> task_id: Id of task which gets created when we submit csv to node creation api
+
+#### Headers
+```
+Authorization: Bearer <TOKEN>
+client-id: <CLIENT_ID>
+```
+
+#### Response
+A successful request to the API will return a `200` status code with a JSON response object.
+
+```json
+{
+    "success": true,
+    "body": {
+        "status": "all nodes has been created successfully"
+    },
+    "error": "",
+    "meta": {}
+}
+```
+- success flag Indicates if the API was a success or failure
+
+#### Possible Statuses:
+
+**Error/Exception**: shows the exception/error occured for the last node and stops the execution
+
+**In Progress**: Node Creation is in progress
+
+**Success**: Nodes has been created successfully
+
 ## Best Practices
 
 **1. Assign Chat to Agent** In some scenarios, where integration response fails or some unknown exception occurs then instead of sending bot break message we can also directly assign chat to an agent for better user experience. <Coming Soon>

@@ -279,7 +279,7 @@ curl -X POST \
   -H 'client-id: <client-id>' \
   -H 'content-type: multipart/form-data; 
   -F 'domain_name=<domain_name>' \
-  -F csv_file=@csv_file.csv
+  -F csv_file=@filename.csv
 ```
 
 > Note: This API follows the upsert behavior viz everytime when new csv gets uploaded it make the existing faq nodes for that domain inactive and create new nodes for the rows mentioned in the CSV

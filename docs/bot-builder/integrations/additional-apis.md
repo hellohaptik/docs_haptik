@@ -213,7 +213,7 @@ Example URL: `https://<base-url>/mogambo_api/nodes/faq/create/`
 ```
 1. node_name: Name of the node, node name should be unique
 
-2. question(user says): user says to detect this faq node, multiple user says for single node can be passed as pipe(|)  separated values(ref the sample row in image above)
+2. Question(User Says): Independent Responses under User Says to detect this FAQ node. Multiple user says for single node can be passed as pipe(|) separated values(refer the sample row in image above)
 
 3. answer(bot says): A node can have single or multiple bot says, to pass multiple bot says use `<m>` tag as delimiter
 ```

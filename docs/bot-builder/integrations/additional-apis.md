@@ -234,7 +234,7 @@ Content-Type: multipart/form-data
 
 ```form-data
 "domain_name": "<Name of the Domain/Bot>",
-"csv_file": "csv file",
+"csv_file": filename.csv,
 ```
 
 #### Response

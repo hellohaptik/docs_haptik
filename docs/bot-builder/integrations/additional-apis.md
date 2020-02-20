@@ -282,7 +282,7 @@ curl -X POST \
   -F csv_file=@filename.csv
 ```
 
-> Note: This API follows the upsert behavior viz everytime when new csv gets uploaded it make the existing faq nodes for that domain inactive and create new nodes for the rows mentioned in the CSV
+> Note: This API follows the upsert [UPDATE and INSERT] behaviour i.e. every time when new CSV gets uploaded it makes the existing FAQ nodes for that domain inactive, creates new nodes for the rows mentioned in the CSV and updates Nodes with same names with the new User Says and Bot Says from the CSV. 
 
 ## Polling API to fetch submitted task Status
 

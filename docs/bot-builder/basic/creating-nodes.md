@@ -70,11 +70,11 @@ Bot Builders can take advantage of an easy-to-use JSON picker in the bot says se
 
 You will create your nodes within a sub-story. To make a node, click the sub-story on the left-hand-side. Now, click on the 'Add Nodes' button just below your sub-story title, as depicted here:
 
-![img](assets/bot-builder-nodes/add-nodes.png)
+![img](assets/bot-builder-nodes/add-node.png)
 
 This will open a sidebar, as shown below, on the left-hand side of the graph. You can drag and drop the node you want from this sidebar
 
-![img](assets/bot-builder-nodes/node-tray.png)
+![img](assets/bot-builder-nodes/node-add-tray.png)
 
 Once you drag and drop any of the node type from the sidebar, a new sidebar is opened with the RHS of the ndoe type you selected. You will need to fill in some information about the node before saving it.
 
@@ -94,4 +94,4 @@ Click 'Save' when done.
 
 Post creation of a node, the node will be displayed as depicted below:
 
-![img](assets/new_node_complete.png)
+![img](assets/bot-builder-nodes/new_node_complete.png)

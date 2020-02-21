@@ -13,11 +13,11 @@ A HSM is a template message with placeholders for dynamic data. All HSMs need to
 ## Setting up a HSM
 To setup a HSM you first need to get access to the FB Business Manager Tool of the business. If you don't already have access, you can request it by sending an email to `platform@haptik.ai` with the subject as `Request access to FB Business Manager` and in the body mention the business and the reason for access request.
 
-Once you have access, you can go to the Message Templates section of the business manager tool and create your HSM. 
+Once you have access, you can go to the Message Templates section of the business manager tool and create your HSM.
 
 ![Message Template Home](assets/message_templates_home.png)
 
-On the `Message Templates` page click on the **Create Message Template** button to create a new template. 
+On the `Message Templates` page click on the **Create Message Template** button to create a new template.
 
 ![Creating a template](assets/create_message_template.gif)
 
@@ -36,11 +36,14 @@ After you have submitted your HSM and approval has been granted, you can start s
 
 You can do this by making a `POST` request to the notification endpoint provided to you by the `DevOps/Platform` team.
 
+> **NOTE:** The  older version of send notification API (`/whatsapp/notification/`) is now deprecated in favor of `/whatsapp/notification/v2/` of the same API.
+
+
 The request signature is as below:
 
 ```bash
 curl -X POST \
-  <base_url>/whatsapp/notification/ \
+  <base_url>/whatsapp/notification/v2/ \
   -H 'Authorization: Bearer <token>' \
   -H 'Content-Type: application/json' \
   -H 'client-id: <client-id>' \
@@ -76,10 +79,27 @@ If the number does not exist on WhatsApp you will get the below message as respo
 When API call is successful you will get the below but does not mean message was delivered but Notifications API was triggered and WhatsApp sent the message to defined number. Sent vs Delivered messages only stats are available on WhatsApp dashboard.
 ```
 {
-    "id": "gBEGkZWCBgc2AgmGMsdscnOKLeyVg"
+   "meta" : {
+      "api_status" : "stable",
+      "version" : "2.25.1"
+   },
+   "messages" : [
+      {
+         "id" : "<random message id>"
+      }
+   ]
 }
 ```
 
-Details regarding the other fields in the body can be found [here](https://developers.facebook.com/docs/whatsapp/message-templates/sending/). 
+In case of any other errors if returned by WhatsApp, they will be returned as it is with the corresponding status codes. You can refer [this](https://developers.facebook.com/docs/whatsapp/api/messages/message-templates/#response) for reference.
+
+Details regarding the other fields in the body can be found [here](https://developers.facebook.com/docs/whatsapp/message-templates/sending/).
 
 Acceptable formats for phone number can be found [here](https://developers.facebook.com/docs/whatsapp/api/contacts#phone).
+
+## FAQs
+
+I keep getting `"unable to verify contact details"` in response even though the Mobile Number entered is a valid WhatsApp account.
+> This could happen because of the following reasons:
+> - If the credentials entered in Mogambo's Business Manager are incorrect.
+> - If you have not specified the Country code in the `to` field when sending the HSM and if it is different from the Country Code used when setting up the WhatsApp Number.

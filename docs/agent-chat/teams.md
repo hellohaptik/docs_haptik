@@ -58,7 +58,9 @@ Offline - Team will not receive chats from a business
 
 ### Step 4 - Setup Team Offline message
 
-If a team status id is defined as offline, the team should configure it.
+If a team status id is defined as offline, the team should configure it. When users send a message and all agents have logged out, you can setup a default message for the end user. For example, this message could say `"Sorry, no agents are available at the moment. We will respond you as soon an agent is online".`
+
+   > Ideally, we suggest agents to go offline first and then logout. So, first an agent closes chats in their queue. And then they logout as soon as they're to end their daily shifts. 
 
 ### Step 5 - Setup Team Delay Message and Delay Time
 

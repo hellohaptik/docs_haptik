@@ -243,34 +243,56 @@ $time - ‘tomorrow’</td>
   </tr>
 </table>
 
+#### **Text Entity**
 
-#### **Free-text Entities**
+**Text** entity is meant to extract words/phrases from user utterances.
 
-Free-text entities allows bot builders to define entities based on their context in the utterance. You do this by adding the user utterance in Entity Pattern section and tagging the entities in the user utterance.
+There are two ways in which text entities can be used.
+1. Dictionary
+2. Entity Patterns
 
-When you define a free-text entity, a model is trained on both the tagged term and the context in which the term is used in the sentence you tag. This model enables us to calculate a confidence score that identifies how likely a word or phrase is to be an instance of an entity, based on how it is used in the user input.
+##### Dictionary
+
+`Dictionary` allows bot builders to do a full-text search on user queries to extract matching strings and phrases.
+`Dictionary` has two concepts - 
+
+1. values - value of an entity.
+2. variants - For a given value, different variations of those words or phrases.
+
+Example -  For **city** entity.
+![Entity-Dictionary](assets/bot-builder-user-says/entity-dictionary.png)
+
+##### **Entity patterns**
+
+> **Entity patterns can be added only in English for now.**
+
+`Entity patterns` allows bot builders to define entities based on their context in the utterance. You do this by adding the user utterance in `Entity Patterns` section and tagging the entities in the user utterance.
+
+When you define entity patterns, a model is trained on both the tagged term and the context in which the term is used in the sentence you tag. This model enables us to calculate a confidence score that identifies how likely a word or phrase is to be an instance of an entity, based on how it is used in the user input.
 
 ![Free-text Entity English](assets/bot-builder-user-says/free_text_entity_en.png)
 
-Free-text entity tags can be added to Indic languages as well. We currently support 8 Indic languages (Hindi, Gujarati, Marathi, Tamil, Telugu, Kannada, Malayalam, Bengali)
+**When to use?**
 
-![Free-text Entity Hindi](assets/bot-builder-user-says/free_text_entity_hi.png)
+- When some entity can take infinitely many values and using `Dictionary` isn't sustainable Examples:
+  - person_name (Bob Marley, Nick Jonas, Mark Norman Sr.)
+  - content_name (Harry Potter, Matrix Reloaded, Bumble Bee, John Wick)
+-  To extract names of things, in other words nouns (proper or common).
+- Phrase extraction tasks like extracting `set up a reminder` from `I want to set up a reminder`
 
-Entities such as person_name (Bob Marley, Nick Jonas, Mark Norman Sr.), content_name (Harry Potter, Matrix Reloaded, Bumble Bee, John Wick) have infinite number of possibilities that need to be added to the entity dictionary. Free-text entities will help you tackle such scenarios by not making it a content heavy task.
+**How does it work?**
 
-#### **How does it work?**
-
-First, you define a category of terms as an entity (content). Next, you go to the Entity Patterns section of the node, add user says variations, find any mentions of the entity in the utterance, and add a tag.
+1. Go to the `Entity Patterns` section of the entity,
+2.  Add a user says variation and tag mentions of your entity by highlighting the phrases and selecting "Add Tag"
 
 ![Free-text Entity - Add Tag](assets/bot-builder-user-says/free_text_entity_add_tag.png)
 
-For example, you might go to the #play_content node, and find a user says, ‘Play harry potter on Hotstar’. You can tag ‘harry potter’ as a mention of the @content entity.
-
-For training purposes, the term you tagged, ‘harry potter’, is added as a value of the @content entity dictionary.
+3. For <a href="#negative-examples">Negative examples</a> (See Guidelines) i.e. examples with no entities in them  don't tag anything.
+4. After you are done adding/updating variations, please Train the bot.
 
 At run time, model evaluates terms based on the context in which they are used in the sentence only. If the structure of a user says that mentions the term matches the structure of an intent user example in which a mention is tagged, then the model interprets the term to be a mention of that entity type. 
 
-For example, the user input might include the utterance, ‘Play matrix reloaded on Hotstar’. Due to the similarity of the structure of this sentence to the user example that you tagged (Play harry potter on Hotstar), model recognizes ‘matrix reloaded’ as a @content entity mention.
+For example, the user input might include the utterance, **‘Play matrix reloaded on Hotstar’**. Due to the similarity of the structure of this sentence to the user example that you tagged (**Play harry potter on Hotstar**), model recognises **‘matrix reloaded’** as a **content** entity mention.
 
 When a context based entity model is used for an entity, model does not look for exact text or pattern matches for the entity in the user input, but focuses instead on the context of the sentence in which the entity is mentioned.
 
@@ -278,7 +300,117 @@ The entities that are tagged in the ‘Entity Patterns’, get auto-tagged in th
 
 ![Free-text Entity Auto Tag](assets/bot-builder-user-says/free_text_entity_usersays.png)
 
-If you choose to define entity values by using entity patterns, add at least 15-20 tags per entity to give the free-text entity model adequate data to generate accurate results.
+In the screenshot above, the phrases with a green underline are entity values of different entities added on the node. You can highlight the phrase and see which entity was detected for the phrase.
+
+If you choose to define entity values by using entity patterns, then you should follow the following guidelines to ensure better performance.
+
+#### **Guidelines for adding Entity Patterns variations**
+
+There are two things needed for training a good model -
+
+ **Patterns (User utterances)** - We recommend a minimum of 10 sentences.
+Examples  - **grocery_item**: `I want to buy apples`,  `I need to purchase apples.` 
+
+**Dictionary** - A set of examples for each entity . We recommend a minimum of 10 examples.
+Examples - **grocery_item**: `Guava juice`, `apples`, `ashirwaad atta`
+
+##### **Patterns**
+
+1. Use longer sentences whenever possible. This enables model to perform better on paraphrases. 
+    
+    Examples - 
+    
+- `Tell me apple price on bigbasket` instead of `apple price on bigbasket`
+    - `What is the price of apple today?`  instead of `price of apple`
+    
+2. Ensure variety in usage of synonyms especially verbs.
+
+    Examples -  
+
+    - If `I want to buy apples` is already present, `I need to purchase apples` is better than  `i want to purchase apples`.
+
+3. Vary the position of the entity across sentences in training data. This prevents the model from getting biased towards a particular position.
+
+    Examples -  
+
+    - I would like 2 packets of **cow milk**  - Entity mention in the end
+    - Help me purchase some **bananas** from that shop  - Entity mention in the middle
+
+4. If the entity values can vary in length in number of words, then add few variations each for different number of words
+
+     Examples - 
+
+    - Add **shuddha ashirwad atta** to my cart - (3 words)
+    - Add **bananas** to my bag - (1 word)
+
+5. Avoid spelling errors.
+
+6. Ensure each different type of context has minimum 10 variations.
+
+    For example in *Grocery Shopping*, shopping items can be mentioned in the context of "buy" intent, in such case you entity patterns should have variations that are similar to `I want to buy apples` .
+
+    But if context expands to say "information" intent ( E.g. "Tell me about apples") and you want the entity to pick up items in such cases, then add at least 10 more variations like  `price of butter` or `What is the price of apple on grofers?`
+
+##### **Dictionary**
+
+List of variations entered in the `Dictionary` tab of the entity are used to automatically multiply data while training. This helps in making the model more robust to different types of values, while reducing the effort of the bot builder.
+
+E.g. If you have the following training examples.
+
+| Patterns                                     | **grocery_item** |
+| -------------------------------------------- | ---------------- |
+| I want to buy an apple from grofers          | apple            |
+| Help me purchase some bananas from that shop | bananas          |
+| I would like 2 packets of cow milk           | cow milk         |
+
+Then entity examples for this data would be
+
+|GROCERY_ITEM           |
+|-----------------------|
+|Guava juice            |
+|Shuddha ashirwad atta  |
+|Pure cow ghee          |
+|Cadbury dairy milk silk|
+|Grape wine             |
+
+As before, if possible, add entity values of variable lengths. For example - Guava juice (2 words), Cadbury dairy milk silk (4 words)  
+
+#### Troubleshooting
+
+**1. Entity Detection Failure** - Bot should have detected entity but it didn't
+
+1. Add that data point to your Entity Patterns.
+2. Add some paraphrases of that data point.  
+
+Example: 
+
+Let's say your entity had following Patterns
+
+| Patterns      |
+|----------------------------------|
+| I want to eat **apple**          |
+| I am hungry. Need to have **banana** |
+| is **apple** good for health     |
+| how many calories in **icecream**? |
+| tell me **apple** price on bigbasket |
+
+And it failed on following query "Where can i buy **stuffed cheese paratha** from ?"
+
+To fix this, add this patterns to the entity and train the bot. After this, the bot should be able to extract entity from similar phrases like
+
+|                                              |
+| -------------------------------------------- |
+| where to buy **vanilla ice cream** from?     |
+| where to get **vanilla ice cream** from?     |
+| where can in buy **vanilla ice cream** from? |
+
+**2. False Detection Failure** - Bot is either not detecting entity or detecting the wrong phrases as entity.
+
+Example:
+
+"Show me Apple phones" and the bot is detecting "Apple" as a grocery item.
+
+To fix this, Enter such phrases in the Entity Patterns of your entity without tagging anything. Such examples with nothing highlighted in them are treated as **Negative examples** and the bot learns to not extract values in such contexts.
 
 ### **Entity types and language support**
 
@@ -323,7 +455,7 @@ If you choose to define entity values by using entity patterns, add at least 15-
     <td>Text</td>
     <td>Detect custom entities in text string using full text search in Datastore or based on contextual model</td>
     <td>Order me a pizza,मुंबईमें मौसम कैसा है</td>
-    <td>Search supported for 'en', 'hi', 'gu', 'bn', 'mr', 'ta', Contextual model supported for 'en' only</td>
+    <td>Search supported for 'en', 'hi', 'gu', 'bn', 'mr', 'ta', Entity Patterns supported for 'en' only</td>
   </tr>
   <tr>
     <td>PNR</td>

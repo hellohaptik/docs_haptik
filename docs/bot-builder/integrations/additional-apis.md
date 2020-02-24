@@ -315,7 +315,8 @@ A successful request to the API will return a `200` status code with a JSON resp
 - success flag Indicates if the API was a success or failure
 
 
-#### Sample Curl Command to submit csv file and get job id
+#### Sample Curl Command to get the task status
+
 ```
 curl -X GET \
   https://<base-url>/mogambo_api/nodes/faq/create/status/<task_id>/ \

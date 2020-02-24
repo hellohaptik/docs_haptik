@@ -289,7 +289,7 @@ curl -X POST \
 This API allows you to see the status of submitted task id
 via a `GET` request to Haptik Platform. 
 
-Example URL: `https://<base-url>/mogambo_api/nodes/faq/create/status<task_id>/`
+Example URL: `https://<base-url>/mogambo_api/nodes/faq/create/status/<task_id>/`
 
 > task_id: Id of task which gets created when we submit csv to node creation api
 
@@ -313,6 +313,16 @@ A successful request to the API will return a `200` status code with a JSON resp
 }
 ```
 - success flag Indicates if the API was a success or failure
+
+
+#### Sample Curl Command to get the task status
+
+```
+curl -X GET \
+  https://<base-url>/mogambo_api/nodes/faq/create/status/<task_id>/ \
+  -H 'authorization: Bearer <TOKEN>' \
+  -H 'client-id: <CLIENT ID>' \
+```
 
 #### Possible Statuses:
 

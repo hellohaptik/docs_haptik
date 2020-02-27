@@ -115,9 +115,11 @@ The dictionary contains following parameters:
 
 **5. conversation_no** - Identifier for the current conversation of the user with this Business
 
-**6. conversation_details** - Conversation details stores the current context of the conversation.Things like insurance number or product id which are the current scope of the conversation will go under conversation details. 
+**6. conversation_details** - Conversation details stores the current context of the conversation.Things like insurance number or product id which are the current scope of the conversation will go under conversation details.
 
 This data will be stored in redis with expiry time of 3 hours.
+
+> Note: If nothing is set in conversation details then default value for them will be empty dict i.e. {}
 
 
 **7. user_details** -  user_details stores user's data like address, PAN number, Aadhar number which are independent of the current context of the bot conversation.
@@ -125,6 +127,9 @@ This data will be stored in redis with expiry time of 3 hours.
 Data inside user_details will be available across bots and businesses as long as the underlying user is the same in the database. 
 
 > conversation_details and user_details can be set from the backend as well.
+
+> Note: Value in User Details schema expects data to be string type.
+If the user wants to store a list corresponding to user detail key, Then they should handle the serializer/deserializer logic inside the code before returning the response from the code node,
 
 **8. env_variables** - env_variables key returns environment variable values of current environment. ENV variables can be added/edited by developer from code executor UI.
 

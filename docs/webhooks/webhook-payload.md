@@ -243,14 +243,18 @@ Example:
             "subReason": "",
             "comment": ""
         },
-        "conversation_data": {
+        "conversation_details": {
             "insurance_no": "CDQP12324",
             "payment_mode": "COD"
         },
-        "permanent_user_data": {
+        "user_details": {
             "phone_number": 8826755986,
             "date_of_birth": "21/07/1995"
         }
     }
 }
 ```
+
+Please add a safety check on the keys in the below JSON, before accessing it's value to avoid exceptions.
+
+We can add new events over the time. Please make sure to handle the addition of newer events. Simple solution would be to add a check to handle specific events which you want to use and ignore all the rest of them (return 200 as status code for them). We make sure to maintain backward compatibility with already existing events while adding new ones.

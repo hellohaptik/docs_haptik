@@ -255,6 +255,7 @@ Example:
 }
 ```
 
-Please add a safety check on the keys in the below JSON, before accessing it's value to avoid exceptions.
-
-We can add new events over the time. Please make sure to handle the addition of newer events. Simple solution would be to add a check to handle specific events which you want to use and ignore all the rest of them (return 200 as status code for them). We make sure to maintain backward compatibility with already existing events while adding new ones.
+Notes: 
+- Please add a safety check on the keys in the above JSON, before accessing it's value to avoid exceptions
+- Our JSONs will always be backward compatible for a specific `event_name`. New keys could be added. But existing keys will not be removed/changed without a version change in the `event_name`
+- We could add new `event_name` as per our product requirement. The **webhook consumer** should not consider a new `event_name` as a bug. You can simply ignore it, if it is not required for your use case (return `200` as status code for them).

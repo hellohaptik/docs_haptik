@@ -243,14 +243,19 @@ Example:
             "subReason": "",
             "comment": ""
         },
-        "conversation_data": {
+        "conversation_details": {
             "insurance_no": "CDQP12324",
             "payment_mode": "COD"
         },
-        "permanent_user_data": {
+        "user_details": {
             "phone_number": 8826755986,
             "date_of_birth": "21/07/1995"
         }
     }
 }
 ```
+
+Notes: 
+- Please add a safety check on the keys in the above JSON, before accessing it's value to avoid exceptions
+- Our JSONs will always be backward compatible for a specific `event_name`. New keys could be added. But existing keys will not be removed/changed without a version change in the `event_name`
+- We could add new `event_name` as per our product requirement. The **webhook consumer** should not consider a new `event_name` as a bug. You can simply ignore it, if it is not required for your use case (return `200` as status code for them).

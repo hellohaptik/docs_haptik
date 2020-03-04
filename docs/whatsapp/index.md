@@ -20,3 +20,5 @@ WhatsApp Business API provides the following features:
 > Note: We only get the username, when the user sends a message. Username is a part of the payload with user's message. The username for all existing users in the system will not change and remain as is.
       
 * **Location** - Accepting user's location on WhatsApp would now be possible. WhatsApp has an option for users to share their location. And, Haptik can process the location input. This means we can now easily build use cases where a user has to send their location on Whatsapp. 
+
+> Note for Bot Builder: Please do not use the Location Picker from HSL Builder to get location from WhatsApp. Send it as a text message to the user asking for location from the user.

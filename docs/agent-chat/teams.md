@@ -123,4 +123,4 @@ You can filter the summary and agent metrics by *Custom time* or *Custom date*. 
 
 ![Hourly_Metrics](assets/teams_hourly_analytics.png)
 
-> Tip: You can choose hourly slots on a date in the Time filter to get the metric values for the chosen Time slot.
+> Tip: You can choose hourly slots on a date in the Time picker to get the metric values for the chosen Date and Time.

@@ -5,11 +5,11 @@
             "Security"
         ],
         "Integration APIs": [
-          "Management APIs",
-          "User APIs",
-          "Message APIs",
-          "Event APIs",
-          "Thread Control APIs"
+          "Management-APIs",
+          "User-APIs",
+          "Message-APIs",
+          "Event-APIs",
+          "Thread-Control-APIs"
         ]
     }
 }

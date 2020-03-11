@@ -2,7 +2,7 @@
 title: Management APIs
 ---
 
-### [API] Register webhooks
+## [API] Register webhooks
 
 Haptik will call provided webhooks with events as they occur. You can register multiple webhooks, one for each type.
 
@@ -31,7 +31,7 @@ Haptik will call provided webhooks with events as they occur. You can register m
 | error | str | false | Error message if applicable |
 
 
-### [API] List webhooks
+## [API] List webhooks
 
 Get a list of all webhooks registered for the ECT.
 

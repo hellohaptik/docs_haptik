@@ -72,11 +72,10 @@ Device platforms
 | aeu\_events | received |
 |   | allocated |
 |   | user\_timeout |
-|   |   |
-|   | transition(aeu, aeu) |
+| user\_events | transition(aeu, aeu) |
 |   | transition(team, team) |
 |   | Entity update |
-| user\_events | create\_user |
+|   | create\_user |
 
 ## Message types
 

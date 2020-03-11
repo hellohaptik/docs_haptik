@@ -3,7 +3,7 @@ title: Event APIs
 ---
 
 
-### [HOOK] Receive event from TRACT
+## [HOOK] Receive event from TRACT
 
 **Endpoint**
 
@@ -34,7 +34,7 @@ title: Event APIs
 | error | str | false | Error message if applicable |
 
 
-### [API] Send event from ECT to TRACT
+## [API] Send event from ECT to TRACT
 
 **Endpoint**
 

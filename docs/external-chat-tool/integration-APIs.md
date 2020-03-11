@@ -19,10 +19,15 @@ b. Allow Haptik to act as a proxy and handle thread control for third party exte
 2. Client organisation [CO]
 3. Third party middleware: e.g: Facebook Messenger in case of facebook bots [TPM]
 4. Haptik components:
+
     a. Message Delivery [MD]
+    
     b. IVA [IVA]
+    
     c. Analytics [A]
+    
     d. T R A C T [TRACT]
+    
 5. Third party agent chat tools (external chat tool): [ECT]
 6. Agent end user [AEU]
 

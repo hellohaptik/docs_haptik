@@ -6,7 +6,9 @@ title: External Chat Tool Integration
 # Third-party agent chat tool (TRACT)
 
 TRACT extends our system to allow interfacing with third-party agent chat tools. This document defines the interfaces used to integrate with the third-party tools to -
+
 a. Allow third party agent chat tools to interoperate with Haptik IVAs
+
 b. Allow Haptik to act as a proxy and handle thread control for third party external chat tools.
 
 

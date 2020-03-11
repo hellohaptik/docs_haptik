@@ -3,7 +3,7 @@ title: Thread control APIs
 ---
 
 
-### [API] Fetch listeners
+## [API] Fetch listeners
 
 **Endpoint**
 
@@ -28,7 +28,7 @@ title: Thread control APIs
 | listeners | List[dict] | true | List of listeners on the given thread |
 
 
-### [API] Thread management 
+## [API] Thread management 
 
 **Endpoint**
 

@@ -1,9 +1,9 @@
 ---
-title: External Chat Tool Integration
+title: Index
 ---
 
 
-# Third-party agent chat tool (TRACT)
+# Third-party agent chat tool (TRACT) Integration
 
 TRACT extends our system to allow interfacing with third-party agent chat tools. This document defines the interfaces used to integrate with the third-party tools to -
 

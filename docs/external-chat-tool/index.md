@@ -44,3 +44,62 @@ The TRACT APIs can be split in these sets:
 4. Message APIs: send/receive messages
 5. Event APIs: send/receive events
 6. Thread control APIs: these allow transfer of conversation control
+
+
+
+# Appendix
+
+Device platforms
+
+| **ID** | **Name** |
+| --- | --- |
+| 2 | &quot;Android&quot; |
+| 3 | &quot;Facebook&quot; |
+| 5 | &quot;WebSDK&quot; |
+| 6 | &quot;iOS&quot; |
+| 13 | &quot;Webhook&quot; |
+| 14 | &quot;WhatsApp&quot; |
+
+## Event types
+
+| **Event** | **Use case specification** |
+| --- | --- |
+| conversation\_state | incomplete |
+|   | complete |
+|   | waiting |
+|   | pinned |
+|   | bot |
+| aeu\_events | received |
+|   | allocated |
+|   | user\_timeout |
+|   |   |
+|   | transition(aeu, aeu) |
+|   | transition(team, team) |
+|   | Entity update |
+| user\_events | create\_user |
+
+## Message types
+
+| **ID** | **Type** | **Description** |
+| --- | --- | --- |
+| 0 | regular | Unstructured text messages typed by users and assistant(not bot) |
+| 1 | image | Images uploaded by users or assistants |
+
+Additional endpoints to be provided at a later stage upon review by the Security and Compliance team.
+
+## Message content
+
+HSL - [https://docs.haptik.ai/hsl/index#hsl-elements](https://docs.haptik.ai/hsl/index#hsl-elements)
+
+## Senders
+
+| **Name** | **Description** |
+| --- | --- |
+| ceu | Chat End User |
+| iva | Intelligent Virtual Assistant |
+| haptik | Haptik System |
+| ect | External Chat Tool |
+| aeu | Agent End User |
+
+
+

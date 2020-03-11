@@ -2,7 +2,6 @@
     "sidebar": {
         "Getting Started": [
             "Index",
-            "Appendix",
             "Security"
         ],
         "Integration APIs": [

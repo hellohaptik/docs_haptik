@@ -54,8 +54,7 @@ In case user messages are received before the user creation event is triggered, 
 
 | **parameter** | **type** | **required** | **description** |
 | --- | --- | --- | --- |
-| user\_id | str | true | User ID within Haptik
-(available with the message received) |
+| user\_id | str | true | User ID within Haptik (available with the message received) |
 
 **Response**
 

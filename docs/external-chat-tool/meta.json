@@ -1,15 +1,15 @@
 {
     "sidebar": {
         "Getting Started": [
-            "Index",
-            "Security"
+            "index",
+            "security"
         ],
         "Integration APIs": [
-          "Management-APIs",
-          "User-APIs",
-          "Message-APIs",
-          "Event-APIs",
-          "Thread-Control-APIs"
+          "management-APIs",
+          "user-APIs",
+          "message-APIs",
+          "event-APIs",
+          "thread-Control-APIs"
         ]
     }
 }

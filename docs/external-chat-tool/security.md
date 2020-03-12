@@ -1,5 +1,5 @@
 ---
-# Signing management requests
+title: Signing management requests
 ---
 
 The management APIs require that requests be signed by the ECT for authentication and authorisation.

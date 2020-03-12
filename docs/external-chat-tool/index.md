@@ -64,18 +64,13 @@ Device platforms
 
 | **Event** | **Use case specification** |
 | --- | --- |
-| conversation\_state | incomplete |
+| conversation\_state | waiting |
 |   | complete |
-|   | waiting |
-|   | pinned |
-|   | bot |
+| message | receive |
 | aeu\_events | received |
 |   | allocated |
 |   | user\_timeout |
-| user\_events | transition(aeu, aeu) |
-|   | transition(team, team) |
-|   | Entity update |
-|   | create\_user |
+| user\_events | create\_user |
 
 ## Message types
 

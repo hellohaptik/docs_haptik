@@ -21,8 +21,8 @@ Haptik will call provided webhooks with events as they occur. You can register m
 
 | **parameter** | **type** | **required** | **description** |
 | --- | --- | --- | --- |
-| category | str | true | Webhook event type |
-| subcategory | str | true | Webhook event subtype |
+| category | str | true | Webhook event category |
+| subcategory | str | true | Webhook event subcategory |
 | url | str | true | Registered URL |
 
 **Response**
@@ -38,8 +38,9 @@ Get a list of all webhooks registered for the ECT.
 
 **Endpoint**
 
+| | |
+| - | - |
 | **type** | GET |
-| --- | --- |
 | **required** | true |
 | **provider** | TRACT |
 | **caller** | ECT |

@@ -12,7 +12,7 @@ title: Event APIs
 | **required** | true |
 | **provider** | ECT (via register webhook) |
 | **caller** | TRACT |
-| **url** | registered\_webhooks[&#39;event\_type&#39;][&#39;event\_subtype&#39;] |
+| **url** | registered\_webhooks[&#39;category&#39;][&#39;subcategory&#39;] |
 | **encoding** | application/json |
 
 **Request**
@@ -21,10 +21,8 @@ title: Event APIs
 | --- | --- | --- | --- |
 | conversation\_number | str | true | Current conversation number |
 | user\_id | str | true | Associated user ID |
-| third\_party\_user\_id | str | false | User ID on a third party / social platform (eg: FB/WA) |
-| ect\_user\_id | str | false | ECT user ID (if provided in create user) |
-| type | str | true | Event type |
-| subtype | str | true | Event subtype |
+| category | str | true | Event category |
+| subcategory | str | true | Event subcategory |
 | metadata | str | false | Event metadata |
 
 **Response**
@@ -51,14 +49,12 @@ title: Event APIs
 | **parameter** | **type** | **required** | **description** |
 | --- | --- | --- | --- |
 | user\_id | str | true | Associated user ID |
-| third\_party\_user\_id | str | false | User ID on a third party / social platform (eg: FB/WA) |
-| ect\_user\_id | str | false | ECT user ID (if provided in create user) |
-| type | str | true | Event type |
-| subtype | str | true | Event subtype |
+| category | str | true | Event category |
+| subcategory | str | true | Event subcategory |
 | metadata | str | false | Event metadata |
 
 **Response**
 
 | **parameter** | **type** | **required** | **description** |
 | --- | --- | --- | --- |
-| success | bool | true | Acknowledgment from TRACT |
+| error |str | false | Error message if applicable |

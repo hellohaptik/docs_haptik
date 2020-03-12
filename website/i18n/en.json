@@ -319,6 +319,27 @@
       },
       "whatsapp/whatsapp-language-settings": {
         "title": "WhatsApp Language Settings"
+      },
+      "external-chat-tool/index": {
+        "title": "Index"
+      },
+      "external-chat-tool/security": {
+        "title": "Security"
+      },
+      "external-chat-tool/management-APIs": {
+        "title": "Management APIs"
+      },
+      "external-chat-tool/user-APIs": {
+        "title": "User APIs"
+      },
+      "external-chat-tool/message-APIs": {
+        "title": "Message APIs"
+      },
+       "external-chat-tool/event-APIs": {
+        "title": "Event APIs"
+      },
+      "external-chat-tool/thread-control-APIs": {
+        "title": "Thread control APIs"
       }
     },
     "links": {

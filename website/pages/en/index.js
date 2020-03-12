@@ -118,6 +118,13 @@ module.exports = () => (
             'API docs to help you build conversational experiences on WhatsApp',
           ctaText: 'Get Started',
           ctaLink: '/whatsapp'
+        },
+      {
+          title: 'External Agent Chat Tool',
+          description:
+            'Connect your Agent Chat tool to a Haptik Bot with this documentation',
+          ctaText: 'Get Started',
+          ctaLink: '/external-chat-tool'
         }
       ]}
       others={[

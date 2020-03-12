@@ -39,6 +39,7 @@ class Footer extends React.Component {
               { title: 'Android SDK', url: 'https://hellohaptik.github.io/haptik-android-lib' },
               { title: 'Web SDK', url: 'https://hellohaptik.github.io/javascript_sdk' },
               { title: 'Webhooks', url: 'https://docs.haptik.ai/webhooks/' },
+              { title: 'External Chat Tool', url: 'https://docs.haptik.ai/external-chat-tool/' },
               { title: 'HSL', url: 'https://docs.haptik.ai/hsl/' }
             ])}
             {this.renderFooterColumn('Others', [

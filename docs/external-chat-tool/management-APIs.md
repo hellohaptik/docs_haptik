@@ -8,6 +8,7 @@ Haptik will call provided webhooks with events as they occur. You can register m
 
 **Endpoint**
 
+| --- | --- | --- | --- |
 | **type** | POST |
 | **required** | true |
 | **provider** | TRACT |

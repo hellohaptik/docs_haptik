@@ -8,8 +8,9 @@ If supported by the ECT, the create user API allows the creation of a new user (
 
 **Endpoint**
 
+| | |
+| - | - |
 | **type** | POST |
-| --- | --- |
 | **required** | false |
 | **provider** | ECT (via register\_webhook) |
 | **caller** | TRACT |
@@ -24,8 +25,7 @@ If supported by the ECT, the create user API allows the creation of a new user (
 | third\_party\_user\_id | str | false | User ID on a third party / social platform (eg: FB/WA) |
 | user\_name | str | false | User&#39;s name |
 | device\_platform | str | false | User&#39;s device platform |
-| details\_available | List[dict] | false | List of additional details available on request.
-Varies per user. |
+| details\_available | List[dict] | false | List of additional details available on request. Varies per user. |
 
 **Response**
 
@@ -41,8 +41,9 @@ In case user messages are received before the user creation event is triggered, 
 
 **Endpoint**
 
+| | |
+| - | - |
 | **type** | POST |
-| --- | --- |
 | **required** | false |
 | **provider** | TRACT |
 | **caller** | ECT |
@@ -73,8 +74,9 @@ Additional user details that are not provided as part of the base user informati
 
 **Endpoint**
 
+| | |
+| - | - |
 | **type** | POST |
-| --- | --- |
 | **required** | false |
 | **provider** | TRACT |
 | **caller** | ECT |

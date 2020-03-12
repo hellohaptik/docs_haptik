@@ -38,7 +38,7 @@ TRACT extends our system to allow interfacing with third-party agent chat tools.
 Haptik will expose the following endpoints:
 
 The TRACT APIs can be split in these sets:
-1. Authentication APIs: these issue access tokens to be used with rest of the APIs
+1. [Authentication](https://docs.haptik.ai/external-chat-tool/security) APIs: these issue access tokens to be used with rest of the APIs
 2. [Management APIs](https://docs.haptik.ai/external-chat-tool/management-APIs) : register/enlist webhooks for the rest of the API sets
 3. [User APIs](https://docs.haptik.ai/external-chat-tool/user-APIs): get data pertaining to users
 4. [Message APIs](https://docs.haptik.ai/external-chat-tool/message-APIs): send/receive messages

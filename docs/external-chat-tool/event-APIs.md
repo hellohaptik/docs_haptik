@@ -41,7 +41,7 @@ title: Event APIs
 | **required** | true |
 | **provider** | TRACT |
 | **caller** | ECT |
-| **url** | /tract/event/send |
+| **url** | /tract/events/send |
 | **encoding** | application/json |
 
 **Request**

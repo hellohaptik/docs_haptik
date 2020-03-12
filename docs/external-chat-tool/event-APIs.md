@@ -57,4 +57,4 @@ title: Event APIs
 
 | **parameter** | **type** | **required** | **description** |
 | --- | --- | --- | --- |
-| error |str | false | Error message if applicable |
+| error | str | false | Error message if applicable |

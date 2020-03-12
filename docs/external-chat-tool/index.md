@@ -85,5 +85,13 @@ Additional endpoints to be provided at a later stage upon review by the Security
 
 HSL - [https://docs.haptik.ai/hsl/index#hsl-elements](https://docs.haptik.ai/hsl/index#hsl-elements)
 
+## Senders
 
+| **Name** | **Description** |
+| --- | --- |
+| ceu | Chat End User | 
+| iva | Intelligent Virtual Assistant | 
+| haptik | Haptik System | 
+| ect | External Chat Tool | 
+| aeu | Agent End User | 
 

@@ -1,0 +1,151 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>external-chat-tool/security · Haptik Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="# Signing management requests"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="external-chat-tool/security · Haptik Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.haptik.ai/"/><meta property="og:description" content="# Signing management requests"/><meta property="og:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.haptik.ai/img/image_0.png"/><link rel="shortcut icon" href="/img/image_0.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-106563119-6', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="/js/index.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/image_0.png" alt="Haptik Docs"/><h2 class="headerTitleWithLogo">Haptik Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="/#tools" target="_self">Tools</a></li><li class=""><a href="/#integrations" target="_self">Integrations</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">external-chat-tool/security</h1></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="signing-management-requests"></a><a href="#signing-management-requests" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Signing management requests</h1>
+<hr>
+<p>The management APIs require that requests be signed by the ECT for authentication and authorisation.</p>
+<p>These APIs include:</p>
+<ul>
+<li>JWT issuing APIs</li>
+<li>Client enumeration APIs</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="verifying-that-the-request-was-sent-by-ect"></a><a href="#verifying-that-the-request-was-sent-by-ect" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Verifying that the request was sent by ECT</h2>
+<p>To verify that a request came from the ECT service, we:</p>
+<ul>
+<li><p>Check the request signature to verify the authenticity of the request.</p>
+<p><strong>You must sign all management requests.</strong></p></li>
+<li><p>Check the request timestamp to make sure that the request is not an old one being sent as part of a replay attack</p></li>
+</ul>
+<blockquote>
+<p>Note: When one or both of these checks fail, our web service sends a response with an HTTP status code of
+<code>400 Bad Request</code>.</p>
+</blockquote>
+<p>Requests that ECTs send to our web service must include two HTTP headers that we use to check the request signature:</p>
+<h4><a class="anchor" aria-hidden="true" id="management-request-headers"></a><a href="#management-request-headers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Management request headers</h4>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>SignatureCertChainUrl</code></td><td>The URL to fetch the certificate chain from. (In case of a CA signed certificate.)</td></tr>
+<tr><td><code>SignatureCertUUID</code></td><td>The certificate ID returned by us when you provide us your certificate. (In case of a self signed certificate.)</td></tr>
+<tr><td><code>Signature</code></td><td>Signature generated from the body</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="fetching-the-certificate"></a><a href="#fetching-the-certificate" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Fetching the certificate</h2>
+<h3><a class="anchor" aria-hidden="true" id="certificate-url-validation"></a><a href="#certificate-url-validation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Certificate URL validation</h3>
+<blockquote>
+<p>Applicable for ECTs using CA signed certificates.</p>
+</blockquote>
+<p>To check and validate the request signature, we verify the URL in the <code>SignatureCertChainUrl</code> header to make sure that it matches the format that ECT uses.</p>
+<p>This can help to protect against requests that attempt to make our web service download malicious files.</p>
+<h4><a class="anchor" aria-hidden="true" id="make-sure-that-the-url-meets-all-of-the-following-criteria"></a><a href="#make-sure-that-the-url-meets-all-of-the-following-criteria" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Make sure that the URL meets all of the following criteria:</h4>
+<ul>
+<li>The protocol is https (not case sensitive).</li>
+<li>The hostname is the FQDN of the ECT. (not case sensitive).</li>
+<li>The path begins with /ect.api/ (case sensitive).</li>
+<li>If a port is specified in the URL, the port is 443.</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="the-following-are-examples-of-correctly-formatted-urls"></a><a href="#the-following-are-examples-of-correctly-formatted-urls" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The following are examples of correctly formatted URLs:</h4>
+<ul>
+<li><a href="https://subdomain.ect.com/ect.api/ect-api-cert.pem">https://subdomain.ect.com/ect.api/ect-api-cert.pem</a></li>
+<li><a href="https://subdomain.ect.com:443/ect.api/ect-api-cert.pem">https://subdomain.ect.com:443/ect.api/ect-api-cert.pem</a></li>
+<li><a href="https://subdomain.ect.com/ect.api/../ect.api/ect-api-cert.pem">https://subdomain.ect.com/ect.api/../ect.api/ect-api-cert.pem</a></li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="the-following-are-examples-of-invalid-urls"></a><a href="#the-following-are-examples-of-invalid-urls" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The following are examples of invalid URLs:</h4>
+<ul>
+<li><a href="http://subdomain.ect.com/ect.api/ect-api-cert.pem">http://subdomain.ect.com/ect.api/ect-api-cert.pem</a> (invalid protocol)</li>
+<li><a href="https://notect.com/ect.api/ect-api-cert.pem">https://notect.com/ect.api/ect-api-cert.pem</a> (invalid hostname)</li>
+<li><a href="https://subdomain.ect.com/EcT.aPi/ect-api-cert.pem">https://subdomain.ect.com/EcT.aPi/ect-api-cert.pem</a> (invalid path)</li>
+<li><a href="https://subdomain.ect.com/invalid.path/ect-api-cert.pem">https://subdomain.ect.com/invalid.path/ect-api-cert.pem</a> (invalid path)</li>
+<li><a href="https://subdomain.ect.com:563/ect.api/ect-api-cert.pem">https://subdomain.ect.com:563/ect.api/ect-api-cert.pem</a> (invalid port)</li>
+</ul>
+<blockquote>
+<p>If the URL does not meet all of these criteria, we do not proceed to the next step.</p>
+</blockquote>
+<p>We download the PEM-encoded X.509 certificate chain using the URL specified in the <em>SignatureCertChainUrl</em> header in the request.</p>
+<p>This chain can be provided at runtime so that it can be updated periodically.</p>
+<p>This certificate chain we downloaded in the preceding step is composed of the following, in order:</p>
+<ul>
+<li>The ECT signing certificate.</li>
+<li>One or more additional certificates that create a chain of trust to a root certificate of a certificate authority (CA).</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="certificate-id-validation"></a><a href="#certificate-id-validation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Certificate ID validation</h3>
+<blockquote>
+<p>Applicable for ECTs using self signed certificates.</p>
+</blockquote>
+<p>If you choose to utilise a self signed certificate, we will generate and return a certificate UUID for the same.</p>
+<p>Requests signed with the said certificate need to provide the <code>SignatureCertUUID</code> parameter.</p>
+<p>Upon the receipt of a management request, we validate the UUID provided, and fetch the corresponding certificate from our data store.</p>
+<h2><a class="anchor" aria-hidden="true" id="certificate-verification"></a><a href="#certificate-verification" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Certificate verification</h2>
+<h3><a class="anchor" aria-hidden="true" id="ca-signed-certificate"></a><a href="#ca-signed-certificate" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>CA signed certificate</h3>
+<p>We confirm the validity of the signing certificate by completing the following steps:</p>
+<ul>
+<li>Check the Not Before and Not After dates of the signing certificate to make sure that it is not expired.</li>
+<li>Make sure the ECT FQDN is present in the Subject Alternative Names (SANs) section of the signing certificate.</li>
+<li>Validate that all certificates in the chain combine to create a chain of trust to a trusted root CA certificate.</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="self-signed-certificate"></a><a href="#self-signed-certificate" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Self signed certificate</h3>
+<p>We confirm the validity of the signing certificate by completing the following steps:</p>
+<ul>
+<li>Validate that a certificate with the said ID exists with us.</li>
+<li>Check the Not Before and Not After dates of the signing certificate to make sure that it is not expired.</li>
+<li>Make sure the domain name ECT FQDN is present in the Subject Alternative Names (SANs) section of the signing certificate.</li>
+</ul>
+<p><strong>If certificate verification fails, we discard the request.</strong></p>
+<h2><a class="anchor" aria-hidden="true" id="signature-verification"></a><a href="#signature-verification" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Signature verification</h2>
+<ul>
+<li><p>After confirming the validity of the signing certificate, we extract the public key from it.</p></li>
+<li><p>We base64-decode the value of the <code>Signature</code> header in the request to obtain the encrypted signature.</p></li>
+<li><p>Use the public key extracted from the signing certificate to decrypt the encrypted signature to produce the asserted hash value.</p></li>
+<li><p>We generate a SHA-1 hash value from the full HTTP request body to produce the derived hash value.</p></li>
+<li><p>Compare the asserted hash value and derived hash values to ensure that they match.</p>
+<p><strong>If they do not match, we discard the request.</strong></p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="timestamp-verification"></a><a href="#timestamp-verification" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Timestamp verification</h2>
+<ul>
+<li><p>Every request that your web service sends must include a timestamp in the request body.</p></li>
+<li><p>The timestamp is part of the signed portion of the request, so it cannot be modified without also invalidating the request signature.</p></li>
+<li><p>We use this timestamp to verify the freshness of the request before sending a response.</p></li>
+<li><p>This can help protect our web service from attempted replay attacks in which an attacker acquires a properly signed request and then repeatedly resends it to disrupt the our service.</p></li>
+</ul>
+<p>We allow a tolerance of no more than <strong>150 seconds</strong> (two and a half minutes).
+This means that our service should only process requests in which the timestamp is within 150 seconds of the current time.</p>
+<p><strong>If the timestamp differs from the current time by more than 150 seconds, we discard the request.</strong></p>
+<p>The timestamp is part of the request object in the JSON body of the request. For example:</p>
+<pre><code class="hljs css language-json">POST /jwt/issue
+{
+  "ect_fqdn": "awesome.ect.com",
+  "client_id": "86f7e437faa5a7fce15d1ddcb9eaeaea377667b8",
+  "timestamp": "2020-03-03 2019-05-13T12:34:56Z",
+}
+</code></pre>
+<blockquote>
+<p>Please ensure that the timestamp value is an ISO 8601 formatted string, for example <code>2019-05-13T12:34:56Z</code>.</p>
+</blockquote>
+<p><em>We return HTTP error code <code>400 Bad Request</code>, to reject requests in which the timestamp falls outside the tolerance.</em></p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 3/12/2020</em></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#verifying-that-the-request-was-sent-by-ect">Verifying that the request was sent by ECT</a></li><li><a href="#fetching-the-certificate">Fetching the certificate</a><ul class="toc-headings"><li><a href="#certificate-url-validation">Certificate URL validation</a></li><li><a href="#certificate-id-validation">Certificate ID validation</a></li></ul></li><li><a href="#certificate-verification">Certificate verification</a><ul class="toc-headings"><li><a href="#ca-signed-certificate">CA signed certificate</a></li><li><a href="#self-signed-certificate">Self signed certificate</a></li></ul></li><li><a href="#signature-verification">Signature verification</a></li><li><a href="#timestamp-verification">Timestamp verification</a></li></ul></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Bot Builder</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://hellohaptik.github.io/haptik-ios-framework" class="footer-column-link">iOS SDK</a><a href="https://hellohaptik.github.io/haptik-android-lib" class="footer-column-link">Android SDK</a><a href="https://hellohaptik.github.io/javascript_sdk" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Webhooks</a><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/contributing/index" class="footer-column-link">Contributing</a><a href="https://docs.haptik.ai/other/security" class="footer-column-link">Security</a><a href="https://forms.gle/Z2SowBSFpWLayXQz9" class="footer-column-link">Support</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2020 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '224c7079e67e84a978d8b4621f6af16d',
+                indexName: 'haptik',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

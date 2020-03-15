@@ -9,7 +9,7 @@
           "user-APIs",
           "message-APIs",
           "event-APIs",
-          "thread-Control-APIs"
+          "thread-control-APIs"
         ]
     }
 }

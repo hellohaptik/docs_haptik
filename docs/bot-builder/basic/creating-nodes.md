@@ -61,7 +61,9 @@ The purpose of output node is to take the JSON output from the code node and bui
 
 Bot Builders can take advantage of an easy-to-use JSON picker in the bot says section to build the HSL using parameters from the output JSON.
 
-![RHS of Output Ndoe](assets/bot-builder-nodes/output-node.png)
+The output node also allows you to collect non mandatory entities that might be needed to proceed in the chat flow.
+
+![RHS of Output Node](assets/bot-builder-nodes/output-node.png)
 
 #### Subcomponents
 1. [Bot Says](bot-says.md)

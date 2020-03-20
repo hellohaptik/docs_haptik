@@ -97,7 +97,7 @@ You can add rules in the following way:
 
 ### Output Node to Static Node Connection Transition 
 
-You can transition from an output node to a static node based on the user input by using user says based transition.
+You can transition from an output node to a static node based on the user input by using user says based transition or by an entity transition.
 
 **1. Transition Basis message input by user:**
 
@@ -107,7 +107,29 @@ This is when a conversation moves from one node to another based on a particular
 * Click on the connection linking the two nodes.
 * Add the 'User Says' in the RHS screen shown below.
 
-![Output-to-Static Connection](assets/bot-builder-connections/output-to-static.png)
+![Output-to-Static Connection](assets/bot-builder-user-says/connection_user_message.png)
+
+**2. Transition Basis a particular entity value**
+
+(a.k.a. a Step Transition): The last type of transition that you can create is where a user may only move to the next node if a user inputs a specific value(s) from within an entity on a node.
+
+* To set a step transition value, click the arrow between the two nodes for which you're creating a connection
+
+* Select Step Transition Values, which will take you to the screen below
+
+![Basis entity value](assets/bot-builder-user-says/connection_entity_value.png)
+
+* Here, you add the entity value and press the enter key on your keyboard. You can add multiple values for this entity.
+
+**3. Transition Basis a particular entity presence**
+
+When you’ve added an entity to a conversation, you can define the transition from the node with the entity to the next as only being possible if the user has input a response that falls within the entity. This is particularly helpful when you are setting a conversational flow in which a user needs to input something like a phone number or email ID. All values within the entities are accepted, but the bot will be able to determine whether or not the user has input the correct type of value (i.e. a 9 digit number or a complete email address).
+
+* To set a connection based on an entity presence, click on the arrow connecting the two nodes you're looking to connect. This will take you to the following screen:
+
+![Basis entity presence](assets/bot-builder-user-says/connection_entity_presence.png)
+
+* The entities from the first node should automatically appear in a drop down menu. Select from the list to complete the creation of a transition based on entity presence.
 
 
 

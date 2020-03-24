@@ -19,7 +19,7 @@ client-id: <CLIENT_ID>
 Content-Type: application/json
 ```
 
-- Authorization - The Authorization header of each HTTP request should be “Bearer” followed by your token which will be provided by Haptik
+- Authorization - The Authorization header of each HTTP request should be “Bearer” followed by the token which will be provided by Haptik. This token needs to be updated for your Partner under CLIENT_AUTH_TOKEN field.
 - client-id - The client id for your account which will be provided by Haptik
 - Content-Type - application/json
 
@@ -108,7 +108,7 @@ client-id: <CLIENT_ID>
 Content-Type: application/json
 ```
 
-- Authorization - The Authorization header of each HTTP request should be “Bearer” followed by your token which will be provided by Haptik
+- Authorization - The Authorization header of each HTTP request should be “Bearer” followed by the token which will be provided by Haptik. This token needs to be updated for your Partner under CLIENT_AUTH_TOKEN field.
 - client-id - The client id for your account which will be provided by Haptik
 - Content-Type - application/json
 
@@ -226,7 +226,7 @@ client-id: <CLIENT_ID>
 Content-Type: multipart/form-data
 ```
 
-- Authorization - The Authorization header of each HTTP request should be “Bearer” followed by your token which will be provided by Haptik
+- Authorization - The Authorization header of each HTTP request should be “Bearer” followed by the token which will be provided by Haptik. This token needs to be updated for your Partner under CLIENT_AUTH_TOKEN field.
 - client-id - The client id for your account which will be provided by Haptik
 - Content-Type - multipart/form-data
 

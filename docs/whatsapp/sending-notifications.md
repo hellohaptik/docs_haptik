@@ -103,25 +103,25 @@ Other than text based HSMs to our Whatsapp end users, you can send Media HSMs as
 
 Checkout the examples below:
 
-Text HSM
+**Text HSM**
 
-![Text HSM](assets/1text-hsm.png)
+> ![Text HSM](assets/1text-hsm.png)
 
 Nothing new here.
 
-Image HSM
+**Image HSM**
 
 ![Image HSM](assets/2image-hsm.png)
 
 HSM sent with an image file as an attachment.
 
-Document HSM
+**Document HSM**
 
 ![PDF HSM](assets/3pdf-hsm.png)
 
 HSM sent with a PDF file as an attachment.
 
-Video HSM
+**Video HSM**
 
 ![Video HSM](assets/4video-hsm.png)
 

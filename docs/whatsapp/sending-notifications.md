@@ -171,7 +171,7 @@ Well here is a simple structure of the message used for sending Media HSM with a
 }
 ```
 
-Note: The above structure is for reference only and will change based on the way we create HSM on Whatsapp Business Manager and for each media type.
+Note: The above structure is for reference only and will change based on the way we create HSM on Whatsapp Business Manager and for each media type. The param type will change as per the media type used - `image` or `pdf`.
 
 > Only Images, PDF, MP3 and MP4 files are supported.
 

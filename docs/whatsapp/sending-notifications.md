@@ -105,7 +105,7 @@ Checkout the examples below:
 
 **Text HSM**
 
-> ![Text HSM](assets/1text-hsm.png)
+![Text HSM](assets/1text-hsm.png)
 
 Nothing new here.
 

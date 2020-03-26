@@ -154,59 +154,61 @@
 <p>Pardon us for the text copies and images in above messages. Also, only PDF's supported. Docx files are not supported as of now.</p>
 <p>How to use them:</p>
 <p>Well here is a simple structure of the message used for sending Media HSM with an Image.</p>
-<pre><code class="hljs">{
-    <span class="hljs-attr">"business_id"</span>: XXX,
-    <span class="hljs-attr">"to"</span>: <span class="hljs-string">"XXXXXXXXXX"</span>,
-    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"template"</span>,
-    <span class="hljs-attr">"template"</span>: {
-        <span class="hljs-attr">"namespace"</span>: <span class="hljs-string">"&lt;NAMESPACE&gt;"</span>,
-        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"&lt;NAME&gt;"</span>,
-        <span class="hljs-attr">"language"</span>: {
-            <span class="hljs-attr">"policy"</span>: <span class="hljs-string">"deterministic"</span>,
-            <span class="hljs-attr">"code"</span>: <span class="hljs-string">"en"</span>
+<p>Example curl requests for Image:</p>
+<pre><code class="hljs">curl -X POST \
+  &lt;base_url&gt;/whatsapp/notification/v2/ \
+  -H <span class="hljs-string">'Authorization: Bearer &lt;token&gt;'</span> \
+  -H <span class="hljs-string">'Content-Type: application/json'</span> \
+  -H <span class="hljs-string">'client-id: &lt;client-id&gt;'</span> \
+  -d <span class="hljs-string">'{
+    "</span>business_id<span class="hljs-string">": &lt;business_id as a number&gt;,
+    "</span>to<span class="hljs-string">": "</span>&lt;phone_number&gt;<span class="hljs-string">",
+    "</span><span class="hljs-built_in">type</span><span class="hljs-string">": "</span>template<span class="hljs-string">",
+    "</span>template<span class="hljs-string">": {
+        "</span>namespace<span class="hljs-string">": "</span>&lt;from whatsapp dashboard&gt;<span class="hljs-string">",
+        "</span>name<span class="hljs-string">": "</span>&lt;from whatsapp dashboard&gt;<span class="hljs-string">",
+        "</span>language<span class="hljs-string">": {
+            "</span>policy<span class="hljs-string">": "</span>deterministic<span class="hljs-string">",
+            "</span>code<span class="hljs-string">": "</span>en<span class="hljs-string">"
         },
-        <span class="hljs-attr">"components"</span>: [
+        "</span>components<span class="hljs-string">": [
             {
-                <span class="hljs-attr">"type"</span>: <span class="hljs-string">"header"</span>,
-                <span class="hljs-attr">"parameters"</span>: [
+                "</span><span class="hljs-built_in">type</span><span class="hljs-string">": "</span>header<span class="hljs-string">",
+                "</span>parameters<span class="hljs-string">": [
                     {
-                        <span class="hljs-attr">"type"</span>: <span class="hljs-string">"image"</span>,
-                        <span class="hljs-attr">"image"</span>: {
-                          <span class="hljs-attr">"link"</span>: <span class="hljs-string">"&lt;URL&gt;"</span>
+                        "</span><span class="hljs-built_in">type</span><span class="hljs-string">": "</span>image<span class="hljs-string">",
+                        "</span>image<span class="hljs-string">": {
+                          "</span>link<span class="hljs-string">": "</span>&lt;URL of the image&gt;<span class="hljs-string">"
                         }
                     }
                 ]
             },
             {
-                <span class="hljs-attr">"type"</span>: <span class="hljs-string">"body"</span>,
-                <span class="hljs-attr">"parameters"</span>: [
+                "</span><span class="hljs-built_in">type</span><span class="hljs-string">": "</span>body<span class="hljs-string">",
+                "</span>parameters<span class="hljs-string">": [
                 {
-                  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"text"</span>,
-                  <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Ticket to Hollywood"</span>
+                  "</span><span class="hljs-built_in">type</span><span class="hljs-string">": "</span>text<span class="hljs-string">",
+                  "</span>text<span class="hljs-string">": "</span>Param Value <span class="hljs-number">1</span><span class="hljs-string">"
                 }
                 ]
             }
         ]
     }
-}
+}'</span>
 </code></pre>
-<p>Similarly, example curl requests for document and video below:</p>
-<pre><code class="hljs">------------------------------------------------------------
-
-DOCUMENT
-
-curl -X POST \
- https:<span class="hljs-comment">//fb-messenger.haptikapi.com//whatsapp/notification/v2/ \</span>
-  -H <span class="hljs-string">'Authorization: &lt;___&gt;'</span> \
+<p>Example curl requests for Document:</p>
+<pre><code class="hljs">curl -X POST \
+ &lt;base_url&gt;/whatsapp/notification/v2/ \
+  -H <span class="hljs-string">'Authorization: Bearer &lt;token&gt;'</span> \
   -H <span class="hljs-string">'Content-Type: application/json'</span> \
-  -H <span class="hljs-string">'client-id: &lt;put-id-here&gt;'</span> \
+  -H <span class="hljs-string">'client-id: &lt;client-id&gt;'</span> \
   -d <span class="hljs-string">'{
-    "</span>business_id<span class="hljs-string">": &lt;3-digit-number&gt;,
-    "</span>to<span class="hljs-string">": "</span>&lt;number-here&gt;<span class="hljs-string">",
+    "</span>business_id<span class="hljs-string">": &lt;business_id as a number&gt;,
+    "</span>to<span class="hljs-string">": "</span>&lt;phone_number&gt;<span class="hljs-string">",
     "</span><span class="hljs-built_in">type</span><span class="hljs-string">": "</span>template<span class="hljs-string">",
     "</span>template<span class="hljs-string">": {
-        "</span>namespace<span class="hljs-string">": "</span><span class="hljs-number">3317851</span>f_4b7a_48ad_b2e7_c9bb815a5d3c<span class="hljs-string">",
-        "</span>name<span class="hljs-string">": "</span>issue_update<span class="hljs-string">",
+        "</span>namespace<span class="hljs-string">": "</span>&lt;from whatsapp dashboard&gt;<span class="hljs-string">",
+        "</span>name<span class="hljs-string">": "</span>&lt;from whatsapp dashboard&gt;<span class="hljs-string">",
         "</span>language<span class="hljs-string">": {
             "</span>policy<span class="hljs-string">": "</span>deterministic<span class="hljs-string">",
             "</span>code<span class="hljs-string">": "</span>en<span class="hljs-string">"
@@ -218,40 +220,39 @@ curl -X POST \
                     {
                         "</span><span class="hljs-built_in">type</span><span class="hljs-string">": "</span>document<span class="hljs-string">",
                         "</span>document<span class="hljs-string">": {
-                          "</span>link<span class="hljs-string">": "</span>https:<span class="hljs-comment">//bill.raymond.in/Invoices/1935.pdf",</span>
-                          <span class="hljs-string">"filename"</span>: <span class="hljs-string">"R-Bill.pdf"</span>
+                          "</span>link<span class="hljs-string">": "</span>&lt;URL&gt;<span class="hljs-string">",
+                          "</span>filename<span class="hljs-string">": "</span>&lt;Filename to be displayed&gt;<span class="hljs-string">"
                         }
                     }
                 ]
             },
             {
-                <span class="hljs-string">"type"</span>: <span class="hljs-string">"body"</span>,
-                <span class="hljs-string">"parameters"</span>: [
+                "</span><span class="hljs-built_in">type</span><span class="hljs-string">": "</span>body<span class="hljs-string">",
+                "</span>parameters<span class="hljs-string">": [
                 {
-                  <span class="hljs-string">"type"</span>: <span class="hljs-string">"text"</span>,
-                  <span class="hljs-string">"text"</span>: <span class="hljs-string">"Issue 242"</span>
+                  "</span><span class="hljs-built_in">type</span><span class="hljs-string">": "</span>text<span class="hljs-string">",
+                  "</span>text<span class="hljs-string">": "</span>Param Value <span class="hljs-number">1</span><span class="hljs-string">"
                 }
                 ]
             }
         ]
     }
-}<span class="hljs-string">'
------------------------------------------------
+}'</span>
 
-VIDEO
-
-curl -X POST \
-  https://staging-messenger.haptikapi.com/whatsapp/notification/v2/ \
-  -H '</span>Authorization: &lt;__&gt;<span class="hljs-string">' \
-  -H '</span>Content-Type: application/json' \
-  -H <span class="hljs-string">'client-id: &lt;put-id-here&gt;'</span> \
+</code></pre>
+<p>Example curl requests for Video:</p>
+<pre><code class="hljs">curl -X POST \
+  &lt;base_url&gt;/whatsapp/notification/v2/ \
+  -H <span class="hljs-string">'Authorization: Bearer &lt;token&gt;'</span> \
+  -H <span class="hljs-string">'Content-Type: application/json'</span> \
+  -H <span class="hljs-string">'client-id: &lt;client-id&gt;'</span> \
   -d <span class="hljs-string">'{
-    "</span>business_id<span class="hljs-string">": &lt;3-digit-number&gt;,
-    "</span>to<span class="hljs-string">": "</span>&lt;number-here&gt;<span class="hljs-string">",
+    "</span>business_id<span class="hljs-string">": &lt;business_id as a number&gt;,
+    "</span>to<span class="hljs-string">": "</span>&lt;phone_number&gt;<span class="hljs-string">",
     "</span><span class="hljs-built_in">type</span><span class="hljs-string">": "</span>template<span class="hljs-string">",
     "</span>template<span class="hljs-string">": {
-        "</span>namespace<span class="hljs-string">": "</span><span class="hljs-number">3317851</span>f_4b7a_48ad_b2e7_c9bb815a5d3c<span class="hljs-string">",
-        "</span>name<span class="hljs-string">": "</span>alert_update<span class="hljs-string">",
+        "</span>namespace<span class="hljs-string">": "</span>&lt;from whatsapp dashboard&gt;<span class="hljs-string">",
+        "</span>name<span class="hljs-string">": "</span>&lt;from whatsapp dashboard&gt;<span class="hljs-string">",
         "</span>language<span class="hljs-string">": {
             "</span>policy<span class="hljs-string">": "</span>deterministic<span class="hljs-string">",
             "</span>code<span class="hljs-string">": "</span>en<span class="hljs-string">"
@@ -263,7 +264,7 @@ curl -X POST \
                     {
                         "</span><span class="hljs-built_in">type</span><span class="hljs-string">": "</span>video<span class="hljs-string">",
                         "</span>video<span class="hljs-string">": {
-                          "</span>link<span class="hljs-string">": "</span>&lt;URL-here&gt;<span class="hljs-string">"
+                          "</span>link<span class="hljs-string">": "</span>&lt;URL of the Video&gt;<span class="hljs-string">"
                         }
                     }
                 ]
@@ -273,7 +274,7 @@ curl -X POST \
                 "</span>parameters<span class="hljs-string">": [
                 {
                   "</span><span class="hljs-built_in">type</span><span class="hljs-string">": "</span>text<span class="hljs-string">",
-                  "</span>text<span class="hljs-string">": "</span>Mount<span class="hljs-string">"
+                  "</span>text<span class="hljs-string">": "</span>Param Value <span class="hljs-number">1</span><span class="hljs-string">"
                 }
                 ]
             }

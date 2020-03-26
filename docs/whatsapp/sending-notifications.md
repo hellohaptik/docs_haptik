@@ -133,14 +133,21 @@ How to use them:
 
 Well here is a simple structure of the message used for sending Media HSM with an Image.
 
+Example curl requests for Image: 
+
 ```
-{
-    "business_id": XXX,
-    "to": "XXXXXXXXXX",
+curl -X POST \
+  <base_url>/whatsapp/notification/v2/ \
+  -H 'Authorization: Bearer <token>' \
+  -H 'Content-Type: application/json' \
+  -H 'client-id: <client-id>' \
+  -d '{
+    "business_id": <business_id as a number>,
+    "to": "<phone_number>",
     "type": "template",
     "template": {
-        "namespace": "<NAMESPACE>",
-        "name": "<NAME>",
+        "namespace": "<from whatsapp dashboard>",
+        "name": "<from whatsapp dashboard>",
         "language": {
             "policy": "deterministic",
             "code": "en"
@@ -152,7 +159,7 @@ Well here is a simple structure of the message used for sending Media HSM with a
                     {
                         "type": "image",
                         "image": {
-                          "link": "<URL>"
+                          "link": "<URL of the image>"
                         }
                     }
                 ]
@@ -162,34 +169,30 @@ Well here is a simple structure of the message used for sending Media HSM with a
                 "parameters": [
                 {
                   "type": "text",
-                  "text": "Ticket to Hollywood"
+                  "text": "Param Value 1"
                 }
                 ]
             }
         ]
     }
-}
+}'
 ```
 
-Similarly, example curl requests for document and video below: 
+Example curl requests for Document: 
 
 ```
-------------------------------------------------------------
-
-DOCUMENT
-
 curl -X POST \
- https://fb-messenger.haptikapi.com//whatsapp/notification/v2/ \
-  -H 'Authorization: <___>' \
+ <base_url>/whatsapp/notification/v2/ \
+  -H 'Authorization: Bearer <token>' \
   -H 'Content-Type: application/json' \
-  -H 'client-id: <put-id-here>' \
+  -H 'client-id: <client-id>' \
   -d '{
-    "business_id": <3-digit-number>,
-    "to": "<number-here>",
+    "business_id": <business_id as a number>,
+    "to": "<phone_number>",
     "type": "template",
     "template": {
-        "namespace": "3317851f_4b7a_48ad_b2e7_c9bb815a5d3c",
-        "name": "issue_update",
+        "namespace": "<from whatsapp dashboard>",
+        "name": "<from whatsapp dashboard>",
         "language": {
             "policy": "deterministic",
             "code": "en"
@@ -201,8 +204,8 @@ curl -X POST \
                     {
                         "type": "document",
                         "document": {
-                          "link": "https://bill.raymond.in/Invoices/1935.pdf",
-                          "filename": "R-Bill.pdf"
+                          "link": "<URL>",
+                          "filename": "<Filename to be displayed>"
                         }
                     }
                 ]
@@ -212,29 +215,31 @@ curl -X POST \
                 "parameters": [
                 {
                   "type": "text",
-                  "text": "Issue 242"
+                  "text": "Param Value 1"
                 }
                 ]
             }
         ]
     }
 }'
------------------------------------------------
 
-VIDEO
+```
 
+Example curl requests for Video: 
+
+```
 curl -X POST \
-  https://staging-messenger.haptikapi.com/whatsapp/notification/v2/ \
-  -H 'Authorization: <__>' \
+  <base_url>/whatsapp/notification/v2/ \
+  -H 'Authorization: Bearer <token>' \
   -H 'Content-Type: application/json' \
-  -H 'client-id: <put-id-here>' \
+  -H 'client-id: <client-id>' \
   -d '{
-    "business_id": <3-digit-number>,
-    "to": "<number-here>",
+    "business_id": <business_id as a number>,
+    "to": "<phone_number>",
     "type": "template",
     "template": {
-        "namespace": "3317851f_4b7a_48ad_b2e7_c9bb815a5d3c",
-        "name": "alert_update",
+        "namespace": "<from whatsapp dashboard>",
+        "name": "<from whatsapp dashboard>",
         "language": {
             "policy": "deterministic",
             "code": "en"
@@ -246,7 +251,7 @@ curl -X POST \
                     {
                         "type": "video",
                         "video": {
-                          "link": "<URL-here>"
+                          "link": "<URL of the Video>"
                         }
                     }
                 ]
@@ -256,7 +261,7 @@ curl -X POST \
                 "parameters": [
                 {
                   "type": "text",
-                  "text": "Mount"
+                  "text": "Param Value 1"
                 }
                 ]
             }

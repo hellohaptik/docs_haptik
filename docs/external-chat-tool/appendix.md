@@ -17,10 +17,9 @@ Device platforms
 | **Category** | **Subcategory** | **Trigger** | **via** | **Description** |
 | --- | --- | --- | --- | --- |
 | conversation\_state | bot | tract | hook | The chat conversation has been put into the bot state. This can either be a new conversation or a previously completed conversation. This conversation can either go to complete or incomplete state.
-|   | incomplete | tract | hook | The chat conversation has been put into the imcomplete state by the IVA. The IVA was unable to complete a conversation flow with the CEU. Incomplete conversations need AEUs to intervene and respond.
+|   | incomplete | tract | hook | The chat conversation has been put into the incomplete state by the IVA. The IVA was unable to complete a conversation flow with the CEU. Incomplete conversations need AEUs to intervene and respond.
 |   | complete | tract | hook | The chat conversation has been put into the complete state by the IVA. The IVA successfully completed one conversation flow with the CEU without errors. This conversation will stay complete as long as the user does not initiate a new message.
-| message | receive |   |   |
-| aeu\_events | received | ect | | 
+| message | receive | tract | hook | Allows an CEU or IVA message to be received by the ECT at the registered hook.
 |   | allocated | ect | API | The chat conversation has ben (re)allocated to an AEU.
 |   | user\_timeout | ect | API | The user conversation timed out due to inactivity from the CEU.
 | user\_events | create\_user | tract | hook | A new CEU has been created in the system.

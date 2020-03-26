@@ -171,7 +171,102 @@ Well here is a simple structure of the message used for sending Media HSM with a
 }
 ```
 
-Note: The above structure is for reference only and will change based on the way we create HSM on Whatsapp Business Manager and for each media type. The param type will change as per the media type used - `image` or `pdf`.
+Similarly, example curl requests for document and video below: 
+
+```
+------------------------------------------------------------
+
+DOCUMENT
+
+curl -X POST \
+ https://fb-messenger.haptikapi.com//whatsapp/notification/v2/ \
+  -H 'Authorization: <___>' \
+  -H 'Content-Type: application/json' \
+  -H 'client-id: <put-id-here>' \
+  -d '{
+    "business_id": <3-digit-number>,
+    "to": "<number-here>",
+    "type": "template",
+    "template": {
+        "namespace": "3317851f_4b7a_48ad_b2e7_c9bb815a5d3c",
+        "name": "issue_update",
+        "language": {
+            "policy": "deterministic",
+            "code": "en"
+        },
+        "components": [
+            {
+                "type": "header",
+                "parameters": [
+                    {
+                        "type": "document",
+                        "document": {
+                          "link": "https://bill.raymond.in/Invoices/1935.pdf",
+                          "filename": "R-Bill.pdf"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "body",
+                "parameters": [
+                {
+                  "type": "text",
+                  "text": "Issue 242"
+                }
+                ]
+            }
+        ]
+    }
+}'
+-----------------------------------------------
+
+VIDEO
+
+curl -X POST \
+  https://staging-messenger.haptikapi.com/whatsapp/notification/v2/ \
+  -H 'Authorization: <__>' \
+  -H 'Content-Type: application/json' \
+  -H 'client-id: <put-id-here>' \
+  -d '{
+    "business_id": <3-digit-number>,
+    "to": "<number-here>",
+    "type": "template",
+    "template": {
+        "namespace": "3317851f_4b7a_48ad_b2e7_c9bb815a5d3c",
+        "name": "alert_update",
+        "language": {
+            "policy": "deterministic",
+            "code": "en"
+        },
+        "components": [
+            {
+                "type": "header",
+                "parameters": [
+                    {
+                        "type": "video",
+                        "video": {
+                          "link": "<URL-here>"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "body",
+                "parameters": [
+                {
+                  "type": "text",
+                  "text": "Mount"
+                }
+                ]
+            }
+        ]
+    }
+}'
+
+```
+
+Note: The above structure is for reference only and will change based on the way we create HSM on Whatsapp Business Manager and for each media type. 
 
 > Only Images, PDF, MP3 and MP4 files are supported.
 

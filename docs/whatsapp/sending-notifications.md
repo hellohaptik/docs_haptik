@@ -97,6 +97,179 @@ Details regarding the other fields in the body can be found [here](https://devel
 
 Acceptable formats for phone number can be found [here](https://developers.facebook.com/docs/whatsapp/api/contacts#phone).
 
+## Sending a media HSM
+
+Other than text based HSMs to our Whatsapp end users, you can send Media HSMs as well. 
+
+Checkout the examples below:
+
+**Text HSM**
+
+![Text HSM](assets/1text-hsm.png)
+
+Nothing new here.
+
+**Image HSM**
+
+![Image HSM](assets/2image-hsm.png)
+
+HSM sent with an image file as an attachment.
+
+**Document HSM**
+
+![PDF HSM](assets/3pdf-hsm.png)
+
+HSM sent with a PDF file as an attachment.
+
+**Video HSM**
+
+![Video HSM](assets/4video-hsm.png)
+
+HSM sent with a Video file as an attachment.
+
+Pardon us for the text copies and images in above messages. Also, only PDF's supported. Docx files are not supported as of now.
+
+How to use them:
+
+Well here is a simple structure of the message used for sending Media HSM with an Image.
+
+```
+{
+    "business_id": XXX,
+    "to": "XXXXXXXXXX",
+    "type": "template",
+    "template": {
+        "namespace": "<NAMESPACE>",
+        "name": "<NAME>",
+        "language": {
+            "policy": "deterministic",
+            "code": "en"
+        },
+        "components": [
+            {
+                "type": "header",
+                "parameters": [
+                    {
+                        "type": "image",
+                        "image": {
+                          "link": "<URL>"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "body",
+                "parameters": [
+                {
+                  "type": "text",
+                  "text": "Ticket to Hollywood"
+                }
+                ]
+            }
+        ]
+    }
+}
+```
+
+Similarly, example curl requests for document and video below: 
+
+```
+------------------------------------------------------------
+
+DOCUMENT
+
+curl -X POST \
+ https://fb-messenger.haptikapi.com//whatsapp/notification/v2/ \
+  -H 'Authorization: <___>' \
+  -H 'Content-Type: application/json' \
+  -H 'client-id: <put-id-here>' \
+  -d '{
+    "business_id": <3-digit-number>,
+    "to": "<number-here>",
+    "type": "template",
+    "template": {
+        "namespace": "3317851f_4b7a_48ad_b2e7_c9bb815a5d3c",
+        "name": "issue_update",
+        "language": {
+            "policy": "deterministic",
+            "code": "en"
+        },
+        "components": [
+            {
+                "type": "header",
+                "parameters": [
+                    {
+                        "type": "document",
+                        "document": {
+                          "link": "https://bill.raymond.in/Invoices/1935.pdf",
+                          "filename": "R-Bill.pdf"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "body",
+                "parameters": [
+                {
+                  "type": "text",
+                  "text": "Issue 242"
+                }
+                ]
+            }
+        ]
+    }
+}'
+-----------------------------------------------
+
+VIDEO
+
+curl -X POST \
+  https://staging-messenger.haptikapi.com/whatsapp/notification/v2/ \
+  -H 'Authorization: <__>' \
+  -H 'Content-Type: application/json' \
+  -H 'client-id: <put-id-here>' \
+  -d '{
+    "business_id": <3-digit-number>,
+    "to": "<number-here>",
+    "type": "template",
+    "template": {
+        "namespace": "3317851f_4b7a_48ad_b2e7_c9bb815a5d3c",
+        "name": "alert_update",
+        "language": {
+            "policy": "deterministic",
+            "code": "en"
+        },
+        "components": [
+            {
+                "type": "header",
+                "parameters": [
+                    {
+                        "type": "video",
+                        "video": {
+                          "link": "<URL-here>"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "body",
+                "parameters": [
+                {
+                  "type": "text",
+                  "text": "Mount"
+                }
+                ]
+            }
+        ]
+    }
+}'
+
+```
+
+Note: The above structure is for reference only and will change based on the way we create HSM on Whatsapp Business Manager and for each media type. 
+
+> Only Images, PDF, MP3 and MP4 files are supported.
+
 ## FAQs
 
 I keep getting `"unable to verify contact details"` in response even though the Mobile Number entered is a valid WhatsApp account.

@@ -24,15 +24,6 @@ Device platforms
 |   | user\_timeout | ect | API | The user conversation timed out due to inactivity from the CEU.
 | user\_events | create\_user | tract | hook | A new CEU has been created in the system.
 
-## Message types
-
-| **ID** | **Type** | **Description** |
-| --- | --- | --- |
-| 0 | regular | Unstructured text messages typed by users and assistant(not bot) |
-| 1 | image | Images uploaded by users or assistants |
-
-Additional endpoints to be provided at a later stage upon review by the Security and Compliance team.
-
 ## Message content
 
 HSL - [https://docs.haptik.ai/hsl/index#hsl-elements](https://docs.haptik.ai/hsl/index#hsl-elements)

@@ -15,7 +15,7 @@ Device platforms
 ## Event types
 
 | **Category** | **Subcategory** | **Trigger** | **via** | **Description** |
-| --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
 | conversation\_state | bot | tract | hook | The chat conversation has been put into the bot state. This can either be a new conversation or a previously completed conversation. This conversation can either go to complete or incomplete state.
 |   | incomplete | tract | hook | The chat conversation has been put into the imcomplete state by the IVA. The IVA was unable to complete a conversation flow with the CEU. Incomplete conversations need AEUs to intervene and respond.
 |   | complete | tract | hook | The chat conversation has been put into the complete state by the IVA. The IVA successfully completed one conversation flow with the CEU without errors. This conversation will stay complete as long as the user does not initiate a new message.

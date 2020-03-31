@@ -2,11 +2,20 @@
 title: How to debug your bot?
 ---
 
-Oh no! Your bot’s not working the way you expected it to? Follow this step by step guide to debug your bot. The failure of the bot can be bucketed into 5 categories
+Oh no! Your bot’s not working the way you expected it to? Follow this step by step guide to debug your bot. The debug window is broken into two segments:
+
+1) Basic Info - The Basic Info section provides a high level overview of the bot logs in an easy to read UI.
+2) Detailed Info - The Detailed Info section of the debug window provides a full JSON of all the log details.
+
+![Debug Window](assets/debug2.png) 
+
+The failure of the bot can be bucketed into 5 categories
 
 1. **Wrong Bot** getting detected 
 
 	If an undesired bot (domain) is detected, then open the business manager and make sure you have selected the right bot.
+
+	![Wrong Bot Detected Basic Info](assets/debug_wrong_bot_basic_info.png) 
 
 	![Wrong Bot Detected](assets/debug_wrong_bot.png)
 
@@ -23,6 +32,8 @@ Oh no! Your bot’s not working the way you expected it to? Follow this step by 
 	* _Connections error_: User transitioned from Node A to a start node instead of moving to connected Node B. This happens because B was not a start node 
  
 3. **No Entity** detected 
+
+	![Basic Info Wrong Entity Detected](assets/debug_entities_basic_info.png)
 
 	![Wrong Entity Detected](assets/debug_no_entity.png)
 

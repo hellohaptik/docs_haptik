@@ -97,6 +97,184 @@ Details regarding the other fields in the body can be found [here](https://devel
 
 Acceptable formats for phone number can be found [here](https://developers.facebook.com/docs/whatsapp/api/contacts#phone).
 
+## Sending a media HSM
+
+Other than text based HSMs to our Whatsapp end users, you can send Media HSMs as well. 
+
+Checkout the examples below:
+
+**Text HSM**
+
+![Text HSM](assets/1text-hsm.png)
+
+Nothing new here.
+
+**Image HSM**
+
+![Image HSM](assets/2image-hsm.png)
+
+HSM sent with an image file as an attachment.
+
+**Document HSM**
+
+![PDF HSM](assets/3pdf-hsm.png)
+
+HSM sent with a PDF file as an attachment.
+
+**Video HSM**
+
+![Video HSM](assets/4video-hsm.png)
+
+HSM sent with a Video file as an attachment.
+
+Pardon us for the text copies and images in above messages. Also, only PDF's supported. Docx files are not supported as of now.
+
+How to use them:
+
+Well here is a simple structure of the message used for sending Media HSM with an Image.
+
+Example curl requests for Image: 
+
+```
+curl -X POST \
+  <base_url>/whatsapp/notification/v2/ \
+  -H 'Authorization: Bearer <token>' \
+  -H 'Content-Type: application/json' \
+  -H 'client-id: <client-id>' \
+  -d '{
+    "business_id": <business_id as a number>,
+    "to": "<phone_number>",
+    "type": "template",
+    "template": {
+        "namespace": "<from whatsapp dashboard>",
+        "name": "<from whatsapp dashboard>",
+        "language": {
+            "policy": "deterministic",
+            "code": "en"
+        },
+        "components": [
+            {
+                "type": "header",
+                "parameters": [
+                    {
+                        "type": "image",
+                        "image": {
+                          "link": "<URL of the image>"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "body",
+                "parameters": [
+                {
+                  "type": "text",
+                  "text": "Param Value 1"
+                }
+                ]
+            }
+        ]
+    }
+}'
+```
+
+Example curl requests for Document: 
+
+```
+curl -X POST \
+ <base_url>/whatsapp/notification/v2/ \
+  -H 'Authorization: Bearer <token>' \
+  -H 'Content-Type: application/json' \
+  -H 'client-id: <client-id>' \
+  -d '{
+    "business_id": <business_id as a number>,
+    "to": "<phone_number>",
+    "type": "template",
+    "template": {
+        "namespace": "<from whatsapp dashboard>",
+        "name": "<from whatsapp dashboard>",
+        "language": {
+            "policy": "deterministic",
+            "code": "en"
+        },
+        "components": [
+            {
+                "type": "header",
+                "parameters": [
+                    {
+                        "type": "document",
+                        "document": {
+                          "link": "<URL>",
+                          "filename": "<Filename to be displayed>"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "body",
+                "parameters": [
+                {
+                  "type": "text",
+                  "text": "Param Value 1"
+                }
+                ]
+            }
+        ]
+    }
+}'
+
+```
+
+Example curl requests for Video: 
+
+```
+curl -X POST \
+  <base_url>/whatsapp/notification/v2/ \
+  -H 'Authorization: Bearer <token>' \
+  -H 'Content-Type: application/json' \
+  -H 'client-id: <client-id>' \
+  -d '{
+    "business_id": <business_id as a number>,
+    "to": "<phone_number>",
+    "type": "template",
+    "template": {
+        "namespace": "<from whatsapp dashboard>",
+        "name": "<from whatsapp dashboard>",
+        "language": {
+            "policy": "deterministic",
+            "code": "en"
+        },
+        "components": [
+            {
+                "type": "header",
+                "parameters": [
+                    {
+                        "type": "video",
+                        "video": {
+                          "link": "<URL of the Video>"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "body",
+                "parameters": [
+                {
+                  "type": "text",
+                  "text": "Param Value 1"
+                }
+                ]
+            }
+        ]
+    }
+}'
+
+```
+
+Note: The above structure is for reference only and will change based on the way we create HSM on Whatsapp Business Manager and for each media type. 
+
+> Only Images, PDF, MP3 and MP4 files are supported.
+
 ## FAQs
 
 I keep getting `"unable to verify contact details"` in response even though the Mobile Number entered is a valid WhatsApp account.

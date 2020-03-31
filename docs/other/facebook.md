@@ -150,8 +150,8 @@ title: Facebook
 - Close the window. The setting has been saved.
 
 > By this point, if everything has been setup properly:
-  - go to `Facebook for developers -> (our app)`.<br><br>
-  - Under **PRODUCTS**, there should be a green tick mark besides **Webhooks** and **Messenger** respectively.
+  >- go to `Facebook for developers -> (our app)`.<br><br>
+  >- Under **PRODUCTS**, there should be a green tick mark besides **Webhooks** and **Messenger** respectively.
 
 
 ## Facebook Verifications

@@ -57,9 +57,9 @@ title: Facebook
 - We need this access token while we configure our Business in _Dialog Builder_
 
   >Please note that the following steps can only be performed if you are the administrator of the Client's Facebook Page. <br><br>
-  If not, then:
-  - You would either have to request the client to give you that access.<br><br>
-  - Or alternatively, the client would themselves have to add the page to the app following these steps and subsequently generate and share the _access token_
+  >If not, then:
+  >- You would either have to request the client to give you that access.<br><br>
+  >- Or alternatively, the client would themselves have to add the page to the app following these steps and subsequently generate and share the _access token_
 
 
 - Open our app in Facebook for developers.
@@ -78,8 +78,8 @@ title: Facebook
 - After the page has been successfully added to the app, click **Generate Token** to create the _access token_.
 
   > PLease note:
-  - Ask the client to **save** this _access token_ and **not to re-generate the token** as generating a new token will immediately invalidate the previously generated _access token_.<br><br>
-  - If your app is in _development mode_, you can still generate a token but will only be able to access those Facebook users who either manage the app or the Facebook page
+  >- Ask the client to **save** this _access token_ and **not to re-generate the token** as generating a new token will immediately invalidate the previously generated _access token_.<br><br>
+  >- If your app is in _development mode_, you can still generate a token but will only be able to access those Facebook users who either manage the app or the Facebook page
 
 
 
@@ -160,20 +160,20 @@ For certain permissions, we need verfications from Facebook. There are two compo
 
   1. pages_messages permission:
 
-    - Pages_messages enables your app to send and receive messages using a Facebook Page.
+      - Pages_messages enables your app to send and receive messages using a Facebook Page.
 
-    - Facebook Messenger review team manually verifies your bot and gives permission accordingly.
+      - Facebook Messenger review team manually verifies your bot and gives permission accordingly.
 
-    - Refer to this Facebook Documentation to learn more - [Submitting your Messenger Bot](https://developers.facebook.com/docs/messenger-platform/app-review/).
+      - Refer to this Facebook Documentation to learn more - [Submitting your Messenger Bot](https://developers.facebook.com/docs/messenger-platform/app-review/).
 
-    - > When you share your bot for permission, there is a testing freeze. No one can test the bot on the facebook page.
+      - > When you share your bot for permission, there is a testing freeze. No one can test the bot on the facebook page.
 
 
   2. Business Verification:
 
-    - Facebook Business Verification is required to take the app public.
+      - Facebook Business Verification is required to take the app public.
 
-    - Refer to Facebook Documentation to learn more - [Submitting your Messenger Bot](https://developers.facebook.com/docs/messenger-platform/app-review/).
+      - Refer to Facebook Documentation to learn more - [Submitting your Messenger Bot](https://developers.facebook.com/docs/messenger-platform/app-review/).
 
 
 ## Setting up get started button
@@ -202,7 +202,7 @@ header 'Content-Type: application/json' \ & data-raw
 {
     "persistent_menu": [
         {
-            "locale": "default",
+             "locale": "default",
             "composer_input_disabled": false,
             "call_to_actions": [
                 {

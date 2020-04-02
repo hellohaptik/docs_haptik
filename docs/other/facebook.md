@@ -54,7 +54,7 @@ title: Facebook
 
 - We need to add the Facebook page _(to which we want to connect our bot)_ to `our facebook app -> Messenger`. Only once that this page has been added can the _access token_ for it be generated.
 
-- We need this access token while we configure our Business in _Dialog Builder_
+- We need this access token while we configure our Business in _Bot Builder_
 
   >Please note that the following steps can only be performed if you are the administrator of the Client's Facebook Page. <br><br>
   >If not, then:
@@ -77,22 +77,22 @@ title: Facebook
 
 - After the page has been successfully added to the app, click **Generate Token** to create the _access token_.
 
-  > PLease note:
+  > Please note:
   >- Ask the client to **save** this _access token_ and **not to re-generate the token** as generating a new token will immediately invalidate the previously generated _access token_.<br><br>
   >- If your app is in _development mode_, you can still generate a token but will only be able to access those Facebook users who either manage the app or the Facebook page
 
 
 
-## Step 4: Setting up the _Dialog Builder_:
+## Step 4: Setting up the _Bot Builder_:
 
 - Get the App Secret:
-  - `Facebook for devlopers -> (our app) -> settings -> basic`
+  - `Facebook for developers -> (our app) -> settings -> basic`
 
   - Find the field titled **App Secret** and click on **Show**
 
   - Copy the value in this field and paste it in a note or someplace safe and keep it handy since we would need it while going through the next steps.
 
-- Now go to `Dialog Builder -> Business Manager -> _(the business in question)_ -> Partner Specific -> Platform Deployments -> Facebook`.
+- Now go to `Bot Builder -> Business Manager -> _(the business in question)_ -> Partner Specific -> Platform Deployments -> Facebook`.
 
 - Paste the App Secret we just copied into the **app_secret_key** field.   
 
@@ -105,9 +105,9 @@ title: Facebook
 
 ## Step 5: Setting up webhook on Facebook App:
 
-- This step connects our Facebook App with our Dialog Builder.
+- This step connects our Facebook App with our Bot Builder.
 
-- Go to `Facebook for devlopers -> (our app) -> Messenger -> Settings`
+- Go to `Facebook for developers -> (our app) -> Messenger -> Settings`
 
 - Find the section titled **Webhooks**.
 
@@ -115,13 +115,13 @@ title: Facebook
 
 - Enter the following URL into the **Callback URL** field:
 
-  - > Callback URL = (Environment's base URL) + (callback_url entered in the Dialog Builder)
+  - > Callback URL = (Environment's base URL) + (callback_url entered in the Bot Builder)
 
-  - _Staging_ - `https://staging-messenger.haptikapi.com/<callback_url entered in Dialog Builder>`. Thus, following our example, our complete Callback URL would be `https://staging-messenger.haptikapi.com/fb/mydemobusiness`.
+  - _Staging_ - `<base url for staging message delivery>/<callback_url entered in Bot Builder>`. Thus, following our example, our complete Callback URL would be `<baseurl_staging>/fb/mydemobusiness`.
 
-  - _Production_ - `https://fb-messenger.haptikapi.com/<callback_url entered in Dialog Builder>`. Thus, following our example, our complete Callback URL would be `https://fb-messenger.haptikapi.com/fb/mydemobusiness`.
+  - _Production_ - `<base url for production message delivery>/<callback_url entered in Bot Builder>`. Thus, following our example, our complete Callback URL would be `<baseurl_production>/fb/mydemobusiness`.
 
-- Add the **secret_challenge_key** entered in Dialog Builder, into the **Verify Token** field.
+- Add the **secret_challenge_key** entered in Bot Builder, into the **Verify Token** field.
 
 - Click **Verify and Save**. Facebook will now make a call to the Callback URL entered and send the Verify Token along with it and only on successful verification, save it.
 
@@ -189,7 +189,7 @@ header 'Content-Type: application/json' \ & data-raw
 }
 <br><br>
 Replace:<br>
-<Access Token\> : Add your Access token stored previously in Dialog Builder.<br>
+<Access Token\> : Add your Access token stored previously in Bot Builder.<br>
 <Text to show\> : Text you wish to show up on getting started.
 
 
@@ -216,5 +216,5 @@ header 'Content-Type: application/json' \ & data-raw
 }
 <br><br>
 Replace:<br>
-<Access Token\> : Add your Access token stored previously in Dialog Builder.<br>
+<Access Token\> : Add your Access token stored previously in Bot Builder.<br>
 <Button text\> : Text to be shown on button.

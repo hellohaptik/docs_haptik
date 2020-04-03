@@ -102,6 +102,8 @@ title: Facebook
 
 - **callback_url** set it as `fb/business_name`. For example, `fb/mydemobusiness` _(assuming that the business name is mydemobusiness)_. Do note that whatever value we enter here has to be a _URL safe string_.
 
+- Enable the button on the _top right_ side to activate all of these deployment keys.
+
 
 ## Step 5: Setting up webhook on Facebook App:
 
@@ -178,7 +180,7 @@ For certain permissions, we need verfications from Facebook. There are two compo
 
 ## Setting up get started button
 
-Use this cURL request to setup a bot prompt
+Use this cURL request to setup a get started button
 
 > curl --location --request POST https://graph.facebook.com/v4.0/me/messenger_profile?access_token=<Access Token\>
 header 'Content-Type: application/json' \ & data-raw
@@ -190,12 +192,12 @@ header 'Content-Type: application/json' \ & data-raw
 <br><br>
 Replace:<br>
 <Access Token\> : Add your Access token stored previously in Bot Builder.<br>
-<Text to show\> : Text you wish to show up on getting started.
+<Text to show\> : Text you wish to show up on get started button.
 
 
 ## Setting up a persistent menu
 
-Use this cURL request to setup a bot prompt
+Use this cURL request to setup a taskbox
 
 > curl --location --request POST https://graph.facebook.com/v4.0/me/messenger_profile?access_token=<Access token\>
 header 'Content-Type: application/json' \ & data-raw
@@ -207,8 +209,13 @@ header 'Content-Type: application/json' \ & data-raw
             "call_to_actions": [
                 {
                     "type": "postback",
-                    "title": "<Button text\>",
+                    "title": "<Button 1 text\>",
                     "payload": "Find roaming plans {task}"
+                },
+                {
+                    "type": "postback",
+                    "title": "<Button 2 text\>",
+                    "payload": "Check account details {task}"
                 }
             ]
         }
@@ -217,4 +224,4 @@ header 'Content-Type: application/json' \ & data-raw
 <br><br>
 Replace:<br>
 <Access Token\> : Add your Access token stored previously in Bot Builder.<br>
-<Button text\> : Text to be shown on button.
+<Button text\> : Text to be shown on each button/item in the taskbox.

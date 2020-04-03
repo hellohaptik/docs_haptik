@@ -209,13 +209,13 @@ header 'Content-Type: application/json' \ & data-raw
             "call_to_actions": [
                 {
                     "type": "postback",
-                    "title": "<Button 1 text\>",
-                    "payload": "Find roaming plans {task}"
+                    "title": "Menu item 1",
+                    "payload": "Menu item 1 {task}"
                 },
                 {
                     "type": "postback",
-                    "title": "<Button 2 text\>",
-                    "payload": "Check account details {task}"
+                    "title": "Menu item 2",
+                    "payload": "Menu item 2 {task}"
                 }
             ]
         }
@@ -224,4 +224,3 @@ header 'Content-Type: application/json' \ & data-raw
 <br><br>
 Replace:<br>
 <Access Token\> : Add your Access token stored previously in Bot Builder.<br>
-<Button text\> : Text to be shown on each button/item in the taskbox.

@@ -9,6 +9,7 @@ In this section, we'll cover the following topics:
 [How to Add an Entity](#adding-an-entity)  
 [Creating a New Entity](#making-a-new-entity)  
 [Mandatory and Optional Entities](#mandatory-and-optional-entities)  
+[Node-Entity Filter](#node-entity-filter)
 [Entity Types](#entity-types)
 
 
@@ -411,6 +412,9 @@ Example:
 "Show me Apple phones" and the bot is detecting "Apple" as a grocery item.
 
 To fix this, Enter such phrases in the Entity Patterns of your entity without tagging anything. Such examples with nothing highlighted in them are treated as **Negative examples** and the bot learns to not extract values in such contexts.
+
+### Node-Entity Filter
+
 
 ### **Entity types and language support**
 

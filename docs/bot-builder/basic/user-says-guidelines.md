@@ -207,6 +207,22 @@ So for our Shopping Node example, if you Double click on "buy" -> Select “Buy 
 
 > _**Common Mistake**: Ensure that you enable the correct set of synonyms in the user says as 1 word can have multiple meanings. For example, "speaker" could mean the electronic devices as well as a human is speaking at an event.*_
 
+In the **Haptik Machine Learning V2.1.0 and further**, modifications are made to the Synonyms feature leading to change in the functionality of the feature and appearance on the bot builder.
+
+The addition of domain specific synonyms, detection and learning are becoming better. 
+
+The changes would be - 
+
+1. There will be no need to add English language synonyms like Buy, Purchase, etc. The IVA will recognise them from Language Training provided automatically by ML Algorithms.
+
+2. The Domain level synonyms can be added manually by engineers. ML team will provide the document containing steps to be followed by the engineer. Eventually, the UI on Bot Builder will also enable the same.
+
+3. The **BLUE LINE** below the words in "**USER SAYS**" section, which used to display synonyms will stop appearing in the  **"User Says"** section. However, any domain specific synonym added by the bot builder is identified by the bot, it will be visible in the debug logs. The “intent_metadata” section and “findreplace_map” subsection within the logs will contain the same, as shown in image below.
+
+**Illustration** - The word Amazing has a synonym Good. The Bot Builder has not added Good as synonym of Amazing in the Training Data, but Good got recognised as synonym of Amazing automatically, as seen in logs.
+
+![SY_1](assets/SY_1.png)
+
 ### **Sample user says utterance**
 
 * **_Add_** variations of the sentence that can be used to perform the same action.
@@ -641,43 +657,3 @@ All the above are their own **nodes** in our system, with their corresponding in
 >  *Smalltalk can handle general chit-chat with the user. Bot builders can now edit bot says in Smalltalk to include bot specific content. Intents such as Greetings, User upset, user dropout are already present in Smalltalk.*
 >  
 >  *Send a note to Platform support if any intent is missing or content needs to be edited.*
-
-
-## **Disambiguation**
-
-**Why do we need Disambiguation?**
-
-* When there are multiple intents in a bot, there’s a good chance of sending the wrong node response to end user. Especially, when keyword(s) in these intents are same
-* When bot builders add similar user says on multiple nodes. To correct this behaviour and improve end user experience, we use disambiguation
-
-**How Disambiguation works?**
-
-When we get an ambiguous message from a user on a bot, we send a disambiguation message with possible nodes as options. For reference, when user types "*plans*" in a bot with multiple intents around the keyword, we disambiguate by sending the message below -
-
-![How Disambiguation Works](assets/bot-builder-user-says/disambiguation_working.png)
-
-On Whatsapp, the above message goes as a text message with node options in bullet points. Now, the user can send `1` or `2` as a response, basis which we will detect the chosen node option. 
-
-Disambiguation (Did you mean? response) goes as
-- Button HSL on Haptik SDK
-- Text on WhatsApp
-- Voice key in HSL played out
-
->  
->To understand how disambiguation works on your bot, account for these points - 
->  
-> 1. We do not send a disambiguation response for consecutive user messages. This means if for last user message we got a disambiguation response, the next user message would never get a disambiguation response
-> 
-> 2. For disambiguation node options, we should not consider dependent or negative responses. Infact, we only consider independent responses on start nodes to choose nodes in a disambiguation response. 
->  
-
-**Setting up Disambiguation**
-
-The Node-wise copy is controlled from the "Disambiguate message" flag in User Says. You can add < 21 characters as the node suggestion go as buttons on the Web SDK. 
-
-![Setup Disambiguation](assets/bot-builder-user-says/set_up_disambiguate.png)
-
-> *Note*: If Disambiguate message is not marked on node, we pick *Node name* field as default. Bot builders can catch this and then go back to mark all node-wise user says for disambiguation response. 
-   
-
-

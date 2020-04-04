@@ -39,7 +39,9 @@ On Whatsapp, the above message goes as a text message with the shortlister node 
 *Did you mean?*
 
 *1 - Show Your Plans*
+
 *2 - Browse new plans*
+
 *3 - Something else*
 
 The User can send 1, 2, 3 as a response, basis which we will detect the chosen intent by the user from the above options.
@@ -84,7 +86,7 @@ Below are the USER SAYS present in both the DEPENDENT nodes -
 
 **Disambiguation at work**
 
-**Case 1** - Between **two start nodes** - In this case, dependent nodes are not eligible candidates for Disambiguation Button UI. 
+**Example 1** - Between **two start nodes** - In this case, dependent nodes are not eligible candidates for Disambiguation Button UI. 
 
 ![DMG_7](assets/DMG_8.png)
 

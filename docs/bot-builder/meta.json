@@ -26,6 +26,7 @@
 			"basic/bot-says",
 			"basic/chat-elements",
 			"basic/intent",
+			"basic/disambiguation",
 			"basic/entities",
 			"basic/bot-prompt-trigger",
 			"basic/general-responses",

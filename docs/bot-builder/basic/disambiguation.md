@@ -88,15 +88,15 @@ Below are the USER SAYS present in both the DEPENDENT nodes -
 
 **Example 1** - Between **two start nodes** - In this case, dependent nodes are not eligible candidates for Disambiguation Button UI. 
 
-![DMG_7](assets/DMG_8.png)
+![DMG_8](assets/DMG_8.png)
 
 **Example 2** - Disambiguation between **one start node and 1 / 2 dependent node** - As shown in the image below, the **“Careers at Haptik”** is a start node, while other 2 buttons are from dependent nodes of the **“About Haptik”** node.
 
 - Once the IVA reaches a start node, it can disambiguate between all eligible nodes, including dependent and start nodes, depending upon the User Utterance.
 
-![DMG_7](assets/DMG_9.png)
+![DMG_9](assets/DMG_9.png)
 
 **Example 3** - Disambiguation between **only 2 Dependent Nodes** - Both **“Product of Haptik”** and **“Funding of Haptik”** are dependent nodes of **“About Haptik”** start node.
 
-![DMG_7](assets/DMG_10.png)
+![DMG_10](assets/DMG_10.png)
 

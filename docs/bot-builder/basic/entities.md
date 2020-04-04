@@ -11,7 +11,8 @@ In this section, we'll cover the following topics:
 [Mandatory and Optional Entities](#mandatory-and-optional-entities)  
 [Entity Types](#entity-types)<br>
 [Entity Patterns](#entity-patterns)<br>
-[Node Entity Filter](#node-entity-filter) 
+[Node Entity Filter](#node-entity-filter)<br>
+[Language Support for Different Entities](#language-support-for-different-entities)
 
 ### What is an entity?
 
@@ -289,18 +290,29 @@ It can be used in following cases -
 
 - It is shown in the image below where the names of courses are detected as an entity.
 
+![EP_1](assets/EP_1.png)
+
 **2.** Once sample utterances have been added, the entity value in the utterance needs to be tagged. The tags are used to explain the IVA about the presence of an entity in that mentioned pattern. 
-The tags of the entity can be added by selecting the phrases and clicking “Add Tag" as shown below.
+
+- The tags of the entity can be added by selecting the phrases and clicking “Add Tag" as shown below.
+
+![EP_2](assets/EP_2.png)
  
 **3.** Provide some sample utterances which contain the entity value but not the context in which they are to be detected. They are called Negative examples. These utterances should be added but the entity value should not be tagged.
 
-The below image can be checked where pattern number 7, 9, 10 in the image are negative examples. A side image showing a working example where negative intents have been added - 
+- The below image can be checked where pattern number 7, 9, 10 in the image are negative examples. A side image showing a working example where negative intents have been added - 
+
+![EP_3](assets/EP_3.png)
              
 One more illustration below where row number 67 is an example where the pattern is with an appropriate intent, but a different object has been entered to create a negative example.
 
+![EP_4](assets/EP_4.png)
+
 **4.** After you are done adding or updating variations, please Train the bot. The entities that are tagged in the ‘Entity Patterns’, get auto-tagged in the User Says section of the node as well.
 
-As illustrated in the images below, the phrases with a green underline are entity values of the entity added on the node. You can select the phrase and see which entity was detected for the phrase.
+- As illustrated in the images below, the phrases with a green underline are entity values of the entity added on the node. You can select the phrase and see which entity was detected for the phrase.
+
+![EP_5](assets/EP_5.png)
    
 **5.** To ensure that the IVA learns the context accurately, it’s recommended to Add a minimum of 10 sentences for every intent which the user might utter while providing the entity value. User’s Intents form a crucial part of the context in which the entity will be detected.
 
@@ -330,13 +342,19 @@ E.g - for the entity courses -  The intent is to buy a course.
 
 - This helps in making the model **more robust to the variations** in contexts and values.
 
-It also helps the IVA understand the variation in the nature of entity values, as illustrated better in the example below.
+- It also helps the IVA understand the variation in the nature of entity values, as illustrated better in the example below.
 
 **Example** - Here is the list of entity patterns - 
 
+![EP_6](assets/EP_6.png)
+
 Below is the dictionary for the same. Please check that there are variations in the character and word length of entity values as well. This will make the IVA understand variations better.
 
+![EP_7](assets/EP_7.png)
+
 The below image shows the detection due to presence of character and word count variation in the entity values.
+
+![EP_8](assets/EP_8.png)
 
 Some guidelines to make Entity Patterns more robust -  
 
@@ -350,11 +368,15 @@ Some guidelines to make Entity Patterns more robust -
 
 Aforesaid guidelines are illustrated in the image of Entity Patterns below - 
 
+![EP_9](assets/EP_9.png)
+
 **How do ENTITY PATTERNS work?**
 
 When the entity patterns are defined, the IVA is trained on both the tagged term and the context in which the term is used. This enables the IVA to calculate a confidence score on every User Utterance, on how likely a word or phrase is going to be a value of an entity. 
 
-When a User Utterance is received, the IVA looks for the context of the sentence in which the entity is mentioned to detect.
+- When a User Utterance is received, the IVA looks for the context of the sentence in which the entity is mentioned to detect.
+
+![EP_10](assets/EP_10.png)
 
 #### **Troubleshooting** ####
 
@@ -362,28 +384,39 @@ When a User Utterance is received, the IVA looks for the context of the sentence
 
 The IVA should have detected an entity in a particular User Utterance,  but it didn't detect the same. Following steps can be taken to fix the same - 
 
-1. Add that User Utterance to the Entity Patterns, ensuring that for a particular intent, 10 entity patterns are provided.
-Example - Let's say the following User Utterance failed to get detected - 
- 
+Add that User Utterance to the Entity Patterns, ensuring that for a particular intent, 10 entity patterns are provided.
+
+**Example** - Let's say the following User Utterance failed to get detected - 
+
+![EP_11](assets/EP_11.png)
 
 Add variations to the Entity Patterns as shown below. They are variations of the Buy intent in 10 different forms - 
 
+![EP_12](assets/EP_12.png)
+
 The IVA has been trained again after adding 10 variations and Entity Pattern has been detected.
+
+![EP_13](assets/EP_13.png)
 
 **Case 2 - False Detection**
 
 This is a case where the IVA is detecting wrong phrases as an entity value. Illustration in the image below - 
 
-To fix the same, some Negative Variations without tagging the entity value have to be added to the Entity Patterns section, as shown in the image below. They communicate those cases to the IVA where detection need not occur. 
+![EP_14](assets/EP_14.png)
+
+To fix the same, some Negative Variations without tagging the entity value have to be added to the Entity Patterns section, as shown in the image below. They communicate those cases to the IVA where detection need not occur.
+
+![EP_15](assets/EP_15.png)
 
 Below is the case where the detection stopped once the Negative Variations were added to the Entity Patterns. Once the IVA is trained after adding Negative Variations, the detection doesn’t occur.
 
+![EP_16](assets/EP_16.png)
 
 ### **Node Entity Filter**
 
 **What is the feature?**
 
-The *Node-Entity Filter is the property of the Node-Entity combination*. The filter **MAY** come into picture after the ML Intent Detection algorithms have shortlisted NODES as per the User Utterance and a decision is being made on which is the perfect NODE to respond to the User Utterance.
+The *Node-Entity Filter is the property of the Node-Entity combination*. The filter **MAY** come into picture **after** the ML Intent Detection algorithms have shortlisted NODES as per the User Utterance **and** a decision is being made on which is the perfect NODE to respond to the User Utterance.
 
 The Node-Entity Filter MAY cause a NODE to be removed from the above shortlist of NODES. But it can’t get a particular NODE added to the shortlisted NODES, if Intent Detection algorithms haven’t found such a NODE suitable. It is shown in subsequent sections below.
 
@@ -395,61 +428,90 @@ The Node-Entity Filter MAY cause a NODE to be removed from the above shortlist o
 
 **How to Use?** - Below is a snapshot from the dictionary of the sample entity demo_city_entity_filter which has been used to illustrate this feature.
 
-The Node-Entity Filter can be added by clicking the “filter” icon shown in the black circle in the  below image.
+![NEF_1](assets/NEF_1.png)
 
-Once the icon is clicked, a dialog box appears where the values can be set. The entity value has to be entered in the “Add a new word” section. Press Enter to save the filter after entering the value.
+The **Node-Entity Filter** can be added by clicking the “**filter**” icon shown in the black circle in the  below image.
 
-Please note that “ENTITY VALUES” have to be added and not variants as shown in the images below for the same. Here, “HYD” is added as a filter value. HYD in this case is an entity value and not an entity variant.
+![NEF_2](assets/NEF_2.png)
 
-Once a filter has been added, the “filter” icon appears blue as shown in the image below.
+Once the icon is clicked, a dialog box appears where the values can be set. The entity value has to be entered in the **“Add a new word”** section. Press Enter to save the filter after entering the value.
+
+![NEF_3](assets/NEF_3.png)
+
+Please note that **“ENTITY VALUES” have to be added and not variants** as shown in the images below for the same. Here, “HYD” is added as a filter value. **HYD in this case is an entity value and not an entity variant**.
+
+![NEF_4](assets/NEF_4.png)
+
+Once a filter has been added, the “**filter**” icon appears blue as shown in the image below.
+
+![NEF_5](assets/NEF_5.png)
 
 Let’s take a few illustrations as shown in images below - An **Entity Filter Demo Node** has been created with User Says as shown below. The **demo_city_filter_node** entity has been added with **filter HYD** to the same node.
 
-**Illustration 1** - As shown in the image below, When an entity variant (Mumbai) was present in the User Utterance, but was not present in the Node-Entity Filter, the Entity Filter Demo Node was not shortlisted and hence the Bot Broke. 
+![NEF_6](assets/NEF_6.png)
+
+**Illustration 1** - As shown in the image below, When an **entity variant (Mumbai)** was present in the User Utterance, but was not present in the Node-Entity Filter, the **Entity Filter Demo Node was not shortlisted** and hence the Bot Broke. 
 
 As per Intent Detection ML Algorithm, Entity Filter Demo Node was shortlisted for responding, but since Node-Entity Filter was set to HYD, the NODE was rejected as a candidate while responding.
 
-**Illustration 2** - As shown in the image below, when the entity variant (Hyderabad) corresponding to entity value HYD was present in the User Utterance and in the Node-Entity Filter as well, the Entity Filter Demo Node was shortlisted. Hence, the Bot responded from that node. 
+![NEF_7](assets/NEF_7.png)
 
-This is how normal Intent Detection works, with no impact of Node-Entity filter coming into play. Illustration 1 and 2 can be compared to get a complete understanding of the Node-Entity Filter feature.
+**Illustration 2** - As shown in the image below, when the **entity variant (Hyderabad)** corresponding to entity value **HYD** was present in the User Utterance and in the Node-Entity Filter as well, the Entity Filter Demo Node was shortlisted. Hence, the Bot responded from that node. 
 
-**Illustration 3** - Here’s another illustration on what Node-Entity Filter doesn’t do. When the entity variant corresponding to entity value HYD was present in the User Utterance but the NODE Entity Filter Demo Node was not an appropriate node for response as per the ML Intent Detection Algorithms, that particular node was not shortlisted for responding.
+This is how normal Intent Detection works, with no impact of Node-Entity filter coming into play.
 
-Another more appropriate node was chosen to respond.
+![NEF_8](assets/NEF_8.png)
 
-But when ENTITY FILTER DEMO NODE was the correct candidate as per the Intent Detection ML Algorithm, then that NODE was shortlisted and a response was sent from that Node.
+Illustration 1 and 2 can be compared to get a complete understanding of the Node-Entity Filter feature.
 
-**Illustration 4** - Below image shows a case when User Utterance had no mention of any entity value. User Utterance matched the Entity Filter Demo Node through ML Intent Detection Algorithms. However, when the User reached that NODE, the Node-Entity Filter was set as default value for the demo_city_filter_node entity. Please notice that no filtering is applied in such a scenario.
+**Illustration 3** - Here’s another illustration on what Node-Entity Filter **doesn’t do**. 
 
-**Illustration 5** - If there are multiple values present in the filter list as shown in the image below, the most recently added value would be set as default for that entity, which is BOM in the below illustrated case.
+- When the entity variant corresponding to entity value HYD was present in the User Utterance but the NODE Entity Filter Demo Node was not an appropriate node for response as per the ML Intent Detection Algorithms, that particular node was not shortlisted for responding.
 
+Another more appropriate node was chosen to respond as shown below.
+
+![NEF_9](assets/NEF_9.png)
+
+But when **ENTITY FILTER DEMO NODE** was the correct candidate as per the Intent Detection ML Algorithm, then that NODE was shortlisted and a response was sent from that Node.
+
+![NEF_10](assets/NEF_10.png)
+
+**Illustration 4** - Below image shows a case when User Utterance had no mention of any entity value. User Utterance matched the **Entity Filter Demo Node** through ML Intent Detection Algorithms. However, when the User reached that NODE, the **Node-Entity Filter** was set as default value for the **demo_city_filter_node entity**. Please notice that no filtering is applied in such a scenario.
+
+![NEF_11](assets/NEF_11.png)
+
+**Illustration 5** - If there are multiple values present in the filter list as shown in the image below, the **most recently added value** would be set as default for that entity, which is BOM in the below illustrated case.
+
+![NEF_12](assets/NEF_12.png)
 
 **How does it work?**
 
-For understanding, Let’s take the above entity demo_city_entity_filter. It’s values are DEL, HYD, MAD, BOM and HYD has been set as a Node-Entity Filter.
+For understanding, Let’s take the above entity **demo_city_entity_filter**. It’s values are DEL, HYD, MAD, BOM and **HYD** has been set as a Node-Entity Filter.
 
 If an entity value HYD is set as a Node-Entity Filter, then that NODE will be eligible to be shortlisted only if 2 cases mentioned below occur -  
 
-**1.** When variants of HYD from the entity dictionary are present in the User Utterance.
+**1.** When **variants of HYD** from the entity dictionary are present in the User Utterance.
 
 **As a corollary**, it can be said that if entity demo_city_entity_filter is added to a NODE with HYD Node-Entity Filter, and any other entity variant of demo_city_entity_filter is present in User Utterance like BOM, then that particular NODE will not be shortlisted to respond. It’s shown in **Illustration 1** above.
 
-**2.** When no entity value corresponding to the entity demo_city_entity_filter is present in the User Utterance.
+**2.** When **no entity value** corresponding to the entity **demo_city_entity_filter** is present in the User Utterance.
 
-- There is an additional impact in this use-case. When a User Utterance contains no entity value for demo_city_entity_filter entity and the User Utterance selects a NODE to respond where a Node-Entity filter is set, the Bot will make the value of entity demo_city_entity_filter default to that value for which filter has been set. It’s shown in **Illustration 4 and 5 above**.
+- There is an additional impact in this use-case. When a User Utterance contains no entity value for **demo_city_entity_filter** entity and the User Utterance selects a NODE to respond where a Node-Entity filter is set, the Bot will make the value of entity **demo_city_entity_filter** default to that value for which filter has been set. It’s shown in **Illustration 4 and 5 above**.
 
-**Note -** There is no deterministic rule or an assurance that whenever a User Utterance contains a particular entity variant which is a Node-Entity Filter at a NODE, then that NODE will be automatically chosen to respond irrespective of the Utterance. It’s shown in Illustration 3 above.
+**Note -** 
+
+1. There is no deterministic rule or an assurance that whenever a User Utterance contains a particular entity variant which is a Node-Entity Filter at a NODE, then that NODE will be automatically chosen to respond irrespective of the Utterance. It’s shown in Illustration 3 above.
 
 The response to the User will still be from a Node which has Highest Confidence score as per the Intent detection Algorithm. The Node-Entity Filter only removes a particular NODE from the shortlist of candidate nodes.
 
-**LIMITATION** - The Node-Entity Filter works only in cases where the Entity is either a “Words or Phrases” or a Regex Type and the entity should not return a dictionary, but only a specific value. For “Words or Phrases” entities, the value entered in Node-Entity Filter is case sensitive as well.
+2. **LIMITATION** - The Node-Entity Filter works only in cases where the Entity is either a **“Words or Phrases”** or a **Regex Type** and the entity should not return a dictionary, but only a specific value. For “Words or Phrases” entities, the value entered in Node-Entity Filter is **case sensitive** as well.
 
 3. Say, there are 2 entities having Node-entity Filter on a particular NODE, then the NODE will become eligible for being shortlisted only if 
         a. The User Utterance has no entity values, or
         b. The User Utterance has both the entity values on which filter has been applied.
 
 
-### **Entity Types and Language Support**
+### **Language Support for Different Entities**
 
 <table>
   <tr>

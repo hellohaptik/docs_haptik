@@ -2,7 +2,7 @@
 title: Disambiguation
 ---
 
-**What is it?**
+**What is the Feature?**
 
 As the word suggests, it aims to remove ambiguity. The feature triggers when the IVA is not fully confident on it’s intent detection amongst the intents that it has shortlisted based on User Utterances and the Training Data.
 

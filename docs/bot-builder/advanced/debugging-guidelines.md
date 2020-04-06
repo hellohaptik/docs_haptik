@@ -53,6 +53,9 @@ The failure of the bot can be bucketed into 5 categories
 
 	When wrong entity is detected, check if the right entity is present on the detected node.
 
+	**Note:** Not all entity types will be available on the basic info section. You can use the detailed info section to view data of such entities. The basic info section will provide a warning message when it detects an entity of such type.
+
+
 
 In any of the cases mentioned above, the following information / concepts might be useful while building debugging guidelines
 

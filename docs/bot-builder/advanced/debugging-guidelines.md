@@ -19,7 +19,9 @@ The failure of the bot can be bucketed into 5 categories
 
 	![Wrong Bot Detected](assets/debug_wrong_bot.png)
 
-	Example scenarios - The bot was detected successfully or no active bot was detected, thus default bot was selected No active bot was detected and no default bot was configured. Thus, the fallback bot was selected.
+	Example scenarios - There was a bot detected but it wasn't the active bot and the pipeline used the default bot configured on the business manager. 
+	
+	Another case is when no active bot was detected and also no default bot was configured on the business manager. In such a case the pipeline detects the fallback bot that was configured on business manager.
 
 2. **Wrong Node** or **No Node** detected
 

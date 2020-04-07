@@ -4,6 +4,9 @@ title: Signing management requests
 
 The management APIs require that requests be signed by the ECT for authentication and authorisation.
 
+> Note: This is required only for issuing JWTs and listing ECT clients.
+> All other APIs **do not** require this.
+
 These APIs include:
  - JWT issuing APIs
  - Client enumeration APIs
@@ -140,9 +143,9 @@ The timestamp is part of the request object in the JSON body of the request. For
 ```json
 POST /jwt/issue
 {
-  "ect_fqdn": "awesome.ect.com",
+  "fqdn": "awesome.ect.com",
   "client_id": "86f7e437faa5a7fce15d1ddcb9eaeaea377667b8",
-  "timestamp": "2020-03-03 2019-05-13T12:34:56Z",
+  "timestamp": "2019-05-13T12:34:56Z",
 }
 ```
 

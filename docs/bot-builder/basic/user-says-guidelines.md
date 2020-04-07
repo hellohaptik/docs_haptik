@@ -207,22 +207,6 @@ So for our Shopping Node example, if you Double click on "buy" -> Select “Buy 
 
 > _**Common Mistake**: Ensure that you enable the correct set of synonyms in the user says as 1 word can have multiple meanings. For example, "speaker" could mean the electronic devices as well as a human is speaking at an event.*_
 
-In the **Haptik Machine Learning V2.1.0 and further**, modifications are made to the Synonyms feature leading to change in the functionality of the feature and appearance on the bot builder.
-
-The addition of domain specific synonyms, detection and learning are becoming better. 
-
-The changes would be - 
-
-1. There will be no need to add English language synonyms like Buy, Purchase, etc. The IVA will recognise them from Language Training provided automatically by ML Algorithms.
-
-2. The Domain level synonyms can be added manually by engineers. ML team will provide the document containing steps to be followed by the engineer. Eventually, the UI on Bot Builder will also enable the same.
-
-3. The **BLUE LINE** below the words in "**USER SAYS**" section, which used to display synonyms will stop appearing in the  **"User Says"** section. However, any domain specific synonym added by the bot builder is identified by the bot, it will be visible in the debug logs. The “intent_metadata” section and “findreplace_map” subsection within the logs will contain the same, as shown in image below.
-
-**Illustration** - The word Amazing has a synonym Good. The Bot Builder has not added Good as synonym of Amazing in the Training Data, but Good got recognised as synonym of Amazing automatically, as seen in logs.
-
-![SY_1](assets/SY_1.png)
-
 ### **Sample user says utterance**
 
 * **_Add_** variations of the sentence that can be used to perform the same action.

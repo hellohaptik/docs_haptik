@@ -5,12 +5,14 @@ In this section, we'll cover the following topics:
 [What is an Entity?](#what-is-an-entity)  
 [Intent vs Entity](#intent-vs-entity)  
 [When to Use Entities](#when-is-the-appropriate-time-to-use-an-entity)  
-[How Adding Entities Affects Bot Says](#how-does-using-an-entity-affect-the-other-bot-says-responses?)  
+[How Entity Addition Affects Bot Says?](#how-does-using-an-entity-affect-the-other-bot-says-responses)
 [How to Add an Entity](#adding-an-entity)  
 [Creating a New Entity](#making-a-new-entity)  
 [Mandatory and Optional Entities](#mandatory-and-optional-entities)  
-[Entity Types](#entity-types)
-
+[Entity Types](#entity-types)<br>
+[Entity Patterns](#entity-patterns)<br>
+[Node Entity Filter](#node-entity-filter)<br>
+[Language Support for Different Entities](#language-support-for-different-entities)
 
 ### What is an entity?
 
@@ -71,7 +73,7 @@ App_name: Hotstar</td>
   </tr>
 </table>
 
-#### When is the appropriate time to use an entity?
+### When is the appropriate time to use an entity?
 
 Some examples of when you would use an entity in Bot Says:
 
@@ -79,7 +81,7 @@ Some examples of when you would use an entity in Bot Says:
 - When you need a user's phone number and need to verify that inputs are valid phone numbers. The ‘phone_number_without_validation’ entity detects a 10 digit number.
 - When you need to gather the city a user wants to fly into and need to verify that the user has indicated a city with an airport in it.
 
-#### How does using an entity affect the other Bot Says responses?
+### How does using an entity affect the other Bot Says responses?
 
 The flow of Bot Says responses goes from top to bottom in terms of evaluation. **The order of the entities, and their order relative to Bot Says inputs, matters**. First the initial bot reply comes, then the entities, and then finally the final bot reply. The delay message is sent only after a certain level of inactivity. The initial/final bot replies might be not needed in some scenarios. **Note** that to change the order of the Bot Says inputs, simply click and drag the reorder handle.
 
@@ -262,157 +264,254 @@ There are two ways in which text entities can be used.
 Example -  For **city** entity.
 ![Entity-Dictionary](assets/bot-builder-user-says/entity-dictionary.png)
 
-##### **Entity patterns**
+### **Entity Patterns**
+
+Entity Patterns allow the entities to be defined in such a manner that they can be detected on the basis of the context under which the utterance has been made by the User.
 
 > **Entity patterns can be added only in English for now.**
 
-`Entity patterns` allows bot builders to define entities based on their context in the utterance. You do this by adding the user utterance in `Entity Patterns` section and tagging the entities in the user utterance.
+**When should you use ENTITY PATTERNS?**
 
-When you define entity patterns, a model is trained on both the tagged term and the context in which the term is used in the sentence you tag. This model enables us to calculate a confidence score that identifies how likely a word or phrase is to be an instance of an entity, based on how it is used in the user input.
+It can be used in following cases - 
 
-![Free-text Entity English](assets/bot-builder-user-says/free_text_entity_en.png)
+1. When an entity can take an infinite set of values and using a pre-defined and limited list of values (read - Dictionary) isn't sustainable or possible.
+    - Examples of such entities could be:
+          a. person_name (Bob Marley, Nick Jonas, etc)
+          b. movie_name (Harry Potter, Matrix Reloaded); or
+2. When names of things i.e nouns (proper or common) from a user utterance are to be extracted, 
 
-**When to use?**
+3. *When not to use* - Phrase extraction tasks involving action oriented statements like extracting set up a reminder from I want to set up a reminder should not be done through Entity Patterns. It is prone to unpredictable behaviour.
 
-- When some entity can take infinitely many values and using `Dictionary` isn't sustainable Examples:
-  - person_name (Bob Marley, Nick Jonas, Mark Norman Sr.)
-  - content_name (Harry Potter, Matrix Reloaded, Bumble Bee, John Wick)
--  To extract names of things, in other words nouns (proper or common).
-- Phrase extraction tasks like extracting `set up a reminder` from `I want to set up a reminder`
+**HOW TO USE?**
+
+**1.** Go to the Entity Patterns section of an entity. This section is meant to train the bot on the context in which the entity will be detected. 
+
+- The context is provided to the bot through sample user utterances or patterns. In this section, those sentences are to be added which contain the entity and the user is expected to utter them. 
+
+- It is shown in the image below where the names of courses are detected as an entity.
+
+![EP_1](assets/EP_1.png)
+
+**2.** Once sample utterances have been added, the entity value in the utterance needs to be tagged. The tags are used to explain the IVA about the presence of an entity in that mentioned pattern. 
+
+- The tags of the entity can be added by selecting the phrases and clicking “Add Tag" as shown below.
+
+![EP_2](assets/EP_2.png)
+ 
+**3.** Provide some sample utterances which contain the entity value but not the context in which they are to be detected. They are called Negative examples. These utterances should be added but the entity value should not be tagged.
+
+- The below image can be checked where pattern number 7, 9, 10 in the image are negative examples. A side image showing a working example where negative intents have been added - 
+
+![EP_3](assets/EP_3.png)
+             
+One more illustration below where row number 67 is an example where the pattern is with an appropriate intent, but a different object has been entered to create a negative example.
+
+![EP_4](assets/EP_4.png)
+
+**4.** After you are done adding or updating variations, please Train the bot. The entities that are tagged in the ‘Entity Patterns’, get auto-tagged in the User Says section of the node as well.
+
+- As illustrated in the images below, the phrases with a green underline are entity values of the entity added on the node. You can select the phrase and see which entity was detected for the phrase.
+
+![EP_5](assets/EP_5.png)
+   
+**5.** To ensure that the IVA learns the context accurately, it’s recommended to Add a minimum of 10 sentences for every intent which the user might utter while providing the entity value. User’s Intents form a crucial part of the context in which the entity will be detected.
+
+- If the IVA is to be trained on detecting a new intent from a user utterance, then 10 more variations should be provided to improve detection of the entity.
+
+The emphasis on adding more variants in entity patterns is for ensuring that there is a **reduced probability of false detections.**
+
+E.g - for the entity courses -  The intent is to search a course.
+
+- *I want to search a course on Machine Learning*
+
+- *I need to find a course on Marketing and so on till 10 variants have to be added.*
+
+- But if intent in the context expands to a new "Buy" intent and entity value has to be detected in that context as well, then 10 more variations need to be provided.
+
+E.g - for the entity courses -  The intent is to buy a course.
+
+*I want to buy a course on Machine Learning*
+
+*Can you help me buy  a course in Marketing and so on till 10 variations.*
+
+**6.** Population of **DICTIONARY** for Entity Patterns - Dictionary in the context of entity patterns serves a different purpose, compared to normal text based entities. It can be explained through an illustration - 
+
+- Let’s assume 10 patterns have been added to the Entity Patterns  section. If no dictionary values are present, the IVA will be trained with training data of 10 variations. 
+
+- However, if 10 dictionary values are entered in the Dictionary section, the IVA will be trained on 10 patterns X 10 dictionary values i.e 100 variations.  
+
+- This helps in making the model **more robust to the variations** in contexts and values.
+
+- It also helps the IVA understand the variation in the nature of entity values, as illustrated better in the example below.
+
+**Example** - Here is the list of entity patterns - 
+
+![EP_6](assets/EP_6.png)
+
+Below is the dictionary for the same. Please check that there are variations in the character and word length of entity values as well. This will make the IVA understand variations better.
+
+![EP_7](assets/EP_7.png)
+
+The below image shows the detection due to presence of character and word count variation in the entity values.
+
+![EP_8](assets/EP_8.png)
+
+Some guidelines to make Entity Patterns more robust -  
+
+1. Vary the position of the entity in sentences in training data
+
+2. Avoid spelling errors
+
+3. Ensure variety in usage of verbs. E.g if the intent is to find a course, it can be shown with verbs like look, search, find, show, etc. 
+
+4. Use complete sentences whenever possible. This enables the IVA to perform better on paraphrases
+
+Aforesaid guidelines are illustrated in the image of Entity Patterns below - 
+
+![EP_9](assets/EP_9.png)
+
+**How do ENTITY PATTERNS work?**
+
+When the entity patterns are defined, the IVA is trained on both the tagged term and the context in which the term is used. This enables the IVA to calculate a confidence score on every User Utterance, on how likely a word or phrase is going to be a value of an entity. 
+
+- When a User Utterance is received, the IVA looks for the context of the sentence in which the entity is mentioned to detect.
+
+![EP_10](assets/EP_10.png)
+
+#### **Troubleshooting** ####
+
+**Entity Detection Failure - Case 1**
+
+The IVA should have detected an entity in a particular User Utterance,  but it didn't detect the same. Following steps can be taken to fix the same - 
+
+Add that User Utterance to the Entity Patterns, ensuring that for a particular intent, 10 entity patterns are provided.
+
+**Example** - Let's say the following User Utterance failed to get detected - 
+
+![EP_11](assets/EP_11.png)
+
+Add variations to the Entity Patterns as shown below. They are variations of the Buy intent in 10 different forms - 
+
+![EP_12](assets/EP_12.png)
+
+The IVA has been trained again after adding 10 variations and Entity Pattern has been detected.
+
+![EP_13](assets/EP_13.png)
+
+**Case 2 - False Detection**
+
+This is a case where the IVA is detecting wrong phrases as an entity value. Illustration in the image below - 
+
+![EP_14](assets/EP_14.png)
+
+To fix the same, some Negative Variations without tagging the entity value have to be added to the Entity Patterns section, as shown in the image below. They communicate those cases to the IVA where detection need not occur.
+
+![EP_15](assets/EP_15.png)
+
+Below is the case where the detection stopped once the Negative Variations were added to the Entity Patterns. Once the IVA is trained after adding Negative Variations, the detection doesn’t occur.
+
+![EP_16](assets/EP_16.png)
+
+### **Node Entity Filter**
+
+**What is the feature?**
+
+The *Node-Entity Filter is the property of the Node-Entity combination*. The filter **MAY** come into picture **after** the ML Intent Detection algorithms have shortlisted NODES as per the User Utterance **and** a decision is being made on which is the perfect NODE to respond to the User Utterance.
+
+The Node-Entity Filter MAY cause a NODE to be removed from the above shortlist of NODES. But it can’t get a particular NODE added to the shortlisted NODES, if Intent Detection algorithms haven’t found such a NODE suitable. It is shown in subsequent sections below.
+
+**When to Use?**
+
+1. When a Bot Builder wants a NODE to be shortlisted for response only when a specific entity value is present in a particular User Utterance.
+
+2. When a Bot Builder wants to set a particular entity value as default when a User arrives at a particular node.
+
+**How to Use?** - Below is a snapshot from the dictionary of the sample entity demo_city_entity_filter which has been used to illustrate this feature.
+
+![NEF_1](assets/NEF_1.png)
+
+The **Node-Entity Filter** can be added by clicking the “**filter**” icon shown in the black circle in the  below image.
+
+![NEF_2](assets/NEF_2.png)
+
+Once the icon is clicked, a dialog box appears where the values can be set. The entity value has to be entered in the **“Add a new word”** section. Press Enter to save the filter after entering the value.
+
+![NEF_3](assets/NEF_3.png)
+
+Please note that **“ENTITY VALUES” have to be added and not variants** as shown in the images below for the same. Here, “HYD” is added as a filter value. **HYD in this case is an entity value and not an entity variant**.
+
+![NEF_4](assets/NEF_4.png)
+
+Once a filter has been added, the “**filter**” icon appears blue as shown in the image below.
+
+![NEF_5](assets/NEF_5.png)
+
+Let’s take a few illustrations as shown in images below - An **Entity Filter Demo Node** has been created with User Says as shown below. The **demo_city_filter_node** entity has been added with **filter HYD** to the same node.
+
+![NEF_6](assets/NEF_6.png)
+
+**Illustration 1** - As shown in the image below, When an **entity variant (Mumbai)** was present in the User Utterance, but was not present in the Node-Entity Filter, the **Entity Filter Demo Node was not shortlisted** and hence the Bot Broke. 
+
+As per Intent Detection ML Algorithm, Entity Filter Demo Node was shortlisted for responding, but since Node-Entity Filter was set to HYD, the NODE was rejected as a candidate while responding.
+
+![NEF_7](assets/NEF_7.png)
+
+**Illustration 2** - As shown in the image below, when the **entity variant (Hyderabad)** corresponding to entity value **HYD** was present in the User Utterance and in the Node-Entity Filter as well, the Entity Filter Demo Node was shortlisted. Hence, the Bot responded from that node. 
+
+This is how normal Intent Detection works, with no impact of Node-Entity filter coming into play.
+
+![NEF_8](assets/NEF_8.png)
+
+Illustration 1 and 2 can be compared to get a complete understanding of the Node-Entity Filter feature.
+
+**Illustration 3** - Here’s another illustration on what Node-Entity Filter **doesn’t do**. 
+
+- When the entity variant corresponding to entity value HYD was present in the User Utterance but the NODE Entity Filter Demo Node was not an appropriate node for response as per the ML Intent Detection Algorithms, that particular node was not shortlisted for responding.
+
+Another more appropriate node was chosen to respond as shown below.
+
+![NEF_9](assets/NEF_9.png)
+
+But when **ENTITY FILTER DEMO NODE** was the correct candidate as per the Intent Detection ML Algorithm, then that NODE was shortlisted and a response was sent from that Node.
+
+![NEF_10](assets/NEF_10.png)
+
+**Illustration 4** - Below image shows a case when User Utterance had no mention of any entity value. User Utterance matched the **Entity Filter Demo Node** through ML Intent Detection Algorithms. However, when the User reached that NODE, the **Node-Entity Filter** was set as default value for the **demo_city_filter_node entity**. Please notice that no filtering is applied in such a scenario.
+
+![NEF_11](assets/NEF_11.png)
+
+**Illustration 5** - If there are multiple values present in the filter list as shown in the image below, the **most recently added value** would be set as default for that entity, which is BOM in the below illustrated case.
+
+![NEF_12](assets/NEF_12.png)
 
 **How does it work?**
 
-1. Go to the `Entity Patterns` section of the entity,
-2.  Add a user says variation and tag mentions of your entity by highlighting the phrases and selecting "Add Tag"
+For understanding, Let’s take the above entity **demo_city_entity_filter**. It’s values are DEL, HYD, MAD, BOM and **HYD** has been set as a Node-Entity Filter.
 
-![Free-text Entity - Add Tag](assets/bot-builder-user-says/free_text_entity_add_tag.png)
+If an entity value HYD is set as a Node-Entity Filter, then that NODE will be eligible to be shortlisted only if 2 cases mentioned below occur -  
 
-3. For <a href="#negative-examples">Negative examples</a> (See Guidelines) i.e. examples with no entities in them  don't tag anything.
-4. After you are done adding/updating variations, please Train the bot.
+**1.** When **variants of HYD** from the entity dictionary are present in the User Utterance.
 
-At run time, model evaluates terms based on the context in which they are used in the sentence only. If the structure of a user says that mentions the term matches the structure of an intent user example in which a mention is tagged, then the model interprets the term to be a mention of that entity type. 
+**As a corollary**, it can be said that if entity demo_city_entity_filter is added to a NODE with HYD Node-Entity Filter, and any other entity variant of demo_city_entity_filter is present in User Utterance like BOM, then that particular NODE will not be shortlisted to respond. It’s shown in **Illustration 1** above.
 
-For example, the user input might include the utterance, **‘Play matrix reloaded on Hotstar’**. Due to the similarity of the structure of this sentence to the user example that you tagged (**Play harry potter on Hotstar**), model recognises **‘matrix reloaded’** as a **content** entity mention.
+**2.** When **no entity value** corresponding to the entity **demo_city_entity_filter** is present in the User Utterance.
 
-When a context based entity model is used for an entity, model does not look for exact text or pattern matches for the entity in the user input, but focuses instead on the context of the sentence in which the entity is mentioned.
+- There is an additional impact in this use-case. When a User Utterance contains no entity value for **demo_city_entity_filter** entity and the User Utterance selects a NODE to respond where a Node-Entity filter is set, the Bot will make the value of entity **demo_city_entity_filter** default to that value for which filter has been set. It’s shown in **Illustration 4 and 5 above**.
 
-The entities that are tagged in the ‘Entity Patterns’, get auto-tagged in the user says section of the node.
+**Note -** 
 
-![Free-text Entity Auto Tag](assets/bot-builder-user-says/free_text_entity_usersays.png)
+1. There is no deterministic rule or an assurance that whenever a User Utterance contains a particular entity variant which is a Node-Entity Filter at a NODE, then that NODE will be automatically chosen to respond irrespective of the Utterance. It’s shown in Illustration 3 above.
 
-In the screenshot above, the phrases with a green underline are entity values of different entities added on the node. You can highlight the phrase and see which entity was detected for the phrase.
+The response to the User will still be from a Node which has Highest Confidence score as per the Intent detection Algorithm. The Node-Entity Filter only removes a particular NODE from the shortlist of candidate nodes.
 
-If you choose to define entity values by using entity patterns, then you should follow the following guidelines to ensure better performance.
+2. **LIMITATION** - The Node-Entity Filter works only in cases where the Entity is either a **“Words or Phrases”** or a **Regex Type** and the entity should not return a dictionary, but only a specific value. For “Words or Phrases” entities, the value entered in Node-Entity Filter is **case sensitive** as well.
 
-#### **Guidelines for adding Entity Patterns variations**
+3. Say, there are 2 entities having Node-entity Filter on a particular NODE, then the NODE will become eligible for being shortlisted only if 
+        a. The User Utterance has no entity values, or
+        b. The User Utterance has both the entity values on which filter has been applied.
 
-There are two things needed for training a good model -
 
- **Patterns (User utterances)** - We recommend a minimum of 10 sentences.
-Examples  - **grocery_item**: `I want to buy apples`,  `I need to purchase apples.` 
-
-**Dictionary** - A set of examples for each entity . We recommend a minimum of 10 examples.
-Examples - **grocery_item**: `Guava juice`, `apples`, `ashirwaad atta`
-
-##### **Patterns**
-
-1. Use longer sentences whenever possible. This enables model to perform better on paraphrases. 
-    
-    Examples - 
-    
-- `Tell me apple price on bigbasket` instead of `apple price on bigbasket`
-    - `What is the price of apple today?`  instead of `price of apple`
-    
-2. Ensure variety in usage of synonyms especially verbs.
-
-    Examples -  
-
-    - If `I want to buy apples` is already present, `I need to purchase apples` is better than  `i want to purchase apples`.
-
-3. Vary the position of the entity across sentences in training data. This prevents the model from getting biased towards a particular position.
-
-    Examples -  
-
-    - I would like 2 packets of **cow milk**  - Entity mention in the end
-    - Help me purchase some **bananas** from that shop  - Entity mention in the middle
-
-4. If the entity values can vary in length in number of words, then add few variations each for different number of words
-
-     Examples - 
-
-    - Add **shuddha ashirwad atta** to my cart - (3 words)
-    - Add **bananas** to my bag - (1 word)
-
-5. Avoid spelling errors.
-
-6. Ensure each different type of context has minimum 10 variations.
-
-    For example in *Grocery Shopping*, shopping items can be mentioned in the context of "buy" intent, in such case you entity patterns should have variations that are similar to `I want to buy apples` .
-
-    But if context expands to say "information" intent ( E.g. "Tell me about apples") and you want the entity to pick up items in such cases, then add at least 10 more variations like  `price of butter` or `What is the price of apple on grofers?`
-
-##### **Dictionary**
-
-List of variations entered in the `Dictionary` tab of the entity are used to automatically multiply data while training. This helps in making the model more robust to different types of values, while reducing the effort of the bot builder.
-
-E.g. If you have the following training examples.
-
-| Patterns                                     | **grocery_item** |
-| -------------------------------------------- | ---------------- |
-| I want to buy an apple from grofers          | apple            |
-| Help me purchase some bananas from that shop | bananas          |
-| I would like 2 packets of cow milk           | cow milk         |
-
-Then entity examples for this data would be
-
-|GROCERY_ITEM           |
-|-----------------------|
-|Guava juice            |
-|Shuddha ashirwad atta  |
-|Pure cow ghee          |
-|Cadbury dairy milk silk|
-|Grape wine             |
-
-As before, if possible, add entity values of variable lengths. For example - Guava juice (2 words), Cadbury dairy milk silk (4 words)  
-
-#### Troubleshooting
-
-**1. Entity Detection Failure** - Bot should have detected entity but it didn't
-
-1. Add that data point to your Entity Patterns.
-2. Add some paraphrases of that data point.  
-
-Example: 
-
-Let's say your entity had following Patterns
-
-| Patterns      |
-|----------------------------------|
-| I want to eat **apple**          |
-| I am hungry. Need to have **banana** |
-| is **apple** good for health     |
-| how many calories in **icecream**? |
-| tell me **apple** price on bigbasket |
-
-And it failed on following query "Where can i buy **stuffed cheese paratha** from ?"
-
-To fix this, add this patterns to the entity and train the bot. After this, the bot should be able to extract entity from similar phrases like
-
-|                                              |
-| -------------------------------------------- |
-| where to buy **vanilla ice cream** from?     |
-| where to get **vanilla ice cream** from?     |
-| where can in buy **vanilla ice cream** from? |
-
-**2. False Detection Failure** - Bot is either not detecting entity or detecting the wrong phrases as entity.
-
-Example:
-
-"Show me Apple phones" and the bot is detecting "Apple" as a grocery item.
-
-To fix this, Enter such phrases in the Entity Patterns of your entity without tagging anything. Such examples with nothing highlighted in them are treated as **Negative examples** and the bot learns to not extract values in such contexts.
-
-### **Entity types and language support**
+### **Language Support for Different Entities**
 
 <table>
   <tr>

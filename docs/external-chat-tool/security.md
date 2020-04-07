@@ -150,5 +150,6 @@ POST /jwt/issue
 ```
 
  > Please ensure that the timestamp value is an ISO 8601 formatted string, for example `2019-05-13T12:34:56Z`.
+ > The time is expected to be in the UTC timezone. (As indicated by the *Z* in the timestamp string.)
 
 *We return HTTP error code `400 Bad Request`, to reject requests in which the timestamp falls outside the tolerance.*

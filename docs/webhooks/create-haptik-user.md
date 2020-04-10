@@ -46,7 +46,7 @@ Content-Type: application/json
   "email": "<EMAIL>",
   "name": "<NAME>",
   "language_code": "<LANGUAGE_CODE>",
-  "custom_data": "<CUSTOM_DATA FLAT JSON OBJECT>"
+  "custom_data": "<FLAT JSON OBJECT>"
 }
 ```
 
@@ -125,7 +125,12 @@ curl -X POST \
   -H 'Authorization: Bearer <TOKEN>' \
   -H 'client-id: <CLIENT_ID>' \
   -H 'Content-Type: application/json' \
-  -d '{"auth_id": "<AUTH_ID>", "name": "guest user", "language_code":"<LANGUAGE_CODE>"}'
+  -d '{"auth_id": "<AUTH_ID>", "name": "guest user", "language_code":"<LANGUAGE_CODE>",
+	"custom_data": {
+	"country": "India",
+  "city": "Mumbai",
+  "date_of_birth": "25-03-1985"
+	}}'
 ```
 ### Update User
 ```
@@ -134,5 +139,9 @@ curl -X PUT \
   -H 'Authorization: Bearer <TOKEN>' \
   -H 'client-id: <CLIENT_ID>' \
   -H 'Content-Type: application/json' \
-  -d '{"auth_id": "<AUTH_ID>", "name": "guest user", "language_code":"<LANGUAGE_CODE>"}'
+  -d '{"auth_id": "<AUTH_ID>", "name": "guest user", "language_code":"<LANGUAGE_CODE>""custom_data": {
+	"country": "India",
+  "city": "Mumbai",
+  "date_of_birth": "25-03-1985"
+	}}'
 ```

@@ -62,7 +62,7 @@ Content-Type: application/json
 - os version (optional) - OS version of where the user is coming from (Android, iOS, Windows etc.)
 - package name (optional)- An identifier to differentiate between different Apps on the device (WhatsApp or custom client app)
 - custom_data (optional) - Any additional information about the user _(which could not be captured by any of the above fields)_ should be added as a part of this _flat JSON structure_. <br/>
-Thus, additional information like _country_, _city_, _date of birth_, etc. which needs to be stored along with the user, should go here. As:
+Thus, additional information like _country_, _city_, _date of birth_, etc. which needs to be stored along with the user, should go here as:
 	```json
 	{
 		"country": "India",

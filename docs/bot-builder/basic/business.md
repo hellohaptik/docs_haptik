@@ -57,8 +57,7 @@ Business Name: This refers to the overarching topic of its conversational capabi
 
 ![ECT Flag](assets/Enable_ECT.png)
 
-Note: If any value other than athena is selected, one must request the ECT to register the required webhooks for the functionality to work.
-https://docs.haptik.ai/external-chat-tool/management-APIs
+> Note: If any value other than Haptik Agent Chat is selected, one must request the ECT to register the required webhooks for the functionality to work. For reference check this [link](https://docs.haptik.ai/external-chat-tool/management-APIs).
 
 - Enable Small Talk: Allows certain common phrases to be understood and replied to by the bot. Say, the user types “Hi” or “Good morning”, when Small Talk is enabled, the bot will greet the user and respond back with an apt greeting (ex: “Good afternoon” detecting time of the day). Know that the Small Talk module cannot be customized or changed
 

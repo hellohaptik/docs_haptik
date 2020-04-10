@@ -4,7 +4,7 @@ title: Upload Graph Nodes
 
 Graph nodes are like regular nodes also known as static node and follow the same principle of User Says,Bot Says and End Nodes to detect nodes, reply back to the user, update the chat status and also support the API Integrations.
 
-### Why do we need graph node uploader tool
+#### Why do we need graph node uploader tool
 To handle the scenarios where we need to create large number of nodes in one go we can use graph node uploader tool.
 
 #### How to Access Graph Node Uploader Tool
@@ -25,7 +25,7 @@ To handle the scenarios where we need to create large number of nodes in one go 
 
 3. answer(bot says): A node can have single or multiple bot says, to pass multiple bot says use `<m>` tag as delimiter
 
-4. api_integration_url: API Integration URL for the bot. It can be of two types.
+4. api_integration_url(optional): API Integration URL for the bot. It can be of two types.
 
     4.1 Absoulte URL: Absolute URLs contain more information than relative urls, as they also include the protocol (e.g http://xyz.com/get-products/ or https://xyz.com/get-products/) and the domain name.
 
@@ -41,7 +41,7 @@ To handle the scenarios where we need to create large number of nodes in one go 
 ![](assets/set_base_url_at_bot_level.gif)
 
 
-#### Error Cases
+#### Error Messages
 
 1. `Invalid Integration Url Provided` error msg will occur If we pass:
 
@@ -51,4 +51,4 @@ To handle the scenarios where we need to create large number of nodes in one go 
 
 2. `Node name is already used for a different node.` if duplicate node name provided in the sheet.
 
->Note: Node once get created can't be updated can only be updated from bot-builder.
+>Note: This node once get created through sheet can only be updated from bot-builder.

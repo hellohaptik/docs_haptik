@@ -128,7 +128,7 @@ curl -X POST \
   -d '{"auth_id": "<AUTH_ID>", "name": "guest user", "language_code":"<LANGUAGE_CODE>",
 	"custom_data": {
 	    "<key_1>": "<value_1>",
-      "<key_2>": "<value_2>"
+        "<key_2>": "<value_2>"
 	}}'
 ```
 ### Update User
@@ -141,6 +141,6 @@ curl -X PUT \
   -d '{"auth_id": "<AUTH_ID>", "name": "guest user", "language_code":"<LANGUAGE_CODE>",
 	"custom_data": {
 	    "<key_1>": "<value_1>",
-      "<key_2>": "<value_2>"
+        "<key_2>": "<value_2>"
 	}}'
 ```

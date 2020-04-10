@@ -1,4 +1,4 @@
----
+# New Document---
 title: How to create/update a Haptik User
 ---
 
@@ -45,7 +45,8 @@ Content-Type: application/json
   "mobile_no": "<MOBILE_NO>",
   "email": "<EMAIL>",
   "name": "<NAME>",
-  "language_code": "<LANGUAGE_CODE>"
+  "language_code": "<LANGUAGE_CODE>",
+  "custom_data": "<CUSTOM_DATA FLAT JSON OBJECT>"
 }
 ```
 
@@ -60,6 +61,38 @@ Content-Type: application/json
 - phone model (optional) - Phone model/type that the user is using
 - os version (optional) - OS version of where the user is coming from (Android, iOS, Windows etc.)
 - package name (optional)- An identifier to differentiate between different Apps on the device (WhatsApp or custom client app)
+- custom_data (optional) - Any additional information about the user _(which could not be captured by any of the above fields)_ should be added as a part of this _flat JSON structure_. <br/>
+Thus, additional information like _country_, _city_, _date of birth_, etc. which needs to be stored along with the user, should go here. As:
+	```json
+	{
+		"country": "India",
+    	"city": "Mumbai",
+    	"date_of_birth": "25-03-1985"
+	}
+	```
+
+	**Rules for valid `custom_data` value:**
+	- The value assigned to `custom_data` should always be a _valid JSON_.
+	- This value should always be a _flat JSON_. In other words, no property can have a JSON object assigned to it. <br/> For instance, the below JSON, though a valid JSON in itself, will still be considered as an _invalid_ `custom_data` value since the property, _address_, is assigned a JSON object:
+		```json
+        {
+	    	"date_of_birth": "12-8-1993",
+			"address": {
+				"country": "India",
+				"state": "Goa"
+			}
+		}
+        ```
+		The suggested way is to flatten the above JSON as:
+	    ```json
+        {
+			"date_of_birth": "12-8-1993",
+			"country": "India",
+			"state": "Goa"
+		}
+        ```
+
+
 
 ### Response
 

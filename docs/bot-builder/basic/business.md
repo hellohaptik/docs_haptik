@@ -55,7 +55,7 @@ Business Name: This refers to the overarching topic of its conversational capabi
 
 - Enable Human Assistance: Will make it possible for human chat assistants to intervene when bots in your Business break. This is helpful if you have a bot + human solution or a human-only solution. How we enable Human assistance on our Business manager, similarly, you'd be able to choose the Live agent chat tool for setup. `Haptik Live agent tool` and `Sprinklr` is supported as of now. 
 
-![ECT Flag](assets/Enable ECT.png)
+![ECT Flag](assets/Enable_ECT.png)
 
 - Enable Small Talk: Allows certain common phrases to be understood and replied to by the bot. Say, the user types “Hi” or “Good morning”, when Small Talk is enabled, the bot will greet the user and respond back with an apt greeting (ex: “Good afternoon” detecting time of the day). Know that the Small Talk module cannot be customized or changed
 

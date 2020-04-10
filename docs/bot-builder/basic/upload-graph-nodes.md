@@ -1,8 +1,8 @@
 ---
-title: Upload Graph Nodes
+title: Upload Graph Static Nodes
 ---
 
-Graph nodes are like regular nodes also known as static node and follow the same principle of User Says,Bot Says and End Nodes to detect nodes, reply back to the user, update the chat status and also support the API Integrations.
+Graph static nodes are nothing but the basic static nodes that we use in the graph of the bot builder tool and it follows the same principle of User Says,Bot Says and End Nodes to detect nodes, reply back to the user, update the chat status and also support the API Integrations.
 
 #### Why do we need graph node uploader tool
 To handle the scenarios where we need to create large number of nodes in one go we can use graph node uploader tool.

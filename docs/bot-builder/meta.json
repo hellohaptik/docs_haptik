@@ -31,7 +31,7 @@
 			"basic/bot-prompt-trigger",
 			"basic/general-responses",
 			"basic/forms",
-			"basic/upload-graph-nodes"
+			"basic/upload-graph-static-nodes"
 		],
 		"Integrations":[
 			"integrations/introduction",

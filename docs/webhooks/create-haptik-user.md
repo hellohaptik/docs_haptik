@@ -127,9 +127,8 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{"auth_id": "<AUTH_ID>", "name": "guest user", "language_code":"<LANGUAGE_CODE>",
 	"custom_data": {
-	"country": "India",
-  "city": "Mumbai",
-  "date_of_birth": "25-03-1985"
+	    "<key_1>": "<value_1>",
+        "<key_2>": "<value_2>"
 	}}'
 ```
 ### Update User
@@ -139,9 +138,9 @@ curl -X PUT \
   -H 'Authorization: Bearer <TOKEN>' \
   -H 'client-id: <CLIENT_ID>' \
   -H 'Content-Type: application/json' \
-  -d '{"auth_id": "<AUTH_ID>", "name": "guest user", "language_code":"<LANGUAGE_CODE>""custom_data": {
-	"country": "India",
-  "city": "Mumbai",
-  "date_of_birth": "25-03-1985"
+  -d '{"auth_id": "<AUTH_ID>", "name": "guest user", "language_code":"<LANGUAGE_CODE>",
+	"custom_data": {
+	    "<key_1>": "<value_1>",
+        "<key_2>": "<value_2>"
 	}}'
 ```

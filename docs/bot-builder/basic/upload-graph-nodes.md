@@ -1,6 +1,8 @@
 ---
-title: Upload Graph Static Nodes
+title: Upload Graph Nodes
 ---
+
+>Note: This only works for graph static nodes.
 
 Graph static nodes are nothing but the basic static nodes that we use in the graph of the bot builder tool and it follows the same principle of User Says,Bot Says and End Nodes to detect nodes, reply back to the user, update the chat status and also support the API Integrations.
 

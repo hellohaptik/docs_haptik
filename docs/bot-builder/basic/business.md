@@ -7,7 +7,7 @@ title: Business
     Everytime you create a bot, you have to create a new Business or assign an 
     existing Business to it.
 
-A Business is like a contact in your Whatsapp application. An user clicks on the particular contact (Business) and starts the conversation. Businesses are the broad buckets which connect with user’s specific category of intents. Say, an user chooses to interact with the Movies Business. And it has multiple bots from movie ticket booking bot to an offers bot and refunds/cancellations bot.
+A Business is like a contact in your Whatsapp application. A user clicks on the particular contact (Business) and starts the conversation. Businesses are the broad buckets which connect with user’s specific category of intents. Say, an user chooses to interact with the Movies Business. And it has multiple bots from movie ticket booking bot to an offers bot and refunds/cancellations bot.
 
     User always talks to a Business.
 

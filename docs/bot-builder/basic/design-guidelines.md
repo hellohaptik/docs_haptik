@@ -41,7 +41,7 @@ There are 2 guides in this document:
 
 6. **Ship, Analyze and Iterate**
 
-    Regardless of how rigorously you follow a design process and think from the user's point of view, there will always be something that you didn't about. The great thing about chat is that it is easy to collect feedback. Be ready after ship date to iterate and make changes once you get real data.
+    Regardless of how rigorously you follow a design process and think from the user's point of view, there will always be something that you didn't think about. The great thing about chat is that it is easy to collect feedback. Be ready after ship date to iterate and make changes once you get real data.
 
 # In-Depth Guide:
 

@@ -57,10 +57,7 @@ Once you have completed all the pre-requisite steps, you can go ahead with conne
 1) On the Platform Settings screen in Bot Builder go to Facebook and scroll down to the partner for which you want to make the connection.
 2) Enter the callback URL as fb/<any_identifier>. You can add any unique  identifier like the business name followed by some number.  
 3) Then enter the page access token and the app secret generated from the pre-requisites.
-4) Finally add a unique secret challenge key of your choice.   After adding the details turn the switch on to activate the connection.  
-
-![Bot Builder Messenger Setup](assets/platform_deployments_connection_Bot Builder.png)
-
+4) Finally add a unique secret challenge key of your choice.   After adding the details turn the switch on to activate the connection.
 5) Go back to the facebook developer application and scroll down to the webhook section.
 6) Click on Setup Webhook, then enter <domain_name>/fb/<any_identifier> in the callback url. The domain name will be provided by the Haptik team. Use the same identifier that you used in Bot Builder's callback url.
 7) Enter the secret_challenge_key previously setup in the verify token field.

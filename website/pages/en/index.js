@@ -66,7 +66,7 @@ module.exports = () => (
         },
         {
           title: 'Analytics',
-          description: 'Learn how to uncover hidden insghts in your chat data & communication',
+          description: 'Learn how to uncover hidden insights in your chat data & communication',
           ctaText: 'Get Started',
           ctaLink: '/bot-analytics'
         }

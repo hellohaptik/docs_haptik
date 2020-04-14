@@ -23,7 +23,7 @@ You can use the *Platform Deployment* sub-section of the Partner specific area i
 Using the Platform Settings you can easily connect your bot to any of the following external platforms:
 
 * Facebook Messenger
-* Twilio Whatsapp
+* WhatsApp
 * Jio
 * KooKoo
 * Webhook

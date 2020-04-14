@@ -2,9 +2,9 @@
 title: Upload Graph Nodes
 ---
 
->Note: This only works for graph static nodes.
+>Note: This only works for Static nodes.
 
-Graph static nodes are nothing but the basic static nodes that we use in the graph of the bot builder tool and it follows the same principle of User Says,Bot Says and End Nodes to detect nodes, reply back to the user, update the chat status and also support the API Integrations.
+Graph nodes are nothing but the basic static nodes that we use in the graph of the bot builder tool and it follows the same principle of User Says, Bot Says and End Nodes to detect nodes, reply back to the user, update the chat status and also support the API Integrations.
 
 #### Why do we need Graph Node uploader tool
 To handle the scenarios where we need to create large number of nodes in one go, we can use graph node uploader tool.
@@ -36,7 +36,7 @@ To handle the scenarios where we need to create large number of nodes in one go,
 5. api_key(optional): If API Integration URL requires secret/token key.
 ```
 
->Note: If you pass relative url under api_integration_url column then base url must be present at Bot level.
+>Note: If you pass Relative URL under api_integration_url column then Base URL must be present at Bot level.
 
 
 #### How to set base url at Bot Level
@@ -53,4 +53,4 @@ To handle the scenarios where we need to create large number of nodes in one go,
 
 2. `Node name is already used for a different node` if duplicate node name provided in the sheet.
 
->Note: Once Nodes get created from the CSV, it can be updated only from the UI of bot-builder.
+>Note: Once nodes get created from the CSV, it can be updated only from the UI of bot-builder.

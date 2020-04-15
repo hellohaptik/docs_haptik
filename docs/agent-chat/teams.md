@@ -124,3 +124,52 @@ You can filter the summary and agent metrics by *Custom time* or *Custom date*. 
 ![Hourly_Metrics](assets/teams_hourly_analytics.png)
 
 > Tip: You can choose hourly slots on a date in the Time picker to get the metric values for the chosen Date and Time.
+
+## Team analytics (Agent performance)
+
+1. **Total Chats** 
+    
+    All ongoing chats that started in the chosen time duration. This includes chats in waiting, queued as well the completed chats. The total of all chats in the selected time from the time-date picker.
+
+2. **Completed Chats** (Coming soon)
+    
+    If chat disposition exists for a chat that means this conversation was marked complete via the agent. Total count of chats which were completed by agents in this particular team will be shown here.
+
+3. **Abandoned Chats**
+    
+    For all conversations with claim_name not “gogo“ and user_message_count = 0 that means all chats wherein user gets an agent assigned but the user drops-off before sending a message would be counted as an abandoned chat.
+    
+> Consider another scenario when in Conversation A - User chats with Agent 1 and Agent 1 logs out after replying back to user’s query. In the same Conversation A, user comes back and sends a message, now say this chat goes to Agent 2 and the user doesn’t return. Now, if the chat goes to complete state, we consider this chat as abandoned for Agent 2.
+
+4. **Delayed Chats**
+    
+    This metric gets us a count of all instances where the `first_agent_response_time` is greater than 'Delay Time value' as setup from the Team settings i.e. the delay message time value.
+    
+5. **Time saved of agents**
+
+    All chats where claim_name = "gogo" and add up all the "agent_resolution_time", that would be the total amount of time, gogo (Haptik bot) was responding instead of an agent.
+    
+> Please do not confuse this with the RoI calculations shared by the Customer Success manager. 
+
+6. **Agent Online Time**
+
+    When agents are receiving chats, we total this time i.e. to give you a sense of agent's online activity. This is a useful input to understand agent productivity. 
+    
+7. **Avg. First Response Time** (FRT)
+
+    FRT is the first response time taken by the agent to send the first response to an end user. Only the chats whose first response was sent during the selected time range will be taken into account. Chats may have been created anytime (inside and outside the selected time range). Queue time is included in this metric. As we check this from first user message timestamp to the first agent response timestamp.
+    
+8. **Avg. Response Time** (RT)
+
+    RT calculation is the average time taken by the agent to respond in a chat to all messages and not just the first message. Only the chats whose responses were sent during the selected time range will be taken into account. Chats may have been created anytime (inside and outside the selected time range). For the user’s 2nd, 3rd and so on messages, the response time is simply the delta in the user message timestamp and the agent’s response timestamp. 
+    
+9. **Avg. Resolution Time**
+
+    This metric 'Average resolution time' should be the average time taken by the agent till there are no messages sent in a chat session. Only the chats that were completed during the selected time range will be taken into account. Chats may have been created anytime (inside and outside the selected time range). Resolution time is simply calculated from the user’s first message sent timestamp till the last agent/user message timestamp in a chat.
+    
+    
+## Managing Offline Hour chats
+
+In the Team settings, you can turn the toggle to complete all chats when no agent is online. But there can be an edge case as mentioned below. We need to understand when this edge case occurs, and assign a specific permission to all agents.
+
+A chat would get assigned first to the last agent who took this user's chat. Assuming the agent is available. We mandate agents to go offline before 30 minutes of their shift closure time, and then logout on shift end. This works in sync with our assignment so that logged out agents are not considered for assignment. For when agents are going offline, but not actively logging out, the chats that come in offline hours get assigned but the agents in reality are not available. We should use the `Inactivity_logout` permission that logs out agents on no activity for 15 minutes. 

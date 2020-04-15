@@ -115,6 +115,14 @@ Chats can be manually marked complete
 
 - Once the user marks the conversation appropriately. The conversation is removed from the agent's queue and the My Chats page.
 
+### Open Completed Chats
+
+On the business tab, and on Completed Chats, if agents click on the `Open Chat` option for any chat, then Completed chat assigns again automatically without user messages. Refer the green box in image below.
+
+  ![Open Chat](assets/Open_chat.png)
+  
+> This is the only case when you see completed chat assigned again automatically without user initiation.
+
 ## Enable manual closing of chat
 The above mentioned functionality is enabled by default for every business. To disable it, one have to edit the flag under Businesses > Business Settings > Show close chat button.
 

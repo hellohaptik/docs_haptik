@@ -117,6 +117,8 @@ Chats can be manually marked complete
 
 ### Open Completed Chats
 
+When Team Leads see chats that are wrongly completed, they can reopen these chats to make sure user queries are resolved. 
+
 On the business tab, and on Completed Chats, if agents click on the `Open Chat` option for any chat, then Completed chat assigns again automatically without user messages. Refer the green box in image below.
 
   ![Open Chat](assets/Open_chat.png)

@@ -129,7 +129,7 @@ You can filter the summary and agent metrics by *Custom time* or *Custom date*. 
 
 1. **Total Chats** 
     
-    All ongoing chats that started in the chosen time duration. This includes chats in waiting, queued as well the completed chats. The total of all chats in the selected time from the time-date picker.
+    All ongoing chats that started in the chosen time duration. The total of all current chats in the selected time range from the time-date picker will be the value here.
 
 2. **Completed Chats** (Coming soon)
     

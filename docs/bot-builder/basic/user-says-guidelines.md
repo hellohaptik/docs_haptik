@@ -209,23 +209,21 @@ So for our Shopping Node example, if you Double click on "buy" -> Select “Buy 
 
 ***In the Haptik V2.1 release***, modifications are being made to the Synonyms feature leading to change in the functionality of the feature and appearance on the bot builder.
 
-Addition of domain specific synonyms, detection and learning are becoming better. The changes will be - 
+Addition of domain specific synonyms, detection and learning are becoming better. The changes are - 
 
-1. The English Language Synonyms don’t need to be added separately. They have to be incorporated into the “User Says” section when variations are being added following the User Says Guidelines.
+1. The English Language Synonyms don’t need to be added separately. They have to be incorporated into the “User Says” section when variations are being added as per the User Says Guidelines.
 
 - The IVA will recognise english language synonyms from Language Training provided automatically by ML Algorithms. Hence, the **BLUE LINE below the words in "USER SAYS" section**, which used to display synonyms will stop appearing in the "User Says" section.
 
-2. The Domain specific synonyms can be added manually added by an engineer. ML team will provide a document containing steps to be followed by the engineer to add the same. Eventually, the UI on Bot Builder will also enable the same.
+2. The Domain specific synonyms can be added manually added by an Engineer. The document here containing the steps to be followed by the engineer to add the same.
 
-However, any domain specific synonym added by the bot builder, is identified by the bot, it will be visible in the logs while debugging it in Mogambo.
+However, any domain specific synonym added by the bot builder, if it's identified by the IVA, will be visible in the logs while debugging it the Bot Builder.
 
 Note - The English language synonyms should not be added to Domain specific synonyms, as it increases redundancy in the data.
 
-Illustration (Below image) - The word Amazing has a synonym Good. The Bot Builder has not added Good as synonym of Amazing in the Training Data, but Good got recognised as synonym of Amazing automatically, as seen in logs.
+An Illustration shown in the image below - The word Amazing has a synonym Good. The Bot Builder has not added Good as synonym of Amazing in the Training Data, but Good got recognised as synonym of Amazing automatically, as seen in logs.
 
-![Synonym List](assets/bot-builder-user-says/synonym_list.png)
-
-![Synonym List](assets/bot-builder-user-says/synonym_list.png)
+![SY_1](assets/SY_1.png)
 
 ### **Sample user says utterance**
 

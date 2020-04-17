@@ -207,6 +207,26 @@ So for our Shopping Node example, if you Double click on "buy" -> Select “Buy 
 
 > _**Common Mistake**: Ensure that you enable the correct set of synonyms in the user says as 1 word can have multiple meanings. For example, "speaker" could mean the electronic devices as well as a human is speaking at an event.*_
 
+***In the Haptik V2.1 release***, modifications are being made to the Synonyms feature leading to change in the functionality of the feature and appearance on the bot builder.
+
+Addition of domain specific synonyms, detection and learning are becoming better. The changes will be - 
+
+1. The English Language Synonyms don’t need to be added separately. They have to be incorporated into the “User Says” section when variations are being added following the User Says Guidelines.
+
+- The IVA will recognise english language synonyms from Language Training provided automatically by ML Algorithms. Hence, the **BLUE LINE below the words in "USER SAYS" section**, which used to display synonyms will stop appearing in the "User Says" section.
+
+2. The Domain specific synonyms can be added manually added by an engineer. ML team will provide a document containing steps to be followed by the engineer to add the same. Eventually, the UI on Bot Builder will also enable the same.
+
+However, any domain specific synonym added by the bot builder, is identified by the bot, it will be visible in the logs while debugging it in Mogambo.
+
+Note - The English language synonyms should not be added to Domain specific synonyms, as it increases redundancy in the data.
+
+Illustration (Below image) - The word Amazing has a synonym Good. The Bot Builder has not added Good as synonym of Amazing in the Training Data, but Good got recognised as synonym of Amazing automatically, as seen in logs.
+
+![Synonym List](assets/bot-builder-user-says/synonym_list.png)
+
+![Synonym List](assets/bot-builder-user-says/synonym_list.png)
+
 ### **Sample user says utterance**
 
 * **_Add_** variations of the sentence that can be used to perform the same action.

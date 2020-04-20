@@ -215,7 +215,7 @@ Addition of domain specific synonyms, detection and learning are becoming better
 
 2. The IVA will recognise english language synonyms from Language Training provided automatically by ML Algorithms. Hence, the BLUE LINE below the words in "USER SAYS" section, which used to display synonyms will stop appearing.
 
-3. The Domain specific synonyms can be added manually to the database by an engineer. Eventually, the interface on the Bot Builder will enable the same.
+3. The Domain specific synonyms can be added manually to the database by a Haptik engineer. Eventually, the interface on the Bot Builder will enable the same.
 
 4. If any domain specific synonym added by the bot builder is identified by the IVA, it will be visible in the logs section in the Bot Builder.
 

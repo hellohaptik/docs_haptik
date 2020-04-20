@@ -207,7 +207,7 @@ So for our Shopping Node example, if you Double click on "buy" -> Select “Buy 
 
 > _**Common Mistake**: Ensure that you enable the correct set of synonyms in the user says as 1 word can have multiple meanings. For example, "speaker" could mean the electronic devices as well as a human is speaking at an event.*_
 
-***For the IVAs made on the latest version, modifications are being made to the Synonyms feature leading to change in the functionality of the feature and appearance on the bot builder.
+***For the IVAs made on the latest version***, modifications are being made to the Synonyms feature leading to change in the functionality of the feature and appearance on the bot builder.
 
 Addition of domain specific synonyms, detection and learning are becoming better. The Changes are - 
 

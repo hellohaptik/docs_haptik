@@ -129,19 +129,21 @@ You can filter the summary and agent metrics by *Custom time* or *Custom date*. 
 
 1. **Total Chats** 
     
-    All ongoing chats that started in the chosen time duration. This includes chats in waiting, queued as well the completed chats. The total of all chats in the selected time from the time-date picker.
+    All chats received by the Team in a selected time period fall under this metric. This will include chats in waiting/pinned/queued for the chosen time duration as well as all completed chats by agents or bot or autocomplete during this period.
 
-2. **Completed Chats** (Coming soon)
+2. **Completed by agent** 
     
-    If chat disposition exists for a chat that means this conversation was marked complete via the agent. Total count of chats which were completed by agents in this particular team will be shown here.
+    Count all chats completed by agents (excluding the bot / gogo) during a selected time period for a team to get this metric. For example, if chat disposition exists for a chat that means this conversation was marked complete via the agent.
+    
+> Completed by agents = No of chats actually closed by that agent.
 
-3. **Abandoned Chats**
+3. **Abandoned by user**
     
     For all conversations with claim_name not “gogo“ and user_message_count = 0 that means all chats wherein user gets an agent assigned but the user drops-off before sending a message would be counted as an abandoned chat.
     
 > Consider another scenario when in Conversation A - User chats with Agent 1 and Agent 1 logs out after replying back to user’s query. In the same Conversation A, user comes back and sends a message, now say this chat goes to Agent 2 and the user doesn’t return. Now, if the chat goes to complete state, we consider this chat as abandoned for Agent 2.
 
-4. **Delayed Chats**
+4. **Delayed**
     
     This metric gets us a count of all instances where the `first_agent_response_time` is greater than 'Delay Time value' as setup from the Team settings i.e. the delay message time value.
     
@@ -167,7 +169,11 @@ You can filter the summary and agent metrics by *Custom time* or *Custom date*. 
 
     This metric 'Average resolution time' should be the average time taken by the agent till there are no messages sent in a chat session. Only the chats that were completed during the selected time range will be taken into account. Chats may have been created anytime (inside and outside the selected time range). Resolution time is simply calculated from the user’s first message sent timestamp till the last agent/user message timestamp in a chat.
     
+10. **Chats received**
+
+    For an agent, we count the number of chats pinned to them in a given time duration, and this total count would be shown as an agent statistic in the agent table on Team analytics section.
     
+   
 ## Managing Offline Hour chats
 
 In the Team settings, you can turn the toggle to complete all chats when no agent is online. But there can be an edge case as mentioned below. We need to understand when this edge case occurs, and assign a specific permission to all agents.

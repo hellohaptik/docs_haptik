@@ -135,7 +135,7 @@ You can filter the summary and agent metrics by *Custom time* or *Custom date*. 
     
     Count all chats completed by agents (excluding the bot / gogo) during a selected time period for a team to get this metric. For example, if chat disposition exists for a chat that means this conversation was marked complete via the agent.
     
-> Completed by agents = No of chats actually closed by that agent.
+> Completed by agent = No of chats actually closed by that agent.
 
 3. **Abandoned by user**
     

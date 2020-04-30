@@ -42,6 +42,8 @@ These features could be added to a client specific permission group, if requeste
 
 <!-- TODO: add a link to permission group editing here -->
 
+Agents can access user details on `My Chats` i.e. in the user_info section. A special permission `PERMISSION_ADMIN_USER_DETAILS_ON_CHAT_LINK` is needed for an agent to view information passed on user creation. Example of this would be when the agents have user's "Booking ID" in a hotel-booking IVA. We display this information to agents with the existing user_info section fields like Name, Email, Number, etc.
+
 ## How to Add Agents
 
 ### Step 1: Log in and select *Administrator*

@@ -60,7 +60,7 @@ module.exports = () => (
         },
         {
           title: 'Live Chat',
-          description: 'Live Chat or Agent Chat is used to strengthen customer support, drive CSAT when a chat transitions to Human agents. Manage capacity, learn how to prioritise chats with these resources & guides',
+          description: 'Agent Chat is used to strengthen customer support, drive CSAT when a chat transitions to Human agents. Manage capacity, learn how to prioritise chats with these resources & guides',
           ctaText: "Let's Begin",
           ctaLink: '/agent-chat'
         },

@@ -54,13 +54,13 @@ module.exports = () => (
         {
           title: 'Bot Builder',
           description:
-            'Everything required to get you from beginner to advanced in Bot Building & Development.',
+            'Everything required to get you from beginner to advanced in Bot Building & Development',
           ctaText: 'Learn More',
           ctaLink: '/bot-builder/basic/introduction'
         },
         {
           title: 'Live Chat',
-          description: 'Manage and plan your chat work with these resources & guides',
+          description: 'Live Chat or Agent Chat is used to strengthen customer support, drive CSAT when a chat transitions to Human agents. Manage capacity, learn how to prioritise chats with these resources & guides',
           ctaText: "Let's Begin",
           ctaLink: '/agent-chat'
         },

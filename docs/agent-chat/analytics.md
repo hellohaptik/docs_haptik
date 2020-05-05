@@ -4,6 +4,8 @@ title: Analytics
 
 ## Time Stats
 
+![Time_stats](assets/time_stats.png)
+
 1. **Avg. First Response Time** (FRT)
 
     FRT is the average of first response times taken by the agent to send the first response to end users. Only the chats whose first response was sent during the selected time range will be taken into account. Chats may have been created anytime (inside and outside the selected time range). Queue time is included in this metric. As we check this from first user message timestamp to the first agent response timestamp.
@@ -41,6 +43,8 @@ title: Analytics
     
 
 ## Overview
+
+![Overview](assets/overview.png)
 
 1. **Avg. User rating**
 
@@ -85,9 +89,14 @@ title: Analytics
 
     User rating here is same as defined above in Overview section. Just the change being, this metric is for the single agent. And the metric above is on a Team level.
 
-> Note that the User rating is calculated basis the last claim name for an agent. We have seen cases wherein the chat completes and then when user submits feedback, if the claim name has changed from the last agent to another agent, the feedback here will get assigned to this new agent. We will be taking a fix for this soon. As of now, we haven't accounted for this, as feedback was seen more at a conversation level. And for agents, feedback is a tertiary metric. The reason being the number of feedbacks submitted considered against the volume of daily chats is nominal. 
+> Note that the User rating is calculated basis the last claim name for an agent. We get cases wherein the chat completes and then when user submits feedback, if the claim name has changed from the last agent to another one, the feedback will get tagged to this new agent. Feedback metric is integral more at a conversation level. And for agents, feedback is a tertiary metric. The reason being the number of feedbacks submitted considered against the volume of daily chats is nominal. 
 
 6. **Agent Online Time**
 
     When agents are receiving chats, we total this time i.e. to give you a sense of agent's online activity. This is a useful input to understand agent productivity. 
+    
+![Online agents with no metrics](assets/no_ecm_agent.png)
+    
+> When agents are in online state and they have chats pinned, they would not get new chats, until they are below their concurrency limit. So, we could get cases wherein, we have agents online but they don't get new chats received and other metrics such as FRT, Resolution Time etc. are absent. This happens because the agent is not closing chats. 
+
     

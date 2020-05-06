@@ -1,10 +1,10 @@
 ---
-title: Disambiguation
+title: Did you mean? (Disambiguation)
 ---
 
 **What is the Feature?**
 
-As the word suggests, it aims to remove ambiguity. The feature triggers when the IVA is not fully confident on it’s intent detection amongst the intents that it has shortlisted based on User Utterances and the Training Data.
+As the word disambiguation suggests, it aims to remove ambiguity. The feature triggers when the IVA is not fully confident on it’s intent detection amongst the intents that it has shortlisted based on User Utterances and the Training Data.
 
 (Read Intent = Node)
 
@@ -48,13 +48,15 @@ The User can send 1, 2, 3 as a response, basis which we will detect the chosen i
 
 **How to set up Disambiguation?** - 
 
-The text that appears on the button on the UI is controlled at a node level through a node-wise copy. It can be set through the "**Disambiguate message**" flag in the **User Says** section. 
+The text that appears on the button on the UI is controlled at a node level through a node-wise copy. It can be set by adding the **Did you mean?** button text in the User Says section of either the static node which is marked as a start node or on the connection where dependent responses are there. 
 
-There is a **limit of 21 characters** on the User Says that can be marked as "Disambiguate message". The same has been done to ensure it can appear as a button on the Web SDK.
+**It is mandatory to add this text.**
 
-![DMG_4](assets/DMG_4.png)
+There is a **limit of 20 characters** on the "Did you mean?" button text.
 
-**Note**: If the **Disambiguate Message Flag** is not marked on node, the IVA picks the Node name field will be displayed on the button on the Chat UI. Therefore, it’s recommended that the **Disambiguate Message Flag** is always marked on the node in the User Says section.
+![DMG_4](assets/bot-builder-disambiguation/static-node-disambiguation.png)
+
+**Note**: The **Did you mean?** button text also acts as a User Says expression. This is the message that will be sent to the user, so it's critical that this message is similar to the user intent represented in the other user says.
 
 **Few rules incorporated** in the IVA to ensure a good user experience with Disambiguation - 
 
@@ -82,7 +84,7 @@ Below are the USER SAYS present in both the START nodes -
   
 Below are the USER SAYS present in both the DEPENDENT nodes - 
 
-![DMG_7](assets/DMG_7.png)
+![DMG_7](assets/bot-builder-disambiguation/dependent-disambiguation.png)
 
 **Disambiguation at work**
 

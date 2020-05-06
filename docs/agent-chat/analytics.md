@@ -23,17 +23,17 @@ title: Analytics
 
 ![Chat_stats](assets/chat_stats.png)
 
-1. **Total Chats received** 
+1. **Total Chats Received** 
     
     All ongoing chats that started in the chosen time duration. This includes chats in waiting, queued chats as well as completed chats. The total of all chats in the selected time duration from the time-date picker.
 
-2. **Completed by agents** 
+2. **Completed by Agents** 
     
     If chat disposition exists for a chat that means this conversation was marked complete via the agent. Total count of chats which were completed by agents in a particular team will be shown here.
     
 > Note that this completed metric count is available starting from 24 March 2020 only. 
 
-3. **Abandoned by user**
+3. **Abandoned by Users**
     
     This metric counts all conversations which transfer from an Haptik bot to a human agent and the user_message_count = 0 after the human agent is assigned. That means all chats wherein user gets an agent assigned but the user drops-off before sending a message would be counted as an abandoned chat.
     

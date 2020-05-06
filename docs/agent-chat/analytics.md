@@ -58,7 +58,7 @@ title: Analytics
 
 3. **Time saved of agents**
 
-    All chats where an Haptik bot (gogo) took part, we add up the "agent_resolution_time" for all such chats, that would be the total amount of time, Haptik bot (gogo) was responding to the end user, instead of an human agent.
+    All chats where an Haptik bot (gogo) took part, we add up the individual resolution time for all such chats, that would be the total amount of time, Haptik bot (gogo) was responding to the end user, instead of an human agent.
     
 > Please do not confuse this with the RoI calculations shared by the Customer Success manager. This time saved metric is an independent metric and bears no correlation with the RoI data shared by Customer Success.
 

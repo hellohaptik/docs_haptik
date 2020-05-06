@@ -35,7 +35,7 @@ title: Analytics
 
 3. **Abandoned by Users**
     
-    This metric counts all conversations which transfer from an Haptik bot to a human agent and the user_message_count = 0 after the human agent is assigned. That means all chats wherein user gets an agent assigned but the user drops-off before sending a message would be counted as an abandoned chat.
+    This metric counts all conversations which transfer from a Haptik bot to a human agent and the user did not send any message after the human agent was assigned. That means all chats wherein user gets an agent assigned but the user drops-off before sending a message would be counted as an abandoned chat.
     
 > Edge case scenario - Consider another scenario when in conversation A, user chats with agent 1 and this agent 1 logs out after replying back to user’s query. In the same conversation A, user comes back and sends a message, now say this chat goes to agent 2 and the user doesn’t return. Now, if the chat goes to the complete state, we consider this chat as abandoned for agent 2.
 

@@ -1,5 +1,5 @@
 ---
-title: Managing Bot State
+title: Managing Bot Context and State
 ---
 
 ### Context Retention in an IVA

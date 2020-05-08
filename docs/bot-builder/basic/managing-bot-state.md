@@ -71,7 +71,7 @@ This context variable should be used for storing permanent details about the use
 
 Data stored in this context variable will be saved at a conversation level for a given user. This means that the data will only be available till the conversation is active and is not marked as complete. Once the conversation is marked as complete, any data stored in this scope for the given user will be lost.
 
-This data is maintained on a redis server for a maximum of 3 hours after which it is permanently lost.
+This data is maintained on our server for a maximum of 3 hours after which it is permanently lost.
 
 This scope should be used for storing contextual information related to the current conversation that the user is having with the bot. Some examples of this are policy id or policy details that the user is exploring in the current conversation.
 

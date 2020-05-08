@@ -22,7 +22,7 @@ If the context has not been deleted as per the above 2 cases, the IVA can use th
 
 Illustration - Let’s say there is a conversation that ideally can get 4 levels deep as shown in the image below. It has a START node, a CHILD node, a Grand-Child node and a Great Grand-child Node with the Great Grand Child node being the END NODE.
 
-![image](assets/bot-builder-manage-state/Screenshot 2020-05-04 at 10.27.52 PM.png)
+![Data Scopes](assets/bot-builder-manage-state/Context.png)
 
 Let’s say the user starts the conversation from a Start Node ABOUT HAPTIK and then chooses an option to reach the child node FUNDING OF HAPTIK. At this point, if a user leaves the conversation, the IVA will retain the context for 2 hours since the no END NODE has not been encountered in the conversation, so far.
 

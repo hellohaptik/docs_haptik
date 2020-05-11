@@ -25,11 +25,11 @@ title: Analytics
 
 1. **Total Chats Received** 
     
-    All ongoing chats that started in the chosen time duration. This includes chats in waiting, queued chats as well as completed chats. The total of all chats in the selected time duration from the time-date picker.
+    All ongoing chats for a chosen Team view, that started in the selected time duration. This includes chats in waiting, queued chats and pinned chats for the Team in question. The total number of all chats received i.e. `first_message_time` in the selected time duration from the time-date picker.
 
 2. **Completed by Agents** 
     
-    If chat disposition exists for a chat that means this conversation was marked complete via the agent. Total count of chats which were completed by agents in a particular team will be shown here.
+    Count all chats that were closed by a human agent that means count all instances of manual clicks for closing a chat. Simply, total count of chats which were completed by agents in a particular team will be shown here.
     
 > Note that this completed metric count is available starting from 24 March 2020 only. 
 
@@ -58,9 +58,9 @@ title: Analytics
 
 3. **Time saved of agents**
 
-    All chats where an Haptik bot (gogo) took part, we add up the individual resolution time for all such chats, that would be the total amount of time, Haptik bot (gogo) was responding to the end user, instead of an human agent.
+    All chats where an Haptik bot (gogo) took part, we add up the individual resolution time for all such chats, that would be the total amount of time, Haptik bot (gogo) was responding to the end user, instead of an human agent. 
     
-> Please do not confuse this with the RoI calculations shared by the Customer Success manager. This time saved metric is an independent metric and bears no correlation with the RoI data shared by Customer Success.
+> This metric is calculated on the `business` level i.e. we show the "Time saved of agents" value totalled for all teams in a business (for the chosen Team). Since, most of our clients have one team per business, this apporach works. 
 
 
 ## Agent Statistics

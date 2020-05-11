@@ -54,7 +54,7 @@ title: Analytics
 
 2. **Total Number of agents**
 
-    The value here gives us the number of agents in a Team. Also note that an agent could be part of multiple teams. 
+    The value here gives us the number of agents, who received atleast a single chat in the Team. Only those agents who received any chat(s) are counted. Also note that an agent could be part of multiple teams. 
 
 3. **Time saved of agents**
 

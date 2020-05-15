@@ -99,7 +99,7 @@ Acceptable formats for phone number can be found [here](https://developers.faceb
 
 ## Sending a media HSM
 
-Other than text based HSMs to our Whatsapp end users, you can send Media HSMs as well. 
+Other than text based HSMs to our Whatsapp end users, you can send Media HSMs as well.
 
 Checkout the examples below:
 
@@ -133,7 +133,7 @@ How to use them:
 
 Well here is a simple structure of the message used for sending Media HSM with an Image.
 
-Example curl requests for Image: 
+Example curl requests for Image:
 
 ```
 curl -X POST \
@@ -178,7 +178,7 @@ curl -X POST \
 }'
 ```
 
-Example curl requests for Document: 
+Example curl requests for Document:
 
 ```
 curl -X POST \
@@ -225,7 +225,7 @@ curl -X POST \
 
 ```
 
-Example curl requests for Video: 
+Example curl requests for Video:
 
 ```
 curl -X POST \
@@ -271,9 +271,52 @@ curl -X POST \
 
 ```
 
-Note: The above structure is for reference only and will change based on the way we create HSM on Whatsapp Business Manager and for each media type. 
+Note: The above structure is for reference only and will change based on the way we create HSM on Whatsapp Business Manager and for each media type.
 
 > Only Images, PDF, MP3 and MP4 files are supported.
+
+
+## Adding buttons to HSM templates
+
+WhatsApp allows buttons to be added to the HSM template. The `Buttons` section is located at the bottom of the HSM page (assuming that you are either creating a new HSM or editing an existing one). There are two broad categories of buttons that you can add to your template:
+
+1. Quick Reply
+2. Call To Action
+
+**Quick Reply:** <br/>
+A HSM template can have at the most 3 quick reply buttons. Quick Reply buttons as their name implies, are buttons which when tapped-on by the user, send the title of those buttons as a message from that user.
+
+_Steps to add Quick Reply buttons:_
+- In the `Buttons` section, click the dropdown which by default is set to `None` and choose `Quick Reply`
+- A new input field titled `Button Text` will appear
+- Enter the text which is to be shown in the Quick Reply
+- To add more buttons, click on `Add Another Button` and repeat the above step
+- Once you save your HSM template, this configuration gets stored along with it.
+
+
+**Call To Action:** <br/>
+A Call To Action button as the name implies, is a button which when clicked by the user would cause a certain action to be called or performed right on the user's device.
+
+Call To Action buttons are further divided into two types:-
+- Call Phone number
+- Visit Website
+
+_Steps to add Call To Action buttons:_
+- In the `Buttons` section, click the dropdown which by default is set to `None` and choose `Call To Action`.
+
+
+- `Call Phone Number`:
+    - This button takes a phone number with country code and text to display on the button as parameters and when sent to the user, this button on click will actually initiate a phone call to the said number.
+    - When `Call Phone Number` is selected in `Type of Action` you get the following columns adjacent to it viz. `Button Text`, `Country`, `Phone Number`.
+
+
+- `Visit Website`:
+    - This button takes a website URL and text to display on the button as parameters and when sent to the user, this button on click will actually launch the website in the user's phone.
+    - When `Visit Website` is selected in `Type of Action` you get the following columns adjacent to it viz. `Button Text`, `URL Type`, `Website URL`.
+    - `URL Type` is a drop down in itself which has two options viz. `Static` and `Dynamic`
+    - A `Static` URL is self explanatory. It is basically a hardcoded website URL.
+    - A `Dynamic` URL is a URL that will have a parameter which will be suffixed to it to form the final URL. <br/> For example, if the URL entered for Dynamic field is `https://<sitedomain>.com`, then while sending HSM, a paramter will have to be sent which will be suffixed to this URL. Thus, if you send the parameter as `1234` then when the user receives this HSM and clicks on this button, the URL launched would be `https://<sitedomain>.com/1234`.
+    - Do note that sending the parameter for `Dynamic` URL in the HSM sending request is mandatory.
 
 ## FAQs
 

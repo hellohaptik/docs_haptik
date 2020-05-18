@@ -299,6 +299,7 @@ _Steps to add Quick Reply buttons:_
 
 - ![Quick Reply buttons in users Whatsapp Messenger](assets/hsm_buttons/whatsapp_quick-replies.jpg) <br/> _Quick Reply buttons in users Whatsapp Messenger_
 
+<br/>
 
 **Call To Action:** <br/>
 A Call To Action button as the name implies, is a button which when clicked by the user would cause a certain action to be called or performed right on the user's device.

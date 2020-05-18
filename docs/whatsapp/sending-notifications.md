@@ -284,7 +284,7 @@ WhatsApp allows buttons to be added to the HSM template. The `Buttons` section i
 2. Call To Action
 
 **Quick Reply:** <br/>
-A HSM template can have at the most 3 quick reply buttons. Quick Reply buttons as their name implies, are buttons which when tapped-on by the user, send the title of those buttons as a message from that user.
+A HSM template can have at the most 3 quick reply buttons. Quick Reply buttons as their name implies, are buttons which when tapped-on by the user, send the title of those buttons as a message from that user. _(You can even provide a payload to override the message that gets sent back on button click. More on that later, in sending HSM Templates section)_
 
 _Steps to add Quick Reply buttons:_
 - In the `Buttons` section, click the dropdown which by default is set to `None` and choose `Quick Reply`
@@ -292,6 +292,12 @@ _Steps to add Quick Reply buttons:_
 - Enter the text which is to be shown in the Quick Reply
 - To add more buttons, click on `Add Another Button` and repeat the above step
 - Once you save your HSM template, this configuration gets stored along with it.
+
+
+- ![Quick Reply buttons in HSM template](assets/hsm_buttons/quick-replies.png) <br/> _Quick Reply buttons in HSM template builder_
+
+
+- ![Quick Reply buttons in users Whatsapp Messenger](assets/hsm_buttons/whatsapp_quick-replies.jpg) <br/> _Quick Reply buttons in users Whatsapp Messenger_
 
 
 **Call To Action:** <br/>
@@ -305,18 +311,116 @@ _Steps to add Call To Action buttons:_
 - In the `Buttons` section, click the dropdown which by default is set to `None` and choose `Call To Action`.
 
 
-- `Call Phone Number`:
+- _Call Phone Number_:
     - This button takes a phone number with country code and text to display on the button as parameters and when sent to the user, this button on click will actually initiate a phone call to the said number.
     - When `Call Phone Number` is selected in `Type of Action` you get the following columns adjacent to it viz. `Button Text`, `Country`, `Phone Number`.
 
 
-- `Visit Website`:
+- _Visit Website_:
     - This button takes a website URL and text to display on the button as parameters and when sent to the user, this button on click will actually launch the website in the user's phone.
     - When `Visit Website` is selected in `Type of Action` you get the following columns adjacent to it viz. `Button Text`, `URL Type`, `Website URL`.
     - `URL Type` is a drop down in itself which has two options viz. `Static` and `Dynamic`
     - A `Static` URL is self explanatory. It is basically a hardcoded website URL.
     - A `Dynamic` URL is a URL that will have a parameter which will be suffixed to it to form the final URL. <br/> For example, if the URL entered for Dynamic field is `https://<sitedomain>.com`, then while sending HSM, a paramter will have to be sent which will be suffixed to this URL. Thus, if you send the parameter as `1234` then when the user receives this HSM and clicks on this button, the URL launched would be `https://<sitedomain>.com/1234`.
     - Do note that sending the parameter for `Dynamic` URL in the HSM sending request is mandatory.
+
+
+- ![Call To Action buttons in HSM template](assets/hsm_buttons/call-to-action-button.png) <br/> _Call To Action buttons in HSM template builder_
+
+
+- ![Call To Action buttons in user's WhatsApp Messenger](assets/hsm_buttons/whatsapp_call-to-action.jpg) <br/> _Call To Action buttons in user's WhatsApp Messenger_
+
+
+## Sending HSMs with Buttons
+
+[Link to the official documentation.](https://developers.facebook.com/docs/whatsapp/api/messages/message-templates/interactive-message-templates)
+
+**Quick Reply:**
+
+- Sending a HSM template with Quick Replies is similar to sending any other HSM template.
+- The only difference is when you would like to send a payload with the template.
+- What is a _payload_ in Quick Reply?
+    - _payload_ is information you would like to send back to the Haptik API when a Quick Reply button is clicked.
+    - For instance, in our above example we have a template which sends two Quick Reply buttons viz, `Yes` and `No`.
+    - Let's say when the HSM is sent to the user, the button `Yes` is configured without any payload, but the button `No` has a _payload_ `No, I did not receive the order`.
+    - Now, inside the WhatsApp Messenger, if the user clicks on `Yes`, the reply sent to Haptik API will be `Yes`.
+    - However, if the user clicks on `No`, the reply sent back to Haptik API will be `No, I did not receive the order` i.e. the payload will be sent back.
+
+Sample CURL request for sending payload for Quick Reply. _(Note how index is used to target specific buttons)_
+
+```
+curl -X POST <base_url>/whatsapp/notification/v2/ \
+-H 'client-id: <client-id>' \
+-H 'Authorization: Bearer <token>' \
+-H 'Content-Type: application/json' \
+-d '{
+  "business_id": <ID of the business>,
+  "to": "<phone number>",
+  "type": "template",
+  "template": {
+    "namespace": "<from whatsapp dashboard>",
+    "name": "<name of the template>",
+    "language": {
+      "policy": "deterministic",
+      "code": "en"
+    },
+    "components": [
+      {
+        "type": "button",
+        "sub_type": "quick_reply",
+        "index": "1",
+        "parameters": [{
+          "type": "payload",
+          "payload": "No, I did not receive the order"
+        }]
+      }
+    ]
+  }
+}
+'
+```
+
+
+**Call To Action:**
+
+- Sending a HSM template with Call To Action buttons is similar to sending any other HSM template.
+- The only difference is when you would like to send a parameter to the dynamic URL.
+- Do note that the paramter sent to the dynamic URL should be a URL safe string, since it would be appended to the end of the base_URL provided in the HSM builder template _(Please refer to the earlier secitons for detailed explanation)_.
+
+
+Sample CURL request for sending parameter for dynamic URL. _(Note how index is used to target the dynamic URL button)_
+
+```
+curl -X POST <base_url>/whatsapp/notification/v2/ \
+-H 'client-id: <client-id>' \
+-H 'Authorization: Bearer <token>' \
+-H 'Content-Type: application/json' \
+-d '{
+  "business_id": <ID of the business>,
+  "to": "<phone number>",
+  "type": "template",
+  "template": {
+    "namespace": "<from whatsapp dashboard>",
+    "name": "<name of the template>",
+    "language": {
+      "policy": "deterministic",
+      "code": "en"
+    },
+    "components": [
+      {
+        "type": "button",
+        "sub_type": "url",
+        "index": "1",
+        "parameters": [{
+          "type": "text",
+          "text": "445566"
+        }]
+      }
+    ]
+  }
+}
+'
+```
 
 ## FAQs
 

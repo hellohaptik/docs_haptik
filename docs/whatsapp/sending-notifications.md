@@ -286,6 +286,10 @@ WhatsApp allows buttons to be added to the HSM template. The `Buttons` section i
 **Quick Reply:** <br/>
 A HSM template can have at the most 3 quick reply buttons. Quick Reply buttons as their name implies, are buttons which when tapped-on by the user, send the title of those buttons as a message from that user. _(You can even provide a payload to override the message that gets sent back on button click. More on that later, in sending HSM Templates section)_
 
+> Known limitations:
+- At most 3 quick reply Buttons
+- Text of Each button can be no more than 20 characters
+
 _Steps to add Quick Reply buttons:_
 - In the `Buttons` section, click the dropdown which by default is set to `None` and choose `Quick Reply`
 - A new input field titled `Button Text` will appear
@@ -307,6 +311,10 @@ A Call To Action button as the name implies, is a button which when clicked by t
 Call To Action buttons are further divided into two types:-
 - Call Phone number
 - Visit Website
+
+> Known limitations:
+- Max two buttons i.e. one of each type (Call Phone Number or Visit Website)
+- Text of Each button can be no more than 20 characters
 
 _Steps to add Call To Action buttons:_
 - In the `Buttons` section, click the dropdown which by default is set to `None` and choose `Call To Action`.
@@ -349,6 +357,8 @@ _Steps to add Call To Action buttons:_
 
 Sample CURL request for sending payload for Quick Reply. _(Note how index is used to target specific buttons)_
 
+`index`: _Zero based index_ to appropriately target the button for which you are sending the param. For instance, if you are sending the payload for your second button then the value of `index` would be `1`
+
 ```
 curl -X POST <base_url>/whatsapp/notification/v2/ \
 -H 'client-id: <client-id>' \
@@ -390,6 +400,8 @@ curl -X POST <base_url>/whatsapp/notification/v2/ \
 
 
 Sample CURL request for sending parameter for dynamic URL. _(Note how index is used to target the dynamic URL button)_
+
+`index`: _Zero based index_ to appropriately target the button for which you are sending the param. For instance, if you are sending the dynamic URL param for your second button then the value of `index` would be `1`
 
 ```
 curl -X POST <base_url>/whatsapp/notification/v2/ \

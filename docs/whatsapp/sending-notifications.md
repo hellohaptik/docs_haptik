@@ -331,7 +331,7 @@ _Steps to add Call To Action buttons:_
     - `URL Type` is a drop down in itself which has two options viz. `Static` and `Dynamic`
     - A `Static` URL is self explanatory. It is basically a hardcoded website URL.
     - A `Dynamic` URL is a URL that will have a parameter which will be suffixed to it to form the final URL. <br/> For example, if the URL entered for Dynamic field is `https://<sitedomain>.com`, then while sending HSM, a paramter will have to be sent which will be suffixed to this URL. Thus, if you send the parameter as `1234` then when the user receives this HSM and clicks on this button, the URL launched would be `https://<sitedomain>.com/1234`.
-    - Do note that sending the parameter for `Dynamic` URL in the HSM sending request is mandatory.
+    - Do note that sending the parameter for `Dynamic` URL in the HSM while sending request is mandatory.
 
 
 - ![Call To Action buttons in HSM template](assets/hsm_buttons/call-to-action-button.png) <br/> _Call To Action buttons in HSM template builder_

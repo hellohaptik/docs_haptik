@@ -284,7 +284,7 @@ WhatsApp allows buttons to be added to the HSM template. The `Buttons` section i
 2. Call To Action
 
 **Quick Reply:** <br/>
-A HSM template can have at the most 3 quick reply buttons. Quick Reply buttons as their name implies, are buttons which when tapped-on by the user, send the title of those buttons as a message from that user. _(You can even provide a payload to override the message that gets sent back on button click. More on that later, in sending HSM Templates section)_
+An HSM template can have at the most 3 quick reply buttons. Quick Reply buttons as their name implies, are buttons which when tapped-on by the user, send the title of those buttons as a message from that user. _(You can even provide a payload to override the message that gets sent back on button click. More on that later, in sending HSM Templates section)_
 
 > Known limitations:
 - At most 3 quick reply Buttons

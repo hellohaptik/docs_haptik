@@ -396,7 +396,7 @@ curl -X POST <base_url>/whatsapp/notification/v2/ \
 
 - Sending a HSM template with Call To Action buttons is similar to sending any other HSM template.
 - The only difference is when you would like to send a parameter to the dynamic URL.
-- Do note that the paramter sent to the dynamic URL should be a URL safe string, since it would be appended to the end of the base_URL provided in the HSM builder template _(Please refer to the earlier secitons for detailed explanation)_.
+- Do note that the paramter sent to the dynamic URL should be a URL safe string, since it would be appended at the end of the base_URL provided in the HSM builder template _(Please refer to the earlier sections for detailed explanation)_.
 
 
 Sample CURL request for sending parameter for dynamic URL. _(Note how index is used to target the dynamic URL button)_

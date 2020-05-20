@@ -287,6 +287,163 @@
 <blockquote>
 <p>Only Images, PDF, MP3 and MP4 files are supported.</p>
 </blockquote>
+<h2><a class="anchor" aria-hidden="true" id="adding-buttons-to-hsm-templates"></a><a href="#adding-buttons-to-hsm-templates" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Adding buttons to HSM templates</h2>
+<p>WhatsApp allows buttons to be added to the HSM template. The <code>Buttons</code> section is located at the bottom of the HSM page (assuming that you are either creating a new HSM or editing an existing one). There are two broad categories of buttons that you can add to your template:</p>
+<ol>
+<li>Quick Reply</li>
+<li>Call To Action</li>
+</ol>
+<p><strong>Quick Reply:</strong> <br/>
+An HSM template can have at the most 3 quick reply buttons. Quick Reply buttons as their name implies, are buttons which when tapped-on by the user, send the title of those buttons as a message from that user. <em>(You can even provide a payload to override the message that gets sent back on button click. More on that later, in sending HSM Templates section)</em></p>
+<blockquote>
+<p>Known limitations:</p>
+</blockquote>
+<ul>
+<li>At most 3 quick reply Buttons</li>
+<li>Text of Each button can be no more than 20 characters</li>
+</ul>
+<p><em>Steps to add Quick Reply buttons:</em></p>
+<ul>
+<li>In the <code>Buttons</code> section, click the dropdown which by default is set to <code>None</code> and choose <code>Quick Reply</code></li>
+<li>A new input field titled <code>Button Text</code> will appear</li>
+<li>Enter the text which is to be shown in the Quick Reply</li>
+<li>To add more buttons, click on <code>Add Another Button</code> and repeat the above step</li>
+<li>Once you save your HSM template, this configuration gets stored along with it.</li>
+</ul>
+<ul>
+<li><img src="/assets/hsm_buttons/quick-replies.png" alt="Quick Reply buttons in HSM template"> <br/> <em>Quick Reply buttons in HSM template builder</em></li>
+</ul>
+<ul>
+<li><img src="/assets/hsm_buttons/whatsapp_quick-replies.jpg" alt="Quick Reply buttons in users Whatsapp Messenger"> <br/> <em>Quick Reply buttons in users Whatsapp Messenger</em></li>
+</ul>
+<p><br/></p>
+<p><strong>Call To Action:</strong> <br/>
+A Call To Action button as the name implies, is a button which when clicked by the user would cause a certain action to be called or performed right on the user's device.</p>
+<p>Call To Action buttons are further divided into two types:-</p>
+<ul>
+<li>Call Phone number</li>
+<li>Visit Website</li>
+</ul>
+<blockquote>
+<p>Known limitations:</p>
+</blockquote>
+<ul>
+<li>Max two buttons i.e. one of each type (Call Phone Number or Visit Website)</li>
+<li>Text of Each button can be no more than 20 characters</li>
+</ul>
+<p><em>Steps to add Call To Action buttons:</em></p>
+<ul>
+<li>In the <code>Buttons</code> section, click the dropdown which by default is set to <code>None</code> and choose <code>Call To Action</code>.</li>
+</ul>
+<ul>
+<li><em>Call Phone Number</em>:
+<ul>
+<li>This button takes a phone number with country code and text to display on the button as parameters and when sent to the user, this button on click will actually initiate a phone call to the said number.</li>
+<li>When <code>Call Phone Number</code> is selected in <code>Type of Action</code> you get the following columns adjacent to it viz. <code>Button Text</code>, <code>Country</code>, <code>Phone Number</code>.</li>
+</ul></li>
+</ul>
+<ul>
+<li><em>Visit Website</em>:
+<ul>
+<li>This button takes a website URL and text to display on the button as parameters and when sent to the user, this button on click will actually launch the website in the user's phone.</li>
+<li>When <code>Visit Website</code> is selected in <code>Type of Action</code> you get the following columns adjacent to it viz. <code>Button Text</code>, <code>URL Type</code>, <code>Website URL</code>.</li>
+<li><code>URL Type</code> is a drop down in itself which has two options viz. <code>Static</code> and <code>Dynamic</code></li>
+<li>A <code>Static</code> URL is self explanatory. It is basically a hardcoded website URL.</li>
+<li>A <code>Dynamic</code> URL is a URL that will have a parameter which will be suffixed to it to form the final URL. <br/> For example, if the URL entered for Dynamic field is <code>https://&lt;sitedomain&gt;.com</code>, then while sending HSM, a paramter will have to be sent which will be suffixed to this URL. Thus, if you send the parameter as <code>1234</code> then when the user receives this HSM and clicks on this button, the URL launched would be <code>https://&lt;sitedomain&gt;.com/1234</code>.</li>
+<li>Do note that sending the parameter for <code>Dynamic</code> URL in the HSM while sending request is mandatory.</li>
+</ul></li>
+</ul>
+<ul>
+<li><img src="/assets/hsm_buttons/call-to-action-button.png" alt="Call To Action buttons in HSM template"> <br/> <em>Call To Action buttons in HSM template builder</em></li>
+</ul>
+<ul>
+<li><img src="/assets/hsm_buttons/whatsapp_call-to-action.jpg" alt="Call To Action buttons in user's WhatsApp Messenger"> <br/> <em>Call To Action buttons in user's WhatsApp Messenger</em></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="sending-hsms-with-buttons"></a><a href="#sending-hsms-with-buttons" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sending HSMs with Buttons</h2>
+<p><a href="https://developers.facebook.com/docs/whatsapp/api/messages/message-templates/interactive-message-templates">Link to the official documentation.</a></p>
+<p><strong>Quick Reply:</strong></p>
+<ul>
+<li>Sending a HSM template with Quick Replies is similar to sending any other HSM template.</li>
+<li>The only difference is when you would like to send a payload with the template.</li>
+<li>What is a <em>payload</em> in Quick Reply?
+<ul>
+<li><em>payload</em> is information you would like to send back to the Haptik API when a Quick Reply button is clicked.</li>
+<li>For instance, in our above example we have a template which sends two Quick Reply buttons viz, <code>Yes</code> and <code>No</code>.</li>
+<li>Let's say when the HSM is sent to the user, the button <code>Yes</code> is configured without any payload, but the button <code>No</code> has a <em>payload</em> <code>No, I did not receive the order</code>.</li>
+<li>Now, inside the WhatsApp Messenger, if the user clicks on <code>Yes</code>, the reply sent to Haptik API will be <code>Yes</code>.</li>
+<li>However, if the user clicks on <code>No</code>, the reply sent back to Haptik API will be <code>No, I did not receive the order</code> i.e. the payload will be sent back.</li>
+</ul></li>
+</ul>
+<p>Sample CURL request for sending payload for Quick Reply. <em>(Note how index is used to target specific buttons)</em></p>
+<p><code>index</code>: <em>Zero based index</em> to appropriately target the button for which you are sending the param. For instance, if you are sending the payload for your second button then the value of <code>index</code> would be <code>1</code></p>
+<pre><code class="hljs">curl -X POST &lt;base_url&gt;/whatsapp/notification/v2/ \
+-H <span class="hljs-string">'client-id: &lt;client-id&gt;'</span> \
+-H <span class="hljs-string">'Authorization: Bearer &lt;token&gt;'</span> \
+-H <span class="hljs-string">'Content-Type: application/json'</span> \
+-d <span class="hljs-string">'{
+  "</span>business_id<span class="hljs-string">": &lt;ID of the business&gt;,
+  "</span>to<span class="hljs-string">": "</span>&lt;phone number&gt;<span class="hljs-string">",
+  "</span><span class="hljs-built_in">type</span><span class="hljs-string">": "</span>template<span class="hljs-string">",
+  "</span>template<span class="hljs-string">": {
+    "</span>namespace<span class="hljs-string">": "</span>&lt;from whatsapp dashboard&gt;<span class="hljs-string">",
+    "</span>name<span class="hljs-string">": "</span>&lt;name of the template&gt;<span class="hljs-string">",
+    "</span>language<span class="hljs-string">": {
+      "</span>policy<span class="hljs-string">": "</span>deterministic<span class="hljs-string">",
+      "</span>code<span class="hljs-string">": "</span>en<span class="hljs-string">"
+    },
+    "</span>components<span class="hljs-string">": [
+      {
+        "</span><span class="hljs-built_in">type</span><span class="hljs-string">": "</span>button<span class="hljs-string">",
+        "</span>sub_type<span class="hljs-string">": "</span>quick_reply<span class="hljs-string">",
+        "</span>index<span class="hljs-string">": "</span><span class="hljs-number">1</span><span class="hljs-string">",
+        "</span>parameters<span class="hljs-string">": [{
+          "</span><span class="hljs-built_in">type</span><span class="hljs-string">": "</span>payload<span class="hljs-string">",
+          "</span>payload<span class="hljs-string">": "</span>No, I did not receive the order<span class="hljs-string">"
+        }]
+      }
+    ]
+  }
+}
+'</span>
+</code></pre>
+<p><strong>Call To Action:</strong></p>
+<ul>
+<li>Sending a HSM template with Call To Action buttons is similar to sending any other HSM template.</li>
+<li>The only difference is when you would like to send a parameter to the dynamic URL.</li>
+<li>Do note that the paramter sent to the dynamic URL should be a URL safe string, since it would be appended at the end of the base_URL provided in the HSM builder template <em>(Please refer to the earlier sections for detailed explanation)</em>.</li>
+</ul>
+<p>Sample CURL request for sending parameter for dynamic URL. <em>(Note how index is used to target the dynamic URL button)</em></p>
+<p><code>index</code>: <em>Zero based index</em> to appropriately target the button for which you are sending the param. For instance, if you are sending the dynamic URL param for your second button then the value of <code>index</code> would be <code>1</code></p>
+<pre><code class="hljs">curl -X POST &lt;base_url&gt;/whatsapp/notification/v2/ \
+-H <span class="hljs-string">'client-id: &lt;client-id&gt;'</span> \
+-H <span class="hljs-string">'Authorization: Bearer &lt;token&gt;'</span> \
+-H <span class="hljs-string">'Content-Type: application/json'</span> \
+-d <span class="hljs-string">'{
+  "</span>business_id<span class="hljs-string">": &lt;ID of the business&gt;,
+  "</span>to<span class="hljs-string">": "</span>&lt;phone number&gt;<span class="hljs-string">",
+  "</span><span class="hljs-built_in">type</span><span class="hljs-string">": "</span>template<span class="hljs-string">",
+  "</span>template<span class="hljs-string">": {
+    "</span>namespace<span class="hljs-string">": "</span>&lt;from whatsapp dashboard&gt;<span class="hljs-string">",
+    "</span>name<span class="hljs-string">": "</span>&lt;name of the template&gt;<span class="hljs-string">",
+    "</span>language<span class="hljs-string">": {
+      "</span>policy<span class="hljs-string">": "</span>deterministic<span class="hljs-string">",
+      "</span>code<span class="hljs-string">": "</span>en<span class="hljs-string">"
+    },
+    "</span>components<span class="hljs-string">": [
+      {
+        "</span><span class="hljs-built_in">type</span><span class="hljs-string">": "</span>button<span class="hljs-string">",
+        "</span>sub_type<span class="hljs-string">": "</span>url<span class="hljs-string">",
+        "</span>index<span class="hljs-string">": "</span><span class="hljs-number">1</span><span class="hljs-string">",
+        "</span>parameters<span class="hljs-string">": [{
+          "</span><span class="hljs-built_in">type</span><span class="hljs-string">": "</span>text<span class="hljs-string">",
+          "</span>text<span class="hljs-string">": "</span><span class="hljs-number">445566</span><span class="hljs-string">"
+        }]
+      }
+    ]
+  }
+}
+'</span>
+</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="faqs"></a><a href="#faqs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>FAQs</h2>
 <p>I keep getting <code>&quot;unable to verify contact details&quot;</code> in response even though the Mobile Number entered is a valid WhatsApp account.</p>
 <blockquote>
@@ -296,7 +453,7 @@
 <li>If you have not specified the Country code in the <code>to</code> field when sending the HSM and if it is different from the Country Code used when setting up the WhatsApp Number.</li>
 </ul>
 </blockquote>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 5/8/2020</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/whatsapp/whatsapp-language-settings"><span class="arrow-prev">← </span><span class="function-name-prevnext">WhatsApp Language Settings</span></a><a class="docs-next button" href="/whatsapp/getting-user-opt-ins"><span>Getting User Opt-Ins</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#highly-structured-message-hsm-templates">Highly Structured Message (HSM) Templates</a></li><li><a href="#setting-up-a-hsm">Setting up a HSM</a></li><li><a href="#sending-a-hsm-as-a-notification">Sending a HSM as a notification</a></li><li><a href="#sending-a-media-hsm">Sending a media HSM</a></li><li><a href="#faqs">FAQs</a></li></ul></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Bot Builder</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://hellohaptik.github.io/haptik-ios-framework" class="footer-column-link">iOS SDK</a><a href="https://hellohaptik.github.io/haptik-android-lib" class="footer-column-link">Android SDK</a><a href="https://hellohaptik.github.io/javascript_sdk" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Webhooks</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Chat Tool</a><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/contributing/index" class="footer-column-link">Contributing</a><a href="https://docs.haptik.ai/other/security" class="footer-column-link">Security</a><a href="https://forms.gle/Z2SowBSFpWLayXQz9" class="footer-column-link">Support</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2020 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 5/19/2020</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/whatsapp/whatsapp-language-settings"><span class="arrow-prev">← </span><span class="function-name-prevnext">WhatsApp Language Settings</span></a><a class="docs-next button" href="/whatsapp/getting-user-opt-ins"><span>Getting User Opt-Ins</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#highly-structured-message-hsm-templates">Highly Structured Message (HSM) Templates</a></li><li><a href="#setting-up-a-hsm">Setting up a HSM</a></li><li><a href="#sending-a-hsm-as-a-notification">Sending a HSM as a notification</a></li><li><a href="#sending-a-media-hsm">Sending a media HSM</a></li><li><a href="#adding-buttons-to-hsm-templates">Adding buttons to HSM templates</a></li><li><a href="#sending-hsms-with-buttons">Sending HSMs with Buttons</a></li><li><a href="#faqs">FAQs</a></li></ul></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Bot Builder</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://hellohaptik.github.io/haptik-ios-framework" class="footer-column-link">iOS SDK</a><a href="https://hellohaptik.github.io/haptik-android-lib" class="footer-column-link">Android SDK</a><a href="https://hellohaptik.github.io/javascript_sdk" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Webhooks</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Chat Tool</a><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/contributing/index" class="footer-column-link">Contributing</a><a href="https://docs.haptik.ai/other/security" class="footer-column-link">Security</a><a href="https://forms.gle/Z2SowBSFpWLayXQz9" class="footer-column-link">Support</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2020 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

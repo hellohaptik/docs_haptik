@@ -287,8 +287,8 @@ WhatsApp allows buttons to be added to the HSM template. The `Buttons` section i
 An HSM template can have at the most 3 quick reply buttons. Quick Reply buttons as their name implies, are buttons which when tapped-on by the user, send the title of those buttons as a message from that user. _(You can even provide a payload to override the message that gets sent back on button click. More on that later, in sending HSM Templates section)_
 
 > Known limitations:
-- At most 3 quick reply Buttons
-- Text of Each button can be no more than 20 characters
+> - At most 3 quick reply Buttons
+> - Text of Each button can be no more than 20 characters
 
 _Steps to add Quick Reply buttons:_
 - In the `Buttons` section, click the dropdown which by default is set to `None` and choose `Quick Reply`
@@ -298,7 +298,7 @@ _Steps to add Quick Reply buttons:_
 - Once you save your HSM template, this configuration gets stored along with it.
 
 
-- ![Quick Reply buttons in HSM template](assets/hsm_buttons/quick-replies.png) <br/> _Quick Reply buttons in HSM template builder_
+- ![Quick Reply buttons in HSM template](assets/hsm_buttons/quick-replies.png) <br/> _Quick Reply buttons in HSM template builder_ <br/><br/>
 
 
 - ![Quick Reply buttons in users Whatsapp Messenger](assets/hsm_buttons/whatsapp_quick-replies.jpg) <br/> _Quick Reply buttons in users Whatsapp Messenger_
@@ -313,8 +313,8 @@ Call To Action buttons are further divided into two types:-
 - Visit Website
 
 > Known limitations:
-- Max two buttons i.e. one of each type (Call Phone Number or Visit Website)
-- Text of Each button can be no more than 20 characters
+> - Max two buttons i.e. one of each type (Call Phone Number or Visit Website)
+> - Text of Each button can be no more than 20 characters
 
 _Steps to add Call To Action buttons:_
 - In the `Buttons` section, click the dropdown which by default is set to `None` and choose `Call To Action`.
@@ -334,7 +334,7 @@ _Steps to add Call To Action buttons:_
     - Do note that sending the parameter for `Dynamic` URL in the HSM while sending request is mandatory.
 
 
-- ![Call To Action buttons in HSM template](assets/hsm_buttons/call-to-action-button.png) <br/> _Call To Action buttons in HSM template builder_
+- ![Call To Action buttons in HSM template](assets/hsm_buttons/call-to-action-button.png) <br/> _Call To Action buttons in HSM template builder_ <br/><br/>
 
 
 - ![Call To Action buttons in user's WhatsApp Messenger](assets/hsm_buttons/whatsapp_call-to-action.jpg) <br/> _Call To Action buttons in user's WhatsApp Messenger_

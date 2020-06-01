@@ -124,7 +124,7 @@ Step 3 — The below page opens up and shows the list of intents. If you do not 
 
 ## How does Smalltalk function?
 
-The Dialogue Manager Algorithm can be read here. It explains how the SMALL TALK module is prioritized along with other modules to respond to the User Utterances.
+The [Dialogue Manager Algorithm](dialoguemanager.md) can be read. It explains how the SMALL TALK module is prioritized along with other modules to respond to the User Utterances.
 
 Some features of SMALL TALK module are illustrated below — 
 

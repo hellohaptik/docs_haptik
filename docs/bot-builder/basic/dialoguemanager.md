@@ -17,7 +17,7 @@ A new Chat can begin either at the beginning of a new session, or when a user co
 
 The FLOWCHART 1 below shows the order of prioritisation in responding to the User above scenario.
 
-![DM 1](/assets/DM 1.png)
+![DM 1](/assets/DM1.png)
 
 Some illustrations below depict the algorithm in action.
 
@@ -25,15 +25,15 @@ Some illustrations below depict the algorithm in action.
 
 FAQ Node -
 
-![DM 2](/assets/DM 2.png)
+![DM 2](/assets/DM2.png)
 
 Start Node -
 
-![DM 3](/assets/DM 3.png)
+![DM 3](/assets/DM3.png)
 
 When a new User utterance "Information on Founders of Haptik" is received to start the conversation, all the START NODES and FAQ NODES are collectively scanned by the IVA, as shown in FLOWCHART 1. The response is sent from FAQ NODE **Founders of Haptik** since it’s the best match. 
 
-![DM 4](/assets/DM 4.png)
+![DM 4](/assets/DM4.png)
 
 **NOTE** - Even though there is some degree of intent overlap with START NODE **About Haptik**, it was not given preference over FAQ NODE **Founders of Haptik**. Since START NODES and FAQ NODES are scanned collectively, FAQ NODE will be chosen for response if it’s a better match.
 
@@ -43,17 +43,17 @@ The two images below contain a START NODE **Tell me a joke** node and SMALL TALK
 
 Start Node -
 
-![DM 5](/assets/DM 5.png)
+![DM 5](/assets/DM5.png)
 
 Small talk -
 
-![DM 6](/assets/DM 6.png)
+![DM 6](/assets/DM6.png)
 
 When the User Utterance "Tell me a joke" was received, the IVA scanned for all (START NODES + FAQ NODES). Since a START NODE **Tell me a joke** node was present, it was selected for response and not the SMALL TALK intent **SHARE_JOKE**, even though the User Utterance was closely resembling the SHARE_JOKE Intent. 
 
 The same has been depicted in FLOWCHART 1.
 
-![DM 7](/assets/DM 7.png)
+![DM 7](/assets/DM7.png)
 
 **Note** - This illustrates that even though a User Utterance matches the SMALL TALK Module, a START NODE would be selected to respond to User Utterance if it’s an appropriate match.
 
@@ -61,17 +61,17 @@ The same has been depicted in FLOWCHART 1.
 
 The image below contains a SMALL TALK intent **FESTIVAL_INDEPENDENCE**.
 
-![DM 8](/assets/DM 8.png)
+![DM 8](/assets/DM8.png)
 
 When the User Utterance "Happy independence day" was received, the IVA scanned all the (START NODES + FAQ NODES) for a relevant response. Since it couldn’t find the same, it subsequently looked for a match in the SMALL TALK module. An intent matched in the SMALL TALK module and was selected to respond.
 
-![DM 9](/assets/DM 9.png)
+![DM 9](/assets/DM9.png)
 
 ## Section 2 - When the User has sent a message in between an existing conversation
 
 The algorithm is illustrated in the diagram below - 
 
-![DM 10](/assets/DM 10.png)
+![DM 10](/assets/DM10.png)
 
 Through various illustrations hereafter, the above algorithm has been shown in action.
 
@@ -79,13 +79,13 @@ Through various illustrations hereafter, the above algorithm has been shown in a
 
 The below images show the User Says on the FAQ NODE **Founders of Haptik**. Also shown is a DEPENDENT NODE **Haptik Location** connected to the **About Haptik** START NODE.
 
-![DM 11](/assets/DM 11.png)
+![DM 11](/assets/DM11.png)
 
-![DM 2](/assets/DM 2.png)
+![DM 2](/assets/DM2.png)
 
 As shown in the image below, the conversation started with User Utterance "About Haptik" and correctly got responded by **About Haptik** START NODE, as per FLOWCHART 1.
 
-![DM 12](/assets/DM 12.png)
+![DM 12](/assets/DM12.png)
 
 * When the second User Utterance “but who are founders of Haptik?” was received, the IVA scanned for (DEPENDENT NODES + FAQ NODES) collectively to pick the right NODE to respond. The FAQ NODE **Founders of Haptik** was selected for responding to the User Utterance, as shown in FLOWCHART 2.
 
@@ -97,7 +97,7 @@ As a side note, the capability of FAQ Nodes can be seen here as well. When the n
 
 The below images show the conversation flow from **Funding of Haptik** START NODE. It also shows the User Says on **Founders of Haptik** FAQ NODE.
 
-![DM 13](/assets/DM 13.png)
+![DM 13](/assets/DM13.png)
 
 ![DM 2](/assets/DM 2.png)
 
@@ -107,7 +107,7 @@ The next user utterance “I want to know more about it” was responded to by *
 
 The IVA scanned all (DEPENDENT NODES + FAQ NODES) as shown in FLOWCHART 2 and found **Tell me about funding** NODE the best DEPENDENT NODE to reply.
 
-![DM 14](/assets/DM 14.png)
+![DM 14](/assets/DM14.png)
 
 The next User Utterance asked about an FAQ "but who are the founders of Haptik?". The response was given from the FAQ NODE **Founders of Haptik**.
 
@@ -119,23 +119,23 @@ As a side note, the capability of FAQ Nodes can be seen here as well. When the n
 
 Below is the GRAPH NODE structure and the User Says present on both **Careers at Haptik** START NODE and **Funding of Haptik** START NODE.
 
-![DM 15](/assets/DM 15.png)
+![DM 15](/assets/DM15.png)
 
 Funding of Haptik Node -
 
-![DM 16](/assets/DM 16.png)
+![DM 16](/assets/DM16.png)
 
 Careers at Haptik -
 
-![DM 17](/assets/DM 17.png)
+![DM 17](/assets/DM17.png)
 
 The User utterance "funding of haptik" was responded from the **Funding of Haptik** START NODE. 
 
-![DM 18](/assets/DM 18.png)
+![DM 18](/assets/DM18.png)
 
 The User Utterance "Yes, I want to know about it" was responded to by "Tell me about funding" DEPENDENT NODE.
 
-![DM 19](/assets/DM 19.png)
+![DM 19](/assets/DM19.png)
 
 Next, when the User Utterance "are there any jobs available at haptik" was received, the IVA tried scanning all the (DEPENDENT NODES + FAQ NODES). When it didn’t find a relevant NODE to respond from, it scanned all START NODES again, as shown in FLOWCHART 2. Hence, **Careers at Haptik** START NODE was selected to respond.
 
@@ -143,13 +143,13 @@ Next, when the User Utterance "are there any jobs available at haptik" was recei
 
 Below images show the NODE structure and **Tell me a joke** START NODE.
 
-![DM 13](/assets/DM 13.png)
+![DM 13](/assets/DM13.png)
 
-![DM 5](/assets/DM 5.png)
+![DM 5](/assets/DM5.png)
 
 The User Utterance "funding of Haptik" was responded from the START NODE **Funding of Haptik**. Next, the User Utterance "Yes, I want to know about it" was responded to by **Tell me about funding** DEPENDENT NODE. 
 
-![DM 23](/assets/DM 23.png)
+![DM 23](/assets/DM23.png)
 
 However, when the User Utterance “tell me a joke” was received, the IVA couldn’t find suitable (DEPENDENT + FAQ) nodes for responding. Hence, it scanned all START NODES again and found **Tell me a joke** START NODE. 
 
@@ -161,17 +161,17 @@ However, in the User Utterance "ok bye", the IVA couldn’t find any (DEPENDENT 
 
 The below images show an entity being collected on the **Careers at Haptik** START NODE.
 
-![DM 20](/assets/DM 20.png)
+![DM 20](/assets/DM20.png)
 
 Below image shows a FAQ NODE **Founders of Haptik** and it’s User Says.
 
-![DM 2](/assets/DM 2.png)
+![DM 2](/assets/DM2.png)
 
 As shown in the image below, when the User Utterance “Is haptik hiring for any jobs?” is received, the **Careers at Haptik** START NODE is selected to respond to the query.
 
 When the next User Utterance “But tell me who are the founders of Haptik” was received, IVA collectively scanned for all the (DEPENDENT NODES + FAQ NODES) and the FAQ NODE **Founders of Haptik** was selected to respond.
 
-![DM 24](/assets/DM 24.png)
+![DM 24](/assets/DM24.png)
 
 Next, the User Utterance provided the entity value **Bangalore**, which the IVA had asked in the previous response. The IVA detected the entity value, contextually linked the response to the original **Careers at Haptik** journey and responded to the user.
 

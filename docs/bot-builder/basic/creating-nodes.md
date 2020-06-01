@@ -72,11 +72,11 @@ The output node also allows you to collect non mandatory entities that might be 
 
 You will create your nodes within a sub-story. To make a node, click the sub-story on the left-hand-side. Now, click on the 'Add Nodes' button just below your sub-story title, as depicted here:
 
-![img](assets/Nodes 1.png)
+![img](assets/Nodes1.png)
 
 This will open a sidebar, as shown below, on the left-hand side of the graph. You can drag and drop the node you want from this sidebar
 
-![img](assets/Nodes 2.png)
+![img](assets/Nodes2.png)
 
 Once you drag and drop any of the node type from the sidebar, a new sidebar is opened with the RHS of the ndoe type you selected. You will need to fill in some information about the node before saving it.
 
@@ -96,4 +96,4 @@ Click 'Save' when done.
 
 Post creation of a node, the node will be displayed as depicted below:
 
-![img](assets/Nodes 3.png)
+![img](assets/Nodes3.png)

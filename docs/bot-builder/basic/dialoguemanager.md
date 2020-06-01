@@ -99,7 +99,7 @@ The below images show the conversation flow from **Funding of Haptik** START NOD
 
 ![DM 13](/assets/DM13.png)
 
-![DM 2](/assets/DM 2.png)
+![DM 2](/assets/DM2.png)
 
 The conversation started with a User Utterance "Funding of Haptik". It was responded from **Funding of Haptik** START NODE.
 

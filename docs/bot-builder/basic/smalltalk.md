@@ -2,13 +2,11 @@
 title: Smalltalk
 ---
 
-Smalltalk is used to provide responses to casual conversation. This feature can greatly improve the user experience by making the IVAs more chatty and covering common questions that may not relate to your IVA's intents. 
+SMALL TALK is used to provide responses to casual conversation. This feature can greatly improve the user experience by making the IVAs more chatty and covering common questions that may not relate to your IVA's intents. 
 
-        This section adds ability to discover all intents added to the global copy of Smalltalk.
+## What is SMALL TALK?
 
-## What is Smalltalk?
-
-Other than the stories you create for your particular bot flows, `Smalltalk` will be a default story on every bot. 
+Other than the stories you create for your particular bot flows, `SMALL TALK` will be a default story on every bot. 
 
 It is the chit-chat module present on the Haptik Platform. It has been developed by Haptik after careful curation of 99 intents, from Haptik’s deep experience in conversational design and observed trends from over 3 billion interactions. The 99 intents are partly customizable, such that every IVA can choose to send its own custom reply to the User Utterance. However, the addition of New Intents or editing the User Utterances which cause SMALL TALK Intent Detection is done under the supervision of the Haptik’s Conversation Design Team.
 

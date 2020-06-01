@@ -97,21 +97,100 @@ As a side note, the capability of FAQ Nodes can be seen here as well. When the n
 
 The below images show the conversation flow from **Funding of Haptik** START NODE. It also shows the User Says on **Founders of Haptik** FAQ NODE.
 
+![DM 13](/assets/DM 13.png)
 
+![DM 2](/assets/DM 2.png)
 
+The conversation started with a User Utterance "Funding of Haptik". It was responded from **Funding of Haptik** START NODE.
 
+The next user utterance “I want to know more about it” was responded to by **Tell me about funding** DEPENDENT NODE. 
 
+The IVA scanned all (DEPENDENT NODES + FAQ NODES) as shown in FLOWCHART 2 and found **Tell me about funding** NODE the best DEPENDENT NODE to reply.
 
+![DM 14](/assets/DM 14.png)
 
+The next User Utterance asked about an FAQ "but who are the founders of Haptik?". The response was given from the FAQ NODE **Founders of Haptik**.
 
+Here, the IVA again scanned all (DEPENDENT NODES + FAQ NODES) and found **Founders of Haptik** as the best FAQ NODE to respond.
 
+As a side note, the capability of FAQ Nodes can be seen here as well. When the next User Utterance “ok investors?” was received, it was responded from the DEPENDENT NODE **Investors of Haptik** which was the last node in the original flow.
 
+**Illustration 3** - IVA scans for START NODES again if a relevant DEPENDENT NODE or FAQ NODE is not found.
 
+Below is the GRAPH NODE structure and the User Says present on both **Careers at Haptik** START NODE and **Funding of Haptik** START NODE.
 
+![DM 15](/assets/DM 15.png)
 
+Funding of Haptik Node -
 
+![DM 16](/assets/DM 16.png)
 
+Careers at Haptik -
 
+![DM 17](/assets/DM 17.png)
 
+The User utterance "funding of haptik" was responded from the **Funding of Haptik** START NODE. 
 
+![DM 18](/assets/DM 18.png)
 
+The User Utterance "Yes, I want to know about it" was responded to by "Tell me about funding" DEPENDENT NODE.
+
+![DM 19](/assets/DM 19.png)
+
+Next, when the User Utterance "are there any jobs available at haptik" was received, the IVA tried scanning all the (DEPENDENT NODES + FAQ NODES). When it didn’t find a relevant NODE to respond from, it scanned all START NODES again, as shown in FLOWCHART 2. Hence, **Careers at Haptik** START NODE was selected to respond.
+
+**Illustration 4** - In the middle of a conversation, IVA would prefer to search START NODES again, over SMALL TALK.
+
+Below images show the NODE structure and **Tell me a joke** START NODE.
+
+![DM 13](/assets/DM 13.png)
+
+![DM 5](/assets/DM 5.png)
+
+The User Utterance "funding of Haptik" was responded from the START NODE **Funding of Haptik**. Next, the User Utterance "Yes, I want to know about it" was responded to by **Tell me about funding** DEPENDENT NODE. 
+
+![DM 23](/assets/DM 23.png)
+
+However, when the User Utterance “tell me a joke” was received, the IVA couldn’t find suitable (DEPENDENT + FAQ) nodes for responding. Hence, it scanned all START NODES again and found **Tell me a joke** START NODE. 
+
+Even though the user Utterance “tell me a joke” had a suitable match in **SHARE_JOKE** SMALL TALK intent, a START NODE was given preference in responding.
+
+However, in the User Utterance "ok bye", the IVA couldn’t find any (DEPENDENT + FAQ) NODE or START NODES to reply from. Hence, SMALL TALK Intent **END_CHAT** was selected to respond.
+
+**Illustration 5** - FAQs DURING ENTITY COLLECTION - The User can ask FAQs in the process of collection of entities as well. Once the IVA asks for the entity value, the user may choose to ask an FAQ instead of giving entity value. The IVA while answering the FAQ, will retain the context of the conversation. If the User then provides entity value after getting response from the FAQ NODE, the IVA will contextually relate the entity to the original response and complete the flow.
+
+The below images show an entity being collected on the **Careers at Haptik** START NODE.
+
+![DM 20](/assets/DM 20.png)
+
+Below image shows a FAQ NODE **Founders of Haptik** and it’s User Says.
+
+![DM 2](/assets/DM 2.png)
+
+As shown in the image below, when the User Utterance “Is haptik hiring for any jobs?” is received, the **Careers at Haptik** START NODE is selected to respond to the query.
+
+When the next User Utterance “But tell me who are the founders of Haptik” was received, IVA collectively scanned for all the (DEPENDENT NODES + FAQ NODES) and the FAQ NODE **Founders of Haptik** was selected to respond.
+
+![DM 24](/assets/DM 24.png)
+
+Next, the User Utterance provided the entity value **Bangalore**, which the IVA had asked in the previous response. The IVA detected the entity value, contextually linked the response to the original **Careers at Haptik** journey and responded to the user.
+
+As a corollary, one more conclusion can be drawn here w.r.t the behaviour of the entity re-prompt. 
+
+> Tip: Entity re-prompt is a feature which nudges the user to enter the entity value, if it has not been given by the User when the IVA asked. 
+
+Coming back to the illustration, in the User Utterance “But tell me who are the founders of Haptik”, the entity value was not present. However, Entity re-prompt was not sent out and the scanning of (DEPENDENT NODES + FAQ NODE) was given priority over the entity re-prompt, as shown in the FLOWCHART 2.
+
+**NOTE** - The FAQ NODE should not be marked as an END NODE, if the IVA is expected to retain the context of the current conversation. If it’s marked as such, the IVA will close the conversation and drop context.
+
+## How are CODE NODES treated in the Dialogue Manager?
+
+Directly, CODE NODES are not used to respond to the User Utterance. Hence, they are not under the purview of Dialogue Manager. Dialogue Manager only ensures that the entities required by the START NODE connected to the CODE NODE are collected efficiently. 
+
+Once entities are collected, the CODE NODE is triggered. At this juncture, the Dialogue Manager comes out of the picture, and only comes into the picture when the next User Utterance arrives.
+
+## How are OUTPUT NODES treated in the Dialogue Manager?
+
+From the Dialogue Manager perspective, the illustrations mentioned in the above two sections cover the functionality of the OUTPUT NODE as well. 
+
+If an OUTPUT NODE has been marked as an END NODE, the next User Utterance will fall under SECTION 1 mentioned earlier. If the OUTPUT NODE has not been marked as an END NODE, the User Utterance will fall under SECTION 2.

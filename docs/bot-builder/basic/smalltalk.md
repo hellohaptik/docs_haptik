@@ -40,11 +40,11 @@ Step 3 — A Dialog box opens up. The “PERSONALITY” field present in the dia
 
 The personality selection changes the response that IVA gives to various SMALL TALK Intents. 
 
-**Formal Example - **
+**Formal Example -**
 
 ![Smalltalk 5](/assets/SmallTalk 5.png)
 
-**Funny Example - **
+**Funny Example -**
 
 ![Smalltalk 6](/assets/SmallTalk 6.png)
 

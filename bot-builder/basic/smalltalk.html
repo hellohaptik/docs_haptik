@@ -1,0 +1,177 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Smalltalk · Haptik Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Smalltalk is used to provide responses to casual conversation. This feature can greatly improve the user experience by making the IVAs more chatty and covering common questions that may not relate to your IVA&#x27;s intents. "/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Smalltalk · Haptik Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.haptik.ai/"/><meta property="og:description" content="Smalltalk is used to provide responses to casual conversation. This feature can greatly improve the user experience by making the IVAs more chatty and covering common questions that may not relate to your IVA&#x27;s intents. "/><meta property="og:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.haptik.ai/img/image_0.png"/><link rel="shortcut icon" href="/img/image_0.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-106563119-6', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="/js/index.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/image_0.png" alt="Haptik Docs"/><h2 class="headerTitleWithLogo">Haptik Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="/#tools" target="_self">Tools</a></li><li class=""><a href="/#integrations" target="_self">Integrations</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Resources</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/basic/introduction">Introduction</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/for-bot-builders">For Bot Builders</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Guides</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/basic/making-first-bot">Making Your First Bot</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/design-guidelines">Designing Chat Experiences</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/testing-bot">Testing your bot</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/multiple-languages">Multiple Languages</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/building-voice-bots">Building Voice bots</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/platforms-deployment">Platforms Deployment</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/managing-bot-state">Managing Bot Context and State</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Resources</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/basic/bot-hierarchy">Bot Hierarchy</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/business">Business</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/creating-story">Creating a Story</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/bot-builder/basic/smalltalk">Smalltalk</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/dialoguemanager">Dialogue Manager</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/story-templates">Story Templates</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/creating-nodes">Creating Nodes</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/connections">Connections</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/general-nodes">General Nodes</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/user-says-guidelines">User Says Guidelines</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/bot-says">Bot Says</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/chat-elements">Chat Elements</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/intent">Intent</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/disambiguation">Did you mean? (Disambiguation)</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/entities">Entities</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/bot-prompt-trigger">Bot Prompt Trigger</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/forms">Forms</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/upload-graph-nodes">Upload Graph Nodes</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Integrations</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/integrations/introduction">Introduction</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/integrations/integration-parameters">Integration Parameters</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/integrations/integrating-apis">Integrating APIs</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/integrations/integrating-custom-code">Integrating Custom Code</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/integrations/additional-apis">Additional APIs</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Advanced</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/advanced/integrating-webviews-into-sdk">Integrating Webviews</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/advanced/integrating-with-external-bot">Integrating with External Bot</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/advanced/development-guidelines">Bot Development Life Cycle</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/advanced/testing-guidelines">Testing Guidelines</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/advanced/debugging-guidelines">How to debug your bot?</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Smalltalk</h1></header><article><div><span><p>Smalltalk is used to provide responses to casual conversation. This feature can greatly improve the user experience by making the IVAs more chatty and covering common questions that may not relate to your IVA's intents.</p>
+<pre><code class="hljs">    This section adds ability to discover all intents added to the global copy of Smalltalk.
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="what-is-smalltalk"></a><a href="#what-is-smalltalk" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What is Smalltalk?</h2>
+<p>Other than the stories you create for your particular bot flows, <code>Smalltalk</code> will be a default story on every bot.</p>
+<p>It is the chit-chat module present on the Haptik Platform. It has been developed by Haptik after careful curation of 99 intents, from Haptik’s deep experience in conversational design and observed trends from over 3 billion interactions. The 99 intents are partly customizable, such that every IVA can choose to send its own custom reply to the User Utterance. However, the addition of New Intents or editing the User Utterances which cause SMALL TALK Intent Detection is done under the supervision of the Haptik’s Conversation Design Team.</p>
+<p>The below image shows a sample collection of Intents and respective utterances, along with the IVA response alongside.</p>
+<p>![Smalltalk 1](/assets/SmallTalk 1.png)</p>
+<p>The IVA response in terms of its Voice, Brand, and Content can be edited as per the personality of the IVA and Brand Guidelines.</p>
+<h2><a class="anchor" aria-hidden="true" id="changing-personality"></a><a href="#changing-personality" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Changing Personality</h2>
+<p>For all the 99 intents mentioned above, the Haptik platform provides a default response as per multiple personality types, namely — GENERIC, FORMAL, FUNNY, CASUAL. Amongst the 4 smalltalk personas, GENERIC is a semi-formal persona that works for most enterprises.</p>
+<p>These personas should be selected basis your IVA audience. That is as per your target user, you'd want the smalltalk responses to be casual or formal. This means the smalltalk bot response copies we created, are as per the different personas of bots. <strong>You choose the smalltalk persona while creating a bot.</strong></p>
+<p>The same can be configured as per the steps below.</p>
+<p>Step 1 — Locate the IVA amongst the list of IVAs on the Staging Environment</p>
+<p>![Smalltalk 2](/assets/SmallTalk 2.png)</p>
+<p>Step 2 — Click the ... icon as shown below</p>
+<p>![Smalltalk 3](/assets/SmallTalk 3.png)</p>
+<p>Step 3 — A Dialog box opens up. The “PERSONALITY” field present in the dialog box can be selected to change the personality of the SMALL TALK responses</p>
+<p>![Smalltalk 4](/assets/SmallTalk 4.png)</p>
+<p>The personality selection changes the response that IVA gives to various SMALL TALK Intents.</p>
+<p><strong>Formal Example -</strong></p>
+<p>![Smalltalk 5](/assets/SmallTalk 5.png)</p>
+<p><strong>Funny Example -</strong></p>
+<p>![Smalltalk 6](/assets/SmallTalk 6.png)</p>
+<h2><a class="anchor" aria-hidden="true" id="customizing-brand"></a><a href="#customizing-brand" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Customizing Brand</h2>
+<p>The SMALL TALK module provides flexibility at an IVA level to customize the Brand Name and details. The method of customization is shown in the steps below.</p>
+<p>Step 1 — Locate the IVA amongst the list of IVAs on the Staging Environment</p>
+<p>![Smalltalk 2](/assets/SmallTalk 2.png)</p>
+<p>Step 2 — Click the ... icon as shown below</p>
+<p>![Smalltalk 3](/assets/SmallTalk 3.png)</p>
+<p>Step 3 — A dialog box opens up which has a number of fields. The values of the fields can be configured per IVA</p>
+<p>![Smalltalk 4](/assets/SmallTalk 4.png)</p>
+<p>![Smalltalk 7](/assets/SmallTalk 7.png)</p>
+<p>The points mentioned below describe various fields and their usage. The SMALL TALK module picks up values of various tags from these fields to populate the content. The tags can be customized per IVA to give appropriate response to the User Utterance.</p>
+<ol>
+<li>Name of the Creator/Company — Populates the %company tag</li>
+<li>Bot Name (in chatflow) — Populates the %botname tag</li>
+<li>Where does the bot live? — Populates the %location tag</li>
+<li>Gender — Populates the %botgender parameter</li>
+<li>Name of the app — Populates the %appname tag</li>
+<li>Company Website — Populates the %sitelink tag</li>
+<li>Feedback Smart action link — Populates the %feedbacklink tag. This field can be populated with any valid URL, where an enterprise collects feedback from users. If the response to any SMALL TALK intent uses this tag, a link button would be sent to the user. The user can click the button to visit the link (shown in the image below).</li>
+</ol>
+<p>![Smalltalk 8](/assets/SmallTalk 8.png)</p>
+<p>If any of the above tags are present in the IVA response in the SMALL TALK module, the tag will be replaced by its value present in the dialog box when the response is sent to the end-user.</p>
+<p>The images below show how above functionality works. The “Name of the creator/company” parameter has been changed to SUPERMAN.</p>
+<p>![Smalltalk 9](/assets/SmallTalk 9.png)</p>
+<p>For the SMALL TALK Intent CRITICISM_FAKE, the IVA response has been changed to include the  %company tag.</p>
+<p>![Smalltalk 10](/assets/SmallTalk 10.png)</p>
+<p>When such an Intent is detected in User Utterance, the IVA response then replaces the %company tag with the value present in the “Name of the company/creator” field.</p>
+<p>![Smalltalk 11](/assets/SmallTalk 11.png)</p>
+<p>Hence, we can see from the previous two sections that the SMALL TALK module is highly customizable. Further customization to the content can be done as per the steps below.</p>
+<h2><a class="anchor" aria-hidden="true" id="changing-content"></a><a href="#changing-content" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Changing Content</h2>
+<p>Step 1 — Locate the IVA amongst the list of IVAs on the Staging Environment</p>
+<p>![Smalltalk 2](/assets/SmallTalk 2.png)</p>
+<p>Step 2 — Click on the respective IVA. On the next screen, click the “SMALLTALK” section</p>
+<p>![Smalltalk 12](/assets/SmallTalk 12.png)</p>
+<p>Step 3 — The below page opens up and allows the IVA Response to be edited. The platform also allows multiple variations for IVA response to be added to each Intent. When such an Intent is detected in User Utterance, the IVA randomly picks one Bot response to respond to the User.</p>
+<p>![Smalltalk 13](/assets/SmallTalk 13.png)</p>
+<h2><a class="anchor" aria-hidden="true" id="deactivating-smalltalk-intents"></a><a href="#deactivating-smalltalk-intents" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Deactivating Smalltalk Intents</h2>
+<p>Step 1 — Locate the IVA amongst the list of IVAs on the Staging Environment</p>
+<p>![Smalltalk 2](/assets/SmallTalk 2.png)</p>
+<p>Step 2 — Click on the respective IVA. On the next screen, click the “SMALLTALK” section</p>
+<p>![Smalltalk 12](/assets/SmallTalk 12.png)</p>
+<p>Step 3 — The below page opens up and shows the list of intents. If you do not want a particular intent to function, then we can deactivate it as shown below.</p>
+<p>![Smalltalk 22](/assets/SmallTalk 22.png)</p>
+<h2><a class="anchor" aria-hidden="true" id="how-does-smalltalk-function"></a><a href="#how-does-smalltalk-function" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How does Smalltalk function?</h2>
+<p>The <a href="/bot-builder/basic/dialoguemanager">Dialogue Manager Algorithm</a> can be read. It explains how the SMALL TALK module is prioritized along with other modules to respond to the User Utterances.</p>
+<p>Some features of SMALL TALK module are illustrated below —</p>
+<p><strong>CASE 1</strong> — START NODES, DEPENDENT NODES, and FAQ NODES always get a higher priority in responding to User Utterance than the SMALL TALK module. If the IVA doesn’t find anything relevant in aforesaid NODES, it searches the SMALL TALK module for a relevant response.</p>
+<p>Illustration 1 — In the below image, a START NODE “Tell me a joke node” has been made.</p>
+<p>![Smalltalk 14](/assets/SmallTalk 14.png)</p>
+<p>The Intent of the node <strong>Tell me a joke</strong> is similar to a SMALL TALK Intent <strong>SHARE_JOKE</strong>, as seen in the image below.</p>
+<p>![Smalltalk 15](/assets/SmallTalk 15.png)</p>
+<p>When a user sends an utterance “Tell me a joke real quick”, the START NODE was chosen to reply, rather than SMALL TALK intent <strong>SHARE_JOKE</strong>.</p>
+<p>The below conversation illustrates START NODE getting priority over SMALL TALK in responding to the User Utterance.</p>
+<p>![Smalltalk 16](/assets/SmallTalk 16.png)</p>
+<p><strong>CASE 2</strong> — The IVA doesn’t lose context of the conversation when it responds from the SMALL TALK Module. If a User Utterance in the middle of the conversation has been responded through SMALL TALK, the original conversation can be re-triggered if suitable User Utterance is received again, as illustrated below.</p>
+<p>Illustration 2 — A 2 node-deep flow with <strong>ABOUT_HAPTIK</strong> being a START NODE and <strong>HAPTIK LOCATION</strong> being a DEPENDENT NODE.</p>
+<p>![Smalltalk 17](/assets/SmallTalk 17.png)</p>
+<p>The image below shows the conversation. The User Utterance &quot;About Haptik&quot; is responded to from the <strong>ABOUT_HAPTIK</strong> START NODE.</p>
+<p>![Smalltalk 18](/assets/SmallTalk 18.png)</p>
+<p>Subsequently, when the user sent an utterance &quot;Boring Jokes&quot;, it was responded to by Small Talk intent <strong>CRITICISM_JOKES</strong>. However, when the user sent the next User Utterance “Location of Haptik”, related to the original flow, the IVA re-continued the original flow by retaining and relating the context.</p>
+<p>![Smalltalk 19](/assets/SmallTalk 19.png)</p>
+<p><strong>CASE 3</strong> - IVA not losing context when SMALL TALK triggers in the middle of Entity Collection — During a flow where an entity is being collected, the IVA doesn’t lose context of the original conversation if a SMALL TALK related intent is triggered by a User Utterance. The feature is being shown below.</p>
+<p>Illustration 3 — Illustrated below is a 2 node-deep flow with <strong>CAREERS_AT_HAPTIK</strong> being a START NODE and <strong>CITY_JOBS</strong> being a DEPENDENT NODE.</p>
+<p>![Smalltalk 20](/assets/SmallTalk 20.png)</p>
+<p>As shown below, The User Utterance “Jobs at Haptik” starts the conversation and the IVA responds from the <strong>Careers at Haptik</strong> START NODE. However, if a user sends a SMALL TALK related utterance — “No Thanks”, the IVA didn’t respond with SMALL TALK, but instead with an entity re-prompt to make one more attempt at nudging the user to provide the entity value.</p>
+<ul>
+<li><p>If the user persists with a SMALL TALK intent again through “ok bye”, SMALL TALK will be used to respond. (More around the module prioritisation algorithm can be read in the DIALOGUE MANAGER section)</p></li>
+<li><p>However, since the IVA retains the context of the conversation, if the User sends back the entity value after getting SMALL TALK response, the IVA would link it to the original conversation and proceed ahead in the conversation.</p></li>
+</ul>
+<p>![Smalltalk 21](/assets/SmallTalk 21.png)</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 6/1/2020</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/bot-builder/basic/creating-story"><span class="arrow-prev">← </span><span>Creating a Story</span></a><a class="docs-next button" href="/bot-builder/basic/dialoguemanager"><span>Dialogue Manager</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#what-is-smalltalk">What is Smalltalk?</a></li><li><a href="#changing-personality">Changing Personality</a></li><li><a href="#customizing-brand">Customizing Brand</a></li><li><a href="#changing-content">Changing Content</a></li><li><a href="#deactivating-smalltalk-intents">Deactivating Smalltalk Intents</a></li><li><a href="#how-does-smalltalk-function">How does Smalltalk function?</a></li></ul></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Bot Builder</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://hellohaptik.github.io/haptik-ios-framework" class="footer-column-link">iOS SDK</a><a href="https://hellohaptik.github.io/haptik-android-lib" class="footer-column-link">Android SDK</a><a href="https://hellohaptik.github.io/javascript_sdk" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Webhooks</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Chat Tool</a><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/contributing/index" class="footer-column-link">Contributing</a><a href="https://docs.haptik.ai/other/security" class="footer-column-link">Security</a><a href="https://forms.gle/Z2SowBSFpWLayXQz9" class="footer-column-link">Support</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2020 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '224c7079e67e84a978d8b4621f6af16d',
+                indexName: 'haptik',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

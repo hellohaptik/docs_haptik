@@ -1,0 +1,185 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Dialogue Manager · Haptik Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Dialogue Manager is the decision making engine of the conversational pipeline. Since the conversational engine consists of multiple modules, the Dialogue Manager makes a choice on what’s the best module to respond to the user&#x27;s query."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Dialogue Manager · Haptik Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.haptik.ai/"/><meta property="og:description" content="Dialogue Manager is the decision making engine of the conversational pipeline. Since the conversational engine consists of multiple modules, the Dialogue Manager makes a choice on what’s the best module to respond to the user&#x27;s query."/><meta property="og:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.haptik.ai/img/image_0.png"/><link rel="shortcut icon" href="/img/image_0.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-106563119-6', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="/js/index.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/image_0.png" alt="Haptik Docs"/><h2 class="headerTitleWithLogo">Haptik Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="/#tools" target="_self">Tools</a></li><li class=""><a href="/#integrations" target="_self">Integrations</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Resources</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/basic/introduction">Introduction</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/for-bot-builders">For Bot Builders</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Guides</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/basic/making-first-bot">Making Your First Bot</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/design-guidelines">Designing Chat Experiences</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/testing-bot">Testing your bot</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/multiple-languages">Multiple Languages</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/building-voice-bots">Building Voice bots</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/platforms-deployment">Platforms Deployment</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/managing-bot-state">Managing Bot Context and State</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Resources</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/basic/bot-hierarchy">Bot Hierarchy</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/business">Business</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/creating-story">Creating a Story</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/smalltalk">Smalltalk</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/bot-builder/basic/dialoguemanager">Dialogue Manager</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/story-templates">Story Templates</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/creating-nodes">Creating Nodes</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/connections">Connections</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/general-nodes">General Nodes</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/user-says-guidelines">User Says Guidelines</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/bot-says">Bot Says</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/chat-elements">Chat Elements</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/intent">Intent</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/disambiguation">Did you mean? (Disambiguation)</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/entities">Entities</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/bot-prompt-trigger">Bot Prompt Trigger</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/forms">Forms</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/upload-graph-nodes">Upload Graph Nodes</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Integrations</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/integrations/introduction">Introduction</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/integrations/integration-parameters">Integration Parameters</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/integrations/integrating-apis">Integrating APIs</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/integrations/integrating-custom-code">Integrating Custom Code</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/integrations/additional-apis">Additional APIs</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Advanced</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/advanced/integrating-webviews-into-sdk">Integrating Webviews</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/advanced/integrating-with-external-bot">Integrating with External Bot</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/advanced/development-guidelines">Bot Development Life Cycle</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/advanced/testing-guidelines">Testing Guidelines</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/advanced/debugging-guidelines">How to debug your bot?</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Dialogue Manager</h1></header><article><div><span><p>Dialogue Manager is the decision making engine of the conversational pipeline. Since the conversational engine consists of multiple modules, the Dialogue Manager makes a choice on what’s the best module to respond to the user's query.
+Some of the modules present in Haptik’s conversation pipeline are - Graph Nodes, FAQ Nodes, Small Talk, etc.</p>
+<p>Dialogue Manager functions on a pre-decided algorithm. Hence, for a Bot Builder Knowledge of the algorithm helps at times in Bot Building and making decisions around the bot architecture.</p>
+<p><strong>Note</strong> - It may help reading about <a href="/bot-builder/basic/disambiguation">Disambiguation</a>, <a href="/bot-builder/basic/general-nodes">FAQ Nodes</a> and <a href="/bot-builder/basic/smalltalk">Small Talk</a>. Some features of Disambiguation, FAQ Nodes and Small Talk have been referred to in this section.</p>
+<p>The algorithm used by the Dialogue Manager to respond to User Utterances differs slightly in cases where a User has sent a new message to start a conversation and when, the user has already started a conversation and has sent a new message to continue it further. SECTION 1 covers the former, while SECTION 2 covers the latter.</p>
+<h2><a class="anchor" aria-hidden="true" id="section-1---when-a-user-sends-a-new-message-and-starts-a-chat"></a><a href="#section-1---when-a-user-sends-a-new-message-and-starts-a-chat" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Section 1 - When a user sends a new message and starts a chat</h2>
+<p>A new Chat can begin either at the beginning of a new session, or when a user continues the chat after a previous chat has been completed i.e when an IVA reaches END NODE.</p>
+<p>The FLOWCHART 1 below shows the order of prioritisation in responding to the User above scenario.</p>
+<p>![DM 1](/assets/DM 1.png)</p>
+<p>Some illustrations below depict the algorithm in action.</p>
+<p><strong>Illustration 1</strong> - Images below contain two nodes - FAQ NODE <strong>Founders of Haptik</strong> and START NODE <strong>About Haptik</strong>.</p>
+<p>FAQ Node -</p>
+<p>![DM 2](/assets/DM 2.png)</p>
+<p>Start Node -</p>
+<p>![DM 3](/assets/DM 3.png)</p>
+<p>When a new User utterance &quot;Information on Founders of Haptik&quot; is received to start the conversation, all the START NODES and FAQ NODES are collectively scanned by the IVA, as shown in FLOWCHART 1. The response is sent from FAQ NODE <strong>Founders of Haptik</strong> since it’s the best match.</p>
+<p>![DM 4](/assets/DM 4.png)</p>
+<p><strong>NOTE</strong> - Even though there is some degree of intent overlap with START NODE <strong>About Haptik</strong>, it was not given preference over FAQ NODE <strong>Founders of Haptik</strong>. Since START NODES and FAQ NODES are scanned collectively, FAQ NODE will be chosen for response if it’s a better match.</p>
+<p><strong>Illustration 2</strong> - When a new User Utterance arrives, SMALL TALK Module can also be used to respond. However, Small Talk is considered for response if the IVA couldn’t find an appropriate START NODE or FAQ NODE to respond.</p>
+<p>The two images below contain a START NODE <strong>Tell me a joke</strong> node and SMALL TALK intent <strong>SHARE_JOKE</strong>.</p>
+<p>Start Node -</p>
+<p>![DM 5](/assets/DM 5.png)</p>
+<p>Small talk -</p>
+<p>![DM 6](/assets/DM 6.png)</p>
+<p>When the User Utterance &quot;Tell me a joke&quot; was received, the IVA scanned for all (START NODES + FAQ NODES). Since a START NODE <strong>Tell me a joke</strong> node was present, it was selected for response and not the SMALL TALK intent <strong>SHARE_JOKE</strong>, even though the User Utterance was closely resembling the SHARE_JOKE Intent.</p>
+<p>The same has been depicted in FLOWCHART 1.</p>
+<p>![DM 7](/assets/DM 7.png)</p>
+<p><strong>Note</strong> - This illustrates that even though a User Utterance matches the SMALL TALK Module, a START NODE would be selected to respond to User Utterance if it’s an appropriate match.</p>
+<p><strong>Illustration 3</strong> - When the IVA doesn’t find any relevant START NODE or FAQ NODE to respond to the User Utterance, it scans the SMALL TALK module for relevant intent. The intent of the User’s Utterance should find a match in SMALL TALK Module for the response to go from SMALL TALK Module.</p>
+<p>The image below contains a SMALL TALK intent <strong>FESTIVAL_INDEPENDENCE</strong>.</p>
+<p>![DM 8](/assets/DM 8.png)</p>
+<p>When the User Utterance &quot;Happy independence day&quot; was received, the IVA scanned all the (START NODES + FAQ NODES) for a relevant response. Since it couldn’t find the same, it subsequently looked for a match in the SMALL TALK module. An intent matched in the SMALL TALK module and was selected to respond.</p>
+<p>![DM 9](/assets/DM 9.png)</p>
+<h2><a class="anchor" aria-hidden="true" id="section-2---when-the-user-has-sent-a-message-in-between-an-existing-conversation"></a><a href="#section-2---when-the-user-has-sent-a-message-in-between-an-existing-conversation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Section 2 - When the User has sent a message in between an existing conversation</h2>
+<p>The algorithm is illustrated in the diagram below -</p>
+<p>![DM 10](/assets/DM 10.png)</p>
+<p>Through various illustrations hereafter, the above algorithm has been shown in action.</p>
+<p><strong>Illustration 1</strong> - The User had already started a conversation and asked an FAQ in the middle of a conversation.</p>
+<p>The below images show the User Says on the FAQ NODE <strong>Founders of Haptik</strong>. Also shown is a DEPENDENT NODE <strong>Haptik Location</strong> connected to the <strong>About Haptik</strong> START NODE.</p>
+<p>![DM 11](/assets/DM 11.png)</p>
+<p>![DM 2](/assets/DM 2.png)</p>
+<p>As shown in the image below, the conversation started with User Utterance &quot;About Haptik&quot; and correctly got responded by <strong>About Haptik</strong> START NODE, as per FLOWCHART 1.</p>
+<p>![DM 12](/assets/DM 12.png)</p>
+<ul>
+<li>When the second User Utterance “but who are founders of Haptik?” was received, the IVA scanned for (DEPENDENT NODES + FAQ NODES) collectively to pick the right NODE to respond. The FAQ NODE <strong>Founders of Haptik</strong> was selected for responding to the User Utterance, as shown in FLOWCHART 2.</li>
+</ul>
+<p>As a side note, the capability of FAQ Nodes can be seen here as well. When the next User Utterance “ok tell me the location of haptik” related to initial message flow was received, the IVA picked the original context and re-started conversation from the <strong>Haptik Location</strong> NODE.</p>
+<p><strong>NOTE</strong> - The FAQ Node should not be marked as an end node, if the IVA is expected to retain context of the conversation. If the FAQ NODE is marked as an END NODE, the IVA will mark the conversation as complete and lose context.</p>
+<p><strong>Illustration 2</strong> - Another illustration shows how the algorithm functions when the User has already started a conversation and asked an FAQ in the middle of a conversation.</p>
+<p>The below images show the conversation flow from <strong>Funding of Haptik</strong> START NODE. It also shows the User Says on <strong>Founders of Haptik</strong> FAQ NODE.</p>
+<p>![DM 13](/assets/DM 13.png)</p>
+<p>![DM 2](/assets/DM 2.png)</p>
+<p>The conversation started with a User Utterance &quot;Funding of Haptik&quot;. It was responded from <strong>Funding of Haptik</strong> START NODE.</p>
+<p>The next user utterance “I want to know more about it” was responded to by <strong>Tell me about funding</strong> DEPENDENT NODE.</p>
+<p>The IVA scanned all (DEPENDENT NODES + FAQ NODES) as shown in FLOWCHART 2 and found <strong>Tell me about funding</strong> NODE the best DEPENDENT NODE to reply.</p>
+<p>![DM 14](/assets/DM 14.png)</p>
+<p>The next User Utterance asked about an FAQ &quot;but who are the founders of Haptik?&quot;. The response was given from the FAQ NODE <strong>Founders of Haptik</strong>.</p>
+<p>Here, the IVA again scanned all (DEPENDENT NODES + FAQ NODES) and found <strong>Founders of Haptik</strong> as the best FAQ NODE to respond.</p>
+<p>As a side note, the capability of FAQ Nodes can be seen here as well. When the next User Utterance “ok investors?” was received, it was responded from the DEPENDENT NODE <strong>Investors of Haptik</strong> which was the last node in the original flow.</p>
+<p><strong>Illustration 3</strong> - IVA scans for START NODES again if a relevant DEPENDENT NODE or FAQ NODE is not found.</p>
+<p>Below is the GRAPH NODE structure and the User Says present on both <strong>Careers at Haptik</strong> START NODE and <strong>Funding of Haptik</strong> START NODE.</p>
+<p>![DM 15](/assets/DM 15.png)</p>
+<p>Funding of Haptik Node -</p>
+<p>![DM 16](/assets/DM 16.png)</p>
+<p>Careers at Haptik -</p>
+<p>![DM 17](/assets/DM 17.png)</p>
+<p>The User utterance &quot;funding of haptik&quot; was responded from the <strong>Funding of Haptik</strong> START NODE.</p>
+<p>![DM 18](/assets/DM 18.png)</p>
+<p>The User Utterance &quot;Yes, I want to know about it&quot; was responded to by &quot;Tell me about funding&quot; DEPENDENT NODE.</p>
+<p>![DM 19](/assets/DM 19.png)</p>
+<p>Next, when the User Utterance &quot;are there any jobs available at haptik&quot; was received, the IVA tried scanning all the (DEPENDENT NODES + FAQ NODES). When it didn’t find a relevant NODE to respond from, it scanned all START NODES again, as shown in FLOWCHART 2. Hence, <strong>Careers at Haptik</strong> START NODE was selected to respond.</p>
+<p><strong>Illustration 4</strong> - In the middle of a conversation, IVA would prefer to search START NODES again, over SMALL TALK.</p>
+<p>Below images show the NODE structure and <strong>Tell me a joke</strong> START NODE.</p>
+<p>![DM 13](/assets/DM 13.png)</p>
+<p>![DM 5](/assets/DM 5.png)</p>
+<p>The User Utterance &quot;funding of Haptik&quot; was responded from the START NODE <strong>Funding of Haptik</strong>. Next, the User Utterance &quot;Yes, I want to know about it&quot; was responded to by <strong>Tell me about funding</strong> DEPENDENT NODE.</p>
+<p>![DM 23](/assets/DM 23.png)</p>
+<p>However, when the User Utterance “tell me a joke” was received, the IVA couldn’t find suitable (DEPENDENT + FAQ) nodes for responding. Hence, it scanned all START NODES again and found <strong>Tell me a joke</strong> START NODE.</p>
+<p>Even though the user Utterance “tell me a joke” had a suitable match in <strong>SHARE_JOKE</strong> SMALL TALK intent, a START NODE was given preference in responding.</p>
+<p>However, in the User Utterance &quot;ok bye&quot;, the IVA couldn’t find any (DEPENDENT + FAQ) NODE or START NODES to reply from. Hence, SMALL TALK Intent <strong>END_CHAT</strong> was selected to respond.</p>
+<p><strong>Illustration 5</strong> - FAQs DURING ENTITY COLLECTION - The User can ask FAQs in the process of collection of entities as well. Once the IVA asks for the entity value, the user may choose to ask an FAQ instead of giving entity value. The IVA while answering the FAQ, will retain the context of the conversation. If the User then provides entity value after getting response from the FAQ NODE, the IVA will contextually relate the entity to the original response and complete the flow.</p>
+<p>The below images show an entity being collected on the <strong>Careers at Haptik</strong> START NODE.</p>
+<p>![DM 20](/assets/DM 20.png)</p>
+<p>Below image shows a FAQ NODE <strong>Founders of Haptik</strong> and it’s User Says.</p>
+<p>![DM 2](/assets/DM 2.png)</p>
+<p>As shown in the image below, when the User Utterance “Is haptik hiring for any jobs?” is received, the <strong>Careers at Haptik</strong> START NODE is selected to respond to the query.</p>
+<p>When the next User Utterance “But tell me who are the founders of Haptik” was received, IVA collectively scanned for all the (DEPENDENT NODES + FAQ NODES) and the FAQ NODE <strong>Founders of Haptik</strong> was selected to respond.</p>
+<p>![DM 24](/assets/DM 24.png)</p>
+<p>Next, the User Utterance provided the entity value <strong>Bangalore</strong>, which the IVA had asked in the previous response. The IVA detected the entity value, contextually linked the response to the original <strong>Careers at Haptik</strong> journey and responded to the user.</p>
+<p>As a corollary, one more conclusion can be drawn here w.r.t the behaviour of the entity re-prompt.</p>
+<blockquote>
+<p>Tip: Entity re-prompt is a feature which nudges the user to enter the entity value, if it has not been given by the User when the IVA asked.</p>
+</blockquote>
+<p>Coming back to the illustration, in the User Utterance “But tell me who are the founders of Haptik”, the entity value was not present. However, Entity re-prompt was not sent out and the scanning of (DEPENDENT NODES + FAQ NODE) was given priority over the entity re-prompt, as shown in the FLOWCHART 2.</p>
+<p><strong>NOTE</strong> - The FAQ NODE should not be marked as an END NODE, if the IVA is expected to retain the context of the current conversation. If it’s marked as such, the IVA will close the conversation and drop context.</p>
+<h2><a class="anchor" aria-hidden="true" id="how-are-code-nodes-treated-in-the-dialogue-manager"></a><a href="#how-are-code-nodes-treated-in-the-dialogue-manager" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How are CODE NODES treated in the Dialogue Manager?</h2>
+<p>Directly, CODE NODES are not used to respond to the User Utterance. Hence, they are not under the purview of Dialogue Manager. Dialogue Manager only ensures that the entities required by the START NODE connected to the CODE NODE are collected efficiently.</p>
+<p>Once entities are collected, the CODE NODE is triggered. At this juncture, the Dialogue Manager comes out of the picture, and only comes into the picture when the next User Utterance arrives.</p>
+<h2><a class="anchor" aria-hidden="true" id="how-are-output-nodes-treated-in-the-dialogue-manager"></a><a href="#how-are-output-nodes-treated-in-the-dialogue-manager" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How are OUTPUT NODES treated in the Dialogue Manager?</h2>
+<p>From the Dialogue Manager perspective, the illustrations mentioned in the above two sections cover the functionality of the OUTPUT NODE as well.</p>
+<p>If an OUTPUT NODE has been marked as an END NODE, the next User Utterance will fall under SECTION 1 mentioned earlier. If the OUTPUT NODE has not been marked as an END NODE, the User Utterance will fall under SECTION 2.</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 6/1/2020</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/bot-builder/basic/smalltalk"><span class="arrow-prev">← </span><span>Smalltalk</span></a><a class="docs-next button" href="/bot-builder/basic/story-templates"><span>Story Templates</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#section-1---when-a-user-sends-a-new-message-and-starts-a-chat">Section 1 - When a user sends a new message and starts a chat</a></li><li><a href="#section-2---when-the-user-has-sent-a-message-in-between-an-existing-conversation">Section 2 - When the User has sent a message in between an existing conversation</a></li><li><a href="#how-are-code-nodes-treated-in-the-dialogue-manager">How are CODE NODES treated in the Dialogue Manager?</a></li><li><a href="#how-are-output-nodes-treated-in-the-dialogue-manager">How are OUTPUT NODES treated in the Dialogue Manager?</a></li></ul></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Bot Builder</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://hellohaptik.github.io/haptik-ios-framework" class="footer-column-link">iOS SDK</a><a href="https://hellohaptik.github.io/haptik-android-lib" class="footer-column-link">Android SDK</a><a href="https://hellohaptik.github.io/javascript_sdk" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Webhooks</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Chat Tool</a><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/contributing/index" class="footer-column-link">Contributing</a><a href="https://docs.haptik.ai/other/security" class="footer-column-link">Security</a><a href="https://forms.gle/Z2SowBSFpWLayXQz9" class="footer-column-link">Support</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2020 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '224c7079e67e84a978d8b4621f6af16d',
+                indexName: 'haptik',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

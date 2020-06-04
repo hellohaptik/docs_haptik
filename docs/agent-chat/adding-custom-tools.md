@@ -233,3 +233,9 @@ Response format:
 ## Sample Integrations
 
 You can refer to [this sample](https://toolassets.haptikapi.com/integrations/sample/index.v2.1.html) integration tool as a reference point.
+
+
+## Expansion of the RHS Custom tool
+
+We have an expand click that allows you the expand the RHS section so that agents can easily perform actions on an external tool. Once you switch the chat tab ie move to another chat, the RHS section moves from expand state to a default state (covering 26% width of your screen). 
+

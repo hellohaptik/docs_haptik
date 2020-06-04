@@ -67,17 +67,17 @@ title: Button
       </tr>
       <tr>
          <td>data.items.uri</td>
-         <td>This can take multiple values that is defined in the <a href='https://haptik-docs.readthedocs.io/en/latest/bot-builder-advanced/hsl-properties.html'>hsl-properties</a></td>
+         <td>This can take multiple values that is defined in the <a href='https://docs.haptik.ai/hsl/hsl-properties'>hsl-properties</a></td>
          <td>Yes</td>
       </tr>
       <tr>
          <td>data.items.type</td>
-         <td>This can take multiple values that is defined in the <a href='https://haptik-docs.readthedocs.io/en/latest/bot-builder-advanced/hsl-properties.html'>hsl-properties</a></td>
+         <td>This can take multiple values that is defined in the <a href='https://docs.haptik.ai/hsl/hsl-properties'>hsl-properties</a></td>
          <td>Yes</td>
       </tr>
       <tr>
          <td>data.items.payload</td>
-         <td>This can take multiple values that is defined in the <a href='https://haptik-docs.readthedocs.io/en/latest/bot-builder-advanced/hsl-properties.html'>hsl-properties</a></td>
+         <td>This can take multiple values that is defined in the <a href='https://docs.haptik.ai/hsl/hsl-properties'>hsl-properties</a></td>
          <td>Yes</td>
       </tr>
    </tbody>

@@ -98,7 +98,7 @@ Ideally, the IVA should have replied in one instance, but the Disambiguation mes
         
    3. If the list in Section II is too long, it should be checked whether all DEPENDENT responses have 10 variations each. If that's not the case, the Haptik's ML Team can be contacted for further assistance.
     
-Note - If 10 or more CONNECTION RESPONSES are not present on each connection, the performance on even the START NODES would be affected negatively.
+<b>NOTE</b> - If 10 or more CONNECTION RESPONSES are not present on each connection, the performance on even the START NODES would be affected negatively.
 
    4. There is no need to test the exact statement present in Section 1, since the ML Model is designed to ALWAYS make the exact “User Says” work correctly. The user, however, may enter variations of the exact statements entered as User Says and hence, Bot Builder needs to test the variants of the statements present in Section 1, to ensure if they are working as expected.
     

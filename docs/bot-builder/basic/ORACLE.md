@@ -146,7 +146,7 @@ Below image shows how Section 3 will appear in the ORACLE Email.
       e. If such variants go to a wrong node or show disambiguation, add these newly generated test 
          variants to the right node. 
                
-      E.g In the below image, Bot Builder should evaluate which Node can the User Message be added to. This process is similar to the one shown in Debugging Guidelines.
+      E.g In the below image, Bot Builder should evaluate which Node can the User Message be added to. This process is similar to the one shown in [Debugging Guidelines](debugging-guidelines.md).
       
          ![ORACLE_10](/assets/ORACLE_10.png)
 

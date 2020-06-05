@@ -1,8 +1,10 @@
+---------
 ORACLE
+---------
 
 The ORACLE Module helps Bot Builders discover methods by which an IVA can be improved and brought to a state where it is utilising capabilities of the ML Model to its maximum potential. It aims to give feedback to Bot Builders on how well the IVA has been trained from the "User Says" and "Nodes" created by the Bot Builder. However, before we delve into the details of the ORACLE Module, it’s essential to understand the expectations of the ML Model from the Bot Builder, so that improvements can be made accordingly.
 
-What does the ML Model expect to perform at its fullest?
+<b>What does the ML Model expect to perform at its fullest?</b>
 
    1. 10 variants on each START NODE
 
@@ -16,7 +18,7 @@ What does the ML Model expect to perform at its fullest?
        
        d. OUTPUT NODE to DEPENDENT NODE
 
-NOTE - If >10 CONNECTION RESPONSES are not present, the performance of the ML Model, even on START Nodes would be affected negatively.
+<b>NOTE</b> - If >10 CONNECTION RESPONSES are not present, the performance of the ML Model, even on START Nodes would be affected negatively.
 
    3. Similar or exact same “User Says” should not be present in multiple nodes. It has also been 
     illustrated in the example shown above.
@@ -32,9 +34,9 @@ The ORACLE Module reaches the Bot Builder as part of the Training Completion Ema
 
 The Bot Builder should prioritise in the order of Section 1, Section 2, Section 3 while fixing the issues highlighted by ORACLE Email.
 
-NOTE -  The ORACLE Module only considers START NODES for the evaluation and display purposes.
+<b>NOTE</b> -  The ORACLE Module only considers START NODES for the evaluation and display purposes.
 
-SECTION 1 - PRESENCE OF SIMILAR USER SAYS ACROSS TWO NODES
+#### SECTION 1 - PRESENCE OF SIMILAR USER SAYS ACROSS TWO NODES
 
 This section shows a list of those “User Says” whose very close to each other or are present on more than one NODE. The aim of this section is to - 
 
@@ -46,7 +48,7 @@ This section shows a list of those “User Says” whose very close to each othe
 
 Below image shows how Section 1 will appear in the ORACLE Email. 
 
-Why should the issues in Section 1 be fixed?
+<b>Why should the issues in Section 1 be fixed?</b>
 
 To better understand the need of fixing entries in Section 1, we need to see the first row in the above image. It shows two similar utterances present in the IVA across two different nodes. Consequently, when the user sends that statement as a message, the IVA, instead of responding in the first instance, sends a disambiguation message and hence, a sub-par User Experience. 
 
@@ -54,7 +56,7 @@ ORACLE_5
 
 Ideally, the IVA should have replied in one instance, but the Disambiguation message made the chat a two step process, putting additional effort on the user to get information. The user might have ended up perceiving the IVA as non-intelligent, since the IVA got confused with a simple variation of the user utterance.
 
-What should the Bot Builder do after seeing entries in Section 1?
+<b>What should the Bot Builder do after seeing entries in Section 1?<b/>
 
    1. Check if exactly the same “User Says” or highly similar “User Says” are present across multiple Nodes, as highlighted in Section 1.
 
@@ -62,7 +64,7 @@ What should the Bot Builder do after seeing entries in Section 1?
 
    3. There is no need to test the exact statement present in Section 1, since the ML Model is designed to ALWAYS make the exact “User Says” work correctly. The user, however, may enter variations of the exact statements entered in User Says and hence, Bot Builder needs to test the variants of the statements present in Section 1, to ensure that they work as expected.
     
-SECTION 2 - BOT MAY NOT WORK ON THE VARIATIONS OF BELOW STATEMENTS
+#### SECTION 2 - BOT MAY NOT WORK ON THE VARIATIONS OF BELOW STATEMENTS
 
 This section shows a list of “User Says” which have not been completely understood by the ML Model. The aim of this section is to - 
 
@@ -74,7 +76,7 @@ Below image shows how Section 2 will appear in the ORACLE Email.
 
 ORACLE_6
             
-Why should the issues in Section 2 be fixed? 
+<b>Why should the issues in Section 2 be fixed?</b>
 
 The need to fix entries in Section 2 can be best understood from the illustration below. The User message “Telemedicine” worked because there was an exact match present in the “User Says”. 
 
@@ -85,7 +87,7 @@ ORACLE_8
 
 Ideally, the IVA should have replied in one instance, but the Disambiguation message made the chat a two step process, putting additional effort on the user to get information. The user might have ended up perceiving the IVA as non-intelligent, since the IVA got confused with a simple variation of the user utterance.
 
-What should the Bot Builder do after seeing entries in Section 2?
+<b>What should the Bot Builder do after seeing entries in Section 2?</b>
 
    1. Ensure all START Nodes have > 10 User Says.
 
@@ -99,7 +101,7 @@ Note - If 10 or more CONNECTION RESPONSES are not present on each connection, th
 
    4. There is no need to test the exact statement present in Section 1, since the ML Model is designed to ALWAYS make the exact “User Says” work correctly. The user, however, may enter variations of the exact statements entered as User Says and hence, Bot Builder needs to test the variants of the statements present in Section 1, to ensure if they are working as expected.
     
-SECTION 3 - CONFUSION IN THE BOT DUE TO SIMILARITY BETWEEN NODES
+#### SECTION 3 - CONFUSION IN THE BOT DUE TO SIMILARITY BETWEEN NODES
 
 The aim of this section is to bring to the Bot builder’s notice -
 
@@ -109,11 +111,11 @@ The aim of this section is to bring to the Bot builder’s notice -
 
 Below image shows how Section 3 will appear in the ORACLE Email.
 
-Why should the issues in Section 3 be fixed?
+<b>Why should the issues in Section 3 be fixed?</b>
 
 If the Nodes appear Similar to the ML Model, the End User may see responses from wrong nodes or might see unnecessary Disambiguation.
 
-What should the Bot Builder do after seeing entries in Section 3?
+<b>What should the Bot Builder do after seeing entries in Section 3?</b>
 
    1. Evaluate if certain START NODES can be merged if the use-case they aim to cater to are too from a User’s point of view, as shown in illustration below.
 

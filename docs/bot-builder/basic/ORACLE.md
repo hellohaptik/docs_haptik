@@ -51,7 +51,7 @@ Below image shows how Section 1 will appear in the ORACLE Email.
 
 To better understand the need of fixing entries in Section 1, we need to see the first row in the above image. It shows two similar utterances present in the IVA across two different nodes. Consequently, when the user sends that statement as a message, the IVA, instead of responding in the first instance, sends a disambiguation message and hence, a sub-par User Experience. 
 
-ORACLE_5
+![image](assets/bot-builder/ORACLE_5.png)
 
 Ideally, the IVA should have replied in one instance, but the Disambiguation message made the chat a two step process, putting additional effort on the user to get information. The user might have ended up perceiving the IVA as non-intelligent, since the IVA got confused with a simple variation of the user utterance.
 

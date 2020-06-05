@@ -31,7 +31,7 @@ Due to high similarity between Nodes, a minor variation in the User Message prev
 
    ![ORACLE_3](/assets/ORACLE_3.png)
 
-   5. Quality of the “User Says” should be as per User Says Guidelines.
+   5. Quality of the “User Says” should be as per [User Says Guidelines](user-says-guidelines.md).
 
 
 The ORACLE Module reaches the Bot Builder as part of the Training Completion Email. It is divided into 3 sections, each section having a list of issues with Training Data present in the IVA. If either of the sections have more than 30 entries, the section would be attached as a CSV to the email. 

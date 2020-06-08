@@ -46,7 +46,7 @@ This section shows a list of those “User Says” whose very close to each othe
 
       1. Bring forward some basic data sanity issues like duplicate User Says present in multiple nodes
 
-      2. Highlights the possibility of Disambiguation with minor variations in User Utterance,due to presence
+      2. Highlight the possibility of Disambiguation with minor variations in User Utterance,due to presence
          of similar data across two Nodes.
 
 Below image shows how Section 1 will appear in the ORACLE Email.

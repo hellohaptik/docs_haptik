@@ -29,7 +29,7 @@
 			"basic/intent",
 			"basic/disambiguation",
 			"basic/entities",
-			"basic/oracle"
+			"basic/oracle-feedback",
 			"basic/bot-prompt-trigger",
 			"basic/forms",
 			"basic/upload-graph-nodes"

@@ -75,7 +75,7 @@ This section shows a list of “User Says” which have not been completely unde
       1. Bring forward “User Says” on certain Nodes which need more variations to be added to help the ML Model 
          understand the context of that particular “User Says” completely.
     
-      2. Highlights the possibility of some severe issues with the IVA. This will be reflected when the list of 
+      2. Highlight the possibility of some severe issues with the IVA. This will be reflected when the list of 
          messages in Section 2 is unusually long (> 100 entries).
     
 Below image shows how Section 2 will appear in the ORACLE Email.

@@ -1,6 +1,6 @@
----------
-<title>ORACLE</title>
----------
+---
+title: ORACLE
+---
 
 The ORACLE Module helps Bot Builders discover methods by which an IVA can be improved and brought to a state where it is utilising capabilities of the ML Model to its maximum potential. It aims to give feedback to Bot Builders on how well the IVA has been trained from the "User Says" and "Nodes" created by the Bot Builder. However, before we delve into the details of the ORACLE Module, it’s essential to understand the expectations of the ML Model from the Bot Builder, so that improvements can be made accordingly.
 

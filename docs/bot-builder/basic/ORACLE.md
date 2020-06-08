@@ -125,7 +125,7 @@ Below image shows how Section 3 will appear in the ORACLE Email.
 
 <b>What should the Bot Builder do after seeing entries in Section 3?</b>
 
-   1. Evaluate if certain START NODES can be merged if the use-case they aim to cater to are too from a User’s point of view, as shown in illustration below.
+   1. Evaluate if certain START NODES can be merged if the use-cases they aim to cater to are from a User’s point of view, as shown in the illustration below.
 
       Check the below snapshots and notice that the NODES communicate a very similar message. It should be evaluated if there is a need to keep them as two separate nodes. There is very little probability that a User would be able to come up with such an intent which can be differentiated to such a granular level.
       

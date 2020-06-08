@@ -64,7 +64,7 @@ Ideally, the IVA should have replied in one instance, but the Disambiguation mes
 
    1. Check if exactly the same “User Says” or highly similar “User Says” are present across multiple Nodes, as highlighted in Section 1.
 
-   2. Test minor variants of statements present in Section 1. If the IVA responds with Disambiguation or responds from a wrong node, then the newly generated test variant should be added to the right node. It’s shown in debugging guidelines here as well.
+   2. Test minor variants of statements present in Section 1. If the IVA responds with Disambiguation or responds from a wrong node, then the newly generated test variant should be added to the right node. This process is similar to the one shown in [Debugging Guidelines](/advanced/debugging-guidelines.md).
 
    3. There is no need to test the exact statement present in Section 1, since the ML Model is designed to ALWAYS make the exact “User Says” work correctly. The user, however, may enter variations of the exact statements entered in User Says and hence, Bot Builder needs to test the variants of the statements present in Section 1, to ensure that they work as expected.
     

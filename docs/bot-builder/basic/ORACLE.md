@@ -1,5 +1,5 @@
 ---
-title: ORACLE
+title: ORACLE Module
 ---
 
 The ORACLE Module helps Bot Builders discover methods by which an IVA can be improved and brought to a state where it is utilising capabilities of the ML Model to its maximum potential. It aims to give feedback to Bot Builders on how well the IVA has been trained from the "User Says" and "Nodes" created by the Bot Builder. However, before we delve into the details of the ORACLE Module, it’s essential to understand the expectations of the ML Model from the Bot Builder, so that improvements can be made accordingly.
@@ -64,7 +64,7 @@ Ideally, the IVA should have replied in one instance, but the Disambiguation mes
 
    1. Check if exactly the same “User Says” or highly similar “User Says” are present across multiple Nodes, as highlighted in Section 1.
 
-   2. Test minor variants of statements present in Section 1. If the IVA responds with Disambiguation or responds from a wrong node, then the newly generated test variant should be added to the right node. This process is similar to the one shown in [Debugging Guidelines](/advanced/debugging-guidelines.md).
+   2. Test minor variants of statements present in Section 1. If the IVA responds with Disambiguation or responds from a wrong node, then the newly generated test variant should be added to the right node. This process is similar to the one shown in [HERE](https://docs.haptik.ai/bot-builder/advanced/debugging-guidelines).
 
    3. There is no need to test the exact statement present in Section 1, since the ML Model is designed to ALWAYS make the exact “User Says” work correctly. The user, however, may enter variations of the exact statements entered in User Says and hence, Bot Builder needs to test the variants of the statements present in Section 1, to ensure that they work as expected.
     
@@ -145,7 +145,7 @@ Below image shows how Section 3 will appear in the ORACLE Email.
       e. If such variants go to a wrong node or show disambiguation, add these newly generated test 
          variants to the right node. 
                
-      E.g In the below image, Bot Builder should evaluate which Node can the User Message be added to. This process is similar to the one shown in [Debugging Guidelines](/advanced/debugging-guidelines.md).
+      E.g In the below image, Bot Builder should evaluate which Node can the User Message be added to. This process is similar to the one shown in [HERE](https://docs.haptik.ai/bot-builder/advanced/debugging-guidelines).
       
          ![ORACLE_10](/assets/ORACLE_10.png)
 

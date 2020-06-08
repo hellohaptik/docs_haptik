@@ -1,0 +1,184 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>ORACLE Feedback · Haptik Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="The ORACLE Module helps Bot Builders discover methods by which an IVA can be improved and brought to a state where it is utilising capabilities of the ML Model to its maximum potential. It aims to give feedback to Bot Builders on how well the IVA has been trained from the &quot;User Says&quot; and &quot;Nodes&quot; created by the Bot Builder. However, before we delve into the details of the ORACLE Module, it’s essential to understand the expectations of the ML Model from the Bot Builder, so that improvements can be made accordingly."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="ORACLE Feedback · Haptik Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.haptik.ai/"/><meta property="og:description" content="The ORACLE Module helps Bot Builders discover methods by which an IVA can be improved and brought to a state where it is utilising capabilities of the ML Model to its maximum potential. It aims to give feedback to Bot Builders on how well the IVA has been trained from the &quot;User Says&quot; and &quot;Nodes&quot; created by the Bot Builder. However, before we delve into the details of the ORACLE Module, it’s essential to understand the expectations of the ML Model from the Bot Builder, so that improvements can be made accordingly."/><meta property="og:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.haptik.ai/img/image_0.png"/><link rel="shortcut icon" href="/img/image_0.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-106563119-6', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="/js/index.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/image_0.png" alt="Haptik Docs"/><h2 class="headerTitleWithLogo">Haptik Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="/#tools" target="_self">Tools</a></li><li class=""><a href="/#integrations" target="_self">Integrations</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Resources</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/basic/introduction">Introduction</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/for-bot-builders">For Bot Builders</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Guides</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/basic/making-first-bot">Making Your First Bot</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/design-guidelines">Designing Chat Experiences</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/testing-bot">Testing your bot</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/multiple-languages">Multiple Languages</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/building-voice-bots">Building Voice bots</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/platforms-deployment">Platforms Deployment</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/managing-bot-state">Managing Bot Context and State</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Resources</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/basic/bot-hierarchy">Bot Hierarchy</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/business">Business</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/creating-story">Creating a Story</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/smalltalk">Small Talk</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/dialoguemanager">Dialogue Manager</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/story-templates">Story Templates</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/creating-nodes">Creating Nodes</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/connections">Connections</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/general-nodes">General Nodes</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/user-says-guidelines">User Says Guidelines</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/bot-says">Bot Says</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/chat-elements">Chat Elements</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/intent">Intent</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/disambiguation">Did you mean? (Disambiguation)</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/entities">Entities</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/bot-builder/basic/oracle-feedback">ORACLE Feedback</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/bot-prompt-trigger">Bot Prompt Trigger</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/forms">Forms</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/upload-graph-nodes">Upload Graph Nodes</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Integrations</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/integrations/introduction">Introduction</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/integrations/integration-parameters">Integration Parameters</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/integrations/integrating-apis">Integrating APIs</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/integrations/integrating-custom-code">Integrating Custom Code</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/integrations/additional-apis">Additional APIs</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Advanced</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/advanced/integrating-webviews-into-sdk">Integrating Webviews</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/advanced/integrating-with-external-bot">Integrating with External Bot</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/advanced/development-guidelines">Bot Development Life Cycle</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/advanced/testing-guidelines">Testing Guidelines</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/advanced/debugging-guidelines">How to debug your bot?</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">ORACLE Feedback</h1></header><article><div><span><p>The ORACLE Module helps Bot Builders discover methods by which an IVA can be improved and brought to a state where it is utilising capabilities of the ML Model to its maximum potential. It aims to give feedback to Bot Builders on how well the IVA has been trained from the &quot;User Says&quot; and &quot;Nodes&quot; created by the Bot Builder. However, before we delve into the details of the ORACLE Module, it’s essential to understand the expectations of the ML Model from the Bot Builder, so that improvements can be made accordingly.</p>
+<p><b>What does the ML Model expect to perform at its fullest?</b></p>
+<ol>
+<li><p>10 variants on each START NODE</p></li>
+<li><p>10 variants on each CONNECTION RESPONSE including -</p>
+<p>a. START NODE to DEPENDENT NODE</p>
+<p>b. DEPENDENT NODE to DEPENDENT NODE</p>
+<p>c. OUTPUT NODE to STATIC NODE</p>
+<p>d. OUTPUT NODE to DEPENDENT NODE</p></li>
+</ol>
+<p><b>NOTE</b> - If &gt;10 CONNECTION RESPONSES are not present, the performance of the ML Model, even on START Nodes would be affected negatively.</p>
+<ol start="3">
+<li><p>Similar or exact same “User Says” should not be present in multiple nodes. It has also been
+illustrated in the example shown above.</p></li>
+<li><p>NODES should not be too similar in the goal they aim to achieve, else the IVA may not be able to clearly differentiate and decide the correct NODE. Illustrated in the images below are two similar Nodes -</p></li>
+</ol>
+<p><img src="/assets/ORACLE_1.png" alt="ORACLE_1"> <img src="/assets/ORACLE_2.png" alt="ORACLE_2"></p>
+<p>Due to high similarity between Nodes, a minor variation in the User Message prevented a one-shot response from the IVA and triggered a Disambiguation Message.</p>
+<p><img src="/assets/ORACLE_3.png" alt="ORACLE_3"></p>
+<ol start="5">
+<li>Quality of the “User Says” should be as per <a href="/bot-builder/basic/user-says-guidelines">User Says Guidelines</a>.</li>
+</ol>
+<p>The ORACLE Module reaches the Bot Builder as part of the Training Completion Email. It is divided into 3 sections, each section having a list of issues with Training Data present in the IVA. If either of the sections have more than 30 entries, the section would be attached as a CSV to the email.</p>
+<p>The Bot Builder should prioritise in the order of Section 1, Section 2, Section 3 while fixing the issues highlighted by ORACLE Email.</p>
+<p><b>NOTE</b> -  The ORACLE Module only considers START NODES for the evaluation and display purposes.</p>
+<h4><a class="anchor" aria-hidden="true" id="section-1---presence-of-similar-user-says-across-two-nodes"></a><a href="#section-1---presence-of-similar-user-says-across-two-nodes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>SECTION 1 - PRESENCE OF SIMILAR USER SAYS ACROSS TWO NODES</h4>
+<p>This section shows a list of those “User Says” whose very close to each other or are present on more than one NODE. The aim of this section is to -</p>
+<pre><code class="hljs">  1. Bring forward some basic data sanity issues like duplicate User Says present in multiple nodes
+
+  2. Highlight the possibility of Disambiguation with minor variations in User Utterance,due to presence
+     of similar data across two Nodes.
+</code></pre>
+<p>Below image shows how Section 1 will appear in the ORACLE Email.</p>
+<p><img src="/assets/ORACLE_4.png" alt="ORACLE_4"></p>
+<p><b>Why should the issues in Section 1 be fixed?</b></p>
+<p>To better understand the need of fixing entries in Section 1, we need to see the first row in the above image. It shows two similar utterances present in the IVA across two different nodes. Consequently, when the user sends that statement as a message, the IVA, instead of responding in the first instance, sends a disambiguation message and hence, a sub-par User Experience.</p>
+<p><img src="/assets/ORACLE_5.png" alt="ORACLE_5"></p>
+<p>Ideally, the IVA should have replied in one instance, but the Disambiguation message made the chat a two step process, putting additional effort on the user to get information. The user might have ended up perceiving the IVA as non-intelligent, since the IVA got confused with a simple variation of the user utterance.</p>
+<p><b>What should the Bot Builder do after seeing entries in Section 1? </b></p>
+<ol>
+<li><p>Check if exactly the same “User Says” or highly similar “User Says” are present across multiple Nodes, as highlighted in Section 1.</p></li>
+<li><p>Test minor variants of statements present in Section 1. If the IVA responds with Disambiguation or responds from a wrong node, then the newly generated test variant should be added to the right node. This process is similar to the one shown in <a href="https://docs.haptik.ai/bot-builder/advanced/debugging-guidelines">HERE</a>.</p></li>
+<li><p>There is no need to test the exact statement present in Section 1, since the ML Model is designed to ALWAYS make the exact “User Says” work correctly. The user, however, may enter variations of the exact statements entered in User Says and hence, Bot Builder needs to test the variants of the statements present in Section 1, to ensure that they work as expected.</p></li>
+</ol>
+<h4><a class="anchor" aria-hidden="true" id="section-2---bot-may-not-work-on-the-variations-of-below-statements"></a><a href="#section-2---bot-may-not-work-on-the-variations-of-below-statements" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>SECTION 2 - BOT MAY NOT WORK ON THE VARIATIONS OF BELOW STATEMENTS</h4>
+<p>This section shows a list of “User Says” which have not been completely understood by the ML Model. The aim of this section is to -</p>
+<pre><code class="hljs">  1. Bring forward “User Says” on certain Nodes which need more variations to be added to help the ML Model 
+     understand the context of that particular “User Says” completely.
+
+  2. Highlight the possibility of some severe issues with the IVA. This will be reflected when the list of 
+     messages in Section 2 is unusually long (&gt; 100 entries).
+</code></pre>
+<p>Below image shows how Section 2 will appear in the ORACLE Email.</p>
+<p><img src="/assets/ORACLE_6.png" alt="ORACLE_6"></p>
+<p><b>Why should the issues in Section 2 be fixed? </b></p>
+<p>The need to fix entries in Section 2 can be best understood from the illustration below. The User message “Telemedicine” worked because there was an exact match present in the “User Says”.</p>
+<p>However, as per Section 2 of the Email, the ML Model has not learnt variations of “Telemedicine” completely. Thus, when the user sent a minor variation as a message to the IVA, the IVA sent a Disambiguation message.</p>
+<p><img src="/assets/ORACLE_7.png" alt="ORACLE_7"> <img src="/assets/ORACLE_8.png" alt="ORACLE_8"></p>
+<p>Ideally, the IVA should have replied in one instance, but the Disambiguation message made the chat a two step process, putting additional effort on the user to get information. The user might have ended up perceiving the IVA as non-intelligent, since the IVA got confused with a simple variation of the user utterance.</p>
+<p><b>What should the Bot Builder do after seeing entries in Section 2? </b></p>
+<ol>
+<li><p>Ensure all START Nodes have &gt; 10 User Says.</p></li>
+<li><p>More variations of the list of statements present in section 2 should be added to the respective Node.</p>
+<ul>
+<li>With respect to the above illustration, variants like “Can you tell me about telemedicine”, “I have to use telemedicine” etc should be added to the “Telemedicine” node, so that the ML Model strongly understands that Telemedicine’s association with this Node.</li>
+</ul></li>
+<li><p>If the list in Section II is too long, it should be checked whether all DEPENDENT responses have 10 variations each. If that's not the case, the Haptik's ML Team can be contacted for further assistance.</p></li>
+</ol>
+<p><b>NOTE</b> - If 10 or more CONNECTION RESPONSES are not present on each connection, the performance on even the START NODES would be affected negatively.</p>
+<ol start="4">
+<li>There is no need to test the exact statement present in Section 1, since the ML Model is designed to ALWAYS make the exact “User Says” work correctly. The user, however, may enter variations of the exact statements entered as User Says and hence, Bot Builder needs to test the variants of the statements present in Section 1, to ensure if they are working as expected.</li>
+</ol>
+<h4><a class="anchor" aria-hidden="true" id="section-3---confusion-in-the-bot-due-to-similarity-between-nodes"></a><a href="#section-3---confusion-in-the-bot-due-to-similarity-between-nodes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>SECTION 3 - CONFUSION IN THE BOT DUE TO SIMILARITY BETWEEN NODES</h4>
+<p>The aim of this section is to bring to the Bot builder’s notice -</p>
+<pre><code class="hljs">  1. Those PAIR OF NODES which appear similar in varying degrees, to the ML Model. The section also displays 
+     the User Says on those Nodes which might be causing the Overlap.
+
+  2. Certain Nodes, which appear similar since &gt;10 User Says have not been added to them.
+</code></pre>
+<p>Below image shows how Section 3 will appear in the ORACLE Email.</p>
+<p><img src="/assets/ORACLE_9.png" alt="ORACLE_9"></p>
+<p><b>Why should the issues in Section 3 be fixed?</b></p>
+<p>The issues need to be fixed because if the Nodes created by the Bot Builder appear similar in their objective to the ML Model, the model may end up giving inaccurate responses to the End User. It may also happen that the user unnecessarily receives a Disambiguation message, while the User Query could have been answered directly.</p>
+<p><b>What should the Bot Builder do after seeing entries in Section 3?</b></p>
+<ol>
+<li><p>Evaluate if certain START NODES can be merged if the use-cases they aim to cater to are from a User’s point of view, as shown in the illustration below.</p>
+<p>Check the below snapshots and notice that the NODES communicate a very similar message. It should be evaluated if there is a need to keep them as two separate nodes. There is very little probability that a User would be able to come up with such an intent which can be differentiated to such a granular level.</p>
+<p><img src="/assets/ORACLE_11.png" alt="ORACLE_11">  <img src="/assets/ORACLE_12.png" alt="ORACLE_12"></p></li>
+<li><p>The PAIR OF SIMILAR Nodes shown in this section show the possibility of wrong response being sent to the User. Hence, adequate testing needs to be done. Variants for testing can be generated by borrowing some keywords from Node B and adding them to variants present in Node A, as shown in steps below.</p>
+<p>a. As seen in the snapshot above, Section 3 highlights Nodes that appear similar to the Model - E.g Node A                        <b>Custom size</b> and Node B as <b>What size to order</b>.</p>
+<p>b. Pick 1 statement from each node - “What are the available mattress sizes?”
+and “Can you help with the size?”.</p>
+<p>c. Generate a variant on lines of “Can you help with available mattress sizes?”</p>
+<p>d. Send such variants as messages on the Bot to test them out.</p>
+<p>e. If such variants go to a wrong node or show disambiguation, add these newly generated test
+variants to the right node.</p>
+<p>E.g In the below image, Bot Builder should evaluate which Node can the User Message be added to. This process is similar to the one shown in <a href="https://docs.haptik.ai/bot-builder/advanced/debugging-guidelines">HERE</a>.</p>
+<p><img src="/assets/ORACLE_10.png" alt="ORACLE_10"></p></li>
+<li><p>Section 3 also mentions Nodes containing less than 10 User Says. There is a high chance the ML Models ends up considering Nodes similar, if 10 User Says are not added to all the START NODES and CONNECTION Responses.</p></li>
+</ol>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 6/8/2020</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/bot-builder/basic/entities"><span class="arrow-prev">← </span><span>Entities</span></a><a class="docs-next button" href="/bot-builder/basic/bot-prompt-trigger"><span>Bot Prompt Trigger</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Bot Builder</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://hellohaptik.github.io/haptik-ios-framework" class="footer-column-link">iOS SDK</a><a href="https://hellohaptik.github.io/haptik-android-lib" class="footer-column-link">Android SDK</a><a href="https://hellohaptik.github.io/javascript_sdk" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Webhooks</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Chat Tool</a><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/contributing/index" class="footer-column-link">Contributing</a><a href="https://docs.haptik.ai/other/security" class="footer-column-link">Security</a><a href="https://forms.gle/Z2SowBSFpWLayXQz9" class="footer-column-link">Support</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2020 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '224c7079e67e84a978d8b4621f6af16d',
+                indexName: 'haptik',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

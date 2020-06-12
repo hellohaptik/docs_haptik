@@ -44,4 +44,17 @@ We send the below messages before an agent could respond back when users are wai
 2. We will be reviewing your query in 10 minutes.
 3. We will be reviewing your query soon. The current traffic indicates that it'll take about an hour.
 
+This message is only sent if the chat is in the **Queue state**. We need to draft the Bot Break message or Agent Transfer message in a way that, post which when the user is still in queue, they will get this **Queue Time Indicator** message. Also, a **Delay message** is sent as configured in Team settings. 
+
+In most scenarios, delay messages are sent after 60 seconds or the time you have configued in the Team Settings screen, so this is generally the order in which the user gets messages -
+
+1. Bot Break or Agent Transfer message 
+(Example - Sorry, the bot cannot handle this. This conversation will be transferred to an agent)
+
+2. Queue Time Indicator message (as shared in the points above)
+
+3. Delay mmssage (Sorry, our agents are busy. Please try again after some time)
+
+If the user still stays, user sees the agent entering the chat.
+
 ------

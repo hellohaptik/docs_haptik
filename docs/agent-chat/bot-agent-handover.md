@@ -33,5 +33,15 @@ You can send a chat to any specific agent using the *Reassign* Chat button from 
 For automated transitions, Business Manager in mogambo has a `Team Manager` section where you can configure the Team that the chat should be moved to.
 
     Tip: API integration functions can also specify the team to which a chat is to be sent.
+ 
+ ## Queue Time Indicator
+ 
+This helps us to set correct expectation and smoothen the transition from bot to agent for end users. We engage the end users in queue by sending a message with estimated queue time. We need to inform end users on Whatsapp, Facebook, Web or any other platform about when an agent would get assigned to them. So they can decide if they want to abandon chat or stay on chat. 
+
+We send the below messages before an agent could respond back when users are waiting in the queue. Message 1 comes when estimated First Response Time is within 60 seconds. In message 2 below, we replace the 10 minutes with the value calculated for the last 1 week for the said Team. This value updates every 24 hours. And for First Response Time above or equal to an hour, we send the 3rd message copy to the user. 
+
+1. We will be reviewing your query in a minute.
+2. We will be reviewing your query in 10 minutes.
+3. We will be reviewing your query soon. The current traffic indicates that it'll take about an hour.
 
 ------

@@ -103,7 +103,7 @@ module.exports = () => (
           title: 'Web SDK',
           description: 'Supercharge your app with AI powered Chatbots enabled by our powerful Javascript SDK',
           ctaText: 'Get Started',
-          ctaLink: 'https://hellohaptik.github.io/javascript_sdk/'
+          ctaLink: 'https://hellohaptik.github.io/javascript-xdk/'
         },
         {
           title: 'Webhooks',

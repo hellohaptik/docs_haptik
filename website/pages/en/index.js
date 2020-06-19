@@ -73,12 +73,12 @@ module.exports = () => (
       ]}
       others={[
         {
-          title: 'Security',
-          url: '/other/security'
-        },
-        {
           title: 'HSL',
           url: '/hsl'
+        },
+        {
+          title: 'Security',
+          url: '/other/security'
         },
         {
           title: 'SLA',

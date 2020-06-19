@@ -77,6 +77,10 @@ module.exports = () => (
           url: '/other/security'
         },
         {
+          title: 'HSL',
+          url: '/hsl'
+        },
+        {
           title: 'SLA',
           url: '/other/sla'
         }

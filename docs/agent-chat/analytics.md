@@ -26,6 +26,8 @@ title: Analytics
 1. **Total Chats Received** 
     
     All ongoing chats for a chosen Team view, that started in the selected time duration. This includes chats in waiting, queued chats and pinned chats for the Team in question. The total number of all chats received i.e. `first_message_time` in the selected time duration from the time-date picker.
+    
+> Note: For all chats which were marked complete when the team was offline (and thus never went to the team and therefore any agent) are not counted in this.
 
 2. **Completed by Agents** 
     

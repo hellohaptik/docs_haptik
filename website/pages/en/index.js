@@ -54,14 +54,14 @@ module.exports = () => (
         {
           title: 'Bot Builder',
           description:
-            'Everything required to get you from beginner to advanced in Bot Building & Development',
-          ctaText: 'Learn More',
+            'Everything required to get you from beginner to advanced in Bot Building',
+          ctaText: 'Get Started',
           ctaLink: '/bot-builder/basic/introduction'
         },
         {
           title: 'Agent Chat',
-          description: 'Agent Chat is used to strengthen customer support, drive CSAT when a chat transitions to Human agents. Manage capacity, learn how to prioritise chats with these resources & guides',
-          ctaText: "Let's Begin",
+          description: 'Learn how Human Escalation is handled on bots using Agent Chat tool',
+          ctaText: "Get Started",
           ctaLink: '/agent-chat'
         },
         {
@@ -72,6 +72,10 @@ module.exports = () => (
         }
       ]}
       others={[
+        {
+          title: 'HSL',
+          url: '/hsl'
+        },
         {
           title: 'Security',
           url: '/other/security'
@@ -106,39 +110,31 @@ module.exports = () => (
           ctaLink: 'https://hellohaptik.github.io/javascript-xdk/'
         },
         {
-          title: 'Webhooks',
+          title: 'WhatsApp',
+          description:
+            'Documentation to help you build conversational experiences on WhatsApp',
+          ctaText: 'Get Started',
+          ctaLink: '/whatsapp'
+        },
+        {
+          title: 'Facebook',
+          description:
+            'Documentation to help you build conversational experiences on Facebook',
+          ctaText: 'Get Started',
+          ctaLink: '/other/facebook'
+        },
+        {
+          title: 'Bot API',
           description:
             'API docs to help you build powerful chatbot solutions with great customisations',
           ctaText: 'Get Started',
           ctaLink: '/webhooks'
-        },
-        {
-          title: 'WhatsApp',
-          description:
-            'API docs to help you build conversational experiences on WhatsApp',
-          ctaText: 'Get Started',
-          ctaLink: '/whatsapp'
-        },
-      {
-          title: 'External Agent Chat Tool',
-          description:
-            'Connect your Agent Chat tool to a Haptik Bot with this documentation',
-          ctaText: 'Get Started',
-          ctaLink: '/external-chat-tool'
         }
       ]}
       others={[
         {
-          title: 'HSL',
-          url: '/hsl'
-        },
-        {
-          title: 'Facebook',
-          url: '/other/facebook'
-        },
-        {
-          title: 'Native support',
-          url: 'https://hellohaptik.github.io/javascript_sdk/native-support'
+          title: 'External Agent Chat Tool',
+          url: '/external-chat-tool'
         }
       ]}
     />

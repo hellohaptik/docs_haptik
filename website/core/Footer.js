@@ -38,15 +38,13 @@ class Footer extends React.Component {
               { title: 'iOS SDK', url: 'https://hellohaptik.github.io/haptik-ios-framework' },
               { title: 'Android SDK', url: 'https://hellohaptik.github.io/haptik-android-lib' },
               { title: 'Web SDK', url: 'https://hellohaptik.github.io/javascript_sdk' },
-              { title: 'Webhooks', url: 'https://docs.haptik.ai/webhooks/' },
-              { title: 'External Chat Tool', url: 'https://docs.haptik.ai/external-chat-tool/' },
-              { title: 'HSL', url: 'https://docs.haptik.ai/hsl/' }
+              { title: 'Bot API', url: 'https://docs.haptik.ai/webhooks/' }
             ])}
             {this.renderFooterColumn('Others', [
-              { title: 'Contributing', url: 'https://docs.haptik.ai/contributing/index' },
+              { title: 'HSL', url: 'https://docs.haptik.ai/hsl/' }
               { title: 'Security', url: 'https://docs.haptik.ai/other/security' },
-              { title: 'Support', url: 'https://forms.gle/Z2SowBSFpWLayXQz9' },
-              { title: 'SLA', url: 'https://docs.haptik.ai/other/sla' }
+              { title: 'SLA', url: 'https://docs.haptik.ai/other/sla' },
+              { title: 'External Chat Tool', url: 'https://docs.haptik.ai/external-chat-tool/' }
             ])}
           </div>
           <div className="footer-copyright" />

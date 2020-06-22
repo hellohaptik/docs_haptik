@@ -41,10 +41,10 @@ class Footer extends React.Component {
               { title: 'Bot API', url: 'https://docs.haptik.ai/webhooks/' }
             ])}
             {this.renderFooterColumn('Others', [
-              { title: 'HSL', url: 'https://docs.haptik.ai/hsl/' }
+              { title: 'HSL', url: 'https://docs.haptik.ai/hsl/' },
               { title: 'Security', url: 'https://docs.haptik.ai/other/security' },
               { title: 'SLA', url: 'https://docs.haptik.ai/other/sla' },
-              { title: 'External Chat Tool', url: 'https://docs.haptik.ai/external-chat-tool/' }
+              { title: 'External Agent Chat Tool', url: 'https://docs.haptik.ai/external-chat-tool/' }
             ])}
           </div>
           <div className="footer-copyright" />

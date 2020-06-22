@@ -133,12 +133,14 @@ A successful request to the API will return a `200` status code with a default J
         {
             "text": "Search places to visit{task}",
             "sender": "user",
-            "message_id": 1742
+            "message_id": 1742,
+            "timestamp": "06/22/20 07:24:25 AM UTC"
         },
         {
             "text": "TEXT",
             "sender": "bot",
-            "message_id": 1743
+            "message_id": 1743,
+            "timestamp": "06/22/20 07:24:26 AM UTC"
         }
     ]
 }

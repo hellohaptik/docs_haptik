@@ -2,7 +2,7 @@
 title: Signing management requests
 ---
 
-The management APIs require that requests be signed by the ECT for authentication and authorisation.
+Few management APIs require requests signed by the ECT for authentication and authorisation.
 
 > Note: This is required only for issuing JWTs and listing ECT clients.
 > All other APIs **do not** require this.
@@ -121,6 +121,15 @@ We confirm the validity of the signing certificate by completing the following s
 
    **If they do not match, we discard the request.**
 
+ > Note: make sure the signature is generated as follows:
+>  1. Convert the prepared request body to bytes with UTF-8 encoding.
+>  2. Generate a SHA-1 hash of encoded body.
+>  3. ASN.1 encode the hash and convert it from hex to binary.
+>  4. Encrypt the binary blob with your private key.
+>
+> **These steps are provided only for reference. You should not need to do the above operations by hand.
+>   Your language WILL provide a one-shot signing system.
+>   It is HIGHLY RECOMMENDED that you use the high level functionality and avoid using low level primitives.**
 
 ## Timestamp verification
 
@@ -153,3 +162,54 @@ POST /jwt/issue
  > The time is expected to be in the UTC timezone. (As indicated by the *Z* in the timestamp string.)
 
 *We return HTTP error code `400 Bad Request`, to reject requests in which the timestamp falls outside the tolerance.*
+
+## Sample python snippet for signed requests
+
+```python
+#!/usr/bin/env python3
+
+import datetime
+import requests
+import json
+import pem
+import base64
+from OpenSSL import crypto
+
+
+keyfile_path = 'host.key' # PEM encoded RSA/ECDSA private key
+
+
+keyfile = pem.parse_file(keyfile_path)[0]
+
+private_key = crypto.load_privatekey(crypto.FILETYPE_PEM, keyfile.as_bytes())
+
+
+url = 'https://<base_url>/tract/management/token/issue/' # base URL is pre-shared with you
+
+payload = {
+    'client_id': '', # client ID for which you are generating the token
+                     # ID can be fetched from the client enumeration API
+    'fqdn': '', # your FQDN pre-shared with us
+    'timestamp': datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
+}
+
+# optional minification step
+# doesn't really make a difference as long as the body sent and the body hashed+signed are the same
+minified_json = json.dumps(payload, separators=(',', ':'))
+
+headers = {
+  'Content-Type': 'application/json',
+  'Signature': base64.b64encode(crypto.sign(private_key, bytes(minified_json, 'utf-8'), 'sha1')),
+  'SignatureCertUUID': '' # This is shared with you when you pre-share a cert with us.
+                          # WARNING: Make sure the UUID is the correct UUID for the certificate used for this request.
+                          #          Mismatching UUID will cause the request to fail.
+}
+
+response = requests.request('POST', url, headers=headers, data=minified_json)
+
+# verify data sent and received
+print(response.request.headers, end='\n\n')
+print(response.request.body, end='\n\n')
+print(response.text.encode('utf8'))
+
+```

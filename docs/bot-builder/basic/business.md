@@ -61,6 +61,8 @@ Business Name: This refers to the overarching topic of its conversational capabi
 
 - Enable Small Talk: Allows certain common phrases to be understood and replied to by the bot. Say, the user types “Hi” or “Good morning”, when Small Talk is enabled, the bot will greet the user and respond back with an apt greeting (ex: “Good afternoon” detecting time of the day). Know that the Small Talk module cannot be customized or changed
 
+- Enable user file deletion: When enabled for a business, all the files uploaded by the user for that business will be deleted from Haptik's Storage after 72 hrs, from the time of upload for the file.
+
 - Active Bots: When an user sends message while conversing with this Business, Active Bots will be the bots whose User Says (combinations of predicted user inputs we add in bot builder) will be searched for a relevant match to the user’s input
 
 - Default Bots: When a user adds an input, this is the first bot whose User Says will be searched for a relevant match to the user’s input. Set the default bot to the conversation most relevant to the Business

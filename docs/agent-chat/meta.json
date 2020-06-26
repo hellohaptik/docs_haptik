@@ -19,7 +19,8 @@
             "businesses",
             "teams",
             "analytics",
-            "closing-categories" 
+            "closing-categories",
+            "agent-reports"
         ]
     },
     "headerLink": {

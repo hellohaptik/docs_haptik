@@ -77,7 +77,7 @@ Similar to the Team Offline message, you can configure the delay message that is
 4. View agent status
 5. View agent chats
 
-## Analyse Queue Capacity and Online Agent slots (Availability)
+## Queue Capacity and Online Agent slots
 
 ![Queue capacity 1](assets/case_1.png)
 
@@ -88,7 +88,7 @@ Check the image above. Here, you get a sense of the following metrics -
 
 > Note: The Online agents' ratio tells you the number of agents online by total number of agents in a given team. 
 
-### How is capacity calculated?
+### How is Queue capacity calculated?
 
 ![Queue capacity 2](assets/case_2.png)
 

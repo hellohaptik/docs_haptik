@@ -101,7 +101,7 @@ Let's understand the formula to get Chat handling capacity by a example -
 
 i. Total concurrency for online agents in the team = A
 
-ii. Waiting + Pinned Chats total for all agents in the shown team = B
+ii. Waiting + Assigned Chats total for all agents in the shown team = B
 
 iii. Availability is calculated as = (A-B)/A x 100
 

@@ -77,11 +77,11 @@ Similar to the Team Offline message, you can configure the delay message that is
 4. View agent status
 5. View agent chats
 
-## Queue Capacity and Online Agent slots
+## Chat handling Capacity and Online Agent slots
 
 ![Queue capacity 1](assets/case_1.png)
 
-The Queue capacity card here helps a Team Lead realise the need for agents i.e. for under capacity scenario, the TLs and let some agents go offline. And in case a Team goes over capacity, TLs can call upon agents to be online.
+The Chat handling capacity for a Team here helps figure the required number for agents at any given instant i.e. for under capacity scenario, the TLs can let some agents go offline. And in case a Team goes over capacity, TLs can call upon agents to be online.
 
 Check the image above. Here, you get a sense of the following metrics - 
 
@@ -93,7 +93,7 @@ Check the image above. Here, you get a sense of the following metrics -
 
 > Note: The Online agents' ratio tells you the number of agents online by total number of agents in a given team. 
 
-### How is Queue capacity calculated?
+### How is Team capacity calculated?
 
 ![Queue capacity 2](assets/case_2.png)
 

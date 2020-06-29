@@ -93,8 +93,11 @@ Check the image above. Here, you get a sense of the following metrics -
 ![Queue capacity 2](assets/case_2.png)
 
 Let's understand the formula to get Chat handling capacity by a example -
+
 i. Total concurrency for online agents in the team = A
+
 ii. Waiting + Pinned Chats total for all agents in the shown team = B
+
 iii. Availability is calculated as = (A-B)/A x 100
 
 The point `iii` above gives the availability %age value. This value in green means the team can handle the incoming chat volume. 

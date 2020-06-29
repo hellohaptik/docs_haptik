@@ -83,11 +83,11 @@ Similar to the Team Offline message, you can configure the delay message that is
 
 The Chat handling capacity for a Team here helps figure the required number for agents at any given instant i.e. for under capacity scenario, the TLs can let some agents go offline. And in case a Team goes over capacity, TLs can call upon agents to be online.
 
-Check the image above. Here, you get a sense of the following metrics - 
+Check the image above. Here, you get 2 values in the Capacity card - 
 
 1. Chat handling capacity: This is a %age value that signifies if your team capacity is ideal or your team cannot handle the current incoming chat volume. For example, if the number value is in red and the copy states `over capacity`, it means the chat volume supercedes the available online agents' capacity 
 
-2. Chats waiting to be taken: Total number of chats in queue i.e. all users waiting in pending state
+2. Chats waiting to be taken: Total number of chats in queue + chats in waiting i.e. all users who might need an agent at any given instant
 
 3. Total Slots: Total concurrency of each online agent in the team. Say, if a team had 4 agents with each having a concurrency of 3. The total available slots for the team would be 12. 
 

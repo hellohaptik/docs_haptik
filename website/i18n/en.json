@@ -14,6 +14,12 @@
       "agent-chat/adding-custom-tools": {
         "title": "Adding your own custom tool"
       },
+      "agent-chat/agent-reports": {
+        "title": "Agent Reports"
+      },
+      "agent-chat/analytics": {
+        "title": "Analytics"
+      },
       "agent-chat/bot-agent-handover": {
         "title": "Bot Agent Handover"
       },
@@ -46,6 +52,72 @@
       },
       "agent-chat/teams": {
         "title": "Teams"
+      },
+      "android-sdk/additional-features": {
+        "title": "Additional Features"
+      },
+      "android-sdk/configure-advanced-functionality": {
+        "title": "Advanced Functionality"
+      },
+      "android-sdk/configuring-push-notifications": {
+        "title": "Push Notifications"
+      },
+      "android-sdk/core-module-integration": {
+        "title": "Integrating Core Module"
+      },
+      "android-sdk/extension-module-integration": {
+        "title": "Extension Module Integration Guide"
+      },
+      "android-sdk/faqs": {
+        "title": "Troubleshooting"
+      },
+      "android-sdk/image-loading-modules": {
+        "title": "Image Loading Modules"
+      },
+      "android-sdk/index": {
+        "title": "Quick Start"
+      },
+      "android-sdk/integrating-jio-communications-module": {
+        "title": "Integrating Jio Communications"
+      },
+      "android-sdk/language-support": {
+        "title": "Enabling Language Support"
+      },
+      "android-sdk/launch-chat-activity": {
+        "title": "Launch Chat Activity"
+      },
+      "android-sdk/migrating-from-earlier-versions": {
+        "title": "Migration"
+      },
+      "android-sdk/multiple-clevertap-account-issue": {
+        "title": "Multiple CleverTap Account Issue"
+      },
+      "android-sdk/offerings": {
+        "title": "SDK Offerings"
+      },
+      "android-sdk/overview": {
+        "title": "Overview"
+      },
+      "android-sdk/permissions": {
+        "title": "Permissions"
+      },
+      "android-sdk/rate-share": {
+        "title": "Rate & Share"
+      },
+      "android-sdk/sdk-sample": {
+        "title": "Sample App"
+      },
+      "android-sdk/sign-up": {
+        "title": "Authentication"
+      },
+      "android-sdk/style-guide": {
+        "title": "Theming"
+      },
+      "android-sdk/voice-support": {
+        "title": "Enabling Voice Support"
+      },
+      "android-sdk/xdk-module-integration": {
+        "title": "Integrating XDK Module"
       },
       "bot-analytics/basic-analysis": {
         "title": "Basic Analysis"
@@ -80,14 +152,29 @@
       "bot-analytics/using-message-analysis": {
         "title": "Message Analysis"
       },
+      "bot-builder/advanced/debugging-guidelines": {
+        "title": "How to debug your bot?"
+      },
       "bot-builder/advanced/demo-links": {
         "title": "Demo Page"
+      },
+      "bot-builder/advanced/development-guidelines": {
+        "title": "Bot Development Life Cycle"
       },
       "bot-builder/advanced/integrating-webviews-into-sdk": {
         "title": "Integrating Webviews"
       },
       "bot-builder/advanced/integrating-with-external-bot": {
         "title": "Integrating with External Bot"
+      },
+      "bot-builder/advanced/migration-guide": {
+        "title": "bot-builder/advanced/migration-guide"
+      },
+      "bot-builder/advanced/nlu-change-log": {
+        "title": "bot-builder/advanced/nlu-change-log"
+      },
+      "bot-builder/advanced/testing-guidelines": {
+        "title": "Testing Guidelines"
       },
       "bot-builder/basic/bot-hierarchy": {
         "title": "Bot Hierarchy"
@@ -119,8 +206,11 @@
       "bot-builder/basic/design-guidelines": {
         "title": "Designing Chat Experiences"
       },
-      "bot-builder/basic/editing-smalltalk": {
-        "title": "Editing Smalltalk"
+      "bot-builder/basic/dialoguemanager": {
+        "title": "Dialogue Manager"
+      },
+      "bot-builder/basic/disambiguation": {
+        "title": "Did you mean? (Disambiguation)"
       },
       "bot-builder/basic/entities": {
         "title": "Entities"
@@ -134,8 +224,8 @@
       "bot-builder/basic/general-nodes": {
         "title": "General Nodes"
       },
-      "bot-builder/basic/general-responses": {
-        "title": "General Responses"
+      "bot-builder/basic/intent": {
+        "title": "Intent"
       },
       "bot-builder/basic/introduction": {
         "title": "Introduction"
@@ -144,19 +234,31 @@
         "title": "Making Your First Bot"
       },
       "bot-builder/basic/managing-bot-state": {
-        "title": "Managing Bot State"
+        "title": "Managing Bot Context and State"
       },
       "bot-builder/basic/multiple-languages": {
         "title": "Multiple Languages"
       },
+      "bot-builder/basic/oracle-feedback": {
+        "title": "ORACLE Feedback"
+      },
       "bot-builder/basic/platforms-deployment": {
         "title": "Platforms Deployment"
+      },
+      "bot-builder/basic/smalltalk": {
+        "title": "Small Talk"
       },
       "bot-builder/basic/story-templates": {
         "title": "Story Templates"
       },
       "bot-builder/basic/testing-bot": {
         "title": "Testing your bot"
+      },
+      "bot-builder/basic/upload-graph-nodes": {
+        "title": "Upload Graph Nodes"
+      },
+      "bot-builder/basic/user-says-guidelines": {
+        "title": "User Says Guidelines"
       },
       "bot-builder/basic/user-says": {
         "title": "User Says"
@@ -206,6 +308,30 @@
       "contributing/styleguide": {
         "title": "Styleguide"
       },
+      "external-chat-tool/appendix": {
+        "title": "Appendix"
+      },
+      "external-chat-tool/event-APIs": {
+        "title": "Event APIs"
+      },
+      "external-chat-tool/index": {
+        "title": "Index"
+      },
+      "external-chat-tool/management-APIs": {
+        "title": "Management APIs"
+      },
+      "external-chat-tool/message-APIs": {
+        "title": "Message APIs"
+      },
+      "external-chat-tool/security": {
+        "title": "Signing management requests"
+      },
+      "external-chat-tool/thread-control-APIs": {
+        "title": "Thread control APIs"
+      },
+      "external-chat-tool/user-APIs": {
+        "title": "User APIs"
+      },
       "hsl/button": {
         "title": "Button"
       },
@@ -223,6 +349,45 @@
       },
       "hsl/text": {
         "title": "Text"
+      },
+      "ios-sdk/analytics": {
+        "title": "Analytics"
+      },
+      "ios-sdk/conversations": {
+        "title": "Conversation"
+      },
+      "ios-sdk/faq": {
+        "title": "Troubleshooting"
+      },
+      "ios-sdk/features": {
+        "title": "Additional Features"
+      },
+      "ios-sdk/index": {
+        "title": "Quick Start"
+      },
+      "ios-sdk/location": {
+        "title": "Location Support"
+      },
+      "ios-sdk/notifications": {
+        "title": "Push Notifications"
+      },
+      "ios-sdk/permissions": {
+        "title": "Required Permissions"
+      },
+      "ios-sdk/rate-share": {
+        "title": "Rate & Share"
+      },
+      "ios-sdk/sdk-sample": {
+        "title": "Sample App"
+      },
+      "ios-sdk/sign-up": {
+        "title": "Authentication"
+      },
+      "ios-sdk/theming": {
+        "title": "Theming"
+      },
+      "ios-sdk/voice": {
+        "title": "Voice Support"
       },
       "other/cordova": {
         "title": "Cordova"
@@ -250,6 +415,63 @@
       },
       "product-overview/index": {
         "title": "Getting started"
+      },
+      "web-sdk/configuration-customisation": {
+        "title": "Customisation"
+      },
+      "web-sdk/configuration-sdk-methods": {
+        "title": "SDK Methods"
+      },
+      "web-sdk/example-always-open": {
+        "title": "Example: Always Open"
+      },
+      "web-sdk/example-custom-button": {
+        "title": "Example: Custom Button"
+      },
+      "web-sdk/example-custom-signup": {
+        "title": "Example: Custom Signup"
+      },
+      "web-sdk/example-multi-language": {
+        "title": "Example: Multi Language"
+      },
+      "web-sdk/example-voice": {
+        "title": "Example: Voice"
+      },
+      "web-sdk/feature-bot-prompts": {
+        "title": "Bot Prompts"
+      },
+      "web-sdk/feature-custom-button": {
+        "title": "Custom Button"
+      },
+      "web-sdk/feature-launch-message": {
+        "title": "Launch Message"
+      },
+      "web-sdk/feature-multiple-languages": {
+        "title": "Multiple Languages"
+      },
+      "web-sdk/feature-taskbox": {
+        "title": "Taskbox"
+      },
+      "web-sdk/feature-typing-suggestions": {
+        "title": "Typing Suggestions"
+      },
+      "web-sdk/feature-user-feedback": {
+        "title": "User Message Feedback"
+      },
+      "web-sdk/feature-user-signup": {
+        "title": "Authentication"
+      },
+      "web-sdk/index": {
+        "title": "Quick Start"
+      },
+      "web-sdk/support-browser": {
+        "title": "Browser Support"
+      },
+      "web-sdk/support-native": {
+        "title": "Native Support"
+      },
+      "web-sdk/support-troubleshooting": {
+        "title": "Troubleshooting"
       },
       "webhooks/api-security-rules": {
         "title": "API Security"
@@ -319,27 +541,6 @@
       },
       "whatsapp/whatsapp-language-settings": {
         "title": "WhatsApp Language Settings"
-      },
-      "external-chat-tool/index": {
-        "title": "Index"
-      },
-      "external-chat-tool/security": {
-        "title": "Security"
-      },
-      "external-chat-tool/management-APIs": {
-        "title": "Management APIs"
-      },
-      "external-chat-tool/user-APIs": {
-        "title": "User APIs"
-      },
-      "external-chat-tool/message-APIs": {
-        "title": "Message APIs"
-      },
-       "external-chat-tool/event-APIs": {
-        "title": "Event APIs"
-      },
-      "external-chat-tool/thread-control-APIs": {
-        "title": "Thread control APIs"
       }
     },
     "links": {
@@ -352,11 +553,13 @@
       "Resources": "Resources",
       "Integrations": "Integrations",
       "Advanced": "Advanced",
-      "Contributing": "Contributing",
+      " ": " ",
       "Docusaurus": "Docusaurus",
       "First Category": "First Category",
       "Second Category": "Second Category",
+      "Contributing": "Contributing",
       "HSL Elements": "HSL Elements",
+      "Integration APIs": "Integration APIs",
       "Introduction": "Introduction",
       "How to Create a Webhook": "How to Create a Webhook",
       "Independent Integrations": "Independent Integrations",

@@ -1,4 +1,4 @@
-const React = require('react');
+const React = require("react");
 const siteConfig = require(`${process.cwd()}/siteConfig.js`);
 
 function Section({ title, description, ctaText, ctaLink }) {
@@ -52,38 +52,40 @@ module.exports = () => (
       title="Tools"
       sections={[
         {
-          title: 'Bot Builder',
+          title: "Bot Builder",
           description:
-            'Everything required to get you from beginner to advanced in Bot Building',
-          ctaText: 'Get Started',
-          ctaLink: '/bot-builder/basic/introduction'
-        },
-        {
-          title: 'Agent Chat',
-          description: 'Learn how Human Escalation is handled on bots using Agent Chat tool',
+            "Everything required to get you from beginner to advanced in Bot Building",
           ctaText: "Get Started",
-          ctaLink: '/agent-chat'
+          ctaLink: "/bot-builder/basic/introduction",
         },
         {
-          title: 'Analytics',
-          description: 'Learn how to uncover hidden insights in your chat data & communication',
-          ctaText: 'Get Started',
-          ctaLink: '/bot-analytics'
-        }
+          title: "Agent Chat",
+          description:
+            "Learn how Human Escalation is handled on bots using Agent Chat tool",
+          ctaText: "Get Started",
+          ctaLink: "/agent-chat",
+        },
+        {
+          title: "Analytics",
+          description:
+            "Learn how to uncover hidden insights in your chat data & communication",
+          ctaText: "Get Started",
+          ctaLink: "/bot-analytics",
+        },
       ]}
       others={[
         {
-          title: 'HSL',
-          url: '/hsl'
+          title: "HSL",
+          url: "/hsl",
         },
         {
-          title: 'Security',
-          url: '/other/security'
+          title: "Security",
+          url: "/other/security",
         },
         {
-          title: 'SLA',
-          url: '/other/sla'
-        }
+          title: "SLA",
+          url: "/other/sla",
+        },
       ]}
     />
     <Row
@@ -91,51 +93,53 @@ module.exports = () => (
       title="Integrations"
       sections={[
         {
-          title: 'iOS SDK',
-          description: 'Objective-C framework to bring the chatbot magic in your app for iOS 9 & higher',
-          ctaText: 'Get Started',
-          ctaLink: '/ios-sdk'
-        },
-        {
-          title: 'Android SDK',
+          title: "iOS SDK",
           description:
-            'Java framework to supercharge your Android app with AI powered chatbot capabilities',
-          ctaText: 'Get Started',
-          ctaLink: '/android-sdk'
+            "Objective-C framework to bring the chatbot magic in your app for iOS 9 & higher",
+          ctaText: "Get Started",
+          ctaLink: "/ios-sdk",
         },
         {
-          title: 'Web SDK',
-          description: 'Supercharge your app with AI powered Chatbots enabled by our powerful Javascript SDK',
-          ctaText: 'Get Started',
-          ctaLink: 'https://hellohaptik.github.io/javascript-xdk/'
-        },
-        {
-          title: 'WhatsApp',
+          title: "Android SDK",
           description:
-            'Documentation to help you build conversational experiences on WhatsApp',
-          ctaText: 'Get Started',
-          ctaLink: '/whatsapp'
+            "Java framework to supercharge your Android app with AI powered chatbot capabilities",
+          ctaText: "Get Started",
+          ctaLink: "/android-sdk",
         },
         {
-          title: 'Facebook',
+          title: "Web SDK",
           description:
-            'Documentation to help you build conversational experiences on Facebook',
-          ctaText: 'Get Started',
-          ctaLink: '/other/facebook'
+            "Supercharge your app with AI powered Chatbots enabled by our powerful Javascript SDK",
+          ctaText: "Get Started",
+          ctaLink: "/web-sdk",
         },
         {
-          title: 'Bot API',
+          title: "WhatsApp",
           description:
-            'API docs to help you build powerful chatbot solutions with great customisations',
-          ctaText: 'Get Started',
-          ctaLink: '/webhooks'
-        }
+            "Documentation to help you build conversational experiences on WhatsApp",
+          ctaText: "Get Started",
+          ctaLink: "/whatsapp",
+        },
+        {
+          title: "Facebook",
+          description:
+            "Documentation to help you build conversational experiences on Facebook",
+          ctaText: "Get Started",
+          ctaLink: "/other/facebook",
+        },
+        {
+          title: "Bot API",
+          description:
+            "API docs to help you build powerful chatbot solutions with great customisations",
+          ctaText: "Get Started",
+          ctaLink: "/webhooks",
+        },
       ]}
       others={[
         {
-          title: 'External Agent Chat Tool',
-          url: '/external-chat-tool'
-        }
+          title: "External Agent Chat Tool",
+          url: "/external-chat-tool",
+        },
       ]}
     />
   </div>

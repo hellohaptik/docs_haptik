@@ -34,7 +34,7 @@ You can later use a different section to get more detailed information on any of
 ### Filters
 On top of any page inside the Analytics tool you will find filter options. These filter options can help you filter your data by Channels or Bots from the filters on the left hand side. 
 
-You can select `Channels` or `Bots` from the first dropdown on the left hand side and then select the particular channel or bot from the dropdown next to it.
+You can select `Bots` or `Channels` from the first dropdown on the left hand side and then select the particular channel or bot from the dropdown next to it.
 
 ![Filter Channels Bots](assets/basic-filter-channels-bots.png)
 

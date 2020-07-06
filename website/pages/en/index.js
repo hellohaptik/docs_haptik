@@ -94,7 +94,7 @@ module.exports = () => (
           title: 'iOS SDK',
           description: 'Objective-C framework to bring the chatbot magic in your app for iOS 9 & higher',
           ctaText: 'Get Started',
-          ctaLink: 'https://hellohaptik.github.io/haptik-ios-framework'
+          ctaLink: '/ios-sdk'
         },
         {
           title: 'Android SDK',

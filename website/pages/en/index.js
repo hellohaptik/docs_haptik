@@ -1,12 +1,12 @@
-const React = require("react");
+const React = require('react');
 const siteConfig = require(`${process.cwd()}/siteConfig.js`);
 
 function Section({ title, description, ctaText, ctaLink }) {
   return (
-    <div className="home-row-section">
-      <div className="home-row-section-title">{title}</div>
-      <div className="home-row-section-description">{description}</div>
-      <a href={ctaLink} className="home-row-section-cta">
+    <div className='home-row-section'>
+      <div className='home-row-section-title'>{title}</div>
+      <div className='home-row-section-description'>{description}</div>
+      <a href={ctaLink} className='home-row-section-cta'>
         {ctaText}
       </a>
     </div>
@@ -15,21 +15,21 @@ function Section({ title, description, ctaText, ctaLink }) {
 
 function Row({ title, sections = [], others = [], id }) {
   return (
-    <div className="home-row-wrapper">
-      <div className="home-row-anchor" id={id} />
-      <div className="home-row">
-        <div className="home-row-title">{title}</div>
-        <div className="home-row-columns">
-          <div className="home-row-sections column">
+    <div className='home-row-wrapper'>
+      <div className='home-row-anchor' id={id} />
+      <div className='home-row'>
+        <div className='home-row-title'>{title}</div>
+        <div className='home-row-columns'>
+          <div className='home-row-sections column'>
             {sections.map((section, i) => (
               <Section key={i} {...section} />
             ))}
           </div>
           {others.length ? (
-            <div className="home-row-others column">
+            <div className='home-row-others column'>
               <React.Fragment>
-                <div className="home-row-others-title">Other</div>
-                <div className="home-row-others-links">
+                <div className='home-row-others-title'>Other</div>
+                <div className='home-row-others-links'>
                   {others.map(({ url, title }, i) => (
                     <a key={i} href={url}>
                       {title}
@@ -46,99 +46,99 @@ function Row({ title, sections = [], others = [], id }) {
 }
 
 module.exports = () => (
-  <div className="home">
+  <div className='home'>
     <Row
-      id="tools"
-      title="Tools"
+      id='tools'
+      title='Tools'
       sections={[
         {
-          title: "Bot Builder",
+          title: 'Bot Builder',
           description:
-            "Everything required to get you from beginner to advanced in Bot Building",
-          ctaText: "Get Started",
-          ctaLink: "/bot-builder/basic/introduction",
+            'Everything required to get you from beginner to advanced in Bot Building',
+          ctaText: 'Get Started',
+          ctaLink: '/bot-builder/basic/introduction',
         },
         {
-          title: "Agent Chat",
+          title: 'Agent Chat',
           description:
-            "Learn how Human Escalation is handled on bots using Agent Chat tool",
-          ctaText: "Get Started",
-          ctaLink: "/agent-chat",
+            'Learn how Human Escalation is handled on bots using Agent Chat tool',
+          ctaText: 'Get Started',
+          ctaLink: '/agent-chat',
         },
         {
-          title: "Analytics",
+          title: 'Analytics',
           description:
-            "Learn how to uncover hidden insights in your chat data & communication",
-          ctaText: "Get Started",
-          ctaLink: "/bot-analytics",
+            'Learn how to uncover hidden insights in your chat data & communication',
+          ctaText: 'Get Started',
+          ctaLink: '/bot-analytics',
         },
       ]}
       others={[
         {
-          title: "HSL",
-          url: "/hsl",
+          title: 'HSL',
+          url: '/hsl',
         },
         {
-          title: "Security",
-          url: "/other/security",
+          title: 'Security',
+          url: '/other/security',
         },
         {
-          title: "SLA",
-          url: "/other/sla",
+          title: 'SLA',
+          url: '/other/sla',
         },
       ]}
     />
     <Row
-      id="integrations"
-      title="Integrations"
+      id='integrations'
+      title='Integrations'
       sections={[
         {
-          title: "iOS SDK",
+          title: 'iOS SDK',
           description:
-            "Objective-C framework to bring the chatbot magic in your app for iOS 9 & higher",
-          ctaText: "Get Started",
-          ctaLink: "/ios-sdk",
+            'Objective-C framework to bring the chatbot magic in your app for iOS 9 & higher',
+          ctaText: 'Get Started',
+          ctaLink: '/ios-sdk',
         },
         {
-          title: "Android SDK",
+          title: 'Android SDK',
           description:
-            "Java framework to supercharge your Android app with AI powered chatbot capabilities",
-          ctaText: "Get Started",
-          ctaLink: "/android-sdk",
+            'Java framework to supercharge your Android app with AI powered chatbot capabilities',
+          ctaText: 'Get Started',
+          ctaLink: '/android-sdk',
         },
         {
-          title: "Web SDK",
+          title: 'Web SDK',
           description:
-            "Supercharge your app with AI powered Chatbots enabled by our powerful Javascript SDK",
-          ctaText: "Get Started",
-          ctaLink: "/web-sdk",
+            'Supercharge your app with AI powered Chatbots enabled by our powerful Javascript SDK',
+          ctaText: 'Get Started',
+          ctaLink: '/web-sdk',
         },
         {
-          title: "WhatsApp",
+          title: 'WhatsApp',
           description:
-            "Documentation to help you build conversational experiences on WhatsApp",
-          ctaText: "Get Started",
-          ctaLink: "/whatsapp",
+            'Documentation to help you build conversational experiences on WhatsApp',
+          ctaText: 'Get Started',
+          ctaLink: '/whatsapp',
         },
         {
-          title: "Facebook",
+          title: 'Facebook',
           description:
-            "Documentation to help you build conversational experiences on Facebook",
-          ctaText: "Get Started",
-          ctaLink: "/other/facebook",
+            'Documentation to help you build conversational experiences on Facebook',
+          ctaText: 'Get Started',
+          ctaLink: '/other/facebook',
         },
         {
-          title: "Bot API",
+          title: 'Bot API',
           description:
-            "API docs to help you build powerful chatbot solutions with great customisations",
-          ctaText: "Get Started",
-          ctaLink: "/webhooks",
+            'API docs to help you build powerful chatbot solutions with great customisations',
+          ctaText: 'Get Started',
+          ctaLink: '/webhooks',
         },
       ]}
       others={[
         {
-          title: "External Agent Chat Tool",
-          url: "/external-chat-tool",
+          title: 'External Agent Chat Tool',
+          url: '/external-chat-tool',
         },
       ]}
     />

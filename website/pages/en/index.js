@@ -101,7 +101,7 @@ module.exports = () => (
           description:
             'Java framework to supercharge your Android app with AI powered chatbot capabilities',
           ctaText: 'Get Started',
-          ctaLink: 'https://hellohaptik.github.io/haptik-android-lib'
+          ctaLink: '/android-sdk'
         },
         {
           title: 'Web SDK',

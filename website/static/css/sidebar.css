@@ -1,0 +1,20 @@
+/* SideBar Css */
+.toc .toggleNav ul li .navItem , .toc .toggleNav .navGroup .navGroupSubcategoryTitle {
+
+  font-size: 18px;
+}
+
+.toc .toggleNav .subNavGroup ul li .navItem {
+
+  font-size: 14px;
+}
+
+.toc .toggleNav ul li.navListItemActive a, .toc .toggleNav ul li a:hover, .toc .toggleNav ul li a:focus{
+  color :#3599ce;
+}
+
+.toc .toggleNav .navGroup .navGroupSubcategoryTitle {
+
+  color: #717171;
+}
+

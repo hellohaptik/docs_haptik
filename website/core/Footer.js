@@ -36,7 +36,7 @@ class Footer extends React.Component {
             ])}
             {this.renderFooterColumn('Integrations', [
               { title: 'iOS SDK', url: 'https://hellohaptik.github.io/haptik-ios-framework' },
-              { title: 'Android SDK', url: 'https://hellohaptik.github.io/haptik-android-lib' },
+              { title: 'Android SDK', url: 'https://docs.haptik.ai/android-sdk/' },
               { title: 'Web SDK', url: 'https://hellohaptik.github.io/javascript-xdk/' },
               { title: 'WhatsApp', url: 'https://docs.haptik.ai/whatsapp/' },
               { title: 'Facebook', url: 'https://docs.haptik.ai/other/facebook' },

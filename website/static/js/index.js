@@ -1,6 +1,6 @@
 const MAP = {
   'haptik-ios-framework': 'iOS',
-  'haptik-android-lib': 'Android'
+  'android-sdk': 'Android'
 };
 
 const customsidebar = [];

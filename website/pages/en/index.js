@@ -3,10 +3,10 @@ const siteConfig = require(`${process.cwd()}/siteConfig.js`);
 
 function Section({ title, description, ctaText, ctaLink }) {
   return (
-    <div className='home-row-section'>
-      <div className='home-row-section-title'>{title}</div>
-      <div className='home-row-section-description'>{description}</div>
-      <a href={ctaLink} className='home-row-section-cta'>
+    <div className="home-row-section">
+      <div className="home-row-section-title">{title}</div>
+      <div className="home-row-section-description">{description}</div>
+      <a href={ctaLink} className="home-row-section-cta">
         {ctaText}
       </a>
     </div>
@@ -15,21 +15,21 @@ function Section({ title, description, ctaText, ctaLink }) {
 
 function Row({ title, sections = [], others = [], id }) {
   return (
-    <div className='home-row-wrapper'>
-      <div className='home-row-anchor' id={id} />
-      <div className='home-row'>
-        <div className='home-row-title'>{title}</div>
-        <div className='home-row-columns'>
-          <div className='home-row-sections column'>
+    <div className="home-row-wrapper">
+      <div className="home-row-anchor" id={id} />
+      <div className="home-row">
+        <div className="home-row-title">{title}</div>
+        <div className="home-row-columns">
+          <div className="home-row-sections column">
             {sections.map((section, i) => (
               <Section key={i} {...section} />
             ))}
           </div>
           {others.length ? (
-            <div className='home-row-others column'>
+            <div className="home-row-others column">
               <React.Fragment>
-                <div className='home-row-others-title'>Other</div>
-                <div className='home-row-others-links'>
+                <div className="home-row-others-title">Other</div>
+                <div className="home-row-others-links">
                   {others.map(({ url, title }, i) => (
                     <a key={i} href={url}>
                       {title}
@@ -46,10 +46,10 @@ function Row({ title, sections = [], others = [], id }) {
 }
 
 module.exports = () => (
-  <div className='home'>
+  <div className="home">
     <Row
-      id='tools'
-      title='Tools'
+      id="tools"
+      title="Tools"
       sections={[
         {
           title: 'Bot Builder',
@@ -89,8 +89,8 @@ module.exports = () => (
       ]}
     />
     <Row
-      id='integrations'
-      title='Integrations'
+      id="integrations"
+      title="Integrations"
       sections={[
         {
           title: 'iOS SDK',

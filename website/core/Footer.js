@@ -10,20 +10,20 @@ const React = require('react');
 class Footer extends React.Component {
   render() {
     return (
-      <footer className='nav-footer' id='footer'>
-        <div className='footer'>
+      <footer className="nav-footer" id="footer">
+        <div className="footer">
           <a
-            href='https://haptik.ai/'
-            target='_blank'
-            rel='noreferrer noopener'
-            className='fbOpenSource'>
+            href="https://haptik.ai/"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="fbOpenSource">
             <img
               src={`${this.props.config.baseUrl}img/image_0.png`}
-              alt='Haptik Inc.'
-              width='100'
+              alt="Haptik Inc."
+              width="100"
             />
           </a>
-          <div className='footer-columns'>
+          <div className="footer-columns">
             {/* {this.renderFooterColumn('Getting Started', [
               { title: 'Product Overview', url: '/product-overview' },
               { title: 'Technical Overview', url: '/technical-overview' }
@@ -69,20 +69,20 @@ class Footer extends React.Component {
               },
             ])}
           </div>
-          <div className='footer-copyright' />
+          <div className="footer-copyright" />
         </div>
-        <section className='copyright'>{this.props.config.copyright}</section>
+        <section className="copyright">{this.props.config.copyright}</section>
       </footer>
     );
   }
 
   renderFooterColumn(title, links) {
     return (
-      <div className='footer-column'>
-        <div className='footer-column-title'>{title}</div>
-        <div className='footer-column-links'>
+      <div className="footer-column">
+        <div className="footer-column-title">{title}</div>
+        <div className="footer-column-links">
           {links.map((link, i) => (
-            <a key={i} href={link.url} className='footer-column-link'>
+            <a key={i} href={link.url} className="footer-column-link">
               {link.title}
             </a>
           ))}

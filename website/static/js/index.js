@@ -3,6 +3,8 @@ const MAP = {
   'haptik-android-lib': 'Android'
 };
 
+const customsidebar = [];
+
 function getTitle() {
   const pathArray = window.location.pathname.split('/');
   const path = pathArray[1];
@@ -26,4 +28,19 @@ document.addEventListener('DOMContentLoaded', function() {
   if (headerTitleDOM && headerTitleDOM.innerHTML !== newTitle) {
     headerTitleDOM.innerHTML = `Haptik Docs <span> | ${title}</span>`;
   }
+
+  if (customsidebar.includes(title)) addSidebarStyling();
 });
+
+function addSidebarStyling() {
+
+        // Get HTML head element
+        var head = document.getElementsByTagName('HEAD')[0];
+        // Create sidebar css link Element
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = '/css/sidebar.css';
+        // Append link element to HTML head
+        head.appendChild(link);
+}

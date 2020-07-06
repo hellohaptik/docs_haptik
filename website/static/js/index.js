@@ -1,9 +1,9 @@
 const MAP = {
-  'haptik-ios-framework': 'iOS',
+  'ios-sdk': 'iOS',
   'haptik-android-lib': 'Android'
 };
 
-const customsidebar = [];
+const customsidebar = ["iOS"];
 
 function getTitle() {
   const pathArray = window.location.pathname.split('/');

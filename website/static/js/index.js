@@ -3,7 +3,7 @@ const MAP = {
   'android-sdk': 'Android'
 };
 
-const customsidebar = [];
+const customsidebar = ['Android'];
 
 function getTitle() {
   const pathArray = window.location.pathname.split('/');

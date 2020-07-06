@@ -1,0 +1,25 @@
+{
+   "sidebar":{
+      " ":[
+         "index",
+         "sign-up",
+         "notifications",
+         {
+            "type":"subcategory",
+            "label":"Advanced",
+            "ids":[
+               "permissions",
+               "theming",
+               "conversations",
+               "rate-share",
+               "voice",
+	       "location",
+               "analytics",
+               "features"
+            ]
+         },
+         "sdk-sample",
+         "faq"
+      ]
+   }
+}

@@ -1,0 +1,28 @@
+{
+  "sidebar": {
+    " ": [
+      "index",
+      "feature-user-signup",
+      {
+        "type": "subcategory",
+        "label": "Advanced",
+        "ids": [
+          "feature-launch-message",
+          "feature-custom-button",
+          "configuration-sdk-methods",
+          "configuration-customisation"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Support and Compatibility",
+        "ids": ["support-browser", "support-native"]
+      },
+      {
+        "type": "subcategory",
+        "label": "Examples",
+        "ids": ["example-always-open", "example-multi-language"]
+      }
+    ]
+  }
+}

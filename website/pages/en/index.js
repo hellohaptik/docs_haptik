@@ -56,34 +56,36 @@ module.exports = () => (
           description:
             'Everything required to get you from beginner to advanced in Bot Building',
           ctaText: 'Get Started',
-          ctaLink: '/bot-builder/basic/introduction'
+          ctaLink: '/bot-builder/basic/introduction',
         },
         {
           title: 'Agent Chat',
-          description: 'Learn how Human Escalation is handled on bots using Agent Chat tool',
-          ctaText: "Get Started",
-          ctaLink: '/agent-chat'
+          description:
+            'Learn how Human Escalation is handled on bots using Agent Chat tool',
+          ctaText: 'Get Started',
+          ctaLink: '/agent-chat',
         },
         {
           title: 'Analytics',
-          description: 'Learn how to uncover hidden insights in your chat data & communication',
+          description:
+            'Learn how to uncover hidden insights in your chat data & communication',
           ctaText: 'Get Started',
-          ctaLink: '/bot-analytics'
-        }
+          ctaLink: '/bot-analytics',
+        },
       ]}
       others={[
         {
           title: 'HSL',
-          url: '/hsl'
+          url: '/hsl',
         },
         {
           title: 'Security',
-          url: '/other/security'
+          url: '/other/security',
         },
         {
           title: 'SLA',
-          url: '/other/sla'
-        }
+          url: '/other/sla',
+        },
       ]}
     />
     <Row
@@ -92,50 +94,52 @@ module.exports = () => (
       sections={[
         {
           title: 'iOS SDK',
-          description: 'Objective-C framework to bring the chatbot magic in your app for iOS 9 & higher',
+          description:
+            'Objective-C framework to bring the chatbot magic in your app for iOS 9 & higher',
           ctaText: 'Get Started',
-          ctaLink: '/ios-sdk'
+          ctaLink: '/ios-sdk',
         },
         {
           title: 'Android SDK',
           description:
             'Java framework to supercharge your Android app with AI powered chatbot capabilities',
           ctaText: 'Get Started',
-          ctaLink: '/android-sdk'
+          ctaLink: '/android-sdk',
         },
         {
           title: 'Web SDK',
-          description: 'Supercharge your app with AI powered Chatbots enabled by our powerful Javascript SDK',
+          description:
+            'Supercharge your app with AI powered Chatbots enabled by our powerful Javascript SDK',
           ctaText: 'Get Started',
-          ctaLink: 'https://hellohaptik.github.io/javascript-xdk/'
+          ctaLink: '/web-sdk',
         },
         {
           title: 'WhatsApp',
           description:
             'Documentation to help you build conversational experiences on WhatsApp',
           ctaText: 'Get Started',
-          ctaLink: '/whatsapp'
+          ctaLink: '/whatsapp',
         },
         {
           title: 'Facebook',
           description:
             'Documentation to help you build conversational experiences on Facebook',
           ctaText: 'Get Started',
-          ctaLink: '/other/facebook'
+          ctaLink: '/other/facebook',
         },
         {
           title: 'Bot API',
           description:
             'API docs to help you build powerful chatbot solutions with great customisations',
           ctaText: 'Get Started',
-          ctaLink: '/webhooks'
-        }
+          ctaLink: '/webhooks',
+        },
       ]}
       others={[
         {
           title: 'External Agent Chat Tool',
-          url: '/external-chat-tool'
-        }
+          url: '/external-chat-tool',
+        },
       ]}
     />
   </div>

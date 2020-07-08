@@ -58,12 +58,17 @@ function _rimraf(dir_path) {
 function generateSidebar(meta, pathToPrepend) {
   var generatedConfig = {};
   var sidebarConfig = meta.sidebar;
-  Object.keys(sidebarConfig).map(function(sidebarSection) {
-    generatedConfig[sidebarSection] = sidebarConfig[sidebarSection].map(function(sidebarPage) {
-      return pathToPrepend.split(PATH)[1].substring(1) + '/' + sidebarPage;
-    });
+  Object.keys(sidebarConfig).map(function (sidebarSection) {
+    generatedConfig[sidebarSection] = sidebarConfig[sidebarSection].map(
+      function (sidebarPage) {
+        if (sidebarPage.type === "subcategory") {
+          sidebarPage.ids = sidebarPage.ids.map(id => pathToPrepend.split(PATH)[1].substring(1) + "/" + id)
+        return sidebarPage;
+	}
+	return pathToPrepend.split(PATH)[1].substring(1) + "/" + sidebarPage;
+      }
+    );
   });
-
   return generatedConfig;
 }
 

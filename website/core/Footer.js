@@ -16,8 +16,7 @@ class Footer extends React.Component {
             href="https://haptik.ai/"
             target="_blank"
             rel="noreferrer noopener"
-            className="fbOpenSource"
-          >
+            className="fbOpenSource">
             <img
               src={`${this.props.config.baseUrl}img/image_0.png`}
               alt="Haptik Inc."
@@ -30,23 +29,44 @@ class Footer extends React.Component {
               { title: 'Technical Overview', url: '/technical-overview' }
             ])} */}
             {this.renderFooterColumn('Tools', [
-              { title: 'Bot Builder', url: 'https://docs.haptik.ai/bot-builder/basic/introduction' },
-              { title: 'Agent Chat', url: 'https://docs.haptik.ai/agent-chat/' },
-              { title: 'Analytics', url: 'https://docs.haptik.ai/bot-analytics/' }
+              {
+                title: 'Bot Builder',
+                url: 'https://docs.haptik.ai/bot-builder/basic/introduction',
+              },
+              {
+                title: 'Agent Chat',
+                url: 'https://docs.haptik.ai/agent-chat/',
+              },
+              {
+                title: 'Analytics',
+                url: 'https://docs.haptik.ai/bot-analytics/',
+              },
             ])}
             {this.renderFooterColumn('Integrations', [
-              { title: 'iOS SDK', url: 'https://hellohaptik.github.io/haptik-ios-framework' },
-              { title: 'Android SDK', url: 'https://hellohaptik.github.io/haptik-android-lib' },
-              { title: 'Web SDK', url: 'https://hellohaptik.github.io/javascript-xdk/' },
+              { title: 'iOS SDK', url: 'https://docs.haptik.ai/ios-sdk/' },
+              {
+                title: 'Android SDK',
+                url: 'https://docs.haptik.ai/android-sdk/',
+              },
+              { title: 'Web SDK', url: 'https://docs.haptik.ai/web-sdk/' },
               { title: 'WhatsApp', url: 'https://docs.haptik.ai/whatsapp/' },
-              { title: 'Facebook', url: 'https://docs.haptik.ai/other/facebook' },
-              { title: 'Bot API', url: 'https://docs.haptik.ai/webhooks/' }
+              {
+                title: 'Facebook',
+                url: 'https://docs.haptik.ai/other/facebook',
+              },
+              { title: 'Bot API', url: 'https://docs.haptik.ai/webhooks/' },
             ])}
             {this.renderFooterColumn('Others', [
               { title: 'HSL', url: 'https://docs.haptik.ai/hsl/' },
-              { title: 'Security', url: 'https://docs.haptik.ai/other/security' },
+              {
+                title: 'Security',
+                url: 'https://docs.haptik.ai/other/security',
+              },
               { title: 'SLA', url: 'https://docs.haptik.ai/other/sla' },
-              { title: 'External Agent Chat Tool', url: 'https://docs.haptik.ai/external-chat-tool/' }
+              {
+                title: 'External Agent Chat Tool',
+                url: 'https://docs.haptik.ai/external-chat-tool/',
+              },
             ])}
           </div>
           <div className="footer-copyright" />

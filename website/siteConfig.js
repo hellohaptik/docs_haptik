@@ -22,15 +22,15 @@ const siteConfig = {
     //   page: '#getting-started',
     //   label: 'Getting Started'
     // },
-    {search:true},
+    { search: true },
     {
       page: '#tools',
-      label: 'Tools'
+      label: 'Tools',
     },
     {
       page: '#integrations',
-      label: 'Integrations'
-    }
+      label: 'Integrations',
+    },
   ],
 
   headerIcon: 'img/image_0.png',
@@ -39,25 +39,27 @@ const siteConfig = {
 
   colors: {
     primaryColor: '#333',
-    secondaryColor: '#FFF'
+    secondaryColor: '#FFF',
   },
 
   copyright: `Copyright © ${new Date().getFullYear()} Haptik Inc.`,
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.
-    theme: 'default'
+    theme: 'default',
   },
 
-  algolia:{
-    apiKey:'224c7079e67e84a978d8b4621f6af16d',
-    indexName:'haptik',
-    algoliaOptions: {}
+  algolia: {
+    apiKey: '224c7079e67e84a978d8b4621f6af16d',
+    indexName: 'haptik',
+    algoliaOptions: {},
   },
 
   // Add custom scripts here that would be placed in <script> tags.
   scripts: ['https://buttons.github.io/buttons.js'],
 
+  //Add custom css files that are not to be concatenated to main.css
+  separateCss: ['css/sidebar.css'],
   // On page navigation for the current documentation page.
   onPageNav: 'separate',
   // No .html extensions for paths.
@@ -77,11 +79,11 @@ const siteConfig = {
 
   fonts: {
     myFont: ['Roboto', 'sans-serif'],
-    myOtherFont: ['Roboto', 'sans-serif']
+    myOtherFont: ['Roboto', 'sans-serif'],
   },
 
   gaTrackingId: 'UA-106563119-6',
-  cname: 'docs.haptik.ai'
+  cname: 'docs.haptik.ai',
 };
 
 module.exports = siteConfig;

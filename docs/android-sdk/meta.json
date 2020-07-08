@@ -1,0 +1,24 @@
+{
+    "sidebar": {
+        " ": [
+            "index",
+            "sign-up",
+            "configuring-push-notifications",
+            {
+              "type": "subcategory",
+              "label": "Advanced",
+              "ids": [
+                "rate-share",
+                "style-guide",
+                "image-loading-modules",
+                "voice-support",
+                "additional-features"
+            ]
+            },
+            "sdk-sample",
+            "faqs",
+            "migrating-from-earlier-versions"
+        ]
+    }
+}
+

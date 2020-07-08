@@ -1,0 +1,188 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>SDK Methods · Haptik Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Client Accessible SDK"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="SDK Methods · Haptik Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.haptik.ai/"/><meta property="og:description" content="## Client Accessible SDK"/><meta property="og:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.haptik.ai/img/image_0.png"/><link rel="shortcut icon" href="/img/image_0.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-106563119-6', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="/js/index.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/image_0.png" alt="Haptik Docs"/><h2 class="headerTitleWithLogo">Haptik Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="/#tools" target="_self">Tools</a></li><li class=""><a href="/#integrations" target="_self">Integrations</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Advanced</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle"> </h3><ul class=""><li class="navListItem"><a class="navItem" href="/web-sdk/">Quick Start</a></li><li class="navListItem"><a class="navItem" href="/web-sdk/feature-user-signup">Authentication</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Advanced</h4><ul><li class="navListItem"><a class="navItem" href="/web-sdk/feature-launch-message">Launch Message</a></li><li class="navListItem"><a class="navItem" href="/web-sdk/feature-custom-button">Custom Button</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/web-sdk/configuration-sdk-methods">SDK Methods</a></li><li class="navListItem"><a class="navItem" href="/web-sdk/configuration-customisation">Customisation</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Support and Compatibility</h4><ul><li class="navListItem"><a class="navItem" href="/web-sdk/support-browser">Browser Support</a></li><li class="navListItem"><a class="navItem" href="/web-sdk/support-native">Native Support</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Examples</h4><ul><li class="navListItem"><a class="navItem" href="/web-sdk/example-always-open">Example: Always Open</a></li><li class="navListItem"><a class="navItem" href="/web-sdk/example-multi-language">Example: Multi Language</a></li></ul></div></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">SDK Methods</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="client-accessible-sdk"></a><a href="#client-accessible-sdk" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Client Accessible SDK</h2>
+<p>The SDK upon loading exposes a Javascript SDK that can then be used to programmatically control some of the behaviour of the SDK.</p>
+<h2><a class="anchor" aria-hidden="true" id="event-listener"></a><a href="#event-listener" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Event Listener</h2>
+<p>In order for these methods to be accessible, the SDK needs to load first. The SDK emits a custom event to notify any/all subscribers that it has loaded.</p>
+<pre><code class="hljs css language-js">    <span class="hljs-built_in">document</span>.addEventListener(<span class="hljs-string">'haptik_sdk'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{ 
+        <span class="hljs-comment">// HaptikSDK is available now</span>
+      HaptikSDK.init(...); 
+    });
+</code></pre>
+<p>Note: Using other listeners like <code>window.onload</code> or <code>document.onload</code> will lead to inconsistent behaviour as the Haptik SDK might not have been initialised yet.</p>
+<h2><a class="anchor" aria-hidden="true" id="methods"></a><a href="#methods" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Methods</h2>
+<h3><a class="anchor" aria-hidden="true" id="glossary"></a><a href="#glossary" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Glossary</h3>
+<ul>
+<li><a href="#initinitsettings"><code>init(initSettings)</code></a></li>
+<li><a href="#destroy"><code>destroy()</code></a></li>
+<li><a href="#show"><code>show()</code></a></li>
+<li><a href="#hide"><code>hide()</code></a></li>
+<li><a href="#signupauthoptions-callback"><code>signup(authOptions, callback)</code></a></li>
+<li><a href="#renewsignuptokennewtoken-callback"><code>renewSignupToken(newToken, callback)</code></a></li>
+<li><a href="#prompttitle-message"><code>prompt(title, message)</code></a></li>
+<li><a href="#launchtasktaskid-callback"><code>launchTask(taskId, callback)</code></a></li>
+<li><a href="#launchmessagemessage-callback-hidden"><code>launchMessage(message, callback, hidden)</code></a></li>
+<li><a href="#changelanguagelanguagecode-callback"><code>changeLanguage(languageCode, callback)</code></a></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="initinitsettings"></a><a href="#initinitsettings" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>init(initSettings)</code></h3>
+<p><em>Initialise the SDK and load a particular bot</em></p>
+<p><strong>Params:</strong></p>
+<ul>
+<li><code>initSettings &lt;Object&gt;</code>
+<em>The client settings comprising of</em>
+<ul>
+<li><code>client-id: &lt;String&gt;</code> <em>:</em> <em>Client Identifier (Provided by Haptik)</em></li>
+<li><code>base-url: &lt;String&gt;</code> <em>: Backend Identifier (Provided by Haptik)</em></li>
+<li><code>business-id: &lt;Number&gt;</code> <em>: Business Identifier (Provided by Haptik)</em></li>
+</ul></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="destroy"></a><a href="#destroy" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>destroy()</code></h3>
+<p><em>Unmount the SDK and remove it from the page completely.</em></p>
+<p><strong>Params: <None></strong></p>
+<h3><a class="anchor" aria-hidden="true" id="show"></a><a href="#show" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>show()</code></h3>
+<p><em>Opens up the SDK main window. (The same as clicking on the let's chat icon)</em></p>
+<p><strong>Params: <None></strong></p>
+<h3><a class="anchor" aria-hidden="true" id="hide"></a><a href="#hide" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>hide()</code></h3>
+<p><em>Closes the SDK main window. (The same as clicking on the cross icon while the window is open)</em></p>
+<p><strong>Params: <None></strong></p>
+<h3><a class="anchor" aria-hidden="true" id="signupauthoptions-callback"></a><a href="#signupauthoptions-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>signup(authOptions, callback)</code></h3>
+<p><em>Only applicable for custom signup bots. Use this function to make a custom call for passing sign on information to the SDK. (Refer to the custom signup section for more information)</em></p>
+<p><strong>Params:</strong></p>
+<ul>
+<li><code>authOptions &lt;Object&gt;</code> :
+<em>The authorisation information necessary to securely authenticate the user.</em>
+<ul>
+<li><code>authId &lt;String&gt;</code> <em>: The authentication Id</em></li>
+</ul></li>
+<li><code>callback &lt;Function&gt;</code>
+<em>The callback executes once the call completes. The callback function is executed with <code>success</code> boolean flag as a parameter indicating whether the call completed or failed.</em></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="renewsignuptokennewtoken-callback"></a><a href="#renewsignuptokennewtoken-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>renewSignupToken(newToken, callback)</code></h3>
+<p><em>Only applicable for custom signup bots. If the authToken sent above expires, use this function to send the updated token to our backend</em></p>
+<p><strong>Params:</strong></p>
+<ul>
+<li><code>newToken &lt;String&gt;</code>
+<em>The new token that needs to be synced with our backend</em></li>
+<li><code>callback &lt;Function&gt;</code>
+<em>The callback executes once the call completes. The callback function is executed with <code>success</code> boolean flag as a parameter indicating whether the call completed or failed.</em></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="prompttitle-message"></a><a href="#prompttitle-message" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>prompt(title, message)</code></h3>
+<p><em>Creates a bot prompt to catch the users attention. However, we recommend using dynamic bot prompts configured through the Bot-Builder. See the Bot Prompts section for more details.</em></p>
+<p><strong>Params:</strong></p>
+<ul>
+<li><code>title &lt;String&gt;</code>
+<em>The text that's displayed on the bot prompt.</em></li>
+<li><code>message &lt;String&gt;</code>
+<em>The message that's sent if the user taps on the bot prompt.</em></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="launchtasktaskid-callback"></a><a href="#launchtasktaskid-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>launchTask(taskId, callback)</code></h3>
+<p><em>Launches the SDK and automatically sends specified taskId as a user message (The same message that would be sent if the user tapped on that task)</em></p>
+<p><strong>Params:</strong></p>
+<ul>
+<li><code>taskId &lt;Number&gt;</code>
+<em>The task id is specified in the tasks section of the bot builder (business manager)</em></li>
+<li><code>callback &lt;Function&gt;</code>  <em><code>(optional)</code></em>
+<em>The callback executes once the call completes. The callback function is executed with <code>success</code> boolean flag as a parameter indicating whether the call completed or failed.</em></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="launchmessagemessage-callback-hidden"></a><a href="#launchmessagemessage-callback-hidden" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>launchMessage(message, callback, hidden)</code></h3>
+<p><em>Launches the SDK and automatically sends specific message as a user message. It can optionally be sent as a hidden user message</em></p>
+<p><strong>Params:</strong></p>
+<ul>
+<li><code>message &lt;String&gt;</code>
+<em>The message that is to be sent</em></li>
+<li><code>callback &lt;Function&gt;</code>  <em><code>(optional)</code></em>
+<em>The callback executes once the call completes. The callback function is executed with <code>success</code> boolean flag as a parameter indicating whether the call completed or failed.</em></li>
+<li><code>hidden &lt;Boolean&gt;</code>
+<em>Whether to send the message as a hidden user message. A hidden message is not visible to the user but can be seen by the agent or bot</em></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="changelanguagelanguagecode-callback"></a><a href="#changelanguagelanguagecode-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>changeLanguage(languageCode, callback)</code></h3>
+<p><em>Only applicable to multi-language bots. Changes the current language of the SDK to the languageCode specified. Note: This language code must be supported by bot in order for it to work.</em></p>
+<p><strong>Params:</strong></p>
+<ul>
+<li><code>languageCode &lt;String&gt;</code>
+<em>The language code to switch to (Ex. <code>en</code>)</em></li>
+<li><code>callback &lt;Function&gt;</code>  <em><code>(optional)</code></em>
+<em>The callback executes once the language change completes.</em></li>
+</ul>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 7/8/2020</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/web-sdk/feature-custom-button"><span class="arrow-prev">← </span><span>Custom Button</span></a><a class="docs-next button" href="/web-sdk/configuration-customisation"><span>Customisation</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#client-accessible-sdk">Client Accessible SDK</a></li><li><a href="#event-listener">Event Listener</a></li><li><a href="#methods">Methods</a><ul class="toc-headings"><li><a href="#glossary">Glossary</a></li><li><a href="#initinitsettings"><code>init(initSettings)</code></a></li><li><a href="#destroy"><code>destroy()</code></a></li><li><a href="#show"><code>show()</code></a></li><li><a href="#hide"><code>hide()</code></a></li><li><a href="#signupauthoptions-callback"><code>signup(authOptions, callback)</code></a></li><li><a href="#renewsignuptokennewtoken-callback"><code>renewSignupToken(newToken, callback)</code></a></li><li><a href="#prompttitle-message"><code>prompt(title, message)</code></a></li><li><a href="#launchtasktaskid-callback"><code>launchTask(taskId, callback)</code></a></li><li><a href="#launchmessagemessage-callback-hidden"><code>launchMessage(message, callback, hidden)</code></a></li><li><a href="#changelanguagelanguagecode-callback"><code>changeLanguage(languageCode, callback)</code></a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Bot Builder</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://docs.haptik.ai/ios-sdk/" class="footer-column-link">iOS SDK</a><a href="https://docs.haptik.ai/android-sdk/" class="footer-column-link">Android SDK</a><a href="https://docs.haptik.ai/web-sdk/" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/whatsapp/" class="footer-column-link">WhatsApp</a><a href="https://docs.haptik.ai/other/facebook" class="footer-column-link">Facebook</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Bot API</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a><a href="https://docs.haptik.ai/other/security" class="footer-column-link">Security</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Agent Chat Tool</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2020 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '224c7079e67e84a978d8b4621f6af16d',
+                indexName: 'haptik',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

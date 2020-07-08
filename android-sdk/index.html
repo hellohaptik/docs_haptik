@@ -1,0 +1,246 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Quick Start · Haptik Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Introduction"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Quick Start · Haptik Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.haptik.ai/"/><meta property="og:description" content="## Introduction"/><meta property="og:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.haptik.ai/img/image_0.png"/><link rel="shortcut icon" href="/img/image_0.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-106563119-6', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="/js/index.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/image_0.png" alt="Haptik Docs"/><h2 class="headerTitleWithLogo">Haptik Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="/#tools" target="_self">Tools</a></li><li class=""><a href="/#integrations" target="_self">Integrations</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span> </span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle"> </h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/android-sdk/">Quick Start</a></li><li class="navListItem"><a class="navItem" href="/android-sdk/sign-up">Authentication</a></li><li class="navListItem"><a class="navItem" href="/android-sdk/configuring-push-notifications">Push Notifications</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Advanced</h4><ul><li class="navListItem"><a class="navItem" href="/android-sdk/rate-share">Rate &amp; Share</a></li><li class="navListItem"><a class="navItem" href="/android-sdk/style-guide">Theming</a></li><li class="navListItem"><a class="navItem" href="/android-sdk/image-loading-modules">Image Loading Modules</a></li><li class="navListItem"><a class="navItem" href="/android-sdk/voice-support">Enabling Voice Support</a></li><li class="navListItem"><a class="navItem" href="/android-sdk/additional-features">Additional Features</a></li></ul></div><li class="navListItem"><a class="navItem" href="/android-sdk/sdk-sample">Sample App</a></li><li class="navListItem"><a class="navItem" href="/android-sdk/faqs">Troubleshooting</a></li><li class="navListItem"><a class="navItem" href="/android-sdk/migrating-from-earlier-versions">Migration</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Quick Start</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="introduction"></a><a href="#introduction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introduction</h2>
+<p>Here we will walk you thru the steps to quickly set up the Haptik SDK.</p>
+<h2><a class="anchor" aria-hidden="true" id="get-your-gear"></a><a href="#get-your-gear" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Get your gear</h2>
+<ol>
+<li><p>Few details are required to ensure notifications can be sent to the
+user, while chatting with the bot. Please fill the required
+pre-requisite information
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSfxdgMXYQ1hR4PWO54wXzWZhkB4c_21ypTPCSpfEwhEcznwPA/viewform">here</a></p></li>
+<li><p>For sample integration of Haptik SDK please visit
+<a href="https://github.com/hellohaptik/haptiklib-demo">here</a></p></li>
+<li><p>Before delving into integrating the SDK, please go through the
+checklist and make sure you have all the items mentioned in the
+checklist</p>
+<ol>
+<li>Artifactory Username and Password</li>
+<li>Client ID</li>
+<li>Business viaName for your Bot</li>
+<li>Staging URL</li>
+<li>Production URL</li>
+</ol></li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="minimum-and-target-sdk-versions-of-the-haptik-sdk"></a><a href="#minimum-and-target-sdk-versions-of-the-haptik-sdk" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Minimum and Target SDK versions of the Haptik SDK</h2>
+<p><code>minSdkVersion 16</code></p>
+<p><code>targetSdkVersion 28</code></p>
+<h2><a class="anchor" aria-hidden="true" id="1-changes-to-buildgradle-files"></a><a href="#1-changes-to-buildgradle-files" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Changes to <code>build.gradle</code> files</h2>
+<p>The first thing we are going to do here is add the following lines of code to your projects <strong>root</strong> <code>build.gradle</code></p>
+<div class="tabs"><div class="nav-tabs"><div id="tab-group-24-tab-25" class="nav-link active" data-group="group_24" data-tab="tab-group-24-content-25">Java</div></div><div class="tab-content"><div id="tab-group-24-content-25" class="tab-pane active" data-group="group_24" tabindex="-1"><div><span><pre><code class="hljs css language-java">allprojects {<br />    repositories {<br />        .<br />        .<br />        .<br />        maven {<br />            url <span class="hljs-string">"https://artifactory.hellohaptik.com/artifactory/libs-release-local"</span><br />            credentials {<br />                username <span class="hljs-string">"&lt;ASK HAPTIK FOR USERNAME&gt;"</span><br />                password <span class="hljs-string">"&lt;ASK HAPTIK FOR PASSWORD&gt;"</span><br />            }<br />        }<br />        google()<br />        jcenter()<br />        .<br />        .<br />        .<br />    }<br />}<br /></code></pre>
+</span></div></div></div></div>
+<p>Haptik will provide required username and password while providing access to the SDK.</p>
+<p>Once this is done you can move over to your app's <code>build.gradle</code> file and add the following lines of code:</p>
+<pre><code class="hljs css language-java">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-core:6.4.2-64383'</span>
+</code></pre>
+<p>Add a dependency for image loading library</p>
+<pre><code class="hljs css language-java">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-picasso-helper:6.4.2-64383'</span>
+</code></pre>
+<p>For further details please refer to the &quot;Image Loading Modules&quot; section
+of the documentation</p>
+<h2><a class="anchor" aria-hidden="true" id="2-manifest-entries"></a><a href="#2-manifest-entries" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. Manifest Entries</h2>
+<p><strong>1. Add meta-data</strong></p>
+<p>We will now start adding MetaData to the apps Manifest file. This
+MetaData corresponds to the SDK's:</p>
+<pre><code class="hljs css language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">application</span>&gt;</span>
+.
+.
+.
+// Client ID (provided by Haptik)
+<span class="hljs-tag">&lt;<span class="hljs-name">meta-data</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">"ai.haptik.android.sdk.ClientId"</span>
+    <span class="hljs-attr">android:resource</span>=<span class="hljs-string">"@string/haptik_sdk_client_id"</span>/&gt;</span>
+
+// Drawable to be used for showing the Large Notification Icon
+<span class="hljs-tag">&lt;<span class="hljs-name">meta-data</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">"ai.haptik.android.sdk.NotificationIconLarge"</span>
+    <span class="hljs-attr">android:resource</span>=<span class="hljs-string">"@drawable/ic_notification_large"</span>/&gt;</span>
+
+// Drawable to be used for showing the Small Notification Icon
+<span class="hljs-tag">&lt;<span class="hljs-name">meta-data</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">"ai.haptik.android.sdk.NotificationIconSmall"</span>
+    <span class="hljs-attr">android:resource</span>=<span class="hljs-string">"@drawable/ic_notification_small"</span>/&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Geo API key needs to be put only if you require to enable maps in the SDK --&gt;</span>    
+<span class="hljs-tag">&lt;<span class="hljs-name">meta-data</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">"com.google.android.geo.API_KEY"</span>
+        <span class="hljs-attr">android:value</span>=<span class="hljs-string">"YOUR GEO API KEY HERE"</span> /&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Pass the Geo API key here, if you do not have one, pass empty string --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">meta-data</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">"ai.haptik.places.sdk.api.key"</span>
+        <span class="hljs-attr">android:value</span>=<span class="hljs-string">"YOUR PLACES SDK API KEY HERE"</span> /&gt;</span>
+
+.
+.
+.
+<span class="hljs-tag">&lt;/<span class="hljs-name">application</span>&gt;</span>    
+</code></pre>
+<p><strong>NOTE:</strong></p>
+<ol>
+<li>Use the value of <code>com.google.android.geo.API_KEY</code> for the value of <code>ai.haptik.places.sdk.api.key</code></li>
+<li>If you do not use <code>com.google.android.geo.API_KEY</code> pass any non empty
+string as the value of the key</li>
+</ol>
+<p><strong>2. Add ChatActivity</strong></p>
+<p>The following Activity needs to be added to your Manifest. Adding a parent will make sure that the UP button in the ChatActivity will take the user to the correct activity. If you implement an Activity which will host the InboxView then that would be the ideal candidate to be the parent of the ChatActivity.</p>
+<pre><code class="hljs css language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">application</span>&gt;</span>
+.
+.
+.
+<span class="hljs-tag">&lt;<span class="hljs-name">activity</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">"ai.haptik.android.sdk.messaging.ChatActivity"</span> <span class="hljs-attr">android:parentActivityName</span>=<span class="hljs-string">"YOUR_PARENT_ACTIVITY"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta-data</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">"ai.haptik.android.sdk.messaging.backAsUp"</span> <span class="hljs-attr">android:value</span>=<span class="hljs-string">"true"</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">activity</span>&gt;</span>
+.
+.
+.<span class="hljs-tag">&lt;/<span class="hljs-name">application</span>&gt;</span>
+</code></pre>
+<p>The meta-data tag which is part of the ChatActivity is used to define the behaviour of the back button when the user is in the ChatActivity. There are two possible behaviours that can be assigned to the back button:</p>
+<ul>
+<li>The back button will behave the same way as the up button</li>
+<li>The back button will follow the default Android behaviour of a back button.</li>
+</ul>
+<p>For the first option the <strong>value</strong> field needs to be set to true and for the second option it needs to
+be set to false. Incase you don’t add this meta-data tag the value is set to true.</p>
+<p><a name="targeting-SDK-28"></a></p>
+<p><strong>3. Targeting Android SDK 28</strong></p>
+<p>If you are targeting <strong>Android Version 28</strong>, please create an xml resource file <code>network_security_config.xml</code> (if not created already) and add the below lines. This is needed so that Haptik specific images which are hosted in non-secure connection can be loaded properly.</p>
+<pre><code class="hljs css language-xml"><span class="hljs-meta">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">network-security-config</span>&gt;</span>
+    .
+    .
+    .
+    <span class="hljs-comment">&lt;!--Haptik Specific configuration--&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">domain-config</span> <span class="hljs-attr">cleartextTrafficPermitted</span>=<span class="hljs-string">"true"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">domain</span> <span class="hljs-attr">includeSubdomains</span>=<span class="hljs-string">"true"</span>&gt;</span>amazonaws.com<span class="hljs-tag">&lt;/<span class="hljs-name">domain</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">domain</span> <span class="hljs-attr">includeSubdomains</span>=<span class="hljs-string">"true"</span>&gt;</span>haptikapi.com<span class="hljs-tag">&lt;/<span class="hljs-name">domain</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">domain</span> <span class="hljs-attr">includeSubdomains</span>=<span class="hljs-string">"true"</span>&gt;</span>hellohaptik.com<span class="hljs-tag">&lt;/<span class="hljs-name">domain</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">domain-config</span>&gt;</span>
+  .
+  .
+  .
+<span class="hljs-tag">&lt;/<span class="hljs-name">network-security-config</span>&gt;</span>
+</code></pre>
+<p>Now add the following line in your app's <code>AndroidManifest.xml</code> file:</p>
+<pre><code class="hljs css language-xml">&lt;manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    .
+    .
+    .
+    &lt;application android:networkSecurityConfig="@xml/network_security_config"&gt;
+    .
+    .
+    .
+&lt;/manifest&gt;
+</code></pre>
+<p>You can find more details about it
+<a href="https://android-developers.googleblog.com/2018/04/protecting-users-with-tls-by-default-in.html">here in Google's Blog.</a></p>
+<h2><a class="anchor" aria-hidden="true" id="3-init-the-haptik-sdk"></a><a href="#3-init-the-haptik-sdk" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. Init the Haptik SDK</h2>
+<p>Haptik SDK <strong>MUST</strong> be initialized before using any of Haptik's
+functionality.</p>
+<p>If you are pointing the SDK to the Staging Environment please add the
+following line.</p>
+<!-- TODO:Add Multilanguage Code Tabs -->
+<pre><code class="hljs css language-java">HaptikLib.setRunEnvironment(HaptikLib.RUN_ENVIRONMENT_STAGING);
+</code></pre>
+<p>By default the SDK is pointing to the Production Environment.</p>
+<p>To initialize the SDK you will need to create Haptik's InitData object. You can create that by coping the below code.</p>
+<div class="tabs"><div class="nav-tabs"><div id="tab-group-26-tab-27" class="nav-link active" data-group="group_26" data-tab="tab-group-26-content-27">Java</div></div><div class="tab-content"><div id="tab-group-26-content-27" class="tab-pane active" data-group="group_26" tabindex="-1"><div><span><pre><code class="hljs css language-java">InitData initData = <span class="hljs-keyword">new</span> InitData.Builder(application)<br />            .baseUrl(<span class="hljs-string">"https://staging.hellohaptik.com"</span>)<br />            .debugEnabled(<span class="hljs-keyword">true</span>)<br />            .notificationSound(R.raw.notification_sound)<br />            .imageLoadingService(`PicassoApiFactory.getPicassoApi()`)<br />            .build();<br /></code></pre>
+</span></div></div></div></div>
+<p>With this <code>initData</code> object you can pass it into the
+<code>HaptikLib.init(initData)</code> method to initialize the Haptik SDK.</p>
+<h2><a class="anchor" aria-hidden="true" id="4-basic-sign-up-on-the-haptik-sdk"></a><a href="#4-basic-sign-up-on-the-haptik-sdk" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4. Basic Sign Up on the Haptik SDK</h2>
+<p>Haptik has different types of authentication methods. To get started quickly you can try the Basic Authentication type. But for your app please check out the complete Integration guide to see what Authentication method will suit your app.</p>
+<p>You need to pass a SignUpData object to the SDK for performing sign up. Below is the code which perform sign up and will take user to the Inbox screen.</p>
+<p>You can also take a user directly to a channel by using following code :</p>
+<div class="tabs"><div class="nav-tabs"><div id="tab-group-28-tab-29" class="nav-link active" data-group="group_28" data-tab="tab-group-28-content-29">Java</div></div><div class="tab-content"><div id="tab-group-28-content-29" class="tab-pane active" data-group="group_28" tabindex="-1"><div><span><pre><code class="hljs css language-java"><br /><span class="hljs-keyword">if</span>(!HaptikLib.isInitialized()){<br />    <span class="hljs-comment">//This mean HaptikLib is not initialised. Please initialise the HaptikLib here</span><br />    HaptikLib.init(initData)<br />}<br /><br /><span class="hljs-keyword">if</span> (!HaptikLib.isUserLoggedIn()) {<br />    SignUpData signUpData = <span class="hljs-keyword">new</span> SignUpData<br />             .Builder(SignUpData.AUTH_TYPE_BASIC)<br />             .build();<br /><br />    Router.signUpAndLaunchChannel(Context context, SignUpData signUpData, String businessViaName, String source);<br />} <span class="hljs-keyword">else</span> {<br />    Router.launchChannel(Context context, String businessViaName, String source);<br />}<br /><br /></code></pre>
+</span></div></div></div></div>
+<p>Here <code>businessViaName</code> is the unique business name of the channel that
+you wish to open and <code>source</code> is the screen from where you're launching
+this channel.</p>
+<h2><a class="anchor" aria-hidden="true" id="5-logging-out"></a><a href="#5-logging-out" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5: Logging out</h2>
+<p>If your application supports logout functionality, please call the
+logout method of the Haptik SDK to ensure that chats of the user logging
+out are cleared</p>
+<div class="tabs"><div class="nav-tabs"><div id="tab-group-30-tab-31" class="nav-link active" data-group="group_30" data-tab="tab-group-30-content-31">Java</div></div><div class="tab-content"><div id="tab-group-30-content-31" class="tab-pane active" data-group="group_30" tabindex="-1"><div><span><pre><code class="hljs css language-java">HaptikLib.logout(<span class="hljs-keyword">new</span> Callback&lt;Boolean&gt;() {<br />                    <span class="hljs-meta">@Override</span><br />                    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">success</span><span class="hljs-params">(Boolean result)</span> </span>{<br />                        <span class="hljs-comment">//Perform actions on success, or can be left blank</span><br />                    }<br /><br />                    <span class="hljs-meta">@Override</span><br />                    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">failure</span><span class="hljs-params">(HaptikException exception)</span> </span>{<br />                        <span class="hljs-comment">//Perform actions on failure, or can be left blank</span><br />                    }<br />                });<br /></code></pre>
+</span></div></div></div></div>
+<h2><a class="anchor" aria-hidden="true" id="class-duplication-resolution"></a><a href="#class-duplication-resolution" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Class duplication resolution</h2>
+<p>When you'll run gradle sync it's possible that the SDK and the Host app specify common dependencies, which might result in compile failure on the grounds of class duplication. In such cases specify resolutionStrategy on your App's build.gradle as follows:</p>
+<div class="tabs"><div class="nav-tabs"><div id="tab-group-32-tab-33" class="nav-link active" data-group="group_32" data-tab="tab-group-32-content-33">Java</div></div><div class="tab-content"><div id="tab-group-32-content-33" class="tab-pane active" data-group="group_32" tabindex="-1"><div><span><pre><code class="hljs css language-java">configurations . all {<br />    resolutionStrategy {<br />        force &lt; path to your version of conflicting library - <span class="hljs-number">1</span>&gt;<br />        force &lt; path to your version of conflicting library - <span class="hljs-number">2</span>&gt;<br />    }<br />}<br /></code></pre>
+</span></div></div></div></div>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 7/8/2020</em></div><div class="docs-prevnext"><a class="docs-next button" href="/android-sdk/sign-up"><span>Authentication</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#introduction">Introduction</a></li><li><a href="#get-your-gear">Get your gear</a></li><li><a href="#minimum-and-target-sdk-versions-of-the-haptik-sdk">Minimum and Target SDK versions of the Haptik SDK</a></li><li><a href="#1-changes-to-buildgradle-files">1. Changes to <code>build.gradle</code> files</a></li><li><a href="#2-manifest-entries">2. Manifest Entries</a></li><li><a href="#3-init-the-haptik-sdk">3. Init the Haptik SDK</a></li><li><a href="#4-basic-sign-up-on-the-haptik-sdk">4. Basic Sign Up on the Haptik SDK</a></li><li><a href="#5-logging-out">5: Logging out</a></li><li><a href="#class-duplication-resolution">Class duplication resolution</a></li></ul></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Bot Builder</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://docs.haptik.ai/ios-sdk/" class="footer-column-link">iOS SDK</a><a href="https://docs.haptik.ai/android-sdk/" class="footer-column-link">Android SDK</a><a href="https://docs.haptik.ai/web-sdk/" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/whatsapp/" class="footer-column-link">WhatsApp</a><a href="https://docs.haptik.ai/other/facebook" class="footer-column-link">Facebook</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Bot API</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a><a href="https://docs.haptik.ai/other/security" class="footer-column-link">Security</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Agent Chat Tool</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2020 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '224c7079e67e84a978d8b4621f6af16d',
+                indexName: 'haptik',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

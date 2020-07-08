@@ -1,0 +1,832 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Migration · Haptik Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;a name=&quot;moving-from-210---220&quot;&gt;&lt;/a&gt;"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Migration · Haptik Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.haptik.ai/"/><meta property="og:description" content="&lt;a name=&quot;moving-from-210---220&quot;&gt;&lt;/a&gt;"/><meta property="og:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.haptik.ai/img/image_0.png"/><link rel="shortcut icon" href="/img/image_0.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-106563119-6', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="/js/index.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/image_0.png" alt="Haptik Docs"/><h2 class="headerTitleWithLogo">Haptik Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="/#tools" target="_self">Tools</a></li><li class=""><a href="/#integrations" target="_self">Integrations</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span> </span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle"> </h3><ul class=""><li class="navListItem"><a class="navItem" href="/android-sdk/">Quick Start</a></li><li class="navListItem"><a class="navItem" href="/android-sdk/sign-up">Authentication</a></li><li class="navListItem"><a class="navItem" href="/android-sdk/configuring-push-notifications">Push Notifications</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Advanced</h4><ul><li class="navListItem"><a class="navItem" href="/android-sdk/rate-share">Rate &amp; Share</a></li><li class="navListItem"><a class="navItem" href="/android-sdk/style-guide">Theming</a></li><li class="navListItem"><a class="navItem" href="/android-sdk/image-loading-modules">Image Loading Modules</a></li><li class="navListItem"><a class="navItem" href="/android-sdk/voice-support">Enabling Voice Support</a></li><li class="navListItem"><a class="navItem" href="/android-sdk/additional-features">Additional Features</a></li></ul></div><li class="navListItem"><a class="navItem" href="/android-sdk/sdk-sample">Sample App</a></li><li class="navListItem"><a class="navItem" href="/android-sdk/faqs">Troubleshooting</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/android-sdk/migrating-from-earlier-versions">Migration</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Migration</h1></header><article><div><span><p><a name="moving-from-210---220"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="moving-from-210-→-220"></a><a href="#moving-from-210-→-220" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving from 2.1.0 → 2.2.0</h2>
+<p><strong>HaptikLib.init()</strong> has been changed to take an Application reference in the argument
+<strong>HaptikLib.setDeviceToken(String)</strong> now required a Context in the argument as well
+<strong>HaptikLib.setActivityLifecycleCallback(Application)</strong> has been removed<br>
+<strong>ErrorType</strong> ERROR_LIFECYCLE_CALLBACKS_NOT_SET has been removed from HaptikException</p>
+<p><a name="moving-from-220---230"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="moving-from-220-→-230"></a><a href="#moving-from-220-→-230" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving from 2.2.0 → 2.3.0</h2>
+<p>Update following dependencies in your app’s build.gradle,</p>
+<pre><code class="hljs css language-java">compile <span class="hljs-string">'in.til.sdk.android:sdk-core:1.3.1'</span>
+compile <span class="hljs-string">'in.til.sdk.android.data:dmp-pc:1.2.3'</span>
+</code></pre>
+<p>Add following dependencies in your app’s build.gradle,</p>
+<pre><code class="hljs css language-java">compile <span class="hljs-string">'com.uber.sdk:rides-android:0.6.1'</span>
+compile <span class="hljs-string">'com.android.support.constraint:constraint-layout:1.0.2'</span>
+</code></pre>
+<p><a name="moving-from-230---240"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="moving-from-230-→-240"></a><a href="#moving-from-230-→-240" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving from 2.3.0 → 2.4.0</h2>
+<p>AmazonPay support has been added in our SDK. Make sure you have to latest AAR file for that SDK, and include in your app same way you include the Haptik SDK AAR</p>
+<p>PERMISSION:</p>
+<pre><code class="hljs css language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">uses-permission</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">"android.permission.READ_PHONE_STATE"</span> /&gt;</span>
+</code></pre>
+<p>It’s being used for our referral system. You may force remove it if you’re not using our referral system</p>
+<p><a name="moving-from-240---250"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="moving-from-240-→-250"></a><a href="#moving-from-240-→-250" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving from 2.4.0 → 2.5.0</h2>
+<p>MessagingActivity has been renamed to ChatActivity. Please make that change, otherwise things would break.</p>
+<p><a name="moving-from-250---260"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="moving-from-250-→-260"></a><a href="#moving-from-250-→-260" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving from 2.5.0 → 2.6.0</h2>
+<p>PERMISSION:</p>
+<pre><code class="hljs css language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">uses-permission</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">"android.permission.VIBRATE"</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">uses-permission</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">"android.permission.RECEIVE_BOOT_COMPLETED"</span> /&gt;</span>
+</code></pre>
+<p>Both of these permissions are not mandatory as of now. You can force remove them if you don’t already ask for them</p>
+<p><a name="moving-from-260---290"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="moving-from-260-→-290"></a><a href="#moving-from-260-→-290" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving from 2.6.0 → 2.9.0</h2>
+<p>Update following dependencies in your app’s build.gradle,</p>
+<pre><code class="hljs css language-java">compile <span class="hljs-string">'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'</span>
+</code></pre>
+<p>PhonePe support has been added in our SDK. Make sure you follow the steps mentioned below for it to work properly.</p>
+<p>Add following dependencies in your root build.gradle’s repositories block,</p>
+<pre><code class="hljs css language-java">maven {
+   url <span class="hljs-string">"http://phonepe.bintray.com/PhonePeThinAndroidSDK"</span>
+   credentials {
+       username <span class="hljs-string">'Ask Haptik'</span>
+       password <span class="hljs-string">'Ask Haptik'</span>
+   }
+}
+</code></pre>
+<p>Add following dependencies in your app’s build.gradle,</p>
+<pre><code class="hljs css language-java">compile <span class="hljs-string">'phonepe.thinsdk.android.release:merchantsdk:0.3.2'</span>
+</code></pre>
+<p>For security purpose, PhonePe requires the SHA-1(which you will need to provide us) of your app’s production and debug keystore(if both are different) to generate the PhonePe-ID for your app.
+Once we get the SHA-1, PhonePe-ID is generated from it and you’ll need to add it as &lt;meta-data&gt; info in AndroidManifest.xml inside <application> tag.</p>
+<pre><code class="hljs css language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">meta-data</span>
+<span class="hljs-attr">android:name</span>=<span class="hljs-string">"com.phonepe.android.sdk.AppId"</span>
+<span class="hljs-attr">android:value</span>=<span class="hljs-string">"PhonePe-ID"</span> /&gt;</span>
+</code></pre>
+<p><a name="moving-from-290---2100"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="moving-from-290-→-2100"></a><a href="#moving-from-290-→-2100" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving from 2.9.0 → 2.10.0</h2>
+<ul>
+<li>Haptik SDK is now distributed as a gradle dependency! So make sure you add our private maven repo in your app’s root build.gradle.</li>
+</ul>
+<pre><code class="hljs css language-css">maven {
+   url "http://artifactory.hellohaptik.com:8081/artifactory/libs-release-local"
+   credentials {
+       username "{ASK HAPTIK FOR USERNAME}"
+       password "{ASK HAPTIK FOR PASSWORD}"
+   }
+}
+</code></pre>
+<ul>
+<li>After this add Haptik’s dependency as below,</li>
+</ul>
+<p>Haptik SDK without cab functionality</p>
+<pre><code class="hljs css language-java">compile <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-core:2.10.0-30146'</span>
+</code></pre>
+<p>Haptik SDK with cab functionality</p>
+<pre><code class="hljs css language-java">compile <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-cab:2.10.0-30146'</span>
+</code></pre>
+<ul>
+<li><p>You may remove all haptik related maven based dependencies except AmazonPay since it’s standalone AAR based</p></li>
+<li><p>If you're using our <code>cab</code> functionality/sdk then you would now need to enable it programmatically. Make sure to add this line just anytime before or just after you call HaptikLib.init()</p></li>
+</ul>
+<pre><code class="hljs css language-java">HaptikLib.setApis(CabApiFactory.getCabApi());
+</code></pre>
+<p><a name="moving-from-2100---300"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="moving-from-2100-→-300"></a><a href="#moving-from-2100-→-300" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving from 2.10.0 → 3.0.0</h2>
+<ul>
+<li><p>This release adds more modularity to Haptik SDK by introducing payments as separate module. From now onwards, payments is not a part of <code>core</code> module.</p></li>
+<li><p>Add the following dependency for using payment module,</p></li>
+</ul>
+<p>Haptik SDK with payment functionality</p>
+<pre><code class="hljs css language-java">compile <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-payment:3.0.0-30150'</span>
+</code></pre>
+<ul>
+<li><p>Please DO NOT remove AmazonPay dependency as it's standalone AAR, and not a maven dependency, if you are using payment.</p></li>
+<li><p>init function of HaptikLib has got signature changes, so it will break dependent app compilation. New InitData has been introduced along with a Builder. Please check the below example:</p></li>
+</ul>
+<pre><code class="hljs css language-java">InitData initData = <span class="hljs-keyword">new</span> InitData.Builder(<span class="hljs-keyword">this</span>)
+   .baseUrl(URL)
+   .clientMainActivityClass(YourMainActivity<span class="hljs-class">.<span class="hljs-keyword">class</span>)
+   .<span class="hljs-title">apiOptions</span>(<span class="hljs-title">CabApiFactory</span>.<span class="hljs-title">getCabApi</span>())// <span class="hljs-title">For</span> <span class="hljs-title">Cabs</span>
+   .<span class="hljs-title">apiOptions</span>(<span class="hljs-title">PaymentApiFactory</span>.<span class="hljs-title">getPaymentApi</span>())// <span class="hljs-title">For</span> <span class="hljs-title">payments</span>
+   .<span class="hljs-title">debugEnabled</span>(<span class="hljs-title">true</span>)// <span class="hljs-title">or</span> <span class="hljs-title">false</span>, <span class="hljs-title">based</span> <span class="hljs-title">on</span> <span class="hljs-title">build</span> <span class="hljs-title">variant</span>
+   .<span class="hljs-title">notificationSound</span>(<span class="hljs-title">R</span>.<span class="hljs-title">raw</span>.<span class="hljs-title">notification_sound</span>)
+   .<span class="hljs-title">build</span>()</span>;
+
+HaptikLib.init(initData);
+
+</code></pre>
+<p><a name="moving-from-300---310"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="moving-from-300-→-310"></a><a href="#moving-from-300-→-310" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving from 3.0.0 → 3.1.0</h2>
+<ul>
+<li>After this update Haptik’s dependencies as below,</li>
+</ul>
+<pre><code class="hljs css language-java">Haptik core SDK functionality
+compile <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-core:3.1.0-31158'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with cab functionality
+compile <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-cab:3.1.0-31158'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with payment functionality
+compile <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-payment:3.1.0-31158'</span>
+</code></pre>
+<ul>
+<li><p>Signature change of <code>logout</code> method.
+It now takes a Callback object and provides callback whether logout was success or not</p></li>
+<li><p>If you're using Haptik's payment SDK then please note that <code>AmazonPay</code> dependency has been updated. Please make you get a new AAR along with this version.</p></li>
+</ul>
+<p><a name="moving-from-310---320"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="moving-from-310-→-320"></a><a href="#moving-from-310-→-320" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving from 3.1.0 → 3.2.0</h2>
+<ul>
+<li>This update is primarily a bug fix update.</li>
+</ul>
+<p><a name="moving-from-320---330"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="moving-from-320-→-330"></a><a href="#moving-from-320-→-330" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving from 3.2.0 → 3.3.0</h2>
+<ul>
+<li>After this update add Haptik’s dependencies as below,</li>
+</ul>
+<pre><code class="hljs css language-java">Haptik core SDK functionality
+compile <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-core:3.3.0-33164'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with cab functionality
+compile <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-cab:3.3.0-33164'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with payment functionality
+compile <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-payment:3.3.0-33164'</span>
+</code></pre>
+<ul>
+<li>Update your targetSdkVersion to API 26.</li>
+<li>Update your Gradle to 3.0.0.</li>
+<li>Update your play services to 11.0.4.</li>
+<li><code>Router.addMoneyToWallet()</code> is deprecated now. Please use <code>Router.showWallet()</code> for opening wallet balance screen.</li>
+</ul>
+<p><a name="moving-from-330---340"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="moving-from-330-→-340"></a><a href="#moving-from-330-→-340" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving from 3.3.0 → 3.4.0</h2>
+<ul>
+<li>After this update add Haptik’s dependencies as below,</li>
+</ul>
+<pre><code class="hljs css language-java">Haptik core SDK functionality
+compile <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-core:3.4.0-34168'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with cab functionality
+compile <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-cab:3.4.0-34168'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with payment functionality
+compile <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-payment:3.4.0-34168'</span>
+</code></pre>
+<ul>
+<li><code>HaptikLib#setDeviceToken()</code> is now deprecated. Use either <code>setGcmDeviceToken()</code> or <code>setFcmDeviceToken()</code> depending on your usage</li>
+<li><code>Name</code> is not a mandatory field anymore for <code>SignUpData</code> creation with any <strong>AuthType</strong></li>
+<li><code>City</code> is not a mandatory field anymore for <code>SignUpData</code> creation with any <strong>AuthType</strong></li>
+<li>The <code>SignUpData</code> class has less restrictions for parameters, to smooth out the client sign up in Haptik SDK. For more details related to parameters changed for individual Authentication Type, please refer <a href="#user-authentication">User Authentication</a>.</li>
+<li>A new <code>HaptikSignupProgessView</code> has been added, which can be used to display while the user is being signed up in Haptik SDK. For more details related to its implementation, please refer Javadoc and section <a href="#integrating-the-progress-view">Integrate Haptik Signup Progress View</a>.</li>
+</ul>
+<p><a name="moving-from-340---350"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="moving-from-340-→-350"></a><a href="#moving-from-340-→-350" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving from 3.4.0 → 3.5.0</h2>
+<ul>
+<li>After this update add Haptik’s dependencies as below,</li>
+</ul>
+<pre><code class="hljs css language-java">Haptik core SDK functionality
+compile <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-core:3.5.0-35173'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with cab functionality
+compile <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-cab:3.5.0-35173'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with payment functionality
+compile <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-payment:3.5.0-35173'</span>
+</code></pre>
+<ul>
+<li>From now <code>NullPointerException</code> will be thrown if <code>clientMainActivityClass</code> field is not set in <code>InitData</code>.</li>
+</ul>
+<p><a name="moving-from-350---360"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="moving-from-350-→-360"></a><a href="#moving-from-350-→-360" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving from 3.5.0 → 3.6.0</h2>
+<ul>
+<li>After this update add Haptik’s dependencies as below,</li>
+</ul>
+<pre><code class="hljs css language-java">Haptik core SDK functionality
+compile <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-core:3.6.0-36175'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with cab functionality
+compile <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-cab:3.6.0-36175'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with payment functionality
+compile <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-payment:3.6.0-36175'</span>
+</code></pre>
+<ul>
+<li>Since SSO SDK is integrated, you'll need to add the below information for it to work:</li>
+</ul>
+<pre><code class="hljs"><span class="hljs-comment">&lt;!-- Please don't use string resources here as it will not work  --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">provider</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">"com.login.nativesso.provider.TgidSaver"</span>
+    <span class="hljs-attr">android:authorities</span>=<span class="hljs-string">"androidcontentprovidersso.tg.UNIQUE_CUSTOM_SUFFIX"</span>
+    <span class="hljs-attr">android:exported</span>=<span class="hljs-string">"true"</span> /&gt;</span>
+</code></pre>
+<p>Here are the details for updating the above information and creating the <code>UNIQUE_CUSTOM_SUFFIX</code>:</p>
+<ul>
+<li><code>androidcontentprovidersso.tg</code> is constant prefix.</li>
+<li>After the prefix, give a specific name identifier for your app.</li>
+<li><code>UNIQUE_CUSTOM_SUFFIX</code> should be <strong>unique</strong> otherwise app will not install on the device due to common authority name.</li>
+<li>For example, if your package name is com.abc.xyz, use COM_ABC_XYZ as <code>UNIQUE_CUSTOM_SUFFIX</code>.</li>
+</ul>
+<p>This way <code>android:authorities</code> will look like:</p>
+<pre><code class="hljs"><span class="hljs-selector-tag">androidcontentprovidersso</span><span class="hljs-selector-class">.tg</span><span class="hljs-selector-class">.COM_ABC_XYZ</span>
+</code></pre>
+<p>Once the provider configuration is set, you'll need to add a meta-data for the same:</p>
+<pre><code class="hljs"><span class="hljs-comment">&lt;!-- For SSO initialization --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">meta-data</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">"ai.haptik.android.sdk.SsoProviderAuthority"</span>
+   <span class="hljs-attr">android:value</span>=<span class="hljs-string">"androidcontentprovidersso.tg.UNIQUE_CUSTOM_SUFFIX"</span> /&gt;</span>
+</code></pre>
+<p><a name="moving-from-360---370"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="moving-from-360-→-370"></a><a href="#moving-from-360-→-370" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving from 3.6.0 → 3.7.0</h2>
+<ul>
+<li>After this update add Haptik’s dependencies as below,</li>
+</ul>
+<pre><code class="hljs css language-java">Haptik core SDK functionality
+compile <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-core:3.7.0-37176'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with cab functionality
+compile <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-cab:3.7.0-37176'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with payment functionality
+compile <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-payment:3.7.0-37176'</span>
+</code></pre>
+<ul>
+<li>Added a public method <code>HaptikLib.updateUserToken()</code> for client to update user token.</li>
+</ul>
+<p><a name="moving-from-370---381"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="moving-from-370-→-381"></a><a href="#moving-from-370-→-381" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving from 3.7.0 → 3.8.1</h2>
+<ul>
+<li>After this update add Haptik’s dependencies as below,</li>
+</ul>
+<pre><code class="hljs css language-java">Haptik core SDK functionality
+compile <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-core:3.8.1-38277'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with cab functionality
+compile <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-cab:3.8.1-38277'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with payment functionality
+compile <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-payment:3.8.1-38277'</span>
+</code></pre>
+<p><a name="moving-from-381---390"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="moving-from-381-→-390"></a><a href="#moving-from-381-→-390" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving from 3.8.1 → 3.9.0</h2>
+<ul>
+<li>After this update add Haptik’s dependencies as below,</li>
+</ul>
+<pre><code class="hljs css language-java">Haptik core SDK functionality
+compile <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-core:3.9.0-39178'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with cab functionality
+compile <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-cab:3.9.0-39178'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with payment functionality
+compile <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-payment:3.9.0-39178'</span>
+</code></pre>
+<ul>
+<li>Truecaller is now an option for verifying the Guest User. You need TrueCaller SDK <code>aar</code> file and PartnerKey. You will get PartnerKey for your app from TrueCaller developer console and need to add it in your <code>AndroidManifest.xml</code>. Please find the example below :</li>
+</ul>
+<pre><code class="hljs css language-java">&lt;meta-data android:name=<span class="hljs-string">"com.truecaller.android.sdk.PartnerKey"</span> android:value=<span class="hljs-string">"@strings/YOUR_TRUECALLER_PARTNER_KEY"</span>/&gt;
+</code></pre>
+<p>To add TrueCaller SDK AAR file, go to AndroidStudio's File menu :
+New -&gt; New Module -&gt; Select Import AAR/JAR Package option -&gt; Select the provided TrueCaller SDK AAR file.</p>
+<p><a name="moving-from-390---400"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="moving-from-390-→-400"></a><a href="#moving-from-390-→-400" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving from 3.9.0 → 4.0.0</h2>
+<ul>
+<li>After this update add Haptik’s dependencies as below,</li>
+</ul>
+<pre><code class="hljs css language-java">Haptik core SDK functionality
+compile <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-core:4.0.0-40178'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with cab functionality
+compile <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-cab:4.0.0-40178'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with payment functionality
+compile <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-payment:4.0.0-40178'</span>
+</code></pre>
+<ul>
+<li><strong>BREAKING:</strong> <code>UserPersonaAnalyticCallback</code> interface is now removed.</li>
+<li><strong>BREAKING:</strong> The methods <code>isBannerVisible()</code> &amp; <code>setBannerVisibility(boolean visibility)</code> of <code>InboxView</code> are now removed.</li>
+<li><strong>BREAKING:</strong> The custom attribute <code>showBanner</code> for <code>InboxView</code> is now removed.</li>
+<li>Added a new method <code>launchChannelAndTriggerBot()</code> in <code>Router</code>. This method will launch a channel and trigger bot to perform a specific task.</li>
+</ul>
+<p><a name="moving-from-400---410"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="moving-from-400-→-410"></a><a href="#moving-from-400-→-410" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving from 4.0.0 → 4.1.0</h2>
+<ul>
+<li>After this update add Haptik’s dependencies as below,</li>
+</ul>
+<pre><code class="hljs css language-java">Haptik core SDK functionality
+compile <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-core:4.1.0-41180'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with cab functionality
+compile <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-cab:4.1.0-41180'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with payment functionality
+compile <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-payment:4.1.0-41180'</span>
+</code></pre>
+<ul>
+<li><strong>BREAKING:</strong> <code>NotificationManager</code>class for Haptik SDK is now renamed to <code>HaptikNotificationManager</code>.</li>
+<li>Added support to customize the colors of the App bar layout.</li>
+<li>A new interface <code>InitDataCallback</code> is added. Clients will implement this interface in Application class and override its single method to perform HaptikLib settings and return InitData reference,
+if they are planning not to initialize Haptik SDK in <code>Application.onCreate()</code>.</li>
+<li>Added the support for phone number validation during the sign up process, now passing invalid numbers during the sign up
+process will throw a IllegalStateException</li>
+</ul>
+<p><a name="moving-from-410---421"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="moving-from-410-→-421"></a><a href="#moving-from-410-→-421" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving from 4.1.0 → 4.2.1</h2>
+<ul>
+<li>After this update add Haptik’s dependencies as below,</li>
+</ul>
+<pre><code class="hljs css language-java">Haptik core SDK functionality
+compile <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-core:4.2.1-42280'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with cab functionality
+compile <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-cab:4.2.1-42280'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with payment functionality
+compile <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-payment:4.2.1-42280'</span>
+</code></pre>
+<ul>
+<li>Updated the image loading library <code>Glide</code> version to 4.4.0.</li>
+</ul>
+<p><a name="moving-from-421---430"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="moving-from-421-→-430"></a><a href="#moving-from-421-→-430" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving from 4.2.1 → 4.3.0</h2>
+<ul>
+<li>After this update add Haptik’s dependencies as below,</li>
+</ul>
+<pre><code class="hljs css language-java">Haptik core SDK functionality
+compile <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-core:4.3.0-43180'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with cab functionality
+compile <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-cab:4.3.0-43180'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with payment functionality
+compile <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-payment:4.3.0-43180'</span>
+</code></pre>
+<ul>
+<li>Updated the AmazonPay SDK to newer version which has bug fixes.</li>
+<li>Changes made to ensure <code>WAKE_LOCK</code> are reduced.</li>
+</ul>
+<p><a name="moving-from-430---440"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="moving-from-430-→-440"></a><a href="#moving-from-430-→-440" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving from 4.3.0 → 4.4.0</h2>
+<ul>
+<li>After this update add Haptik’s dependencies as below,</li>
+</ul>
+<pre><code class="hljs css language-java">Haptik core SDK functionality
+implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-core:4.4.0-44180'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with cab functionality
+implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-cab:4.4.0-44180'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with payment functionality
+implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-payment:4.4.0-44180'</span>
+</code></pre>
+<ul>
+<li>PhonePe SDK is now updated to their new Intent based SDK.</li>
+<li><strong>BREAKING:</strong> Please <strong>remove the below maven code</strong> from your root build.gradle's respository</li>
+</ul>
+<pre><code class="hljs css language-java">maven {
+        url <span class="hljs-string">"http://phonepe.bintray.com/PhonePeThinAndroidSDK"</span>
+        credentials {
+            username <span class="hljs-string">'USERNAME'</span>
+            password <span class="hljs-string">'PASSWORD'</span>
+        }
+}
+</code></pre>
+<p>and <strong>replace it</strong> with the following:</p>
+<pre><code class="hljs css language-java">maven {
+    url  <span class="hljs-string">"https://phonepe.bintray.com/PhonePeIntentSDK"</span>
+}
+</code></pre>
+<ul>
+<li>Please add the following lines in your <code>AndroidManifest.xml</code> to test PhonePe on staging environment</li>
+</ul>
+<pre><code class="hljs css language-java">&lt;!-- Keep it <span class="hljs-keyword">true</span> in testing environment <span class="hljs-keyword">for</span> PhonePe--&gt;
+&lt;meta-data android:name=<span class="hljs-string">"com.phonepe.android.sdk.isUAT"</span>
+        android:value=<span class="hljs-string">"true"</span> /&gt;
+</code></pre>
+<p>and <strong>remove</strong> the following:</p>
+<pre><code class="hljs css language-java">&lt;meta-data android:name=<span class="hljs-string">"com.phonepe.android.sdk.AppId"</span>
+    android:value=<span class="hljs-string">"PHONEPE-ID"</span> /&gt;
+</code></pre>
+<p><a name="moving-from-440---451"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="moving-from-440-→-451"></a><a href="#moving-from-440-→-451" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving from 4.4.0 → 4.5.1</h2>
+<ul>
+<li>After this update add Haptik’s dependencies as below,</li>
+</ul>
+<pre><code class="hljs css language-java">Haptik core SDK functionality
+implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-core:4.5.1-45281'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with cab functionality
+implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-cab:4.5.1-45281'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with payment functionality
+implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-payment:4.5.1-45281'</span>
+</code></pre>
+<p>Now the <code>userPhone</code> in <code>SignUpData.Builder</code> class is an optional field while signing up on Haptik SDK.</p>
+<ul>
+<li><p><strong>BREAKING:</strong> <code>authId</code> in <code>SignUpData.Builder</code> class is now a <strong>mandatory</strong> field if the <code>AUTH_TYPE</code> is other than <code>BASIC</code>. If your unique user-id is phone number, please pass the phone number here.</p></li>
+<li><p><strong>BREAKING</strong> Client will have to add a auth module <code>haptik-guest-auth</code> or <code>tilsso-guest-auth</code> to verify a guest user. Or the clients will have to implement the <code>VerifyUserService</code> to add their own user verification system. <strong>Without this user will not be able to access the restricted channels</strong></p></li>
+<li><p>Since Google is blocking apps to read SMS's, the <code>SMS_RECEIVE</code> permission is removed and SMSRetriever SDK is used instead for OTP verification of guest user.</p></li>
+<li><p><strong>BREAKING</strong> <code>signUpViaSso(@NonNull final Callback&lt;User&gt; userCallback)</code> has now been removed from the Haptik SDK.</p></li>
+</ul>
+<p><a name="moving-from-451---461"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="moving-from-451-→-461"></a><a href="#moving-from-451-→-461" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving from 4.5.1 → 4.6.1</h2>
+<ul>
+<li>After this update add Haptik’s dependencies as below,</li>
+</ul>
+<pre><code class="hljs css language-java">Haptik core SDK functionality
+implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-core:4.6.1-46283'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with cab functionality
+implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-cab:4.6.1-46283'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with payment functionality
+implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-payment:4.6.1-46283'</span>
+</code></pre>
+<ul>
+<li><strong>BREAKING:</strong> Updated the play services to 15.0.1.</li>
+<li><strong>BREAKING:</strong> Updated the firebase core to 16.0.0 and firebase messaging to 17.3.0.</li>
+<li><strong>BREAKING:</strong> Updated the google-services to 4.1.0.</li>
+<li>Chat transferred from bot to human or chat marked as completed will now be displayed to user.</li>
+</ul>
+<p><a name="moving-from-461---471"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="moving-from-461-→-470"></a><a href="#moving-from-461-→-470" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving from 4.6.1 → 4.7.0</h2>
+<ul>
+<li>After this update add Haptik’s dependencies as below,</li>
+</ul>
+<pre><code class="hljs css language-java">Haptik core SDK functionality
+implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-core:4.7.0-47183'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with cab functionality
+implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-cab:4.7.0-47183'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with payment functionality
+implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-payment:4.7.0-47183'</span>
+</code></pre>
+<ul>
+<li>If the <code>payment</code> module is not added, when user taps on recharge screen they will be redirected to the messaging screen after verification, if required.</li>
+<li><strong>BREAKING:</strong> <code>TransactionRequestor</code> class has now been moved to the <code>payment</code> module.</li>
+<li><strong>BREAKING:</strong> <code>Transaction</code> class has now been moved to the <code>payment</code> module.</li>
+<li>If run time environment is set to <code>Staging</code> it will be displayed as a subtitle of the toolbar in the messaging screen.</li>
+<li>Added a <code>DefaultInboxActivity</code> which implement <code>InboxView</code>. You can use this activity if you do not want major customization in the inbox screen. You can simply call <code>Router.signUpAndLaunchInbox()</code> or <code>Router.launchInbox()</code> for starting this activity.</li>
+<li>Added new methods in <code>Router</code> for quick SDK integration. You can now simply call <code>Router.signUpAndLaunchChannel()</code> and <code>Router.signUpAndLaunchInbox()</code> with <code>SignUpData</code> object to perform user sign-up, SDK will take care of all sync and signup processes. See <code>QuickStart</code> doc for more information.</li>
+</ul>
+<p><a name="moving-from-470---501"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="moving-from-471-→-501"></a><a href="#moving-from-471-→-501" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving from 4.7.1 → 5.0.1</h2>
+<ul>
+<li>After this update add Haptik’s dependencies as below,</li>
+</ul>
+<pre><code class="hljs css language-java">Haptik core SDK functionality
+implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-core:5.0.1-50283'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with reminder and inbox functionality
+implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-extensions:5.0.1-50283'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with cab functionality
+implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-cab:5.0.1-50283'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with payment functionality
+implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-payment:5.0.1-50283'</span>
+</code></pre>
+<ul>
+<li><strong>BREAKING:</strong> Now, the <code>InboxView</code> and <code>Reminders</code> functionality is segregated into a different <code>extensions</code> module. So, if you're using inbox or reminders functionality you need to add new module as below :</li>
+</ul>
+<pre><code class="hljs css language-java">Haptik core SDK with reminder and inbox functionality
+implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-extensions:5.0.1-50283'</span>
+</code></pre>
+<ul>
+<li><strong>BREAKING</strong> Use the following code for importing InboxView :</li>
+</ul>
+<pre><code class="hljs css language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">ai.haptik.android.sdk.extensions.inbox.InboxView</span>
+      <span class="hljs-attr">android:id</span>=<span class="hljs-string">"@+id/inbox"</span>
+      <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">"match_parent"</span>
+      <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">"match_parent"</span>/&gt;</span>
+</code></pre>
+<ul>
+<li><strong>BREAKING</strong> Haptik SDK artifactory URL is changed. Please use the one given below :</li>
+</ul>
+<pre><code class="hljs css language-java">maven {
+    url <span class="hljs-string">"https://artifactory.hellohaptik.com/artifactory/libs-release-local"</span>
+    credentials {
+        username <span class="hljs-string">"&lt;ASK HAPTIK FOR USERNAME&gt;"</span>
+        password <span class="hljs-string">"&lt;ASK HAPTIK FOR PASSWORD&gt;"</span>
+    }
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="moving-from-501-→-510"></a><a href="#moving-from-501-→-510" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving from 5.0.1 → 5.1.0</h2>
+<ul>
+<li><strong>BREAKING:</strong> If you are using <code>tilauth</code> Haptik SDK, the supporting <strong>Truecaller</strong> SDK has been updated to version <code>0.7</code>. Please find the updated Truecaller SDK AAR file in the Google Drive shared with you.</li>
+<li><strong>BREAKING:</strong> The callback <code>onTaskBoxItemClicked(Task task)</code> from <code>MessagingEventListener</code> is now removed. Please update the listener if you are using it anywhere.</li>
+<li><strong>BREAKING:</strong> Removed the <code>til core</code> and <code>til dmp</code> support from the Haptik SDK</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="moving-from-510-→-520"></a><a href="#moving-from-510-→-520" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving from 5.1.0 → 5.2.0</h2>
+<ul>
+<li><strong>BREAKING:</strong> Add, Edit and Delete address functionality should be accessed from the <code>extensions</code> module.</li>
+<li><strong>BREAKING:</strong> Removed <code>tilsso-guest-auth</code> module and truecaller support.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="moving-from-520-→-530"></a><a href="#moving-from-520-→-530" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving from 5.2.0 → 5.3.0</h2>
+<ul>
+<li><strong>BREAKING:</strong> Added support for voice feature. See (here)[#voice-support].</li>
+<li><strong>BREAKING:</strong> Added support for language feature. See (here)[#language-support].</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="moving-from-530-→-540"></a><a href="#moving-from-530-→-540" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving from 5.3.0 → 5.4.0</h2>
+<pre><code class="hljs css language-java">Haptik core SDK functionality
+implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-core:5.4.0-54183'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with reminder and inbox functionality
+implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-extensions:5.4.0-54183'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with payment functionality
+implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-payment:5.4.0-54183'</span>
+</code></pre>
+<ul>
+<li><strong>BREAKING:</strong> Removed cabs support from Haptik SDK.</li>
+<li><strong>BREAKING:</strong> Add one of the following dependency, it will be used for
+image loading</li>
+</ul>
+<pre><code class="hljs css language-java">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-picasso-helper:5.4.0-54183'</span>
+</code></pre>
+<pre><code class="hljs">                        OR 
+</code></pre>
+<pre><code class="hljs css language-java">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-glide-helper:5.4.0-54183'</span>
+</code></pre>
+<ul>
+<li><strong>BREAKING:</strong> Make the following changes to <code>InitData</code></li>
+</ul>
+<pre><code class="hljs css language-java">InitData initData = <span class="hljs-keyword">new</span> InitData.Builder(application)
+            .baseUrl(<span class="hljs-string">"https://staging.hellohaptik.com"</span>)
+            .debugEnabled(<span class="hljs-keyword">true</span>)
+            .notificationSound(R.raw.notification_sound)
+            .imageLoadingService(`PicassoApiFactory.getPicassoApi()` or `GlideApiFactory.getGlideApi()`) <span class="hljs-comment">//depending upon the image loading module added in the project</span>
+            .build();
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="moving-from-540-→-550"></a><a href="#moving-from-540-→-550" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving from 5.4.0 → 5.5.0</h2>
+<ul>
+<li><strong>BREAKING:</strong> Removed deprecated place picker library with Google Places SDK. You now need to add Places SDK API key in your manifest like</li>
+</ul>
+<pre><code class="hljs">&lt;meta-data android:<span class="hljs-type">name</span>="ai.haptik.places.sdk.api.key"
+        android:<span class="hljs-keyword">value</span>="YOUR PLACES SDK API KEY HERE" /&gt;
+</code></pre>
+<ul>
+<li>Updated firebase library to 16.0.6.</li>
+<li>Updated firebase messaging library to 17.6.0.</li>
+</ul>
+<pre><code class="hljs css language-java">Haptik core SDK functionality
+implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-core:5.5.0-55183'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with reminder and inbox functionality
+implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-extensions:5.5.0-55183'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with payment functionality
+implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-payment:5.5.0-55183'</span>
+</code></pre>
+<pre><code class="hljs css language-java">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-picasso-helper:5.5.0-55183'</span>
+</code></pre>
+<pre><code class="hljs css language-java">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-glide-helper:5.5.0-55183'</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="moving-from-550-→-551"></a><a href="#moving-from-550-→-551" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving from 5.5.0 → 5.5.1</h2>
+<pre><code class="hljs css language-java">Haptik core SDK functionality
+implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-core:5.5.1-55283'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with reminder and inbox functionality
+implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-extensions:5.5.1-55283'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with payment functionality
+implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-payment:5.5.1-55283'</span>
+</code></pre>
+<pre><code class="hljs css language-java">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-picasso-helper:5.5.1-55283'</span>
+</code></pre>
+<pre><code class="hljs css language-java">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-glide-helper:5.5.1-55283'</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="moving-from-551-→-560"></a><a href="#moving-from-551-→-560" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving from 5.5.1 → 5.6.0</h2>
+<ul>
+<li><p>Removed referral feature.</p></li>
+<li><p>Added a module for <code>Jio</code> communication bridge, please read the section
+Integrating Jio Communications Module for further details</p></li>
+</ul>
+<pre><code class="hljs css language-java">Haptik core SDK functionality
+implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-core:5.6.0-56183'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with reminder and inbox functionality
+implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-extensions:5.6.0-56183'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with payment functionality
+implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-payment:5.6.0-56183'</span>
+</code></pre>
+<pre><code class="hljs css language-java">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-picasso-helper:5.6.0-56183'</span>
+</code></pre>
+<pre><code class="hljs css language-java">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-glide-helper:5.6.0-56183'</span>
+</code></pre>
+<pre><code class="hljs css language-java">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-jio-communications:5.6.0-56183'</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="moving-from-560-→-561"></a><a href="#moving-from-560-→-561" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving from 5.6.0 → 5.6.1</h2>
+<ul>
+<li><p>Removed referral feature.</p></li>
+<li><p>Added a module for <code>Jio</code> communication bridge, please read the section
+Integrating Jio Communications Module for further details</p></li>
+</ul>
+<pre><code class="hljs css language-java">Haptik core SDK functionality
+implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-core:5.6.1-56283'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with reminder and inbox functionality
+implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-extensions:5.6.1-56283'</span>
+</code></pre>
+<pre><code class="hljs css language-java">Haptik core SDK with payment functionality
+implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-payment:5.6.1-56283'</span>
+</code></pre>
+<pre><code class="hljs css language-java">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-picasso-helper:5.6.1-56283'</span>
+</code></pre>
+<pre><code class="hljs css language-java">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-glide-helper:5.6.1-56283'</span>
+</code></pre>
+<pre><code class="hljs css language-java">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-jio-communications:5.6.1-56283'</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="moving-from-561-→-570"></a><a href="#moving-from-561-→-570" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving from 5.6.1 → 5.7.0</h2>
+<ul>
+<li>Actions can now be auto launched from the SDK</li>
+<li>Add support for native TTS</li>
+<li>Moved to AndroidX libraries.</li>
+</ul>
+<pre><code class="hljs css language-groovy">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-core:5.7.0-57183'</span>
+</code></pre>
+<pre><code class="hljs css language-groovy">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-extensions:5.7.0-57183'</span>
+</code></pre>
+<pre><code class="hljs css language-groovy">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-payment:5.7.0-57183'</span>
+</code></pre>
+<pre><code class="hljs css language-groovy">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-picasso-helper:5.7.0-57183'</span>
+</code></pre>
+<pre><code class="hljs css language-groovy">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-glide-helper:5.7.0-57183'</span>
+</code></pre>
+<pre><code class="hljs css language-groovy">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-jio-communications:5.7.0-57183'</span>
+</code></pre>
+<pre><code class="hljs css language-groovy">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-xdk:5.7.0-57183'</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="moving-from-570-→-600"></a><a href="#moving-from-570-→-600" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving from 5.7.0 → 6.0.0</h2>
+<ul>
+<li>Payments are no longer supported by Haptik SDK</li>
+</ul>
+<pre><code class="hljs css language-groovy">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-core:6.0.0-60183'</span>
+</code></pre>
+<pre><code class="hljs css language-groovy">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-extensions:6.0.0-60183'</span>
+</code></pre>
+<pre><code class="hljs css language-groovy">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-picasso-helper:6.0.0-60183'</span>
+</code></pre>
+<pre><code class="hljs css language-groovy">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-glide-helper:6.0.0-60183'</span>
+</code></pre>
+<pre><code class="hljs css language-groovy">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-jio-communications:6.0.0-60183'</span>
+</code></pre>
+<pre><code class="hljs css language-groovy">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-xdk:6.0.0-60183'</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="moving-from-600-→-610"></a><a href="#moving-from-600-→-610" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving from 6.0.0 → 6.1.0</h2>
+<ul>
+<li>Payments are no longer supported by Haptik SDK</li>
+</ul>
+<pre><code class="hljs css language-groovy">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-core:6.1.0-61183'</span>
+</code></pre>
+<pre><code class="hljs css language-groovy">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-extensions:6.1.0-61183'</span>
+</code></pre>
+<pre><code class="hljs css language-groovy">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-picasso-helper:6.1.0-61183'</span>
+</code></pre>
+<pre><code class="hljs css language-groovy">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-glide-helper:6.1.0-61183'</span>
+</code></pre>
+<pre><code class="hljs css language-groovy">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-jio-communications:6.1.0-61183'</span>
+</code></pre>
+<pre><code class="hljs css language-groovy">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-xdk:6.1.0-61183'</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="moving-from-610-→-620"></a><a href="#moving-from-610-→-620" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving from 6.1.0 → 6.2.0</h2>
+<pre><code class="hljs css language-groovy">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-core:6.2.0-62183'</span>
+</code></pre>
+<pre><code class="hljs css language-groovy">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-extensions:6.2.0-62183'</span>
+</code></pre>
+<pre><code class="hljs css language-groovy">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-picasso-helper:6.2.0-62183'</span>
+</code></pre>
+<pre><code class="hljs css language-groovy">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-glide-helper:6.2.0-62183'</span>
+</code></pre>
+<pre><code class="hljs css language-groovy">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-jio-communications:6.2.0-62183'</span>
+</code></pre>
+<pre><code class="hljs css language-groovy">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-xdk:6.2.0-62183'</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="moving-from-620-→-621"></a><a href="#moving-from-620-→-621" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving from 6.2.0 → 6.2.1</h2>
+<pre><code class="hljs css language-groovy">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-core:6.2.1-62283'</span>
+</code></pre>
+<pre><code class="hljs css language-groovy">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-extensions:6.2.1-62283'</span>
+</code></pre>
+<pre><code class="hljs css language-groovy">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-picasso-helper:6.2.1-62283'</span>
+</code></pre>
+<pre><code class="hljs css language-groovy">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-glide-helper:6.2.1-62283'</span>
+</code></pre>
+<pre><code class="hljs css language-groovy">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-jio-communications:6.2.1-62283'</span>
+</code></pre>
+<pre><code class="hljs css language-groovy">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-xdk:6.2.1-62283'</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="moving-from-621-→-630"></a><a href="#moving-from-621-→-630" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving from 6.2.1 → 6.3.0</h2>
+<ul>
+<li><strong>BREAKING:</strong> Glide image loading library is updated to v4.11.0.</li>
+<li>CleverTap is disabled by default</li>
+<li>Add capability to upload word documents, pdf etc along with images</li>
+<li>Fixed a crash on devices below Android 5 caused by feedback feature</li>
+<li>Share and Rate options are now configurable. Check <a href="https://hellohaptik.github.io/haptik-android-lib/core-module-integration#6-share-functionality">https://hellohaptik.github.io/haptik-android-lib/core-module-integration#6-share-functionality</a>.</li>
+</ul>
+<pre><code class="hljs css language-groovy">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-core:6.3.0-63183'</span>
+</code></pre>
+<pre><code class="hljs css language-groovy">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-extensions:6.3.0-63183'</span>
+</code></pre>
+<pre><code class="hljs css language-groovy">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-picasso-helper:6.3.0-63183'</span>
+</code></pre>
+<pre><code class="hljs css language-groovy">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-glide-helper:6.3.0-63183'</span>
+</code></pre>
+<pre><code class="hljs css language-groovy">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-jio-communications:6.3.0-63183'</span>
+</code></pre>
+<pre><code class="hljs css language-groovy">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-xdk:6.3.0-63183'</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="moving-from-630-→-642"></a><a href="#moving-from-630-→-642" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving from 6.3.0 → 6.4.2</h2>
+<ul>
+<li>Fix a crash caused during image upload for OnePlus devices on Android 10</li>
+<li>Fix a bug related to Forms and Keyboard</li>
+<li>Bug fix related to downloading of document files received from IVA.</li>
+</ul>
+<pre><code class="hljs css language-groovy">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-core:6.4.2-64383'</span>
+</code></pre>
+<pre><code class="hljs css language-groovy">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-extensions:6.4.2-64383'</span>
+</code></pre>
+<pre><code class="hljs css language-groovy">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-picasso-helper:6.4.2-64383'</span>
+</code></pre>
+<pre><code class="hljs css language-groovy">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-glide-helper:6.4.2-64383'</span>
+</code></pre>
+<pre><code class="hljs css language-groovy">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-jio-communications:6.4.2-64383'</span>
+</code></pre>
+<pre><code class="hljs css language-groovy">implementation <span class="hljs-string">'ai.haptik.android.sdk:haptiklib-xdk:6.4.2-64383'</span>
+</code></pre>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 7/8/2020</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/android-sdk/faqs"><span class="arrow-prev">← </span><span>Troubleshooting</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#moving-from-210-→-220">Moving from 2.1.0 → 2.2.0</a></li><li><a href="#moving-from-220-→-230">Moving from 2.2.0 → 2.3.0</a></li><li><a href="#moving-from-230-→-240">Moving from 2.3.0 → 2.4.0</a></li><li><a href="#moving-from-240-→-250">Moving from 2.4.0 → 2.5.0</a></li><li><a href="#moving-from-250-→-260">Moving from 2.5.0 → 2.6.0</a></li><li><a href="#moving-from-260-→-290">Moving from 2.6.0 → 2.9.0</a></li><li><a href="#moving-from-290-→-2100">Moving from 2.9.0 → 2.10.0</a></li><li><a href="#moving-from-2100-→-300">Moving from 2.10.0 → 3.0.0</a></li><li><a href="#moving-from-300-→-310">Moving from 3.0.0 → 3.1.0</a></li><li><a href="#moving-from-310-→-320">Moving from 3.1.0 → 3.2.0</a></li><li><a href="#moving-from-320-→-330">Moving from 3.2.0 → 3.3.0</a></li><li><a href="#moving-from-330-→-340">Moving from 3.3.0 → 3.4.0</a></li><li><a href="#moving-from-340-→-350">Moving from 3.4.0 → 3.5.0</a></li><li><a href="#moving-from-350-→-360">Moving from 3.5.0 → 3.6.0</a></li><li><a href="#moving-from-360-→-370">Moving from 3.6.0 → 3.7.0</a></li><li><a href="#moving-from-370-→-381">Moving from 3.7.0 → 3.8.1</a></li><li><a href="#moving-from-381-→-390">Moving from 3.8.1 → 3.9.0</a></li><li><a href="#moving-from-390-→-400">Moving from 3.9.0 → 4.0.0</a></li><li><a href="#moving-from-400-→-410">Moving from 4.0.0 → 4.1.0</a></li><li><a href="#moving-from-410-→-421">Moving from 4.1.0 → 4.2.1</a></li><li><a href="#moving-from-421-→-430">Moving from 4.2.1 → 4.3.0</a></li><li><a href="#moving-from-430-→-440">Moving from 4.3.0 → 4.4.0</a></li><li><a href="#moving-from-440-→-451">Moving from 4.4.0 → 4.5.1</a></li><li><a href="#moving-from-451-→-461">Moving from 4.5.1 → 4.6.1</a></li><li><a href="#moving-from-461-→-470">Moving from 4.6.1 → 4.7.0</a></li><li><a href="#moving-from-471-→-501">Moving from 4.7.1 → 5.0.1</a></li><li><a href="#moving-from-501-→-510">Moving from 5.0.1 → 5.1.0</a></li><li><a href="#moving-from-510-→-520">Moving from 5.1.0 → 5.2.0</a></li><li><a href="#moving-from-520-→-530">Moving from 5.2.0 → 5.3.0</a></li><li><a href="#moving-from-530-→-540">Moving from 5.3.0 → 5.4.0</a></li><li><a href="#moving-from-540-→-550">Moving from 5.4.0 → 5.5.0</a></li><li><a href="#moving-from-550-→-551">Moving from 5.5.0 → 5.5.1</a></li><li><a href="#moving-from-551-→-560">Moving from 5.5.1 → 5.6.0</a></li><li><a href="#moving-from-560-→-561">Moving from 5.6.0 → 5.6.1</a></li><li><a href="#moving-from-561-→-570">Moving from 5.6.1 → 5.7.0</a></li><li><a href="#moving-from-570-→-600">Moving from 5.7.0 → 6.0.0</a></li><li><a href="#moving-from-600-→-610">Moving from 6.0.0 → 6.1.0</a></li><li><a href="#moving-from-610-→-620">Moving from 6.1.0 → 6.2.0</a></li><li><a href="#moving-from-620-→-621">Moving from 6.2.0 → 6.2.1</a></li><li><a href="#moving-from-621-→-630">Moving from 6.2.1 → 6.3.0</a></li><li><a href="#moving-from-630-→-642">Moving from 6.3.0 → 6.4.2</a></li></ul></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Bot Builder</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://docs.haptik.ai/ios-sdk/" class="footer-column-link">iOS SDK</a><a href="https://docs.haptik.ai/android-sdk/" class="footer-column-link">Android SDK</a><a href="https://docs.haptik.ai/web-sdk/" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/whatsapp/" class="footer-column-link">WhatsApp</a><a href="https://docs.haptik.ai/other/facebook" class="footer-column-link">Facebook</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Bot API</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a><a href="https://docs.haptik.ai/other/security" class="footer-column-link">Security</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Agent Chat Tool</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2020 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '224c7079e67e84a978d8b4621f6af16d',
+                indexName: 'haptik',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

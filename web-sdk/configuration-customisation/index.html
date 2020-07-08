@@ -1,0 +1,375 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Customisation · Haptik Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Customising the SDK"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Customisation · Haptik Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.haptik.ai/"/><meta property="og:description" content="## Customising the SDK"/><meta property="og:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.haptik.ai/img/image_0.png"/><link rel="shortcut icon" href="/img/image_0.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-106563119-6', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="/js/index.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/image_0.png" alt="Haptik Docs"/><h2 class="headerTitleWithLogo">Haptik Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="/#tools" target="_self">Tools</a></li><li class=""><a href="/#integrations" target="_self">Integrations</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Advanced</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle"> </h3><ul class=""><li class="navListItem"><a class="navItem" href="/web-sdk/">Quick Start</a></li><li class="navListItem"><a class="navItem" href="/web-sdk/feature-user-signup">Authentication</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Advanced</h4><ul><li class="navListItem"><a class="navItem" href="/web-sdk/feature-launch-message">Launch Message</a></li><li class="navListItem"><a class="navItem" href="/web-sdk/feature-custom-button">Custom Button</a></li><li class="navListItem"><a class="navItem" href="/web-sdk/configuration-sdk-methods">SDK Methods</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/web-sdk/configuration-customisation">Customisation</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Support and Compatibility</h4><ul><li class="navListItem"><a class="navItem" href="/web-sdk/support-browser">Browser Support</a></li><li class="navListItem"><a class="navItem" href="/web-sdk/support-native">Native Support</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Examples</h4><ul><li class="navListItem"><a class="navItem" href="/web-sdk/example-always-open">Example: Always Open</a></li><li class="navListItem"><a class="navItem" href="/web-sdk/example-multi-language">Example: Multi Language</a></li></ul></div></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Customisation</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="customising-the-sdk"></a><a href="#customising-the-sdk" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Customising the SDK</h2>
+<p>The SDK can be configured in a variety of ways to fit in seamlessly with the overall experience of the parent application.</p>
+<blockquote>
+<p>These settings can be configured in the Business Manager section of the Bot Builder. <br>
+<strong>Bot Builder → Your Business → Partner Specific Settings → SDK Configuration</strong></p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="glossary"></a><a href="#glossary" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Glossary</h2>
+<ul>
+<li><a href="#primary-color"><code>primary-color</code></a></li>
+<li><a href="#font-size"><code>font-size</code></a></li>
+<li><a href="#typography"><code>typography</code></a></li>
+<li><a href="#widget-positioning"><code>widget-positioning</code></a></li>
+<li><a href="#custom-button"><code>custom-button</code></a></li>
+<li><a href="#custom-css"><code>custom-css</code></a></li>
+<li><a href="#mode"><code>mode</code></a></li>
+<li><a href="#prompt-type"><code>prompt-type</code></a></li>
+<li><a href="#enable-typing-suggestions"><code>enable-typing-suggestions</code></a></li>
+<li><a href="#enable-user-feedback"><code>enable-user-feedback</code></a></li>
+<li><a href="#bot-type"><code>bot-type</code></a></li>
+<li><a href="#header-text"><code>header-text</code></a></li>
+<li><a href="#composer-placeholder"><code>composer-placeholder</code></a></li>
+<li><a href="#chat-bubble-text-desktop"><code>chat-bubble-text-desktop</code></a></li>
+<li><a href="#chat-bubble-text-mobile"><code>chat-bubble-text-mobile</code></a></li>
+<li><a href="#user-feedback-tags"><code>user-feedback-tags</code></a></li>
+<li><a href="#user-feedback-questions"><code>user-feedback-questions</code></a></li>
+<li><a href="#hide-composer"><code>hide-composer</code></a></li>
+<li><a href="#ignore-storage"><code>ignore-storage</code></a></li>
+<li><a href="#no-cross"><code>no-cross</code></a></li>
+<li><a href="#no-chat-bubble"><code>no-chat-bubble</code></a></li>
+<li><a href="#no-header"><code>no-header</code></a></li>
+<li><a href="#default-language"><code>default-language</code></a></li>
+<li><a href="#voice-bot-initial-input"><code>voice-bot-initial-input</code></a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="ui-settings"></a><a href="#ui-settings" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>UI Settings</h2>
+<blockquote>
+<p>Settings that primarily effect the look and feel of the SDK.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="primary-color"></a><a href="#primary-color" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>primary-color</code></h3>
+<p>The primary colour used throughout the SDK. This should ideally be the same as your brand's primary colour.</p>
+<p><strong>default: #00000</strong></p>
+<h3><a class="anchor" aria-hidden="true" id="font-size"></a><a href="#font-size" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>font-size</code></h3>
+<p>The base font size used throughout the SDK. It is recommended to leave this unchanged.</p>
+<p><strong>default: 16px</strong></p>
+<h3><a class="anchor" aria-hidden="true" id="typography"></a><a href="#typography" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>typography</code></h3>
+<p>The font family used throughout the SDK. It must be a google font. You can see available fonts here: <a href="https://fonts.google.com/">https://fonts.google.com/</a></p>
+<p><strong>default: Roboto</strong></p>
+<h3><a class="anchor" aria-hidden="true" id="widget-positioning"></a><a href="#widget-positioning" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>widget-positioning</code></h3>
+<p>The portion of the window where the SDK is rendered (along with the Let's chat with us button).</p>
+<p><strong>Possible Values:</strong></p>
+<ul>
+<li><code>bottom-left</code>: <em>Places the SDK on the bottom left part of the page</em></li>
+<li><code>bottom-right</code>: <em>Places the SDK on the bottom right part of the page</em></li>
+<li><code>center</code>: <em>Places the SDK in the centre of the page.</em></li>
+</ul>
+<p><strong>default: Bottom Left</strong></p>
+<h3><a class="anchor" aria-hidden="true" id="custom-button"></a><a href="#custom-button" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>custom-button</code></h3>
+<p>Whether to hide the main chat button or not. Set this to <code>true</code> if using your own custom button implementation. When set to <code>true</code> hides the default button.</p>
+<p><strong>default: false</strong></p>
+<h3><a class="anchor" aria-hidden="true" id="custom-css"></a><a href="#custom-css" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>custom-css</code></h3>
+<p>A custom css file can be injected to the XDK, which will allow to modify the styles of it. This parameter takes a path of the CSS file, which can either be relative or absolute.</p>
+<p><em>example:</em>
+<code>/overrides.css</code></p>
+<pre><code class="hljs"><span class="hljs-selector-class">.header</span>, <span class="hljs-selector-class">.minimized-view</span>, <span class="hljs-selector-class">.composer</span>, <span class="hljs-selector-class">.composer</span> &gt; <span class="hljs-selector-tag">textarea</span> {
+  <span class="hljs-attribute">background-color </span>: black <span class="hljs-meta">!important</span>;
+}
+
+<span class="hljs-selector-class">.header</span>, <span class="hljs-selector-class">.minimized-view</span>, <span class="hljs-selector-class">.composer</span> &gt; <span class="hljs-selector-tag">textarea</span> {
+  <span class="hljs-attribute">color</span>: white <span class="hljs-meta">!important</span>;
+}
+
+<span class="hljs-selector-class">.taskbox-body</span> {
+  <span class="hljs-attribute">border-radius </span>: <span class="hljs-number">0</span> <span class="hljs-meta">!important</span>;
+}
+
+<span class="hljs-selector-class">.taskbox-body</span> <span class="hljs-selector-class">.taskbox-tab</span> {
+  <span class="hljs-attribute">width </span>: <span class="hljs-number">100px</span> <span class="hljs-meta">!important</span>;
+}
+
+<span class="hljs-selector-class">.taskbox-body</span> <span class="hljs-selector-class">.taskbox-tasks</span>&gt;<span class="hljs-selector-class">.task</span><span class="hljs-selector-pseudo">:hover</span> {
+  <span class="hljs-attribute">background-color</span>: beige <span class="hljs-meta">!important</span>;
+}
+</code></pre>
+<blockquote>
+<p><code>!important</code> flag is required to invoke overriding behaviour</p>
+</blockquote>
+<p>then use the file as below</p>
+<pre><code class="hljs">window.haptikInitSettings = {
+  <span class="hljs-string">...</span>
+  <span class="hljs-string">"custom-css"</span>: <span class="hljs-string">"./overrides.css"</span>,
+  <span class="hljs-string">...</span>
+};
+</code></pre>
+<blockquote>
+<p>An example CSS is available at <a href="https://tinyurl.com/ybazgbq4">https://tinyurl.com/ybazgbq4</a> for you to get started</p>
+</blockquote>
+<blockquote>
+<p>Please note: adding a web URL for custom-css will add an extra delay for rendering the chat window. The delay is entirely dependent on how fast it is served.</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="list-of-css-selectors"></a><a href="#list-of-css-selectors" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>List of CSS selectors</h4>
+<h5><a class="anchor" aria-hidden="true" id="for-chat-icon"></a><a href="#for-chat-icon" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>For chat icon</h5>
+<p><img src="assets/chat-bubble-text.png" alt="chaticon image" width="250px" style="float:left;margin:10px 0;"></p>
+<table>
+<thead>
+<tr><th>CSS selectors</th><th>Usage</th></tr>
+</thead>
+<tbody>
+<tr><td><code>.minimized-view</code></td><td>For chat icon wrapper</td></tr>
+<tr><td><code>.minimized-view-icon</code></td><td>For chat icon</td></tr>
+<tr><td><code>.minimized-view-text</code></td><td>For chat icon text</td></tr>
+<tr><td><code>.minimized-view-unread-count</code></td><td>For chat icon unread notification circle</td></tr>
+<tr><td><code>.minimized-view-cross-icon</code></td><td>For cross chat icon</td></tr>
+</tbody>
+</table>
+<h5><a class="anchor" aria-hidden="true" id="for-task-box"></a><a href="#for-task-box" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>For task-box</h5>
+<p><img src="assets/taskbox.png" alt="taskbox image" width="250px" style="float:left;margin:10px 0;"></p>
+<table>
+<thead>
+<tr><th>CSS selectors</th><th>Usage</th></tr>
+</thead>
+<tbody>
+<tr><td><code>.taskbox-body</code></td><td>For task-box wrapper</td></tr>
+<tr><td><code>.taskbox-tab-wrapper</code></td><td>For task-box top handler</td></tr>
+<tr><td><code>.taskbox-tasks</code></td><td>For task-box list</td></tr>
+<tr><td><code>.taskbox-tasks &gt; task</code></td><td>For task-box list item</td></tr>
+</tbody>
+</table>
+<h5><a class="anchor" aria-hidden="true" id="for-composer"></a><a href="#for-composer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>For composer</h5>
+<p><img src="assets/composer.png" atl="composer image" width="250px" style="float:left;margin:10px 0;"/></p>
+<table>
+<thead>
+<tr><th>CSS selectors</th><th>Usage</th></tr>
+</thead>
+<tbody>
+<tr><td><code>.composer</code></td><td>For composer wrapper</td></tr>
+<tr><td><code>.composer-icon</code></td><td>For composer icon</td></tr>
+<tr><td><code>.composer-icon.left</code></td><td>For left composer icon</td></tr>
+<tr><td><code>.composer-icon.right</code></td><td>For right composer icon</td></tr>
+<tr><td><code>.composer-text-area</code></td><td>For composer text area</td></tr>
+</tbody>
+</table>
+<h5><a class="anchor" aria-hidden="true" id="for-message-window"></a><a href="#for-message-window" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>For message window</h5>
+<p><img src="assets/message-window.png" atl="message section image" width="250px" style="float:left;margin:10px 0;"/></p>
+<table>
+<thead>
+<tr><th>CSS selectors</th><th>Usage</th></tr>
+</thead>
+<tbody>
+<tr><td><code>.extended-view</code></td><td>For chat window</td></tr>
+<tr><td><code>.header</code></td><td>For chat window header wrapper</td></tr>
+<tr><td><code>.header-top</code></td><td>For chat window header top bar</td></tr>
+<tr><td><code>.header-promo</code></td><td>For chat window header expanded view</td></tr>
+<tr><td><code>.message-section-messages</code></td><td>For message section - wrapper</td></tr>
+<tr><td><code>.timeline-message</code></td><td>For timestamp message</td></tr>
+<tr><td><code>.message-section-message-row</code></td><td>For message row containing messages</td></tr>
+<tr><td><code>.message-section-message-row.from-user</code></td><td>For user messages</td></tr>
+<tr><td><code>.message-section-message-row.from-business</code></td><td>For bot messages</td></tr>
+<tr><td><code>.fixed-bottom-area</code></td><td>For transparent area at the bottom of message section</td></tr>
+</tbody>
+</table>
+<blockquote>
+<p>For finer control, use browser's debug tool to find DOM selectors and use the same.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="mode"></a><a href="#mode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>mode</code></h3>
+<p>This setting governs the initial view of the SDK. Supporting use cases where the SDK should always be open.</p>
+<p><strong>Possible Values:</strong></p>
+<ul>
+<li><code>default</code>: <em>Shows a default Let's Chat with us button</em></li>
+<li><code>fsm</code>: <em>Loads with the chat window open by default without a cross button</em></li>
+</ul>
+<p><strong>default: Default</strong></p>
+<h3><a class="anchor" aria-hidden="true" id="prompt-type"></a><a href="#prompt-type" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>prompt-type</code></h3>
+<p>The bot prompts come in two varieties. This setting allows you to switch between them.</p>
+<p><strong>Possible Values:</strong></p>
+<ul>
+<li><code>default</code>: <em>A slightly bigger bot prompt with a call to action button.</em>
+<img src="assets/bot-prompt-full.png" width="300" style="margin-left: 0">
+<br>
+<br></li>
+<li><code>minimal</code>: <em>A very minimal bot prompt with just a line of text inside a speech bubble</em><br>
+<img src="assets/bot-prompt-minimal.png" width="300" style="margin-left: 0"></li>
+</ul>
+<p><strong>default: Default</strong></p>
+<h2><a class="anchor" aria-hidden="true" id="feature-settings"></a><a href="#feature-settings" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Feature Settings</h2>
+<blockquote>
+<p>Settings that primarily disable or enable features in the SDK.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="enable-typing-suggestions"></a><a href="#enable-typing-suggestions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>enable-typing-suggestions</code></h3>
+<p>Enables typing suggestions for the bot. Typing suggestions are autocomplete suggestions that show up for users when they type. This gives the user some context around the capabilities of the bot.
+<img src="/assets/typing-suggestions.png" alt=""></p>
+<p><strong>default: false</strong></p>
+<h3><a class="anchor" aria-hidden="true" id="enable-user-feedback"></a><a href="#enable-user-feedback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>enable-user-feedback</code></h3>
+<p>Enables per message user feedback for the bot. Adds feedback icons to all bot responses to freeform user input in order to collect feedback. It's a 2-stage process where the user can quickly give a thumbs-up/thumbs-down. Once done, the user can then also optionally give more detailed feedback in the form of tags and a freeform comment.
+<img src="/assets/user-feedback-icons.png" alt=""></p>
+<p><strong>default: false</strong></p>
+<h3><a class="anchor" aria-hidden="true" id="bot-type"></a><a href="#bot-type" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>bot-type</code></h3>
+<p>The SDK supports both voice and text base conversations. This setting can set that accordingly.</p>
+<p><strong>Possible Values:</strong></p>
+<ul>
+<li><p><code>TEXT</code>: <em>A text based conversational interface where the user is expected to use the keyboard to send messages.</em>
+<img src="/assets/composer-text.png" alt=""></p></li>
+<li><p><code>VOICE</code>: <em>A voice based conversational interface where the user can also send messages using voice. The bot messages are spoken out aloud.</em>
+<img src="/assets/composer-voice.png" alt=""></p></li>
+</ul>
+<p><strong>default: TEXT</strong></p>
+<h2><a class="anchor" aria-hidden="true" id="text-settings"></a><a href="#text-settings" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Text Settings</h2>
+<blockquote>
+<p>Settings that primarily alter the text/content of the SDK</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="header-text"></a><a href="#header-text" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>header-text</code></h3>
+<p>The text that's displayed on the chat header and the intro screen for first time users.
+<img src="/assets/header-text.png" alt=""></p>
+<p><strong>default: Haptik</strong></p>
+<h3><a class="anchor" aria-hidden="true" id="composer-placeholder"></a><a href="#composer-placeholder" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>composer-placeholder</code></h3>
+<p>The placeholder text for the composer (typing area). This is the text that's shown in the typing area when it's empty
+<img src="/assets/composer-placeholder.png" alt=""></p>
+<p><strong>default: Type here...</strong></p>
+<h3><a class="anchor" aria-hidden="true" id="chat-bubble-text-desktop"></a><a href="#chat-bubble-text-desktop" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>chat-bubble-text-desktop</code></h3>
+<p>The chat bubble text on <strong>desktop browsers</strong>. Set it to <code>_NONE_</code> if you don't want to show any text and just the chat icon.</p>
+<p><strong>default: Chat with Us</strong></p>
+<h3><a class="anchor" aria-hidden="true" id="chat-bubble-text-mobile"></a><a href="#chat-bubble-text-mobile" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>chat-bubble-text-mobile</code></h3>
+<p>The chat bubble text on <strong>mobile browsers</strong>. Set it to <code>_NONE_</code> if you don't want to show any text and just the chat icon.</p>
+<p><strong>default: Chat with Us</strong></p>
+<h3><a class="anchor" aria-hidden="true" id="user-feedback-tags"></a><a href="#user-feedback-tags" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>user-feedback-tags</code></h3>
+<p>An object containing textual copies of the tags to show when showing the per usage message feedback. <strong>Note: User feedback needs to be enabled</strong>
+<img src="/assets/user-feedback-modal.png" alt=""></p>
+<p><strong>Object Structure + Default</strong></p>
+<pre><code class="hljs css language-js">    <span class="hljs-string">'user-feedback-tags'</span>: {
+        <span class="hljs-comment">// tags to show when feedback is positive</span>
+      <span class="hljs-comment">// &lt;array of strings&gt;  </span>
+        <span class="hljs-string">'positive'</span>: [
+            <span class="hljs-string">'Seemed human'</span>, 
+            <span class="hljs-string">'Easy to understand'</span>,
+            <span class="hljs-string">'It was relevant'</span>,
+            <span class="hljs-string">'That was fast'</span>
+        ],
+        <span class="hljs-comment">// tags to show when feedback is negative</span>
+      <span class="hljs-comment">// &lt;array of strings&gt;</span>
+        <span class="hljs-string">'negative'</span>: [
+            <span class="hljs-string">'Unrelated response'</span>, 
+            <span class="hljs-string">'Delayed response'</span>, 
+            <span class="hljs-string">'Repetitive response'</span>,
+            <span class="hljs-string">'Unhelpful message'</span>
+        ]
+    }
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="user-feedback-questions"></a><a href="#user-feedback-questions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>user-feedback-questions</code></h3>
+<p>An object containing textual copies of the questions to show when showing the per usage message feedback. <strong><em>Note: User feedback needs to be enabled</em></strong>
+<img src="/assets/user-feedback-questions.png" alt=""></p>
+<p><strong>Object Structure + Default</strong></p>
+<pre><code class="hljs css language-js">  <span class="hljs-string">'user-feedback-questions'</span>: {
+        <span class="hljs-comment">// when feedback is positive</span>
+        <span class="hljs-string">'positive'</span>: <span class="hljs-string">'Yay! What did you like?'</span>,
+    
+        <span class="hljs-comment">// when feedback is negative</span>
+        <span class="hljs-string">'negative'</span>: <span class="hljs-string">'Sorry about that. What went wrong?'</span>
+    }
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="disable-settings"></a><a href="#disable-settings" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Disable Settings</h2>
+<blockquote>
+<p>Some features/elements can be disabled and turned off. These can controlled using the following settings.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="hide-composer"></a><a href="#hide-composer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>hide-composer</code></h3>
+<p>Hides the composer so that the user is not given the option to type anything. This is useful when building actionable and highly directed bots.</p>
+<p><strong>default: false</strong></p>
+<h3><a class="anchor" aria-hidden="true" id="ignore-storage"></a><a href="#ignore-storage" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>ignore-storage</code></h3>
+<p>Disables the storage so that a new user is created every time the user comes back. No messages/user information is stored in local storage. Essentially, every user is treated like a first-time user.</p>
+<p><strong>default: false</strong></p>
+<h3><a class="anchor" aria-hidden="true" id="no-cross"></a><a href="#no-cross" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>no-cross</code></h3>
+<p>Hides the cross button so that user is unable to close the chat window. This is useful when building experiences with custom chat buttons and other customised UI elements.</p>
+<p><strong>default: false</strong></p>
+<h3><a class="anchor" aria-hidden="true" id="no-chat-bubble"></a><a href="#no-chat-bubble" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>no-chat-bubble</code></h3>
+<p>Hides the chat bubble. The SDK then needs to be opened and controlled programmatically.</p>
+<p><strong>default: false</strong></p>
+<h3><a class="anchor" aria-hidden="true" id="no-header"></a><a href="#no-header" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>no-header</code></h3>
+<p>Hides the chat window header. This is useful when integrating inside native apps and webviews where there's already a header present outside the webview.</p>
+<p><strong>default: false</strong></p>
+<h2><a class="anchor" aria-hidden="true" id="misc-settings"></a><a href="#misc-settings" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Misc Settings</h2>
+<blockquote>
+<p>Some settings that don't necessarily fall in the above category buckets</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="default-language"></a><a href="#default-language" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>default-language</code></h3>
+<p>Sets the default language for a multi-language bot. This is the first language the user will see. The user can always then change the language using the language dropdown in the chat window header</p>
+<p><strong>default: en</strong></p>
+<h3><a class="anchor" aria-hidden="true" id="voice-bot-initial-input"></a><a href="#voice-bot-initial-input" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>voice-bot-initial-input</code></h3>
+<p>The default state of the voice bot. Should it by default have the text composer or the voice composer?</p>
+<p><strong>Possible Values:</strong></p>
+<ul>
+<li><code>TEXT</code>: <em>Show the text composer by default</em></li>
+<li><code>VOICE</code>: <em>Show the voice composer by default</em></li>
+</ul>
+<p><strong>default: VOICE</strong></p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 7/8/2020</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/web-sdk/configuration-sdk-methods"><span class="arrow-prev">← </span><span>SDK Methods</span></a><a class="docs-next button" href="/web-sdk/support-browser"><span>Browser Support</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#customising-the-sdk">Customising the SDK</a></li><li><a href="#glossary">Glossary</a></li><li><a href="#ui-settings">UI Settings</a><ul class="toc-headings"><li><a href="#primary-color"><code>primary-color</code></a></li><li><a href="#font-size"><code>font-size</code></a></li><li><a href="#typography"><code>typography</code></a></li><li><a href="#widget-positioning"><code>widget-positioning</code></a></li><li><a href="#custom-button"><code>custom-button</code></a></li><li><a href="#custom-css"><code>custom-css</code></a></li><li><a href="#mode"><code>mode</code></a></li><li><a href="#prompt-type"><code>prompt-type</code></a></li></ul></li><li><a href="#feature-settings">Feature Settings</a><ul class="toc-headings"><li><a href="#enable-typing-suggestions"><code>enable-typing-suggestions</code></a></li><li><a href="#enable-user-feedback"><code>enable-user-feedback</code></a></li><li><a href="#bot-type"><code>bot-type</code></a></li></ul></li><li><a href="#text-settings">Text Settings</a><ul class="toc-headings"><li><a href="#header-text"><code>header-text</code></a></li><li><a href="#composer-placeholder"><code>composer-placeholder</code></a></li><li><a href="#chat-bubble-text-desktop"><code>chat-bubble-text-desktop</code></a></li><li><a href="#chat-bubble-text-mobile"><code>chat-bubble-text-mobile</code></a></li><li><a href="#user-feedback-tags"><code>user-feedback-tags</code></a></li><li><a href="#user-feedback-questions"><code>user-feedback-questions</code></a></li></ul></li><li><a href="#disable-settings">Disable Settings</a><ul class="toc-headings"><li><a href="#hide-composer"><code>hide-composer</code></a></li><li><a href="#ignore-storage"><code>ignore-storage</code></a></li><li><a href="#no-cross"><code>no-cross</code></a></li><li><a href="#no-chat-bubble"><code>no-chat-bubble</code></a></li><li><a href="#no-header"><code>no-header</code></a></li></ul></li><li><a href="#misc-settings">Misc Settings</a><ul class="toc-headings"><li><a href="#default-language"><code>default-language</code></a></li><li><a href="#voice-bot-initial-input"><code>voice-bot-initial-input</code></a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Bot Builder</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://docs.haptik.ai/ios-sdk/" class="footer-column-link">iOS SDK</a><a href="https://docs.haptik.ai/android-sdk/" class="footer-column-link">Android SDK</a><a href="https://docs.haptik.ai/web-sdk/" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/whatsapp/" class="footer-column-link">WhatsApp</a><a href="https://docs.haptik.ai/other/facebook" class="footer-column-link">Facebook</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Bot API</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a><a href="https://docs.haptik.ai/other/security" class="footer-column-link">Security</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Agent Chat Tool</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2020 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '224c7079e67e84a978d8b4621f6af16d',
+                indexName: 'haptik',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

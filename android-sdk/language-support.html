@@ -1,0 +1,98 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Enabling Language Support · Haptik Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;a name=&quot;enabling-language-support&quot;&gt;&lt;/a&gt;"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Enabling Language Support · Haptik Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.haptik.ai/"/><meta property="og:description" content="&lt;a name=&quot;enabling-language-support&quot;&gt;&lt;/a&gt;"/><meta property="og:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.haptik.ai/img/image_0.png"/><link rel="shortcut icon" href="/img/image_0.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-106563119-6', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="/js/index.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/image_0.png" alt="Haptik Docs"/><h2 class="headerTitleWithLogo">Haptik Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="/#tools" target="_self">Tools</a></li><li class=""><a href="/#integrations" target="_self">Integrations</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Enabling Language Support</h1></header><article><div><span><p><a name="enabling-language-support"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="overview"></a><a href="#overview" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Overview</h2>
+<p>Language support is by default enabled in the Haptik SDK. The default
+language set in the SDK would be English &quot;en&quot;.</p>
+<p>Language support will enable multi - lingual bot support in the SDK.
+User will get a choice to choose from a list of languages supported for
+the bot.</p>
+<h2><a class="anchor" aria-hidden="true" id="guidelines"></a><a href="#guidelines" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Guidelines</h2>
+<p>The language preference for the user should be specified using language
+codes that conform to the <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO 639-1 code</a>. For ex: &quot;en&quot; for English</p>
+<p>Any other string input than this can lead to unexpected behaviour during
+language switch.</p>
+<h2><a class="anchor" aria-hidden="true" id="configuring-language-support"></a><a href="#configuring-language-support" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configuring Language Support</h2>
+<p>Use this configuration to set a language preference on the Haptik SDK.</p>
+<p>You can set the language preference in InitData using the method</p>
+<pre><code class="hljs css language-java">languagePreference(String languagePreference);
+</code></pre>
+<p>After adding the language preference InitData should like below</p>
+<pre><code class="hljs css language-java">InitData initData = <span class="hljs-keyword">new</span> InitData.Builder(Application application)
+            .baseUrl(String string)
+            .debugEnabled(<span class="hljs-keyword">boolean</span> debugEnabled)
+            .notificationSound(<span class="hljs-keyword">int</span> soundResource)
+            .languagePreference(String languagePreference)
+            .build();
+</code></pre>
+<p>NOTE: The language passed should conform to ISO 639 - 1 convention for
+ex: pass &quot;hi&quot; for hindi, pass &quot;en&quot; for English.</p>
+<h2><a class="anchor" aria-hidden="true" id="changing-the-language-of-the-sdk-with-language-of-the-app"></a><a href="#changing-the-language-of-the-sdk-with-language-of-the-app" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Changing the language of the SDK with language of the app</h2>
+<p>Apart from InitData, parent app can change the language preference of
+the SDK using the</p>
+<pre><code class="hljs css language-java">Haptiklib.updateUserLanguagePreference(String languagePreference, <span class="hljs-keyword">final</span> Callback&lt;String&gt; updateLanguageCallback);
+</code></pre>
+<p>It is recommended to make this method call every time there is a
+language change in the parent app.</p>
+<p>This is a network call, please make sure to check the availability of
+network before making this call.</p>
+<p>In case this call fails, the language preference of the user is not
+updated.</p>
+<h2><a class="anchor" aria-hidden="true" id="checking-the-language-preference-set-by-the-user"></a><a href="#checking-the-language-preference-set-by-the-user" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Checking the language preference set by the user</h2>
+<p>Apart from configuring the language support for the app, while
+initializing the SDK and changing the language preference at runtime as
+mentioned above, the user can also change the language preference in the
+SDK.</p>
+<p>User can change the language preference from the messaging activity.
+This will be persisted by the SDK.</p>
+<p>You can access the language preference set by the user in the SDK using</p>
+<pre><code class="hljs css language-java">HaptikLib.getUserLanguagePreference(Context context)
+</code></pre>
+<p>This method returns the user's language preference as String, conforming
+to ISO 639-1 code.</p>
+<p>Recommendation: You can access this function before initializing the
+Haptik SDK to get the language preference set by the user set in the
+previous session.</p>
+<p>This can then be passed to the InitData in order to maintain a
+consistent user experience in terms of language preference.</p>
+<p>Recommended code</p>
+<pre><code class="hljs css language-java">String userLanguagePreference = HaptikLib.getUserLanguagePreference(Context context);
+
+InitData initData = <span class="hljs-keyword">new</span> InitData.Builder(Application application)
+            .baseUrl(String string)
+            .debugEnabled(<span class="hljs-keyword">boolean</span> debugEnabled)
+            .notificationSound(<span class="hljs-keyword">int</span> soundResource)
+            .languagePreference(String languagePreference)
+            .build();
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="expected-sdk-behaviour-with-language-support"></a><a href="#expected-sdk-behaviour-with-language-support" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Expected SDK behaviour with Language Support</h2>
+<p>The SDK treats messages in two different languages as separate
+conversations.</p>
+<p>Consider, a user chatting in Hindi as well as English. The conversation
+history for hindi and english will be maintained separately.</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 7/8/2020</em></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#overview">Overview</a></li><li><a href="#guidelines">Guidelines</a></li><li><a href="#configuring-language-support">Configuring Language Support</a></li><li><a href="#changing-the-language-of-the-sdk-with-language-of-the-app">Changing the language of the SDK with language of the app</a></li><li><a href="#checking-the-language-preference-set-by-the-user">Checking the language preference set by the user</a></li><li><a href="#expected-sdk-behaviour-with-language-support">Expected SDK behaviour with Language Support</a></li></ul></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Bot Builder</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://docs.haptik.ai/ios-sdk/" class="footer-column-link">iOS SDK</a><a href="https://docs.haptik.ai/android-sdk/" class="footer-column-link">Android SDK</a><a href="https://docs.haptik.ai/web-sdk/" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/whatsapp/" class="footer-column-link">WhatsApp</a><a href="https://docs.haptik.ai/other/facebook" class="footer-column-link">Facebook</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Bot API</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a><a href="https://docs.haptik.ai/other/security" class="footer-column-link">Security</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Agent Chat Tool</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2020 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '224c7079e67e84a978d8b4621f6af16d',
+                indexName: 'haptik',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

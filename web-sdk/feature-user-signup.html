@@ -1,0 +1,240 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Authentication · Haptik Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Introduction"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Authentication · Haptik Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.haptik.ai/"/><meta property="og:description" content="## Introduction"/><meta property="og:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.haptik.ai/img/image_0.png"/><link rel="shortcut icon" href="/img/image_0.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-106563119-6', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="/js/index.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/image_0.png" alt="Haptik Docs"/><h2 class="headerTitleWithLogo">Haptik Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="/#tools" target="_self">Tools</a></li><li class=""><a href="/#integrations" target="_self">Integrations</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span> </span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle"> </h3><ul class=""><li class="navListItem"><a class="navItem" href="/web-sdk/">Quick Start</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/web-sdk/feature-user-signup">Authentication</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Advanced</h4><ul><li class="navListItem"><a class="navItem" href="/web-sdk/feature-launch-message">Launch Message</a></li><li class="navListItem"><a class="navItem" href="/web-sdk/feature-custom-button">Custom Button</a></li><li class="navListItem"><a class="navItem" href="/web-sdk/configuration-sdk-methods">SDK Methods</a></li><li class="navListItem"><a class="navItem" href="/web-sdk/configuration-customisation">Customisation</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Support and Compatibility</h4><ul><li class="navListItem"><a class="navItem" href="/web-sdk/support-browser">Browser Support</a></li><li class="navListItem"><a class="navItem" href="/web-sdk/support-native">Native Support</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Examples</h4><ul><li class="navListItem"><a class="navItem" href="/web-sdk/example-always-open">Example: Always Open</a></li><li class="navListItem"><a class="navItem" href="/web-sdk/example-multi-language">Example: Multi Language</a></li></ul></div></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Authentication</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="introduction"></a><a href="#introduction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introduction</h2>
+<p>User authentication on the SDK is disabled by default on the SDK. Whenever a user opens the SDK for the first time, a new anonymous user is created. This user's login id is stored in the application storage locally on the device.</p>
+<p><em>This is ideal for chatbots that are either informational in nature or where user identity is handled by a 3rd party provider(Facebook, Twitter etc).</em></p>
+<p>Since the user information is store locally, once the browser history is cleared, the user information is lost and a new user is created on the subsequent visit.</p>
+<h2><a class="anchor" aria-hidden="true" id="custom-client-sign-up"></a><a href="#custom-client-sign-up" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Custom Client Sign Up</strong></h2>
+<p>For cases when the client/parent application already has a signup flow in place and wants to link the same user to the SDK, we support <strong>Custom Signups.</strong></p>
+<p>To enable custom sign up, set the <code>signup-type</code> in the Business manager to signup identifier provided. This will disable the default authentication flow. The chat button will not show up automatically and will wait for the signup call as detailed below.</p>
+<pre><code class="hljs css language-js"><span class="hljs-built_in">document</span>.addEventListener(<span class="hljs-string">'haptik_sdk'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+      HaptikSDK.signup(authOptions,
+        <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">success,error</span>) </span>{
+          <span class="hljs-keyword">if</span> (success) {
+            <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'SIGNUP REQUEST SUCCEEDED!'</span>);
+          } <span class="hljs-keyword">else</span> {
+            <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'ERROR:'</span>,error);
+          }
+        });
+    });
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="authoptions-object"></a><a href="#authoptions-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>authOptions &lt;Object&gt;</code></h3>
+<p>An object containing all the data required to initiate the signup handshake. It contains the following keys:</p>
+<ul>
+<li><code>auth_id &lt;String&gt;</code>: <em>User Identifier [Mandatory]</em></li>
+<li><code>auth_code &lt;String&gt;</code>: <em>Authorisation Token [Mandatory]</em></li>
+<li><code>username &lt;String&gt;</code>: <em>The name of the signed in user</em></li>
+<li><code>custom_data &lt;Object&gt;</code> <em><code>(optional)</code></em>: <em>Arbitrary custom data that the client needs to send</em></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="callback-function"></a><a href="#callback-function" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>callback &lt;Function&gt;</code></h3>
+<p>This function is executed after the signup request completes</p>
+<p>It is not mandatory to provide this parameter. This can be used by the client to identify status of the authentication process and take additional steps if necessary.</p>
+<p>The function is called with the following parameters to report the status of the handshake --</p>
+<ul>
+<li><code>status &lt;Boolean&gt;</code> Whether the sign-up was successful or not.</li>
+<li><code>error &lt;String&gt;</code> When the sign-up process is unsuccessful - it’s an error message.</li>
+<li><code>data &lt;Object&gt;</code> The sign-up process response from the client API provider.</li>
+</ul>
+<p>This method will create a new user, or identify an existing user if his/her signup has taken place before. (We assume that the auth_id of a user of a client will not change). This function will also save/update the auth_code (token) for that user.</p>
+<p>Clients are ideally to call this method once they’ve verified the user from their end and want to initiate the handshake process. If the handshake process is successful, the chatbot icon is shown in the webpage.</p>
+<h3><a class="anchor" aria-hidden="true" id="example"></a><a href="#example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h3>
+<pre><code class="hljs css language-js"><span class="hljs-built_in">document</span>.addEventListener(<span class="hljs-string">'haptik_sdk'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    HaptikSDK.signup({
+        <span class="hljs-attr">username</span>: <span class="hljs-string">'Firstname Lastname'</span>,
+        <span class="hljs-attr">auth_id</span>: <span class="hljs-string">'9955511100'</span>,
+        <span class="hljs-attr">auth_code</span>: <span class="hljs-string">'XXXXXXXXXXXX'</span>,
+        <span class="hljs-attr">mobile_no</span>: <span class="hljs-string">'0123456789'</span>,
+        <span class="hljs-attr">email</span>: <span class="hljs-string">'demo@gmail.com'</span>,
+    }, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">success,error</span>) </span>{
+        <span class="hljs-keyword">if</span> (success) {
+          <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'SIGNUP REQUEST SUCCEEDED!'</span>);
+        } <span class="hljs-keyword">else</span> {
+          <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'ERROR:'</span>,error);
+        }
+    });
+});
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="implementation-details"></a><a href="#implementation-details" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Implementation Details</strong></h2>
+<p>When the client calls the signup method of the SDK by passing <code>auth_id</code> and <code>auth_code</code>, the signup process begins at Haptik's backend.</p>
+<p>In order to validate the credentials passed in by the SDK, Haptik's API makes a call to a verification endpoint by passing both <code>auth_id</code> and <code>auth_code</code> and expects the response to indicate if they are valid.</p>
+<h3><a class="anchor" aria-hidden="true" id="verification-endpoint"></a><a href="#verification-endpoint" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Verification Endpoint</h3>
+<p>This verification endpoint has to be built at the client's end.
+Here are some points that need to be kept in mind while developing the verification endpoint:</p>
+<ul>
+<li>The endpoint needs to be built by the client.</li>
+<li>This endpoint must be publicly available.</li>
+<li>This should be RESTful endpoint that accepts and responds using JSON.</li>
+<li>The verification endpoint should perform the business logic to confirm that the auth_id and auth_code match with each other.</li>
+<li>If they match successfully respond back with a 200 OK response.</li>
+<li>If they do not match successfully then respond back with a 400 Bad Request response.</li>
+<li>If the verification is successful, signup gets completed and the auth_id and auth_code get stored into the User details in Haptik's DB.</li>
+<li>This data is then made available in the request body of the call that Haptik API makes to each integration function. This can be used as necessary by the developer.</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="server-to-server-api-call"></a><a href="#server-to-server-api-call" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Server to Server API call</h3>
+<p>Haptik API will make a POST call to the above verification endpoint with the following request body:</p>
+<pre><code class="hljs css language-js">{
+    <span class="hljs-string">"auth_id"</span>: <span class="hljs-string">"&lt;auth_id&gt;"</span>,
+    <span class="hljs-string">"auth_code"</span>:<span class="hljs-string">"&lt;auth_code&gt;"</span>
+}
+</code></pre>
+<p>The endpoint must respond in the following format</p>
+<p><strong>Success Response Format</strong></p>
+<pre><code class="hljs css language-js">{
+    <span class="hljs-string">"status"</span>: <span class="hljs-literal">true</span>
+}
+</code></pre>
+<p><code>auth_id</code> and <code>auth_code</code> will be the exact <code>auth_id</code> and <code>auth_code</code> values passed by the client while calling the signup method of the SDK while launching the chatbot.</p>
+<p>Clients are ideally to call this method once they’ve verified the user from their end and want to initiate the handshake process.</p>
+<blockquote>
+<p>If the handshake process is successful, the chatbot icon is shown on the webpage.</p>
+</blockquote>
+<p>The URL needs to be updated for the partner from the partner tools on staging as shown below:
+<em>Partner Tool</em></p>
+<p><img src="https://haptikappimg.haptikapi.com/uploads/0d97d9a957366e48156bed43cdc8d93b.png" alt="https://haptikappimg.haptikapi.com/uploads/0d97d9a957366e48156bed43cdc8d93b.png"></p>
+<h3><a class="anchor" aria-hidden="true" id="example-1"></a><a href="#example-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example:</h3>
+<p>A custom signup example. Read the full documentation in the custom signup section of the documentation.</p>
+<pre><code class="hljs css language-html">  <span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Haptik JS SDK Custom Sign Up Demo<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width; initial-scale=1.0;"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+  
+  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width: 100%; padding-top: 100px;"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"max-width: 7000px; margin: 0 auto; padding: 0 40px; text-align: left;"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span>Haptik JS SDK<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+  
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span>&gt;</span><span class="javascript">
+  <span class="hljs-built_in">window</span>.haptikInitSettings = {
+    <span class="hljs-string">'business-id'</span>: <span class="hljs-string">'&lt;provided by haptik&gt;'</span>,
+    <span class="hljs-string">'client-id'</span>: <span class="hljs-string">'&lt;provided by haptik&gt;'</span>,
+    <span class="hljs-string">'base-url'</span>: <span class="hljs-string">'&lt;provided by haptik&gt;'</span>,
+    <span class="hljs-string">'signup-type'</span>: <span class="hljs-string">'my-custom-signup-type'</span>,
+  };
+  </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://toolassets.haptikapi.com/platform/javascript-xdk/production/loader.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-built_in">document</span>.addEventListener(<span class="hljs-string">'haptik_sdk'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    HaptikSDK.signup({
+      <span class="hljs-attr">username</span>: <span class="hljs-string">'Firstname Lastname'</span>,
+      <span class="hljs-attr">auth_id</span>: <span class="hljs-string">'9955511100'</span>,
+      <span class="hljs-attr">auth_code</span>: <span class="hljs-string">'XXXXXXXXXXXX'</span>,
+      <span class="hljs-attr">mobile_no</span>: <span class="hljs-string">'0123456789'</span>,
+      <span class="hljs-attr">email</span>: <span class="hljs-string">'demo@gmail.com'</span>,
+    }, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">success,error</span>) </span>{
+      <span class="hljs-keyword">if</span> (success) {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'SIGNUP REQUEST SUCCEEDED!'</span>);
+      } <span class="hljs-keyword">else</span> {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'ERROR:'</span>,error);
+      }
+    });
+  });
+  </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="expiring-tokens"></a><a href="#expiring-tokens" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Expiring Tokens</strong></h2>
+<p>Often, tokens expire, and must be renewed. The SDK exposes a <strong>renewSignupToken</strong> method for this exact purpose. This method must be explicitly called whenever the authentication token expires so that the server has the most up to date valid token.</p>
+<p><em><strong>This method must be called only after a successful user signup using the</strong> <code>HaptikSDK.signup()</code> <strong>method.</strong></em></p>
+<pre><code class="hljs css language-js">
+HaptikSDK.renewSignupToken(newToken, callback);
+
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="newtoken-string"></a><a href="#newtoken-string" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>newToken &lt;String&gt;</code></h3>
+<p>The newly renewed token.</p>
+<h3><a class="anchor" aria-hidden="true" id="callback-function-1"></a><a href="#callback-function-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>callback &lt;Function&gt;</code></h3>
+<p>This function is executed after the signup request completes</p>
+<p>It is not mandatory to provide this parameter. This can be used by the client to identify status of the authentication process and take additional steps if necessary.</p>
+<p>The function is called with the following parameters to report the status of the handshake --</p>
+<ul>
+<li><code>status &lt;Boolean&gt;</code> Whether the sign-up was successful or not.</li>
+<li><code>error &lt;String&gt;</code> When the sign-up process is unsuccessful - it’s an error message.</li>
+<li><code>data &lt;Object&gt;</code> The sign-up process response from the client API provider.</li>
+</ul>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 7/8/2020</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/web-sdk/index"><span class="arrow-prev">← </span><span>Quick Start</span></a><a class="docs-next button" href="/web-sdk/feature-launch-message"><span>Launch Message</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#introduction">Introduction</a></li><li><a href="#custom-client-sign-up"><strong>Custom Client Sign Up</strong></a><ul class="toc-headings"><li><a href="#authoptions-object"><code>authOptions &lt;Object&gt;</code></a></li><li><a href="#callback-function"><code>callback &lt;Function&gt;</code></a></li><li><a href="#example">Example</a></li></ul></li><li><a href="#implementation-details"><strong>Implementation Details</strong></a><ul class="toc-headings"><li><a href="#verification-endpoint">Verification Endpoint</a></li><li><a href="#server-to-server-api-call">Server to Server API call</a></li><li><a href="#example-1">Example:</a></li></ul></li><li><a href="#expiring-tokens"><strong>Expiring Tokens</strong></a><ul class="toc-headings"><li><a href="#newtoken-string"><code>newToken &lt;String&gt;</code></a></li><li><a href="#callback-function-1"><code>callback &lt;Function&gt;</code></a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Bot Builder</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://docs.haptik.ai/ios-sdk/" class="footer-column-link">iOS SDK</a><a href="https://docs.haptik.ai/android-sdk/" class="footer-column-link">Android SDK</a><a href="https://docs.haptik.ai/web-sdk/" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/whatsapp/" class="footer-column-link">WhatsApp</a><a href="https://docs.haptik.ai/other/facebook" class="footer-column-link">Facebook</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Bot API</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a><a href="https://docs.haptik.ai/other/security" class="footer-column-link">Security</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Agent Chat Tool</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2020 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '224c7079e67e84a978d8b4621f6af16d',
+                indexName: 'haptik',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

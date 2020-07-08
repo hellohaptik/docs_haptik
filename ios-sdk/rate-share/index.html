@@ -1,0 +1,135 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Rate &amp; Share · Haptik Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="- Haptik provides inbuilt share functionality where you can configure the SDK to share your app specific **_share text_** and **_share URL_** with others via the default iOS share extension from the conversation screen."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Rate &amp; Share · Haptik Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.haptik.ai/"/><meta property="og:description" content="- Haptik provides inbuilt share functionality where you can configure the SDK to share your app specific **_share text_** and **_share URL_** with others via the default iOS share extension from the conversation screen."/><meta property="og:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.haptik.ai/img/image_0.png"/><link rel="shortcut icon" href="/img/image_0.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-106563119-6', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="/js/index.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/image_0.png" alt="Haptik Docs"/><h2 class="headerTitleWithLogo">Haptik Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="/#tools" target="_self">Tools</a></li><li class=""><a href="/#integrations" target="_self">Integrations</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Advanced</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle"> </h3><ul class=""><li class="navListItem"><a class="navItem" href="/ios-sdk/">Quick Start</a></li><li class="navListItem"><a class="navItem" href="/ios-sdk/sign-up">Authentication</a></li><li class="navListItem"><a class="navItem" href="/ios-sdk/notifications">Push Notifications</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Advanced</h4><ul><li class="navListItem"><a class="navItem" href="/ios-sdk/permissions">Required Permissions</a></li><li class="navListItem"><a class="navItem" href="/ios-sdk/theming">Theming</a></li><li class="navListItem"><a class="navItem" href="/ios-sdk/conversations">Conversation</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/ios-sdk/rate-share">Rate &amp; Share</a></li><li class="navListItem"><a class="navItem" href="/ios-sdk/voice">Voice Support</a></li><li class="navListItem"><a class="navItem" href="/ios-sdk/location">Location Support</a></li><li class="navListItem"><a class="navItem" href="/ios-sdk/analytics">Analytics</a></li><li class="navListItem"><a class="navItem" href="/ios-sdk/features">Additional Features</a></li></ul></div><li class="navListItem"><a class="navItem" href="/ios-sdk/sdk-sample">Sample App</a></li><li class="navListItem"><a class="navItem" href="/ios-sdk/faq">Troubleshooting</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Rate &amp; Share</h1></header><article><div><span><ul>
+<li><p>Haptik provides inbuilt share functionality where you can configure the SDK to share your app specific <strong><em>share text</em></strong> and <strong><em>share URL</em></strong> with others via the default iOS share extension from the conversation screen.</p></li>
+<li><p>Users have an option to Rate your application on <em>app store</em> and share your application from the conversation screen. You need to add your applications <strong><em>app store url</em></strong> and <strong><em>itunes item identifier</em></strong> for the SDK to take the user to your applications app store page.</p></li>
+</ul>
+<p>To add these credentials, define a <strong><em>Dictionary</em></strong> object with the name <strong>shareAndRate</strong> inside the inside the <strong><em>HaptikLib</em></strong> dictionary defined in your <code>Info.plist</code>.</p>
+<p>The <code>shareAndRate</code> dictionary should have the following <strong>key-values</strong> present in it:</p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Usage</th></tr>
+</thead>
+<tbody>
+<tr><td>appStoreUrl</td><td>Insert_App_Store_Url</td><td>The App Store link used for rating the app.</td></tr>
+<tr><td>shareText</td><td>Insert_Share_Text</td><td>String used to share the app.</td></tr>
+<tr><td>shareUrl</td><td>Insert_Share_Url</td><td>Url will replace %@ anywhere in the shareText</td></tr>
+<tr><td>iTunesItemIdentifier</td><td>Insert_Itunes_Identifier</td><td>Itunes ID of your app used for user ratings.</td></tr>
+</tbody>
+</table>
+<p>On opening app's <code>Info.plist</code> in <em>Source Code</em> format you can add the required keys as illustrated below -</p>
+<pre><code class="hljs css language-XML"><span class="hljs-tag">&lt;<span class="hljs-name">key</span>&gt;</span>HaptikLib<span class="hljs-tag">&lt;/<span class="hljs-name">key</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">dict</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">key</span>&gt;</span>clientID<span class="hljs-tag">&lt;/<span class="hljs-name">key</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">string</span>&gt;</span>Insert_ClientId_Here<span class="hljs-tag">&lt;/<span class="hljs-name">string</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">key</span>&gt;</span>baseUrl<span class="hljs-tag">&lt;/<span class="hljs-name">key</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">string</span>&gt;</span>Insert_BaseUrl_Here<span class="hljs-tag">&lt;/<span class="hljs-name">string</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">key</span>&gt;</span>runEnvironment<span class="hljs-tag">&lt;/<span class="hljs-name">key</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">string</span>&gt;</span>Set_Appropriate_Env<span class="hljs-tag">&lt;/<span class="hljs-name">string</span>&gt;</span>
+
+   <span class="hljs-tag">&lt;<span class="hljs-name">key</span>&gt;</span>shareAndRate<span class="hljs-tag">&lt;/<span class="hljs-name">key</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">dict</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">key</span>&gt;</span>appStoreUrl<span class="hljs-tag">&lt;/<span class="hljs-name">key</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">string</span>&gt;</span>Insert_App_Store_Url<span class="hljs-tag">&lt;/<span class="hljs-name">string</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">key</span>&gt;</span>iTunesItemIdentifier<span class="hljs-tag">&lt;/<span class="hljs-name">key</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">string</span>&gt;</span>Insert_Itunes_Identifier<span class="hljs-tag">&lt;/<span class="hljs-name">string</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">key</span>&gt;</span>shareText<span class="hljs-tag">&lt;/<span class="hljs-name">key</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">string</span>&gt;</span>Insert_Share_Text<span class="hljs-tag">&lt;/<span class="hljs-name">string</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">key</span>&gt;</span>shareUrl<span class="hljs-tag">&lt;/<span class="hljs-name">key</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">string</span>&gt;</span>Insert_Share_Url<span class="hljs-tag">&lt;/<span class="hljs-name">string</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-name">dict</span>&gt;</span>
+
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">dict</span>&gt;</span>
+</code></pre>
+<p>After adding the credentials, your <code>info.plist</code> should look like this:</p>
+<p><img src="/assets/Share_And_Rate.png" alt="shareAndRate Credentials plist screenshot"></p>
+<blockquote>
+<ul>
+<li>If the values are not added then the user will not see an option to rate and share on the conversation screen.</li>
+<li>Inside the <code>shareText</code> wherever there will be <code>%@</code> present, it will be replaced by the <code>shareUrl</code> provided.</li>
+</ul>
+</blockquote>
+<hr>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 7/8/2020</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/ios-sdk/conversations"><span class="arrow-prev">← </span><span>Conversation</span></a><a class="docs-next button" href="/ios-sdk/voice"><span>Voice Support</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Bot Builder</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://docs.haptik.ai/ios-sdk/" class="footer-column-link">iOS SDK</a><a href="https://docs.haptik.ai/android-sdk/" class="footer-column-link">Android SDK</a><a href="https://docs.haptik.ai/web-sdk/" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/whatsapp/" class="footer-column-link">WhatsApp</a><a href="https://docs.haptik.ai/other/facebook" class="footer-column-link">Facebook</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Bot API</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a><a href="https://docs.haptik.ai/other/security" class="footer-column-link">Security</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Agent Chat Tool</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2020 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '224c7079e67e84a978d8b4621f6af16d',
+                indexName: 'haptik',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

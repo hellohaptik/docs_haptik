@@ -36,7 +36,11 @@ Once a chef returns with their meal, they pick it up and leave the restaurant.
 
 <img src="/assets/spruce-restaurant-1010.png" alt="spruce-restaurant-1010" style="width:640px;"/>
 
+<img src="/assets/spruce-restaurant-1011.png" alt="spruce-restaurant-1011" style="width:640px"/>
+
 <img src="/assets/spruce-restaurant-1012.png" alt="spruce-restaurant-1012" style="width:640px"/>
+
+<img src="/assets/spruce-restaurant-1020.png" alt="spruce-restaurant-1020" style="width:640px"/>
 
 <img src="/assets/spruce-restaurant-1021.png" alt="spruce-restaurant-1021" style="width:640px"/>
 
@@ -49,9 +53,7 @@ Once a chef returns with their meal, they pick it up and leave the restaurant.
 
 ### Deciding agent priority
 
-$$
-priority ∝ number\ of\ slots\ being\ added\ at\ once
-$$
+  > agent priority ∝ number of free slots of the agent
 
 
 

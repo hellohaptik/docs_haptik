@@ -20,7 +20,8 @@
             "teams",
             "analytics",
             "closing-categories",
-            "agent-reports"
+            "agent-reports",
+            "chat-assignment"
         ]
     },
     "headerLink": {

@@ -5,7 +5,7 @@ title: Chat assignment
 
 ## Glossary
 
-Let’s understand certain terminologies mentioned below -
+Let’s understand certain terminologies -
 
 1. Agent Concurrency: The number of chats that an agent can take at any given time. We also call concurrency as the maximum number of chats an agent gets pinned on the MyChats space
 
@@ -26,7 +26,7 @@ Our clients today will have the flexibility to choose between two chat assignmen
 ![Choose assignment routing algorithm](assets/chat-assignment.png)
 
 
-A. Balanced distribution (New) 
+### A. Balanced distribution (New) 
 
 This accounts for Agent Concurrency, Empty Slots and Idle Time. Chat gets assigned as soon as an agent slot is available i.e. has empty slots (and agent is online)
  
@@ -39,7 +39,7 @@ This accounts for Agent Concurrency, Empty Slots and Idle Time. Chat gets assign
 3. Con(s): Does not account for faster agent response times but only the first response times. Faster high performing agents may not be best utilized. 
  
 
-B. Speedy resolution 
+### B. Speedy resolution 
 
 Fastest agents get more chats. Every time an agent closes a chat or intermittently every 10 seconds, the agent requests for a  new chat from the queue. 
 

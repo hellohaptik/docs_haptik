@@ -4,7 +4,6 @@ title: Chat assignment
 
 ## Introduction
 
-## What does this document discuss?
 
 ## A restaurant analogy
 
@@ -20,7 +19,7 @@ Obviously, due to COVID-19, the guest's don't actually eat at the restaurant.
 They just sit, physically distancing from each other, waiting for their food to be prepared.
 Once a chef returns with their meal, they pick it up and leave the restaurant.
 
-### The challenges
+## What does this document discuss?
 
 Now let's look at typical use cases of the chat assignment system:
 
@@ -52,7 +51,16 @@ Now let's look at typical use cases of the chat assignment system:
 
 ### Addressed issues in the new subsystem
 
-Now, at the end of the above situation:
+Now, at the end of the above service, we have the following issues arising:
+
+| Issue | Analogy | Imapct | Addressed? |
+| ----- | ------- | ------ | ---------- |
+|       |         |        |            |
+|       |         |        |            |
+|       |         |        |            |
+|       |         |        |            |
+
+
 
 
 ### Deciding agent priority
@@ -81,8 +89,6 @@ However, at a high level of understanding
 #### An example
 
 Let's assume a typical day, where the agents came online in an alphabetical order of their names.
-
-
 
 
 | Time | Agent | Concurrency |

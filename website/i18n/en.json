@@ -26,9 +26,6 @@
       "agent-chat/businesses": {
         "title": "Businesses"
       },
-      "agent-chat/chat-assignment": {
-        "title": "Chat assignment"
-      },
       "agent-chat/claiming-and-closing": {
         "title": "Claiming & Closing Chats"
       },
@@ -507,7 +504,7 @@
         "title": "webhooks/temp-backup"
       },
       "webhooks/using-platform-deployments": {
-        "title": "Using Platform Deployments"
+        "title": "webhooks/using-platform-deployments"
       },
       "webhooks/webhook-payload": {
         "title": "Payload Information"
@@ -554,9 +551,9 @@
       "Getting Started": "Getting Started",
       "Guides": "Guides",
       "Resources": "Resources",
-      " ": " ",
       "Integrations": "Integrations",
       "Advanced": "Advanced",
+      " ": " ",
       "Docusaurus": "Docusaurus",
       "First Category": "First Category",
       "Second Category": "Second Category",

@@ -2,9 +2,9 @@
 title: Chat assignment
 ---
 
-# Introduction
+## Introduction
 
-# What does this document discuss?
+## What does this document discuss?
 
 ## A restaurant analogy
 
@@ -24,7 +24,7 @@ Once a chef returns with their meal, they pick it up and leave the restaurant.
 
  - 
 
-# Understanding the changes
+## Understanding the changes
 
 | Use case                                               | Analogy                                         | Changed? |
 | ------------------------------------------------------ | ----------------------------------------------- | -------- |
@@ -53,11 +53,78 @@ Once a chef returns with their meal, they pick it up and leave the restaurant.
 
 ### Deciding agent priority
 
-  > agent priority ∝ number of free slots of the agent
+Given the complexity of the assignment algorithms,
+we're unable to share a deterministic answer to how exactly chats are assigned 
+
+However, at a high level of understanding
+ 1. Agent priority is calculated per available slot of the agent.
+    
+    For example, if _Diana_ has a concurrency of 3,
+    it's possible that her slot 1 and 2 get allocated first amongst the entire team.
+    
+    While her slot 3 is allocated after all other slots of her colleagues have been exhausted. 
+ 2. **Agent priority is directly proportional to:**
+    - **number of free slots of the agent**
+    - **amount of time the agent has been waiting for a chat to be assigned to them**
+
+  > NOTE: Agent priority is not calculated at the time a chat arrives in the system,
+    rather we try to pre-determine who is most likely to be free in the near future. 
+    Hence, it is possible to have multiple chats assigned in succession to an agent at an instance,
+    if they had not taken chats in a long time.
+    This is done to avoid delaying chat assignment in real-time due to time spent in computing the current priority.
+
+
+#### An example
+
+Let's assume a typical day, where the agents came online in an alphabetical order of their names.
 
 
 
-# FAQs
+
+| Time | Agent | Concurrency |
+| ---- | ----- | ----------- |
+| 0900 | Alice | 2           |
+
+| Slot priorities |
+| --------------- |
+| Alice's Slot 1  |
+| Alice's Slot 2  |
+
+------
+
+
+
+| Time | Agent  | Concurrency |
+| ---- | ------ | ----------- |
+| 0905 | Brinda | 3           |
+
+| Slot priorities |
+| --------------- |
+| Alice's Slot 1  |
+| Brinda's Slot 1 |
+| Alice's Slot 2  |
+| Brinda's Slot 2 |
+| Brinda's Slot 3 |
+
+------
+
+
+
+| Time | Agent | Concurrency |
+| ---- | ----- | ----------- |
+| 0910 | Carly | 2           |
+
+| Slot priorities |
+| --------------- |
+| Alice's Slot 1  |
+| Brinda's Slot 1 |
+| Carly's Slot 1  |
+| Alice's Slot 2  |
+| Brinda's Slot 2 |
+| Carly's Slot 2  |
+| Brinda's Slot 3 |
+
+## FAQs
 
  - What are the factors do you consider to assign chats?
 

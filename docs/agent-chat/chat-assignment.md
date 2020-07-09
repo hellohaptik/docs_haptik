@@ -22,15 +22,18 @@ Once a chef returns with their meal, they pick it up and leave the restaurant.
 
 ### The challenges
 
- - 
+Now let's look at typical use cases of the chat assignment system:
+
+
+| Use case                                               | Analogy                                                      | Changed? | Discussed here? |
+| ------------------------------------------------------ | ------------------------------------------------------------ | -------- | --------------- |
+| Assigning users' chats to a team                       | Which brigade is going to attend the service?                | No       | No              |
+| Selecting which user needs to be addressed next        | Of the waiting guests, who will be served next?              | No       | No              |
+| Selecting which agent will chat with the selected user | Who will serve the next guest?                               | Yes      | Yes             |
+| User's assigned to an expert's queue                   | Guests who have a favourite chef and would like to be served only by her. | No       | No              |
+| A chat is manually reassigned to another expert        | A chef's not comfortable preparing this dish, they'd like a colleague to help them out. | No       | No              |
 
 ## Understanding the changes
-
-| Use case                                               | Analogy                                         | Changed? |
-| ------------------------------------------------------ | ----------------------------------------------- | -------- |
-| Assigning users' chats to a team                       | N/A                                             | No       |
-| Selecting which user needs to be addressed next        | Of the waiting guests, who will be served next? | No       |
-| Selecting which agent will chat with the selected user | Who will serve the next guest?                  | Yes      |
 
 ## Existing subsystem
 
@@ -47,9 +50,10 @@ Once a chef returns with their meal, they pick it up and leave the restaurant.
 <img src="/assets/spruce-restaurant-1025.png" alt="spruce-restaurant-1025" style="width:640px"/>
 
 
-## New subsystem
+### Addressed issues in the new subsystem
 
-### Addressed issues
+Now, at the end of the above situation:
+
 
 ### Deciding agent priority
 

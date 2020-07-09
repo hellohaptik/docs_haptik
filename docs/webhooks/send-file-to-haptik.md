@@ -1,5 +1,5 @@
 ---
-title: How to send File to Haptik
+title: How to send file to Haptik
 ---
 
 ## File Upload

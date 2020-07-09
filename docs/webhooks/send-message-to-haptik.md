@@ -10,9 +10,9 @@ The Log Message API allows you to send messages via a `POST` request to the Hapt
 
 `https://staging-messenger.haptikapi.com/v1.0/log_message_from_user/`
 
-### Header
+### Headers
 
-```
+```json
 Authorization: Bearer <TOKEN>
 client-id: <CLIENT_ID>
 Content-Type: application/json

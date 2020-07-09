@@ -1,5 +1,5 @@
 ---
-Title: Using Platform Deployments
+title: Using Platform Deployments
 ---
 
 ## Integrating using Platform Deployments

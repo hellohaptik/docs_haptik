@@ -1010,3 +1010,64 @@ implementation 'ai.haptik.android.sdk:haptiklib-jio-communications:6.4.2-64383'
 ```groovy
 implementation 'ai.haptik.android.sdk:haptiklib-xdk:6.4.2-64383'
 ```
+
+
+## Moving from 6.2.1 → 6.3.0
+
+- **BREAKING:** Glide image loading library is updated to v4.11.0.
+- CleverTap is disabled by default
+- Add capability to upload word documents, pdf etc along with images
+- Fixed a crash on devices below Android 5 caused by feedback feature
+- Share and Rate options are now configurable. Check https://hellohaptik.github.io/haptik-android-lib/core-module-integration#6-share-functionality.
+
+```groovy
+implementation 'ai.haptik.android.sdk:haptiklib-core:6.3.0-63183'
+```
+
+```groovy
+implementation 'ai.haptik.android.sdk:haptiklib-extensions:6.3.0-63183'
+```
+
+```groovy
+implementation 'ai.haptik.android.sdk:haptiklib-picasso-helper:6.3.0-63183'
+```
+
+```groovy
+implementation 'ai.haptik.android.sdk:haptiklib-glide-helper:6.3.0-63183'
+```
+
+```groovy
+implementation 'ai.haptik.android.sdk:haptiklib-jio-communications:6.3.0-63183'
+```
+
+```groovy
+implementation 'ai.haptik.android.sdk:haptiklib-xdk:6.3.0-63183'
+```
+
+## Moving from 6.4.2 → 6.5.1
+- BREAKING: Important security update. Old SDK might not work after after 28th July 2020.
+
+
+```groovy
+implementation 'ai.haptik.android.sdk:haptiklib-core:6.5.1-65283'
+```
+
+```groovy
+implementation 'ai.haptik.android.sdk:haptiklib-extensions:6.5.1-65283'
+```
+
+```groovy
+implementation 'ai.haptik.android.sdk:haptiklib-picasso-helper:6.5.1-65283'
+```
+
+```groovy
+implementation 'ai.haptik.android.sdk:haptiklib-glide-helper:6.5.1-65283'
+```
+
+```groovy
+implementation 'ai.haptik.android.sdk:haptiklib-jio-communications:6.5.1-65283'
+```
+
+```groovy
+implementation 'ai.haptik.android.sdk:haptiklib-xdk:6.5.1-65283'
+```

@@ -1012,7 +1012,7 @@ implementation 'ai.haptik.android.sdk:haptiklib-xdk:6.4.2-64383'
 ```
 
 ## Moving from 6.4.2 → 6.5.1
-- BREAKING: Important security update. Old SDK might not work after after 28th July 2020.
+- BREAKING: Important security update. Old SDK might not work after 27th July 2020.
 
 
 ```groovy

@@ -11,7 +11,7 @@ Let’s understand certain terminologies -
 
 2. Empty Slot: Number of chats that can be pinned to an agent at a given time. Say the concurrency for agents is 3 but the agent has only 1 active chat, this means the number of empty slots with agent is 2. 
 
-3. Queue: When users are waiting for their chats to get assigned to an agent, they are waiting in a pending or queue state.
+3. Team Queue: When users are waiting for their chats to get assigned to an agent, they are waiting in a pending or queue state.
 
 4. Idle Time: This Idle time duration is determined by the time elapsed since the agent received the last chat.
 
@@ -48,7 +48,6 @@ Fastest agents get more chats. Every time an agent closes a chat or intermittent
 2. Optimized for: Agent speed and high chat volume scenarios
 
 3. Con(s): Chat load is not balanced across agents i.e., fast agents are the ones who close chats quickly thus making the call to request for chats frequently. This breaks the 10 seconds cycle and creates uneven distribution of chats.
-
 
 
 

@@ -34,7 +34,7 @@ This accounts for Agent Concurrency, Empty Slots and Idle Time. Chat gets assign
 
 > Note: Clients for whom efficiency in distribution is important should choose this chat algorithm.
 
-2. Optimized for: Chat load as it’s almost evenly distributed across online agents. Note that this might not hold for true for agents with high idle times
+2. Optimized for: Chat load as it’s almost evenly distributed across online agents at the time.
 
 3. Con(s): Does not account for faster agent response times but only the first response times. Faster high performing agents may not be best utilized. 
  
@@ -48,5 +48,4 @@ Fastest agents get more chats. Every time an agent closes a chat or intermittent
 2. Optimized for: Agent speed and high chat volume scenarios
 
 3. Con(s): Chat load is not balanced across agents i.e., fast agents are the ones who close chats quickly thus making the call to request for chats frequently. This breaks the 10 seconds cycle and creates uneven distribution of chats.
-
 

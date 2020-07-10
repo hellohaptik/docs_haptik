@@ -15,7 +15,7 @@ Let’s understand certain terminologies -
 
 4. Idle Time: This Idle time duration is determined by the time elapsed since the agent received the last chat.
 
-Agent status: Agents can be online meaning they can receive chats. And when agents go offline, they would not get fresh / newer chats but they can get user chats wherein they had a conversation earlier or from their own queue. After logging out, all chats from the agent queue get wiped out and this agent in logged out state would not get any new chat
+Agent status: Agents can be online meaning they can receive chats. And when agents go offline, they would not get fresh / newer chats but they can get user chats wherein they had a conversation earlier or from their own queue. After logging out, all chats from the agent queue, which were pinned to the agent are moved to team queue, and chats which were in waiting for user state, are marked as complete (If the user returns, it is taken up as a new chat.)
 
 
 ## Choosing a chat assignment algorithm
@@ -48,6 +48,5 @@ Fastest agents get more chats. Every time an agent closes a chat or intermittent
 2. Optimized for: Agent speed and high chat volume scenarios
 
 3. Con(s): Chat load is not balanced across agents i.e., fast agents are the ones who close chats quickly thus making the call to request for chats frequently. This breaks the 10 seconds cycle and creates uneven distribution of chats.
-
 
 

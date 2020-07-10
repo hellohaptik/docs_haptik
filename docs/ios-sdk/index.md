@@ -42,13 +42,13 @@ target YourTargetName do
 end
 ```
 
-###### Pinning it to a specific version (e.g. 2.1.0)
+###### Pinning it to a specific version (e.g. 2.6.0)
 
 ```ruby
 use_frameworks!
 
 target YourTargetName do
-  pod 'HaptikLib', '2.1.0'
+  pod 'HaptikLib', '2.6.0'
 end
 ```
 

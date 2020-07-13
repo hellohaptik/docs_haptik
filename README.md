@@ -13,7 +13,7 @@ The documentation is essentially split into 2 parts
 This is hosted under the **docs_haptik** repository. There is **no versioning** for this set of documentation. The **homepage** is also hosted and served from here.
 
 *   **SDK Documentation (Android/iOS/Web)**
-The documentation for the SDKs isare hosted under their respective source code repositories. Each SDK gets their **own docusaurus instance** with **independent** **versioning** in accordance with the release process based on Git tags.
+The documentation for the SDKs is hosted under the **docs_haptik** repository.
 
 **NOTE:** Both sets of documentation follow their own release process. More on that below.
 

@@ -70,18 +70,18 @@ then use this like
 ```javascript
 const SDK = window.AthenaSDK;
 ```
-## setConversationData(data, callbackFn)
-This function will update the Conversation Data associated with the current Chat.
+## setConversationDetails(data, callbackFn)
+This function will update the Conversation Details associated with the current Chat.
 
 Args:
-- **data** (object): The data that is to be set as Conversation Data for the User
+- **data** (object): The data that is to be set as Conversation Details for the User
 - **callbackFn** (function): will receive a response object
 
 Usage:
 ```javascript
 const payload = { "product" : "software" }
 
-SDK.setConversationData(payload, (response) => {
+SDK.setConversationDetails(payload, (response) => {
     // do something with data
 });
 ```
@@ -97,15 +97,15 @@ Response format:
 
 If there are any errors, the `success` flag will be `false` and the corresponding `error` message will be set.
 
-## getConversationData(callbackFn)
-This function will fetch the Conversation Data associated with the current Chat and return the data.
+## getConversationDetails(callbackFn)
+This function will fetch the Conversation Details associated with the current Chat and return the data.
 
 Args:
 - **callbackFn** (function) will receive a response object
 
 Usage:
 ```javascript
-SDK.getConversationData((response)=>{
+SDK.getConversationDetails((response)=>{
     // do some thing with response
 })
 ```
@@ -124,7 +124,7 @@ Response format :-
 If there are any errors, the `success` flag will be `false` and the corresponding `error` message will be set.
 
 ## setUserDetails(data, callbackFn)
-This function will update the User Details data associated with the current User.
+This function will update the User Details associated with the current User.
 
 Args:
 - **data** (object): The data to be updated in User Details for the User
@@ -201,7 +201,7 @@ Response format:
 If there are any errors, the `success` flag will be `false` and the corresponding `error` message will be set.
 
 ## setChatStatus(closingCategory, callbackFn)
-This function will update the User Details data associated with the current User.
+This function will update the chat as completed, if closing categories are provided.
 
 Args:
 - **closingCategory** (object): Provide closing category object with reason, subReason and comment (can be empty), if it's required for that business. Otherwise, provide an empty object.

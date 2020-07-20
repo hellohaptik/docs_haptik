@@ -2,9 +2,9 @@
 title: Adding your own custom tool
 ---
 
-# Adding Custom Tools
+## Adding Custom Tools
 
-## Steps
+### Steps
 
 - Go to: [https://staging.hellohaptik.com/home/](https://staging.hellohaptik.com/home/)
 - Enter your login credentials
@@ -42,12 +42,12 @@ title: Adding your own custom tool
 
 ![agent_view_tool_url](assets/agent_view_tool_url.png)
 
-## Important Design Note
+### Important Design Note
 
 - The RHS section, where the tool loads is restricted to exactly 26% of the page ~ 360px in width in most cases.
 - Please make sure that the tool is responsive to all required screen resolutions
 
-## Important Tech Note
+### Important Tech Note
 
 - An external tool appears for a business, if a user wishes to use the same tool across multiple businesses, they can do so by adding a the same entry for the other businesses.
 
@@ -57,7 +57,7 @@ title: Adding your own custom tool
 Header set X-Frame-Options "allow-from https://staging.hellohaptik.com"
 ```
 
-# Using Athena SDK
+## Using Athena SDK
 
 Athena SDK gives you access to specific data of the User and Chat inside your Custom Tool.
 
@@ -70,7 +70,7 @@ then use this like
 ```javascript
 const SDK = window.AthenaSDK;
 ```
-## setConversationDetails(data, callbackFn)
+### setConversationDetails(data, callbackFn)
 This function will update the Conversation Details associated with the current Chat.
 
 Args:
@@ -97,7 +97,7 @@ Response format:
 
 If there are any errors, the `success` flag will be `false` and the corresponding `error` message will be set.
 
-## getConversationDetails(callbackFn)
+### getConversationDetails(callbackFn)
 This function will fetch the Conversation Details associated with the current Chat and return the data.
 
 Args:
@@ -123,7 +123,7 @@ Response format :-
 
 If there are any errors, the `success` flag will be `false` and the corresponding `error` message will be set.
 
-## setUserDetails(data, callbackFn)
+### setUserDetails(data, callbackFn)
 This function will update the User Details associated with the current User.
 
 Args:
@@ -149,7 +149,7 @@ Response format:
 }
 ```
 
-## getUserDetails(callbackFn)
+### getUserDetails(callbackFn)
 This function will fetch the User Details of the current User.
 
 Args:
@@ -173,7 +173,7 @@ Response format:
 }
 ```
 
-## getChatDisposition(callbackFn)
+### getChatDisposition(callbackFn)
 This function will fetch chat disposition data for the current business
 Note: This is available in v2 of athena SDK
 
@@ -200,7 +200,7 @@ Response format:
 
 If there are any errors, the `success` flag will be `false` and the corresponding `error` message will be set.
 
-## setChatStatus(closingCategory, callbackFn)
+### setChatStatus(closingCategory, callbackFn)
 This function will update the chat as completed, if closing categories are provided.
 
 Args:
@@ -230,12 +230,12 @@ Response format:
 }
 ```
 
-## Sample Integrations
+### Sample Integrations
 
 You can refer to [this sample](https://toolassets.haptikapi.com/integrations/sample/index.v2.1.html) integration tool as a reference point.
 
 
-## Expansion of the RHS Custom tool
+### Expansion of the RHS Custom tool
 
 We have an expand click that allows you the expand the RHS section so that agents can easily perform actions on an external tool. Once you switch the chat tab ie move to another chat, the RHS section moves from expand state to a default state (covering 26% width of your screen). 
 

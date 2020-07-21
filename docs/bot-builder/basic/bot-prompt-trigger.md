@@ -20,6 +20,7 @@ The Bot Prompt visual consists of the following components:
 
 ![sample_bot_prompt](../assets/new_bot_prompts/new-prompt.png)
 
+<br/>
 
 ## Bot Prompt Triggers
 - For a bot prompt to be triggered appropriately, we need to setup corresponding Bot Prompt Triggers.
@@ -32,6 +33,8 @@ The Bot Prompt visual consists of the following components:
 - To add a Bot Prompt Trigger, navigate to `Bot Builder > Business Manager > (Select Business) > Bot Prompt Triggers > Create a Trigger`
 
 - On clicking of `Create a Trigger` button, you get a popup Window titled `New Trigger`. In this window you can configure the _Bot Prompt Trigger Rules_ and _Prompt Variations_
+
+<br/>
 
 #### 1. Bot Prompt Trigger Rules
 
@@ -61,8 +64,8 @@ The Bot Prompt visual consists of the following components:
     - Remember that multiple such conditions can be combined using the `AND` or `OR` clauses to create a whole
     host of creative options to engage the user in an intelligent manner!
 
-    For example:<br/>
-    If `{[Form Field - PAN No] [is empty]} AND {[Time on Page] [is greater than] [30 seconds]}` we can ask the users if they need help finding their PAN No.
+      For example:<br/>
+      If `{[Form Field - PAN No] [is empty]} AND {[Time on Page] [is greater than] [30 seconds]}` we can ask the users if they need help finding their PAN No.
 
 - Adding _Trigger Rules_ <br/>
   - Click on `Add New Rule`
@@ -76,6 +79,8 @@ The Bot Prompt visual consists of the following components:
 - What if there are two _Bot Prompt Triggers_ with the same _Rules_? <br/>
   - When multiple bot prompts are present they are evaluated in the order of their priority. The prompt with the highest priority is evaluated first, and if the trigger conditions are met only then the prompt will be shown.
   - Priority of the _Bot Prompt Tirggers_ can be adjusted by drag and drop.
+
+<br/>
 
 #### 2. Bot Prompt Variations:
 
@@ -100,15 +105,16 @@ The Bot Prompt visual consists of the following components:
     - Click + to add more _QRs_.
     - To add another variant, click again on `Add New Variant` and repeat the above steps.
       > Limitations: <br/>
-      - _Prompt Title_: <br/>
+      > - _Prompt Title_: <br/>
       Cannot be more than 108 Characters <br/>
-      - _QR Title_: <br/>
+      > - _QR Title_: <br/>
       Cannot be more than 30 Characters
-      - _No. of QRs_: <br/>
+      > - _No. of QRs_: <br/>
       0, 2, 3 or 4. You cannot have 1 QR
     - ![sample_bot_prompt](../assets/new_bot_prompts/prompt-variations.png "Adding Variants")
 
+    <br/>
 
 ## Please note
 > - If a Bot prompt is displayed (with or without QRs) and the user clicks on the `Let's Chat` button, the SDK will behave as if the user had clicked the _Bot Prompt Title_.
-- After making changes for the Bot Prompt, **wait upto 6 hours** for them to reflect.
+> - After making changes for the Bot Prompt, **wait upto 6 hours** for them to reflect.

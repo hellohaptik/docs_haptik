@@ -32,11 +32,13 @@ This accounts for Agent Concurrency, Empty Slots and Idle Time. Chat gets assign
  
 1. It’s Great for: Even chat load distribution among agents and reducing average agent’s idle time to ensure that agents waiting for a long time get the chat first.
 
+2. Incase a chat was allocated to an agent, and the agent looses network connection. If the loss of networks persists for more than 5 minutes, we move that chat back into the team queue, so that an online agent can receive the chat.
+
 > Note: Clients for whom efficiency in distribution is important should choose this chat algorithm.
 
-2. Optimized for: Chat load as it’s almost evenly distributed across online agents at the time.
+3. Optimized for: Chat load as it’s almost evenly distributed across online agents at the time.
 
-3. Con(s): Does not account for faster agent response times but only the first response times. Faster high performing agents may not be best utilized. 
+4. Con(s): Does not account for faster agent response times but only the first response times. Faster high performing agents may not be best utilized. 
  
 
 ### B. Speedy resolution 

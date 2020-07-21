@@ -74,7 +74,7 @@ The Bot Prompt visual consists of the following components:
 
 
 - What if there are two _Bot Prompt Triggers_ with the same _Rules_? <br/>
-  - When multiple bot prompts are present they are evaluated in the order of their priority. The prompt with the highest priority is evaluated first, and if the trigger conditions are met only then the prompt will be shown. 
+  - When multiple bot prompts are present they are evaluated in the order of their priority. The prompt with the highest priority is evaluated first, and if the trigger conditions are met only then the prompt will be shown.
   - Priority of the _Bot Prompt Tirggers_ can be adjusted by drag and drop.
 
 #### 2. Bot Prompt Variations:
@@ -109,6 +109,6 @@ The Bot Prompt visual consists of the following components:
     - ![sample_bot_prompt](../assets/new_bot_prompts/prompt-variations.png "Adding Variants")
 
 
-## PS
-- Make sure to understand the needs of users and customer before creating your bot prompts.
-- After making changes in Bot Prompt, wait upto 6 hours for the change to reflect.
+## Please note
+> - If a Bot prompt is displayed (with or without QRs) and the user clicks on the `Let's Chat` button, the SDK will behave as if the user had clicked the _Bot Prompt Title_.
+- After making changes for the Bot Prompt, **wait upto 6 hours** for them to reflect.

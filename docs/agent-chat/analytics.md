@@ -30,9 +30,9 @@ title: Analytics
 
 2. **Completed by Agents** 
     
-    Count all chats that were closed by a human agent that means count all instances of manual clicks for closing a chat. Simply, total count of chats which were completed by agents in a particular team will be shown here. This does not include chats that were put in waiting, are were auto-completed due to user inactivity.
+    Count all chats that were closed by a human agent that means count all instances of manual clicks for closing a chat. Simply, total count of chats which were completed by agents in a particular team will be shown here.
     
-> Note that this completed metric count is available starting from 24 March 2020 only. 
+> Note that this completed metric count is available starting from 24 March 2020 only, This does not include chats that were put in waiting, eventually auto-completed due to user inactivity.
 
 3. **Abandoned by Users**
     

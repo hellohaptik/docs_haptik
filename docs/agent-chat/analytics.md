@@ -25,7 +25,7 @@ title: Analytics
 
 1. **Total Chats Received** 
     
-    All ongoing chats for a chosen Team view, that started in the selected time duration. This includes chats in waiting, queued chats, pinned and completed chats for the Team in question. The total number of all chats received i.e. `first_message_time` in the selected time duration from the time-date picker.
+    All ongoing chats for a chosen Team view, that started in the selected time duration. This includes chats in waiting, queued chats and completed chats for the Team in question. The total number of all chats received i.e. `first_message_time` in the selected time duration from the time-date picker.
 
 
 2. **Completed by Agents** 
@@ -90,7 +90,7 @@ title: Analytics
     
 4. **Chats received**
 
-    Similar to the Total Chats received, this metric is calculated at an agent level. This includes chats that the agent completed, marked as waiting, re-assigned and currently pinned to the agent.
+    Similar to the Total Chats received, this metric is calculated at an agent level. This includes chats that the agent completed, marked as waiting and chats that were re-assigned to the agent.
 
 5. **Avg. User Rating**
 

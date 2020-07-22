@@ -9,10 +9,10 @@ Bot Prompts are currently available on the JS SDK only.
 The Bot Prompt visual consists of the following components:
 
 -   _Bot prompt title_ -<br/>
-    This is the main bot prompt text which shows up and is directied at the user. eg. Need help picking a bot? I can guide you!
+    This is the main bot prompt text which shows up and is directed at the user. For example, "Need help picking a bot? I can guide you!".
 
 -   _Quick Replies (QRs)_ -<br/>
-    A bot prompt _can_ have quick replies. These _Quick Replies (QRs)_ serve as options the user can select right from outside the XDK to get the conversation started.
+    A bot prompt _can_ have quick replies. These _Quick Replies (QRs)_ serve as options the user can select right outside the XDK to get the conversation started.
 
 -   _User Message_ - <br/>
     This is the actual text which is sent when a _Bot prompt title_ or a _QR_ is clicked. <br/>

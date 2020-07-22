@@ -18,7 +18,7 @@ The Bot Prompt visual consists of the following components:
     This is the actual text which is sent when a _Bot prompt title_ or a _QR_ is clicked. <br/>
     Each element, i.e, the _Bot prompt title_ as well as each of the _QRs_ have a corresponding _User Message_ configured for each of them.
 
-![sample_bot_prompt](../assets/new_bot_prompts/new-prompt.png)
+![sample_bot_prompt](assets/new_bot_prompts/new-prompt.png)
 
 <br/>
 
@@ -73,7 +73,7 @@ The Bot Prompt visual consists of the following components:
   - Then in the `Condition` section, you can select one of the conditions that would match the requirement. Is Equal to, Is Greater than, etc.
   - And finally in the `Value` section, you can add the appropriate value that fits the case as mentioned in the examples above.
   - The `Prompt Rules Type` controls whether all the multiple rules would either be `AND` or `OR`.
-  - ![sample_bot_prompt](../assets/new_bot_prompts/prompt-rules.png "Adding rules to Bot Prompt Trigger")
+  - ![sample_bot_prompt](assets/new_bot_prompts/prompt-rules.png "Adding rules to Bot Prompt Trigger")
 
 
 - What if there are two _Bot Prompt Triggers_ with the same _Rules_? <br/>
@@ -111,7 +111,7 @@ The Bot Prompt visual consists of the following components:
       Cannot be more than 30 Characters
       > - _No. of QRs_: <br/>
       0, 2, 3 or 4. You cannot have 1 QR
-    - ![sample_bot_prompt](../assets/new_bot_prompts/prompt-variations.png "Adding Variants")
+    - ![sample_bot_prompt](assets/new_bot_prompts/prompt-variations.png "Adding Variants")
 
     <br/>
 

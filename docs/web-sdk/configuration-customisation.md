@@ -96,7 +96,7 @@ window.haptikInitSettings = {
 #### List of CSS selectors
 
 ##### For chat icon
-<img src="assets/chat-bubble-text.png" alt="chaticon image" width="250px" style="float:left;margin:10px 0;">
+![chaticon image](assets/chat-bubble-text.png)
 
 | CSS selectors                                 | Usage                                                 |
 |-----------------------------------------------|-------------------------------------------------------|
@@ -107,7 +107,7 @@ window.haptikInitSettings = {
 | `.minimized-view-cross-icon`                  | For cross chat icon                                   |
 
 ##### For task-box
-<img src="assets/taskbox.png" alt="taskbox image" width="250px" style="float:left;margin:10px 0;">
+![taskbox image](assets/taskbox.png)
 
 | CSS selectors                                 | Usage                                                 |
 |-----------------------------------------------|-------------------------------------------------------|
@@ -117,7 +117,7 @@ window.haptikInitSettings = {
 | `.taskbox-tasks > task`                       | For task-box list item                                |
 
 ##### For composer
-<img src="assets/composer.png" atl="composer image" width="250px" style="float:left;margin:10px 0;"/>
+![composer image](assets/composer.png)
 
 | CSS selectors                                 | Usage                                                 |
 |-----------------------------------------------|-------------------------------------------------------|
@@ -128,7 +128,7 @@ window.haptikInitSettings = {
 | `.composer-text-area`                         | For composer text area                                |
 
 ##### For message window
-<img src="assets/message-window.png" atl="message section image" width="250px" style="float:left;margin:10px 0;"/>
+![message section image](assets/message-window.png)
 
 | CSS selectors                                 | Usage                                                 |
 |-----------------------------------------------|-------------------------------------------------------|
@@ -163,11 +163,11 @@ The bot prompts come in two varieties. This setting allows you to switch between
 **Possible Values:**
 
 - `default`: *A slightly bigger bot prompt with a call to action button.*
-<img src="assets/bot-prompt-full.png" width="300" style="margin-left: 0">
+![bot prompt full](assets/bot-prompt-full.png)
 <br>
 <br>
 - `minimal`: *A very minimal bot prompt with just a line of text inside a speech bubble*<br>
-<img src="assets/bot-prompt-minimal.png" width="300" style="margin-left: 0">
+![bot prompt minimal](assets/bot-prompt-minimal.png)
 
 **default: Default**
 

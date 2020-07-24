@@ -156,21 +156,6 @@ This setting governs the initial view of the SDK. Supporting use cases where the
 
 **default: Default**
 
-### `prompt-type`
-
-The bot prompts come in two varieties. This setting allows you to switch between them.
-
-**Possible Values:**
-
-- `default`: *A slightly bigger bot prompt with a call to action button.*
-![bot prompt full](assets/bot-prompt-full.png)
-<br>
-<br>
-- `minimal`: *A very minimal bot prompt with just a line of text inside a speech bubble*<br>
-![bot prompt minimal](assets/bot-prompt-minimal.png)
-
-**default: Default**
-
 ## Feature Settings
 > Settings that primarily disable or enable features in the SDK.
 

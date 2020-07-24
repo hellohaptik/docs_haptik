@@ -226,6 +226,30 @@ $time - ‘tomorrow’</td>
 
 ### Entity Types
 
+There are multiple types of entities supported on the Platform. Below image showcases those various types -
+
+![Entity Types](assets/bot-builder-user-says/entitytype.png)
+
+#### **Numbers Entity**
+
+**Numbers** entity is meant for collecting numbers within a defined number of digits. You can have a minimum and maximum range of digits.
+
+![Entity Types](assets/bot-builder-user-says/entitytype.png)
+
+In the above image, you can see a number type entity. Following image shows the range of digits it can accept. If a user inputs anything more or less than the range, it is treated as an invalid value.
+
+![Entity Types](assets/bot-builder-user-says/entitytype.png)
+
+#### **Regex Entity**
+
+**Regex** entity is meant for detecting patterns like email ID, phone number etc. and collect relevent information from user says.
+
+![Entity Types](assets/bot-builder-user-says/entitytype.png)
+
+For the above example, if the user is not giving a valid PANCARD number matching the regular expression pattern then the entity reprompt message would be asking the user to valid input. 
+
+You can refer https://regex101.com/ to learn more about regular expression.
+
 #### **Currency Entity**
 
 **Currency** entity is meant for matching amounts of money with an indication of a currency type like, "50 rupees",  "three hundred and fifty dollars". It returns an object type value consisting of two attribute-value pairs: 
@@ -245,11 +269,23 @@ $time - ‘tomorrow’</td>
   </tr>
 </table>
 
-#### **Text Entity**
+#### **Attachment Entity**
 
-**Text** entity is meant to extract words/phrases from user utterances.
+**Attachment** entity is meant for collecting attachments from the user message.
 
-There are two ways in which text entities can be used.
+![Entity Types](assets/bot-builder-user-says/entitytype.png)
+
+You would need to create a Button HSL for letting the user upload the attachment.
+
+![Entity Types](assets/bot-builder-user-says/entitytype.png)
+
+For the above example, if the user is not giving a valid PANCARD image then the entity reprompt message would be asking the user for a valid image.
+
+#### **Words & Phrases Entity**
+
+**Words & Phrases** entity is meant to extract words/phrases from user utterances.
+
+There are two ways in which this entity can be used.
 1. Dictionary
 2. Entity Patterns
 

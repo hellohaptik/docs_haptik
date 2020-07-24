@@ -25,13 +25,14 @@ title: Analytics
 
 1. **Total Chats Received** 
     
-    All ongoing chats for a chosen Team view, that started in the selected time duration. This includes chats in waiting, queued chats and pinned chats for the Team in question. The total number of all chats received i.e. `first_message_time` in the selected time duration from the time-date picker.
+    All ongoing chats for a chosen Team view, that started in the selected time duration. This includes chats in waiting, queued chats and completed chats for the Team in question. The total number of all chats received i.e. `first_message_time` in the selected time duration from the time-date picker.
+
 
 2. **Completed by Agents** 
     
     Count all chats that were closed by a human agent that means count all instances of manual clicks for closing a chat. Simply, total count of chats which were completed by agents in a particular team will be shown here.
     
-> Note that this completed metric count is available starting from 24 March 2020 only. 
+> Note that this completed metric count is available starting from 24 March 2020 only, This does not include chats that were put in waiting, eventually auto-completed due to user inactivity.
 
 3. **Abandoned by Users**
     
@@ -89,7 +90,7 @@ title: Analytics
     
 4. **Chats received**
 
-    Similar to the Total Chats received, this metric is calculated at an agent level. And the Total chats received metric in Chat stats section above is at a Team level that is the Total chats received for the Team. 
+    Similar to the Total Chats received, this metric is calculated at an agent level. This includes chats that the agent completed, marked as waiting and chats that were re-assigned to the agent.
 
 5. **Avg. User Rating**
 

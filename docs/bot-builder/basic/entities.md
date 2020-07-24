@@ -245,7 +245,7 @@ In the above image, you can see a number type entity. Following image shows the 
 
 ![Regex Entity](assets/RegexEntity.png)
 
-For the above example, if the user is not giving a valid PANCARD number matching the regular expression pattern then the entity reprompt message would be asking the user to valid input. 
+In the above example, if the user is not giving a valid PANCARD number, matching the regular expression pattern, then the entity reprompt message would be asking the user for a valid input. 
 
 You can refer https://regex101.com/ to learn more about regular expression.
 
@@ -278,7 +278,7 @@ You would need to create a Button HSL for letting the user upload the attachment
 
 ![Attachment Example on Bot](assets/AttachmentHSL.png)
 
-For the above example, if the user is not giving a valid PANCARD image then the entity reprompt message would be asking the user for a valid image.
+In the above example, if the user is not giving a valid PANCARD image then the entity reprompt message would be asking the user for a valid image.
 
 #### **Words & Phrases Entity**
 

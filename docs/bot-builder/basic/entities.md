@@ -282,7 +282,7 @@ In the above example, if the user is not giving a valid PANCARD image then the e
 
 #### **Words & Phrases Entity**
 
-**Words & Phrases** entity is meant to extract words/phrases from user utterances.
+**Words & Phrases** entity is meant to extract "specific" text values e.g. name of a person, name of a city, etc. from user utterances.
 
 There are two ways in which this entity can be used.
 1. Dictionary

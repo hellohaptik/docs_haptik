@@ -237,6 +237,18 @@ $time - ‘tomorrow’</td>
   </tr>
 </table>
 <h3><a class="anchor" aria-hidden="true" id="entity-types"></a><a href="#entity-types" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Entity Types</h3>
+<p>There are multiple types of entities supported on the Platform. Below image showcases those various types -</p>
+<p><img src="/assets/EntityType.png" alt="Entity Types"></p>
+<h4><a class="anchor" aria-hidden="true" id="numbers-entity"></a><a href="#numbers-entity" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Numbers Entity</strong></h4>
+<p><strong>Numbers</strong> entity is meant for collecting numbers within a defined number of digits. You can have a minimum and maximum range of digits.</p>
+<p><img src="/assets/NumberEntity.png" alt="Number Entity"></p>
+<p>In the above image, you can see a number type entity. Following image shows the range of digits it can accept. If a user inputs anything more or less than the range, it is treated as an invalid value.</p>
+<p><img src="/assets/NumberRange.png" alt="Number Range"></p>
+<h4><a class="anchor" aria-hidden="true" id="regex-entity"></a><a href="#regex-entity" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Regex Entity</strong></h4>
+<p><strong>Regex</strong> entity is meant for detecting patterns like email ID, phone number etc. and collect relevent information from user says.</p>
+<p><img src="/assets/RegexEntity.png" alt="Regex Entity"></p>
+<p>In the above example, if the user is not giving a valid PANCARD number, matching the regular expression pattern, then the entity reprompt message would be asking the user for a valid input.</p>
+<p>You can refer <a href="https://regex101.com/">https://regex101.com/</a> to learn more about regular expression.</p>
 <h4><a class="anchor" aria-hidden="true" id="currency-entity"></a><a href="#currency-entity" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Currency Entity</strong></h4>
 <p><strong>Currency</strong> entity is meant for matching amounts of money with an indication of a currency type like, &quot;50 rupees&quot;,  &quot;three hundred and fifty dollars&quot;. It returns an object type value consisting of two attribute-value pairs:</p>
 <table>
@@ -253,9 +265,15 @@ $time - ‘tomorrow’</td>
     <td>{"unit": "dollars","value":"350.00"}</td>
   </tr>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="text-entity"></a><a href="#text-entity" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Text Entity</strong></h4>
-<p><strong>Text</strong> entity is meant to extract words/phrases from user utterances.</p>
-<p>There are two ways in which text entities can be used.</p>
+<h4><a class="anchor" aria-hidden="true" id="attachment-entity"></a><a href="#attachment-entity" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Attachment Entity</strong></h4>
+<p><strong>Attachment</strong> entity is meant for collecting attachments from the user message.</p>
+<p><img src="/assets/AttachmentEntity.png" alt="Attachment Entity"></p>
+<p>You would need to create a Button HSL for letting the user upload the attachment.</p>
+<p><img src="/assets/AttachmentHSL.png" alt="Attachment Example on Bot"></p>
+<p>In the above example, if the user is not giving a valid PANCARD image then the entity reprompt message would be asking the user for a valid image.</p>
+<h4><a class="anchor" aria-hidden="true" id="words--phrases-entity"></a><a href="#words--phrases-entity" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Words &amp; Phrases Entity</strong></h4>
+<p><strong>Words &amp; Phrases</strong> entity is meant to extract &quot;specific&quot; text values e.g. name of a person, name of a city, etc. from user utterances.</p>
+<p>There are two ways in which this entity can be used.</p>
 <ol>
 <li>Dictionary</li>
 <li>Entity Patterns</li>

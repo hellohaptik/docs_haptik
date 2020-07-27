@@ -59,17 +59,17 @@ The Agent Chat report gives you a list of all the agent conversations in a selec
     Note: For Agent Name = `gogo`, Team name is the business's default team which was set in business manager section.
     ```
 
-10. **Chat Initiation Timestamp **
+10. **Chat Initiation Timestamp**
 
     This is the first message timestamp for the given conversation. Note that this can be same for 3 rows if the conversation had 3 engagements from gogo to multiple agents. As this is on a conversation level. 
     
     Example: `2020-06-25 07:01:05+05:30`
     
-11. **First User Message **
+11. **First User Message**
 
     It is the message sent by the user that is the first message from the end user.
 
-12. **First Response time **
+12. **First Response time**
 
     It is the time taken in `hh:mm:ss` format by this specific agent for it's first response to the end user including the pending time
 
@@ -143,7 +143,7 @@ The Agent Chat report gives you a list of all the agent conversations in a selec
     
     Example: `https://<BASE_URL>/athena/user-info/12345678/?conv_no=14&coll_id=28331000`
 
-26. **Notes
+26. **Notes**
 
     Agents can add notes while in a conversation. All added notes will be added in this column with a pipe '|' separation
 

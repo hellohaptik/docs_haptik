@@ -167,13 +167,13 @@ The Agent Chat report gives you a list of all the agent conversations in a selec
 
     When a conversation engagement is abandoned by the end user that is no user message sent while the agent has this conversation, it's counted as abandoned by user and we show a `Yes` value in this column
     
-> Note: Read about Abandoned metric [here](https://docs.haptik.ai/agent-chat/analytics#chat-stats)
+> Read about Abandoned metric [here](https://docs.haptik.ai/agent-chat/analytics#chat-stats)
 
 32. **Delayed**
 
     Delayed time is set in the Team settings. For all instances, wherein the delay message is sent i.e. the delay time has passed when no agent being assigned to end user, we show a `Yes` string value in this column
     
-> Note: Read about Delayed metric [here](https://docs.haptik.ai/agent-chat/analytics#chat-stats)
+> Read about Delayed metric [here](https://docs.haptik.ai/agent-chat/analytics#chat-stats)
 
 33. **Messages Sent By Agent**
 

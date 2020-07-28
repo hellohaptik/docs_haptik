@@ -18,7 +18,7 @@ The Agent Chat report gives you a list of all the agent conversations in a selec
     
 3. **Agent Name**
 
-    It is an expert's unique name who has claim this chat conversation.
+    It is an expert's unique name who has claimed this chat conversation.
 
     Examples: `gogo`, `saurabhsingh`
 
@@ -178,4 +178,3 @@ The Agent Chat report gives you a list of all the agent conversations in a selec
 34. **Messages Sent by user**
 
     Total number of messages received from the end user.
-

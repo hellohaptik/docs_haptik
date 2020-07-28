@@ -33,7 +33,7 @@ The Agent Chat report gives you a list of all the agent conversations in a selec
     
 5. **Auth Id**
 
-    A unique identifier used for authenticating the user, this is an alphanumeric user identifier from your system. Datatype is `int` and this is unique to an end user as passed by the client in integration
+    A unique identifier used for authenticating the user, this is an alphanumeric user identifier from our client's system. Datatype is `int` and this is unique to an end user as passed by the client in integration
 
     Example: `92609cd2758448ae4fbb93b0ed22d40ef3b57e1b`
 

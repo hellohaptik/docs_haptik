@@ -33,7 +33,7 @@ The Agent Chat report gives you a list of all the agent conversations in a selec
     
 5. **Auth Id**
 
-    A unique identifier used for authenticating the user, this is an alphanumeric user identifier from our client's system. Datatype is `int` and this is unique to an end user as passed by the client in integration
+    A unique identifier used for authenticating the user, this is an alphanumeric user identifier from our client's system. And this is unique to an end user as passed by the client in integration
 
     Example: `92609cd2758448ae4fbb93b0ed22d40ef3b57e1b`
 
@@ -43,20 +43,20 @@ The Agent Chat report gives you a list of all the agent conversations in a selec
     
 7. **Order**
 
-    This is the value indicating the engagement order for this user's engagement. Say, an end user spoke to gogo (Haptik bot) and then agent A. The order for the former and later engagements would be `1` and `2` respectively
+    This is the value indicating the engagement order for this user's engagement. Say, an end user spoke to gogo (Haptik bot) and then agent A. The order for the former and later engagements would be `0` and `1` respectively
     
 8. **Chat Reassigned**
 
-    The values is `Yes` if the chat was reassigned otherwise value will be `No`
+    The values is `Yes` if the conversation was reassigned otherwise value will be `No`
     
 9. **Team Name**
 
-    Team Name is the team's system identifier which the chat was assigned to.
+    Team Name is the team's system identifier which the conversation was assigned to.
     
     Example: `App Support Team`
 
     ```
-    Note: For Agent Name = `gogo`, Team name is the business's default team which was set in business manager section.
+    Note: For Agent Name = `gogo`, Team name is the business's default team which was set in business manager section. Here, the Team name always may or may not be the business's default team. It depends on which team the conversation goes to, for an Agent.
     ```
 
 10. **Chat Initiation Timestamp**
@@ -81,7 +81,7 @@ The Agent Chat report gives you a list of all the agent conversations in a selec
     
 14. **Resolution time**
 
-    Total time taken (in `hh:mm:ss` format) to resolve the user's query. (Diff between first user message time and last agent's message time)
+    Total time taken (in `hh:mm:ss` format) to resolve the user's query (Inclusive of time from first user message timestamp to the time duration this conversation was pinned)
 
 15. **Agent First Response Time (without queue time)**
 
@@ -93,19 +93,19 @@ The Agent Chat report gives you a list of all the agent conversations in a selec
 
 17. **Agent Resolution Time (without queue and wait time)**
 
-    Total time chat was pinned to this specific agent in `hh:mm:ss` format. This excludes the time in pending and waiting state for this user engagement
+    Total time conversation was pinned to this specific agent in `hh:mm:ss` format. This excludes the time in pending and waiting state for this user engagement
 
 18. **Queue Time**
 
-    Total time a chat was in queued state before getting assigned to a specific agent in `hh:mm:ss` format 
+    Total time a conversation was in queued state before getting assigned to a specific agent in `hh:mm:ss` format. This is the sum of all Queue Times this conversation engagement was in before it got closed
 
 19. **Wait Time**
 
-    Total time chat was in waiting state before getting assigned to a specific agent in `hh:mm:ss` format
+    Total time conversation was in waiting state before getting assigned to a specific agent in `hh:mm:ss` format. It is the sum of all waiting times the chat was in before it got closed
 
 20. **Closing Category** or [Chat Disposition Reason](https://docs.haptik.ai/agent-chat/claiming-and-closing#chat-disposition)
 
-    Disposition reason selected by the agent while closing the chat
+    Disposition reason selected by the agent while closing the conversation
 
   
 21. **Closing Sub-category** or [Chat Disposition Sub-Reason](https://docs.haptik.ai/agent-chat/claiming-and-closing#chat-disposition)
@@ -114,23 +114,23 @@ The Agent Chat report gives you a list of all the agent conversations in a selec
     
 22. **Closing Category comment** or [Chat Disposition Comment](https://docs.haptik.ai/agent-chat/claiming-and-closing#chat-disposition)
 
-    Any closing comment add by the agent while closing the chat
+    Any closing comment add by the agent while closing the conversation
  
- >    Note: Disposition data will be blank on various cases like chat was closed by gogo, or reassigned to another agent/team or when chat autocompleted because of inactivity
+ >    Note: Disposition data will be blank on various cases like conversation was closed by gogo, or reassigned to another agent/team or when conversation autocompleted because of inactivity
  
 23. **Completion Type**
 
-    This metric indicates how this chat was closed
+    This metric indicates how this conversation was closed
 
-    - `Agent` : If this chat was closed by an agent
-    - `Bot` :  If this chat was closed, when user reached end node of the bot
-    - `Autocomplete`: When chat got autocompleted because of bot state inactivity, waiting for user inactivity, or no agents online and complete on offline was set for the given team
-    - `API`: When a chat was programmatically completed via an integration function
-    - `Reassigned` : If the chat as reassigned to another agent
+    - `Agent` : If this conversation was closed by an agent
+    - `Bot` :  If this conversation was closed, when user reached end node of the bot
+    - `Autocomplete`: When conversation got autocompleted because of bot state inactivity, waiting for user inactivity, or no agents online and complete on offline was set for the given team
+    - `API`: When a conversation was completed via an external API
+    - `Reassigned` : If the conversation as reassigned to another agent
     
 24. **Completed By**
 
-    - if `agent` then values would be the `agent_name` who completed the chat
+    - if `agent` then values would be the `agent_name` who completed the conversation
     - if `gogo` then values would be the last `node_name` which got identified.
     - if `autocomplete` then one of the following case
         - Bot completed - If completed because of waiting for bot state inactivity
@@ -139,7 +139,7 @@ The Agent Chat report gives you a list of all the agent conversations in a selec
 
 25. **Chat Link**
 
-    It is the Chat Link for given conversation of the user
+    It is the chat link for given conversation of the user
     
     Example: `https://<BASE_URL>/athena/user-info/12345678/?conv_no=14&coll_id=28331000`
 
@@ -149,7 +149,7 @@ The Agent Chat report gives you a list of all the agent conversations in a selec
 
 27. **Follow-up Time**
 
-    Agents can set follow-up when closing a conversation. The time set up is shown here
+    Agents can set follow-up when closing a conversation. The follow-up time set up is shown here
 
 28. **Follow-up Comment**
 
@@ -157,11 +157,11 @@ The Agent Chat report gives you a list of all the agent conversations in a selec
 
 29. **User Rating**
 
-    If the conversation ended, with the end user sharing their feedback by giving a rating, this will be recorded and visible in this column
+    When the end user shares their conversation feedback by giving a rating, this will be recorded and visible in this column
 
 30. **User Comment**
 
-    If the conversation ended, with the end user sharing their feedback by giving a rating, this will be recorded and visible in this column
+    When the end user shares their conversation feedback by giving a rating, user can also add a text comment which will be recorded and visible in this column
 
 31. **Abandoned By User**
 
@@ -169,7 +169,7 @@ The Agent Chat report gives you a list of all the agent conversations in a selec
 
 32. **Delayed**
 
-    Based on the delayed time is set in the Team settings, we send a message to the user, if this message was sent, the column value will be 'Yes', else 'No'
+    Delayed time is set in the Team settings. For all instances, wherein the delay message is sent i.e. the delay time has passed when no agent being assigned to end user, we show a `Yes` string value in this column
 
 33. **Messages Sent By Agent**
 

@@ -169,7 +169,7 @@ The Agent Chat report gives you a list of all the agent conversations in a selec
 
 32. **Delayed**
 
-    Delayed time is set in the Team settings. For all instances, wherein the delay message is sent i.e. the delay time has passed when no agent being assigned to end user, we show a `Yes` string value in this column
+    Based on the delayed time is set in the Team settings, we send a message to the user, if this message was sent, the column value will be 'Yes', else 'No'
 
 33. **Messages Sent By Agent**
 

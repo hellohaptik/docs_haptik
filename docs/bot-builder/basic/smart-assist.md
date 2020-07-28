@@ -18,25 +18,25 @@ There are various intelligent nudges that the IVA performs, to make an attempt t
 
 1. Asking a user to choose from a list of options, if the bot is not confident on it’s understanding of the query. 
 
-![SA_1](assets/SA_2.png)
+![SA_2](assets/SA_2.png)
 
 This is similar to the “Did you mean?” feature. The difference is in the tonality of the IVA. In SMART ASSIST, it would be a bit apologetic, since the IVA was not able to understand the query of the user properly.
 
 2. There are occasions, when users provide entity values with certain implicit assumptions, but don’t provide their complete requirement. With SMART ASSIST, the IVA will depict a list of options, which can utilise the entity provided by the user and request users to choose an option to continue the conversation.
 
-![SA_1](assets/SA_3.png)
+![SA_3](assets/SA_3.png)
 
 3. The IVA would ask the users to rephrase their query when it’s too short and the IVA has not understood the complete context from the message.
 
-![SA_1](assets/SA_4.png)
+![SA_4](assets/SA_4.png)
 
 4. The IVA will identify that the user’s query is out of scope of the IVA and ask the user to take one more attempt at sending their query, by using different words. Another attempt from the might lead the IVA to recognise the query.
 
-![SA_1](assets/SA_5.png)
+![SA_5](assets/SA_5.png)
 
 5. The IVA will ask the users to summarise their query, if it’s too long and if the IVA is not able to understand it completely.
 
-![SA_1](assets/SA_6.png)
+![SA_6](assets/SA_6.png)
 
 **FEW POINTS TO NOTE -**
 
@@ -44,7 +44,7 @@ This is similar to the “Did you mean?” feature. The difference is in the ton
 
 **Demonstration -**
 
-![SA_1](assets/SA_7.png)
+![SA_7](assets/SA_7.png)
 
 2. The IVA will not send the same type of SMART ASSIST message for two consecutive User messages. 
 
@@ -54,7 +54,7 @@ If the bot finds two consecutive user queries falling into the same SMART ASSIST
 
 **Demonstration -** In the below image, the “Show sav” message received a SMART ASSIST message to rephrase the query. However, when the next user query was also found eligible to receive a request to rephrase the query, the IVA sent a Final Bot Break Message. The Final Bot Break message is configurable in the “Partner Specific” section of the Business Manager.
 
-![SA_1](assets/SA_8.png)
+![SA_8](assets/SA_8.png)
 
 3. Those SMART ASSIST messages that use button text, those respective button texts are fetched from the “Did you mean?” text section on the respective Nodes in the Bot Builder.
 

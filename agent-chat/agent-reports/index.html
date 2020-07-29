@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Agent Reports · Haptik Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="The Agent Chat report gives you a list of all the agent conversations in a selected time period. You can now analyse your agents based on various metrics like response times and more on a granular level. Please go through each of the metrics mentioned below. We have described each column metric added in the report so that you could find out the best and worst performing agents."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Agent Reports · Haptik Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.haptik.ai/"/><meta property="og:description" content="The Agent Chat report gives you a list of all the agent conversations in a selected time period. You can now analyse your agents based on various metrics like response times and more on a granular level. Please go through each of the metrics mentioned below. We have described each column metric added in the report so that you could find out the best and worst performing agents."/><meta property="og:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.haptik.ai/img/image_0.png"/><link rel="shortcut icon" href="/img/image_0.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Agent Reports · Haptik Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="The Agent Chat report gives you a list of all the agent conversations in a selected time period. You can now analyse your agents based on various metrics like response times and more on a granular level. Please go through each of the metrics mentioned below. We have described each column metric added in the report so that you could find out the best performing agents and monitor agent performance on a more granular level."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Agent Reports · Haptik Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.haptik.ai/"/><meta property="og:description" content="The Agent Chat report gives you a list of all the agent conversations in a selected time period. You can now analyse your agents based on various metrics like response times and more on a granular level. Please go through each of the metrics mentioned below. We have described each column metric added in the report so that you could find out the best performing agents and monitor agent performance on a more granular level."/><meta property="og:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.haptik.ai/img/image_0.png"/><link rel="shortcut icon" href="/img/image_0.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
               (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
               m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -62,77 +62,83 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Agent Reports</h1></header><article><div><span><p>The Agent Chat report gives you a list of all the agent conversations in a selected time period. You can now analyse your agents based on various metrics like response times and more on a granular level. Please go through each of the metrics mentioned below. We have described each column metric added in the report so that you could find out the best and worst performing agents.</p>
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Agent Reports</h1></header><article><div><span><p>The Agent Chat report gives you a list of all the agent conversations in a selected time period. You can now analyse your agents based on various metrics like response times and more on a granular level. Please go through each of the metrics mentioned below. We have described each column metric added in the report so that you could find out the best performing agents and monitor agent performance on a more granular level.</p>
 <ol>
-<li><p><strong>Chat Initiation (First User Message)</strong></p>
-<p>It is a first message timestamp for the given conversation.</p>
-<p>Example: <code>2020-06-25 07:01:05+05:30</code></p></li>
-<li><p><strong>Agent Name</strong></p>
-<p>It is an expert's unique name who has claim this chat conversation.</p>
-<p>Examples: <code>gogo</code>, <code>saurabhsingh</code></p>
-<pre><code class="hljs">Note: `gogo` is an internal name <span class="hljs-keyword">for</span> our<span class="hljs-built_in"> system </span>(bot)
-</code></pre></li>
-<li><p><strong>Team Id</strong></p>
-<p>Team Id is the team's system identifier which the chat was assigned to.</p>
-<p>Example: <code>10</code></p>
-<pre><code class="hljs"><span class="hljs-literal">Note</span>: <span class="hljs-keyword">For</span> Agent Name = `gogo`, Team name <span class="hljs-keyword">is</span> the business<span class="hljs-symbol">'s</span> <span class="hljs-keyword">default</span> team which was set <span class="hljs-keyword">in</span> business manager section.
-</code></pre></li>
-<li><p><strong>Channel Name</strong></p>
-<p>Channel Name is the business via name value which was set in <a href="https://docs.haptik.ai/bot-builder/basic/business#section-1-general-settings">business manager section</a>.</p>
+<li><p><strong>Business Name</strong></p>
+<p>Business Name is the business via name value which was set in <a href="https://docs.haptik.ai/bot-builder/basic/business#section-1-general-settings">business manager section</a>.</p>
 <p>Example: <code>lalpathlabchannel</code>, <code>lalpathlabchannel_hi</code></p></li>
-<li><p><strong>User Id</strong></p>
-<p>System generated client specific user identifier</p>
-<p>Example: <code>58145996</code></p></li>
-<li><p><strong>Messages Sent</strong></p>
-<p>Total number of message which was sent by this specific agent to the end user.</p></li>
-<li><p><strong>Messages Received</strong></p>
-<p>Total number of message which was received by this specific agent from the end user.</p></li>
-<li><p><strong>Average response time</strong></p>
-<p>It is average calculated using the all response times by this specific agent.</p>
-<p>Example: <code>30.5</code> (seconds)</p></li>
-<li><p><strong>First Response time (seconds)</strong></p>
-<p>It is the time taken by this specific agent for it's first response to the end user.</p></li>
-</ol>
-<ol start="10">
-<li><p><strong>First Response time (timestamp)</strong></p>
-<p>It is a first response timestamp by this specific agent to the end user.</p>
-<p>Example: <code>2020-06-25 07:31:58+05:30</code></p></li>
-<li><p><strong>Automated messages</strong></p>
-<p>Total number of automated messages which was sent during this specific agent to the end user.</p></li>
-<li><p><strong><a href="https://docs.haptik.ai/agent-chat/claiming-and-closing#chat-disposition">Chat Disposition Reason</a></strong></p>
-<p>Disposition reason selected by the agent while closing the chat.</p></li>
-</ol>
-<ol start="13">
-<li><p><strong><a href="https://docs.haptik.ai/agent-chat/claiming-and-closing#chat-disposition">Chat Disposition Sub-Reason</a></strong></p>
-<p>Disposition sub-reason under selected reason selected by the agent while closing the chat.</p></li>
-<li><p><strong><a href="https://docs.haptik.ai/agent-chat/claiming-and-closing#chat-disposition">Chat Disposition Comment</a></strong></p>
-<p>Any closing comment add by the agent while closing the chat.</p></li>
-</ol>
-<blockquote>
-<p>Note: Disposition data will be blank on various cases like chat was closed by gogo, or reassigned to another agent/team or got autocomplete because of inactivity.</p>
-</blockquote>
-<ol start="15">
-<li><p><strong>Resolution time</strong></p>
-<p>Total time taken (in seconds) to resolve the user's query. (Diff between first user message time and last agent's message time)</p></li>
-<li><p><strong>Chat Closure time</strong></p>
-<p>It is a last agent's message timestamp.</p>
-<p>Example : <code>2020-06-25 07:36:53+05:30</code></p></li>
-<li><p><strong>Chat Link</strong></p>
-<p>It is the Chat Link for given conversation of the user</p>
-<p>Example: <code>https://&lt;BASE_URL&gt;/athena/user-info/12345678/?conv_no=14&amp;coll_id=28331000</code></p></li>
 <li><p><strong>Conversation Identifier</strong></p>
 <p>It is the unique conversation identifier of the user</p>
 <p>Example : <code>28331000_14</code></p></li>
-<li><p><strong>Completion Method</strong></p>
-<p>This metrics indicates how this chat was closed</p>
+<li><p><strong>Agent Name</strong></p>
+<p>It is an expert's unique name who has claimed this chat conversation.</p>
+<p>Examples: <code>gogo</code>, <code>saurabhsingh</code></p>
+<pre><code class="hljs">Note: `gogo` is an internal name <span class="hljs-keyword">for</span> our<span class="hljs-built_in"> system </span>(bot)
+</code></pre></li>
+<li><p><strong>User Id</strong></p>
+<p>System generated client specific user identifier</p>
+<p>Example: <code>58145996</code></p></li>
+<li><p><strong>Auth Id</strong></p>
+<p>A unique identifier used for authenticating the user, this is an alphanumeric user identifier from our client's system. And this is unique to an end user as passed by the client in integration</p>
+<p>Example: <code>92609cd2758448ae4fbb93b0ed22d40ef3b57e1b</code></p></li>
+<li><p><strong>Device Platform</strong></p>
+<p>Device platform of the user - <code>Android App, IOS App, Android SDK, Facebook, Jio, Web SD, IOS SDK , Skype, Alexa, Voic, Twilio, Kookoo, Phonecom, Webhook, Whatsapp, Jio Chat Connector, Haptik IVR, ISO, JIO IVR</code></p></li>
+<li><p><strong>Order</strong></p>
+<p>This is the value indicating the engagement order for this user's engagement. Say, an end user spoke to gogo (Haptik bot) and then agent A. The order for the former and later engagements would be <code>0</code> and <code>1</code> respectively</p></li>
+<li><p><strong>Chat Reassigned</strong></p>
+<p>The values is <code>Yes</code> if the conversation was reassigned otherwise value will be <code>No</code></p></li>
+<li><p><strong>Team Name</strong></p>
+<p>Team Name is the team's system identifier which the conversation was assigned to.</p>
+<p>Example: <code>App Support Team</code></p>
+<pre><code class="hljs">Note: <span class="hljs-keyword">For</span> Agent Name = `gogo`, Team name is the business<span class="hljs-string">'s default team which was set in business manager section. Here, the Team name always may or may not be the business'</span>s<span class="hljs-built_in"> default </span>team. It depends on which team the conversation goes <span class="hljs-keyword">to</span>, <span class="hljs-keyword">for</span> an Agent.
+</code></pre></li>
+<li><p><strong>Chat Initiation Timestamp</strong></p>
+<p>This is the first message timestamp for the given conversation. Note that this can be same for 3 rows if the conversation had 3 engagements from gogo to multiple agents. As this is on a conversation level.</p>
+<p>Example: <code>2020-06-25 07:01:05+05:30</code></p></li>
+<li><p><strong>First User Message</strong></p>
+<p>It is the message sent by the user that is the first message from the end user.</p></li>
+<li><p><strong>First Response time</strong></p>
+<p>It is the time taken in <code>hh:mm:ss</code> format by this specific agent for it's first response to the end user including the pending time</p></li>
+<li><p><strong>Average response time</strong></p>
+<p>It is average calculated using the all response times by this specific agent. Time here is in <code>hh:mm:ss</code> format</p>
+<p>Example: <code>30.5</code> (seconds)</p></li>
+<li><p><strong>Resolution time</strong></p>
+<p>Total time taken (in <code>hh:mm:ss</code> format) to resolve the user's query (Inclusive of time from first user message timestamp to the time duration this conversation was pinned)</p></li>
+<li><p><strong>Agent First Response Time (without queue time)</strong></p>
+<p>It is the time taken in <code>hh:mm:ss</code> format by this specific agent for it's first response to the end user excluding the pending time</p></li>
+<li><p><strong>Avg Agent Response Time (without queue time)</strong></p>
+<p>It is average time in <code>hh:mm:ss</code> format calculated using the all response times by this specific agent excluding the pending time</p></li>
+<li><p><strong>Agent Resolution Time (without queue and wait time)</strong></p>
+<p>Total time conversation was pinned to this specific agent in <code>hh:mm:ss</code> format. This excludes the time in pending and waiting state for this user engagement</p></li>
+<li><p><strong>Queue Time</strong></p>
+<p>Total time a conversation was in queued state before getting assigned to a specific agent in <code>hh:mm:ss</code> format. This is the sum of all Queue Times this conversation engagement was in before it got closed</p></li>
+<li><p><strong>Wait Time</strong></p>
+<p>Total time conversation was in waiting state before getting assigned to a specific agent in <code>hh:mm:ss</code> format. It is the sum of all waiting times the chat was in before it got closed</p></li>
+<li><p><strong>Closing Category</strong> or <a href="https://docs.haptik.ai/agent-chat/claiming-and-closing#chat-disposition">Chat Disposition Reason</a></p>
+<p>Disposition reason selected by the agent while closing the conversation</p></li>
+</ol>
+<ol start="21">
+<li><p><strong>Closing Sub-category</strong> or <a href="https://docs.haptik.ai/agent-chat/claiming-and-closing#chat-disposition">Chat Disposition Sub-Reason</a></p>
+<p>Disposition sub-reason under selected reason selected by the agent while closing the chat</p></li>
+<li><p><strong>Closing Category comment</strong> or <a href="https://docs.haptik.ai/agent-chat/claiming-and-closing#chat-disposition">Chat Disposition Comment</a></p>
+<p>Any closing comment add by the agent while closing the conversation</p></li>
+</ol>
+<blockquote>
+<p>Note: Disposition data will be blank on various cases like conversation was closed by gogo, or reassigned to another agent/team or when conversation autocompleted because of inactivity</p>
+</blockquote>
+<ol start="23">
+<li><p><strong>Completion Type</strong></p>
+<p>This metric indicates how this conversation was closed</p>
 <ul>
-<li><code>agent</code> : If this chat was closed by an agent</li>
-<li><code>gogo</code> :  If this chat was closed, when user reached end node of the bot</li>
-<li><code>autocomplete</code>: When chat got autocompleted because of bot state inactivity, waiting for user inactivity, or no agents online and complete on offline was set for the given team.</li>
+<li><code>Agent</code>: If this conversation was closed by an agent</li>
+<li><code>Bot</code>:  If this conversation was closed, when user reached end node of the bot</li>
+<li><code>Autocomplete</code>: When conversation got autocompleted because of bot state inactivity, waiting for user inactivity, or no agents online and complete on offline was set for the given team</li>
+<li><code>API</code>: When a conversation was completed via an external API</li>
+<li><code>Reassigned</code> : If the conversation as reassigned to another agent</li>
 </ul></li>
 <li><p><strong>Completed By</strong></p>
 <ul>
-<li>if <code>agent</code> then values would be the <code>agent_name</code> who completed the chat</li>
+<li>if <code>agent</code> then values would be the <code>agent_name</code> who completed the conversation</li>
 <li>if <code>gogo</code> then values would be the last <code>node_name</code> which got identified.</li>
 <li>if <code>autocomplete</code> then one of the following case
 <ul>
@@ -141,33 +147,39 @@
 <li>Waiting for User - If completed because of waiting for user inactivity</li>
 </ul></li>
 </ul></li>
-<li><p><strong>Reassigned</strong></p>
-<p>The values is <code>Yes</code> if the chat was reassigned otherwise value will be <code>No</code></p></li>
-<li><p><strong>Device Platform</strong></p>
-<p>Device platform of the user - <code>Android App, IOS App, Android SDK, Facebook, Jio, Web SD, IOS SDK , Skype, Alexa, Voic, Twilio, Kookoo, Phonecom, Webhook, Whatsapp, Jio Chat Connector, Haptik IVR, ISO, JIO IVR</code></p></li>
-<li><p><strong>Partner Name</strong></p>
-<p>It is the partner name associated to the business</p></li>
-<li><p><strong>Third-party ID</strong></p>
-<p>A unique identifier used for authenticating the user, this is an alphanumeric user identifier from your system.</p>
-<p>Example: <code>92609cd2758448ae4fbb93b0ed22d40ef3b57e1b</code></p></li>
-<li><p><strong>Average response time (hh:mm:ss)</strong></p>
-<p>It is average time in <code>hh:mm:ss</code> format calculated using the all response times by this specific agent.</p></li>
-<li><p><strong>First Response time (hh:mm:ss)</strong></p>
-<p>It is the time taken in <code>hh:mm:ss</code> format by this specific agent for it's first response to the end user including the pending time</p></li>
-<li><p><strong>Resolution time (hh:mm:ss)</strong></p>
-<p>Total time taken (in <code>hh:mm:ss</code> format) to resolve the user's query. (Diff between first user message time and last agent's message time)</p></li>
-<li><p><strong>Agent First Response Timestamp (without queue time)</strong></p>
-<p>It is the time taken in <code>hh:mm:ss</code> format by this specific agent for it's first response to the end user excluding the pending time</p></li>
-<li><p><strong>Avg Agent Response Time (without queue time)</strong></p>
-<p>It is average time in <code>hh:mm:ss</code> format calculated using the all response times by this specific agent excluding the pending time.</p></li>
-<li><p><strong>Agent Resolution Time (without queue and wait time)</strong></p>
-<p>Total time chat was pinned to this specific agent in <code>hh:mm:ss</code> format</p></li>
-<li><p><strong>Queue Time</strong></p>
-<p>Total time chat was queued state before got assign this specific agent in <code>hh:mm:ss</code> format</p></li>
-<li><p><strong>Wait Time</strong></p>
-<p>Total time chat was waiting state before got assign this specific agent in <code>hh:mm:ss</code> format</p></li>
+<li><p><strong>Chat Link</strong></p>
+<p>It is the chat link for given conversation of the user</p>
+<p>Example: <code>https://&lt;BASE_URL&gt;/athena/user-info/12345678/?conv_no=14&amp;coll_id=28331000</code></p></li>
+<li><p><strong>Notes</strong></p>
+<p>Agents can add notes while in a conversation. All added notes will be added in this column with a pipe '|' separation</p></li>
+<li><p><strong>Follow-up Time</strong></p>
+<p>Agents can set follow-up when closing a conversation. The follow-up time set up is shown here</p></li>
+<li><p><strong>Follow-up Comment</strong></p>
+<p>Agents can set follow-up when closing a conversation. The follow-up comment added is shown here</p></li>
+<li><p><strong>User Rating</strong></p>
+<p>When the end user shares their conversation feedback by giving a rating, this will be recorded and visible in this column</p></li>
+<li><p><strong>User Comment</strong></p>
+<p>When the end user shares their conversation feedback by giving a rating, user can also add a text comment which will be recorded and visible in this column</p></li>
+<li><p><strong>Abandoned By User</strong></p>
+<p>When a conversation engagement is abandoned by the end user that is no user message sent while the agent has this conversation, it's counted as abandoned by user and we show a <code>Yes</code> value in this column</p></li>
 </ol>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 7/27/2020</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/agent-chat/analytics"><span class="arrow-prev">← </span><span>Analytics</span></a><a class="docs-next button" href="/agent-chat/chat-assignment"><span>Chat assignment</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Bot Builder</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://docs.haptik.ai/ios-sdk/" class="footer-column-link">iOS SDK</a><a href="https://docs.haptik.ai/android-sdk/" class="footer-column-link">Android SDK</a><a href="https://docs.haptik.ai/web-sdk/" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/whatsapp/" class="footer-column-link">WhatsApp</a><a href="https://docs.haptik.ai/other/facebook" class="footer-column-link">Facebook</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Bot API</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a><a href="https://docs.haptik.ai/other/security" class="footer-column-link">Security</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Agent Chat Tool</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2020 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+<blockquote>
+<p>Read about Abandoned metric <a href="https://docs.haptik.ai/agent-chat/analytics#chat-stats">here</a></p>
+</blockquote>
+<ol start="32">
+<li><p><strong>Delayed</strong></p>
+<p>Delayed time is set in the Team settings. For all instances, wherein the delay message is sent i.e. the delay time has passed when no agent being assigned to end user, we show a <code>Yes</code> string value in this column</p></li>
+</ol>
+<blockquote>
+<p>Read about Delayed metric <a href="https://docs.haptik.ai/agent-chat/analytics#chat-stats">here</a></p>
+</blockquote>
+<ol start="33">
+<li><p><strong>Messages Sent By Agent</strong></p>
+<p>Total number of messages which were sent by a specific agent to the end user</p></li>
+<li><p><strong>Messages Sent by user</strong></p>
+<p>Total number of messages received from the end user.</p></li>
+</ol>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 7/29/2020</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/agent-chat/analytics"><span class="arrow-prev">← </span><span>Analytics</span></a><a class="docs-next button" href="/agent-chat/chat-assignment"><span>Chat assignment</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Bot Builder</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://docs.haptik.ai/ios-sdk/" class="footer-column-link">iOS SDK</a><a href="https://docs.haptik.ai/android-sdk/" class="footer-column-link">Android SDK</a><a href="https://docs.haptik.ai/web-sdk/" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/whatsapp/" class="footer-column-link">WhatsApp</a><a href="https://docs.haptik.ai/other/facebook" class="footer-column-link">Facebook</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Bot API</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a><a href="https://docs.haptik.ai/other/security" class="footer-column-link">Security</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Agent Chat Tool</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2020 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

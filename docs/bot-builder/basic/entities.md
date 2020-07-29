@@ -11,6 +11,7 @@ In this section, we'll cover the following topics:
 [Mandatory and Optional Entities](#mandatory-and-optional-entities)  
 [Entity Types](#entity-types)<br>
 [Entity Patterns](#entity-patterns)<br>
+[Entity Settings](#entity-settings)<br>
 [Node Entity Filter](#node-entity-filter)<br>
 [Language Support for Different Entities](#language-support-for-different-entities)
 
@@ -446,6 +447,148 @@ To fix the same, some Negative Variations without tagging the entity value have 
 Below is the case where the detection stopped once the Negative Variations were added to the Entity Patterns. Once the IVA is trained after adding Negative Variations, the detection doesn’t occur.
 
 ![EP_16](assets/EP_16.png)
+
+### **Entity Settings**
+
+We have 4 main Advanced Settings options under entities.
+
+**1. Previous Context Tags**
+
+**What is Context from an IVA perspective?**
+
+Context is linguistically defined as the background in which the conversation is taking place. From the IVA perspective, it can involve retaining the memory of any piece of information that has been either derived from past user behavior, the action performed by the IVA, or has been explicitly given by the user.
+
+**What is stored in the form of Context on an IVA?**
+- It can involve information like Nodes traversed by the IVA in the conversation, Entity values collected, ML Module which sent the last reply e.g Disambiguation, Small Talk, etc. 
+- The user’s name, email, phone number, etc explicitly provided by him, will also form a part of the context. The context needs to be stored before it can be used.
+
+**When is the context information deleted?**
+The context is deleted by the system in case if any of the following events occur:
+- When an END NODE is encountered by the IVA in the conversation 
+- When an agent marks the conversation as COMPLETE from Agent Chat tool
+- When a chat auto-completes after 8 mins of inactivity
+
+**Where can you configure the previous_context_tag?**
+- The previous_context_tag is configured at an entity level and is present in the Entity under the Advanced options.
+
+**Why and when to use the previous_context_tag?**
+- It should be used when you want an entity value to be filled after the bot has asked for it
+
+For eg. If you have a use case where you have two similar types of entity in the same flow with different values to be filled in each one of those, then you can differentiate them using the prev_context_tags. So an entity value will be filled up only if certain words are present in the previous bot says which we have put under prev_context_tags (the unique words/phrases present in the bot says is the prev_context_tags for that entity)
+
+**Is it mandatory to use it on every entity?**
+- No, it is not mandatory to use previous_context_tags on all entities, it entirely depends on the use case, and if it is required.
+
+**How to use a prev_context_tag?**
+- Let’s take an example where we need to store 2 different mobile numbers from a user in the same flow as the primary & secondary mobile number.
+
+There is a node where we will be asking a user to provide primary & secondary mobile numbers, so here we will need 2 different entities with the same type and validation to store them separately.
+
+Created an entity for the **primary number** which has a Bot Says as “Please enter your primary number” and for **secondary number** with Bot Says as “Please enter your secondary number” as shown below
+
+![ES_1](assets/ES_1.png)
+
+So here as you can see the unique word which differentiates both the entities is **“primary”** which we will use as **prev_context_tag** for primary mobile number entity.
+
+![ES_2](assets/ES_2.png)
+
+and **“secondary”** for secondary mobile number entity as shown below
+
+![ES_3](assets/ES_3.png)
+
+Now whenever the Bot Says has **“primary”** word it will store the user entered mobile number in the **primary_mobile_number** entity only as primary keyword is used as a **prev_context_tag** in that entity and will not store it in **secondary_mobile_number** entity.
+
+Check below image with debug logs how the **prev_context_tag** works and stores the value in the respective entity.
+
+![ES_4](assets/ES_4.png)
+
+> **It is not mandatory to only use words, you can also use phrases for the context retention in prev_context_tag.**
+
+![ES_5](assets/ES_5.png)
+
+**2. Payload Keys**
+
+**What is Payload?**
+
+Payload is the data that you want to send with a user text via button/Quick reply which is not visible to the user but can be stored in the entity and we can use this data in further flows wherever required.
+
+**Where can you use this?**
+
+You can use this functionality when you are showing the same user message for various options but want the selected option to be saved in the entity.
+
+**How does a payload functionality work?**
+
+In a flow where we have multiple products to display with the same text, we will pass a unique value as a hidden message in the button using the payload, and whenever a user selects an option, the data is passed as a hidden message button gets stored in the entity. Once we have the payload value stored in the entity, we can use this entity to start a certain flow or if required we can use this entity value in future flows.
+
+**How to use the payload?**
+
+Implementation of the payload can be divided into 2 parts 
+
+A. Storing the payload values in the entity
+B. Passing the correct payload values in the CTA
+
+Here is an example to understand this concept -
+
+Let’s take a use case where we need to display multiple plans for Netflix with the same button text as **Know more**. So after the user selects any particular plan by clicking on Know more button, it should land on that particular plan & start the flow.
+
+So here we need to pass a unique value for every plan in the payload and store these values in an entity. After the user selects an option using **Know more** CTA, a payload will be passed with the entity value which will trigger the required flow using a connection of entity by value.
+
+**Why do we need an Entity here?**
+- If we do not use an entity to store the value and distinguish the flow for the same **Know more** button, the bot will not understand which button was selected by the user and will trigger the wrong flow by treating it as a user says. So instead we pass a hidden message with a value that is stored in the entity that helps in transition or future flows.
+
+**Implementation**
+
+1. Creating & storing the values in the entity
+
+a. Create a Word & phrases entity 
+
+![ES_6](assets/ES_6.png)
+
+b. Click on Advanced options and enter the **Payload_keys** & **Context_keys** you want as per your use case, in the below example we have used **plan** & **planid** for **purchase a plan** use case
+
+![ES_7](assets/ES_7.png)
+
+c. Click on the Dictionary option present in the top and enter all Entity values you need for your buttons. In this case, as we have 4 plans so we created 4 dictionary values with proper variations as shown below
+
+![ES_8](assets/ES_8.png)
+
+d. Save the entity and click on **Add to bot says** to add the entity on that node.
+
+As the entity is already created with all the values, now we need to create a CTA from where the user can select the option.
+
+In the below example, we are using a carousel to display the different plans to users i.e Mobile, Mobile+, Standard, and Premium as added in the Entity which will have the same button text as **Know more**.
+
+![ES_9](assets/ES_9.png)
+
+2. Passing the payload value in the CTA
+
+a. Add a **Know more** button with button type as Text in the carousel and pass the payload value with the proper syntax in the Message to send box
+
+![ES_10](assets/ES_10.png)
+
+b. Syntax: **Button text{api_name:payload_key, completion_key:entity_value}**
+  
+This is the basic syntax for creating a payload where Button text is nothing but the text which is displayed as a user message on the bot after clicking on the button as shown below, in this case, it is **Know more**
+
+![ES_11](assets/ES_11.png)
+
+**api_name** key will stay as it is for all the implementation.
+
+**payload_key** is the name you have given under Advanced Settings of the entity. This will be the same in all buttons for this use case, in this case we have used **plan** as the payload key.
+
+**completion_key** is the name you have given for **context key** under Advanced Settings of the entity, in this case we have used **planid** as the context key.
+
+**entity_value** is the value you want to store in the entity when a user clicks on a CTA and this value will be different for every Button, in this case the entity values are mobile, mobile plus, standard, premium which we have entered under the Dictionary of the entity. 
+
+> **The entity value is the only parameter that will be different in each Know more button.**
+
+![ES_12](assets/ES_12.png)
+
+As you can see after selecting the **Mobile+ plan** the entity value is Mobile plus which was passed in the payload - **Know more {api_name:plan, planid:mobile plus}**
+
+**Note:**
+1. payload_key, completion_key, and entity_value will be needed while creating the entity. 
+2. You cannot use capital letters to create any payload parameters.
 
 ### **Node Entity Filter**
 

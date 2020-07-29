@@ -468,7 +468,7 @@ The context is deleted by the system in case if any of the following events occu
 - When an agent marks the conversation as COMPLETE from Agent Chat tool
 - When a chat auto-completes after 8 mins of inactivity
 
-**Where can I configure the previous_context_tag?**
+**Where can you configure the previous_context_tag?**
 - The previous_context_tag is configured at an entity level and is present in the Entity under the Advanced options.
 
 **Why and when to use the previous_context_tag?**
@@ -482,13 +482,13 @@ For eg. If you have a use case where you have two similar types of entity in the
 **How to use a prev_context_tag?**
 - Let’s take an example where we need to store 2 different mobile numbers from a user in the same flow as the primary & secondary mobile number.
 
-I have a node where we will be asking a user to provide primary & secondary mobile numbers, so here we will need 2 different entities with the same type and validation to store them separately.
+There is a node where we will be asking a user to provide primary & secondary mobile numbers, so here we will need 2 different entities with the same type and validation to store them separately.
 
 Created an entity for the **primary number** which has a Bot Says as “Please enter your primary number” and for **secondary number** with Bot Says as “Please enter your secondary number” as shown below
 
 ![ES_1](assets/ES_1.png)
 
-So here as you can see the unique word which differentiates both the entities is **“primary”** which we will use as prev_context_tag for primary mobile number entity.
+So here as you can see the unique word which differentiates both the entities is **“primary”** which we will use as **prev_context_tag** for primary mobile number entity.
 
 ![ES_2](assets/ES_2.png)
 
@@ -512,9 +512,9 @@ Check below image with debug logs how the **prev_context_tag** works and stores 
 
 Payload is the data that you want to send with a user text via button/Quick reply which is not visible to the user but can be stored in the entity and we can use this data in further flows wherever required.
 
-**Where can we use this?**
+**Where can you use this?**
 
-We use this functionality when we are showing the same user message for various options but want the selected option to be saved in the entity.
+You can use this functionality when you are showing the same user message for various options but want the selected option to be saved in the entity.
 
 **How does a payload functionality work?**
 
@@ -544,19 +544,19 @@ a. Create a Word & phrases entity
 
 ![ES_6](assets/ES_6.png)
 
-b. Click on Advanced options and enter the **Payload_keys** & **Context_keys** you want as per your use case, I have used **plan** & **planid** for purchase a plan use case
+b. Click on Advanced options and enter the **Payload_keys** & **Context_keys** you want as per your use case, in the below example we have used **plan** & **planid** for **purchase a plan** use case
 
 ![ES_7](assets/ES_7.png)
 
-c. Click on the Dictionary option present in the top and enter all Entity values you need for your buttons. In my case, as I have 4 plans so I created 4 dictionary values with proper variations as shown below
+c. Click on the Dictionary option present in the top and enter all Entity values you need for your buttons. In this case, as we have 4 plans so we created 4 dictionary values with proper variations as shown below
 
 ![ES_8](assets/ES_8.png)
 
-d. Save the entity and click on Add to bot says to add the entity on that node.
+d. Save the entity and click on **Add to bot says** to add the entity on that node.
 
 As the entity is already created with all the values, now we need to create a CTA from where the user can select the option.
 
-I am using a carousel to display the different plans to users i.e Mobile, Mobile+, Standard, and Premium as added in the Entity which will have the same button text as **Know more**.
+In the below example, we are using a carousel to display the different plans to users i.e Mobile, Mobile+, Standard, and Premium as added in the Entity which will have the same button text as **Know more**.
 
 ![ES_9](assets/ES_9.png)
 
@@ -568,17 +568,17 @@ a. Add a **Know more** button with button type as Text in the carousel and pass 
 
 b. Syntax: **Button text{api_name:payload_key, completion_key:entity_value}**
   
-This is the basic syntax for creating a payload where Button text is nothing but the text which is displayed as a user message on the bot after clicking on the button as shown below, in my case, it is **Know more**
+This is the basic syntax for creating a payload where Button text is nothing but the text which is displayed as a user message on the bot after clicking on the button as shown below, in this case, it is **Know more**
 
 ![ES_11](assets/ES_11.png)
 
 **api_name** key will stay as it is for all the implementation.
 
-**payload_key** is the name you have given under Advanced Settings of the entity. This will be the same in all buttons for this use case, in my case I have used **plan** as the payload key.
+**payload_key** is the name you have given under Advanced Settings of the entity. This will be the same in all buttons for this use case, in this case we have used **plan** as the payload key.
 
-**completion_key** is the name you have given for **context key** under Advanced Settings of the entity, in my case I have used **planid** as the context key.
+**completion_key** is the name you have given for **context key** under Advanced Settings of the entity, in this case we have used **planid** as the context key.
 
-**entity_value** is the value you want to store in the entity when a user clicks on a CTA and this value will be different for every Button, in my case the entity values are mobile, mobile plus, standard, premium which I have entered under the Dictionary of the entity. 
+**entity_value** is the value you want to store in the entity when a user clicks on a CTA and this value will be different for every Button, in this case the entity values are mobile, mobile plus, standard, premium which we have entered under the Dictionary of the entity. 
 
 > **The entity value is the only parameter that will be different in each Know more button.**
 

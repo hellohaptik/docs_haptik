@@ -12,7 +12,7 @@ The below graphic depicts the overall scheme of the SMART ASSIST -
 
 ![SA_1](assets/SA_1.png)
 
-**What are the components of the SMART ASSIST?**
+**What are the components of SMART ASSIST?**
 
 There are various intelligent nudges that the IVA performs, to make an attempt to bring the user back into the conversation. They are described as below - 
 

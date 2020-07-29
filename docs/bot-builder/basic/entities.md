@@ -486,25 +486,25 @@ There is a node where we will be asking a user to provide primary & secondary mo
 
 Created an entity for the **primary number** which has a Bot Says as “Please enter your primary number” and for **secondary number** with Bot Says as “Please enter your secondary number” as shown below
 
-![ES_1](assets/ES_1.PNG)
+![ES_1](assets/ES_1.png)
 
 So here as you can see the unique word which differentiates both the entities is **“primary”** which we will use as **prev_context_tag** for primary mobile number entity.
 
-![ES_2](assets/ES_2.PNG)
+![ES_2](assets/ES_2.png)
 
 and **“secondary”** for secondary mobile number entity as shown below
 
-![ES_3](assets/ES_3.PNG)
+![ES_3](assets/ES_3.png)
 
 Now whenever the Bot Says has **“primary”** word it will store the user entered mobile number in the **primary_mobile_number** entity only as primary keyword is used as a **prev_context_tag** in that entity and will not store it in **secondary_mobile_number** entity.
 
 Check below image with debug logs how the **prev_context_tag** works and stores the value in the respective entity.
 
-![ES_4](assets/ES_4.PNG)
+![ES_4](assets/ES_4.png)
 
 > **It is not mandatory to only use words, you can also use phrases for the context retention in prev_context_tag.**
 
-![ES_5](assets/ES_5.PNG)
+![ES_5](assets/ES_5.png)
 
 **2. Payload Keys**
 
@@ -542,15 +542,15 @@ So here we need to pass a unique value for every plan in the payload and store t
 
 a. Create a Word & phrases entity 
 
-![ES_6](assets/ES_6.PNG)
+![ES_6](assets/ES_6.png)
 
 b. Click on Advanced options and enter the **Payload_keys** & **Context_keys** you want as per your use case, in the below example we have used **plan** & **planid** for **purchase a plan** use case
 
-![ES_7](assets/ES_7.PNG)
+![ES_7](assets/ES_7.png)
 
 c. Click on the Dictionary option present in the top and enter all Entity values you need for your buttons. In this case, as we have 4 plans so we created 4 dictionary values with proper variations as shown below
 
-![ES_8](assets/ES_8.PNG)
+![ES_8](assets/ES_8.png)
 
 d. Save the entity and click on **Add to bot says** to add the entity on that node.
 
@@ -558,19 +558,19 @@ As the entity is already created with all the values, now we need to create a CT
 
 In the below example, we are using a carousel to display the different plans to users i.e Mobile, Mobile+, Standard, and Premium as added in the Entity which will have the same button text as **Know more**.
 
-![ES_9](assets/ES_9.PNG)
+![ES_9](assets/ES_9.png)
 
 2. Passing the payload value in the CTA
 
 a. Add a **Know more** button with button type as Text in the carousel and pass the payload value with the proper syntax in the Message to send box
 
-![ES_10](assets/ES_10.PNG)
+![ES_10](assets/ES_10.png)
 
 b. Syntax: **Button text{api_name:payload_key, completion_key:entity_value}**
   
 This is the basic syntax for creating a payload where Button text is nothing but the text which is displayed as a user message on the bot after clicking on the button as shown below, in this case, it is **Know more**
 
-![ES_11](assets/ES_11.PNG)
+![ES_11](assets/ES_11.png)
 
 **api_name** key will stay as it is for all the implementation.
 
@@ -582,7 +582,7 @@ This is the basic syntax for creating a payload where Button text is nothing but
 
 > **The entity value is the only parameter that will be different in each Know more button.**
 
-![ES_12](assets/ES_12.PNG)
+![ES_12](assets/ES_12.png)
 
 As you can see after selecting the **Mobile+ plan** the entity value is Mobile plus which was passed in the payload - **Know more {api_name:plan, planid:mobile plus}**
 

@@ -502,7 +502,7 @@ Check below image with debug logs how the **prev_context_tag** works and stores 
 
 ![ES_4](assets/ES_4.png)
 
-> **Note: It is not mandatory to only use words, you can also use phrases for the context retention in prev_context_tag.**
+> **It is not mandatory to only use words, you can also use phrases for the context retention in prev_context_tag.**
 
 ![ES_5](assets/ES_5.png)
 
@@ -540,19 +540,19 @@ So here we need to pass a unique value for every plan in the payload and store t
 
 1. Creating & storing the values in the entity
 
-   a. Create a Word & phrases entity 
+a. Create a Word & phrases entity 
 
 ![ES_6](assets/ES_6.png)
 
-   b. Click on Advanced options and enter the **Payload_keys** & **Context_keys** you want as per your use case, I have used **plan** & **planid** for purchase a plan use case
+b. Click on Advanced options and enter the **Payload_keys** & **Context_keys** you want as per your use case, I have used **plan** & **planid** for purchase a plan use case
 
 ![ES_7](assets/ES_7.png)
 
-  c. Click on the Dictionary option present in the top and enter all Entity values you need for your buttons. In my case, as I have 4 plans so I created 4 dictionary values with proper variations as shown below
+c. Click on the Dictionary option present in the top and enter all Entity values you need for your buttons. In my case, as I have 4 plans so I created 4 dictionary values with proper variations as shown below
 
 ![ES_8](assets/ES_8.png)
 
-  d. Save the entity and click on Add to bot says to add the entity on that node.
+d. Save the entity and click on Add to bot says to add the entity on that node.
 
 As the entity is already created with all the values, now we need to create a CTA from where the user can select the option.
 
@@ -562,11 +562,11 @@ I am using a carousel to display the different plans to users i.e Mobile, Mobile
 
 2. Passing the payload value in the CTA
 
-  a. Add a **Know more** button with button type as Text in the carousel and pass the payload value with the proper syntax in the Message to send box
+a. Add a **Know more** button with button type as Text in the carousel and pass the payload value with the proper syntax in the Message to send box
 
 ![ES_10](assets/ES_10.png)
 
-  b. Syntax: **Button text{api_name:payload_key, completion_key:entity_value}**
+b. Syntax: **Button text{api_name:payload_key, completion_key:entity_value}**
   
 This is the basic syntax for creating a payload where Button text is nothing but the text which is displayed as a user message on the bot after clicking on the button as shown below, in my case, it is **Know more**
 

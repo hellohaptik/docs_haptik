@@ -28,6 +28,7 @@
 			"basic/chat-elements",
 			"basic/intent",
 			"basic/disambiguation",
+			"basic/smart-assist",
 			"basic/entities",
 			"basic/oracle-feedback",
 			"basic/bot-prompt-trigger",

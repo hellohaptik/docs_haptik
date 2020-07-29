@@ -469,7 +469,7 @@ The context is deleted by the system in case if any of the following events occu
 - When a chat auto-completes after 8 mins of inactivity
 
 **Where can I configure the previous_context_tag?**
-- The previous context tag is configured at an entity level and is present in the Entity under the Advanced options.
+- The previous_context_tag is configured at an entity level and is present in the Entity under the Advanced options.
 
 **Why and when to use the previous_context_tag?**
 - It should be used when you want an entity value to be filled after the bot has asked for it
@@ -477,7 +477,7 @@ The context is deleted by the system in case if any of the following events occu
 For eg. If you have a use case where you have two similar types of entity in the same flow with different values to be filled in each one of those, then you can differentiate them using the prev_context_tags. So an entity value will be filled up only if certain words are present in the previous bot says which we have put under prev_context_tags (the unique words/phrases present in the bot says is the prev_context_tags for that entity)
 
 **Is it mandatory to use it on every entity?**
-- No, it is not mandatory to use previous_context_tag on all entities, it entirely depends on the use case, and if it is required.
+- No, it is not mandatory to use previous_context_tags on all entities, it entirely depends on the use case, and if it is required.
 
 **How to use a prev_context_tag?**
 - Let’s take an example where we need to store 2 different mobile numbers from a user in the same flow as the primary & secondary mobile number.

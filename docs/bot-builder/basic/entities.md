@@ -455,6 +455,7 @@ We have 4 main Advanced Settings options under entities.
 **1. Previous Context Tags**
 
 **What is Context from an IVA perspective?**
+
 Context is linguistically defined as the background in which the conversation is taking place. From the IVA perspective, it can involve retaining the memory of any piece of information that has been either derived from past user behavior, the action performed by the IVA, or has been explicitly given by the user.
 
 **What is stored in the form of Context on an IVA?**
@@ -508,15 +509,19 @@ Check below image with debug logs how the **prev_context_tag** works and stores 
 **2. Payload Keys**
 
 **What is Payload?**
+
 Payload is the data that you want to send with a user text via button/Quick reply which is not visible to the user but can be stored in the entity and we can use this data in further flows wherever required.
 
 **Where can we use this?**
+
 We use this functionality when we are showing the same user message for various options but want the selected option to be saved in the entity.
 
 **How does a payload functionality work?**
+
 In a flow where we have multiple products to display with the same text, we will pass a unique value as a hidden message in the button using the payload, and whenever a user selects an option, the data is passed as a hidden message button gets stored in the entity. Once we have the payload value stored in the entity, we can use this entity to start a certain flow or if required we can use this entity value in future flows.
 
 **How to use the payload?**
+
 Implementation of the payload can be divided into 2 parts 
 
 A. Storing the payload values in the entity

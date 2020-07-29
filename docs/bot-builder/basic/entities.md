@@ -546,7 +546,7 @@ a. Create a Word & phrases entity
 
 b. Click on Advanced options and enter the **Payload_keys** & **Context_keys** you want as per your use case, in the below example we have used **plan** & **planid** for **purchase a plan** use case
 
-![ES_7](assets/ES_7.png)
+![ES_7](assets/ES_7.PNG)
 
 c. Click on the Dictionary option present in the top and enter all Entity values you need for your buttons. In this case, as we have 4 plans so we created 4 dictionary values with proper variations as shown below
 

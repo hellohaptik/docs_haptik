@@ -1,5 +1,5 @@
 ---
-title: SMART ASSIST
+title: Smart Assist
 ---
 
 Intelligent Virtual Assistants are always trained to cater to user queries that fall within a fixed scope. However, at times, customers might ask queries that don’t fall within the scope of the IVA. This tends to prevent the IVA from answering the User’s queries.

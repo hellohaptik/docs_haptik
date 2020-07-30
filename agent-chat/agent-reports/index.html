@@ -110,6 +110,8 @@
 <p>It is average time in <code>hh:mm:ss</code> format calculated using the all response times by this specific agent excluding the pending time</p></li>
 <li><p><strong>Agent Resolution Time (without queue and wait time)</strong></p>
 <p>Total time conversation was pinned to this specific agent in <code>hh:mm:ss</code> format. This excludes the time in pending and waiting state for this user engagement</p></li>
+<li><p><strong>Avg Response Time Weights</strong></p>
+<p>Weights corresponds to the number of times an agent responds after a user message, using these weights, we calculate the average response time of an agent</p></li>
 <li><p><strong>Queue Time</strong></p>
 <p>Total time a conversation was in queued state before getting assigned to a specific agent in <code>hh:mm:ss</code> format. This is the sum of all Queue Times this conversation engagement was in before it got closed</p></li>
 <li><p><strong>Wait Time</strong></p>
@@ -117,7 +119,7 @@
 <li><p><strong>Closing Category</strong> or <a href="https://docs.haptik.ai/agent-chat/claiming-and-closing#chat-disposition">Chat Disposition Reason</a></p>
 <p>Disposition reason selected by the agent while closing the conversation</p></li>
 </ol>
-<ol start="21">
+<ol start="22">
 <li><p><strong>Closing Sub-category</strong> or <a href="https://docs.haptik.ai/agent-chat/claiming-and-closing#chat-disposition">Chat Disposition Sub-Reason</a></p>
 <p>Disposition sub-reason under selected reason selected by the agent while closing the chat</p></li>
 <li><p><strong>Closing Category comment</strong> or <a href="https://docs.haptik.ai/agent-chat/claiming-and-closing#chat-disposition">Chat Disposition Comment</a></p>
@@ -126,7 +128,7 @@
 <blockquote>
 <p>Note: Disposition data will be blank on various cases like conversation was closed by gogo, or reassigned to another agent/team or when conversation autocompleted because of inactivity</p>
 </blockquote>
-<ol start="23">
+<ol start="24">
 <li><p><strong>Completion Type</strong></p>
 <p>This metric indicates how this conversation was closed</p>
 <ul>
@@ -166,20 +168,20 @@
 <blockquote>
 <p>Read about Abandoned metric <a href="https://docs.haptik.ai/agent-chat/analytics#chat-stats">here</a></p>
 </blockquote>
-<ol start="32">
+<ol start="33">
 <li><p><strong>Delayed</strong></p>
 <p>Delayed time is set in the Team settings. For all instances, wherein the delay message is sent i.e. the delay time has passed when no agent being assigned to end user, we show a <code>Yes</code> string value in this column</p></li>
 </ol>
 <blockquote>
 <p>Read about Delayed metric <a href="https://docs.haptik.ai/agent-chat/analytics#chat-stats">here</a></p>
 </blockquote>
-<ol start="33">
+<ol start="34">
 <li><p><strong>Messages Sent By Agent</strong></p>
 <p>Total number of messages which were sent by a specific agent to the end user</p></li>
 <li><p><strong>Messages Sent by user</strong></p>
 <p>Total number of messages received from the end user.</p></li>
 </ol>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 7/29/2020</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/agent-chat/analytics"><span class="arrow-prev">← </span><span>Analytics</span></a><a class="docs-next button" href="/agent-chat/chat-assignment"><span>Chat assignment</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Bot Builder</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://docs.haptik.ai/ios-sdk/" class="footer-column-link">iOS SDK</a><a href="https://docs.haptik.ai/android-sdk/" class="footer-column-link">Android SDK</a><a href="https://docs.haptik.ai/web-sdk/" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/whatsapp/" class="footer-column-link">WhatsApp</a><a href="https://docs.haptik.ai/other/facebook" class="footer-column-link">Facebook</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Bot API</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a><a href="https://docs.haptik.ai/other/security" class="footer-column-link">Security</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Agent Chat Tool</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2020 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 7/30/2020</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/agent-chat/analytics"><span class="arrow-prev">← </span><span>Analytics</span></a><a class="docs-next button" href="/agent-chat/chat-assignment"><span>Chat assignment</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Bot Builder</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://docs.haptik.ai/ios-sdk/" class="footer-column-link">iOS SDK</a><a href="https://docs.haptik.ai/android-sdk/" class="footer-column-link">Android SDK</a><a href="https://docs.haptik.ai/web-sdk/" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/whatsapp/" class="footer-column-link">WhatsApp</a><a href="https://docs.haptik.ai/other/facebook" class="footer-column-link">Facebook</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Bot API</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a><a href="https://docs.haptik.ai/other/security" class="footer-column-link">Security</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Agent Chat Tool</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2020 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

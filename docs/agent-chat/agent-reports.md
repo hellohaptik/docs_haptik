@@ -95,30 +95,34 @@ The Agent Chat report gives you a list of all the agent conversations in a selec
 
     Total time conversation was pinned to this specific agent in `hh:mm:ss` format. This excludes the time in pending and waiting state for this user engagement
 
-18. **Queue Time**
+18. **Avg Response Time Weights**
+
+    Weights based on number of responses sent by an agent
+
+19. **Queue Time**
 
     Total time a conversation was in queued state before getting assigned to a specific agent in `hh:mm:ss` format. This is the sum of all Queue Times this conversation engagement was in before it got closed
 
-19. **Wait Time**
+20. **Wait Time**
 
     Total time conversation was in waiting state before getting assigned to a specific agent in `hh:mm:ss` format. It is the sum of all waiting times the chat was in before it got closed
 
-20. **Closing Category** or [Chat Disposition Reason](https://docs.haptik.ai/agent-chat/claiming-and-closing#chat-disposition)
+21. **Closing Category** or [Chat Disposition Reason](https://docs.haptik.ai/agent-chat/claiming-and-closing#chat-disposition)
 
     Disposition reason selected by the agent while closing the conversation
 
   
-21. **Closing Sub-category** or [Chat Disposition Sub-Reason](https://docs.haptik.ai/agent-chat/claiming-and-closing#chat-disposition)
+22. **Closing Sub-category** or [Chat Disposition Sub-Reason](https://docs.haptik.ai/agent-chat/claiming-and-closing#chat-disposition)
 
     Disposition sub-reason under selected reason selected by the agent while closing the chat
     
-22. **Closing Category comment** or [Chat Disposition Comment](https://docs.haptik.ai/agent-chat/claiming-and-closing#chat-disposition)
+23. **Closing Category comment** or [Chat Disposition Comment](https://docs.haptik.ai/agent-chat/claiming-and-closing#chat-disposition)
 
     Any closing comment add by the agent while closing the conversation
  
  >    Note: Disposition data will be blank on various cases like conversation was closed by gogo, or reassigned to another agent/team or when conversation autocompleted because of inactivity
  
-23. **Completion Type**
+24. **Completion Type**
 
     This metric indicates how this conversation was closed
 
@@ -128,7 +132,7 @@ The Agent Chat report gives you a list of all the agent conversations in a selec
     - `API`: When a conversation was completed via an external API
     - `Reassigned` : If the conversation as reassigned to another agent
     
-24. **Completed By**
+25. **Completed By**
 
     - if `agent` then values would be the `agent_name` who completed the conversation
     - if `gogo` then values would be the last `node_name` which got identified.
@@ -137,48 +141,48 @@ The Agent Chat report gives you a list of all the agent conversations in a selec
         - Team Offline Flag - If completed because of no agents online and complete on offline was set for the given team.
         - Waiting for User - If completed because of waiting for user inactivity
 
-25. **Chat Link**
+26. **Chat Link**
 
     It is the chat link for given conversation of the user
     
     Example: `https://<BASE_URL>/athena/user-info/12345678/?conv_no=14&coll_id=28331000`
 
-26. **Notes**
+27. **Notes**
 
     Agents can add notes while in a conversation. All added notes will be added in this column with a pipe '|' separation
 
-27. **Follow-up Time**
+28. **Follow-up Time**
 
     Agents can set follow-up when closing a conversation. The follow-up time set up is shown here
 
-28. **Follow-up Comment**
+29. **Follow-up Comment**
 
     Agents can set follow-up when closing a conversation. The follow-up comment added is shown here
 
-29. **User Rating**
+30. **User Rating**
 
     When the end user shares their conversation feedback by giving a rating, this will be recorded and visible in this column
 
-30. **User Comment**
+31. **User Comment**
 
     When the end user shares their conversation feedback by giving a rating, user can also add a text comment which will be recorded and visible in this column
 
-31. **Abandoned By User**
+32. **Abandoned By User**
 
     When a conversation engagement is abandoned by the end user that is no user message sent while the agent has this conversation, it's counted as abandoned by user and we show a `Yes` value in this column
     
 > Read about Abandoned metric [here](https://docs.haptik.ai/agent-chat/analytics#chat-stats)
 
-32. **Delayed**
+33. **Delayed**
 
     Delayed time is set in the Team settings. For all instances, wherein the delay message is sent i.e. the delay time has passed when no agent being assigned to end user, we show a `Yes` string value in this column
     
 > Read about Delayed metric [here](https://docs.haptik.ai/agent-chat/analytics#chat-stats)
 
-33. **Messages Sent By Agent**
+34. **Messages Sent By Agent**
 
     Total number of messages which were sent by a specific agent to the end user
     
-34. **Messages Sent by user**
+35. **Messages Sent by user**
 
     Total number of messages received from the end user.

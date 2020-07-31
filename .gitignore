@@ -46,7 +46,7 @@ Thumbs.db
 docs/assets
 website/sidebars.json
 website/headerLinks.json
-
+website/i18n/en.json
 # Node modules
 website/node_modules
 website/yarn.lock

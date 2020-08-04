@@ -37,7 +37,7 @@ Content-Type: application/json
 - user_name (string): Identifier for the User provided by Haptik when invoking the Integration API
 - business_id (number): This is a numeric identifier for the channel where the User is messaging
 - team_name (string): Name of the team to which the chat is to be assigned. Can be fetched from the Teams page of Agent Chat Tool.
-- countdown (number) - Time after which chat will be moved in pending (range from 5 to 10 seconds, default 10 sec).
+- countdown (number) - Time after which chat will be moved in pending (range from 5 to 10 seconds, optional and default 10 sec).
 
 #### Response
 

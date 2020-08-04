@@ -18,7 +18,7 @@ You can use the *Platform Deployment* sub-section of the Partner specific area i
 
 2) Open the business of the bot you want to connect to external platform and navigate to **Platform Deployment** settings
 
-![Platform Settings](assets/platform_deployments_platform_settings.png)
+![Platform Settings](assets/PD.png)
 
 Using the Platform Settings you can easily connect your bot to any of the following external platforms:
 
@@ -169,7 +169,7 @@ If you integrate your bot into an Android or iOS app using Web SDK then it is no
 
 5) Save the configuration and activate it by turning the switch on next to the partner you want to setup the bot for.
 
-![Web SDK settings](assets/platform_deployments_web_sdk_notifications.png)
+![Web SDK settings](assets/PD1.png)
 
 ## SDK Integrations
 

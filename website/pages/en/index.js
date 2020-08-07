@@ -69,6 +69,12 @@ module.exports = () => (
           description: 'Learn how to uncover hidden insights in your chat data & communication',
           ctaText: 'Get Started',
           ctaLink: '/bot-analytics'
+        },
+        {
+          title: 'Admin Tools',
+          description: 'Manage the users, data and other settings for the paltform',
+          ctaText: 'Get Started',
+          ctaLink: '/admin-tools'
         }
       ]}
       others={[

@@ -22,6 +22,7 @@ A team can receive chats from a business in 2 possible configurations
 
 _Note: If a Business is **Completely Bot Assisted**, the chat will never be assigned to a team._
 
+
 ## Example
 
 ![bot_settings](assets/teams_hierarchy.png)
@@ -30,6 +31,7 @@ In the above example, Airtel is a partner. There are three teams, which lie unde
 
 Note: Every Business has a default team in case no team is detected. For no bot condition, the default team is the only team a partner can have.
 
+
 ## Chat routing to a team
 
 There are three ways in which a chat can be assigned to a team
@@ -37,6 +39,7 @@ There are three ways in which a chat can be assigned to a team
 1. Routing from a bot's node
 2. Manual Assignment
 3. Team routing from Business (When a business has no bots)
+
 
 ## How to create a team?
 
@@ -65,6 +68,7 @@ If a team status id is defined as offline, the team should configure it. When us
 
 Similar to the Team Offline message, you can configure the delay message that is sent to users with a set delay time.
 
+
 ## How to Manage Agents of a Team
 
 1. Add agents
@@ -72,6 +76,36 @@ Similar to the Team Offline message, you can configure the delay message that is
 3. View no. of queues, active, waiting for user chats
 4. View agent status
 5. View agent chats
+
+## Chat handling Capacity and Online Agent slots
+
+![Queue capacity 1](assets/case_1.png)
+
+The Chat handling capacity for a Team here helps figure the required number for agents at any given instant i.e. for under capacity scenario, the TLs can let some agents go offline. And in case a Team goes over capacity, TLs can call upon agents to be online.
+
+Check the image above. Here, you get 2 values in the Capacity card - 
+
+1. Chat handling capacity: This is a %age value that signifies if your team capacity is ideal or your team cannot handle the current incoming chat volume. For example, if the number value is in red and the copy states `over capacity`, it means the chat volume supercedes the available online agents' capacity 
+
+2. Chats waiting to be taken: Total number of chats in queue + chats in waiting i.e. all users who might need an agent at any given instant
+
+3. Total Slots: Total concurrency of each online agent in the team. Say, if a team had 4 agents with each having a concurrency of 3. The total available slots for the team would be 12. 
+
+> Note: The Online agents' ratio tells you the number of agents online by total number of agents in a given team. 
+
+### How is Team capacity calculated?
+
+![Queue capacity 2](assets/case_2.png)
+
+Let's understand the formula to get Chat handling capacity by a example -
+
+i. Total concurrency for online agents in the team = A
+
+ii. Queued + Assigned Chats total for all agents in the shown team = B
+
+iii. Availability is calculated as = (A-B)/A x 100
+
+The point `iii` above gives the availability %age value. This value in green means the team can handle the incoming chat volume. 
 
 ## Team Chats
 
@@ -87,11 +121,13 @@ Similar to the Team Offline message, you can configure the delay message that is
     2. Report inappropriate (to be deprecated)
     3. View User details
 
+
 ## Team Analytics
 
 1. View Team level statistics
 2. View Agent level statistics
 3. Set duration
+
 
 ## What is a Default Team?
 
@@ -104,6 +140,7 @@ Make a team in agent chat which is supposed to take chats which are not assigned
 ### Step 2 - Select Default Team in Business manager
 
 Open General Settings in Business manager & set the default Team.
+
 
 ## Tips to manage a Team
 
@@ -125,49 +162,7 @@ You can filter the summary and agent metrics by *Custom time* or *Custom date*. 
 
 > Tip: You can choose hourly slots on a date in the Time picker to get the metric values for the chosen Date and Time.
 
-## Team analytics (Agent performance)
 
-1. **Total Chats** 
-    
-    All ongoing chats that started in the chosen time duration. This includes chats in waiting, queued as well the completed chats. The total of all chats in the selected time from the time-date picker.
-
-2. **Completed Chats** (Coming soon)
-    
-    If chat disposition exists for a chat that means this conversation was marked complete via the agent. Total count of chats which were completed by agents in this particular team will be shown here.
-
-3. **Abandoned Chats**
-    
-    For all conversations with claim_name not “gogo“ and user_message_count = 0 that means all chats wherein user gets an agent assigned but the user drops-off before sending a message would be counted as an abandoned chat.
-    
-> Consider another scenario when in Conversation A - User chats with Agent 1 and Agent 1 logs out after replying back to user’s query. In the same Conversation A, user comes back and sends a message, now say this chat goes to Agent 2 and the user doesn’t return. Now, if the chat goes to complete state, we consider this chat as abandoned for Agent 2.
-
-4. **Delayed Chats**
-    
-    This metric gets us a count of all instances where the `first_agent_response_time` is greater than 'Delay Time value' as setup from the Team settings i.e. the delay message time value.
-    
-5. **Time saved of agents**
-
-    All chats where claim_name = "gogo" and add up all the "agent_resolution_time", that would be the total amount of time, gogo (Haptik bot) was responding instead of an agent.
-    
-> Please do not confuse this with the RoI calculations shared by the Customer Success manager. 
-
-6. **Agent Online Time**
-
-    When agents are receiving chats, we total this time i.e. to give you a sense of agent's online activity. This is a useful input to understand agent productivity. 
-    
-7. **Avg. First Response Time** (FRT)
-
-    FRT is the first response time taken by the agent to send the first response to an end user. Only the chats whose first response was sent during the selected time range will be taken into account. Chats may have been created anytime (inside and outside the selected time range). Queue time is included in this metric. As we check this from first user message timestamp to the first agent response timestamp.
-    
-8. **Avg. Response Time** (RT)
-
-    RT calculation is the average time taken by the agent to respond in a chat to all messages and not just the first message. Only the chats whose responses were sent during the selected time range will be taken into account. Chats may have been created anytime (inside and outside the selected time range). For the user’s 2nd, 3rd and so on messages, the response time is simply the delta in the user message timestamp and the agent’s response timestamp. 
-    
-9. **Avg. Resolution Time**
-
-    This metric 'Average resolution time' should be the average time taken by the agent till there are no messages sent in a chat session. Only the chats that were completed during the selected time range will be taken into account. Chats may have been created anytime (inside and outside the selected time range). Resolution time is simply calculated from the user’s first message sent timestamp till the last agent/user message timestamp in a chat.
-    
-    
 ## Managing Offline Hour chats
 
 In the Team settings, you can turn the toggle to complete all chats when no agent is online. But there can be an edge case as mentioned below. We need to understand when this edge case occurs, and assign a specific permission to all agents.

@@ -54,19 +54,21 @@ module.exports = () => (
         {
           title: 'Bot Builder',
           description:
-            'Everything required to get you from beginner to advanced in Bot Building & Development.',
-          ctaText: 'Learn More',
-          ctaLink: '/bot-builder/basic/introduction'
+            'Everything required to get you from beginner to advanced in Bot Building',
+          ctaText: 'Get Started',
+          ctaLink: '/bot-builder/basic/introduction',
         },
         {
-          title: 'Live Chat',
-          description: 'Manage and plan your chat work with these resources & guides',
-          ctaText: "Let's Begin",
-          ctaLink: '/agent-chat'
+          title: 'Agent Chat',
+          description:
+            'Learn how Human Escalation is handled on bots using Agent Chat tool',
+          ctaText: 'Get Started',
+          ctaLink: '/agent-chat',
         },
         {
           title: 'Analytics',
-          description: 'Learn how to uncover hidden insights in your chat data & communication',
+          description:
+            'Learn how to uncover hidden insights in your chat data & communication',
           ctaText: 'Get Started',
           ctaLink: '/bot-analytics'
         },
@@ -79,13 +81,17 @@ module.exports = () => (
       ]}
       others={[
         {
+          title: 'HSL',
+          url: '/hsl',
+        },
+        {
           title: 'Security',
-          url: '/other/security'
+          url: '/other/security',
         },
         {
           title: 'SLA',
-          url: '/other/sla'
-        }
+          url: '/other/sla',
+        },
       ]}
     />
     <Row
@@ -94,58 +100,52 @@ module.exports = () => (
       sections={[
         {
           title: 'iOS SDK',
-          description: 'Objective-C framework to bring the chatbot magic in your app for iOS 9 & higher',
+          description:
+            'Objective-C framework to bring the chatbot magic in your app for iOS 9 & higher',
           ctaText: 'Get Started',
-          ctaLink: 'https://hellohaptik.github.io/haptik-ios-framework'
+          ctaLink: '/ios-sdk',
         },
         {
           title: 'Android SDK',
           description:
             'Java framework to supercharge your Android app with AI powered chatbot capabilities',
           ctaText: 'Get Started',
-          ctaLink: 'https://hellohaptik.github.io/haptik-android-lib'
+          ctaLink: '/android-sdk',
         },
         {
           title: 'Web SDK',
-          description: 'Supercharge your app with AI powered Chatbots enabled by our powerful Javascript SDK',
-          ctaText: 'Get Started',
-          ctaLink: 'https://hellohaptik.github.io/javascript_sdk/'
-        },
-        {
-          title: 'Webhooks',
           description:
-            'API docs to help you build powerful chatbot solutions with great customisations',
+            'Supercharge your app with AI powered Chatbots enabled by our powerful Javascript SDK',
           ctaText: 'Get Started',
-          ctaLink: '/webhooks'
+          ctaLink: '/web-sdk',
         },
         {
           title: 'WhatsApp',
           description:
-            'API docs to help you build conversational experiences on WhatsApp',
+            'Documentation to help you build conversational experiences on WhatsApp',
           ctaText: 'Get Started',
-          ctaLink: '/whatsapp'
-        },
-      {
-          title: 'External Agent Chat Tool',
-          description:
-            'Connect your Agent Chat tool to a Haptik Bot with this documentation',
-          ctaText: 'Get Started',
-          ctaLink: '/external-chat-tool'
-        }
-      ]}
-      others={[
-        {
-          title: 'HSL',
-          url: '/hsl'
+          ctaLink: '/whatsapp',
         },
         {
           title: 'Facebook',
-          url: '/other/facebook'
+          description:
+            'Documentation to help you build conversational experiences on Facebook',
+          ctaText: 'Get Started',
+          ctaLink: '/other/facebook',
         },
         {
-          title: 'Native support',
-          url: 'https://hellohaptik.github.io/javascript_sdk/native-support'
-        }
+          title: 'Bot API',
+          description:
+            'API docs to help you build powerful chatbot solutions with great customisations',
+          ctaText: 'Get Started',
+          ctaLink: '/webhooks',
+        },
+      ]}
+      others={[
+        {
+          title: 'External Agent Chat Tool',
+          url: '/external-chat-tool',
+        },
       ]}
     />
   </div>

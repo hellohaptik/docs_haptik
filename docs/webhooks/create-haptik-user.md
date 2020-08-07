@@ -1,4 +1,4 @@
-# New Document---
+---
 title: How to create/update a Haptik User
 ---
 
@@ -41,7 +41,6 @@ Content-Type: application/json
 ```json
 {
   "auth_id": "<AUTH_ID>",
-  "auth_code": "<AUTH_CODE>",
   "mobile_no": "<MOBILE_NO>",
   "email": "<EMAIL>",
   "name": "<NAME>",
@@ -51,7 +50,6 @@ Content-Type: application/json
 ```
 
 - auth_id - This is an alphanumeric User identifier from your System
-- auth_code (optional) - We treat this value as the client token
 - mobile_no (optional) - Mobile no of the user
 - email (optional) - Email of the user
 - name (optional) - Name of the user

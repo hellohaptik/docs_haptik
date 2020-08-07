@@ -13,12 +13,16 @@
             "integrating-external-bot"
         ],
         "Resources": [
+
+            "businesses",
+            "teams",
+            "analytics",
+            "agent-reports",
+            "chat-assignment",
             "bot-agent-handover",
             "action-toolbars",
             "smart-actions",
-            "businesses",
-            "teams",
-            "closing-categories" 
+            "closing-categories"
         ]
     },
     "headerLink": {

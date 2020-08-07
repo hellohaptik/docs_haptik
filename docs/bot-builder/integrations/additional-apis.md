@@ -29,13 +29,17 @@ Content-Type: application/json
 {
     "team_name": "<Name of the team>",
     "user_name": "<haptik user name>",
-    "business_id": <business_id>,
+    "business_id": "<business_id>",
+    "countdown": "<time_in_seconds>"
 }
 ```
 
 - user_name (string): Identifier for the User provided by Haptik when invoking the Integration API
 - business_id (number): This is a numeric identifier for the channel where the User is messaging
 - team_name (string): Name of the team to which the chat is to be assigned. Can be fetched from the Teams page of Agent Chat Tool.
+- countdown (number): If value is set to 5, then after 5 seconds chat will be moved to the queue. Otherwise, the chat will be moved to the queue after 10 seconds (default), value can be from range 5 to 10 seconds.
+
+
 
 #### Response
 
@@ -133,12 +137,14 @@ A successful request to the API will return a `200` status code with a default J
         {
             "text": "Search places to visit{task}",
             "sender": "user",
-            "message_id": 1742
+            "message_id": 1742,
+            "timestamp": "06/22/20 07:24:25 AM UTC"
         },
         {
             "text": "TEXT",
             "sender": "bot",
-            "message_id": 1743
+            "message_id": 1743,
+            "timestamp": "06/22/20 07:24:26 AM UTC"
         }
     ]
 }

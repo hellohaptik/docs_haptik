@@ -158,7 +158,7 @@ title: Facebook
 
 ## Facebook Verifications
 
-For certain permissions, we need verfications from Facebook. There are two components involved in the verification process:
+For certain permissions, we need verifications from Facebook. There are three components involved in the verification process:
 
   1. pages_messages permission:
 
@@ -169,9 +169,29 @@ For certain permissions, we need verfications from Facebook. There are two compo
       - Refer to this Facebook Documentation to learn more - [Submitting your Messenger Bot](https://developers.facebook.com/docs/messenger-platform/app-review/).
 
       - > When you share your bot for permission, there is a testing freeze. No one can test the bot on the facebook page.
+ 
+  2. pages_user_timezone permission:
+
+      - Timezone of a user is required to greet the user appropriately
+          - For ex: If the user greets the bot "Good Morning", the bot will greet back the user based in user's timezone 
+      
+      - pages_user_timezone grants your app access to user's timezone through the page your app is connected to
+      
+        ![App Level Permission](assets/FB-APP-LEVEL-PERMISSION.jpeg)
+      
+      - This permission needs to be requested on Page Level as well
+          - Go to client's Facebook Page -> Settings -> Advanced Messaging -> Under Info About People -> Select the "Time Zone" field -> click the "Request" button
+       
+        ![Page Level Permission](assets/FB-PAGE-LEVEL-PERMISSIONS.jpeg)    
+
+      - Facebook Messenger review team manually verifies your bot and gives permission accordingly.
+
+      - Refer to this Facebook Documentation to learn more - [Submitting your Messenger Bot](https://developers.facebook.com/docs/messenger-platform/app-review/).
+
+      - > When you share your bot for permission, there is a testing freeze. No one can test the bot on the facebook page.
 
 
-  2. Business Verification:
+  3. Business Verification:
 
       - Facebook Business Verification is required to take the app public.
 

@@ -6,11 +6,11 @@ title: Testing your bot
 ========================
 Test your bot as you build it to ensure your end users won't experience any annoying bot breakages! You can test your bot in three ways:
 
-![image](assets/test-bot.png)
+![image](assets/TestBot1.png)
 
 - The easiest way to test your bot is to test it directly in the bot builder tool. You can do this by clicking on the "Test Bot" button at the bottom of the left-side menu where you add sub-stories and nodes.
 
-![image](assets/test-bot-view-credentials.png)
+![image](assets/TestBot2.png)
 
 - Another way to test your bot is click the *More* menu on the top bar, within the bot builder and then select *View Credentials*. Now, you get a pop-up with the *Demo Link* to test the bot.
 

@@ -47,7 +47,7 @@ width and image url needs to be specified.
       </tr>
       <tr>
          <td>type</td>
-         <td>type list as per the actionables list specified in <a href='https://haptik-docs.readthedocs.io/en/latest/bot-builder-advanced/hsl-properties.html'>hsl-properties</a></td>
+         <td>type list as per the actionables list specified in <a href='https://docs.haptik.ai/hsl/hsl-properties'>hsl-properties</a></td>
          <td>Yes</td>
       </tr>
       <tr>

@@ -43,6 +43,7 @@ def main(event, context):
     body = json.loads(event['body'])
     entities = body['entities']
     user_data = body['user']
+    # "custom_data" that is passed through SDK's during sign up can be accessed from body['user_details'].
     user_details = body['user_details']
     conversation_details = body['conversation_details']
     final_response = {'status': True, 'response': write_here(), 'user_details':user_details, 'conversation_details':conversation_details}
@@ -141,7 +142,7 @@ After configuring the input json data you can test the code by clicking on the `
 
 When you click on the `Run` button, the code will be executed using the sample input data and the output and logs will be shown at the bottom of the code executor window.
 
-![Code Run](assets/integrating_custom_code_run.gif)
+![Code Run](assets/RunCode.png)
 
 ### Using Environment Variables
 It is also possible to set environment variables for the code executor to store values like database username and passwords that you don't want to expose inside the code.
@@ -150,7 +151,7 @@ It is also possible to set environment variables for the code executor to store 
 
 You can set these variables by opening the code editor, clicking on the `More` button in the top right corner and selecting the `Variables` option.
 
-![Environment Variables in Code Editor](assets/env_variables_create.gif)
+![Environment Variables in Code Editor](assets/MoreOptions.png)
 
 In the variables menu that opens, you can set the variable name and values for the variable on the staging and production environments. For example you can create a variable called `MONGO_URI` and set its staging value as `mongodb://mongodb0.example.com:27017/admin` and it's production value as `mongodb://mongodb1.example.com:27017/admin`.
 

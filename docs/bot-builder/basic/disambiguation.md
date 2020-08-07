@@ -102,3 +102,24 @@ Below are the USER SAYS present in both the DEPENDENT nodes -
 
 ![DMG_10](assets/DMG_10.png)
 
+**Example 4** - Disambiguation between **a START NODE** and **a FAQ Node** - **“Funding of Haptik”** is a START Node and **“Founders of Haptik”** is an FAQ Node.
+
+Below two images show the “User Says” of a START NODE and a FAQ Node.
+
+![DMG_11](assets/DMG_11.png)
+
+Below image shows how disambiguation can occur between a START Node and FAQ Node.
+
+![DMG_12](assets/DMG_12.png)
+
+**Example 5** - Disambiguation between **a Dependent NODE** and **a FAQ Node** - **“Haptik Location”** is a Dependent Node of the **“About Haptik”** START node and **“Cofounder_Haptik”** is a FAQ Node.
+
+Also shown are the “User Says” present in the **“Haptik Location”** node, which is a dependent node of the **“About Haptik”** START Node.
+
+![DMG_13](assets/DMG_13.png)
+
+* Once the IVA reaches a START node through a User Utterance, it can disambiguate between a FAQ node and a Dependent Node as well.
+
+In the image below, User Utterance “can information about haptik be given?” leads to a response from “About Haptik” node. The subsequent utterance was not clearly distinguishable and, hence the IVA disambiguated between **“Cofounder haptik”** FAQ Node and **“Haptik Location”** Dependent Node.
+
+![DMG_14](assets/DMG_14.png)

@@ -5,6 +5,15 @@
     "previous": "Previous",
     "tagline": "Haptik documentation in one place",
     "docs": {
+      "admin-tools/audit-dashboard": {
+        "title": "Audit Dashboard"
+      },
+      "admin-tools/index": {
+        "title": "Introduction"
+      },
+      "admin-tools/permission-management": {
+        "title": "Permission Management"
+      },
       "agent-chat/action-toolbars": {
         "title": "Toolbar Actions"
       },
@@ -80,14 +89,29 @@
       "bot-analytics/using-message-analysis": {
         "title": "Message Analysis"
       },
+      "bot-builder/advanced/debugging-guidelines": {
+        "title": "How to debug your bot?"
+      },
       "bot-builder/advanced/demo-links": {
         "title": "Demo Page"
+      },
+      "bot-builder/advanced/development-guidelines": {
+        "title": "Bot Development Life Cycle"
       },
       "bot-builder/advanced/integrating-webviews-into-sdk": {
         "title": "Integrating Webviews"
       },
       "bot-builder/advanced/integrating-with-external-bot": {
         "title": "Integrating with External Bot"
+      },
+      "bot-builder/advanced/migration-guide": {
+        "title": "bot-builder/advanced/migration-guide"
+      },
+      "bot-builder/advanced/nlu-change-log": {
+        "title": "bot-builder/advanced/nlu-change-log"
+      },
+      "bot-builder/advanced/testing-guidelines": {
+        "title": "Testing Guidelines"
       },
       "bot-builder/basic/bot-hierarchy": {
         "title": "Bot Hierarchy"
@@ -119,6 +143,9 @@
       "bot-builder/basic/design-guidelines": {
         "title": "Designing Chat Experiences"
       },
+      "bot-builder/basic/disambiguation": {
+        "title": "Did you mean? (Disambiguation)"
+      },
       "bot-builder/basic/editing-smalltalk": {
         "title": "Editing Smalltalk"
       },
@@ -134,8 +161,8 @@
       "bot-builder/basic/general-nodes": {
         "title": "General Nodes"
       },
-      "bot-builder/basic/general-responses": {
-        "title": "General Responses"
+      "bot-builder/basic/intent": {
+        "title": "Intent"
       },
       "bot-builder/basic/introduction": {
         "title": "Introduction"
@@ -157,6 +184,12 @@
       },
       "bot-builder/basic/testing-bot": {
         "title": "Testing your bot"
+      },
+      "bot-builder/basic/upload-graph-nodes": {
+        "title": "Upload Graph Nodes"
+      },
+      "bot-builder/basic/user-says-guidelines": {
+        "title": "User Says Guidelines"
       },
       "bot-builder/basic/user-says": {
         "title": "User Says"
@@ -205,6 +238,30 @@
       },
       "contributing/styleguide": {
         "title": "Styleguide"
+      },
+      "external-chat-tool/appendix": {
+        "title": "Appendix"
+      },
+      "external-chat-tool/event-APIs": {
+        "title": "Event APIs"
+      },
+      "external-chat-tool/index": {
+        "title": "Index"
+      },
+      "external-chat-tool/management-APIs": {
+        "title": "Management APIs"
+      },
+      "external-chat-tool/message-APIs": {
+        "title": "Message APIs"
+      },
+      "external-chat-tool/security": {
+        "title": "Signing management requests"
+      },
+      "external-chat-tool/thread-control-APIs": {
+        "title": "Thread control APIs"
+      },
+      "external-chat-tool/user-APIs": {
+        "title": "User APIs"
       },
       "hsl/button": {
         "title": "Button"
@@ -255,7 +312,7 @@
         "title": "API Security"
       },
       "webhooks/create-haptik-user": {
-        "title": "How to create/update a Haptik User"
+        "title": "webhooks/create-haptik-user"
       },
       "webhooks/index": {
         "title": "What is a Webhook"
@@ -319,27 +376,6 @@
       },
       "whatsapp/whatsapp-language-settings": {
         "title": "WhatsApp Language Settings"
-      },
-      "external-chat-tool/index": {
-        "title": "Index"
-      },
-      "external-chat-tool/security": {
-        "title": "Security"
-      },
-      "external-chat-tool/management-APIs": {
-        "title": "Management APIs"
-      },
-      "external-chat-tool/user-APIs": {
-        "title": "User APIs"
-      },
-      "external-chat-tool/message-APIs": {
-        "title": "Message APIs"
-      },
-       "external-chat-tool/event-APIs": {
-        "title": "Event APIs"
-      },
-      "external-chat-tool/thread-control-APIs": {
-        "title": "Thread control APIs"
       }
     },
     "links": {
@@ -348,16 +384,17 @@
     },
     "categories": {
       "Getting Started": "Getting Started",
-      "Guides": "Guides",
       "Resources": "Resources",
-      "Integrations": "Integrations",
-      "Advanced": "Advanced",
       "Contributing": "Contributing",
       "Docusaurus": "Docusaurus",
       "First Category": "First Category",
       "Second Category": "Second Category",
-      "HSL Elements": "HSL Elements",
+      "Guides": "Guides",
+      "Integrations": "Integrations",
+      "Advanced": "Advanced",
+      "Integration APIs": "Integration APIs",
       "Introduction": "Introduction",
+      "HSL Elements": "HSL Elements",
       "How to Create a Webhook": "How to Create a Webhook",
       "Independent Integrations": "Independent Integrations",
       "Types of Conversations": "Types of Conversations",

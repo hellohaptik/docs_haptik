@@ -1064,3 +1064,28 @@ implementation 'ai.haptik.android.sdk:haptiklib-jio-communications:6.5.3-65483'
 ```groovy
 implementation 'ai.haptik.android.sdk:haptiklib-xdk:6.5.3-65483'
 ```
+
+## Moving from 6.5.3 → 6.5.4
+```groovy
+implementation 'ai.haptik.android.sdk:haptiklib-core:6.5.4-65583'
+```
+
+```groovy
+implementation 'ai.haptik.android.sdk:haptiklib-extensions:6.5.4-65583'
+```
+
+```groovy
+implementation 'ai.haptik.android.sdk:haptiklib-picasso-helper:6.5.4-65583'
+```
+
+```groovy
+implementation 'ai.haptik.android.sdk:haptiklib-glide-helper:6.5.4-65583'
+```
+
+```groovy
+implementation 'ai.haptik.android.sdk:haptiklib-jio-communications:6.5.4-65583'
+```
+
+```groovy
+implementation 'ai.haptik.android.sdk:haptiklib-xdk:6.5.4-65583'
+```

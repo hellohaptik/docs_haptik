@@ -18,11 +18,11 @@ There is a generic function for Agent Chat integration which needs to be added o
 
 **integration.utils.common.chat_force_pending**
 
-On the Integrations tab of the node, select the type as Entity and Integration function and add the above function name in the integration field and then click on Save.
+On the **Integrations** tab of the node, select the type as **Entity and Integration function** and add the below function name in the integration field and then click on Save.
 
 ![Chat Integration Function](assets/HO1.png)
 
-If an integration function exists, then we will transfer the chat to a team as per the integration function. 
+If this integration function exists, then the chat will be transferred to a team as per the integration function. This is how we achieve **Skill-based routing**.
 
 ### Human Assistance flag on Business Manager:
 
@@ -36,11 +36,11 @@ For a bot that already allows human assistance, set the *Handover Message Flag* 
 
 You can send a chat to any specific agent using the *Reassign Chat* button from Agent Chat tool. 
 
-For automated transitions, Business Manager in mogambo has a `Team Manager` section where you can configure the Team that the chat should be moved to.
+For automated transitions, Business Manager in Bot Builder has a `Team Manager` section where you can configure the Team that the chat should be moved to.
 
-    Tip: API integration functions can also specify the team to which a chat is to be sent.
+    Tip: API Integration functions can also specify the team to which a chat is to be sent.
     
-### Settings to configure the bot and agents:
+### Settings to configure the bot with Agent Chat tool:
 
 1. Go to the Teams page on Agent Chat tool and click on Create Teams
 
@@ -57,19 +57,17 @@ Team Description is optional.
 - Open the team which you just created by selecting it from LHS.
 - Tap on Manage Agents Tab on the top menu bar.
 - Tap on Add agent Button.
-- You can add looking for a username in the field.
+- You can add agents by looking for a username in the field.
 
 Adding agents on a team -
 
 ![Team Creation3](assets/HO4.png)
 
-Searching an agent in the Search Bar and adding them in the team
+Searching for an agent to be added in the team
 
 ![Team Creation4](assets/HO5.png)
 
-4. After the agent's name has been added, you can customize the messages that will be sent to users when agents are busy or are not online. For this, we need to understand the difference between the Delay message, message sent when no agent is online and message sent when users are not replying.
-
-You can read more about it [here](https://docs.haptik.ai/agent-chat/teams#how-to-create-a-team).
+4. After the agent's name has been added, you can customize the messages that will be sent to users when agents are busy or are not online. For this, we need to understand the difference between the delay message, message sent when no agent is online and message sent when users are not replying. You can read more about it [here](https://docs.haptik.ai/agent-chat/teams#how-to-create-a-team).
 
 5. Configure Teams on Business Manager - Once a team is created, it should be added to the Business Manager on the General Settings page, as follows.
 

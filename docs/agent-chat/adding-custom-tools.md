@@ -12,7 +12,7 @@ title: Adding your own custom tool
 
 ![home_screen](assets/haptik_logged_in_screen.png)
 
-- Select Administrator, the below screen will apear (may vary based on permissions)
+- Select Administrator, the below screen will appear (may vary based on permissions)
 
 ![admin_tools_screen](assets/admin_tools_screen.png)
 

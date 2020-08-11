@@ -32,7 +32,7 @@ override fun onStop() {
 
 iOS doesn't need any extra permissions in order to operate. Just open the html file where you've configured the SDK inside the app.
 
-Just like Android, in iOS as well the lifecycle of a WebPage is coupled to the iOS app lifecycle. We need to notify Haptik SDK when the app goes in background. To do this add inactive state observer in your view controller which consists WkWebView and add following code :
+Just like Android, in iOS as well the lifecycle of a WebPage is coupled to the iOS app lifecycle. We need to notify Haptik SDK when the app goes in background. To do this add inactive state observer in your view controller which consists the WkWebView and add the following code :
 
 ​
 ```Swift

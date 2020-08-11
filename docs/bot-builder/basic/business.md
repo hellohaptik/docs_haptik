@@ -153,7 +153,7 @@ Click Save. You’ve created a task! If you make any changes in Taskboxes, it wi
 
 ![Bot Break](assets/TB6.png)
 
-- Platform Deployments: You can read about it in detail here(https://docs.haptik.ai/bot-builder/basic/platforms-deployment).
+- Platform Deployments: You can read about it in detail [here](https://docs.haptik.ai/bot-builder/basic/platforms-deployment).
 
 ### Section 3: Bot Prompt Triggers
 

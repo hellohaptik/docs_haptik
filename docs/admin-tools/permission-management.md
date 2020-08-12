@@ -10,7 +10,7 @@ The Permission management tool allows Partner Admins to manage the partners they
 * Change Roles for the user
 * Make Bulk Addition/Updates to the users
 
-All of the above functionality is only available to a Partner Admin.
+> All of the above functionality is only available to a Partner Admin.
 
 ## What is a Partner Admin?
 A Partner Admin is a special role that can be assigned to someone who needs to manage the access and roles for all users under a partner.
@@ -85,5 +85,4 @@ You can deactivate a user by clicking on the `Deactivate User` button in the use
 ![Bulk Updates](assets/permission_bulk_update.gif)
 
 You can also make bulk updates by clicking on `Add or Edit Bulk Users` button. This opens a modal that lets you download a CSV file of users for the current partner. You can make edits to the same sheet and upload it back to make bulk changes.
-
 

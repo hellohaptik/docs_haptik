@@ -74,7 +74,7 @@ module.exports = () => (
         },
         {
           title: 'Admin Tools',
-          description: 'Manage the users, data and other settings for the paltform',
+          description: 'Manage the users, data and other settings for the platform',
           ctaText: 'Get Started',
           ctaLink: '/admin-tools'
         }

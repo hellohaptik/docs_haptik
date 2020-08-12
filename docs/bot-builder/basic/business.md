@@ -73,7 +73,7 @@ Business Name: This refers to the overarching topic of its conversational capabi
 
 ![Star Rating](assets/FD1.png)
 
-Tick the checkbox on General Settings Screen of Business Manager to setup collection of user feedback within a business. You can choose to ask feedback once or multiple times (configurable) and also set a delay message (waiting period) after which the bot pushes the feedback message to the user. You can access this feedback data from our analytics tool.
+Tick the checkbox on General Settings Screen of Business Manager to setup collection of user feedback within a business. You can choose to ask feedback once or multiple times (configurable) and also set a delay period (waiting period) after which the bot sends the feedback message to the user. You can access this feedback data from our analytics tool.
 
 You can also trigger a feedback module for a particular node on the bot by using {feedback} in the bot says as shown below
 

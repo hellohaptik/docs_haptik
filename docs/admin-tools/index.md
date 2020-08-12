@@ -2,7 +2,7 @@
 title: Introduction
 ---
 
-The Admin Tools of the Haptik Platform are a set of tools that help you manage the users, the data and other configurations of all others tools on the platform like Bot Builder and Live Chat.
+The Admin Tools of the Haptik Platform are a set of tools that help you manage the users, the data and other configurations of all others tools on the platform like Bot Builder, Agent Chat and Chat Analytics.
 
 ![Admin Tools](assets/admin-tools.png)
 

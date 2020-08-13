@@ -33,7 +33,10 @@
 			"basic/oracle-feedback",
 			"basic/bot-prompt-trigger",
 			"basic/forms",
-			"basic/upload-graph-nodes"
+			"basic/upload-graph-nodes",
+			"basic/sharebot",
+			"basic/transferbot",
+			"basic/copypaste"			
 		],
 		"Integrations":[
 			"integrations/introduction",

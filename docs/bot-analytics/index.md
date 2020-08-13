@@ -4,6 +4,8 @@ title: Introduction
 
 Boost your bot conversations' success with our analytics tool. The real time user messages/conversations with historical data can help you answer the toughest questions about your users.
 
+You can skip straight to the video [**HERE**](https://youtu.be/0xodi9IC5eg).
+
 Our tool helps you build an experience that is
 
 1. Adaptable

@@ -69,7 +69,23 @@ Business Name: This refers to the overarching topic of its conversational capabi
 
 - Fallback Bots: When user input doesn’t match the User Says of any of the active bots, the Bot Says response will be automatically sent from the fallback bot
 
-- User Feedback: Tick the checkbox here to setup collection of user feedback within this business. You can choose to ask feedback once or multiple times (configurable) and also set a delay message (waiting period) after which the bot pushes the feedback message to the user here. You can access this feedback data from our analytics tool (Teja)
+- User Feedback: Feedback module is the smart action where the users can provide their feedback in text & ratings as shown below
+
+![Star Rating](assets/FD1.png)
+
+Tick the checkbox on General Settings Screen of Business Manager to setup collection of user feedback within a business. You can choose to ask feedback once or multiple times (configurable) and also set a delay period (waiting period) after which the bot sends the feedback message to the user. You can access this feedback data from our analytics tool.
+
+You can also trigger a feedback module for a particular node on the bot by using {feedback} in the bot says as shown below
+
+On Bot Says -
+
+![Feedback on Bot Says](assets/FD2.png)
+
+On Bot -
+
+![Feedback on Bot](assets/FD3.png)
+
+> You can collect feedback multiple times but with some restrictions. If the user submits multiple feedbacks within a span of 60 minutes, only the first feedback is registered. The subsequent feedback messages do not override the first one. If the user submits a feedback after 60 minutes, it will be recorded as a new feedback, and not override the previous feedback.
 
 ### Section 2: Partner specific
 
@@ -80,8 +96,7 @@ To customize the settings for each partner the Business is live on, click the dr
 1. SDK Configurations
 2. Taskbox
 3. Bot Break Messages
-4. Outlier Messages
-5. Platform Deployments
+4. Platform Deployments
 
 ![Partner Settings](assets/9_partner_specific_settings.png)
 
@@ -91,34 +106,54 @@ Check the list of customizable settings below.
 
 - Hide Haptik branding on the SDK: Tick this off to hide the _powered by Haptik_ branding across this business
 
-- Taskbox: The taskbox that will appear for each Business can be customized to the Business’s various partners. Select Add Tasks to start adding tasks to the Business’s taskbox on a particular partner. A modal with a list of all the tasks associated with the Business will appear; select the tasks you want to make live on a particular partner. Exit the modal
+- Taskbox: Taskbox is nothing but the main menu item which can be accessed anytime on the bot using the menu button present in the bottom of the bot. The taskbox will appear for each Business. Select Add Tasks to start adding tasks to the Business’s taskbox on a particular partner. A modal with a list of all the tasks associated with the Business will appear; select the tasks you want to make live. Exit the modal.
 
-Bot builders can define Tasks for each Business. Providing this taskbox helps guide users to initiate conversations that the chatbot can handle most effectively.
+> Bot builders can define Tasks for each Business which helps to guide the users to initiate conversations that the chatbot can handle most effectively.
 
-As you can see below, there are 5 Tasks that users can initiate - Play Cricket Quiz, Check Live Score and others below them. Tasks are the activities that the chatbot can assist users with. The tasks associated with each Business can be viewed by the user while they are chatting in that particular Business (ex: refer the above image for Cricket Business). Providing this taskbox helps guide users to initiate conversations that the chatbot can handle most effectively.
+As you can see in the image below, there are 3 Tasks that users can initiate - **What’s new?**, **Choose a plan**, **FAQ**.
 
-    You can edit Business tasks from “Tasks(s)” tab. Click "Task(s)" section after 
-    selecting a relevant Business.
+![Taskbox1](assets/TB1.png)
 
-When the editing fields open, you’ll need to fill out the following information:
+**How to add the task?**
 
-![Taskbox Header](assets/6_taskbox_header_message.jpg)
+1. Click on the second options **Partner Specific** under Business Manager, under that click on **Taskbox**. This is the task box settings section for that particular business.
 
-- Taskbox Header Message: This header will be shown to users to explain how to use the taskbox. In the sample taskbox above, the header is the text above the tasks that says, “Hi! Tap below to get started.” Refer the image to view this header message
+2. Add the Taskbox Header Message. This header will be shown to users to explain how to use the taskbox. In the sample taskbox above, the header is the text above the tasks that can say, “Hi there! How can I help you?” or “Hi! Tap below to get started.” Refer the above image to view this header message.
 
-- Create New Task: When you click this box, a new popup will appear to fill out the following details:
+3. Create a New Task. 
 
-- Task Title: Give the task a label. This is what will show up on the actual task button
-  User Says: When the user taps on a task, a user says message is generated and sent in tandem. Enter what the user says associated with this task will be in this field
+![TaskBox2](assets/TB2.png)
 
-- Visible on Task Box: Check this box to make this task active on the taskbox associated with this channel. If you want to deactivate a task at any point, uncheck this box, and it will be removed from the taskbox
+4. When you click this box, a new popup will appear to fill out the following details:
+
+![TaskBox3](assets/TB3.png)
+
+- Task Title: This will be the task what you want to add on the bot and display on the main menu. Example - **Choose a plan** as shown in the Netflix menu above.
+
+- User Says: This will be the content which you want as a user text to be sent on the bot once user clicks on Task title. Example - If **User Says** is given as **I want to choose a plan** for the above Task title **Choose a plan**, the text will go as **I want to choose a plan** once the user clicks on **Choose a plan** task.
+
+- Upload the icon: You can set the icon for each task by clicking the icon image present beside the “New Task” text. You can always change the image for the existing task by clicking the same image.
+
+![TaskBox4](assets/TB4.png)
+
+- Visible on Task Box: Check this box to make this task active on the taskbox associated with this channel. If you want to deactivate a task at any point, uncheck this box, and it will be removed from the taskbox.
+
+- Location Required: Do not select this option.
 
 Click Save. You’ve created a task! If you make any changes in Taskboxes, it will take 30-60 mins to reflect.
+
+![TaskBox5](assets/TB5.png)
+
+> After creating your Taskboxes you can always rearrange them using the Hamburger option available on the right hand side of each task.
 
 - Bot Break Messages: This is the message that will be sent to users when the bot breaks.
 
       Bot break means a bot isn’t able to come up with an appropriate response 
       to the  user’s message.
+
+![Bot Break](assets/TB6.png)
+
+- Platform Deployments: You can read about it in detail [here](https://docs.haptik.ai/bot-builder/basic/platforms-deployment).
 
 ### Section 3: Bot Prompt Triggers
 

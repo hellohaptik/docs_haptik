@@ -4,6 +4,8 @@ title: Introduction
 
 Chat Solutions at Haptik can be powered entirely by Artificial Intelligence (AI) or by a combination of AI and Chat Agents. We have built a Live *Agent Chat* tool for it. This tool is created for operationally managing user chats.
 
+You can skip straight to the video [**HERE**](https://youtu.be/B4WJSLETlvI).
+
 ## Using Live *Agent Chat*
 
 To use this tool, users are to be created with a specific set of permissions. The users can then start monitoring and taking daily chats on their business. Live *Agent Chat* tool has the same capabilities of the AI along with additional functionalities such as chat flow analytics, assignment of chats by managers etc.

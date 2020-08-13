@@ -4,6 +4,8 @@ title: Introduction
 
 Welcome to **Bot Builder**, Haptik's tool for making bots! Once you've mastered this tool, you'll be able to build bots with minimal coding. To get you started, we've put together this documentation that will guide you through the process of building a bot.
 
+You can skip straight to the video [**HERE**](https://youtu.be/vEuc4za39hk).
+
     Tip: A bot is a program that communicates with you, commonly using a chat or voice interface.
 
 **How is *Bot Builder* used?**

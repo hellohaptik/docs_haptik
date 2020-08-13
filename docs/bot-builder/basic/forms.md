@@ -85,6 +85,8 @@ Let us understand each type of form field in detail.
 
 **Text**: Text field is used when you want a text input from the user in the form field. There are 3 types of Text input and it is mandatory to select any 1 type from the Keyboard type option.
 
+![Form1](assets/Form1.png)
+
 - Normal: This can be used to get any text input from the user eg- Name, Address etc.
 
 - Number: This can be used to get number inputs from the user eg- Mobile number, Pan card number, etc.
@@ -95,17 +97,25 @@ Let us understand each type of form field in detail.
 
 **Picker**: Picker field is used when you want a user to select any one option from the given multiple options using the dropdown. As shown below in the sample use case where a user has to select the city from the given 3 options
 
+![Form2](assets/Form2.png)
+
 To create this picker form field just select the type as **Picker** and in the Options field pass the Comma-separated values you want. Eg- Mumbai, Delhi, Hyderabad
 
 > Use words & phrases entity to capture them with all the options present in the Dictionary of that entity
 
 **Time**: Time field is used to get the time from a user. It uses the clock widget where user can select the time as shown below -
 
-**Date**: Date field is used to get the date from a user. It uses the calendar widget where users can select the date & year as shown below.
+![Form3](assets/Form3.png)
+
+**Date**: Date field is used to get the date from a user. It uses the calendar widget where users can select the date & year as shown below -
+
+![Form4](assets/Form4.png)
 
 > Use Entity type time & date to store these values 
 
-**DOB**: It is used to get the Date of birth from a user and works similarly as the Date field mentioned above except, the user cannot select the future dates as shown below.
+**DOB**: It is used to get the Date of birth from a user and works similarly as the Date field mentioned above except, the user cannot select the future dates as shown below -
+
+![Form5](assets/Form5.png)
 
 ## Using a Form in a Node
 
@@ -120,11 +130,17 @@ Create a form by clicking the add button, then enter the Task, Subtitle, Short H
 1. The Key parameter is important for each type while creating the form field as it maintains the mapping with the entity which we will use to store the values.
 2. We have a pre configured list of icons for form fields. And you have to use icon names from that pre-defined list only.
 
+![Form6](assets/Form6.png)
+
 Once the form is created successfully, save the Form ID by searching your form with the text entered in the Task field. (Using Ctrl+F)
 
 As you can see from the image above, **1451** is a form id for the form titled as “Please enter your info” and this ID is unique for the form you have created. After the form is created, we will need entities to capture all the values from the form. So here we have created 4 entities to store the 4 form fields as shown below 
 
+![Form7](assets/Form7.png)
+
 - **person_name** entity is used to capture the Name entered in the 1st form field and the mapping is done using the form_keys present under the Advanced options in that entity.
+
+![Form8](assets/Form8.png)
 
 > Use the same Form Key in the entity as the one entered while creating the form field
 
@@ -144,8 +160,14 @@ After creating entities with correct entity type & Key, we need to display the f
 
 In this case, the form id was 1451, So we have used {chatform}{1451} in the bot says to show the form
 
+![Form9](assets/Form9.png)
+
 Let’s test this flow and check how the form looks on the bot
 
+![Form10](assets/Form10.png)
+
 This is how the form will look after the user fills the form & clicks on the Send button
+
+![Form11](assets/Form11.png)
 
 **Note:** Check the values captured in the entities using the debug log as shown above

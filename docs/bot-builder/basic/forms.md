@@ -76,3 +76,76 @@ There are multiple field entries and selections while creating a form. Read on e
 ![Form ID](assets/4_form_id.png)
 
 As you can see from the image above, _689_ is a form id for form titled “State List for 4kg Cylinder”.
+
+## Types of Form Fields
+
+Now that you know how to create forms, it’s also important to understand the different types of forms you can use: Text, Picker, Time, Date, ContactPicker, StartDate, EndDate, Search, SearchEditable, SavedAddress, DOB, MultiDayPicker, MultiSelectPicker.
+
+Let us understand each type of form field in detail.
+
+**Text**: Text field is used when you want a text input from the user in the form field. There are 3 types of Text input and it is mandatory to select any 1 type from the Keyboard type option.
+
+- Normal: This can be used to get any text input from the user eg- Name, Address etc.
+
+- Number: This can be used to get number inputs from the user eg- Mobile number, Pan card number, etc.
+
+- Email: This can be used to get the Email id from the user
+
+> Keyboard type has nothing to do with the validations, it is useful to enable the keyboard type for that particular field and is useful on the Mobile devices. Eg - Number type will directly open the the number pad of the mobile keyboard.
+
+**Picker**: Picker field is used when you want a user to select any one option from the given multiple options using the dropdown. As shown below in the sample use case where a user has to select the city from the given 3 options
+
+To create this picker form field just select the type as **Picker** and in the Options field pass the Comma-separated values you want. Eg- Mumbai, Delhi, Hyderabad
+
+> Use words & phrases entity to capture them with all the options present in the Dictionary of that entity
+
+**Time**: Time field is used to get the time from a user. It uses the clock widget where user can select the time as shown below -
+
+**Date**: Date field is used to get the date from a user. It uses the calendar widget where users can select the date & year as shown below.
+
+> Use Entity type time & date to store these values 
+
+**DOB**: It is used to get the Date of birth from a user and works similarly as the Date field mentioned above except, the user cannot select the future dates as shown below.
+
+## Using a Form in a Node
+
+Now that we are aware of how to create a form and various form fields, let us take an example to understand its usage.
+
+Here we are creating a flow for **Booking an appointment** where users will enter Name, City, Time & Date. 
+
+Create a form by clicking the add button, then enter the Task, Subtitle, Short Hand text. Adding 4 fields with type Text for Name, Picker for City, Time & Date for getting the Time & Date of booking with correct sort order as shown below 
+
+**Note:**
+
+1. The Key parameter is important for each type while creating the form field as it maintains the mapping with the entity which we will use to store the values.
+2. We have a pre configured list of icons for form fields. And you have to use icon names from that pre-defined list only.
+
+Once the form is created successfully, save the Form ID by searching your form with the text entered in the Task field. (Using Ctrl+F)
+
+As you can see from the image above, **1451** is a form id for the form titled as “Please enter your info” and this ID is unique for the form you have created. After the form is created, we will need entities to capture all the values from the form. So here we have created 4 entities to store the 4 form fields as shown below 
+
+- **person_name** entity is used to capture the Name entered in the 1st form field and the mapping is done using the form_keys present under the Advanced options in that entity.
+
+> Use the same Form Key in the entity as the one entered while creating the form field
+
+For name form field, we have used **Name** in the Key parameter, so **Name** should be present in the Form_keys too while creating/adding the entity.
+
+- **utils_city** entity is used to capture the city user selects from the 2nd form field using the Picker. Key used here was **City** in form field & in Form_keys for entity too.
+
+- **time** entity is used to capture the time user selects from the 3rd form field using the clock widget. Key used here is **Time** in form field & in Form_keys for entity too.
+
+- **departure_date** is used to capture the date user selects from the 4th form field using the calendar widget. Key used here is **Date** in form field & in Form_keys for entity too
+
+> We have used the System entities to capture the above 4 form fields but you can create your own entity with correct Key name in the Form_keys field
+
+After creating entities with correct entity type & Key, we need to display the form on the bot. We have a syntax which is to be used in the bot says of the same node where we want the form & place all the entities.
+
+**Syntax: {chatform}{form id}**
+
+In this case, the form id was 1451, So we have used {chatform}{1451} in the bot says to show the form
+
+Let’s test this flow and check how the form looks on the bot
+
+This is how the form will look after the user fills the form & clicks on the Send button
+
+**Note:** Check the values captured in the entities using the debug log as shown above

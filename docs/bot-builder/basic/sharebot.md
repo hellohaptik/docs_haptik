@@ -18,7 +18,7 @@ Share IVA is the button located on the top right corner of your IVA graph.
 
 - On clicking the Demo Link button, a link is generated which is referred to as Demo Link.
 
-- The Demo link can be shared across for testing. It gives an idea of how the actual bot will function.
+- The Demo link can be shared across for testing. It gives an idea of how the actual IVA will function.
 
 ![SB_2](assets/SB2.png)
 
@@ -30,9 +30,9 @@ Share IVA is the button located on the top right corner of your IVA graph.
 
 The foremost resolution is to check the URL link and inspect whether the 4 credentials (Client Id, Business Id, API Key, Base URL) are correct or not. Once they are configured properly, refresh the page.
 
-## What are the credentials of a bot?
+## What are the credentials of an IVA?
 
-There are four main credentials of a bot - 
+There are four main credentials of an IVA - 
 
 - Client Id: This is obtained when the partner is created,
 
@@ -40,9 +40,9 @@ There are four main credentials of a bot -
 
 - API key: This is generated when the partner is created,
 
-- Base URL: This indicates which environment is the bot placed on (staging/production)
+- Base URL: This indicates which environment is the IVA placed on (staging/production)
 
-These IDs are used to map the partner, business and bot.
+These IDs are used to map the partner, business and IVA.
 
 > Staging is our Development environment and Production is our Live environment
 

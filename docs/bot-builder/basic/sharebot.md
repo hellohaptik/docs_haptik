@@ -44,7 +44,7 @@ There are four main credentials of a bot -
 
 These IDs are used to map the partner, business and bot.
 
-> Staging is our Development envvironment and Production is our Live environment
+> Staging is our Development environment and Production is our Live environment
 
 
 

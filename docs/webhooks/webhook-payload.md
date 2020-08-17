@@ -235,6 +235,20 @@ Example:
         "os_version": "<OS_VERSION>",
         "package_name": "<PACKAGE_NAME>",
     },
+    "agent": {
+        "id": 4415,
+        "name": "gogo",
+        "profile_image": "https://assets.haptikapi.com/content/42e123411bk1109823bf.jpg",
+        "is_automated": true
+    },
+    "follow_up_details": {
+        // This dict will be empty when followup is not present
+        "follow_up_timestamp":1597668000,
+        "send_to":1 / 2 / 3,  (Expert / User / Both)
+        "expert_name":"expert",
+        "comment":"follow up comment",
+        "team_id":2
+    },
     "data": {
         "conversation_no": "<CONVERSATION_NO>",
         "chat_link": "<CHAT_LINK>",

@@ -92,6 +92,10 @@ module.exports = () => (
           title: 'SLA',
           url: '/other/sla',
         },
+        {
+          title: 'Support Bot',
+          url: '/other/supportbot',
+        }
       ]}
     />
     <Row

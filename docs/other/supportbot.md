@@ -14,7 +14,7 @@ You can click on the icon highighted in the above diagram to open the Support Bo
 
 ![SupportBot2](assets/PS2.png)
 
-The Support Bot is accessible from all screens of the Platform. Hoem Screen, all screens of Bot Builder, all screens of Chat Analytics tool except Agent Chat screen.
+The Support Bot is accessible from all screens of the Platform. Home Screen, all screens of Bot Builder, all screens of Chat Analytics tool except Agent Chat screen.
 
 ## How to use it?
 

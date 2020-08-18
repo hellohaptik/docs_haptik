@@ -4,8 +4,8 @@ title: Bot Agent Handover
 
 A user always talks to a Business. The user can use one of the many device platforms (Haptik SDKs, Messenger, Jio, etc.) to communicate with the Business.
 
-    On the Business side, any replies could be sent automatically by a 
-    1. Bot (Gogo) or 
+    On the Business side, any replies could be sent automatically by a
+    1. Bot (Gogo) or
     2. by an Expert/Agent from Athena.
 
 To keep the transition from Bot to Agent smooth for best user experience, we allow multiple different ways a chat can be transferred from a Bot to a Human.
@@ -26,7 +26,7 @@ If this integration function exists, then the chat will be transferred to a team
 
 ### Human Assistance flag on Business Manager:
 
-If the human assistance flag is on for a business, a chat will be moved to an agent whenever the bot doesn't understand the user's message. 
+If the human assistance flag is on for a business, a chat will be moved to an agent whenever the bot doesn't understand the user's message.
 
 For a bot that already allows human assistance, set the *Handover Message Flag* field to *True* for your target business. This will send the bot break message first before moving the chat to a pending state. And eventually this chat gets assigned to an agent.
 
@@ -34,12 +34,12 @@ For a bot that already allows human assistance, set the *Handover Message Flag* 
 
 ### Claiming a chat from Agent Chat tool:
 
-You can send a chat to any specific agent using the *Reassign Chat* button from Agent Chat tool. 
+You can send a chat to any specific agent using the *Reassign Chat* button from Agent Chat tool.
 
 For automated transitions, Business Manager in Bot Builder has a `Team Manager` section where you can configure the Team that the chat should be moved to.
 
     Tip: API Integration functions can also specify the team to which a chat is to be sent.
-    
+
 ### Settings to configure the bot with Agent Chat tool:
 
 1. Go to the Teams page on Agent Chat tool and click on Create Teams
@@ -76,21 +76,21 @@ Searching for an agent to be added in the team
 
 ![Team Creation5](assets/HO6.png)
 
- ## Queue Time Indicator
- 
-This helps us to set correct expectation and smoothen the transition from bot to agent for end users. We engage the end users in queue by sending a message with estimated queue time. We need to inform end users on Whatsapp, Facebook, Web or any other platform about when an agent would get assigned to them. So they can decide if they want to abandon chat or stay on chat. 
+ ## Queue Position Indicator
 
-We send the below messages before an agent could respond back when users are waiting in the queue. Message 1 comes when estimated First Response Time is within 60 seconds. In message 2 below, we replace the 10 minutes with the median First Response Time value in the last 1 week for the Team. This value updates every 24 hours. And for First Response Time above or equal to an hour, we send the 3rd message copy to the user. 
+This helps us to set correct expectation and smoothen the transition from bot to agent for end users. We engage the end users in queue by sending a message with their position in the queue. With this we inform our end users on Whatsapp, Facebook, Web or any other platform about how many people are currently ahead of them in the queue and thus they can decide if they want to abandon chat or stay.
 
-1. We will be reviewing your query in a minute.
-2. We will be reviewing your query in 10 minutes.
-3. We will be reviewing your query soon. The current traffic indicates that it'll take about an hour.
+We send the below messages before an agent could respond back to the user when they are waiting in the queue. When the user is first in the pending queue, we send the 1st message indicating that the user is next. Post that, for the position in queue ranging from 2-5 we send the 2nd message and replace the <X> with the number of users ahead of them in the queue. Post the position of 5, we send out the 3rd message.
 
-This message is only sent if the chat is in the **Queue state**. We need to draft the Bot Break message or Agent Transfer message in a way that, post which when the user is still in queue, they will get this **Queue Time Indicator** message. Also, a **Delay message** is sent as configured in Team settings. 
+1. You are next! We'll be reviewing your query right away.
+2. We're assigning someone to you. You will receive a reply as soon as we close <X> conversations
+3. You are in line. I'll send you a message as soon as we review your query. Just don't close this window.
+
+This message is only sent if the chat is in the **Queue state**. We need to draft the Bot Break message or Agent Transfer message in a way that, post which when the user is still in queue, they will get this **Queue Time Indicator** message. Also, a **Delay message** is sent as configured in Team settings.
 
 In most scenarios, delay messages are sent after 60 seconds or the time you have configued in the Team Settings screen, so this is generally the order in which the user gets messages -
 
-1. Bot Break or Agent Transfer message 
+1. Bot Break or Agent Transfer message
 (Example - Sorry, the bot cannot handle this. This conversation will be transferred to an agent)
 
 2. Queue Time Indicator message (as shared in the points above)

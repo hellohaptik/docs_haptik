@@ -82,7 +82,7 @@ This helps us to set correct expectation and smoothen the transition from bot to
 
 We send the below messages before an agent could respond back to the user when they are waiting in the queue. When the user is first in the pending queue, we send the 1st message indicating that the user is next. Post that, for the position in queue ranging from 2-5 we send the 2nd message and replace the <X> with the number of users ahead of them in the queue. Post the position of 5, we send out the 3rd message.
 
-1. You are next!* We'll be reviewing your query right away.
+1. You are next! We'll be reviewing your query right away.
 2. We're assigning someone to you. You will receive a reply as soon as we close <X> conversations
 3. You are in line. I'll send you a message as soon as we review your query. Just don't close this window.
 

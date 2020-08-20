@@ -59,6 +59,14 @@ Note: Using other listeners like `window.onload` or `document.onload` will lead 
 
 *Only applicable for custom signup bots. Use this function to make a custom call for passing sign on information to the SDK. (Refer to the custom signup section for more information)*
 
+**Params:** 
+
+- `authOptions <Object>` :
+*The authorisation information necessary to securely authenticate the user.*
+    - `authId <String>` *: The authentication Id*
+- `callback <Function>`
+*The callback executes once the call completes. The callback function is executed with `success` boolean flag as a parameter indicating whether the call completed or failed.*
+
 ### `logout(callback)`
 
 *This method logs out the currently logged in user and clears its data*
@@ -67,14 +75,6 @@ Note: Using other listeners like `window.onload` or `document.onload` will lead 
 
 - `callback <Function>`
 *The callback executes once the call completes.*
-
-**Params:** 
-
-- `authOptions <Object>` :
-*The authorisation information necessary to securely authenticate the user.*
-    - `authId <String>` *: The authentication Id*
-- `callback <Function>`
-*The callback executes once the call completes. The callback function is executed with `success` boolean flag as a parameter indicating whether the call completed or failed.*
 
 ### `renewSignupToken(newToken, callback)`
 

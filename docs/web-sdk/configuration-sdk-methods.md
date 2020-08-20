@@ -59,6 +59,15 @@ Note: Using other listeners like `window.onload` or `document.onload` will lead 
 
 *Only applicable for custom signup bots. Use this function to make a custom call for passing sign on information to the SDK. (Refer to the custom signup section for more information)*
 
+### `logout(callback)`
+
+*This method logs out the currently logged in user and clears its data*
+
+**Params:**
+
+- `callback <Function>`
+*The callback executes once the call completes.*
+
 **Params:** 
 
 - `authOptions <Object>` :

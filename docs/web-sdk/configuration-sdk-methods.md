@@ -67,6 +67,15 @@ Note: Using other listeners like `window.onload` or `document.onload` will lead 
 - `callback <Function>`
 *The callback executes once the call completes. The callback function is executed with `success` boolean flag as a parameter indicating whether the call completed or failed.*
 
+### `logout(callback)`
+
+*This method logs out the currently logged in user and clears its data*
+
+**Params:**
+
+- `callback <Function>`
+*The callback executes once the call completes.*
+
 ### `renewSignupToken(newToken, callback)`
 
 *Only applicable for custom signup bots. If the authToken sent above expires, use this function to send the updated token to our backend*

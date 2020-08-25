@@ -66,7 +66,7 @@ title: Analytics
 
 ## Agent Statistics
 
-![Agent_stats](assets/agent_stats_table.png)
+![Agent_stats](assets/agentstats.png)
 
 1. **Agent Name**
 
@@ -106,4 +106,10 @@ title: Analytics
     
 > When agents are in online state and they have pinned chats, they would not get new chats assigned, as they are capped at their concurrency limit. So, we could get scenarios wherein, we have agents online but they don't get new chats and other metrics such as FRT, Resolution Time etc. are absent. This happens because the agent is not closing chats and is capped at their concurrency. This concurrency cap is the maximum allowed chats count that an agent is allowed to take at any instant. 
 
-    
+You get the detailed agent report as per your timezone from a UI click. You can download the agent report. This is allowed for maximum of 7 days. Also there is a timezone drop-down using which you can choose the value as per the needs.
+
+![Agent_stats](assets/emailagentreport1.png)
+
+You would be able to download the detailed agent data report from the above shown screen. You can email the report to your id.
+
+![Agent_stats](assets/emailagentreport2.png)

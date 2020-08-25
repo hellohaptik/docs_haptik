@@ -179,7 +179,7 @@ Open General Settings in Business manager & set the default Team.
 
 You can filter the summary and agent metrics by *Custom time* or *Custom date*. Refer the image below for how to check hourly/daily **Team analytics**.
 
-![Hourly_Metrics](assets/teams_hourly_analytics.png)
+![Hourly_Metrics](assets/agentchatanalytics.png)
 
 > Tip: You can choose hourly slots on a date in the Time picker to get the metric values for the chosen Date and Time.
 

@@ -62,6 +62,8 @@ Once you are done selecting the nodes click on "Create Query" as shown below
 
 ## Completion Rate
 
+![Query Completion](assets/querycompletion9.png)
+
 This indicates the effectiveness of the IVA design and flow as it shows what were the queries that were completed by the IVA
 
 Formula =  (A / B) * 100
@@ -80,7 +82,11 @@ i.e. Formula =  (Total no. of queries completed /  Total no. of queries initiate
 
 For example, if your account balance query contains node A, B, C, F, G, H, and you’ve set up a query with start points as A, B & end points as G,H, here’s how query start and end will be calculated:
 
+![Query Completion](assets/querycompletion10.png)
+
 ## Query Volume
+
+![Query Completion](assets/querycompletion11.png)
 
 This is the no. of times the start point of a query has been visited by the user.
 
@@ -108,9 +114,13 @@ By default, you will see the query with the highest Query Volume on top. This is
 
 If required, you can change the order of other fields and sort it as per your requirement.
 
+![Query Completion](assets/querycompletion12.png)
+
 ## Drop Off 
 
 To understand why a query was not completed, it’s important to know points at which the users are abandoning, restarting or diverting to a different flow. Understanding of WHY the query is not reaching its completion can be found in the drop off section. The insights on messages shared between the IVA and the user along with the Drop Off Nodes can help tweak the conversation design and flow to optimise for better results.
+
+![Query Completion](assets/querycompletion13.png)
 
 ### How are Drop-Offs calculated?
 

@@ -126,35 +126,44 @@ To understand why a query was not completed, it’s important to know points at 
 
 A user could abandon a conversation due to any of the below reasons. The last visited node is marked as the drop-off node under all of these scenarios:
 
+![Query Completion](assets/querycompletion16.png)
+
 > When any query definition is changed, the drop offs for all other queries will need to be recalculated.
 
 ### Drop-Off Points
 
-> Code Node - If Code error , it will show as NULL
+To check the drop-off points for a query, you can click on the icon as shown below 
+
+![Query Completion](assets/querycompletion14.png)
+
+A screen would open on RHS. This screen will have all details of drop-off with the following 
+
+- Node Names
+- Percentage distribution of drop-off
+- Responses sent from IVA and its variations
+
+![Query Completion](assets/querycompletion15.png)
 
 > We do not show type of nodes under Drop Off Point
 
-Bot Says and Variants
-Entity Variants
-Final Response and Variants 
-Entity re-prompt dropoff tagging - Message content unavailable
-Integration API Response Message -  Not Included
-Follow-up Message - Not Included
+Following are the drop-off points under a Node which will be shown 
 
-> No Node Detected -
-If no nodes were matched as per User says
-Smalltalk
-Do any of the smart assists get tagged under no nodes?
- 
-Some scenarios where node list is empty, the following scenarios happen
-If no nodes were matched as per User says
-Smalltalk
-Do any of the smart assists get tagged under no nodes?
+- Bot Says and its Variants
+- Entity Responses and its Variants
+- Final Response and its Variants 
+- Entity re-prompt message: Message content would not be available for this
+- Integration Response Message: Message content would not be available for this
+- Follow-up Message: Message content would not be available for this
+
+![Query Completion](assets/querycompletion17.png)
+
+**No Node Detected** is shown in the following conditions 
+
+- When no nodes were matched as per User says
+- When a Smalltalk node is matched
 
 ## Deleting Queries
 
 ## Download Report
 
 You will be able to download the Query Completion data. It will be available from 10th September on the dashboard. This report will help you understand the reasons of the drop-off in your query.
-
-

@@ -162,7 +162,17 @@ Following are the drop-off points under a Node which will be shown
 - When no nodes were matched as per User says
 - When a Smalltalk node is matched
 
+## Editing Queries 
+
+You can edit your queries by clicking on the pencil icon in front of any query as shown below 
+
+![Query Completion](assets/querycompletion18.png)
+
 ## Deleting Queries
+
+You can delete your queries by clicking on the pencil icon in front of the query and **Delete button** on the modal as shown below
+
+![Query Completion](assets/querycompletion19.png)
 
 ## Download Report
 

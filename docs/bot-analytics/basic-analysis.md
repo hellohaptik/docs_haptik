@@ -24,9 +24,13 @@ You can select `Channels` or `Bots` from the first dropdown on the left hand sid
 
 ![Filter Channels Bots](assets/basic-filter-channels-bots.png)
 
-On the right hand side of the filter section, you will find the duration filters. Using these settings you can filter the time period of the data presented. There is a Compare feature here. You can compare the performance of all metrics between the selected duration and its previous duration.
+On the right hand side of the filter section, you will find the duration filters. Using these settings you can filter the time period of the data presented. 
 
 ![Filter Duration](assets/basic-filter-duration.png)
+
+There is a Compare feature here. You can compare the performance of all metrics between the selected duration and its previous duration.
+
+![Filter Duration2](assets/durationcompare.png)
 
 ## ***Conversation***
 The first tab inside the Overview section is the Conversation tab. Here you can find a graph that gives you information about the user messages, conversations and automation percentage at a given time.
@@ -51,7 +55,7 @@ The Bot automation metric gives you the percentage of conversations without bot 
 
 In the graph the X axis is the time and the Y axis represents data about Users, Conversations, Messages and Automation. You can get data at any given time point by hovering on the graph.
 
-![Overview Conversations](assets/basic-overview-conversation.png)
+![Overview Conversations](assets/conversation.png)
 
 ## ***User***
 The next tab in the overview section is the Users tab. This tab shows the number of unique users for the filtered channel or bot in the given duration period.
@@ -72,6 +76,8 @@ At the top of the tab you can see the total number of task activations and this 
 ## ***Bot Automation***
 The next tab is Bot Automation. Bot Automation percentage tells us about what percentage of the conversations did not have either a bot break or an agent involved for the selected duration of time.
 
+![Automation](assets/botautomation.png)
+
 > Bot Automation Formula - No. of conversations did not have a bot break or a an agent response/ Total no of conversations
 
 Below are the scenarios where bot breaks could possibly take place -
@@ -87,6 +93,13 @@ When a conversation gets transferred to an agent from a bot
 
 > When bot gives a smart assist message, it is not considered as a Bot Break. You can read more about Smart Assist and its types [here].(https://docs.haptik.ai/bot-builder/basic/smart-assist)
 
+As we do not count Smart Assist as a broken message. In case you want to access these messages, you can follow below steps
+
+- Click on the Message Analysis section
+- Use the Confidence Score toggle to find the below messages
+  1. 0-30 for Bot Break and Smart Assist messages
+  2. Above 30 for all other messages
+
 The graph for this tab is an upcoming feature and will be documented here once it is ready.
 
 ## ***User Rating***
@@ -94,6 +107,6 @@ The final tab is User Rating. This tab tells you how users rated the different t
 
 On the top of the tab you can see the average rating given across all tasks and below it you have the data split from a task to task basis.
 
-![Overview User Rating](assets/basic-overview-user-rating.png)
+![Overview User Rating](assets/rating.png)
 
 > Tip: You can try to improve the task flow by making changes. The user rating changes for the task will help you measure the effectiveness of the changes.

@@ -3,53 +3,49 @@ title: Overview
 ---
 
 ## Introduction
-The Analytics tool built by haptik enables you to get a comprehensive idea of how your chatbot is performing.You can get deep insights into how users are using it. You can also get to know what are the failure points or featutres that can be improved. Finally you can also find out what the user thinks of the chatbot experience.
 
-Through this document we will explore the different types of metrics available for tracking and analysing inside the analytics tool.
-
-The Analytics tool consists of multiple sections with each section containing metrics and data about a different aspect of your chatbot. The multiple sections are:
-
-* Overview
-* Compare Clients
-* Story Analysis
-* Message Analysis
-* Word Analysis
-* Node Traffic
-* User Ratings
-* User Reviews
-
-## Overview
-The first section in the Analytics tool is the overview section. As the name suggests, this section helps you get a quick overview of the different aspects of your chatbot's performance. 
+The first section in the Analytics tool is the **Overview** section. As the name suggests, this section helps you get a quick overview of the different aspects of your IVA's performance. 
 
 The Overview section provides information about:
+
 * Conversations
 * Users
 * User Messages
-* Task Completion
 * Bot Automation
 * User Rating
 
-You can later use a different section to get more detailed information on any of these sub sections.
+You can later use following sections to get more detailed information on any of these sub sections.
 
 ### Filters
-On top of any page inside the Analytics tool you will find filter options. These filter options can help you filter your data by Channels or Bots from the filters on the left hand side. 
 
-You can select `Channels` or `Bots` from the first dropdown on the left hand side and then select the particular channel or bot from the dropdown next to it.
+On top of all screens inside the Analytics tool you will find filter options. These filter options can help you filter your data by Business or Bots from the filters on the left hand side. 
+
+You can select `Channels` or `Bots` from the first dropdown on the left hand side and then select the particular business or bot from the dropdown next to it.
 
 ![Filter Channels Bots](assets/basic-filter-channels-bots.png)
 
-On the right hand side of the filter section, you will find the duration filters. Using these settings you can filter the time period of the data presented.
+On the right hand side of the filter section, you will find the duration filters. Using these settings you can filter the time period of the data presented. There is a Compare feature here. You can compare the performance of all metrics between the selected duration and its previous duration.
 
 ![Filter Duration](assets/basic-filter-duration.png)
 
-## ***Conversation Data***
+## ***Conversation***
 The first tab inside the Overview section is the Conversation tab. Here you can find a graph that gives you information about the user messages, conversations and automation percentage at a given time.
+
+**Bot state**
+A conversation is defined as a series of messages exchanged between the IVA and the user before 8 minutes of inactivity. This means we close a conversation when there are no messages exchanged between the IVA and the user for 8 minutes. 
+
+**Agent state**
+In agent state, a conversation is closed only when the agent clicks “Close Chat” or after 8 mins inactivity for chats that are in “Waiting State”.
+
+> Automated system messages (like "Chat Assigned", "Chat Completed", "Delay", "Follow Up" etc.) are not to be included when calculating the conversation complete time.
 
 The data is represented in the form of a line graph with 4 different lines. The 4 different lines correspond to 
 1) Number of Users
 2) Number of Conversations
 3) Number of User Messages
 4) Bot Automation
+
+> **Bot Transfers** are shown on the graph too with a vertical line.
 
 The Bot automation metric gives you the percentage of conversations without bot breaks or human intervention (agent). 
 
@@ -59,8 +55,8 @@ In the graph the X axis is the time and the Y axis represents data about Users, 
 
 ![Overview Conversations](assets/basic-overview-conversation.png)
 
-## ***User Data***
-The next tab in the overview section is the Users tab. This tab shows the number of users for the filtered channel or bot in the given duration period.
+## ***User***
+The next tab in the overview section is the Users tab. This tab shows the number of unique users for the filtered channel or bot in the given duration period.
 
 The graph for this data is an upcoming feature and will be documented here once it is available.
 
@@ -75,19 +71,30 @@ At the top of the tab you can see the total number of task activations and this 
 
 > Tip: This tab can help you understand what tasks are being tapped on by the user. You should experiment the title of task or the icon and see how that nudges the task activation numbers.
 
-## ***Task Completion***
-The next tab is task completion. While the previous tab shows the task activation rate, this tab shows the task completion rate. Task completion rate is the percentage of users who completed a task after activating it.
-
-On the top you can see the total task completion rate in percentage format. Below it the data is split from a task to task basis.
-
-![Overview Task Completion](assets/basic-overview-task-completion.png)
-
->Tip: You can make changes to the task flow for improving the experience. This metric can guide you to understand how those changes are performing.
-
 ## ***Bot Automation***
 The next tab is Bot Automation. This tab tells you about what percentage of the conversations did not have an agent involved as well as no bot breaks. 
 
 The graph for this tab is an upcoming feature and will be documented here once it is ready.
+
+Bot Automation percentage tells us about what percentage of the conversations did not have either a bot break or an agent involved for the selected duration of time.
+
+Notes - 
+Bot Automation Formula - No. of conversations did not have a bot break or a an agent response/ Total no of conversations
+
+Below are the scenarios where bot breaks could possibly take place
+
+Scenario 1
+When a bot fails to answer a query which it was trained on
+
+Scenario 2
+When there is an API failure and the bot is not able to give an appropriate response
+
+Scenario 3
+When a conversation gets transferred to an agent from a bot
+
+Note - When bot gives a smart assist message, it is not considered as a Bot Break.
+
+You can read more about Smart Assist and its types here.
 
 ## ***User Rating***
 The final tab is User Rating. This tab tells you how users rated the different tasks in the chatbot. The rating is optional and is given on a scale of 1-5 stars.

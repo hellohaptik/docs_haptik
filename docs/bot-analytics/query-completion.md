@@ -62,19 +62,21 @@ For example, if your account balance query contains node A, B, C, F, G, H, and y
 
 This is the no. of times the start point of a query has been visited by the user.
 
-If a user visits the same start point sequentially we do NOT increment the query start count
+Scenario 1: If a user visits the same start point sequentially we do NOT increment the query start count
 
-Example:
+**Example:**
+
 Query Path: A -> C
 User Session: A -> A -> A -> C (END)
 Result: Query1 completed (Here repeated counts of A are not counted as new query start)
 Result: Query Volume -> 1. 
 
-If a user visits the same start point twice but not sequentially we increment the query start count
+Scenario 2: If a user visits the same start point twice but not sequentially we increment the query start count
 
-Example: 
+**Example:**
+
 Query Path: A -> C
-User Session: A -> B -> A -> C
+User Session: A -> B -> A -> C (END)
 Result: Query started at A and user went to B. User restarted the query at A and completed the query by reaching C.
 Result: Query Volume -> 2
 

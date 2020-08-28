@@ -1,25 +1,27 @@
 {
   "sidebar": {
     "Getting Started": [
-      "index",
-      "for-analysts",
-      "core-concepts"
+      "index"
     ],
-    "Guides": [
+    "Sections": [
       "basic-analysis",
-      "using-message-analysis",
-      "sessions"
-    ],
-    "Resources": [
       "story-analysis",
+      "using-message-analysis",
+      "word-analysis",
+      "query-completion",      
       "node-traffic",
       "user-ratings",
-      "user-reviews",
-      "sample-metrics"
+      "user-reviews"
+    ],
+    "Resources": [
+      "analytics-reports",
+      "analytics-best-practices",
+      "analytics-case-studies",
+      "analytics-faqs"
     ]
   },
   "headerLink": {
     "doc": "index",
-    "label": "Bot Analytics"
+    "label": "IVA Analytics"
   }
 }

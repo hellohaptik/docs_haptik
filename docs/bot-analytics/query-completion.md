@@ -10,9 +10,9 @@ For a business which has deployed an IVA solution, it is imperative to know if t
 
 > Nodes are interlinked building blocks of an IVA. Each node takes care of one intent coming from the user and responds appropriately.
 
-![Query Completion](assets/querycompletion1.png)
-
 All these queries are visible for the duration and business/IVA you have selected on top. Also you can use the **Compare** feature to make comparisons for your IVA's performance between the selected duration and previous duration.
+
+![Query Completion](assets/querycompletion1.png)
 
 ## Queries
 
@@ -20,7 +20,13 @@ A query is a question or a request for information by a user.  On Analytics,  it
 
 For example, a user interacts with a banking assistant and wants to check their account balance. In this case the query name will be “to check account balance”.
 
+![Query Completion](assets/querycompletion2.png)
+
 ## Creating Queries
+
+You can create your own custom queries depending on which IVA usecase you want to track. You can click on "Create a new Query" as shown below.
+
+![Query Completion](assets/querycompletion3.png)
 
 A query has two parts to it. 
 
@@ -28,13 +34,29 @@ A query has two parts to it.
 
 - **Query End**: IVA’s response with the account balance
 
+![Query Completion](assets/querycompletion4.png)
+
 You can specify up to 
 
 - **5 start points**: a set of nodes denoting the beginning of a Query (Query Start). A start point has to be unique for every query ie. multiple queries cannot have the same start point.
 
 - **5 end points**: set of nodes denoting completion of the Query (Query End). 
 
+![Query Completion](assets/querycompletion5.png)
+
+You can keep adding nodes by clicking on the **+** button as shown below 
+
+![Query Completion](assets/querycompletion6.png)
+
 For example, if you’d like to track a query of checking account balance the start point could be the node that captures the intent of checking account balance. The end points could be 2 nodes - one that disburses ‘current account balance’ and the other that disburses ‘savings account balance.’
+
+You can also search for nodes on this window as shown below
+
+![Query Completion](assets/querycompletion7.png)
+
+Once you are done selecting the nodes click on "Create Query" as shown below
+
+![Query Completion](assets/querycompletion8.png)
 
 > You need to be mindful while creating a new query and choosing the start and end points of those queries keeping real life user messages under consideration as these queries will help you gauge the effectiveness of the IVA.
 
@@ -121,5 +143,8 @@ Do any of the smart assists get tagged under no nodes?
 
 ## Deleting Queries
 
+## Download Report
+
+You will be able to download the Query Completion data. It will be available from 10th September on the dashboard. This report will help you understand the reasons of the drop-off in your query.
 
 

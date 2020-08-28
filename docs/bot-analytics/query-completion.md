@@ -98,7 +98,28 @@ A user could abandon a conversation due to any of the below reasons. The last vi
 
 ### Drop-Off Points
 
+> Code Node - If Code error , it will show as NULL
 
+> We do not show type of nodes under Drop Off Point
+
+Bot Says and Variants
+Entity Variants
+Final Response and Variants 
+Entity re-prompt dropoff tagging - Message content unavailable
+Integration API Response Message -  Not Included
+Follow-up Message - Not Included
+
+> No Node Detected -
+If no nodes were matched as per User says
+Smalltalk
+Do any of the smart assists get tagged under no nodes?
+ 
+Some scenarios where node list is empty, the following scenarios happen
+If no nodes were matched as per User says
+Smalltalk
+Do any of the smart assists get tagged under no nodes?
+
+## Deleting Queries
 
 
 

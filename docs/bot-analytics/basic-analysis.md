@@ -45,9 +45,7 @@ The data is represented in the form of a line graph with 4 different lines. The 
 3) Number of User Messages
 4) Bot Automation
 
-> **Bot Transfers** are shown on the graph too with a vertical line.
-
-The Bot automation metric gives you the percentage of conversations without bot breaks or human intervention (agent). 
+The Bot automation metric gives you the percentage of conversations without bot breaks or human intervention (agent). **Bot Transfers** are shown on the graph too with a vertical line.
 
 > Knowledge Tip: A conversation is a set of messages used to accomplish a task.
 
@@ -72,29 +70,24 @@ At the top of the tab you can see the total number of task activations and this 
 > Tip: This tab can help you understand what tasks are being tapped on by the user. You should experiment the title of task or the icon and see how that nudges the task activation numbers.
 
 ## ***Bot Automation***
-The next tab is Bot Automation. This tab tells you about what percentage of the conversations did not have an agent involved as well as no bot breaks. 
+The next tab is Bot Automation. Bot Automation percentage tells us about what percentage of the conversations did not have either a bot break or an agent involved for the selected duration of time.
 
-The graph for this tab is an upcoming feature and will be documented here once it is ready.
+> Bot Automation Formula - No. of conversations did not have a bot break or a an agent response/ Total no of conversations
 
-Bot Automation percentage tells us about what percentage of the conversations did not have either a bot break or an agent involved for the selected duration of time.
+Below are the scenarios where bot breaks could possibly take place -
 
-Notes - 
-Bot Automation Formula - No. of conversations did not have a bot break or a an agent response/ Total no of conversations
-
-Below are the scenarios where bot breaks could possibly take place
-
-Scenario 1
+- Scenario 1
 When a bot fails to answer a query which it was trained on
 
-Scenario 2
+- Scenario 2
 When there is an API failure and the bot is not able to give an appropriate response
 
-Scenario 3
+- Scenario 3
 When a conversation gets transferred to an agent from a bot
 
-Note - When bot gives a smart assist message, it is not considered as a Bot Break.
+> When bot gives a smart assist message, it is not considered as a Bot Break. You can read more about Smart Assist and its types [here].(https://docs.haptik.ai/bot-builder/basic/smart-assist)
 
-You can read more about Smart Assist and its types here.
+The graph for this tab is an upcoming feature and will be documented here once it is ready.
 
 ## ***User Rating***
 The final tab is User Rating. This tab tells you how users rated the different tasks in the chatbot. The rating is optional and is given on a scale of 1-5 stars.

@@ -60,6 +60,14 @@ Once you are done selecting the nodes click on "Create Query" as shown below
 
 > You need to be mindful while creating a new query and choosing the start and end points of those queries keeping real life user messages under consideration as these queries will help you gauge the effectiveness of the IVA.
 
+## Editing Queries 
+
+You can edit the names of your queries by clicking on the pencil icon in front of any query as shown below 
+
+![Query Completion](assets/querycompletion18.png)
+
+> Providing appropriate names to your query is very important. The name should define what your query is tracking.
+
 ## Completion Rate
 
 ![Query Completion](assets/querycompletion9.png)
@@ -95,8 +103,11 @@ Scenario 1: If a user visits the same start point sequentially we do NOT increme
 **Example:**
 
 Query Path: A -> C
+
 User Session: A -> A -> A -> C (END)
+
 Result: Query1 completed (Here repeated counts of A are not counted as new query start)
+
 Result: Query Volume -> 1. 
 
 Scenario 2: If a user visits the same start point twice but not sequentially we increment the query start count
@@ -104,8 +115,11 @@ Scenario 2: If a user visits the same start point twice but not sequentially we 
 **Example:**
 
 Query Path: A -> C
+
 User Session: A -> B -> A -> C (END)
+
 Result: Query started at A and user went to B. User restarted the query at A and completed the query by reaching C.
+
 Result: Query Volume -> 2
 
 ## Sorting of Queries
@@ -162,17 +176,13 @@ Following are the drop-off points under a Node which will be shown
 - When no nodes were matched as per User says
 - When a Smalltalk node is matched
 
-## Editing Queries 
-
-You can edit your queries by clicking on the pencil icon in front of any query as shown below 
-
-![Query Completion](assets/querycompletion18.png)
-
 ## Deleting Queries
 
 You can delete your queries by clicking on the pencil icon in front of the query and **Delete button** on the modal as shown below
 
 ![Query Completion](assets/querycompletion19.png)
+
+> We have a separate permission for deleting a query so that the access to delete queries can be given to the required memebers of a team.
 
 ## Download Report
 

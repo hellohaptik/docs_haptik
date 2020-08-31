@@ -1,0 +1,174 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Overview · Haptik Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Introduction"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Overview · Haptik Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.haptik.ai/"/><meta property="og:description" content="## Introduction"/><meta property="og:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.haptik.ai/img/image_0.png"/><link rel="shortcut icon" href="/img/image_0.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-106563119-6', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="/js/index.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/image_0.png" alt="Haptik Docs"/><h2 class="headerTitleWithLogo">Haptik Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="/#tools" target="_self">Tools</a></li><li class=""><a href="/#integrations" target="_self">Integrations</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Sections</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-analytics/">Introduction</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Sections</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/bot-analytics/overview">Overview</a></li><li class="navListItem"><a class="navItem" href="/bot-analytics/story-analysis">Story Analysis</a></li><li class="navListItem"><a class="navItem" href="/bot-analytics/using-message-analysis">Message Analysis</a></li><li class="navListItem"><a class="navItem" href="/bot-analytics/word-analysis">Word Analysis</a></li><li class="navListItem"><a class="navItem" href="/bot-analytics/query-completion">Query Completion</a></li><li class="navListItem"><a class="navItem" href="/bot-analytics/node-traffic">Node Traffic</a></li><li class="navListItem"><a class="navItem" href="/bot-analytics/user-ratings">User Ratings</a></li><li class="navListItem"><a class="navItem" href="/bot-analytics/user-reviews">User Reviews</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Resources</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-analytics/analytics-reports">Reporting</a></li><li class="navListItem"><a class="navItem" href="/bot-analytics/analytics-best-practices">Best Practices</a></li><li class="navListItem"><a class="navItem" href="/bot-analytics/analytics-faqs">FAQs</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Overview</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="introduction"></a><a href="#introduction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introduction</h2>
+<p>The first section in the Analytics tool is the <strong>Overview</strong> section. As the name suggests, this section helps you get a quick overview of the different aspects of your IVA's performance.</p>
+<p>The Overview section provides information about:</p>
+<ul>
+<li>Conversations</li>
+<li>Users</li>
+<li>User Messages</li>
+<li>Bot Automation</li>
+<li>User Rating</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="filters"></a><a href="#filters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Filters</h3>
+<p>On top of all screens inside the Analytics tool you will find filter options. These filter options can help you filter your data by Business or Bots from the filters on the left hand side.</p>
+<p>You can select <code>Channels</code> or <code>Bots</code> from the first dropdown on the left hand side and then select the particular business or bot from the dropdown next to it.</p>
+<p><img src="/assets/basic-filter-channels-bots.png" alt="Filter Channels Bots"></p>
+<p>On the right hand side of the filter section, you will find the duration filters. Using these settings you can filter the time period of the data presented.</p>
+<p><img src="/assets/duration.png" alt="Filter Duration"></p>
+<p>There is a Compare feature here. You can compare the performance of all metrics between the selected duration and its previous duration.</p>
+<p><img src="/assets/durationcompare.png" alt="Filter Duration2"></p>
+<h2><a class="anchor" aria-hidden="true" id="conversation"></a><a href="#conversation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong><em>Conversation</em></strong></h2>
+<p>The first tab inside the Overview section is the Conversation tab. Here you can find a graph that gives you information about the user messages, conversations and automation percentage at a given time.</p>
+<ul>
+<li><strong>Bot state</strong></li>
+</ul>
+<p>A conversation is defined as a series of messages exchanged between the IVA and the user before 8 minutes of inactivity. This means we close a conversation when there are no messages exchanged between the IVA and the user for 8 minutes.</p>
+<ul>
+<li><strong>Agent state</strong></li>
+</ul>
+<p>In agent state, a conversation is closed only when the agent clicks “Close Chat” or after 8 mins inactivity for chats that are in “Waiting State”.</p>
+<blockquote>
+<p>Automated system messages (like &quot;Chat Assigned&quot;, &quot;Chat Completed&quot;, &quot;Delay&quot;, &quot;Follow Up&quot; etc.) are not to be included when calculating the conversation complete time.</p>
+</blockquote>
+<p>The data is represented in the form of a line graph with 4 different lines. The 4 different lines correspond to</p>
+<ol>
+<li>Number of Users</li>
+<li>Number of Conversations</li>
+<li>Number of User Messages</li>
+<li>Bot Automation</li>
+<li>Bot Transfers</li>
+</ol>
+<p>In the graph the X axis is the time and the Y axis represents data about Users, Conversations, Messages and Automation. You can get data at any given time point by hovering on the graph.</p>
+<p><img src="/assets/conversation.png" alt="Overview Conversations"></p>
+<blockquote>
+<p><strong>Bot Transfers</strong> are shown on the graph too with a vertical line.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="user"></a><a href="#user" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong><em>User</em></strong></h2>
+<p>The next tab in the overview section is the Users tab. This tab shows the number of unique users for the filtered channel or bot in the given duration period.</p>
+<p>The graph for this data is an upcoming feature and will be documented here once it is available.</p>
+<p><img src="/assets/basic-overview-users.png" alt="Overview Users"></p>
+<h2><a class="anchor" aria-hidden="true" id="user-messages"></a><a href="#user-messages" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong><em>User Messages</em></strong></h2>
+<p>The next tab in the Overview section is the User Messages tab. This tab measures what tasks were most initiated by user. It shows a list of tasks in the IVA along with the number of users who initiated the task.</p>
+<p><img src="/assets/basic-overview-user-messages.png" alt="Overview User Message"></p>
+<h2><a class="anchor" aria-hidden="true" id="bot-automation"></a><a href="#bot-automation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong><em>Bot Automation</em></strong></h2>
+<p>The next tab is Bot Automation. Bot Automation percentage tells us about what percentage of the conversations did not have either a bot break or an agent involved for the selected duration of time.</p>
+<p><img src="/assets/botautomation.png" alt="Automation"></p>
+<blockquote>
+<p>Bot Automation Formula - No. of conversations did not have a bot break or a an agent response/ Total no of conversations</p>
+</blockquote>
+<p>Below are the scenarios where bot breaks could possibly take place -</p>
+<ul>
+<li>Scenario 1</li>
+</ul>
+<p>When a bot fails to answer a query which it was trained on</p>
+<ul>
+<li>Scenario 2</li>
+</ul>
+<p>When there is an API failure and the bot is not able to give an appropriate response</p>
+<ul>
+<li>Scenario 3</li>
+</ul>
+<p>When a conversation gets transferred to an agent from a bot</p>
+<blockquote>
+<p>When bot gives a smart assist message, it is not considered as a Bot Break. You can read more about Smart Assist and its types <a href="https://docs.haptik.ai/bot-builder/basic/smart-assist">here</a>.</p>
+</blockquote>
+<p>As we do not count Smart Assist as a broken message. In case you want to access these messages, you can follow below steps</p>
+<ul>
+<li>Click on the Message Analysis section</li>
+<li>Use the Confidence Score toggle to find the below messages
+<ol>
+<li>0-30 for Bot Break and Smart Assist messages</li>
+<li>Above 30 for all other messages</li>
+</ol></li>
+</ul>
+<p><img src="/assets/botautomation2.png" alt="Automation"></p>
+<h2><a class="anchor" aria-hidden="true" id="user-rating"></a><a href="#user-rating" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong><em>User Rating</em></strong></h2>
+<p>The final tab is User Rating. This tab tells you how users rated the different tasks in the IVA. The rating is optional and is given on a scale of 1-5 stars.</p>
+<p>On the top of the tab you can see the average rating given across all tasks and below it you have the data split from a task to task basis.</p>
+<p><img src="/assets/rating.png" alt="Overview User Rating"></p>
+<blockquote>
+<p>Tip: You can try to improve the task flow by making changes. The user rating changes for the task will help you measure the effectiveness of the changes.</p>
+</blockquote>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 8/31/2020</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/bot-analytics/index"><span class="arrow-prev">← </span><span>Introduction</span></a><a class="docs-next button" href="/bot-analytics/story-analysis"><span>Story Analysis</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#introduction">Introduction</a><ul class="toc-headings"><li><a href="#filters">Filters</a></li></ul></li><li><a href="#conversation"><strong><em>Conversation</em></strong></a></li><li><a href="#user"><strong><em>User</em></strong></a></li><li><a href="#user-messages"><strong><em>User Messages</em></strong></a></li><li><a href="#bot-automation"><strong><em>Bot Automation</em></strong></a></li><li><a href="#user-rating"><strong><em>User Rating</em></strong></a></li></ul></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Bot Builder</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://docs.haptik.ai/ios-sdk/" class="footer-column-link">iOS SDK</a><a href="https://docs.haptik.ai/android-sdk/" class="footer-column-link">Android SDK</a><a href="https://docs.haptik.ai/web-sdk/" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/whatsapp/" class="footer-column-link">WhatsApp</a><a href="https://docs.haptik.ai/other/facebook" class="footer-column-link">Facebook</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Bot API</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a><a href="https://docs.haptik.ai/other/security" class="footer-column-link">Security</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Agent Chat Tool</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2020 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '224c7079e67e84a978d8b4621f6af16d',
+                indexName: 'haptik',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

@@ -10,13 +10,13 @@
 			"basic/building-voice-bots",
 			"basic/platforms-deployment"
 		],
-		"Resources": [
-			"basic/intent",
+		"Essentials of Bot Building": [
 			"basic/bot-hierarchy",
 			"basic/creating-story",
 			"basic/creating-nodes",
 			"basic/smalltalk",
 			"basic/general-nodes",
+			"basic/intent",
 			"basic/user-says-guidelines",
 			"basic/bot-says",
 			"basic/chat-elements",

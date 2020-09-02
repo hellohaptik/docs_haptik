@@ -123,34 +123,21 @@ The output JSON variables are also visible when we click on `Add Variables` whil
 ### Supported Packages 
 1. *Default* - [List of Packages here](https://gist.github.com/gene1wood/4a052f39490fae00e0c3#file-all_aws_lambda_modules_python3-6-txt)
 2. *Extra packages* -  
+
 chardet-3.0.4 
-
 gspread-3.1.0 
-
 httplib2-0.13.1 
-
 idna-2.8 
-
 mysqlclient-1.4.2 
-
 oauth2client-4.1.3 
-
 pyasn1-0.4.6 
-
 pyasn1-modules-0.2.6 
-
 pytz-2019.2 
-
 redis-3.2.1 
-
 requests-2.22.0 
-
 rsa-4.0 
-
 six-1.12.0 
-
 unicodecsv-0.14.1 
-
 urllib3-1.25.3
 
 ### Create HSLs in Code Editor
@@ -191,7 +178,28 @@ These environment variables are then available within the request parameters for
 
 ### Saving Conversation Details and User Details in the Code Editor
 
+#### What is Bot State
+
+Bot State is nothing but data or information associated with a user or contextual data for the specific conversation that the user is having. You can set and access data for both of these scopes with the help of `context variables` to help you manage your bot's state.
+
+Based on the scope of the bucket your data will be available within all nodes of the bot. The two scopes that are currently supported are:
+
+* **User Details** for user level data.
+* **Conversation Details** for conversation level data.
+  
+![Data Scopes](assets/bot-builder-manage-state/scope.png)
+
+The Context Variables are available as part of the `Event` payload that is passed to the integration functions. The integration function can then `SET/GET` data from these variables.
+
+Post the execution of the integration function, the data is committed to a permanent store and the permanance is based on the scope the data belongs to.
+
 #### Conversation Details
+
+Data stored in this context variable will be saved at a conversation level for a given user. This means that the data will only be available till the conversation is active and is not marked as complete. Once the conversation is marked as complete, any data stored in this scope for the given user will be lost.
+
+This data is maintained on our server for a maximum of 3 hours after which it is permanently lost.
+
+This scope should be used for storing contextual information related to the current conversation that the user is having with the bot. Some examples of this are policy id or policy details that the user is exploring in the current conversation.
 
 conversation_detail is used to store information which will be needed as long as the current conversation is going on. The initial information which conversation details contain is empty i.e. {}.
 
@@ -204,7 +212,9 @@ For instance, consider a use-case where a user wants to renew a policy, the user
 3) The data in conversation details stays for 3 hours only.
 
 #### User Details
-user_details stores user's data like address, PAN number, Aadhar number which are independent of the current context of the bot conversation. Data inside user_details will be available across bots and businesses as long as the underlying user is the same in the database.
+Data stored in this context variable will be saved at a user level and will be available for all the conversations that the user has. Data inside user_details will be available across bots and businesses as long as the underlying user is the same in the database.
+
+This context variable should be used for storing permanent details about the user that are not specific to a given conversation like their email, phone number or other such details.
 
 > Value in user_details schema expects data to be a string type. If the user wants to store a list corresponding to the user detail key, then they should handle the serializer/deserializer logic inside the code before returning the response from the code node.
 

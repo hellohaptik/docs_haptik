@@ -4,12 +4,6 @@
 			"basic/introduction",
 			"basic/for-bot-builders"
 		],
-		"Guides": [
-			"basic/bot-hierarchy",
-			"basic/managing-bot-state",
-			"basic/dialoguemanager",
-			"basic/platforms-deployment"
-		],
 		"Essentials of Bot Building": [
 			"basic/making-first-bot",
 			"basic/creating-story",
@@ -32,6 +26,12 @@
 			"basic/bot-prompt-trigger",
 			"basic/disambiguation",
 			"basic/smart-assist"
+		],
+		"Guides": [
+			"basic/bot-hierarchy",
+			"basic/managing-bot-state",
+			"basic/dialoguemanager",
+			"basic/platforms-deployment"
 		],
 		"Conversation Design": [
 			"basic/design-guidelines"

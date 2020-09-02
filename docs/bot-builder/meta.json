@@ -13,13 +13,10 @@
 		"Resources": [
 			"basic/intent",
 			"basic/bot-hierarchy",
-			"basic/business",
 			"basic/creating-story",
-			"basic/smalltalk",
-			"basic/story-templates",
-			"basic/general-nodes",
-			"basic/upload-graph-nodes",
 			"basic/creating-nodes",
+			"basic/smalltalk",
+			"basic/general-nodes",
 			"basic/user-says-guidelines",
 			"basic/bot-says",
 			"basic/chat-elements",
@@ -27,13 +24,16 @@
 			"basic/entities",
 			"basic/forms",
 			"basic/copypaste",
+			"basic/upload-graph-nodes",
+			"basic/story-templates",
 			"basic/sharebot",
 			"basic/transferbot",
+			"basic/business",
 			"basic/bot-prompt-trigger",
+			"basic/managing-bot-state",
 			"basic/dialoguemanager",
 			"basic/disambiguation",
-			"basic/smart-assist",
-			"basic/managing-bot-state"
+			"basic/smart-assist"
 		],
 		"Conversation Design": [
 			"basic/design-guidelines"

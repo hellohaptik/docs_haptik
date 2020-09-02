@@ -1,5 +1,5 @@
 ---
-title: Integrating using Code Editor
+title: Code Node Integration
 ---
 
 ### Introduction

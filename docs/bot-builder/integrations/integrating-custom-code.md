@@ -43,6 +43,12 @@ def main(event, context):
     body = json.loads(event['body'])
     entities = body['entities']
     user_data = body['user']
+    
+    # This is how entities are used in code editor
+    # entities = body.get('entities')
+    # person_name = entities['user_name_insurance'][0]['entity_value']['value']
+    # phone_number = entities['completion_phone_number'][0]['entity_value']
+    
     # "custom_data" that is passed through SDK's during sign up can be accessed from body['user_details'].
     user_details = body['user_details']
     conversation_details = body['conversation_details']

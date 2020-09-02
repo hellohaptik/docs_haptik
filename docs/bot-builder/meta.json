@@ -6,51 +6,57 @@
 		],
 		"Guides": [
 			"basic/making-first-bot",
-			"basic/design-guidelines",
-			"basic/testing-bot",
 			"basic/multiple-languages",
 			"basic/building-voice-bots",
-			"basic/platforms-deployment",
-			"basic/managing-bot-state"
+			"basic/platforms-deployment"
 		],
 		"Resources": [
+			"basic/intent",
 			"basic/bot-hierarchy",
 			"basic/business",
 			"basic/creating-story",
 			"basic/smalltalk",
-			"basic/dialoguemanager",
 			"basic/story-templates",
-			"basic/creating-nodes",
-			"basic/connections",
 			"basic/general-nodes",
+			"basic/upload-graph-nodes",
+			"basic/creating-nodes",
 			"basic/user-says-guidelines",
 			"basic/bot-says",
 			"basic/chat-elements",
-			"basic/intent",
-			"basic/disambiguation",
-			"basic/smart-assist",
+			"basic/connections",
 			"basic/entities",
-			"basic/oracle-feedback",
-			"basic/bot-prompt-trigger",
 			"basic/forms",
-			"basic/upload-graph-nodes",
+			"basic/copypaste",
 			"basic/sharebot",
 			"basic/transferbot",
-			"basic/copypaste"			
+			"basic/bot-prompt-trigger",
+			"basic/dialoguemanager",
+			"basic/disambiguation",
+			"basic/smart-assist",
+			"basic/managing-bot-state"
+		],
+		"Conversation Design": [
+			"basic/design-guidelines"
 		],
 		"Integrations":[
 			"integrations/introduction",
-			"integrations/integration-parameters",
-			"integrations/integrating-apis",
 			"integrations/integrating-custom-code",
-			"integrations/additional-apis"
+			"integrations/integrating-apis",
+			"integrations/integration-parameters"
+		],
+		"Testing": [
+			"basic/testing-bot",
+			"advanced/development-guidelines",
+			"advanced/testing-guidelines",
+			"advanced/debugging-guidelines",
+			"basic/oracle-feedback"
 		],
 		"Advanced": [
 			"advanced/integrating-webviews-into-sdk",
-			"advanced/integrating-with-external-bot",
-			"advanced/development-guidelines",
-			"advanced/testing-guidelines",
-			"advanced/debugging-guidelines"
+			"advanced/integrating-with-external-bot"
+		],
+		"Webhooks": [
+			"integrations/additional-apis"
 		]
 	},
 	"headerLink": {

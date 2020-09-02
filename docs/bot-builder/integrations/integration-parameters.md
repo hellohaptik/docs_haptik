@@ -85,26 +85,15 @@ The dictionary contains following parameters:
 **device_platform**: device platform of the user. Please find the mappings below:
 
 | Device Platform     | Type    | 
-| -------- | ------- | 
-| 0 |  Android App  | 
-| 1 |  IOS App  | 
+| -------- | ------- |
 | 2 |  Android SDK  | 
 | 3 |  Facebook  | 
 | 4 |  Jio  | 
 | 5 |  Web SDK  |
 | 6 |  IOS SDK  |  
-| 7 |  Skype  | 
-| 8 |  Alexa  | 
-| 9 |  Voice  |
-| 10 |  Twilio  | 
-| 11 |  Kookoo  | 
-| 12 |  Phonecom  | 
-| 13 |  Webhook  | 
+| 13 |  Bot API  | 
 | 14 |  Whatsapp  | 
-| 15 |  Jio Chat Connector  | 
-| 16 |  Haptik IVR  | 
-| 17 |  ISON  |
-| 18|  JIO IVR  |  
+| 15 |  Jio Chat Connector  |
 
 **language_code**: Current Language of the User
 

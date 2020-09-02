@@ -5,13 +5,13 @@
 			"basic/for-bot-builders"
 		],
 		"Guides": [
-			"basic/making-first-bot",
-			"basic/multiple-languages",
-			"basic/building-voice-bots",
+			"basic/bot-hierarchy",
+			"basic/managing-bot-state",
+			"basic/dialoguemanager",
 			"basic/platforms-deployment"
 		],
 		"Essentials of Bot Building": [
-			"basic/bot-hierarchy",
+			"basic/making-first-bot",
 			"basic/creating-story",
 			"basic/creating-nodes",
 			"basic/smalltalk",
@@ -30,8 +30,6 @@
 			"basic/transferbot",
 			"basic/business",
 			"basic/bot-prompt-trigger",
-			"basic/managing-bot-state",
-			"basic/dialoguemanager",
 			"basic/disambiguation",
 			"basic/smart-assist"
 		],
@@ -57,6 +55,10 @@
 		],
 		"Webhooks": [
 			"integrations/additional-apis"
+		],
+		"Miscellaneous": [
+			"basic/multiple-languages",
+			"basic/building-voice-bots"
 		]
 	},
 	"headerLink": {

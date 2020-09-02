@@ -19,7 +19,9 @@ Code Node provides an option of `Code Editor` where you can write your custom py
 
 ![adding integration endpoint](assets/api1.png)
 
-You can read more about the Code Editor Integration [here](https://docs.haptik.ai/bot-builder/integrations/integrating-custom-code)
+Code Node is a type of node which contains all the business logic to integrate a function. To know more about Code Node please read [here] (https://docs.haptik.ai/bot-builder/basic/creating-nodes#purpose-and-subcomponents-of-code-nodes).
+
+Code Editor is a feature using which we can write our Python code and integration functions. The supported programming language is Python 3 and above. If any syntax errors or exceptions are raised by the main function, this will result in a Bot Break message.
 
 ### Integrations via Static Node using `Integrations Tab`
 
@@ -28,8 +30,6 @@ Static Node provides as option of integrations. In this mode of integration, you
 ![adding integration endpoint](assets/api2.png)
 
 > You will see a red color **API** icon mark on top of Static Nodes which use this type of integration.
-
-You can read more about it [here](https://docs.haptik.ai/bot-builder/integrations/integrating-apis)
 
 ## Choosing the type of Integration
 
@@ -47,6 +47,8 @@ In most of the cases you should be using Code Node's Code Editor. Here are some 
 
 * OTP verification
 
+You can read more about the Code Editor Integration [here](https://docs.haptik.ai/bot-builder/integrations/integrating-custom-code).
+
 ### When to use Static Node integrations
 
 This should only be used in very complex cases where a middleware service needs to be built or the code is too complicated. Some scenarios where you should be using the API integrations are:
@@ -54,3 +56,5 @@ This should only be used in very complex cases where a middleware service needs 
 * Having Custom authentication and data storage requirements
 
 * Integrating with APIs from external providers where they understand Haptik's request and response formats
+
+You can read more about it [here](https://docs.haptik.ai/bot-builder/integrations/integrating-apis).

@@ -2,7 +2,7 @@
 title: Code Node Integration
 ---
 
-### Introduction
+## Introduction
 
 In most cases, APIs are not directly consumable by the authoring platforms. This is because the request format of the external API is generally different from the format in which the platform makes the request. Additionally, the response data from the API won’t be directly consumable by the platform as the response format for the virtual assistant is different from the response format of the API. The way most platforms solve this is by building a middleware on top of the external API to convert the request and response into appropriate formats. 
 
@@ -17,7 +17,7 @@ You can open the code editor by choosing a Code Node and then clicking on the `O
 ![Opening Code Editor](assets/api2.png)
 
 
-### Using Code Editor
+## Using Code Editor
 
 The only requirement for using the code editor is, the code should follow the below format. The supported programming language is Python 3 and above.
 
@@ -120,7 +120,7 @@ The output JSON variables are also visible when we click on `Add Variables` whil
 3) You can send output JSON as response from the Code Editor which can be accessed in the Output Node for displaying responses to users.
 4) The HSL message(Bot Says Element) that you want the IVA to respond with should be sent as a JSON in the body of the returned response object from the main function.
 
-### Supported Packages 
+## Supported Packages 
 1. *Default* - [List of Packages here](https://gist.github.com/gene1wood/4a052f39490fae00e0c3#file-all_aws_lambda_modules_python3-6-txt)
 2. *Extra packages* -  
 
@@ -140,7 +140,7 @@ six-1.12.0
 unicodecsv-0.14.1 
 urllib3-1.25.3
 
-### Create HSLs in Code Editor
+## Create HSLs in Code Editor
 You can use HSL message(Bot Says Element) to display different elements on the bot, such as carousels and buttons. To display HSLs using code node, we first have to copy the HSL from any static node, with the required elements such as a button. The procedure to copy an HSL is mentioned [here](https://docs.haptik.ai/bot-builder/basic/copypaste#how-to-copy-and-paste-the-hsls).
 
 ![Opening Code Editor](assets/api10.png)
@@ -157,7 +157,7 @@ Here, we have created a button HSL to display the message “Your email is <emai
 
 ![Opening Code Editor](assets/api13.png)
 
-### Using Environment Variables
+## Using Environment Variables
 You can set environment variables for the code executor to store values like database username and passwords that you don't want to expose inside the code.
 
 **The environment variables are stored at a bot level.** This means that variables stored in one node are automatically available to all nodes inside the bot.
@@ -176,9 +176,9 @@ In the `variables` menu that opens, you can set the variable name and values for
 
 These environment variables are then available within the request parameters for the integration functions. You can read about the request parameter structure [here](https://docs.haptik.ai/bot-builder/integrations/integration-parameters)
 
-### Saving Conversation Details and User Details in the Code Editor
+## Saving Conversation Details and User Details in the Code Editor
 
-#### What is Bot State
+### What is Bot State
 
 Bot State is nothing but data or information associated with a user or contextual data for the specific conversation that the user is having. You can set and access data for both of these scopes with the help of `context variables` to help you manage your bot's state.
 
@@ -193,7 +193,7 @@ The Context Variables are available as part of the `Event` payload that is passe
 
 Post the execution of the integration function, the data is committed to a permanent store and the permanance is based on the scope the data belongs to.
 
-#### Conversation Details
+### Conversation Details
 
 Data stored in this context variable will be saved at a conversation level for a given user. This means that the data will only be available till the conversation is active and is not marked as complete. Once the conversation is marked as complete, any data stored in this scope for the given user will be lost.
 
@@ -211,7 +211,7 @@ For instance, consider a use-case where a user wants to renew a policy, the user
 2) The Data storage limit is 500 characters.
 3) The data in conversation details stays for 3 hours only.
 
-#### User Details
+### User Details
 Data stored in this context variable will be saved at a user level and will be available for all the conversations that the user has. Data inside user_details will be available across bots and businesses as long as the underlying user is the same in the database.
 
 This context variable should be used for storing permanent details about the user that are not specific to a given conversation like their email, phone number or other such details.
@@ -234,7 +234,7 @@ So when the user is returning on the IVA, we will have to ask them these details
 
 ![Opening Code Editor](assets/api16.png)
 
-### Logger support in Code Executor
+## Logger support in Code Executor
 You can use standard python logging library inside the code editor. See the below snippet for reference
 
 ```python
@@ -250,7 +250,7 @@ def main(event, context):
     return response
 ```
 
-### Live Testing your Code
+## Live Testing your Code
 The full screen code editor allows you to live test your code with a configurable input. This will help you evaluate if your code is working as expected.
 
 You can configure the input by modifying the JSON in the `Sample Input Data` section at the bottom of the code editor. The only requirement is that the input JSON should have these keys mandatorily:
@@ -274,5 +274,5 @@ When we click on View Logs button, it will open a screen where we can check all 
 
 ![Opening Code Editor](assets/api15.png)
 
-### Pre-Transfer
+## Pre-Transfer
 `Train Bot` prepares the code for production. Hence, you should make sure to call `Train Bot` if there are any changes in the custom code integration before transferring the bot to production.

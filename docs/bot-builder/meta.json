@@ -4,53 +4,61 @@
 			"basic/introduction",
 			"basic/for-bot-builders"
 		],
-		"Guides": [
+		"Essentials of Bot Building": [
 			"basic/making-first-bot",
-			"basic/design-guidelines",
-			"basic/testing-bot",
-			"basic/multiple-languages",
-			"basic/building-voice-bots",
-			"basic/platforms-deployment",
-			"basic/managing-bot-state"
-		],
-		"Resources": [
-			"basic/bot-hierarchy",
-			"basic/business",
 			"basic/creating-story",
-			"basic/smalltalk",
-			"basic/dialoguemanager",
-			"basic/story-templates",
 			"basic/creating-nodes",
-			"basic/connections",
+			"basic/smalltalk",
 			"basic/general-nodes",
+			"basic/intent",
 			"basic/user-says-guidelines",
 			"basic/bot-says",
 			"basic/chat-elements",
-			"basic/intent",
-			"basic/disambiguation",
-			"basic/smart-assist",
+			"basic/connections",
 			"basic/entities",
-			"basic/oracle-feedback",
-			"basic/bot-prompt-trigger",
 			"basic/forms",
+			"basic/copypaste",
 			"basic/upload-graph-nodes",
+			"basic/story-templates",
 			"basic/sharebot",
 			"basic/transferbot",
-			"basic/copypaste"			
+			"basic/business",
+			"basic/bot-prompt-trigger",
+			"basic/disambiguation",
+			"basic/smart-assist"
+		],
+		"Guides": [
+			"basic/bot-hierarchy",
+			"basic/managing-bot-state",
+			"basic/dialoguemanager",
+			"basic/platforms-deployment"
+		],
+		"Conversation Design": [
+			"basic/design-guidelines"
 		],
 		"Integrations":[
 			"integrations/introduction",
-			"integrations/integration-parameters",
-			"integrations/integrating-apis",
 			"integrations/integrating-custom-code",
-			"integrations/additional-apis"
+			"integrations/integrating-apis",
+			"integrations/integration-parameters"
+		],
+		"Testing": [
+			"basic/testing-bot",
+			"advanced/development-guidelines",
+			"advanced/testing-guidelines",
+			"advanced/debugging-guidelines",
+			"basic/oracle-feedback"
 		],
 		"Advanced": [
 			"advanced/integrating-webviews-into-sdk",
-			"advanced/integrating-with-external-bot",
-			"advanced/development-guidelines",
-			"advanced/testing-guidelines",
-			"advanced/debugging-guidelines"
+			"advanced/integrating-with-external-bot"
+		],
+		"Webhooks": [
+			"integrations/additional-apis"
+		],
+		"Miscellaneous": [
+			"basic/multiple-languages",
+			"basic/building-voice-bots"
 		]
 	},
 	"headerLink": {

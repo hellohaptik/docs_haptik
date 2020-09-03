@@ -272,7 +272,7 @@ When we test the code on the bot, logs are created every time a code node is exe
 
 When we click on View Logs button, it will open a screen where we can check all the logs when the code node was executed. This information is retained for the day. The following is the image of sample logs.
 
-![Opening Code Editor](assets/api15.png)
+![Opening Code Editor](assets/viewlogs.png)
 
 ## Pre-Transfer
 `Train Bot` prepares the code for production. Hence, you should make sure to call `Train Bot` if there are any changes in the custom code integration before transferring the bot to production.

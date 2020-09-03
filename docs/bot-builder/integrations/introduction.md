@@ -19,7 +19,7 @@ Code Node provides an option of `Code Editor` where you can write your custom py
 
 ![adding integration endpoint](assets/api1.png)
 
-Code Node is a type of node which contains all the business logic to integrate a function. To know more about Code Node please read [here] (https://docs.haptik.ai/bot-builder/basic/creating-nodes#purpose-and-subcomponents-of-code-nodes).
+Code Node is a type of node which contains all the business logic to integrate a function. To know more about Code Node please read [here](https://docs.haptik.ai/bot-builder/basic/creating-nodes#purpose-and-subcomponents-of-code-nodes).
 
 Code Editor is a feature using which we can write our Python code and integration functions. The supported programming language is Python 3 and above. If any syntax errors or exceptions are raised by the main function, this will result in a Bot Break message.
 

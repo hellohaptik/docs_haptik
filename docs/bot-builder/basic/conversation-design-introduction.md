@@ -7,14 +7,16 @@ Welcome to Conversation Design. Before you begin building your Intelligent Virtu
 Conversation Design is the art of crafting an experience between a virtual assistant and the end user. The end objective is to craft and create conversations that are natural and intuitive while scaling these conversations across platforms for all users. 
 
 💡 The more clarity you have at the start, the better you can design the bot.
-# How to get started
+
+## How to get started
 
 Step 1: Understand your business objective
 
 Step 2: Select an appropriate design tool such as Lucidchart or draw.io, to build your flows to solve use cases while creating conversations
 
 Step 3: And finally, review using various guidelines and go-live
-# What is the process
+
+## What is the process
 
 Conversation Design entails the entire structure of your Intelligent Virtual Assistant that spearheads your bot building process.
 

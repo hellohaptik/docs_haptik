@@ -53,6 +53,17 @@ Whether to hide the main chat button or not. Set this to `true` if using your ow
 
 **default: false**
 
+### `privacy-policy-url`
+If GDPR is enabled, you can add a URL to your Privacy Policy page through init settings. Users will be redirected to this URL when they click on the link in the GDPR view. If not provided users will be redirected to Haptik's privacy policy page.
+
+```
+window.haptikInitSettings = {
+  ...
+  "privacy-policy-url": "URL_TO_YOUR_PRIVACY_POLICY_PAGE",
+  ...
+};
+```
+
 ### `custom-css`
 A custom css file can be injected to the XDK, which will allow to modify the styles of it. This parameter takes a path of the CSS file, which can either be relative or absolute.
 

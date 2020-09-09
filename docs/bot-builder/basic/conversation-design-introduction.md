@@ -1,5 +1,5 @@
 ---
-title: Introduction to Conversation Design
+title: Introduction
 ---
 
 Welcome to Conversation Design. Before you begin building your Intelligent Virtual Assistant, it is essential to create a framework with conversational journeys first. 

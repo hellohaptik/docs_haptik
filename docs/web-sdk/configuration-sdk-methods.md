@@ -36,6 +36,7 @@ Note: Using other listeners like `window.onload` or `document.onload` will lead 
     - `client-id: <String>` *:* *Client Identifier (Provided by Haptik)*
     - `base-url: <String>` *: Backend Identifier (Provided by Haptik)*
     - `business-id: <Number>` *: Business Identifier (Provided by Haptik)*
+    - `privacy-policy-url: <String>` *: URL to your Privacy Policy (Optional)*
 
 ### `destroy()`
 

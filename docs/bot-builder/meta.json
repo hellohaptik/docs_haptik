@@ -39,8 +39,7 @@
 			"basic/create-the-canvas",
 			"basic/chat-initiation",
 			"basic/chat-middle",
-			"basic/chat-end",
-			"basic/design-review"
+			"basic/chat-end"
 		],
 		"Integrations":[
 			"integrations/introduction",

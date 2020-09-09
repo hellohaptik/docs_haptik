@@ -36,10 +36,7 @@
 		"Conversation Design": [
 			"basic/conversation-design-introduction",
 			"basic/setting-flowchart-tool",
-			"basic/create-the-canvas",
-			"basic/chat-initiation",
-			"basic/chat-middle",
-			"basic/chat-end"
+			"basic/create-the-canvas"
 		],
 		"Integrations":[
 			"integrations/introduction",

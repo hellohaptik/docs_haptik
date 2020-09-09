@@ -34,7 +34,13 @@
 			"basic/platforms-deployment"
 		],
 		"Conversation Design": [
-			"basic/conversation-design-introduction"
+			"basic/conversation-design-introduction",
+			"basic/setting-flowchart-tool",
+			"basic/create-the-canvas",
+			"basic/chat-initiation",
+			"basic/chat-middle",
+			"basic/chat-end",
+			"basic/design-review"
 		],
 		"Integrations":[
 			"integrations/introduction",

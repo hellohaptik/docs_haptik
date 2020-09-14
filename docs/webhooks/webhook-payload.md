@@ -243,11 +243,11 @@ Example:
     },
     "follow_up_details": {
         // This dict will be empty when followup is not present
-        "follow_up_timestamp":1597668000,
-        "send_to":1 / 2 / 3,  (Expert / User / Both)
-        "expert_name":"expert",
-        "comment":"follow up comment",
-        "team_id":2
+        "follow_up_timestamp": 1597668000,
+        "send_to": 1, // 1/ 2 / 3,  (Expert / User / Both)
+        "expert_name": "expert",
+        "comment": "follow up comment",
+        "team_id": 2
     },
     "data": {
         "conversation_no": "<CONVERSATION_NO>",

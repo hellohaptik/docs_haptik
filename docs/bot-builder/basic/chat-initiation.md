@@ -85,7 +85,7 @@ SmallTalk is a way to ensure that your bot is able to answer chit chat queries. 
 
 - [Here’s](https://docs.haptik.ai/bot-builder/basic/smalltalk) the link to the official documentation that covers everything you need to know.
 
-## Generic Tips —
+## Generic Tips
 
 1. Clearly introduce your bot.
 

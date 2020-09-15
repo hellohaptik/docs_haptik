@@ -37,7 +37,8 @@
 			"basic/conversation-design-introduction",
 			"basic/setting-flowchart-tool",
 			"basic/create-the-canvas",
-			"basic/whatsapp_as_a_platform"
+			"basic/whatsapp_as_a_platform",
+			"basic/chat-initiation"
 		],
 		"Integrations":[
 			"integrations/introduction",

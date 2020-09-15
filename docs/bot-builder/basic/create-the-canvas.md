@@ -4,8 +4,6 @@ title: Create the canvas
 
 ## Understand Business Requirements
 
-(https://docs.haptik.ai/bot-builder/basic/introduction)
-
 Like any other software project, it’s important to first understand the business problem that the virtual assistant is supposed to solve, along with the expected outcome for the end-users. This helps the Conversation Design champion the users’ needs and also helps to safeguard against expectation-to-end result mismatch.
 
 💡 The more clarity you have at the start, the better you can design the bot. 

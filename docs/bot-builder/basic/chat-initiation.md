@@ -69,7 +69,7 @@ Prompt: 🤔 Wondering how our technology can help you? Come, talk to me!
 2. Provide a benefit or two.
 3. Make it relatable and use the user persona as a guide! Call out the emotional value and problem the user may be facing.
 
-## Launch Message. 
+## Launch Message
 
 You can use this when you want your users to be greeted with a welcome message by the bot. This also helps to initiate users gently into a conversation.
 

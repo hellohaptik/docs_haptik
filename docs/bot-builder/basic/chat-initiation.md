@@ -1,5 +1,5 @@
 ---
-title: Introduction
+title: Chat Initiation
 ---
 
 Words make up a conversation.

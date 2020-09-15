@@ -86,6 +86,12 @@ i. Check if there is an existing brand mascot. If there isn’t, start creating 
 Here’s a filled-up sample of a complete Bot Personality here to help you along!
 
 Ultimately, here’s the question you need to answer. Does the IVA resonate with the brand's voice of communication?
-Example: If you’re building a bot for an old trusted banking company, does a chirpy 17-year-old girl voice really complement the brand’s tone?
+**Example1**: If you’re building a bot for an old trusted banking company, does a chirpy 17-year-old girl voice really complement the brand’s tone?
+
+![kli_avatar](/assets/kliavatar.png)
+
+**Example2**: If you’re building a bot for a new age e-commerce company, does an old lady with spectacles really complement the brand’s tone?
+
+![zurich_avatar](/assets/zuriavatar.png)
 
 Role-play a conversation between the user and bot keeping the user’s goal in mind to create the first version of your user journey. This can either be a pen-and-paper sketch or an online diagram with a skeleton of the user journey. Once you have this document, you’re ready to start creating your official user journey with all the bells, whistles, and edge cases!

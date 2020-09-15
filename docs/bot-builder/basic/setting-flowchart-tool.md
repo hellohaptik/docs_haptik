@@ -34,7 +34,7 @@ Our platform’s users now have access to a central Haptik Library of over 20 Ha
 
 Your flowchart can be structured as follows:
 
-- The user journey for all scenarios with the dialogue. This includes everything we explain in the **Chat Initiation**, **Chat Middle**, **Chat End** section including the ways to initiate the chat, provide a solution to the user’s query, and complete the user journey. 
+- The user journey for all scenarios with the dialogue. This includes everything we explain in the [Chat Initiation](https://docs.haptik.ai/bot-builder/basic/introduction), [Chat Middle](https://docs.haptik.ai/bot-builder/basic/introduction), [Chat End](https://docs.haptik.ai/bot-builder/basic/introduction) section including the ways to initiate the chat, provide a solution to the user’s query, and complete the user journey.
 
 - The correct elements to be used depending on the platform
 
@@ -58,11 +58,11 @@ IMAGE PLACEHOLDER
 
 IMAGE PLACEHOLDER
 
-4. Bot Prompts are ‘notifications’ sent to users to draw their attention. Make sure you include them in your flowchart if you wish to define user journeys that begin from these prompts. This is explained in detail in the **Chat Initiation >> Bot Prompt** Section below. 
+4. Bot Prompts are ‘notifications’ sent to users to draw their attention. Make sure you include them in your flowchart if you wish to define user journeys that begin from these prompts. This is explained in detail in the [Chat Initiation >> Bot Prompt](https://docs.haptik.ai/bot-builder/basic/introduction) section below. 
 
 IMAGE PLACEHOLDER
 
-5. Bot Break messages - Users tend to enter unsupported queries or gibberish during the conversation. Always ensure that your design includes a bot break message alongside the taskbox. You can learn more about how to build better bot break experiences in the **Bot Breaks** section.
+5. Bot Break messages - Users tend to enter unsupported queries or gibberish during the conversation. Always ensure that your design includes a bot break message alongside the taskbox. You can learn more about how to build better bot break experiences in the [Bot Breaks](https://docs.haptik.ai/bot-builder/basic/introduction) section.
 
 IMAGE PLACEHOLDER
 

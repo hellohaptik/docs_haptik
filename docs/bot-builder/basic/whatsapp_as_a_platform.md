@@ -1,5 +1,5 @@
 ---
-title: Introduction
+title: WhatsApp as a Platform
 ---
 
 ## Why should you read this?

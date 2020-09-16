@@ -97,3 +97,53 @@ SmallTalk is a way to ensure that your bot is able to answer chit chat queries. 
 Example: When the bot is unable to understand a user’s query, instead of saying, “Oops! I didn’t understand that because I’m a bot”, say “I’m sorry that your query wasn’t resolved. Would you like to start over?”.
 
 💡 Tip: Take cues from a real human assistant and read your content out loud to gauge whether it comes across as empathetic and natural.
+
+## Understanding Chat Initiation on WhatsApp
+
+A WhatsApp Bot is fairly different from most other kinds of chatbots you might be familiar with. Typically, UI elements such as buttons and quick replies are a key aspect in streamlining a chatbot experience. UI elements not only help to propel the conversation forward but also help the user to achieve their end goal in the quickest way possible.
+
+You can read the blog article on how to design a WA bot [here](https://haptik.ai/blog/whatsapp-bot-design/).
+
+## WhatsApp Bot Building Design Hacks
+
+WhatsApp as a reach platform is exponential but it comes with its own limitations. This is where you can let your creativity kick in, let’s do a comparison of UI elements on a bot vs on WhatsApp and some creative workarounds for limitations.
+
+### Carousel vs Image
+
+In a web bot a carousel is used to display multiple options the user can pick from, it also has supported copy and buttons and looks like this 👇
+
+IMAGE PLACEHOLDER
+
+Just like a carousel has an image and copy that goes along with it, on WhatsApp you can use images along with captions giving the user clear instructions of what he/she has to type to move forward, here is an example below 👇
+
+IMAGE PLACEHOLDER
+
+### Bot Breaks
+
+Bot breaks on web bots are often supported with buttons/quick replies to propel the user to move forward.
+
+IMAGE PLACEHOLDER
+
+Since the facility of buttons/quick replies is not available on WhatsApp we have to ask the user to enter their selection and also inform them how they can start over or view the menu once they have reached a dead end.
+
+IMAGE PLACEHOLDER
+
+### Taskbox vs Menu
+
+A taskbox is the first thing that pops up when the user clicks on the Let’s chat button giving the user access to pick from all the tasks the bot can perform for the user. It is an easy and convenient way for the user to begin his/her bot journey with the tap of a button on a web bot.
+
+IMAGE PLACEHOLDER
+
+WhatsApp does not have a burger menu or a taskbox from where the user can go and make a task selection at the beginning or in the middle of the flow. In this case we use a menu with numbers and the user can make a selection by typing the number that corresponds with his/her desired task.
+
+IMAGE PLACEHOLDER
+
+### Quick Replies vs Freeform User Inputs
+
+On web bots, quick replies are an easy way to ask the user to make a selection or respond to a bot question with the tap of a button. Once the user makes a selection using a quick reply, the other options disappear.
+
+IMAGE PLACEHOLDER
+
+On WhatsApp bots, instead of constantly asking for users to type 1, 2 as that might create conflicting intents in the ML pipeline of the bot, ask the user to enter short forms or initials of various options to move the conversation forward.
+
+IMAGE PLACEHOLDER

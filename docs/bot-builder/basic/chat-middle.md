@@ -36,17 +36,17 @@ Example: If your bot is a sales bot, will a user make a purchase after conversin
 A conversation often has several parts that can feel repetitive like Affirmations, Conversation Propellers, Conversation Enders, and so on. 
 Here’s the 🗝 Content Cheatsheet  — a content repository of phrases and keywords to use in various situations in any chat flow. 
 
-### Conversation User Interfaces vs Graphical User Interfaces (CUIs vs GUIs)
+### Conversation User Interfaces vs Graphical User Interfaces
 
 Understanding the strengths and weaknesses of CUIs and GUIs will help you decide whether a project is a good use case for a bot or not.
 
-<CUI vs GUI Image>
+IMAGE PLACEHOLDER
 
 When you’re looking at a list of flights on the screen, it’s easier to tap your preferred one than send a message with the flight number. A GUI can also pack in much more information in the same area than a CUI.
 
 However, once you start packing for the trip, it’s easier to ask/type “baggage allowance” and get a reply with the check-in weight allowance as compared to navigating multiple screens, skimming, and searching through all the information.
 
-<Image>
+IMAGE PLACEHOLDER
 
 ### Picking conversational elements 
 
@@ -58,7 +58,7 @@ Here is a guide on each of these elements:
 
 Tappable buttons that can be used to reply instead of typing out a response.
 
-<Image>
+IMAGE PLACEHOLDER
 
 Quick replies are likely to be the most commonly used interactive element in your user journey. They are extremely useful to provide suggestions to the user and take away the work of typing. Quick replies are the best element to lead the user to the next set of options. 
 
@@ -70,7 +70,7 @@ Quick replies are likely to be the most commonly used interactive element in you
 
 An element used to redirect users to a different flow or page in order to complete a task. Buttons guide users to click on a very clear, persistent Call-To-Action (CTA). You can also use these to provide links to a different page or redirect a user elsewhere. Buttons are persistent elements (i.e. they remain on the screen even after a selection is made).
 
-<Image>
+IMAGE PLACEHOLDER
   
 **Tips**:
 
@@ -87,7 +87,7 @@ Example: View Plans ↗
 
 A slideshow component for cycling through elements—images or slides of text—like a carousel. 
 
-<Image>
+IMAGE PLACEHOLDER
   
 A carousel element is useful to showcase multiple options that have a lot of details or visual elements. In addition to this unique feature, carousels also help beautify and direct the flow. Carousels can have 3 widths - small, medium, and fat.
 
@@ -105,7 +105,7 @@ A carousel element is useful to showcase multiple options that have a lot of det
 
 An element used to collect data in a structured format. There are some situations when you want an exact response from your user, or want to make sure that you receive certain information before the user can proceed in the flow. Other times, you may already know potential responses of a user and it may be faster for her/him to simply tap. This is where forms come in handy. 
 
-<Image>
+IMAGE PLACEHOLDER
   
 Example: Collect 3-5 pieces of very structured information. E.g. Personal details for an Insurance plan
 
@@ -121,13 +121,13 @@ Example: Collect 3-5 pieces of very structured information. E.g. Personal detail
 
 A video element allows you to share a video right within the chat window Almost all platforms like Web SDK, WhatsApp and Facebook allow this feature. You can even use videos to replace an FAQ/concept that's too long to show using text!
 
-<Image>
+IMAGE PLACEHOLDER
 
 #### Images
 
 The image element is a great way to showcase content that is best represented graphically. 
 
-<Image>
+IMAGE PLACEHOLDER
 
 **Pros**:
 
@@ -149,7 +149,7 @@ The image element is a great way to showcase content that is best represented gr
 
 The location picker element for the Web SDK allows users to share their location. For the Web SDK, users first need to tap on a button which then opens up a web view with a map. For WhatsApp, the **share current location** option can be used. 
 
-<Image>
+IMAGE PLACEHOLDER
 
 **Considerations**:
 
@@ -161,7 +161,7 @@ The location picker element for the Web SDK allows users to share their location
 
 Web views let you create a custom UI to accept user input for the bot. This means that any type of UI that you need to build a great bot flow is now available. In other words, the IVA is your canvas!
     
-<Image>
+IMAGE PLACEHOLDER
 
 **Considerations**:
 
@@ -175,7 +175,7 @@ Web views let you create a custom UI to accept user input for the bot. This mean
 
 💡 Don’t neglect your Element headers while designing your virtual assistant! These are the copies you see within CUI elements. Like the content on your in-chat forms and carousels.
 
-<Image>
+IMAGE PLACEHOLDER
 
 **Considerations**:
 
@@ -187,6 +187,244 @@ Web views let you create a custom UI to accept user input for the bot. This mean
 
 ## Content formatting
 
+### Text formatting: Bold, Italic, Underline
+
+Your user should be able to skim through your answer and understand the response. 
+
+**Considerations**:
+
+For long FAQs, always make sure that the most important aspect of the answer is bold.
+Always make sure that any direct questions to the user are made bold. 
+Example: Thank you for providing your details. Would you like to receive a call from our agents?
+Emoji
+Emojis are one of the easiest ways to ensure that your bot is engaging but you should definitely use them carefully.
+Considerations:
+Always have emoji at the beginning or end of a message. Avoid showing them in the middle.
+Emoji ≠ Punctuation. Leave a space before or after emoji.
+
+IMAGE PLACEHOLDER
+
+Line Breaks and Lists
+Conversational content should be easy to read. Messages are usually short. The same rule is applicable to bots. Break options into lists and bullet points where possible.
+
+IMAGE PLACEHOLDER
+
+Messages and Information Sent at Once
+In the same vein, limit the number of messages sent at the same time. You hate it when your friend spams you with too much information in separate message bubbles. The KISS (Keep it short & simple) rule works here too!
+Length
+Every platform has different character limits for bot replies (for example, Facebook supports 500 characters in each answer.)
+However, we recommend that your answers range between 200-300 characters for optimal readability. More than this will overwhelm the user and consume too much space in the chat window. Ensure that your answer will succinctly and clearly provide a response to the user.
+Use short, chat-friendly words. Nobody likes it when a bot is too verbose! 
+Proofreading
+While not all of us are writers, there's one way to make sure that your copies don't suffer from terrible grammar, bad sentence structure, and incorrect spelling.
+💡 Use [Grammarly](https://www.grammarly.com/), a free grammar checking software to help you eliminate grammar errors and easily improve any text (even within the Bot Builder Tool!)
+Call the grammar 'COPS'
+Basics to take care of:
+
+Capitalization - Ensuring that you follow a standard set of rules for capitalization throughout your bot. It is a reflection of the quality of the brand and the personality of the IVA too!
+Here are some places where a capital letter is mandatory:
+The first letter of the first word that starts a sentence
+The letter 'I'
+Proper nouns 
+CTAs should be capitalized uniformly:
+Option 1: Use Sentence Case throughout the bot for both messages and CTAs.
+Option 2: Use Sentence Case for all messages and use Title Case for CTAs, titles, and header text.
+💡 https://capitalizemytitle.com/ is a great tool for this.
+
+Organization
+Does the message content make sense?
+Check if it follows the structure mentioned below.
+Affirmation
+{Message}
+Question/Conclusion
+Example: 
+Sure! I can help you with your e-ticket. Please type your 6-character confirmation code below 👇
+Punctuation 
+Punctuation: Check all periods, exclamation marks, question marks, commas
+Standardize Bullet Points a.k.a list items
+Use a period (full stop) after every bullet point that is a sentence.
+Don’t use any punctuation after bullet points that are not sentences.
+Spelling — Make sure that you’ve spelled all your words correctly! 
+You may use either British or American spellings and words depending on the geography of the audience.
+Read the sentence backward to easily spot a spelling mistake!
+
+## Handling Bot Breaks
+
+Things don’t always go as planned...especially while chatting. That’s why you need to write copy and design flows for when things go wrong in a conversation between a bot and a user. 
+Definition: A bot break a.k.a bot error is sent to the user when the bot is not trained or cannot find a close match to the user input.
+Types of Errors:
+No input: The user did not respond to a message, hesitated, was distracted, had a connection error or none of the choices matched their need.
+No match: The bot is not able to understand the user as they say something out of the bot's vocabulary. This is most commonly called a bot break. 
+Disambiguation: The bot is confused between 2 nodes/intents and needs better input from the user. 
+Misrecognition or False Positive: The bot wrongly identifies what the user says.
+Task failure: The user’s request cannot be fulfilled due to a failing on the bot’s end.
+
+Measures to Avoid Bot Breaks: Here are some ways to prevent bot breaks.
+Train your IVA well and design for error cases: Make sure that your bot thoroughly covers the entire domain it is meant to serve in. Take a look at the [User Says Guidelines section](https://docs.haptik.ai/bot-builder/basic/user-says-guidelines) for more information.
+Talk to a QA during solutioning to identify the main edge cases and error states. Design message copies for these.
+
+IMAGE PLACEHOLDER
+
+Follow up messages: These are also known as Delay Messages. These are used to remind users to provide inputs or re-engaging users.
+Examples:
+
+IMAGE PLACEHOLDER
+
+Considerations: 
+Use contextual follow up messages to make your message more relatable and appropriate for every user. 
+Example: After providing a payment status update, set your delay message to Were we able to resolve your payment issue? 
+Don’t completely rely on follow up messages to move a conversation forward. Your user may not wait around long enough to see the follow-up message. 
+Don’t use follow up messages on WhatsApp. They are intrusive and will lead to your number being flagged.
+Use the entity retry-message feature: Entity Retry messages are used to give users a second chance to provide the correct input. Users might make mistakes while sharing information and when the bot vets the user input and finds an incorrect input, the entity retry message is sent. 
+
+Example:
+IMAGE PLACEHOLDER
+
+Considerations: 
+Ensure that you clearly explain what is the right format you’re expecting input in.
+Example: The entered phone number seems incorrect. Please enter a valid 10-digit phone number.
+Example — 9812345656
+Test and see that the UX is good even after multiple tries.
+
+Disambiguation messages: This powerful feature is a brilliant way to avoid a bot break by asking the user to clarify their input. It’s also known as the ‘Did You Mean’ feature since it asks the user to pick from a list of the questions they may have meant to ask.
+Example:
+
+IMAGE PLACEHOLDER
+
+Considerations: 
+For every node, ensure that you mark a short variation as the text for the Disambiguation message.
+For every node, rename the node appropriately below 20 characters depending on the platform.
+Ensure that you use Sentence case
+
+Autocomplete Feature (a.k.a AutoSuggest): As the user starts typing in free form, we match the user's typed letters with the User Says sentences on the bot. [Here’s](https://docs.haptik.ai/bot-builder/basic/user-says#autocomplete-suggestions) the documentation to help you enable it.
+As described before, this feature will:
+Help users discover the scope of our bot while a user starts typing.
+Avoid bot breaks as the user selects our suggestion, rather than typing a random freeform message.
+Autocomplete suggestions while user types to improve the message event count. 
+
+IMAGE PLACEHOLDER
+
+Dynamic API responses: These are any messages that are responses returned from an API. Haptik’s platform allows you to customize API responses and add your own conversational flair to them. Instead of showing API responses and API errors just as they have been programmed, you should create conversational copy for API responses to ensure that your IVA functions well even when there are technical issues.
+Basic types of API errors to consider:
+System error: When your API fails. I’m really sorry, I can’t pull your customer records right now. Please try again shortly once we’ve resolved this glitch.
+User does not qualify:  Unfortunately, your plan does not include a free paid vacation. Would you like to upgrade?
+Beyond scope: Don’t apologize. Just provide a redirect. Tap below to make the bill payment on our website.
+Considerations:
+Always design copies for every single API error case. It is crucial to tell the user what went wrong and give them follow up options to get back on track.
+❌ Bad: System error. Try again.
+✅ Good: Sorry, I couldn't validate your OTP due to a system error.   What would you like to do next — try again or talk to an
+    advisor?
+Account for cases where the API returns too much data to fit into a single window. Ensure that the user has the option to navigate between these options with or break the content down into small chunks. Show only what is necessary.
+
+Wherever possible, address your user personally using their name or by providing some pre-saved data to make your conversation seem more personal.
+
+Drafting the Bot Break Message: The bot break message should be carefully worded. It should first acknowledge that the bot cannot help with the query. It should then focus on redirecting the user back into the conversation. Either redirect the user to the main menu or into another conversational flow.
+
+Here are some ways to design bot break messages:
+Re-showcasing Bot’s Capabilities: The bot can set a capability expectation and present only those options that the bot can fulfill.
+
+IMAGE PLACEHOLDER
+
+CRM Ticket: The bot can take inputs from the user and pass along the unanswered query to a CRM.
+CSV: The bot can also record the query and share a collated list of the bot breaks aka unanswered user inputs to a customer support email id.
+Live Agent Support:  If the bot fails to understand a query, the bot can transfer the chat to a human agent. The agent will be trained to handle queries in the domain. This can either be done for all bot breaks or for breaks in specific task flows.
+
+IMAGE PLACEHOLDER
+
+Considerations:
+Apologize but gracefully. This message will even be shown if a user is purposely messing with your bot.
+Be clear and always give options for the user to restart the conversation.
+Having multiple variations in your bot makes your bot seem empathetic and intelligent
+
+## Agent Transfer
+
+What is an Agent Transfer and Why?
+Definition: If the bot fails to understand a query, the bot can transfer the chat to a human agent. This form of escalation is what we call an Agent Transfer.
+
+Why: 
+Complex queries and frustrated customers are better handled by humans. 
+Bots cannot be expected to know everything about the domain and having agents on hand is a good way to handle out of scope requests.
+
+Parts of the Agent Transfer Experience
+Set-Up: Admit that a human agent may be better equipped to handle the query and give the user the option of talking to one. 
+Considerations:
+This should be voluntary. Don’t directly transfer the chat to the agent without checking whether the user wishes to talk to a person immediately. They may prefer coming back later or may want to try resolving the issue on their own.
+💡 The goal of most virtual assistants is to reduce customer support costs so provide this option carefully!
+Example — Sorry, you've entered the wrong OTP. 
+Tap on an option below to either resend the OTP or chat with an agent 👇 
+Be transparent. If agents are only available between a certain time period, this is a good place to let the customer know, as opposed to expecting an agent and then being disappointed. You can use custom APIs if needed. 
+Example: If you wish to provide different messages based on the time of day because your agents are only available between 10 am to 7 pm, you can use a code block to do so. 
+
+Example (formal - agent available) — 
+Noted! An expert will be able to answer this better. Tap below to get more help 👇
+CTA: Continue
+
+Example (casual - agent not available) — 
+My teammates will be back at their desks at 7 am in the morning. Check back then or send us an email at example@test.co right away. 
+
+IMAGE PLACEHOLDER
+
+Transfer: Let the end-user know that the bot has asked an agent to step in. Considerations:
+Be clear about agent availability. Typical bot platforms will check whether agents are available at this stage. Inform the customer that this step is taking place to avoid confusion.
+Before you’re sure that agents are available, don’t say — Hold on while I ask an agent to step in…
+Instead, be clear that you’re checking agent availability and say — Stay online while I check whether an agent is online and ask them to step in.
+Tell users what’s going to happen next. If the customer has been added to a queue, it’s important to give them clear instructions so that they don't get frustrated while waiting for an agent to step in. 
+Based on the waiting time, one of the following messages will be sent after 6 seconds (the average amount of time a user tends to hold on):
+For no waiting time, the following message will be sent — We will be reviewing your query in a minute
+For wait times below an hour — We will be reviewing your query in 10 minutes.
+For high traffic situations where the wait time is longer than an hour, this message will be sent — We will be reviewing your query as soon as possible. The current traffic indicates that it'll take about an hour. I'll send you a message about it. Just don't close this window!
+
+Use this time wisely. Tell the customer to maybe elaborate on their query or tell them to leave the window open while an agent steps in. 
+Example 1 —
+Let me check and get back to you!
+This could take a few minutes so feel free to share any other details I should know.
+
+Example 2 —
+While I ask an agent to step in, feel free to type in any more details you'd like to share!
+
+Agent introduction. If agents are available, make sure that your agent clearly introduces themselves. 
+The Web SDK indicates when an agent joins the conversation like this —   
+
+IMAGE PLACEHOLDER
+
+WhatsApp and Facebook do not have this indicator so make sure that the agents are trained to introduce themselves accordingly!
+
+Agent Chat Tool settings: Agent Handovers are not always successful especially when you’re dealing with operational difficulties, lack of staff, and other issues. These are two pieces of copy that you can set on the Agent Chat Tool right now —
+Agents temporarily not available aka Team delay message: Use this message to set expectations with the user.
+Example: 🙏 Sorry, all our agents are busy at the moment.
+Go ahead and enter your problem in detail below and our agents will reply in a few minutes 👇
+
+Agents unavailable: Use this message to tell users what to do when agents are not available. This could be something like creating a ticket or sending an email. Whatever the case, do provide a way for users to get in touch.
+Example: Unfortunately, none of our agents are available at the moment. Tap below to submit a callback request and we'll get in touch with you soon 👇
+
+Do’s and Don'ts
+Don’t make agent transfers mandatory for bot breaks. They lead to high operational costs unnecessarily and defeat the purpose of automating customer support. 
+Do provide agent transfer as an option for sensitive usecases that are better handled by an agent. You may choose to partially complete a process using the virtual assistant and then transfer it to an agent after a certain point.
 
 ## Unstructured FAQ IVA guideline
 
+Definition: FAQs stand for frequently asked questions. Adding general FAQs to your bot is a great way to ensure that users receive answers to most of their basic questions alongside the more detailed user journeys that you have built.
+Here’s an 🗝 FAQ bot building guideline to give a quick overview of the entire process.
+
+Examples:
+
+IMAGE PLACEHOLDER
+
+Considerations: 
+Always have follow-up QR options. Your user should have a way to move forward in the conversation.
+Ensure that the content is adapted for chat. If required convert lengthy text into lists, interactive carousels, images, or even link a video if needed.
+Ensure that all your nodes have been sufficiently trained so that your bot can answer correctly. You can go through the user says guidelines [here](https://docs.haptik.ai/bot-builder/basic/user-says-guidelines).
+To upload a large number of FAQs at once, you may use the [bulk upload feature](https://docs.haptik.ai/bot-builder/basic/general-nodes). However, make sure that all good conversation designer practices like follow-ups are implemented within your content.
+Ensure that follow-up feedback doesn’t jump in too early and obscure your follow up QRs. Remember: QRs aren’t persistent.
+Sanitise all data - Create separate intents out of user queries
+Make sure that your answer is generic. Don’t have any ultra-specific introductions like “Yes that’s a lovely question” before your answer begins.
+
+Other important considerations
+Reuse
+Example: If your bot is a bot for logged in users - Can you reuse information from the signed-in profile to avoid repetition?
+Example 2: If your user has previously mentioned their name, can you reuse it elsewhere? 
+Give directional cues to the user
+Does your user always have a backup option to come back to the menu if they get lost during the journey?
+Handle free form queries
+Has your bot been trained to handle free form questions related to the main usecases?
+Example: For an Insurance Product recommendation bot, do you provide basic information about the product in freeform like “Will I get free training”

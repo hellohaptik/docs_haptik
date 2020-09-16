@@ -54,7 +54,7 @@ While text works great for certain interactions, other interactions may benefit 
 
 Here is a guide on each of these elements:
 
-#### Quick Replies (QRs)
+#### 1. Quick Replies (QRs)
 
 Tappable buttons that can be used to reply instead of typing out a response.
 
@@ -66,7 +66,7 @@ Quick replies are likely to be the most commonly used interactive element in you
 
 > Tip: You can show up to 27 characters on a QR.
 
-#### Buttons
+#### 2. Buttons
 
 An element used to redirect users to a different flow or page in order to complete a task. Buttons guide users to click on a very clear, persistent Call-To-Action (CTA). You can also use these to provide links to a different page or redirect a user elsewhere. Buttons are persistent elements (i.e. they remain on the screen even after a selection is made).
 
@@ -83,7 +83,7 @@ Example: View Plans ↗
 
 4. For maximum visibility, use 21 characters at the most for the button’s text.
 
-#### Carousels
+#### 3. Carousels
 
 A slideshow component for cycling through elements—images or slides of text—like a carousel. 
 
@@ -101,7 +101,7 @@ A carousel element is useful to showcase multiple options that have a lot of det
 
 4. You may use formatting tags like bold, italics to make the text more eye-catching.
 
-#### Chat forms
+#### 4. Chat forms
 
 An element used to collect data in a structured format. There are some situations when you want an exact response from your user, or want to make sure that you receive certain information before the user can proceed in the flow. Other times, you may already know potential responses of a user and it may be faster for her/him to simply tap. This is where forms come in handy. 
 
@@ -117,13 +117,13 @@ Example: Collect 3-5 pieces of very structured information. E.g. Personal detail
 
 3. QRs vs Forms: Use Quick Replies when there are only a few ways a user can respond. Use Forms when there’s a larger number of responses potential. Resort to free form when there’s a gigantic number of potential responses. 
 
-#### Videos
+#### 5. Videos
 
 A video element allows you to share a video right within the chat window Almost all platforms like Web SDK, WhatsApp and Facebook allow this feature. You can even use videos to replace an FAQ/concept that's too long to show using text!
 
 IMAGE PLACEHOLDER
 
-#### Images
+#### 6. Images
 
 The image element is a great way to showcase content that is best represented graphically. 
 
@@ -145,7 +145,7 @@ IMAGE PLACEHOLDER
 
 3. Showcasing a product
 
-#### Location Picker
+#### 7. Location Picker
 
 The location picker element for the Web SDK allows users to share their location. For the Web SDK, users first need to tap on a button which then opens up a web view with a map. For WhatsApp, the **share current location** option can be used. 
 
@@ -157,7 +157,7 @@ IMAGE PLACEHOLDER
 
 2. Ensure that you provide enough guidance to the user to use the location picker since the UX can be confusing. 
 
-#### Web view
+#### 8. Web view
 
 Web views let you create a custom UI to accept user input for the bot. This means that any type of UI that you need to build a great bot flow is now available. In other words, the IVA is your canvas!
     
@@ -289,13 +289,13 @@ Things don’t always go as planned...especially while chatting. That’s why yo
 
 ### Measures to Avoid Bot Breaks
 
-#### **Train your IVA well and design for error cases**
+#### **1. Train your IVA well and design for error cases**
 
 Make sure that your bot thoroughly covers the entire domain it is meant to serve in. Take a look at the [User Says Guidelines section](https://docs.haptik.ai/bot-builder/basic/user-says-guidelines) for more information. Talk to a QA during solutioning to identify the main edge cases and error states. Design message copies for these.
 
 IMAGE PLACEHOLDER
 
-#### **Follow up messages** 
+#### **2. Follow up messages** 
 
 These are also known as **Delay Messages**. These are used to remind users to provide inputs or re-engaging users. Example:
 
@@ -310,7 +310,7 @@ b. Don’t completely rely on follow up messages to move a conversation forward.
 
 c. Don’t use follow up messages on WhatsApp. They are intrusive and will lead to your number being flagged.
 
-#### **Use the entity retry-message feature**
+#### **3. Use the entity retry-message feature**
 
 Entity Retry messages are used to give users a second chance to provide the correct input. Users might make mistakes while sharing information and when the bot vets the user input and finds an incorrect input, the entity retry message is sent. Example:
 
@@ -323,7 +323,7 @@ Example: The entered phone number seems incorrect. Please enter a valid 10-digit
 
 b. Test and see that the UX is good even after multiple tries.
 
-#### **Disambiguation messages**
+#### **4. Disambiguation messages**
 
 This powerful feature is a brilliant way to avoid a bot break by asking the user to clarify their input. It’s also known as the ‘Did You Mean’ feature since it asks the user to pick from a list of the questions they may have meant to ask. Example:
 
@@ -337,7 +337,7 @@ b. For every node, rename the node appropriately below 20 characters depending o
 
 c. Ensure that you use Sentence case
 
-#### **Autocomplete Feature (a.k.a AutoSuggest)**
+#### **5. Autocomplete Feature (a.k.a AutoSuggest)**
 
 As the user starts typing in free form, we match the user's typed letters with the User Says sentences on the bot. [Here’s](https://docs.haptik.ai/bot-builder/basic/user-says#autocomplete-suggestions) the documentation to help you enable it.
 
@@ -351,7 +351,7 @@ As described before, this feature will:
 
 IMAGE PLACEHOLDER
 
-#### **Dynamic API responses**
+#### **6. Dynamic API responses**
 
 These are any messages that are responses returned from an API. Haptik’s platform allows you to customize API responses and add your own conversational flair to them. Instead of showing API responses and API errors just as they have been programmed, you should create conversational copy for API responses to ensure that your IVA functions well even when there are technical issues.
 

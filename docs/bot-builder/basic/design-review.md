@@ -10,7 +10,7 @@ We recommend that you build one or two flows from your design in order to help y
 
 - The look and feel of the bot. Are the brand colors right? Are the Bot Personality and Avatar fitting?
 
-IMAGE PLACEHOLDER
+![designreview](/assets/designreview1.png)
 
 - Is the Onboarding right? 
 - Were the copies right?

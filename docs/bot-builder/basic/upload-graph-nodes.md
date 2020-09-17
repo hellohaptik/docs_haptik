@@ -36,12 +36,12 @@ To handle the scenarios where we need to create large number of nodes in one go,
 5. api_key(optional): If API Integration URL requires secret/token key.
 ```
 
->Note: If you pass Relative URL under api_integration_url column then Base URL must be present at Bot level.
+You can download a sample CSV file from [here](assets/FAQ_Uploader.csv).
 
+>Note: If you pass Relative URL under api_integration_url column then Base URL must be present at Bot level.
 
 #### How to set base url at Bot Level
 ![](assets/set_base_url_at_bot_level.gif)
-
 
 #### Error Messages
 

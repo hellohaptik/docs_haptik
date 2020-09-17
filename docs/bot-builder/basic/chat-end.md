@@ -12,13 +12,13 @@ Here are some techniques you can use to end a conversation gracefully and useful
 
 - Give the user a custom set of options based on their previous selection
 
-IMAGE PLACEHOLDER
+![chatend1](/assets/chatend1.png)
 
 - Teach users about where to find the Taskbox or Menu. 
 
 Here’s how you can do this for Web SDK bots:
 
-IMAGE PLACEHOLDER
+![chatend2](/assets/chatend2.png)
 
 Here’s how you can do it for WhatsApp bots: 
 
@@ -26,9 +26,13 @@ Here’s how you can do it for WhatsApp bots:
 
 - Ask users whether they need more help. Here’s a sample flow. 
 
-Is there anything else I can help you with? The possible answers could be Yes and No. If Yes, show the taskbox. If No, end your conversation gracefully (more about this below).
+Is there anything else I can help you with? The possible answers could be Yes and No. If Yes, show the taskbox. 
 
-IMAGE PLACEHOLDER
+![chatend3](/assets/chatend3.png)
+
+If No, end your conversation gracefully (more about this below).
+
+![chatend4](/assets/chatend4.png)
 
 2. Say bye gracefully
 

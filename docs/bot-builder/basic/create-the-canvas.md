@@ -56,7 +56,7 @@ Ask the following questions in order to understand what you’re working with!
   What is the average turn-around time for your CRM tickets to be resolved? (Only if CRM is available)
   What are the logged-in hours and days of customer support agents?
 
-  Getting the answers to these questions will help you understand the expected outcome (e.g. reduce the existing turnaround time from 20 minutes to 3 seconds) and     also be valuable during the Conversation Design phase (e.g when you need to tell the customer when agents will be available, etc.).
+Getting the answers to these questions will help you understand the expected outcome (e.g. reduce the existing turnaround time from 20 minutes to 3 seconds) and also be valuable during the Conversation Design phase (e.g when you need to tell the customer when agents will be available, etc.).
 
 4. Use gathered User persona(s) through User Research or internal teams. Here are some 🗝 samples for reference. This data can be pulled from the brand’s target demographic data and market research.
 

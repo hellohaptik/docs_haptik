@@ -40,13 +40,13 @@ Here’s the 🗝 Content Cheatsheet  — a content repository of phrases and ke
 
 Understanding the strengths and weaknesses of CUIs and GUIs will help you decide whether a project is a good use case for a bot or not.
 
-IMAGE PLACEHOLDER
+![chatmiddle1](/assets/chatmiddle1.png)
 
 When you’re looking at a list of flights on the screen, it’s easier to tap your preferred one than send a message with the flight number. A GUI can also pack in much more information in the same area than a CUI.
 
 However, once you start packing for the trip, it’s easier to ask/type “baggage allowance” and get a reply with the check-in weight allowance as compared to navigating multiple screens, skimming, and searching through all the information.
 
-IMAGE PLACEHOLDER
+![chatmiddle2](/assets/chatmiddle2.png)
 
 ### Picking conversational elements 
 
@@ -58,7 +58,7 @@ Here is a guide on each of these elements:
 
 Tappable buttons that can be used to reply instead of typing out a response.
 
-IMAGE PLACEHOLDER
+![chatmiddle](/assets/chatend1.png)
 
 Quick replies are likely to be the most commonly used interactive element in your user journey. They are extremely useful to provide suggestions to the user and take away the work of typing. Quick replies are the best element to lead the user to the next set of options. 
 
@@ -70,7 +70,7 @@ Quick replies are likely to be the most commonly used interactive element in you
 
 An element used to redirect users to a different flow or page in order to complete a task. Buttons guide users to click on a very clear, persistent Call-To-Action (CTA). You can also use these to provide links to a different page or redirect a user elsewhere. Buttons are persistent elements (i.e. they remain on the screen even after a selection is made).
 
-IMAGE PLACEHOLDER
+![chatmiddle3](/assets/chatmiddle3.png)
   
 **Tips**:
 
@@ -87,7 +87,7 @@ Example: View Plans ↗
 
 A slideshow component for cycling through elements—images or slides of text—like a carousel. 
 
-IMAGE PLACEHOLDER
+![chatmiddle4](/assets/chatmiddle4.png)
   
 A carousel element is useful to showcase multiple options that have a lot of details or visual elements. In addition to this unique feature, carousels also help beautify and direct the flow. Carousels can have 3 widths - small, medium, and fat.
 
@@ -105,7 +105,7 @@ A carousel element is useful to showcase multiple options that have a lot of det
 
 An element used to collect data in a structured format. There are some situations when you want an exact response from your user, or want to make sure that you receive certain information before the user can proceed in the flow. Other times, you may already know potential responses of a user and it may be faster for her/him to simply tap. This is where forms come in handy. 
 
-IMAGE PLACEHOLDER
+![chatmiddle5](/assets/chatmiddle5.png)
   
 Example: Collect 3-5 pieces of very structured information. E.g. Personal details for an Insurance plan
 
@@ -121,13 +121,13 @@ Example: Collect 3-5 pieces of very structured information. E.g. Personal detail
 
 A video element allows you to share a video right within the chat window Almost all platforms like Web SDK, WhatsApp and Facebook allow this feature. You can even use videos to replace an FAQ/concept that's too long to show using text!
 
-IMAGE PLACEHOLDER
+![chatmiddle6](/assets/chatmiddle6.png)
 
 #### 6. Images
 
 The image element is a great way to showcase content that is best represented graphically. 
 
-IMAGE PLACEHOLDER
+![chatmiddle7](/assets/chatmiddle7.png)
 
 **Pros**:
 
@@ -149,7 +149,11 @@ IMAGE PLACEHOLDER
 
 The location picker element for the Web SDK allows users to share their location. For the Web SDK, users first need to tap on a button which then opens up a web view with a map. For WhatsApp, the **share current location** option can be used. 
 
-IMAGE PLACEHOLDER
+![chatmiddle8](/assets/chatmiddle8.png)
+
+A new window opens up on click of the Location Picker
+
+![chatmiddle9](/assets/chatmiddle9.png)
 
 **Considerations**:
 
@@ -161,7 +165,11 @@ IMAGE PLACEHOLDER
 
 Web views let you create a custom UI to accept user input for the bot. This means that any type of UI that you need to build a great bot flow is now available. In other words, the IVA is your canvas!
     
-IMAGE PLACEHOLDER
+![chatmiddle10](/assets/chatmiddle10.png)
+
+A new window opens up on click of the button
+
+![chatmiddle11](/assets/chatmiddle11.png)
 
 **Considerations**:
 
@@ -175,7 +183,11 @@ IMAGE PLACEHOLDER
 
 💡 Don’t neglect your Element headers while designing your virtual assistant! These are the copies you see within CUI elements. Like the content on your in-chat forms and carousels.
 
-IMAGE PLACEHOLDER
+![chatmiddle12](/assets/chatmiddle12.png)
+
+Another example
+
+![chatmiddle13](/assets/chatmiddle13.png)
 
 **Considerations**:
 
@@ -208,13 +220,13 @@ Emojis are one of the easiest ways to ensure that your bot is engaging but you s
 
 2. Emoji ≠ Punctuation. Leave a space before or after emoji.
 
-IMAGE PLACEHOLDER
+![chatmiddle14](/assets/chatmiddle14.png)
 
 ### Line Breaks and Lists
 
 Conversational content should be easy to read. Messages are usually short. The same rule is applicable to bots. Break options into lists and bullet points where possible.
 
-IMAGE PLACEHOLDER
+![chatmiddle15](/assets/chatmiddle15.png)
 
 ### Messages and Information Sent at Once
 

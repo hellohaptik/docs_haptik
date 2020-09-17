@@ -65,11 +65,11 @@ Ask the following questions in order to understand what you’re working with!
   - To create your bot persona: Create a bot persona that complements your user persona. It needs to be relevant and relatable to the end-user.
 
   **Example**: For a financial advisor virtual assistant — 
-  If your target user demographic is a majorly young, technically savvy internet user, your bot persona needs to be that of a young, related business guru who         provides easy-to-understand advice. Here, the persona of an old, authoritative, long-winded financial advisor may not be relatable and likable. 
+  If your target user demographic is a majorly young, technically savvy internet user, your bot persona needs to be that of a young, related business guru who provides easy-to-understand advice. Here, the persona of an old, authoritative, long-winded financial advisor may not be relatable and likable. 
 
 💡 Tip: While creating a virtual assistant that needs to cater to a wide and varied demographic, we recommend taking inspiration from the brand’s customer support agent guideline. When in doubt, being helpful, humble, and polite always works as a starting point!
 
-  - To ensure that your bot can handle all types of users: Use your varied user persona while role-playing conversations. When you’re dealing with a spectrum of       different users, the bot is expected to handle varied emotions, languages, technical savviness, and so on. Use these personas while designing to test whether your   bot can withstand the angriest customers’ demands and can encourage a shy, new customer to make a purchase.
+  - To ensure that your bot can handle all types of users: Use your varied user persona while role-playing conversations. When you’re dealing with a spectrum of different users, the bot is expected to handle varied emotions, languages, technical savviness, and so on. Use these personas while designing to test whether your bot can withstand the angriest customers’ demands and can encourage a shy, new customer to make a purchase.
 
 5. Create a bot persona with the name and avatar. 
 

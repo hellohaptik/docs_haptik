@@ -62,7 +62,7 @@ IMAGE PLACEHOLDER
 
 IMAGE PLACEHOLDER
 
-5. Bot Break messages - Users tend to enter unsupported queries or gibberish during the conversation. Always ensure that your design includes a bot break message alongside the taskbox. You can learn more about how to build better bot break experiences in the [Bot Breaks](https://docs.haptik.ai/bot-builder/basic/introduction) section.
+5. Bot Break messages - Users tend to enter unsupported queries or gibberish during the conversation. Always ensure that your design includes a bot break message alongside the taskbox. You can learn more about how to build better bot break experiences in the [Bot Breaks](https://docs.haptik.ai/bot-builder/basic/chat-middle#handling-bot-breaks) section.
 
 IMAGE PLACEHOLDER
 

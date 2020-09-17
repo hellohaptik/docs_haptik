@@ -58,7 +58,7 @@ Ask the following questions in order to understand what you’re working with!
 
 Getting the answers to these questions will help you understand the expected outcome (e.g. reduce the existing turnaround time from 20 minutes to 3 seconds) and also be valuable during the Conversation Design phase (e.g when you need to tell the customer when agents will be available, etc.).
 
-4. Use gathered User persona(s) through User Research or internal teams. Here are some 🗝 samples for reference. This data can be pulled from the brand’s target demographic data and market research.
+4. Use gathered User persona(s) through User Research or internal teams. There are some 🗝 samples for reference. This data can be pulled from the brand’s target demographic data and market research.
 
   This persona(s) can be used in two ways:
 
@@ -75,15 +75,15 @@ Getting the answers to these questions will help you understand the expected out
 
   Check if there is an existing brand mascot. If there isn’t, start creating one! 
 
-  **First**, fill this 🗝 Bot Personality Builder with all the attributes of the bot that define its personality.
+  **First**, fill this 🗝 [Bot Personality Builder](/assets/Bot_Personality_Builder.docx) with all the attributes of the bot that define its personality. You can download the template by clicking on the link.
   
   **Second**, make sure that you give it a name. The name could be generic like Crisco Virtual Assistant but clearly labeling it as a virtual assistant is important   to set the right expectations with the user. Just so that the user can recollect your bot and say hi! 
 
 💡 Here’s a [resource](https://blog.ubisend.com/discover-chatbots/best-chatbot-names) to help you out.
 
-  **Third**,  don’t forget to give it a face. 🗝 Here’s a link to our IVA icon library for reference!
+  **Third**,  don’t forget to give it a face. 🗝 [Here’s](/assets/IVA_Avatars.pptx) a link to our IVA icon library for reference! You can download the template by clicking on the link. 
 
-  Here’s a filled-up sample of a complete Bot Personality here to help you along!
+  There’s a filled-up sample of a complete Bot Personality here to help you along!
 
   Ultimately, here’s the question you need to answer. Does the IVA resonate with the brand's voice of communication?
   

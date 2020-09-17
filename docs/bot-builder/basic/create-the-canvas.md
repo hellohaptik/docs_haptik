@@ -86,6 +86,7 @@ Getting the answers to these questions will help you understand the expected out
   Here’s a filled-up sample of a complete Bot Personality here to help you along!
 
   Ultimately, here’s the question you need to answer. Does the IVA resonate with the brand's voice of communication?
+  
   **Example1**: If you’re building a bot for an old trusted banking company, does a chirpy 17-year-old girl voice really complement the brand’s tone?
 
 ![kli_avatar](/assets/kliavatar.png)

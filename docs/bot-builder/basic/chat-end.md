@@ -4,6 +4,8 @@ title: Chat End
 
 ![chatend1](https://github.com/hellohaptik/docs_haptik/blob/medhaanand-patch-33/docs/bot-builder/basic/assets/Checklist.xlsx)
 
+[Checklist Download1](/assets/Checklist.xlsx.zip)
+
 ![Checklist Download1](/assets/Checklist.xlsx.zip)
 
 ![Checklist Download2](https://github.com/hellohaptik/docs_haptik/blob/medhaanand-patch-33/docs/bot-builder/basic/assets/Checklist.xlsx?raw=true)

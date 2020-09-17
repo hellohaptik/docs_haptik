@@ -27,7 +27,7 @@ During the execution of a project, you’re responsible for the following:
 1. **Review**: Review the bot after it’s ready and ensure that the design was followed.
 
 - Have you covered all steps from this document in your design?
-- Here is an 🗝 [IVA Review guide](/assets/IVA_Peer_Review_Checklist.xlsx) which you can follow.You can download the template by clicking on the link.
+- Here is an 🗝 [IVA Review guide](/assets/IVA_Peer_Review_Checklist.xlsx) which you can follow. You can download the template by clicking on the link.
 
 2. **Retrospectives**: Retrospectives are a great way of looking back and learning. It is an open platform for everyone to share feedback, discuss impediments, and plan the way forward.
 

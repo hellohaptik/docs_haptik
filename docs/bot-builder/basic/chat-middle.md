@@ -305,13 +305,13 @@ Things don’t always go as planned...especially while chatting. That’s why yo
 
 Make sure that your bot thoroughly covers the entire domain it is meant to serve in. Take a look at the [User Says Guidelines section](https://docs.haptik.ai/bot-builder/basic/user-says-guidelines) for more information. Talk to a QA during solutioning to identify the main edge cases and error states. Design message copies for these.
 
-IMAGE PLACEHOLDER
+![chatmiddle16](/assets/chatmiddle16.png)
 
 #### **2. Follow up messages** 
 
 These are also known as **Delay Messages**. These are used to remind users to provide inputs or re-engaging users. Example:
 
-IMAGE PLACEHOLDER
+![chatmiddle17](/assets/chatmiddle17.png)
 
 **Considerations**: 
 
@@ -326,7 +326,7 @@ c. Don’t use follow up messages on WhatsApp. They are intrusive and will lead 
 
 Entity Retry messages are used to give users a second chance to provide the correct input. Users might make mistakes while sharing information and when the bot vets the user input and finds an incorrect input, the entity retry message is sent. Example:
 
-IMAGE PLACEHOLDER
+![chatmiddle18](/assets/chatmiddle18.png)
 
 **Considerations**: 
 
@@ -339,7 +339,7 @@ b. Test and see that the UX is good even after multiple tries.
 
 This powerful feature is a brilliant way to avoid a bot break by asking the user to clarify their input. It’s also known as the ‘Did You Mean’ feature since it asks the user to pick from a list of the questions they may have meant to ask. Example:
 
-IMAGE PLACEHOLDER
+![chatmiddle19](/assets/chatmiddle19.png)
 
 **Considerations**: 
 
@@ -361,7 +361,7 @@ As described before, this feature will:
 
 3. Autocomplete suggestions while user types to improve the message event count. 
 
-IMAGE PLACEHOLDER
+![autocomplete1](/assets/autocomplete1.png)
 
 #### **6. Dynamic API responses**
 
@@ -395,7 +395,7 @@ Here are some ways to design bot break messages:
 
 - Re-showcasing Bot’s Capabilities: The bot can set a capability expectation and present only those options that the bot can fulfill.
 
-IMAGE PLACEHOLDER
+![chatmiddle20](/assets/chatmiddle20.png)
 
 - CRM Ticket: The bot can take inputs from the user and pass along the unanswered query to a CRM.
 
@@ -403,7 +403,7 @@ IMAGE PLACEHOLDER
 
 - Live Agent Support:  If the bot fails to understand a query, the bot can transfer the chat to a human agent. The agent will be trained to handle queries in the domain. This can either be done for all bot breaks or for breaks in specific task flows.
 
-IMAGE PLACEHOLDER
+![chatmiddle21](/assets/chatmiddle21.png)
 
 **Considerations**:
 
@@ -476,7 +476,7 @@ While I ask an agent to step in, feel free to type in any more details you'd lik
 
 - Agent introduction. If agents are available, make sure that your agent clearly introduces themselves. The Web SDK indicates when an agent joins the conversation like this —   
 
-IMAGE PLACEHOLDER
+![chatmiddle22](/assets/chatmiddle22.png)
 
 WhatsApp and Facebook do not have this indicator so make sure that the agents are trained to introduce themselves accordingly!
 
@@ -500,7 +500,7 @@ Example: Unfortunately, none of our agents are available at the moment. Tap belo
 
 **Definition**: FAQs stand for frequently asked questions. Adding general FAQs to your bot is a great way to ensure that users receive answers to most of their basic questions alongside the more detailed user journeys that you have built. Here’s an 🗝 FAQ bot building guideline to give a quick overview of the entire process. Examples:
 
-IMAGE PLACEHOLDER
+![chatmiddle23](/assets/chatmiddle23.png)
 
 **Considerations**: 
 

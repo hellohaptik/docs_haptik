@@ -4,6 +4,8 @@ title: Chat End
 
 ![chatend1](https://github.com/hellohaptik/docs_haptik/blob/medhaanand-patch-33/docs/bot-builder/basic/assets/Checklist.xlsx)
 
+![Checklist Download](/assets/Checklist.xlsx.zip)
+
 While designing a bot, it is extremely important to design the end of your conversation. After all, how you end a conversation dictates whether a person would be interested in talking to you again. A good end to a first date is more likely to lead to a second one. 
 
 In the same vein, your bot must never end a conversation abruptly. Use the end of any conversation, successful or otherwise, to re-engage the user in some way.

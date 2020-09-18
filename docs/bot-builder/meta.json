@@ -11,21 +11,21 @@
 			"basic/creating-nodes",
 			"basic/smalltalk",
 			"basic/general-nodes",
+			"basic/upload-graph-nodes",
 			"basic/user-says-guidelines",
 			"basic/bot-says",
 			"basic/chat-elements",
 			"basic/connections",
 			"basic/entities",
-			"basic/forms"
+			"basic/forms",
+			"basic/story-templates"
 		],
-		"Essentials of Bot Settings": [
-			"basic/copypaste",
-			"basic/upload-graph-nodes",
-			"basic/story-templates",
-			"basic/sharebot",
-			"basic/transferbot",
+		"Configurations & Settings": [
 			"basic/business",
 			"basic/platforms-deployment",
+			"basic/copypaste",
+			"basic/sharebot",
+			"basic/transferbot",
 			"basic/bot-prompt-trigger"
 		],
 		"NLU": [

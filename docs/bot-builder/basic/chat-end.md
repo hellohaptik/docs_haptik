@@ -16,13 +16,13 @@ In the same vein, your bot must **never end a conversation abruptly**. Use the e
 
 - Teach users about where to find the Taskbox or Menu. 
 
-  Here’s how you can do this for Web SDK bots:
+Here’s how you can do this for Web SDK bots:
 
 ![chatend2](/assets/chatend2.png)
 
-  Here’s how you can do it for WhatsApp bots: 
+Here’s how you can do it for WhatsApp bots: 
 
-  **Type 0 to go to the main menu or enter your query below!**
+**Type 0 to go to the main menu or enter your query below!**
 
 - Ask users whether they need more help. Here’s a sample flow. 
 
@@ -44,7 +44,7 @@ If No, end your conversation gracefully.
 
 - Tell them how to start chatting the next time
 
-**😊 Thank you for contacting us. I will be around whenever you need me. Say “Hi” to start chatting!** - for WhatsApp Bots
+**😊 Thank you for contacting us. I will be around whenever you need me. Say “Hi” to start chatting!**
 
 3. **Collect feedback**
 
@@ -54,13 +54,13 @@ Here are three simple ways you can incorporate feedback collection into your use
 
 a. For the bot
   
-  i. Ask **Did that resolve your query?** and consider shifting the conversation to a human agent if the user is unhappy. 
+- Ask **Did that resolve your query?** and consider shifting the conversation to a human agent if the user is unhappy. 
   
-  ii. Use Haptik’s built-in feedback mechanism to trigger feedback at the end of a conversation. You can use the **{feedback}** command to embed this in your message and can customize the message copy!
+- Use Haptik’s built-in feedback mechanism to trigger feedback at the end of a conversation. You can use the **{feedback}** command to embed this in your message and can customize the message copy!
   
 b. For individual bot replies
 
-  Use Haptik’s per-user message feedback mechanism. You can read more about it [here](https://docs.haptik.ai/web-sdk/configuration-customisation#enable-user-feedback).
+Use Haptik’s per-user message feedback mechanism. You can read more about it [here](https://docs.haptik.ai/web-sdk/configuration-customisation#enable-user-feedback).
 
 c. For the brand
 

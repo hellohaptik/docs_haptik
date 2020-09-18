@@ -2,7 +2,7 @@
 title: Chat Middle
 ---
 
-## Understanding UI Elements
+## Understanding UI elements
 
 This section is a collection of general good practices to follow while designing the core utility of your bot. This includes everything from our content cheat sheet to UI elements to handling bot errors.
 
@@ -101,7 +101,7 @@ A carousel element is useful to showcase multiple options that have a lot of det
 
 4. You may use formatting tags like bold, italics to make the text more eye-catching.
 
-#### 4. Chat forms
+#### 4. Chat Forms
 
 An element used to collect data in a structured format. There are some situations when you want an exact response from your user, or want to make sure that you receive certain information before the user can proceed in the flow. Other times, you may already know potential responses of a user and it may be faster for her/him to simply tap. This is where forms come in handy. 
 
@@ -161,7 +161,7 @@ A new window opens up on click of the Location Picker
 
 2. Ensure that you provide enough guidance to the user to use the location picker since the UX can be confusing. 
 
-#### 8. Web view
+#### 8. Web-View
 
 Web views let you create a custom UI to accept user input for the bot. This means that any type of UI that you need to build a great bot flow is now available. In other words, the IVA is your canvas!
     
@@ -222,13 +222,13 @@ Emojis are one of the easiest ways to ensure that your bot is engaging but you s
 
 ![chatmiddle14](/assets/chatmiddle14.png)
 
-### Line Breaks and Lists
+### Line breaks and lists
 
 Conversational content should be easy to read. Messages are usually short. The same rule is applicable to bots. Break options into lists and bullet points where possible.
 
 ![chatmiddle15](/assets/chatmiddle15.png)
 
-### Messages and Information Sent at Once
+### Messages and information sent at once
 
 In the same vein, limit the number of messages sent at the same time. You hate it when your friend spams you with too much information in separate message bubbles. The KISS (Keep it short & simple) rule works here too!
 
@@ -281,13 +281,13 @@ Sure! I can help you with your e-ticket. Please type your 6-character confirmati
 
 4. **Spelling** — Make sure that you’ve spelled all your words correctly! You may use either British or American spellings and words depending on the geography of the audience. Read the sentence backward to easily spot a spelling mistake!
 
-## Handling Bot Breaks
+## Handling bot breaks
 
 Things don’t always go as planned...especially while chatting. That’s why you need to write copy and design flows for when things go wrong in a conversation between a bot and a user. 
 
 **Definition**: A bot break a.k.a bot error is sent to the user when the bot is not trained or cannot find a close match to the user input.
 
-### Types of Errors
+### Types of errors
 
 - No input: The user did not respond to a message, hesitated, was distracted, had a connection error or none of the choices matched their need.
 
@@ -299,7 +299,7 @@ Things don’t always go as planned...especially while chatting. That’s why yo
 
 - Task failure: The user’s request cannot be fulfilled due to a failing on the bot’s end.
 
-### Measures to Avoid Bot Breaks
+### Measures to avoid bot breaks
 
 #### **1. Train your IVA well and design for error cases**
 
@@ -349,7 +349,7 @@ b. For every node, rename the node appropriately below 20 characters depending o
 
 c. Ensure that you use Sentence case
 
-#### **5. Autocomplete Feature (a.k.a AutoSuggest)**
+#### **5. Autocomplete feature (a.k.a Auto-Suggest)**
 
 As the user starts typing in free form, we match the user's typed letters with the User Says sentences on the bot. [Here’s](https://docs.haptik.ai/bot-builder/basic/user-says#autocomplete-suggestions) the documentation to help you enable it.
 
@@ -387,7 +387,7 @@ b. Account for cases where the API returns too much data to fit into a single wi
 
 c. Wherever possible, address your user personally using their name or by providing some pre-saved data to make your conversation seem more personal.
 
-### Drafting the Bot Break Message
+### Drafting the Bot Break message
 
 The bot break message should be carefully worded. It should first acknowledge that the bot cannot help with the query. It should then focus on redirecting the user back into the conversation. Either redirect the user to the main menu or into another conversational flow.
 
@@ -423,7 +423,7 @@ c. Having multiple variations in your bot makes your bot seem empathetic and int
 
 - Bots cannot be expected to know everything about the domain and having agents on hand is a good way to handle out of scope requests.
 
-### Parts of the Agent Transfer Experience
+### Parts of the Agent Transfer experience
 
 Admit that a human agent may be better equipped to handle the query and give the user the option of talking to one. 
 

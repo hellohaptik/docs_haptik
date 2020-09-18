@@ -20,7 +20,7 @@
 			"basic/forms",
 			"basic/story-templates"
 		],
-		"Configurations & Settings": [
+		"Configurations Settings": [
 			"basic/business",
 			"basic/platforms-deployment",
 			"basic/copypaste",
@@ -51,7 +51,7 @@
 			"integrations/integrating-apis",
 			"integrations/integration-parameters"
 		],
-		"Testing": [
+		"Quality Assessment": [
 			"basic/testing-bot",
 			"advanced/development-guidelines",
 			"advanced/testing-guidelines",

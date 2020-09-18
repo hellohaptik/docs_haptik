@@ -22,6 +22,8 @@ We started using Lucid at the start of 2019 and put it through its paces, only t
 
 Our platform’s users now have access to a central Haptik Library of over 20 Haptik specific UI elements that can be used to design bot flows for any client.
 
+![flowchart1](/assets/flowchart1.png)
+
 ## How to use this Library on any tool?
 
 1. Haptik will provide a downloadable file format that works for your tool - .vsdx, .vsd or .csv.
@@ -48,7 +50,7 @@ Here’s what your flowchart should contain apart from your basic chatflow desig
 
 1. API calls whenever you need to fetch or send any information from within the bot to another system. Illustrated below
 
-IMAGE PLACEHOLDER
+![flowchart2](/assets/flowchart2.png)
 
 2. Entities - Use a placeholder like **%name** to highlight dynamic values. You may also use actual sample values like **John Doe** but highlight these in some color so that bot builders know that these are dynamic. As shown below —
 
@@ -56,14 +58,14 @@ IMAGE PLACEHOLDER
 
 3. You may use the clarifications box to highlight content options and open questions. Once a clarification is closed, make sure that no important notes are lost — we recommend adding a Note for any important information.
 
-IMAGE PLACEHOLDER
+![flowchart3](/assets/flowchart3.png)
 
 4. Bot Prompts are ‘notifications’ sent to users to draw their attention. Make sure you include them in your flowchart if you wish to define user journeys that begin from these prompts. This is explained in detail in the [Chat Initiation >> Bot Prompt](https://docs.haptik.ai/bot-builder/basic/chat-initiation#bot-prompts) section below. 
 
-IMAGE PLACEHOLDER
+![flowchart4](/assets/flowchart4.png)
 
 5. Bot Break messages - Users tend to enter unsupported queries or gibberish during the conversation. Always ensure that your design includes a bot break message alongside the taskbox. You can learn more about how to build better bot break experiences in the [Bot Breaks](https://docs.haptik.ai/bot-builder/basic/chat-middle#handling-bot-breaks) section.
 
-IMAGE PLACEHOLDER
+![flowchart5](/assets/flowchart5.png)
 
 Follow these steps to ensure that your flowchart is comprehensive and provides an excellent base for the Bot Building team to take over!

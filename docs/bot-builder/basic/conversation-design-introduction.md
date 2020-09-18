@@ -16,7 +16,7 @@ Step 2: Select an appropriate design tool such as Lucidchart or draw.io, to buil
 
 Step 3: And finally, review using various guidelines and go-live
 
-## How t
+## What is the process
 
 Conversation Design entails the entire structure of your Intelligent Virtual Assistant that spearheads your bot building process.
 

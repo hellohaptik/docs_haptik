@@ -1,0 +1,154 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Chat Initiation · Haptik Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Words make up a conversation."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Chat Initiation · Haptik Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.haptik.ai/"/><meta property="og:description" content="Words make up a conversation."/><meta property="og:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.haptik.ai/img/image_0.png"/><link rel="shortcut icon" href="/img/image_0.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-106563119-6', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="/js/index.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/image_0.png" alt="Haptik Docs"/><h2 class="headerTitleWithLogo">Haptik Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="/#tools" target="_self">Tools</a></li><li class=""><a href="/#integrations" target="_self">Integrations</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Conversation Design</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/basic/introduction">Introduction</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/for-bot-builders">For Bot Builders</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Essentials of Bot Building</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/basic/making-first-bot">Making Your First Bot</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/bot-hierarchy">Bot Hierarchy</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/creating-story">Creating a Story</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/creating-nodes">Creating Nodes</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/smalltalk">Small Talk</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/general-nodes">General Nodes</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/upload-graph-nodes">Upload Graph Nodes</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/user-says-guidelines">User Says Guidelines</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/bot-says">Bot Says</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/chat-elements">Chat Elements</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/connections">Connections</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/entities">Entities</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/forms">Forms</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/story-templates">Story Templates</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Configurations Settings</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/basic/business">Business</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/platforms-deployment">Platforms Deployment</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/copypaste">Copy &amp; Paste on Bot Builder</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/sharebot">Share your IVA</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/transferbot">Transfer your IVA</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/bot-prompt-trigger">Bot Prompts</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">NLU</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/basic/intent">Intent</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/managing-bot-state">Managing Bot Context and State</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/dialoguemanager">Dialogue Manager</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/disambiguation">Did you mean? (Disambiguation)</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/smart-assist">Smart Assist</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Conversation Design</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/basic/conversation-design-introduction">Introduction</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/setting-flowchart-tool">Setting up a FlowChart tool</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/create-the-canvas">Create the canvas</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/whatsapp_as_a_platform">WhatsApp as a Platform</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/bot-builder/basic/chat-initiation">Chat Initiation</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/chat-middle">Chat Middle</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/chat-end">Chat End</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/design-review">Design Review</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Integrations</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/integrations/introduction">Introduction</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/integrations/integrating-custom-code">Code Node Integration</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/integrations/integrating-apis">Static Node Integration</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/integrations/integration-parameters">Integration Parameters</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Quality Assessment</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/basic/testing-bot">Testing your bot</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/advanced/development-guidelines">Bot Development Life Cycle</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/advanced/testing-guidelines">Testing Guidelines</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/advanced/debugging-guidelines">How to debug your bot?</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/oracle-feedback">ORACLE Feedback</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Advanced</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/advanced/integrating-webviews-into-sdk">Integrating Webviews</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/advanced/integrating-with-external-bot">Integrating with External Bot</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Webhooks</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/integrations/additional-apis">Additional APIs</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Miscellaneous</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/basic/multiple-languages">Multiple Languages</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/building-voice-bots">Building Voice bots</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Chat Initiation</h1></header><article><div><span><p>Words make up a conversation.</p>
+<p>And along with words, you also have access to a set of UI elements to make your conversation more engaging. This section aims to give you a complete set of practices and tips that’ll help you craft the conversation!</p>
+<p>Bot replies should be crafted keeping all possible input ways in mind. Content should feel all-natural and not disjointed. This section lists the various ways a conversation can be initiated with a bot and the most effective way to design chat initiation.</p>
+<h2><a class="anchor" aria-hidden="true" id="menu"></a><a href="#menu" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Menu</h2>
+<p>a. The menu (sometimes called a taskbox) is the list of items shown to the user when they begin the conversation. It’s a guide to help them understand what the bot can do for them and is a great point to start designing your user journey as well.</p>
+<p>b. The menu is the safest way to start - List all the tasks (isolated items that the bot can do for the user). Examples: Fetching a Bill, Emailing an account statement, Reporting an issue</p>
+<p>c. Don't get confused between a usecase and a menu item - Usecase is a bigger umbrella than a menu item (The smallest unit of a usecase is a task).</p>
+<p>d. Create categories for the menu. We recommend that only 3-4 are shown on the UI and then View More.</p>
+<p><img src="/assets/kliavatar.png" alt="kli_avatar"></p>
+<h2><a class="anchor" aria-hidden="true" id="freeform"></a><a href="#freeform" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Freeform</h2>
+<p>a. List straightforward variations which will lead to that particular task.
+Example: I have a complaint should lead to - Have a complaint task.</p>
+<p>b. List other variations which could lead to that particular task.
+Example: My package is late should also lead to - Have a complaint task. This should be handled in a separate node.</p>
+<p>c. We can follow the User Says Guidelines for having a clear picture of writing these variations.</p>
+<p>d. One way to guide users who prefer typing in freeform would be the AutoComplete feature on the Haptik platform. You can customize the option that appears within the AutoComplete window by flagging it in the bot builder. <a href="https://docs.haptik.ai/bot-builder/basic/user-says#autocomplete-suggestions">Here’s</a> the documentation to help you enable it on your IVA.</p>
+<p><img src="/assets/autocomplete1.png" alt="autocomplete"></p>
+<h2><a class="anchor" aria-hidden="true" id="bot-prompts"></a><a href="#bot-prompts" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Bot Prompts</h2>
+<p>Bot prompts are ‘notifications’ sent to users to draw their attention to the bot’s location and help them understand what the bot can do for them. This is explained in detail below.</p>
+<ul>
+<li><p>Make sure the button of the prompt leads to the desired node organically.
+<strong>Example</strong>: If your bot prompt CTA says “Find a plan”, don't immediately ask the user to enter their details in the next message. Ease the user into the conversation by presenting the plan options and then asking for their details. These small touches will result in conversions.</p></li>
+<li><p>Don't have misleading content on the prompt. Avoid using it as advertising real estate for your brand. Make sure the bot’s intentions are clarified at the face value of the prompt.</p></li>
+</ul>
+<p><img src="/assets/botprompt1.png" alt="botprompt"></p>
+<ul>
+<li><p>You can customize several aspects of prompts including the pages they appear on, the delay after which they appear, how they work for repeat users, and so on. Read more about it in our documentation <a href="https://docs.haptik.ai/bot-builder/basic/bot-prompt-trigger">here</a>.</p></li>
+<li><p>At the very least, we recommend adding the following bot prompts:</p></li>
+</ul>
+<ol>
+<li><p><strong>Introductory prompts</strong>: Mostly set on the homepage of the website or app, these prompts are a friendly way to draw attention to the bot.
+Example:
+Page: On the Home Page
+Prompt: Hi! I'm Zuri, the Zurich virtual assistant. 🤖
+May I help you?</p></li>
+<li><p><strong>Usecase specific prompts</strong>: These prompts can be set on any page where it makes sense to push a particular usecase.
+Example:
+Page: On the sales page for Trading accounts
+Prompt: Opening a trading account is as easy as 1, 2, 3...Stuck somewhere? I can help you.
+Example:
+Page: On the Technology and Resources Page: These will lead to the Get a chatbot flow
+Prompt: 🤔 Wondering how our technology can help you? Come, talk to me!</p></li>
+</ol>
+<ul>
+<li>Some writing tips to keep your prompts interesting:</li>
+</ul>
+<ol>
+<li>Directly address the customer and use “you” to draw their attention.</li>
+<li>Provide a benefit or two.</li>
+<li>Make it relatable and use the user persona as a guide! Call out the emotional value and problem the user may be facing.</li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="launch-message"></a><a href="#launch-message" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Launch Message</h2>
+<p>You can use this when you want your users to be greeted with a welcome message by the bot. This also helps to initiate users gently into a conversation.</p>
+<p><img src="/assets/welcomemessage.png" alt="welcomemessage"></p>
+<h2><a class="anchor" aria-hidden="true" id="smalltalk"></a><a href="#smalltalk" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>SmallTalk</h2>
+<p>SmallTalk is a way to ensure that your bot is able to answer chit chat queries. Since chit chat is usually a conversation starter, it is important to consider SmallTalk while designing your Chat Initiation experience.</p>
+<ul>
+<li><p>The Haptik platform has a plug-and-play SmallTalk module that allows you to completely edit all SmallTalk nodes (around 99 separate intents) and choose your own persona, brand, and content.</p></li>
+<li><p>While you’re editing the SmallTalk module, make sure that you include a menu list as a response for intents like Greetings, Start_Chat, and Capability. This is important because users want to know what the bot can do for them even though they are chitchatting. If you have the time, we recommend adding some form of re-engagement option to every single intent.</p></li>
+<li><p><a href="https://docs.haptik.ai/bot-builder/basic/smalltalk">Here’s</a> the link to the official documentation that covers everything you need to know.</p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="generic-tips"></a><a href="#generic-tips" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Generic Tips</h2>
+<ol>
+<li><p>Clearly introduce your bot.</p></li>
+<li><p>Start with a smile. Not all bots need to be super chatty, hilarious, or whacky but setting a friendly, trustworthy tone at the beginning is important. It tells the user that the bot is meant to solve their issues and not be an annoying machine to prevent human contact.</p></li>
+<li><p>Set clear expectations. This will dictate the success of your bot. Tell the user what the bot can do and give them an option if they can’t find their query on the supported list. Ask them to satate their query in keywords if that’s what your bot understands best.</p></li>
+<li><p>Don’t be bot centric. Focus on the user instead of focusing on the bot.
+Example: When the bot is unable to understand a user’s query, instead of saying, “Oops! I didn’t understand that because I’m a bot”, say “I’m sorry that your query wasn’t resolved. Would you like to start over?”.</p></li>
+</ol>
+<p>💡 Tip: Take cues from a real human assistant and read your content out loud to gauge whether it comes across as empathetic and natural.</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 9/18/2020</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/bot-builder/basic/whatsapp_as_a_platform"><span class="arrow-prev">← </span><span class="function-name-prevnext">WhatsApp as a Platform</span></a><a class="docs-next button" href="/bot-builder/basic/chat-middle"><span>Chat Middle</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#menu">Menu</a></li><li><a href="#freeform">Freeform</a></li><li><a href="#bot-prompts">Bot Prompts</a></li><li><a href="#launch-message">Launch Message</a></li><li><a href="#smalltalk">SmallTalk</a></li><li><a href="#generic-tips">Generic Tips</a></li></ul></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Bot Builder</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://docs.haptik.ai/ios-sdk/" class="footer-column-link">iOS SDK</a><a href="https://docs.haptik.ai/android-sdk/" class="footer-column-link">Android SDK</a><a href="https://docs.haptik.ai/web-sdk/" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/whatsapp/" class="footer-column-link">WhatsApp</a><a href="https://docs.haptik.ai/other/facebook" class="footer-column-link">Facebook</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Bot API</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a><a href="https://docs.haptik.ai/other/security" class="footer-column-link">Security</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Agent Chat Tool</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2020 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '224c7079e67e84a978d8b4621f6af16d',
+                indexName: 'haptik',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

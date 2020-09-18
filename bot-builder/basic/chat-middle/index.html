@@ -1,0 +1,439 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Chat Middle · Haptik Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Understanding UI elements"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Chat Middle · Haptik Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.haptik.ai/"/><meta property="og:description" content="## Understanding UI elements"/><meta property="og:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.haptik.ai/img/image_0.png"/><link rel="shortcut icon" href="/img/image_0.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-106563119-6', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="/js/index.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/image_0.png" alt="Haptik Docs"/><h2 class="headerTitleWithLogo">Haptik Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="/#tools" target="_self">Tools</a></li><li class=""><a href="/#integrations" target="_self">Integrations</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Conversation Design</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/basic/introduction">Introduction</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/for-bot-builders">For Bot Builders</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Essentials of Bot Building</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/basic/making-first-bot">Making Your First Bot</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/bot-hierarchy">Bot Hierarchy</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/creating-story">Creating a Story</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/creating-nodes">Creating Nodes</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/smalltalk">Small Talk</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/general-nodes">General Nodes</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/upload-graph-nodes">Upload Graph Nodes</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/user-says-guidelines">User Says Guidelines</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/bot-says">Bot Says</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/chat-elements">Chat Elements</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/connections">Connections</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/entities">Entities</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/forms">Forms</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/story-templates">Story Templates</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Configurations Settings</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/basic/business">Business</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/platforms-deployment">Platforms Deployment</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/copypaste">Copy &amp; Paste on Bot Builder</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/sharebot">Share your IVA</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/transferbot">Transfer your IVA</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/bot-prompt-trigger">Bot Prompts</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">NLU</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/basic/intent">Intent</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/managing-bot-state">Managing Bot Context and State</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/dialoguemanager">Dialogue Manager</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/disambiguation">Did you mean? (Disambiguation)</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/smart-assist">Smart Assist</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Conversation Design</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/basic/conversation-design-introduction">Introduction</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/setting-flowchart-tool">Setting up a FlowChart tool</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/create-the-canvas">Create the canvas</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/whatsapp_as_a_platform">WhatsApp as a Platform</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/chat-initiation">Chat Initiation</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/bot-builder/basic/chat-middle">Chat Middle</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/chat-end">Chat End</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/design-review">Design Review</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Integrations</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/integrations/introduction">Introduction</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/integrations/integrating-custom-code">Code Node Integration</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/integrations/integrating-apis">Static Node Integration</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/integrations/integration-parameters">Integration Parameters</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Quality Assessment</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/basic/testing-bot">Testing your bot</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/advanced/development-guidelines">Bot Development Life Cycle</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/advanced/testing-guidelines">Testing Guidelines</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/advanced/debugging-guidelines">How to debug your bot?</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/oracle-feedback">ORACLE Feedback</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Advanced</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/advanced/integrating-webviews-into-sdk">Integrating Webviews</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/advanced/integrating-with-external-bot">Integrating with External Bot</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Webhooks</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/integrations/additional-apis">Additional APIs</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Miscellaneous</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/basic/multiple-languages">Multiple Languages</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/building-voice-bots">Building Voice bots</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Chat Middle</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="understanding-ui-elements"></a><a href="#understanding-ui-elements" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Understanding UI elements</h2>
+<p>This section is a collection of general good practices to follow while designing the core utility of your bot. This includes everything from our content cheat sheet to UI elements to handling bot errors.</p>
+<p>We recommend that you read this entire section before you start designing your user journey.</p>
+<h3><a class="anchor" aria-hidden="true" id="pick-your-goal"></a><a href="#pick-your-goal" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pick your goal</h3>
+<p>Now that you know how your bot will be initialized, it's important to take a deep breath and analyze your goal. It can be one of the two things:</p>
+<ol>
+<li><p><strong>Speed</strong>: When you’re trying to provide an answer quickly and help the user reach their goal fast.
+Goal to keep in mind: What’s the fastest way to answer the users’ queries on chat?</p></li>
+<li><p><strong>Clarity</strong>: When you're trying to explain a concept clearly or provide steps for resolution in a simple way that the user understands.
+Goal to keep in mind: What’s the clearest and simplest way to answer the users’ query on chat?</p></li>
+</ol>
+<p>Knowing the answer to this will help you when you need to decide between a clear and long journey and a terse but fast journey.</p>
+<h3><a class="anchor" aria-hidden="true" id="content-tone-and-voice-considerations"></a><a href="#content-tone-and-voice-considerations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Content tone and voice considerations</h3>
+<ol>
+<li><p><strong>Personality</strong>: Does the IVA resonate with the brand's voice of communication?
+Example: If you’re building a bot for an old trusted banking company, does a chirpy 17-year-old girl voice really complement the brand’s tone?</p></li>
+<li><p><strong>Emotional state</strong>: Are you able to connect with the user at an emotional level?
+Example: If your bot is an Insurance Claims Collection bot, your user is probably sad or has been grieving for a personal loss. Is your bot content addressing your user with this in mind?</p></li>
+<li><p><strong>Engagement</strong>: Are you able to retain the user's attention until the goal is completed?
+Example: If your bot is a sales bot, will a user make a purchase after conversing with your bot? Is the bot really able to create a connection with the user?</p></li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="pick-the-right-terms"></a><a href="#pick-the-right-terms" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pick the right terms</h3>
+<p>A conversation often has several parts that can feel repetitive like Affirmations, Conversation Propellers, Conversation Enders, and so on.
+Here’s the 🗝 Content Cheatsheet  — a content repository of phrases and keywords to use in various situations in any chat flow.</p>
+<h3><a class="anchor" aria-hidden="true" id="conversation-user-interfaces-vs-graphical-user-interfaces"></a><a href="#conversation-user-interfaces-vs-graphical-user-interfaces" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Conversation User Interfaces vs Graphical User Interfaces</h3>
+<p>Understanding the strengths and weaknesses of CUIs and GUIs will help you decide whether a project is a good use case for a bot or not.</p>
+<p><img src="/assets/chatmiddle1.png" alt="chatmiddle1"></p>
+<p>When you’re looking at a list of flights on the screen, it’s easier to tap your preferred one than send a message with the flight number. A GUI can also pack in much more information in the same area than a CUI.</p>
+<p>However, once you start packing for the trip, it’s easier to ask/type “baggage allowance” and get a reply with the check-in weight allowance as compared to navigating multiple screens, skimming, and searching through all the information.</p>
+<p><img src="/assets/chatmiddle2.png" alt="chatmiddle2"></p>
+<h3><a class="anchor" aria-hidden="true" id="picking-conversational-elements"></a><a href="#picking-conversational-elements" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Picking conversational elements</h3>
+<p>While text works great for certain interactions, other interactions may benefit from a GUI. The Haptik platform supports elements such as images, carousels, buttons, and Quick Replies. Use these to break the monotony of your content.</p>
+<p>Here is a guide on each of these elements:</p>
+<h4><a class="anchor" aria-hidden="true" id="1-quick-replies-qrs"></a><a href="#1-quick-replies-qrs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Quick Replies (QRs)</h4>
+<p>Tappable buttons that can be used to reply instead of typing out a response.</p>
+<p><img src="/assets/chatend1.png" alt="chatmiddle"></p>
+<p>Quick replies are likely to be the most commonly used interactive element in your user journey. They are extremely useful to provide suggestions to the user and take away the work of typing. Quick replies are the best element to lead the user to the next set of options.</p>
+<p><strong>Pros</strong>: Tapping is faster and easier than typing for the average user. QRs act as suggestions and are non-persistent (i.e. they disappear after a selection is made).</p>
+<blockquote>
+<p>Tip: You can show up to 27 characters on a QR.</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="2-buttons"></a><a href="#2-buttons" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. Buttons</h4>
+<p>An element used to redirect users to a different flow or page in order to complete a task. Buttons guide users to click on a very clear, persistent Call-To-Action (CTA). You can also use these to provide links to a different page or redirect a user elsewhere. Buttons are persistent elements (i.e. they remain on the screen even after a selection is made).</p>
+<p><img src="/assets/chatmiddle3.png" alt="chatmiddle3"></p>
+<p><strong>Tips</strong>:</p>
+<ol>
+<li><p>Use buttons when you want the option to remain on the screen (users have a habit of scrolling back up and tapping on buttons) whereas QRs are best used when there is a clear fork in the flow.</p></li>
+<li><p>Buttons occupy vertical space and are not a good element to use when you have many options. Even though Buttons get higher click-throughs than Quick Replies, it’s better to use QRs when you have more than 3 options.</p></li>
+<li><p>Make sure that the button text includes a verb at the beginning and use the arrow (↗) if the button will redirect outside the bot.
+Example: View Plans ↗</p></li>
+<li><p>For maximum visibility, use 21 characters at the most for the button’s text.</p></li>
+</ol>
+<h4><a class="anchor" aria-hidden="true" id="3-carousels"></a><a href="#3-carousels" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. Carousels</h4>
+<p>A slideshow component for cycling through elements—images or slides of text—like a carousel.</p>
+<p><img src="/assets/chatmiddle4.png" alt="chatmiddle4"></p>
+<p>A carousel element is useful to showcase multiple options that have a lot of details or visual elements. In addition to this unique feature, carousels also help beautify and direct the flow. Carousels can have 3 widths - small, medium, and fat.</p>
+<p><strong>Tips</strong>:</p>
+<ol>
+<li><p>Limit the number of carousel cards to 4-5 at the most. The first few cards tend to be the most viewed.</p></li>
+<li><p>Neatly format the text within the card into lists or paragraphs.</p></li>
+<li><p>Use the header for the most important information like product names or order IDs. Use dividers like | or — while showing multiple pieces of information.</p></li>
+<li><p>You may use formatting tags like bold, italics to make the text more eye-catching.</p></li>
+</ol>
+<h4><a class="anchor" aria-hidden="true" id="4-chat-forms"></a><a href="#4-chat-forms" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4. Chat Forms</h4>
+<p>An element used to collect data in a structured format. There are some situations when you want an exact response from your user, or want to make sure that you receive certain information before the user can proceed in the flow. Other times, you may already know potential responses of a user and it may be faster for her/him to simply tap. This is where forms come in handy.</p>
+<p><img src="/assets/chatmiddle5.png" alt="chatmiddle5"></p>
+<p>Example: Collect 3-5 pieces of very structured information. E.g. Personal details for an Insurance plan</p>
+<p><strong>Tips</strong>:</p>
+<ol>
+<li><p>Forms with more than 4 fields are likely to see a lower completion rate.</p></li>
+<li><p>Whenever the input is expected from a user in a structured format, it's best taken in a form.</p></li>
+<li><p>QRs vs Forms: Use Quick Replies when there are only a few ways a user can respond. Use Forms when there’s a larger number of responses potential. Resort to free form when there’s a gigantic number of potential responses.</p></li>
+</ol>
+<h4><a class="anchor" aria-hidden="true" id="5-videos"></a><a href="#5-videos" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5. Videos</h4>
+<p>A video element allows you to share a video right within the chat window Almost all platforms like Web SDK, WhatsApp and Facebook allow this feature. You can even use videos to replace an FAQ/concept that's too long to show using text!</p>
+<p><img src="/assets/chatmiddle6.png" alt="chatmiddle6"></p>
+<h4><a class="anchor" aria-hidden="true" id="6-images"></a><a href="#6-images" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>6. Images</h4>
+<p>The image element is a great way to showcase content that is best represented graphically.</p>
+<p><img src="/assets/chatmiddle7.png" alt="chatmiddle7"></p>
+<p><strong>Pros</strong>:</p>
+<ol>
+<li><p>To increase readability</p></li>
+<li><p>To break the monotony of text</p></li>
+<li><p>To condense a lot of text into a chart or easy-to-consume visual</p></li>
+</ol>
+<p><strong>Some ways to use images</strong>:</p>
+<ol>
+<li><p>Explaining how to complete a process. Eg. Logging in to an application</p></li>
+<li><p>Showcasing a long list or table of contents</p></li>
+<li><p>Showcasing a product</p></li>
+</ol>
+<h4><a class="anchor" aria-hidden="true" id="7-location-picker"></a><a href="#7-location-picker" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>7. Location Picker</h4>
+<p>The location picker element for the Web SDK allows users to share their location. For the Web SDK, users first need to tap on a button which then opens up a web view with a map. For WhatsApp, the <strong>share current location</strong> option can be used.</p>
+<p><img src="/assets/chatmiddle8.png" alt="chatmiddle8"></p>
+<p>A new window opens up on click of the Location Picker</p>
+<p><img src="/assets/chatmiddle9.png" alt="chatmiddle9"></p>
+<p><strong>Considerations</strong>:</p>
+<ol>
+<li><p>Always allow an alternative if the user does not wish to share their location</p></li>
+<li><p>Ensure that you provide enough guidance to the user to use the location picker since the UX can be confusing.</p></li>
+</ol>
+<h4><a class="anchor" aria-hidden="true" id="8-web-view"></a><a href="#8-web-view" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>8. Web-View</h4>
+<p>Web views let you create a custom UI to accept user input for the bot. This means that any type of UI that you need to build a great bot flow is now available. In other words, the IVA is your canvas!</p>
+<p><img src="/assets/chatmiddle10.png" alt="chatmiddle10"></p>
+<p>A new window opens up on click of the button</p>
+<p><img src="/assets/chatmiddle11.png" alt="chatmiddle11"></p>
+<p><strong>Considerations</strong>:</p>
+<ol>
+<li><p>These windows are completely flexible in terms of the GUI. Design the UX and copy just as you would for any other GUI.</p></li>
+<li><p>A user can invoke a webview by clicking on a button. Design your conversational UX accordingly.</p></li>
+<li><p>These webviews can be configured to open at different heights as well.</p></li>
+</ol>
+<p>👉 Take a look <a href="https://haptik.ai/blog/dissecting-conversational-ui-infographic/">here</a> for a quick cheat sheet of available elements and their usage.</p>
+<p>💡 Don’t neglect your Element headers while designing your virtual assistant! These are the copies you see within CUI elements. Like the content on your in-chat forms and carousels.</p>
+<p><img src="/assets/chatmiddle12.png" alt="chatmiddle12"></p>
+<p>Another example</p>
+<p><img src="/assets/chatmiddle13.png" alt="chatmiddle13"></p>
+<p><strong>Considerations</strong>:</p>
+<ol>
+<li><p>Put thought into this. Understand how the UI for your product will work and write down all the bits of copy that affect this.</p></li>
+<li><p>Keep it short and engaging. You want users to clearly understand what needs to be entered but do it quickly.</p></li>
+<li><p>Take care of capitalization and make sure all the words follow the Title case. Example - Recommend a Product.</p></li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="content-formatting"></a><a href="#content-formatting" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Content formatting</h2>
+<h3><a class="anchor" aria-hidden="true" id="text-formatting-bold-italic-underline"></a><a href="#text-formatting-bold-italic-underline" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Text formatting: Bold, Italic, Underline</h3>
+<p>Your user should be able to skim through your answer and understand the response.</p>
+<p><strong>Considerations</strong>:</p>
+<ol>
+<li><p>For long FAQs, always make sure that the most important aspect of the answer is bold.</p></li>
+<li><p>Always make sure that any direct questions to the user are made bold.
+Example: Thank you for providing your details. Would you like to receive a call from our agents?</p></li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="emoji"></a><a href="#emoji" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Emoji</h3>
+<p>Emojis are one of the easiest ways to ensure that your bot is engaging but you should definitely use them carefully.</p>
+<p><strong>Considerations</strong>:</p>
+<ol>
+<li><p>Always have emoji at the beginning or end of a message. Avoid showing them in the middle.</p></li>
+<li><p>Emoji ≠ Punctuation. Leave a space before or after emoji.</p></li>
+</ol>
+<p><img src="/assets/chatmiddle14.png" alt="chatmiddle14"></p>
+<h3><a class="anchor" aria-hidden="true" id="line-breaks-and-lists"></a><a href="#line-breaks-and-lists" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Line breaks and lists</h3>
+<p>Conversational content should be easy to read. Messages are usually short. The same rule is applicable to bots. Break options into lists and bullet points where possible.</p>
+<p><img src="/assets/chatmiddle15.png" alt="chatmiddle15"></p>
+<h3><a class="anchor" aria-hidden="true" id="messages-and-information-sent-at-once"></a><a href="#messages-and-information-sent-at-once" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Messages and information sent at once</h3>
+<p>In the same vein, limit the number of messages sent at the same time. You hate it when your friend spams you with too much information in separate message bubbles. The KISS (Keep it short &amp; simple) rule works here too!</p>
+<h3><a class="anchor" aria-hidden="true" id="length"></a><a href="#length" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Length</h3>
+<p>Every platform has different character limits for bot replies (for example, Facebook supports 500 characters in each answer.)</p>
+<p>However, we recommend that your answers range between 200-300 characters for optimal readability. More than this will overwhelm the user and consume too much space in the chat window. Ensure that your answer will succinctly and clearly provide a response to the user. Use short, chat-friendly words. Nobody likes it when a bot is too verbose!</p>
+<h3><a class="anchor" aria-hidden="true" id="proofreading"></a><a href="#proofreading" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Proofreading</h3>
+<p>While not all of us are writers, there's one way to make sure that your copies don't suffer from terrible grammar, bad sentence structure, and incorrect spelling.</p>
+<p>💡 Use <a href="https://www.grammarly.com/">Grammarly</a>, a free grammar checking software to help you eliminate grammar errors and easily improve any text (even within the Bot Builder Tool!)</p>
+<h3><a class="anchor" aria-hidden="true" id="call-the-grammar-cops"></a><a href="#call-the-grammar-cops" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Call the grammar 'COPS'</h3>
+<p>Basics to take care of:</p>
+<ol>
+<li><strong>Capitalization</strong> - Ensuring that you follow a standard set of rules for capitalization throughout your bot. It is a reflection of the quality of the brand and the personality of the IVA too!</li>
+</ol>
+<p>Here are some places where a capital letter is mandatory:</p>
+<ul>
+<li>The first letter of the first word that starts a sentence</li>
+<li>The letter 'I'</li>
+<li>Proper nouns</li>
+</ul>
+<p>CTAs should be capitalized uniformly:</p>
+<ul>
+<li>Option 1: Use Sentence Case throughout the bot for both messages and CTAs.</li>
+<li>Option 2: Use Sentence Case for all messages and use Title Case for CTAs, titles, and header text.</li>
+</ul>
+<p>💡 <a href="https://capitalizemytitle.com/">https://capitalizemytitle.com/</a> is a great tool for this.</p>
+<ol start="2">
+<li><strong>Organization</strong> - Does the message content make sense? Check if it follows the structure mentioned below.</li>
+</ol>
+<p>Affirmation
+{Message}
+Question/Conclusion</p>
+<p><strong>Example</strong>:
+Sure! I can help you with your e-ticket. Please type your 6-character confirmation code below 👇</p>
+<ol start="3">
+<li><strong>Punctuation</strong> -</li>
+</ol>
+<ul>
+<li>Check all periods, exclamation marks, question marks, commas.</li>
+<li>Standardize Bullet Points a.k.a list items.</li>
+<li>Use a period (full stop) after every bullet point that is a sentence.</li>
+<li>Don’t use any punctuation after bullet points that are not sentences.</li>
+</ul>
+<ol start="4">
+<li><strong>Spelling</strong> — Make sure that you’ve spelled all your words correctly! You may use either British or American spellings and words depending on the geography of the audience. Read the sentence backward to easily spot a spelling mistake!</li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="handling-bot-breaks"></a><a href="#handling-bot-breaks" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Handling bot breaks</h2>
+<p>Things don’t always go as planned...especially while chatting. That’s why you need to write copy and design flows for when things go wrong in a conversation between a bot and a user.</p>
+<p><strong>Definition</strong>: A bot break a.k.a bot error is sent to the user when the bot is not trained or cannot find a close match to the user input.</p>
+<h3><a class="anchor" aria-hidden="true" id="types-of-errors"></a><a href="#types-of-errors" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Types of errors</h3>
+<ul>
+<li><p>No input: The user did not respond to a message, hesitated, was distracted, had a connection error or none of the choices matched their need.</p></li>
+<li><p>No match: The bot is not able to understand the user as they say something out of the bot's vocabulary. This is most commonly called a bot break.</p></li>
+<li><p>Disambiguation: The bot is confused between 2 nodes/intents and needs better input from the user.</p></li>
+<li><p>Misrecognition or False Positive: The bot wrongly identifies what the user says.</p></li>
+<li><p>Task failure: The user’s request cannot be fulfilled due to a failing on the bot’s end.</p></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="measures-to-avoid-bot-breaks"></a><a href="#measures-to-avoid-bot-breaks" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Measures to avoid bot breaks</h3>
+<h4><a class="anchor" aria-hidden="true" id="1-train-your-iva-well-and-design-for-error-cases"></a><a href="#1-train-your-iva-well-and-design-for-error-cases" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1. Train your IVA well and design for error cases</strong></h4>
+<p>Make sure that your bot thoroughly covers the entire domain it is meant to serve in. Take a look at the <a href="https://docs.haptik.ai/bot-builder/basic/user-says-guidelines">User Says Guidelines section</a> for more information. Talk to a QA during solutioning to identify the main edge cases and error states. Design message copies for these.</p>
+<p><img src="/assets/chatmiddle16.png" alt="chatmiddle16"></p>
+<h4><a class="anchor" aria-hidden="true" id="2-follow-up-messages"></a><a href="#2-follow-up-messages" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>2. Follow up messages</strong></h4>
+<p>These are also known as <strong>Delay Messages</strong>. These are used to remind users to provide inputs or re-engaging users. Example:</p>
+<p><img src="/assets/chatmiddle17.png" alt="chatmiddle17"></p>
+<p><strong>Considerations</strong>:</p>
+<p>a. Use contextual follow up messages to make your message more relatable and appropriate for every user.
+Example: After providing a payment status update, set your delay message to Were we able to resolve your payment issue?</p>
+<p>b. Don’t completely rely on follow up messages to move a conversation forward. Your user may not wait around long enough to see the follow-up message.</p>
+<p>c. Don’t use follow up messages on WhatsApp. They are intrusive and will lead to your number being flagged.</p>
+<h4><a class="anchor" aria-hidden="true" id="3-use-the-entity-retry-message-feature"></a><a href="#3-use-the-entity-retry-message-feature" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>3. Use the entity retry-message feature</strong></h4>
+<p>Entity Retry messages are used to give users a second chance to provide the correct input. Users might make mistakes while sharing information and when the bot vets the user input and finds an incorrect input, the entity retry message is sent. Example:</p>
+<p><img src="/assets/chatmiddle18.png" alt="chatmiddle18"></p>
+<p><strong>Considerations</strong>:</p>
+<p>a. Ensure that you clearly explain what is the right format you’re expecting input in.
+Example: The entered phone number seems incorrect. Please enter a valid 10-digit phone number. For Example — 9812345656</p>
+<p>b. Test and see that the UX is good even after multiple tries.</p>
+<h4><a class="anchor" aria-hidden="true" id="4-disambiguation-messages"></a><a href="#4-disambiguation-messages" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>4. Disambiguation messages</strong></h4>
+<p>This powerful feature is a brilliant way to avoid a bot break by asking the user to clarify their input. It’s also known as the ‘Did You Mean’ feature since it asks the user to pick from a list of the questions they may have meant to ask. Example:</p>
+<p><img src="/assets/chatmiddle19.png" alt="chatmiddle19"></p>
+<p><strong>Considerations</strong>:</p>
+<p>a. For every node, ensure that you mark a short variation as the text for the Disambiguation message.</p>
+<p>b. For every node, rename the node appropriately below 20 characters depending on the platform.</p>
+<p>c. Ensure that you use Sentence case</p>
+<h4><a class="anchor" aria-hidden="true" id="5-autocomplete-feature-aka-auto-suggest"></a><a href="#5-autocomplete-feature-aka-auto-suggest" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>5. Autocomplete feature (a.k.a Auto-Suggest)</strong></h4>
+<p>As the user starts typing in free form, we match the user's typed letters with the User Says sentences on the bot. <a href="https://docs.haptik.ai/bot-builder/basic/user-says#autocomplete-suggestions">Here’s</a> the documentation to help you enable it.</p>
+<p>As described before, this feature will:</p>
+<ol>
+<li><p>Help users discover the scope of our bot while a user starts typing.</p></li>
+<li><p>Avoid bot breaks as the user selects our suggestion, rather than typing a random freeform message.</p></li>
+<li><p>Autocomplete suggestions while user types to improve the message event count.</p></li>
+</ol>
+<p><img src="/assets/autocomplete1.png" alt="autocomplete1"></p>
+<h4><a class="anchor" aria-hidden="true" id="6-dynamic-api-responses"></a><a href="#6-dynamic-api-responses" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>6. Dynamic API responses</strong></h4>
+<p>These are any messages that are responses returned from an API. Haptik’s platform allows you to customize API responses and add your own conversational flair to them. Instead of showing API responses and API errors just as they have been programmed, you should create conversational copy for API responses to ensure that your IVA functions well even when there are technical issues.</p>
+<p><strong>Basic types of API errors to consider</strong>:</p>
+<ol>
+<li><p>System error: When your API fails. I’m really sorry, I can’t pull your customer records right now. Please try again shortly once we’ve resolved this glitch.</p></li>
+<li><p>User does not qualify:  Unfortunately, your plan does not include a free paid vacation. Would you like to upgrade?</p></li>
+<li><p>Beyond scope: Don’t apologize. Just provide a redirect. Tap below to make the bill payment on our website.</p></li>
+</ol>
+<p><strong>Considerations</strong>:</p>
+<p>a. Always design copies for every single API error case. It is crucial to tell the user what went wrong and give them follow up options to get back on track.</p>
+<p>❌ Bad: System error. Try again.</p>
+<p>✅ Good: Sorry, I couldn't validate your OTP due to a system error. What would you like to do next — try again or talk to an advisor?</p>
+<p>b. Account for cases where the API returns too much data to fit into a single window. Ensure that the user has the option to navigate between these options with or break the content down into small chunks. Show only what is necessary.</p>
+<p>c. Wherever possible, address your user personally using their name or by providing some pre-saved data to make your conversation seem more personal.</p>
+<h3><a class="anchor" aria-hidden="true" id="drafting-the-bot-break-message"></a><a href="#drafting-the-bot-break-message" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Drafting the Bot Break message</h3>
+<p>The bot break message should be carefully worded. It should first acknowledge that the bot cannot help with the query. It should then focus on redirecting the user back into the conversation. Either redirect the user to the main menu or into another conversational flow.</p>
+<p>Here are some ways to design bot break messages:</p>
+<ul>
+<li>Re-showcasing Bot’s Capabilities: The bot can set a capability expectation and present only those options that the bot can fulfill.</li>
+</ul>
+<p><img src="/assets/chatmiddle20.png" alt="chatmiddle20"></p>
+<ul>
+<li><p>CRM Ticket: The bot can take inputs from the user and pass along the unanswered query to a CRM.</p></li>
+<li><p>CSV: The bot can also record the query and share a collated list of the bot breaks aka unanswered user inputs to a customer support email id.</p></li>
+<li><p>Live Agent Support:  If the bot fails to understand a query, the bot can transfer the chat to a human agent. The agent will be trained to handle queries in the domain. This can either be done for all bot breaks or for breaks in specific task flows.</p></li>
+</ul>
+<p><img src="/assets/chatmiddle21.png" alt="chatmiddle21"></p>
+<p><strong>Considerations</strong>:</p>
+<p>a. Apologize but gracefully. This message will even be shown if a user is purposely messing with your bot.</p>
+<p>b. Be clear and always give options for the user to restart the conversation.</p>
+<p>c. Having multiple variations in your bot makes your bot seem empathetic and intelligent</p>
+<h2><a class="anchor" aria-hidden="true" id="agent-transfer"></a><a href="#agent-transfer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Agent Transfer</h2>
+<p><strong>Definition</strong>: If the bot fails to understand a query, the bot can transfer the chat to a human agent. This form of escalation is what we call an <strong>Agent Transfer</strong>.</p>
+<h3><a class="anchor" aria-hidden="true" id="why"></a><a href="#why" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Why?</h3>
+<ul>
+<li><p>Complex queries and frustrated customers are better handled by humans.</p></li>
+<li><p>Bots cannot be expected to know everything about the domain and having agents on hand is a good way to handle out of scope requests.</p></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="parts-of-the-agent-transfer-experience"></a><a href="#parts-of-the-agent-transfer-experience" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Parts of the Agent Transfer experience</h3>
+<p>Admit that a human agent may be better equipped to handle the query and give the user the option of talking to one.</p>
+<p><strong>Considerations</strong>:</p>
+<ul>
+<li>This should be voluntary. Don’t directly transfer the chat to the agent without checking whether the user wishes to talk to a person immediately. They may prefer coming back later or may want to try resolving the issue on their own.</li>
+</ul>
+<p>💡 The goal of most virtual assistants is to reduce customer support costs so provide this option carefully!</p>
+<p>Example: Sorry, you've entered the wrong OTP. Tap on an option below to either resend the OTP or chat with an agent 👇</p>
+<ul>
+<li>Be transparent. If agents are only available between a certain time period, this is a good place to let the customer know, as opposed to expecting an agent and then being disappointed. You can use custom APIs if needed.</li>
+</ul>
+<p>Example:</p>
+<ol>
+<li><p>If you wish to provide different messages based on the time of day because your agents are only available between 10 am to 7 pm, you can use a code block to do so.</p></li>
+<li><p>Agent not available (Formal) — Noted! An expert will be able to answer this better. Tap below to get more help 👇 CTA: Continue</p></li>
+<li><p>Agent not available (Casual) — My teammates will be back at their desks at 7 am in the morning. Check back then or send us an email at <a href="mailto:example@test.co">example@test.co</a> right away.</p></li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="transfer"></a><a href="#transfer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Transfer</h3>
+<p>Let the end-user know that the bot has asked an agent to step in.</p>
+<p><strong>Considerations</strong>:</p>
+<ul>
+<li><p>Be clear about agent availability. Typical bot platforms will check whether agents are available at this stage. Inform the customer that this step is taking place to avoid confusion.</p></li>
+<li><p>Before you’re sure that agents are available, don’t say — Hold on while I ask an agent to step in. Instead, be clear that you’re checking agent availability and say — Stay online while I check whether an agent is online and ask them to step in.</p></li>
+<li><p>Tell users what’s going to happen next. If the customer has been added to a queue, it’s important to give them clear instructions so that they don't get frustrated while waiting for an agent to step in.</p></li>
+</ul>
+<p>Based on the waiting time, one of the following messages will be sent after 6 seconds (the average amount of time a user tends to hold on):</p>
+<p>a. For no waiting time, the following message will be sent — We will be reviewing your query in a minute
+b. For wait times below an hour — We will be reviewing your query in 10 minutes.
+c. For high traffic situations where the wait time is longer than an hour, this message will be sent — We will be reviewing your query as soon as possible. The current traffic indicates that it'll take about an hour. I'll send you a message about it. Just don't close this window!</p>
+<ul>
+<li>Use this time wisely. Tell the customer to maybe elaborate on their query or tell them to leave the window open while an agent steps in.</li>
+</ul>
+<p>Example 1 —
+Let me check and get back to you!
+This could take a few minutes so feel free to share any other details I should know.</p>
+<p>Example 2 —
+While I ask an agent to step in, feel free to type in any more details you'd like to share!</p>
+<ul>
+<li>Agent introduction. If agents are available, make sure that your agent clearly introduces themselves. The Web SDK indicates when an agent joins the conversation like this —</li>
+</ul>
+<p><img src="/assets/chatmiddle22.png" alt="chatmiddle22"></p>
+<p>WhatsApp and Facebook do not have this indicator so make sure that the agents are trained to introduce themselves accordingly!</p>
+<h3><a class="anchor" aria-hidden="true" id="agent-chat-tool-settings"></a><a href="#agent-chat-tool-settings" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Agent Chat Tool settings</h3>
+<p>Agent Handovers are not always successful especially when you’re dealing with operational difficulties, lack of staff, and other issues. These are two pieces of copy that you can set on the Agent Chat Tool right now —</p>
+<ol>
+<li><p>Agents temporarily not available aka Team delay message: Use this message to set expectations with the user.
+Example: 🙏 Sorry, all our agents are busy at the moment. Go ahead and enter your problem in detail below and our agents will reply in a few minutes 👇</p></li>
+<li><p>Agents unavailable: Use this message to tell users what to do when agents are not available. This could be something like creating a ticket or sending an email. Whatever the case, do provide a way for users to get in touch.
+Example: Unfortunately, none of our agents are available at the moment. Tap below to submit a callback request and we'll get in touch with you soon 👇</p></li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="dos-and-donts"></a><a href="#dos-and-donts" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Do’s and Don'ts</h3>
+<ul>
+<li><p>Don’t make agent transfers mandatory for bot breaks. They lead to high operational costs unnecessarily and defeat the purpose of automating customer support.</p></li>
+<li><p>Do provide agent transfer as an option for sensitive usecases that are better handled by an agent. You may choose to partially complete a process using the virtual assistant and then transfer it to an agent after a certain point.</p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="unstructured-faq-iva-guideline"></a><a href="#unstructured-faq-iva-guideline" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Unstructured FAQ IVA guideline</h2>
+<p><strong>Definition</strong>: FAQs stand for frequently asked questions. Adding general FAQs to your bot is a great way to ensure that users receive answers to most of their basic questions alongside the more detailed user journeys that you have built. Here’s an 🗝 FAQ bot building guideline to give a quick overview of the entire process. Examples:</p>
+<p><img src="/assets/chatmiddle23.png" alt="chatmiddle23"></p>
+<p><strong>Considerations</strong>:</p>
+<ul>
+<li><p>Always have follow-up QR options. Your user should have a way to move forward in the conversation.</p></li>
+<li><p>Ensure that the content is adapted for chat. If required convert lengthy text into lists, interactive carousels, images, or even link a video if needed.</p></li>
+<li><p>Ensure that all your nodes have been sufficiently trained so that your bot can answer correctly. You can go through the user says guidelines <a href="https://docs.haptik.ai/bot-builder/basic/user-says-guidelines">here</a>.</p></li>
+<li><p>To upload a large number of FAQs at once, you may use the <a href="https://docs.haptik.ai/bot-builder/basic/general-nodes">bulk upload feature</a>. However, make sure that all good conversation designer practices like follow-ups are implemented within your content.</p></li>
+<li><p>Ensure that follow-up feedback doesn’t jump in too early and obscure your follow up QRs. Remember: QRs aren’t persistent.</p></li>
+<li><p>Sanitise all data - Create separate intents out of user queries</p></li>
+<li><p>Make sure that your answer is generic. Don’t have any ultra-specific introductions like “Yes that’s a lovely question” before your answer begins.</p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="other-important-considerations"></a><a href="#other-important-considerations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Other important considerations</h2>
+<ol>
+<li><strong>Reuse</strong></li>
+</ol>
+<p>Example 1: If your bot is a bot for logged in users - Can you reuse information from the signed-in profile to avoid repetition?
+Example 2: If your user has previously mentioned their name, can you reuse it elsewhere?</p>
+<ol start="2">
+<li><strong>Give directional cues to the user</strong></li>
+</ol>
+<p>Does your user always have a backup option to come back to the menu if they get lost during the journey?</p>
+<ol start="3">
+<li><strong>Handle free form queries</strong></li>
+</ol>
+<p>Has your bot been trained to handle free form questions related to the main usecases?</p>
+<p>Example: For an Insurance Product recommendation bot, do you provide basic information about the product in freeform like “Will I get free training”</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 9/18/2020</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/bot-builder/basic/chat-initiation"><span class="arrow-prev">← </span><span>Chat Initiation</span></a><a class="docs-next button" href="/bot-builder/basic/chat-end"><span>Chat End</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#understanding-ui-elements">Understanding UI elements</a><ul class="toc-headings"><li><a href="#pick-your-goal">Pick your goal</a></li><li><a href="#content-tone-and-voice-considerations">Content tone and voice considerations</a></li><li><a href="#pick-the-right-terms">Pick the right terms</a></li><li><a href="#conversation-user-interfaces-vs-graphical-user-interfaces">Conversation User Interfaces vs Graphical User Interfaces</a></li><li><a href="#picking-conversational-elements">Picking conversational elements</a></li></ul></li><li><a href="#content-formatting">Content formatting</a><ul class="toc-headings"><li><a href="#text-formatting-bold-italic-underline">Text formatting: Bold, Italic, Underline</a></li><li><a href="#emoji">Emoji</a></li><li><a href="#line-breaks-and-lists">Line breaks and lists</a></li><li><a href="#messages-and-information-sent-at-once">Messages and information sent at once</a></li><li><a href="#length">Length</a></li><li><a href="#proofreading">Proofreading</a></li><li><a href="#call-the-grammar-cops">Call the grammar 'COPS'</a></li></ul></li><li><a href="#handling-bot-breaks">Handling bot breaks</a><ul class="toc-headings"><li><a href="#types-of-errors">Types of errors</a></li><li><a href="#measures-to-avoid-bot-breaks">Measures to avoid bot breaks</a></li><li><a href="#drafting-the-bot-break-message">Drafting the Bot Break message</a></li></ul></li><li><a href="#agent-transfer">Agent Transfer</a><ul class="toc-headings"><li><a href="#why">Why?</a></li><li><a href="#parts-of-the-agent-transfer-experience">Parts of the Agent Transfer experience</a></li><li><a href="#transfer">Transfer</a></li><li><a href="#agent-chat-tool-settings">Agent Chat Tool settings</a></li><li><a href="#dos-and-donts">Do’s and Don'ts</a></li></ul></li><li><a href="#unstructured-faq-iva-guideline">Unstructured FAQ IVA guideline</a></li><li><a href="#other-important-considerations">Other important considerations</a></li></ul></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Bot Builder</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://docs.haptik.ai/ios-sdk/" class="footer-column-link">iOS SDK</a><a href="https://docs.haptik.ai/android-sdk/" class="footer-column-link">Android SDK</a><a href="https://docs.haptik.ai/web-sdk/" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/whatsapp/" class="footer-column-link">WhatsApp</a><a href="https://docs.haptik.ai/other/facebook" class="footer-column-link">Facebook</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Bot API</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a><a href="https://docs.haptik.ai/other/security" class="footer-column-link">Security</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Agent Chat Tool</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2020 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '224c7079e67e84a978d8b4621f6af16d',
+                indexName: 'haptik',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

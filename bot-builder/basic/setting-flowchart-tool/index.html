@@ -1,0 +1,134 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Setting up a FlowChart tool · Haptik Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="This is the most important tool in the Conversation Designer’s arsenal to design conversational flows and user journeys."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Setting up a FlowChart tool · Haptik Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.haptik.ai/"/><meta property="og:description" content="This is the most important tool in the Conversation Designer’s arsenal to design conversational flows and user journeys."/><meta property="og:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.haptik.ai/img/image_0.png"/><link rel="shortcut icon" href="/img/image_0.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-106563119-6', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="/js/index.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/image_0.png" alt="Haptik Docs"/><h2 class="headerTitleWithLogo">Haptik Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="/#tools" target="_self">Tools</a></li><li class=""><a href="/#integrations" target="_self">Integrations</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Conversation Design</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/basic/introduction">Introduction</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/for-bot-builders">For Bot Builders</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Essentials of Bot Building</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/basic/making-first-bot">Making Your First Bot</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/bot-hierarchy">Bot Hierarchy</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/creating-story">Creating a Story</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/creating-nodes">Creating Nodes</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/smalltalk">Small Talk</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/general-nodes">General Nodes</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/upload-graph-nodes">Upload Graph Nodes</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/user-says-guidelines">User Says Guidelines</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/bot-says">Bot Says</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/chat-elements">Chat Elements</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/connections">Connections</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/entities">Entities</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/forms">Forms</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/story-templates">Story Templates</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Configurations Settings</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/basic/business">Business</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/platforms-deployment">Platforms Deployment</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/copypaste">Copy &amp; Paste on Bot Builder</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/sharebot">Share your IVA</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/transferbot">Transfer your IVA</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/bot-prompt-trigger">Bot Prompts</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">NLU</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/basic/intent">Intent</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/managing-bot-state">Managing Bot Context and State</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/dialoguemanager">Dialogue Manager</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/disambiguation">Did you mean? (Disambiguation)</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/smart-assist">Smart Assist</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Conversation Design</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/basic/conversation-design-introduction">Introduction</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/bot-builder/basic/setting-flowchart-tool">Setting up a FlowChart tool</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/create-the-canvas">Create the canvas</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/whatsapp_as_a_platform">WhatsApp as a Platform</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/chat-initiation">Chat Initiation</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/chat-middle">Chat Middle</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/chat-end">Chat End</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/design-review">Design Review</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Integrations</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/integrations/introduction">Introduction</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/integrations/integrating-custom-code">Code Node Integration</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/integrations/integrating-apis">Static Node Integration</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/integrations/integration-parameters">Integration Parameters</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Quality Assessment</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/basic/testing-bot">Testing your bot</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/advanced/development-guidelines">Bot Development Life Cycle</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/advanced/testing-guidelines">Testing Guidelines</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/advanced/debugging-guidelines">How to debug your bot?</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/oracle-feedback">ORACLE Feedback</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Advanced</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/advanced/integrating-webviews-into-sdk">Integrating Webviews</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/advanced/integrating-with-external-bot">Integrating with External Bot</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Webhooks</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/integrations/additional-apis">Additional APIs</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Miscellaneous</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/basic/multiple-languages">Multiple Languages</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/building-voice-bots">Building Voice bots</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Setting up a FlowChart tool</h1></header><article><div><span><p>This is the most important tool in the Conversation Designer’s arsenal to design conversational flows and user journeys.</p>
+<h2><a class="anchor" aria-hidden="true" id="why-do-you-need-a-flowchart-tool"></a><a href="#why-do-you-need-a-flowchart-tool" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Why do you need a flowchart tool?</h2>
+<ul>
+<li><p>A flowchart helps you craft your conversational journey before you invest in building the bot. It provides a fully flexible canvas to modify and play around with ideas at an early stage.</p></li>
+<li><p>A flowchart is a great way to brainstorm on all possibilities and chalk out edge cases atop your ideal user journey. This makes your solution a lot more comprehensive and long-lasting.</p></li>
+<li><p>A flowchart is ideal for all the stakeholders of your product to visualize the user journey, provide feedback at an early stage.</p></li>
+<li><p>A flowchart helps you create a clear benchmark for your product before you go into development. It gives your QA engineer a reference point while testing the virtual assistant.</p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="what-we-do-at-haptik"></a><a href="#what-we-do-at-haptik" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What we do at Haptik?</h2>
+<p>Over the years, we’ve experimented with several bot design tools — Spreadsheets, Bot Society, Xmind... you name it, and we’ve probably tried it. We finally landed on <strong>Lucidchart</strong> as our Conversation Design tool of choice.</p>
+<p>We started using Lucid at the start of 2019 and put it through its paces, only to realize that we needed a central library of elements to ensure that Haptik’s IVA designs looked consistent, no matter who designed them.</p>
+<p>Our platform’s users now have access to a central Haptik Library of over 20 Haptik specific UI elements that can be used to design bot flows for any client.</p>
+<p><img src="/assets/flowchart1.png" alt="flowchart1"></p>
+<h2><a class="anchor" aria-hidden="true" id="how-to-use-this-library-on-any-tool"></a><a href="#how-to-use-this-library-on-any-tool" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How to use this Library on any tool?</h2>
+<ol>
+<li><p>Haptik will provide a downloadable file format that works for your tool - .vsdx, .vsd or .csv.</p></li>
+<li><p>Upload the file to your tool</p></li>
+<li><p>Drag and drop elements to design your conversations</p></li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="what-to-put-into-a-flowchart"></a><a href="#what-to-put-into-a-flowchart" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What to put into a flowchart?</h2>
+<p>Your flowchart can be structured as follows:</p>
+<ul>
+<li><p>The user journey for all scenarios with the dialogue. This includes everything we explain in the <a href="https://docs.haptik.ai/bot-builder/basic/chat-initiation">Chat Initiation</a>, <a href="https://docs.haptik.ai/bot-builder/basic/chat-middle">Chat Middle</a>, <a href="https://docs.haptik.ai/bot-builder/basic/chat-end">Chat End</a> section including the ways to initiate the chat, provide a solution to the user’s query, and complete the user journey.</p></li>
+<li><p>The correct elements to be used depending on the platform</p></li>
+<li><p>Any clarifications or questions you have for the team</p></li>
+<li><p>Anything else that is relevant to the journey that the bot builder must know!</p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="other-things-to-keep-in-mind"></a><a href="#other-things-to-keep-in-mind" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Other things to keep in mind</h2>
+<p>Here’s what your flowchart should contain apart from your basic chatflow design described above</p>
+<ol>
+<li>API calls whenever you need to fetch or send any information from within the bot to another system. Illustrated below</li>
+</ol>
+<p><img src="/assets/flowchart2.png" alt="flowchart2"></p>
+<ol start="2">
+<li>Entities - Use a placeholder like <strong>%name</strong> to highlight dynamic values. You may also use actual sample values like <strong>John Doe</strong> but highlight these in some color so that bot builders know that these are dynamic. As shown below —</li>
+</ol>
+<p><img src="/assets/flowchart6.png" alt="flowchart6"></p>
+<ol start="3">
+<li>You may use the clarifications box to highlight content options and open questions. Once a clarification is closed, make sure that no important notes are lost — we recommend adding a Note for any important information.</li>
+</ol>
+<p><img src="/assets/flowchart3.png" alt="flowchart3"></p>
+<ol start="4">
+<li>Bot Prompts are ‘notifications’ sent to users to draw their attention. Make sure you include them in your flowchart if you wish to define user journeys that begin from these prompts. This is explained in detail in the <a href="https://docs.haptik.ai/bot-builder/basic/chat-initiation#bot-prompts">Chat Initiation &gt;&gt; Bot Prompt</a> section below.</li>
+</ol>
+<p><img src="/assets/flowchart4.png" alt="flowchart4"></p>
+<ol start="5">
+<li>Bot Break messages - Users tend to enter unsupported queries or gibberish during the conversation. Always ensure that your design includes a bot break message alongside the taskbox. You can learn more about how to build better bot break experiences in the <a href="https://docs.haptik.ai/bot-builder/basic/chat-middle#handling-bot-breaks">Bot Breaks</a> section.</li>
+</ol>
+<p><img src="/assets/flowchart5.png" alt="flowchart5"></p>
+<p>Follow these steps to ensure that your flowchart is comprehensive and provides an excellent base for the Bot Building team to take over!</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 9/18/2020</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/bot-builder/basic/conversation-design-introduction"><span class="arrow-prev">← </span><span>Introduction</span></a><a class="docs-next button" href="/bot-builder/basic/create-the-canvas"><span>Create the canvas</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#why-do-you-need-a-flowchart-tool">Why do you need a flowchart tool?</a></li><li><a href="#what-we-do-at-haptik">What we do at Haptik?</a></li><li><a href="#how-to-use-this-library-on-any-tool">How to use this Library on any tool?</a></li><li><a href="#what-to-put-into-a-flowchart">What to put into a flowchart?</a></li><li><a href="#other-things-to-keep-in-mind">Other things to keep in mind</a></li></ul></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Bot Builder</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://docs.haptik.ai/ios-sdk/" class="footer-column-link">iOS SDK</a><a href="https://docs.haptik.ai/android-sdk/" class="footer-column-link">Android SDK</a><a href="https://docs.haptik.ai/web-sdk/" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/whatsapp/" class="footer-column-link">WhatsApp</a><a href="https://docs.haptik.ai/other/facebook" class="footer-column-link">Facebook</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Bot API</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a><a href="https://docs.haptik.ai/other/security" class="footer-column-link">Security</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Agent Chat Tool</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2020 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '224c7079e67e84a978d8b4621f6af16d',
+                indexName: 'haptik',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

@@ -6,32 +6,34 @@
 		],
 		"Essentials of Bot Building": [
 			"basic/making-first-bot",
+			"basic/bot-hierarchy",
 			"basic/creating-story",
 			"basic/creating-nodes",
 			"basic/smalltalk",
 			"basic/general-nodes",
-			"basic/intent",
 			"basic/user-says-guidelines",
 			"basic/bot-says",
 			"basic/chat-elements",
 			"basic/connections",
 			"basic/entities",
-			"basic/forms",
+			"basic/forms"
+		],
+		"Essentials of Bot Settings": [
 			"basic/copypaste",
 			"basic/upload-graph-nodes",
 			"basic/story-templates",
 			"basic/sharebot",
 			"basic/transferbot",
 			"basic/business",
-			"basic/bot-prompt-trigger",
-			"basic/disambiguation",
-			"basic/smart-assist"
+			"basic/platforms-deployment",
+			"basic/bot-prompt-trigger"
 		],
-		"Guides": [
-			"basic/bot-hierarchy",
+		"NLU": [
+			"basic/intent",
 			"basic/managing-bot-state",
 			"basic/dialoguemanager",
-			"basic/platforms-deployment"
+			"basic/disambiguation",
+			"basic/smart-assist"
 		],
 		"Conversation Design": [
 			"basic/conversation-design-introduction",

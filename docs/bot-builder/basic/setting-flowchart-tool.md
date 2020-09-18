@@ -14,7 +14,7 @@ This is the most important tool in the Conversation Designer’s arsenal to desi
 
 - A flowchart helps you create a clear benchmark for your product before you go into development. It gives your QA engineer a reference point while testing the virtual assistant.
 
-## What do we do at Haptik?
+## What we do at Haptik?
 
 Over the years, we’ve experimented with several bot design tools — Spreadsheets, Bot Society, Xmind... you name it, and we’ve probably tried it. We finally landed on **Lucidchart** as our Conversation Design tool of choice.
 

@@ -2,7 +2,7 @@
 title: Introduction
 ---
 
-Welcome to Conversation Design. Before you begin building your Intelligent Virtual Assistant, it is essential to create a framework with conversational journeys first. 
+**Welcome to Conversation Design. Before you begin building your Intelligent Virtual Assistant, it is essential to create a framework with conversational journeys first.**
 
 Conversation Design is the art of crafting an experience between a virtual assistant and the end user. The end objective is to craft and create conversations that are natural and intuitive while scaling these conversations across platforms for all users. 
 
@@ -16,7 +16,7 @@ Step 2: Select an appropriate design tool such as Lucidchart or draw.io, to buil
 
 Step 3: And finally, review using various guidelines and go-live
 
-## What is the process
+## How t
 
 Conversation Design entails the entire structure of your Intelligent Virtual Assistant that spearheads your bot building process.
 

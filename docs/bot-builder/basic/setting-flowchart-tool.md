@@ -54,7 +54,7 @@ Here’s what your flowchart should contain apart from your basic chatflow desig
 
 2. Entities - Use a placeholder like **%name** to highlight dynamic values. You may also use actual sample values like **John Doe** but highlight these in some color so that bot builders know that these are dynamic. As shown below —
 
-IMAGE PLACEHOLDER
+![flowchart6](/assets/flowchart6.png)
 
 3. You may use the clarifications box to highlight content options and open questions. Once a clarification is closed, make sure that no important notes are lost — we recommend adding a Note for any important information.
 

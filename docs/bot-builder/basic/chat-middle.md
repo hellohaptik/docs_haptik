@@ -445,8 +445,6 @@ Example:
 
 3. Agent not available (Casual) — My teammates will be back at their desks at 7 am in the morning. Check back then or send us an email at example@test.co right away. 
 
-IMAGE PLACEHOLDER
-
 ### Transfer
 
 Let the end-user know that the bot has asked an agent to step in. 

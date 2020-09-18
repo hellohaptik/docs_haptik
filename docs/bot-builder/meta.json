@@ -6,35 +6,44 @@
 		],
 		"Essentials of Bot Building": [
 			"basic/making-first-bot",
+			"basic/bot-hierarchy",
 			"basic/creating-story",
 			"basic/creating-nodes",
 			"basic/smalltalk",
 			"basic/general-nodes",
-			"basic/intent",
+			"basic/upload-graph-nodes",
 			"basic/user-says-guidelines",
 			"basic/bot-says",
 			"basic/chat-elements",
 			"basic/connections",
 			"basic/entities",
 			"basic/forms",
+			"basic/story-templates"
+		],
+		"Configurations Settings": [
+			"basic/business",
+			"basic/platforms-deployment",
 			"basic/copypaste",
-			"basic/upload-graph-nodes",
-			"basic/story-templates",
 			"basic/sharebot",
 			"basic/transferbot",
-			"basic/business",
-			"basic/bot-prompt-trigger",
+			"basic/bot-prompt-trigger"
+		],
+		"NLU": [
+			"basic/intent",
+			"basic/managing-bot-state",
+			"basic/dialoguemanager",
 			"basic/disambiguation",
 			"basic/smart-assist"
 		],
-		"Guides": [
-			"basic/bot-hierarchy",
-			"basic/managing-bot-state",
-			"basic/dialoguemanager",
-			"basic/platforms-deployment"
-		],
 		"Conversation Design": [
-			"basic/design-guidelines"
+			"basic/conversation-design-introduction",
+			"basic/setting-flowchart-tool",
+			"basic/create-the-canvas",
+			"basic/whatsapp_as_a_platform",
+			"basic/chat-initiation",
+			"basic/chat-middle",
+			"basic/chat-end",
+			"basic/design-review"			
 		],
 		"Integrations":[
 			"integrations/introduction",
@@ -42,7 +51,7 @@
 			"integrations/integrating-apis",
 			"integrations/integration-parameters"
 		],
-		"Testing": [
+		"Quality Assessment": [
 			"basic/testing-bot",
 			"advanced/development-guidelines",
 			"advanced/testing-guidelines",

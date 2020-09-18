@@ -23,6 +23,8 @@ A chat agent can:
   * Use [custom tools](https://docs.haptik.ai/agent-chat/adding-custom-tools)
   * Adding [disposition tags](https://docs.haptik.ai/agent-chat/claiming-and-closing#chat-disposition)
   
+  When an agent is **offline**, he would not get the option of **Waiting for user** but only **Reassigning Chat** and **Closing Category** as compared to **online state**, where agents get to see all controls mentioned above.
+  
   Depending on the permissions and features assigned to a Chat agent user, more actions could become accessible. 
   
 >Tip: We also have a system to enforce Data level permissioning i.e. an agent user is allowed to view/edit data for which business can be controlled using this.

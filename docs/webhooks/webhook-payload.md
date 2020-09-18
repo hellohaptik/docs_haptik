@@ -251,6 +251,8 @@ Example:
     },
     "data": {
         "conversation_no": "<CONVERSATION_NO>",
+        "collection_id": "<COLLECTION_ID>",
+        "conversation_identifier": "<CONVERSATION_IDENTIFIER>",
         "chat_link": "<CHAT_LINK>",
         "closing_categories": {
             "reason": "",

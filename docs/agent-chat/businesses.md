@@ -51,5 +51,4 @@ You can now access some smart actions and mark the chat complete or you could se
 
 ![Selected chat](assets/businesses_chat_detailed_view.png)
 
-
-
+ > Team Leaders do not get **Closing Categories** on marking a chat complete from Businesses or Teams screen.

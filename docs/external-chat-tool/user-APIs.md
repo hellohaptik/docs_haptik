@@ -79,7 +79,7 @@ Additional user details that are not provided as part of the base user informati
 | **required** | false |
 | **provider** | TRACT |
 | **caller** | ECT |
-| **url** | /tract/user/ |
+| **url** | /tract/user/details/ |
 | **encoding** | application/json |
 
 **Request**
@@ -87,7 +87,7 @@ Additional user details that are not provided as part of the base user informati
 | **parameter** | **type** | **required** | **description** |
 | --- | --- | --- | --- |
 | user\_id | str | true | User ID within Haptik |
-| details\_requested | List[str] | true | List of additional details requested |
+| details\_requested | List[str] | true | List of additional details requested. See response of `/tract/user` API above to determine available details that can be fetched.|
 
 **Response**
 

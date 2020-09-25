@@ -76,7 +76,7 @@ There is a toggle of Marking Chat as complete. This means -
 
 ### Step 5 - Setup Team Delay Message and Delay Time
 
-Similar to the Team Offline message, you can configure the delay message that is sent to users with a set delay time. This message will be sent to the user when all agents are busy will other chats. This is customizable and we can adjust the time after which this message will be sent.
+Similar to the Team Offline message, you can configure a delay message that is sent to users after a set delay time. This message will be sent to the user when all agents are busy with other chats, or an agent simply does not respond to the user. This is customizable and we can adjust the time after which this message will be sent.
 
 ![Delay message](assets/Teams2.png)
 

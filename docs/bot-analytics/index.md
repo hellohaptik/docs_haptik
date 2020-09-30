@@ -2,7 +2,7 @@
 title: Introduction
 ---
 
-Analytics by Haptik empowers teams to get a comprehensive overview of how the IVAs are performing. Get in-depth insights into how users interact with your IVAs, identify problem areas or features that can be improved and also collect first-hand user feedback about your IVA experience in real-time. The user messages/conversations with historical data can help answer the toughest questions about users. Boost your IVA's conversations' success with this tool. 
+Analytics by Haptik empowers teams to get a comprehensive overview of how the IVAs are performing. Get in-depth insights into how users interact with your IVAs, identify problem areas or features that can be improved and also collect first-hand user feedback about your IVA experience in real-time. The user messages/conversations with historical data can help answer the toughest questions about users. Boost your IVA's conversations' success with this tool.
 
 Through this document, we shall explore the different types of metrics available for tracking and analyzing the IVA using the real-time analytics tool.
 
@@ -15,12 +15,11 @@ The Analytics tool consists of multiple sections with each section containing me
 - Message Analysis
 - Word Analysis
 - Query Completion
-- Node Traffic
 - User Ratings
 - User Reviews
 
 ## Getting Credentials
-The first step in starting to use the analytics tool is to get the credentials from the Haptik team. 
+The first step in starting to use the analytics tool is to get the credentials from the Haptik team.
 
 Haptik team will provide you with a username and password over email. Also a url will be shared, using which you can access the tool.
 

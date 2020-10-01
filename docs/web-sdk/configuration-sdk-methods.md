@@ -37,6 +37,7 @@ Note: Using other listeners like `window.onload` or `document.onload` will lead 
     - `base-url: <String>` *: Backend Identifier (Provided by Haptik)*
     - `business-id: <Number>` *: Business Identifier (Provided by Haptik)*
     - `privacy-policy-url: <String>` *: URL to your Privacy Policy (Optional). This is useful if GDPR is enabled. If not provided users will be redirected to Haptik's privacy policy page.*
+    - `initialize-language: <String>` *: Code of language you want to open bot with. For eg `en`, `hi`. (Optional).
 
 ### `destroy()`
 

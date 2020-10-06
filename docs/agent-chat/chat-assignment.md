@@ -56,5 +56,4 @@ Fastest agents get more chats. Every time an agent closes a chat or intermittent
 
 1. If you have a single client and multiple businesses set up, all businesses must be the same algorithm
 
-2. If you have multiple client setup, one can ideally have different algorithms for both, provided there are no shared agents between the two clients.
-
+2. If there are multiple clients, one can ideally have different algorithms for all, provided there are no shared agents between the teams of different clients.

@@ -51,3 +51,10 @@ Fastest agents get more chats. Every time an agent closes a chat or intermittent
 
 3. Con(s): Chat load is not balanced across agents i.e., fast agents are the ones who close chats quickly thus making the call to request for chats frequently. This breaks the 10 seconds cycle and creates uneven distribution of chats.
 
+
+### Note
+
+1. If you have a single client and multiple businesses set up, all businesses must be the same algorithm
+
+2. If you have multiple client setup, one can ideally have different algorithms for both, provided there are no shared agents between the two clients.
+

@@ -314,12 +314,6 @@ Hides the chat window header. This is useful when integrating inside native apps
 ## Misc Settings
 > Some settings that don't necessarily fall in the above category buckets
 
-### `default-language`
-
-Sets the default language for a multi-language bot. This is the first language the user will see. The user can always then change the language using the language dropdown in the chat window header
-
-**default: en**
-
 ### `voice-bot-initial-input`
 
 The default state of the voice bot. Should it by default have the text composer or the voice composer?

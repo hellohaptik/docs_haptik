@@ -287,6 +287,12 @@ Disables the storage so that a new user is created every time the user comes bac
 
 **default: false**
 
+### `initialize-language`
+
+Code of language you want to open bot with. For eg `en`, `hi`. (Optional). We support [ISO_639-1](https://en.wikipedia.org/wiki/ISO_639-1) language codes. 
+
+**default: en**
+
 ### `no-cross`
 
 Hides the cross button so that user is unable to close the chat window. This is useful when building experiences with custom chat buttons and other customised UI elements.
@@ -307,12 +313,6 @@ Hides the chat window header. This is useful when integrating inside native apps
 
 ## Misc Settings
 > Some settings that don't necessarily fall in the above category buckets
-
-### `default-language`
-
-Sets the default language for a multi-language bot. This is the first language the user will see. The user can always then change the language using the language dropdown in the chat window header
-
-**default: en**
 
 ### `voice-bot-initial-input`
 

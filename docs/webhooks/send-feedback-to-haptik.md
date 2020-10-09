@@ -2,13 +2,13 @@
 title: How to send feedback to Haptik
 ---
 
-## Log Feedback to Haptik via Rest Api
+## Log Feedback to Haptik via REST Api
 
 The Log Feedback API allows you to send feedback via a `POST` request to the Haptik Platform. The URL for logging feedback is generated on the Haptik Platform Dashboard.
 
 ### URL
 
-`https://staging-messenger.haptikapi.com/v1.0/log_feedback_from_user/`
+`https://<BASE_URL>/v1.0/log_feedback_from_user/`
 
 ### Headers
 
@@ -26,7 +26,7 @@ Content-Type: application/json
 
 ```json
 {
-  "auth_id": <AUTH_ID>,
+  "auth_id": "<AUTH_ID>",
   "business_id": <BUSINESS_ID>,
   "query_resolved": true,
   "query_rating": 5,
@@ -37,7 +37,7 @@ Content-Type: application/json
 - auth_id (required) - This is an alphanumeric User identifier from your system
 - business_id (required) - This is a numeric identifier for channel/queue that you wish to register the feedback on.
 - query_resolved (required) - This is a boolean indicator of whether the user's query was resolved or not.
-- query_rating (required) - This is a numeric indicator on the scale of 5 of how satisfied was the user with the conversation.
+- query_rating (required) - This is a numeric indicator on the scale of 1 - 5, to tell how satisfied the user was with the conversation.
 - feedback (optional) - This is a string field, allowing user to provide written feedback pointing to specifics of their experience. 
 
 ### Response
@@ -88,12 +88,12 @@ If the Authorization header is missing or invalid, then the API will return a `4
 ## Sample CURL command
 
 ```
-curl -X POST 'https://staging-messenger.haptikapi.com/v1.0/log_feedback_from_user/' \
+curl -X POST 'https://<BASE_URL>/v1.0/log_feedback_from_user/' \
 -H 'Authorization: Bearer <TOKEN>' \
 -H 'client-id: <CLIENT_ID>' \
 -H 'Content-Type: application/json' \
 -H '{
-  "auth_id": "<AUTH_ID>>",
+  "auth_id": "<AUTH_ID>",
   "business_id": <BUSINESS_ID>,
   "query_resolved": true,
   "query_rating": 5,

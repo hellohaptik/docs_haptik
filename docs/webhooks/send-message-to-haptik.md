@@ -2,13 +2,13 @@
 title: How to send message to Haptik
 ---
 
-## Log Message to Haptik via Rest Api
+## Log Message to Haptik via REST Api
 
 The Log Message API allows you to send messages via a `POST` request to the Haptik Platform. The URL for message logging is generated on the Haptik Platform Dashboard.
 
 ### URL
 
-`https://staging-messenger.haptikapi.com/v1.0/log_message_from_user/`
+`https://<BASE_URL>/v1.0/log_message_from_user/`
 
 ### Headers
 
@@ -80,7 +80,7 @@ If the Authorization header is missing or invalid, then the API will return a `4
 
 ```
 curl -X POST \
-    https://staging-messenger.haptikapi.com/v1.0/log_message_from_user/ \
+    https://<BASE_URL>/v1.0/log_message_from_user/ \
   -H 'Authorization: Bearer <TOKEN>' \
   -H 'client-id: <CLIENT_ID>' \
   -H 'Content-Type: application/json' \

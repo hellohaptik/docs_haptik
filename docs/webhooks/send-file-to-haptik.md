@@ -8,7 +8,7 @@ The File upload API allows you to upload user files via a `POST` request to the 
 
 ### URL
 
-`https://staging-messenger.haptikapi.com/v1.0/log_file_from_user/`
+`https://<BASE_URL>/v1.0/log_file_from_user/`
 
 ### Headers
 
@@ -86,7 +86,7 @@ If the Authorization Header is missing or invalid, then the API will return a `4
 
 ```
 curl -X POST\
-    https://staging-messenger.haptikapi.com/v1.0/log_file_from_user/ \
+    https://<BASE_URL>/v1.0/log_file_from_user/ \
   -H 'Authorization: Bearer <TOKEN>' \
   -H 'client-id: <CLIENT_ID>' \
   -H 'Content-Type: multipart/form-data' \

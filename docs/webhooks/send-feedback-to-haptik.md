@@ -52,7 +52,7 @@ A successful request to the log feedback API will return a `201` status code wit
 
 ### Error Response
 
-To have a fair judgement of a conversation and the agent, a user is allowed to submit feedback only once in 1 hour. If the user tries to submit the feedback again within 1 hour, an error will be raised
+To have a fair judgement of a conversation or an agent, a user is allowed to submit feedback only once in 1 hour. If the user tries to submit the feedback again within 1 hour, an error will be raised
 
 ```json
 {

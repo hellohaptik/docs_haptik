@@ -38,7 +38,7 @@ Content-Type: application/json
 - business_id (required) - This is a numeric identifier for channel/queue that you wish to register the feedback on.
 - query_resolved (required) - This is a boolean indicator of whether the user's query was resolved or not.
 - query_rating (required) - This is a numeric indicator on the scale of 5 of how satisfied was the user with the conversation.
-- feedback (option) - This is a string field, allowing user to provide written feedback pointing to specifics of their experience. 
+- feedback (optional) - This is a string field, allowing user to provide written feedback pointing to specifics of their experience. 
 
 ### Response
 

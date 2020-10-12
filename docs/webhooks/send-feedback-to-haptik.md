@@ -2,7 +2,7 @@
 title: How to send feedback to Haptik
 ---
 
-## Log Feedback to Haptik via REST Api
+## Log Feedback to Haptik via REST API
 
 The Log Feedback API allows you to send feedback via a `POST` request to the Haptik Platform. The URL for logging feedback is generated on the Haptik Platform Dashboard.
 

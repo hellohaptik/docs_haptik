@@ -2,7 +2,7 @@
 title: How to send message to Haptik
 ---
 
-## Log Message to Haptik via REST Api
+## Log Message to Haptik via REST API
 
 The Log Message API allows you to send messages via a `POST` request to the Haptik Platform. The URL for message logging is generated on the Haptik Platform Dashboard.
 

@@ -12,7 +12,7 @@ Within initSettings we need to add the following setting. This will initialise t
 
 However, we would need to programmatically expand the XDK on click of our custom button using the following HaptikSDK method.
 ```
-  HaptikSDK.show()
+  HaptikSDK.expandWidget()
 ```
 
 ## Full Example:
@@ -43,8 +43,8 @@ However, we would need to programmatically expand the XDK on click of our custom
           Steps: <br/>
           1) While defining haptikInitSettings simply add 'custom-button': true <br/>
           2) Add you icon, in this case we have directly used an img tag <br/>
-          3) On click of the icon, create a function that simply calls 'HaptikSDK.expandWidget()' <br/>
-          <img onClick="HaptikSDK.show()" src="https://s3.ap-south-1.amazonaws.com/tools-cdn/js-sdk/images/custom-chat-icon.png" class="custom-icon">
+          3) On click of the icon and simply call 'HaptikSDK.expandWidget()' <br/>
+          <img src="https://s3.ap-south-1.amazonaws.com/tools-cdn/js-sdk/images/custom-chat-icon.png" class="custom-icon">
       </div>
     </div>
   </body>
@@ -59,9 +59,12 @@ However, we would need to programmatically expand the XDK on click of our custom
   </script>
   <script type="text/javascript" charset="UTF-8" src="https://toolassets.haptikapi.com/platform/javascript-xdk/production/loader.js"></script>
   <script>
-  function openChat() {
-    HaptikSDK.show()
-  }
+    document.addEventListener('haptik_sdk', function () {
+            document.getElementsByClassName("custom-icon")[0].addEventListener("click", function () {
+                    HaptikSDK.expandWidget();
+            });
+        });
+    }
   </script>
   </html>
 ```

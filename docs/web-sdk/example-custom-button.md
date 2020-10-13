@@ -60,11 +60,10 @@ However, we would need to programmatically expand the XDK on click of our custom
   <script type="text/javascript" charset="UTF-8" src="https://toolassets.haptikapi.com/platform/javascript-xdk/production/loader.js"></script>
   <script>
     document.addEventListener('haptik_sdk', function () {
-            document.getElementsByClassName("custom-icon")[0].addEventListener("click", function () {
-                    HaptikSDK.expandWidget();
-            });
-        });
-    }
+          document.getElementsByClassName("custom-icon")[0].addEventListener("click", function () {
+                  HaptikSDK.expandWidget();
+          });
+      });
   </script>
   </html>
 ```

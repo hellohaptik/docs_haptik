@@ -43,7 +43,7 @@ However, we would need to programmatically expand the XDK on click of our custom
           Steps: <br/>
           1) While defining haptikInitSettings simply add 'custom-button': true <br/>
           2) Add you icon, in this case we have directly used an img tag <br/>
-          3) On click of the icon and simply call 'HaptikSDK.expandWidget()' <br/>
+          3) On click of the icon, simply call 'HaptikSDK.expandWidget()' <br/>
           <img src="https://s3.ap-south-1.amazonaws.com/tools-cdn/js-sdk/images/custom-chat-icon.png" class="custom-icon">
       </div>
     </div>

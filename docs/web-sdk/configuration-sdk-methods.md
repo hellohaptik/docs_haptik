@@ -57,6 +57,12 @@ Note: Using other listeners like `window.onload` or `document.onload` will lead 
 
 **Params: <None>**
 
+### `openLanguagePicker()`
+
+*Opens up language picker. (The same as clicking on the language picker icon in the header)*
+
+**Params: <None>**
+
 ### `signup(authOptions, callback)`
 
 *Only applicable for custom signup bots. Use this function to make a custom call for passing sign on information to the SDK. (Refer to the custom signup section for more information)*

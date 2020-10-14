@@ -13,6 +13,7 @@
         	"create-haptik-user",
         	"send-message-to-haptik",
             "send-file-to-haptik",
+            "send-feedback-to-haptik",
             "using-platform-deployments",
             "synchronous_webhooks"
         ]

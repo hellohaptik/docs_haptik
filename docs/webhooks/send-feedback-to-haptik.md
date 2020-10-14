@@ -73,7 +73,7 @@ If the user with auth_id is not registered, then the API will return a `403` sta
 
 ```json
 {
-  "error_message": "user is not registered"
+  "error_message": "Invalid_User"
 }
 ```
 

@@ -19,7 +19,7 @@ A bot always has a Business tagged to it. Several bots can be grouped together i
 
 There are two ways to create a Business.
 
-- The first way is to create a Business at the same time as you create a bot from the bot builder homepage
+- The first way is to create a Business at the same time as you create a bot from the Conversation Studio homepage
 - The second way to create a Business is through the Business manager page. To get started creating Businesses from the Business manager, navigate to the Business Manager tab from the Mogambo homepage and click the + New Business button on the page’s top left-hand corner.
 
 ![Business and bots](assets/2_business.png)

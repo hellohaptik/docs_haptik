@@ -2,7 +2,7 @@
 title: Story Analysis
 ---
 
-You must already know that *Stories* are sub-components within a created bot. In our analytics tool, you can click on "*Story Analysis*" to analyse any bot's performance on a sub-story level.
+You must already know that *Stories* are sub-components within a created bot. In our Intelligent Analytics tool, you can click on "*Story Analysis*" to analyse any bot's performance on a sub-story level.
 
 ![Teja Menu](assets/story-analysis-teja-lhs.png)
 

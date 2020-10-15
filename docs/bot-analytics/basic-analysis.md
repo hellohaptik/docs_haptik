@@ -4,7 +4,7 @@ title: Overview
 
 ## Introduction
 
-The first section in the Analytics tool is the **Overview** section. As the name suggests, this section helps you get a quick overview of the different aspects of your IVA's performance. 
+The first section in the Intelligent Analytics tool is the **Overview** section. As the name suggests, this section helps you get a quick overview of the different aspects of your IVA's performance. 
 
 The Overview section provides information about:
 
@@ -18,7 +18,7 @@ You can later use following sections to get more detailed information on any of 
 
 ### Filters
 
-On top of all screens inside the Analytics tool you will find filter options. These filter options can help you filter your data by Business or Bots from the filters on the left hand side. 
+On top of all screens inside the Intelligent Analytics tool you will find filter options. These filter options can help you filter your data by Business or Bots from the filters on the left hand side. 
 
 You can select `Channels` or `Bots` from the first dropdown on the left hand side and then select the particular business or bot from the dropdown next to it.
 

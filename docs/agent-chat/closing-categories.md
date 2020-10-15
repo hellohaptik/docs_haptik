@@ -15,12 +15,12 @@ When we start building a bot, we might not have enough information about the typ
 For example you might build a bot to book flight tickets but most users might be trying to get support from your bot instead. The closing category data entered by the agents can then provide data to understand the types of conversations your user have. This data can then be used to try to automate these conversations.
 
 ## Creating Closing Categories
-The agent chat tool allows businesses to have custom closing categories for their bots. This enables businesses to gather customized data for their particular use case.
+The Smart Agent Chat tool allows businesses to have custom closing categories for their bots. This enables businesses to gather customized data for their particular use case.
 
-Any agent chat tool user with the appropriate permission can create or edit the closing categories for that business.
+Any Smart Agent Chat tool user with the appropriate permission can create or edit the closing categories for that business.
 
 The steps to create closing categories are:
-1) Open the agent chat tool.
+1) Open the Smart Agent Chat tool.
 2) Go to Businesses section from the left side menu.
    ![Businesses Section](assets/athena_businesses.png)
 3) Go to the closing category section from the top menu on the right section.

@@ -37,7 +37,7 @@ You can set the environment specific base URLs while creating the bot as shown b
 
 ![environment specific base URL for new bots](assets/integrating_custom_code_env_base_url_new_bot.png)
 
-For existing bots you can set or update these URLs by using the `edit bot` option from the top menubar in the bot builder tool.
+For existing bots you can set or update these URLs by using the `edit bot` option from the top menubar in the Conversation Studio tool.
 
 ![API Integration](assets/api21.png)
 

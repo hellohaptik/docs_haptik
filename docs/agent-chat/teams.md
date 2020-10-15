@@ -2,9 +2,9 @@
 title: Teams
 ---
 
-# Teams in Agent Chat
+# Teams in Smart Agent Chat
 
-Read this document to know about the **Team** feature in Agent Chat. Team is a feature used by Team Leaders who are responsible to manage a team of agents.
+Read this document to know about the **Team** feature in Smart Agent Chat. Team is a feature used by Team Leaders who are responsible to manage a team of agents.
 
 ## What is a team?
 A team is a group of agents who are trained to handle user queries related to a specific topic. The team can be divided based on the subject matter/location of a user/expertise of agents. The logic for team routing can be defined as per the business requirement. 
@@ -154,7 +154,7 @@ The point `iii` above gives the availability %age value. This value in green mea
 
 There can be a situation when the team routing logic fails and no team is shortlisted to assign a chat. In that case, the chat is assigned to the default team.
 
-### Step 1 - Create a Team in Agent Chat
+### Step 1 - Create a Team in Smart Agent Chat
 
 Make a team in agent chat which is supposed to take chats which are not assigned to any team (due to any technical reason).
 

@@ -46,7 +46,7 @@ The following section covers how an agent is assigned a chat.
 - Currently we allow a maximum of **3 chats** (default value) to be handled simultaneously per agent. We can change this value to anything between 1-5 per agent.
 
 ### Automatic Chat assignment
-Agent chat tries assigning a chat automatically based on the following parameters.
+Smart Agent chat tries assigning a chat automatically based on the following parameters.
 - On login or switching to ‘online’
 - Every time an agent marks a chat as ‘Complete’
 - Every time an agent marks a chat as ‘Waiting for User’
@@ -57,7 +57,7 @@ Agent chat tries assigning a chat automatically based on the following parameter
 
 
 ### Manual Chat assignment (Claiming)
-> Agent chat also supports manual assignment of chats to agents. 
+> Smart Agent chat also supports manual assignment of chats to agents. 
 
 Team leads can manually assign a chat. They can either assign it to themselves or a team or an individual agent. 
 

@@ -4,9 +4,9 @@ title: For Bot Builders
 
 ## Logging in
 
-The Bot builder gets an email with credentials and link to the *Bot builder* tool. 
+The Bot builder gets an email with credentials and link to the *Conversation Studio* tool. 
 
-Using the credentials, a bot builder logs in and clicks on **Bot Builder**. 
+Using the credentials, a bot builder logs in and clicks on **Conversation Studio**. 
 
 ![Menu](assets/for-bot-builders-menu.png)
 

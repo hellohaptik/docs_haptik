@@ -3,12 +3,12 @@ title: Integrating with External Bot
 ---
 
 ## Why?
-There might be times when there is an existing bot with a flow already built on another platform or through custom code. It is possible to connect this external bot flow to the haptik tools through the bot builder tool.
+There might be times when there is an existing bot with a flow already built on another platform or through custom code. It is possible to connect this external bot flow to the haptik tools through the Conversation Studio tool.
 
 ## Steps to integrate
 
 ### Create a bot on Mogambo
-The first step is to create a new bot on the bot builder tool. This bot will act as a gateway between haptik platform and the external bot.
+The first step is to create a new bot on the Conversation Studio tool. This bot will act as a gateway between haptik platform and the external bot.
 
 ### Create a node to transfer data
 The second step is to create a node in the bot. The job of this node is to take any user input that comes in and pass it along to the external bot. The node is also responsible to accept the input that comes in from the external bot and send it back to the user.

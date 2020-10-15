@@ -2,7 +2,7 @@
 title: Message Analysis
 ---
 
-In the analytics tool you can go to the "*Message Analysis*" section to analyse the bot performance at a message level.
+In the Intelligent Analytics tool you can go to the "*Message Analysis*" section to analyse the bot performance at a message level.
 
 ![Message Analysis Left Menu](assets/message-analysis-left-menu.png)
 

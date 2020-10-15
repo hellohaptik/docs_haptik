@@ -2,7 +2,7 @@
 title: Making Your First Bot
 ---
 
-To start building your first bot, log in to the Haptik platform using credentials that were shared with you via email. Once you've successfully logged in, navigate to the Bot Builder Tool. 
+To start building your first bot, log in to the Haptik platform using credentials that were shared with you via email. Once you've successfully logged in, navigate to the Conversation Studio Tool. 
 
 Click the "*+ New Bot*" button, located in the upper left hand corner of the page:
 

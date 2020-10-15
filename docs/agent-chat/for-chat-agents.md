@@ -6,7 +6,7 @@ title: For Chat Agents
 
 The Chat agent gets an email with credentials to the *Live Chat* tool. 
 
-Using the credentials, a Chat agent logs in and clicks on **Agent Chat**. Now, the Chat agent can essentially click on the *My Chats* tab i.e. the first option depicted in the left-hand menu.
+Using the credentials, a Chat agent logs in and clicks on **Smart Agent Chat**. Now, the Chat agent can essentially click on the *My Chats* tab i.e. the first option depicted in the left-hand menu.
 
 ## My Chats
 
@@ -31,7 +31,7 @@ A chat agent can:
 
 ## Chat Priority
 
-In high traffic scenarios for customer support agents, there’s almost always two or three chats for agents to deal. So as soon as an agent finishes helping one customer, they move on to another chat. But user activity is not highlighted to the agent. We color code the chat tab to help agents prioritise a customer basis last user message sent time. This eliminates the agent side dilemma to figure chat priorities from their ongoing chats. Check out this feature in action on Live Agent Chat and screenshot below.
+In high traffic scenarios for customer support agents, there’s almost always two or three chats for agents to deal. So as soon as an agent finishes helping one customer, they move on to another chat. But user activity is not highlighted to the agent. We color code the chat tab to help agents prioritise a customer basis last user message sent time. This eliminates the agent side dilemma to figure chat priorities from their ongoing chats. Check out this feature in action on Smart Agent Chat and screenshot below.
 
 ![chat priority](assets/Chats_prioritised.png)
 

@@ -16,7 +16,7 @@ All these queries are visible for the duration and business/IVA you have selecte
 
 ## Queries
 
-A query is a question or a request for information by a user.  On Analytics,  it is a step or a series of steps designed to help user’s reach the end of the flow that gives them the appropriate answer.
+A query is a question or a request for information by a user.  On Intelligent Analytics tool,  it is a step or a series of steps designed to help user’s reach the end of the flow that gives them the appropriate answer.
 
 For example, a user interacts with a banking assistant and wants to check their account balance. In this case the query name will be “to check account balance”.
 

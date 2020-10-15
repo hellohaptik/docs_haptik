@@ -20,7 +20,7 @@ To jump straight to reading about any of the sub-components of nodes, click on t
 Otherwise, keep reading below to learn about the different node types and how to get started creating nodes.
 
 ### Different Types of Nodes
-The bot builder tool provides three types of nodes. Each node has a specific purpose and the different nodes can be used together in different combinations based on the use case.
+The Conversation Studio tool provides three types of nodes. Each node has a specific purpose and the different nodes can be used together in different combinations based on the use case.
 
 The three types of nodes are:
 

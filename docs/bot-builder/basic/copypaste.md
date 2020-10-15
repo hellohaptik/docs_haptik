@@ -1,5 +1,5 @@
 ---
-title: Copy & Paste on Bot Builder
+title: Copy & Paste on Conversation Studio
 ---
 
 ## Which all elements can be copied and pasted?

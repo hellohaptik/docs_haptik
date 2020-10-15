@@ -2,7 +2,7 @@
 title: Best Practices
 ---
 
-**Analytics** tool helps you build an experience that is
+**Intelligent Analytics** tool helps you build an experience that is
 
 1. Adaptable
 2. Responsive

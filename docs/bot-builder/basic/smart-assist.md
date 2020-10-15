@@ -56,6 +56,6 @@ If the bot finds two consecutive user queries falling into the same SMART ASSIST
 
 ![SA_8](assets/SA_8.png)
 
-3. Those SMART ASSIST messages that use button text, those respective button texts are fetched from the “Did you mean?” text section on the respective Nodes in the Bot Builder.
+3. Those SMART ASSIST messages that use button text, those respective button texts are fetched from the “Did you mean?” text section on the respective Nodes in the Conversation Studio.
 
 4. Text of the messages sent as SMART ASSIST responses, is currently non-customisable and controlled directly at the platform level.

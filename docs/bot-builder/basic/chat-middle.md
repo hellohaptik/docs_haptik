@@ -242,7 +242,7 @@ However, we recommend that your answers range between 200-300 characters for opt
 
 While not all of us are writers, there's one way to make sure that your copies don't suffer from terrible grammar, bad sentence structure, and incorrect spelling.
 
-💡 Use [Grammarly](https://www.grammarly.com/), a free grammar checking software to help you eliminate grammar errors and easily improve any text (even within the Bot Builder Tool!)
+💡 Use [Grammarly](https://www.grammarly.com/), a free grammar checking software to help you eliminate grammar errors and easily improve any text (even within the Conversation Studio Tool!)
 
 ### Call the grammar 'COPS'
 

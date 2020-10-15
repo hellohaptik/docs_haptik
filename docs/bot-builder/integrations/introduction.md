@@ -8,7 +8,7 @@ Integrations allow you to connect your IVA to external services to perform dynam
 
 ## Types of Integrations
 
-Haptik's Bot Builder tool supports two types of integrations. They are 
+Haptik's Conversation Studio tool supports two types of integrations. They are 
 
 1) Integrations via Code Node using Code Editor
 2) Integrations via Static Node using `Integrations Tab`

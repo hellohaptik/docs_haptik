@@ -30,7 +30,7 @@ The Bot Prompt visual consists of the following components:
     - What information should it display _(Prompt Variations)_.
 
 
-- To add a Bot Prompt Trigger, navigate to `Bot Builder > Business Manager > (Select Business) > Bot Prompt Triggers > Create a Trigger`
+- To add a Bot Prompt Trigger, navigate to `Conversation Studio > Business Manager > (Select Business) > Bot Prompt Triggers > Create a Trigger`
 
 - On clicking of `Create a Trigger` button, you get a popup Window titled `New Trigger`. In this window you can configure the _Bot Prompt Trigger Rules_ and _Prompt Variations_
 

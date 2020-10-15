@@ -3,7 +3,7 @@ title: Core Concepts
 ---
 
 ## Introduction
-As we learnt recently, the analytics tool provides you with different metrics to measure your bot's performance. But before going into these metrics, it is important to understand a few core concepts.
+As we learnt recently, the Intelligent Analytics tool provides you with different metrics to measure your bot's performance. But before going into these metrics, it is important to understand a few core concepts.
 
 ## Messages
 Messages are basically what the user and the bot use to communicate with each other. The user tells the bot what they want through a message and the bot responds to the user through a message again.

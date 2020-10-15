@@ -74,7 +74,7 @@ There is a **limit of 20 characters** on the "Did you mean?" button text.
  
 **Illustration - The **Disambiguation Feature** is better explained through some images taken from a sample IVA built on Haptik Version 2.0. The illustration depicts various scenarios in which Disambiguation occurs.
 
-Here is the structure of the IVA taken from Bot Builder. The **“Careers at Haptik”** and **“About Haptik”** are start nodes. The **“Funding of Haptik”** and **“Product of Haptik”** are dependent nodes branching from **“About Haptik”** start node.
+Here is the structure of the IVA taken from the Conversation Studio. The **“Careers at Haptik”** and **“About Haptik”** are start nodes. The **“Funding of Haptik”** and **“Product of Haptik”** are dependent nodes branching from **“About Haptik”** start node.
 
 ![DMG_5](assets/DMG_5.png)
 

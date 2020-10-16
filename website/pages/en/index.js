@@ -54,7 +54,7 @@ module.exports = () => (
         {
           title: 'Conversation Studio',
           description:
-            'Everything required to get you from beginner to advanced in bot building using our in-house bot building tool',
+            'Everything required to get you from beginner to advanced in bot building using our in-house Conversation Studio tool',
           ctaText: 'Get Started',
           ctaLink: '/bot-builder/basic/introduction',
         },

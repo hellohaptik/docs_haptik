@@ -287,7 +287,7 @@ You would need to create a Button HSL for letting the user upload the image and 
 
 ![Attachment Example on Bot](assets/AttachmentHSL.png)
 
-In the above example, if the user is not giving a valid PANCARD image then the **entity reprompt message** would be asking the user for a valid image.
+In the above example, if the user is not giving an image then the **entity reprompt message** would be asking the user for a valid input.
 
 **Video** attachment type is only for Whatsapp bots as we will be able to upload videos there. Once you successfully upload the video, you will get an automated message -
 

@@ -273,13 +273,25 @@ You can refer https://regex101.com/ to learn more about regular expression.
 
 **Attachment** entity is meant for collecting attachments from the user message.
 
-![Attachment Entity](assets/AttachmentEntity.png)
+![Attachment Entity](assets/Video1.png)
 
-You would need to create a Button HSL for letting the user upload the attachment.
+There are these three types of attachments allowed -
+
+- Image
+- Document (pdf, docx, xls, csv)
+- Video
+
+![Attachment Entity](assets/Video2.png)
+
+You would need to create a Button HSL for letting the user upload the image and document. 
 
 ![Attachment Example on Bot](assets/AttachmentHSL.png)
 
-In the above example, if the user is not giving a valid PANCARD image then the entity reprompt message would be asking the user for a valid image.
+In the above example, if the user is not giving a valid PANCARD image then the **entity reprompt message** would be asking the user for a valid image.
+
+**Video** attachment type is only for Whatsapp bots as we will be able to upload videos there. Once you successfully upload the video, you will get an automated message -
+
+"Please wait while we process your video message."
 
 #### **Words & Phrases Entity**
 

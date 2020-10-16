@@ -52,23 +52,23 @@ module.exports = () => (
       title="Tools"
       sections={[
         {
-          title: 'Bot Builder',
+          title: 'Conversation Studio',
           description:
-            'Everything required to get you from beginner to advanced in Bot Building',
+            'Everything required to get you from beginner to advanced in bot building using our in-house bot building tool',
           ctaText: 'Get Started',
           ctaLink: '/bot-builder/basic/introduction',
         },
         {
-          title: 'Agent Chat',
+          title: 'Smart Agent Chat',
           description:
-            'Learn how Human Escalation is handled on bots using Agent Chat tool',
+            'Learn how human escalations are handled on bots using our Agent Chat tool',
           ctaText: 'Get Started',
           ctaLink: '/agent-chat',
         },
         {
-          title: 'Analytics',
+          title: 'Intelligent Analytics',
           description:
-            'Learn how to uncover hidden insights in your chat data & communication',
+            'Learn how to uncover hidden insights in your chat data & communication using our very own Analytics tool',
           ctaText: 'Get Started',
           ctaLink: '/bot-analytics'
         },

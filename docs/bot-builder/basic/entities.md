@@ -293,6 +293,10 @@ In the above example, if the user is not giving a valid PANCARD image then the *
 
 "Please wait while we process your video message."
 
+For video entity to be captured on a Whatsapp bot, we need to enable the settings from Business Manager as shown below -
+
+![Attachment Entity](assets/Video3.png)
+
 #### **Words & Phrases Entity**
 
 **Words & Phrases** entity is meant to extract "specific" text values e.g. name of a person, name of a city, etc. from user utterances.

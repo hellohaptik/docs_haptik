@@ -7,7 +7,7 @@ There might be times when there is an existing bot with a flow already built on 
 
 ## Steps to integrate
 
-### Create a bot on Mogambo
+### Create a bot on Conversation Studio
 The first step is to create a new bot on the Conversation Studio tool. This bot will act as a gateway between haptik platform and the external bot.
 
 ### Create a node to transfer data

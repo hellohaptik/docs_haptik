@@ -297,6 +297,8 @@ For video entity to be captured on a Whatsapp bot, we need to enable the setting
 
 ![Attachment Entity](assets/Video3.png)
 
+> NOTE - The uploaded video will get deleted in 3 days.
+
 #### **Words & Phrases Entity**
 
 **Words & Phrases** entity is meant to extract "specific" text values e.g. name of a person, name of a city, etc. from user utterances.

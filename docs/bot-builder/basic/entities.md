@@ -279,7 +279,7 @@ There are these three types of attachments allowed -
 
 - Image
 - Document (pdf, docx, xls, csv)
-- Video
+- Video (Only for Whatsapp)
 
 ![Attachment Entity](assets/Video2.png)
 
@@ -793,4 +793,3 @@ The response to the User will still be from a Node which has Highest Confidence 
     <td>'en', 'hi', 'gu', 'bn', 'mr', 'ta'</td>
   </tr>
 </table>
-

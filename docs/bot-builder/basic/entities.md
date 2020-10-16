@@ -289,7 +289,7 @@ You would need to create a Button HSL for letting the user upload the image and 
 
 In the above example, if the user is not uploading an image file then the **entity reprompt message** would ask the user for a valid input.
 
-**Video** attachment type is only for **Whatsapp bots** as we will be able to upload videos there. Once you successfully upload the video, you will get an automated message along with your predefined Bot Says messages -
+**Video** attachment type is only for **Whatsapp bots** as the user will be able to upload videos only on Whatsapp. Once the user successfully uploads the video, he will get an automated message along with the predefined Bot Says messages -
 
 "Please wait while we process your video message."
 

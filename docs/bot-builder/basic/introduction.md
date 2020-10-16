@@ -9,7 +9,7 @@ You can skip straight to the video [**HERE**](https://youtu.be/vEuc4za39hk).
     Tip: A bot is a program that communicates with you, commonly using a chat or voice interface.
 
 **How is *Conversation Studio* used?**
-On *Conversation Studio*, you can create a bot i.e. formulate different conversation flows. Instead of creating bots on your own, our Bot Builder gives you a framework and components to build the bot without much effort. 
+On *Conversation Studio*, you can create a bot i.e. formulate different conversation flows. Instead of creating bots on your own, our Conversation Studio gives you a framework and components to build the bot without much effort. 
 
 **How does the Bot building process work?** 
 Creating the conversation flow in your bots might seem straightforward, but there are a few things bot builders do to engage users as they interact with bots - 

@@ -28,7 +28,7 @@ Once you have the credentials the next step is to open the url provided by the H
 
 Below is the home screen you will get to see once you have successfully logged-in.
 
-![Menu](assets/homescreen1.png)
+![Menu](assets/analyticshomescreen.png)
 
 ## Opening Intelligent Analytics
 After you have been presented the home screen with all the tools you have access to, click on the `Intelligent Analytics` option to open the analytics tool.

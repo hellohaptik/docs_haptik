@@ -8,7 +8,7 @@ The Bot builder gets an email with credentials and link to the *Conversation Stu
 
 Using the credentials, a bot builder logs in and clicks on **Conversation Studio**. 
 
-![Menu](assets/for-bot-builders-menu.png)
+![Menu](assets/conversationstudiohomescreen.png)
 
 You can read on further about the steps in creating a bot by [starting from here](https://docs.haptik.ai/bot-builder/basic/making-first-bot). 
 

@@ -12,9 +12,9 @@ To keep the transition from Bot to Agent smooth for best user experience, we all
 
 ## Handover rules
 
-### Adding Agent Chat Integration functionality on Bot:
+### Adding Smart Agent Chat Integration functionality on Bot:
 
-There is a generic function for Agent Chat integration which needs to be added on a node from where the agent function is to be used.
+There is a generic function for Smart Agent Chat integration which needs to be added on a node from where the agent function is to be used.
 
 **integration.utils.common.chat_force_pending**
 
@@ -32,17 +32,17 @@ For a bot that already allows human assistance, set the *Handover Message Flag* 
 
     Tip: In these automated methods, you cannot assign directly to an agent. We send it to a team first.
 
-### Claiming a chat from Agent Chat tool:
+### Claiming a chat from Smart Agent Chat tool:
 
-You can send a chat to any specific agent using the *Reassign Chat* button from Agent Chat tool.
+You can send a chat to any specific agent using the *Reassign Chat* button from Smart Agent Chat tool.
 
 For automated transitions, Business Manager in Bot Builder has a `Team Manager` section where you can configure the Team that the chat should be moved to.
 
     Tip: API Integration functions can also specify the team to which a chat is to be sent.
 
-### Settings to configure the bot with Agent Chat tool:
+### Settings to configure the bot with Smart Agent Chat tool:
 
-1. Go to the Teams page on Agent Chat tool and click on Create Teams
+1. Go to the Teams page on Smart Agent Chat tool and click on Create Teams
 
 ![Team Creation1](assets/HO2.png)
 

@@ -39,7 +39,7 @@ Post creation of a story, the story will be displayed as depicted below.
 
 #### Creating a Sub-story
 
-To start adding substories, click on the story in which you want to start your work. This will take you to the bot builder graph.
+To start adding substories, click on the story in which you want to start your work. This will take you to the Conversation Studio graph.
 
 ![creating_substory_new](/assets/creating_substory_new.png)
 

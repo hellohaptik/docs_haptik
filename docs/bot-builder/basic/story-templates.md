@@ -5,7 +5,7 @@ title: Story Templates
 ## What are Story Templates?
 There are a few use cases which are common across different chatbots. For example the conversational flow for OTP validation or for getting order status could be common across multiple bots. In such cases the sets of nodes and their connections for these flows can be resused across bots.
 
-The bot builder tool provides some of these common flows as a template that can be directly used inside your bot.
+The Conversation Studio tool provides some of these common flows as a template that can be directly used inside your bot.
 
 > Note: Using a template creates a new sub-story inside the story where you imported the template. The new sub-story includes all the nodes and connections required for the flow.
 

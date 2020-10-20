@@ -2,7 +2,7 @@
 title: Platform Support Bot
 ---
 
-Haptik Platform has multiple tools like Bot Builder, Agent Chat and Chat Analytics. All of these tools have numerous features which help us create complex and sophisticated Conversational AI solutions like IVA.
+Haptik Platform has multiple tools like Conversation Studio, Smart Agent Chat and Intelligent Analytics. All of these tools have numerous features which help us create complex and sophisticated Conversational AI solutions like IVA.
 
 But what if you get stuck somewhere or you want to know about a particular feature in more depth. To handle these, we have a **Support Bot** in place to help you. 
 
@@ -14,7 +14,7 @@ You can click on the icon highighted in the above diagram to open the Support Bo
 
 ![SupportBot2](assets/PS2.png)
 
-The Support Bot is accessible from all screens of the Platform. Home Screen, all screens of Bot Builder, all screens of Chat Analytics tool except Agent Chat screen.
+The Support Bot is accessible from all screens of the Platform. Home Screen, all screens of Conversation Studio, all screens of Chat Analytics tool except Agent Chat screen.
 
 ## How to use it?
 

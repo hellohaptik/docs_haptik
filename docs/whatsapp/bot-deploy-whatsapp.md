@@ -2,7 +2,7 @@
 title: Deploy Bot to WhatsApp
 ---
 
-You can use the `Platform Settings` section of the bot builder tool to deploy your bot on Whatsapp. You can read more about the section [here](https://docs.haptik.ai/bot-builder/basic/platforms-deployment).
+You can use the `Platform Settings` section of the Conversation Studio tool to deploy your bot on Whatsapp. You can read more about the section [here](https://docs.haptik.ai/bot-builder/basic/platforms-deployment).
 
 The first step is to build the bot using the bot builder tool. This is similar to buildind any other bot. The only difference is that there is a limited set of supported message types in case of a WhatsApp bot.
 

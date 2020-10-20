@@ -30,7 +30,7 @@ There are multiple field entries and selections while creating a form. Read on e
 - Subtitle: This field should convey the action needed from the user. For example if you are making a form to take delivery address, Subtitle can be Please help me with your Delivery address
 - Short Hand: This is to be deprecated. Used in older app versions
 - Auto Open: Tick this off to auto open form with a single auto search field on task tap. For these use cases, task is linked to the form. This is deprecated.
-  The linking of form to task is no longer possible through the Bot builder UI and has to be done
+  The linking of form to task is no longer possible through the Conversation Studio UI and has to be done
   through backend only
 - Search Source: When we want some custom response or inputs from a client’s API, we put the API URL here. (ex: we need a list of clinics, we type the API endpoint URL in this field)
 - Search Placeholder: In the Search field, the placeholder text visible for the user to understand what needs to be typed
@@ -71,7 +71,7 @@ There are multiple field entries and selections while creating a form. Read on e
 
 - Editing existing fields: You can directly click the chevron arrow icon and then click edit/cross icon on any particular field to edit or delete the field from any form.
 
-- Using form in bot builder: To use the form on any node, we type {chatform}{id} in the raw HSL (after clicking Add a chat element). The id is the number assigned to each form in Admin Tools -> Forms list view.
+- Using form in Conversation Studio: To use the form on any node, we type {chatform}{id} in the raw HSL (after clicking Add a chat element). The id is the number assigned to each form in Admin Tools -> Forms list view.
 
 ![Form ID](assets/4_form_id.png)
 

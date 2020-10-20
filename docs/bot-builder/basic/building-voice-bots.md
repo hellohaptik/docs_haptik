@@ -9,7 +9,7 @@ In a voice-bot, the  primary mode of communication is voice. Users Listen to the
 
 ## How does it work?
 
-To configure a Voice Bot on our bot builder, go to any node and set voice-specific bot responses. On a node, you can tap on `+Add a chat element` in Bot says. Once you click on it, a slide bar opens on the right hand side. 
+To configure a Voice Bot on our Conversation Studio, go to any node and set voice-specific bot responses. On a node, you can tap on `+Add a chat element` in Bot says. Once you click on it, a slide bar opens on the right hand side. 
 
 Click on preferred chat element. Here for your element, you can configure the voice bot via two fields
 1. Bot Says: This is the text on UI as a bot message bubble i.e. Add bot says, which will be sent as text to the user.

@@ -21,7 +21,7 @@ The client can then use this data for the integration. Here's how the integratio
 
 1) When the client wants to transfer the chat to an agent they perform the following actions:
  * Create a Haptik User - [Link to Documentation](https://docs.haptik.ai/webhooks/create-haptik-user)
- * Send a message to Haptik - [Link to Documentation](https://docs.haptik.ai/webhooks/send-message-to-haptik). This creates a new message in agent chat and assigns the chat to an agent.
+ * Send a message to Haptik - [Link to Documentation](https://docs.haptik.ai/webhooks/send-message-to-haptik). This creates a new message in Smart Agent Chat and assigns the chat to an agent.
 
 2) The client also needs to provide a webhook of their own where the responses from the agent will be sent. Haptik will send the agent responses to this webhook endpoint with the following paylaod - [Link to Documentation](https://docs.haptik.ai/webhooks/webhook-payload). 
 

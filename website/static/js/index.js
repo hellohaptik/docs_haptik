@@ -21,9 +21,13 @@ function getTitle() {
 if (customsidebar.includes(getTitle())) addSidebarStyling();
 
 document.addEventListener('DOMContentLoaded', function () {
-  const title = getTitle();
+  title = getTitle();
 
   if (title === 'Docs_haptik') return;
+
+  if (title === 'Bot Builder') title = 'Conversation Studio';
+  if (title === 'Agent Chat') title = 'Smart Agent Chat';
+  if (title === 'Bot Analytics') title = 'Intelligent Analytics';
 
   const DOMList = document.getElementsByClassName('headerTitleWithLogo');
   const headerTitleDOM = DOMList.length ? DOMList[0] : null;

@@ -30,15 +30,15 @@ class Footer extends React.Component {
             ])} */}
             {this.renderFooterColumn('Tools', [
               {
-                title: 'Bot Builder',
+                title: 'Conversation Studio',
                 url: 'https://docs.haptik.ai/bot-builder/basic/introduction',
               },
               {
-                title: 'Agent Chat',
+                title: 'Smart Agent Chat',
                 url: 'https://docs.haptik.ai/agent-chat/',
               },
               {
-                title: 'Analytics',
+                title: 'Intelligent Analytics',
                 url: 'https://docs.haptik.ai/bot-analytics/',
               },
             ])}

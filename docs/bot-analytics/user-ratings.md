@@ -3,7 +3,7 @@ title: User Ratings
 ---
 
 ## What are User Ratings?
-The User Ratings page of the Analytics tool provides information about the ratings given by a user for a bot. 
+The User Ratings page of the Intelligent Analytics tool provides information about the ratings given by a user for a bot. 
 
 Based on the configuration made by the bot developers, a bot might ask for feedback from user at the end of a chat. The feedback it captures involves a star rating out of 5 and a free form text review or comment. 
 
@@ -59,7 +59,7 @@ Similar to the previous graph you can view the specific average rating at any po
 ![Average Rating Hover](assets/user-ratings-average-hover.png)
 
 ## ***Task Performance***
-The final section in the User Ratings page of the analytics tool is the Task Performance section. 
+The final section in the User Ratings page of the Intelligent Analytics tool is the Task Performance section. 
 
 ![Task Performance](assets/user-ratings-task-performance.png)
 

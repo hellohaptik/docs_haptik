@@ -18,21 +18,21 @@ A Partner Admin is a special role that can be assigned to someone who needs to m
 ## Available Roles in the System
 The roles are divided or categorised on the basis of tools. The available roles in the system are as follows:
 
-* **Bot Builder**
+* **Conversation Studio**
 
     * **Bot Builder View** -  This role allows you to view a bot's flows and training data.
     * **Bot Builder Edit** - This role allows you to edit a bot's flows and training data.
     * **Bot Builder Transfer** - This role allows you to transfer a bot to production.
     * **Bot Builder Business Manager** - This role allows you to manage the business configurations and also transfer the business to production.
 
-* **Chat Agent**
+* **Smart Agent Chat**
 
     * **Chat Agent** - This role allows you to take and respond to chats from the chat agent tool.
     * **Chat Agent TL** - This role gives you team lead access which lets you manage teams on the chat agent tool.
     * **Chat Agent View Personal Details** - This role allows you to view personal details of the end-user you are chatting to.
     * **Chat Agent Inactive Auto Logout** - This role automatically logs you out after being inactive on the platform for 8 mins.
 
-* **IVA Analytics**
+* **Intelligent Analytics**
 
     * **IVA Analytics View** - This role lets you access and view all analytics data.
     * **IVA Analytics Edit** - This role lets you view all analytics data and also create/download query completion reports.

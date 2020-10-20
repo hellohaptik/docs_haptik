@@ -30,7 +30,7 @@ Example: My package is late should also lead to - Have a complaint task. This sh
 
 c. We can follow the User Says Guidelines for having a clear picture of writing these variations.
 
-d. One way to guide users who prefer typing in freeform would be the AutoComplete feature on the Haptik platform. You can customize the option that appears within the AutoComplete window by flagging it in the bot builder. [Here’s](https://docs.haptik.ai/bot-builder/basic/user-says#autocomplete-suggestions) the documentation to help you enable it on your IVA.
+d. One way to guide users who prefer typing in freeform would be the AutoComplete feature on the Haptik platform. You can customize the option that appears within the AutoComplete window by flagging it in the Conversation Studio. [Here’s](https://docs.haptik.ai/bot-builder/basic/user-says#autocomplete-suggestions) the documentation to help you enable it on your IVA.
 
 ![autocomplete](/assets/autocomplete1.png)
 

@@ -5,7 +5,7 @@ title: Dialogue Manager
 Dialogue Manager is the decision making engine of the conversational pipeline. Since the conversational engine consists of multiple modules, the Dialogue Manager makes a choice on what’s the best module to respond to the user's query.
 Some of the modules present in Haptik’s conversation pipeline are - Graph Nodes, FAQ Nodes, Small Talk, etc. 
 
-Dialogue Manager functions on a pre-decided algorithm. Hence, for a Bot Builder Knowledge of the algorithm helps at times in Bot Building and making decisions around the bot architecture.
+Dialogue Manager functions on a pre-decided algorithm. Hence, for a bot builder, Knowledge of the algorithm helps at times in Bot Building and making decisions around the bot architecture.
 
 **Note** - It may help reading about [Disambiguation](disambiguation.md), [FAQ Nodes](general-nodes.md) and [Small Talk](smalltalk.md). Some features of Disambiguation, FAQ Nodes and Small Talk have been referred to in this section.
 

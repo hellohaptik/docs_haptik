@@ -12,7 +12,7 @@ Once you have connected the bot to an external platform like Facebook Messenger,
 
 You can use the *Platform Deployment* sub-section of the Partner specific area in Business Manager. Here's how you can open this section
 
-1) Go to the Business Manager section of the Bot Builder tool from the left Navigation Bar.
+1) Go to the Business Manager section of the Conversation Studio tool from the left Navigation Bar.
 
 ![Businsess Manager](assets/platform_deployments_business_manager.png)
 
@@ -32,7 +32,7 @@ Using the Platform Settings you can easily connect your bot to any of the follow
 
 ## Deploying to Facebook Messenger
 
-Before connecting your Bot Builder bot to Facebook Messenger there are a few pre-requisites. 
+Before connecting your Conversation Studio bot to Facebook Messenger there are a few pre-requisites. 
 
 ### Pre-requisites
 
@@ -48,7 +48,7 @@ Before connecting your Bot Builder bot to Facebook Messenger there are a few pre
 
 ![Messenger Product Selection](assets/platform_deployments_facebook_messenger_product_setup.png)
 
-4) Inside Messenger settings scroll down to the Token Generation section and generate token for the facebook page you want to connect your Bot Builder bot to.  
+4) Inside Messenger settings scroll down to the Token Generation section and generate token for the facebook page you want to connect your bot to.  
 
 ![Page Access Token](assets/platform_deployments_page_access_token.png)
 
@@ -56,9 +56,9 @@ Once you have completed all the pre-requisite steps, you can go ahead with conne
 
 You can read about it in detail [here](https://docs.haptik.ai/other/facebook).
 
-### Connecting to Bot Builder
+### Connecting to Conversation Studio
 
-1) On the Platform Settings screen in Bot Builder, go to Facebook.
+1) On the Platform Settings screen in Conversation Studio, go to Facebook.
 
 2) Callback URL will be auto-generated.  
 
@@ -68,7 +68,7 @@ You can read about it in detail [here](https://docs.haptik.ai/other/facebook).
 
 5) Go back to the facebook developer application and scroll down to the webhook section.
 
-6) Click on Setup Webhook, then enter <domain_name>/fb/<any_identifier> in the callback url. The domain name will be provided by the Haptik team. Use the same identifier that you used in Bot Builder's callback url.
+6) Click on Setup Webhook, then enter <domain_name>/fb/<any_identifier> in the callback url. The domain name will be provided by the Haptik team. Use the same identifier that you used in bot's callback url.
 
 7) Enter the secret_challenge_key previously setup in the verify token field.
 
@@ -91,7 +91,7 @@ The connection should be now setup and we can go ahead and test the bot.
 
 ## Deploying to Jio
 
-To connect your Bot Builder bot to Jio open the platform settings section in the business manager and navigate to Jio. Follow these steps to connect the bot:
+To connect your bot to Jio open the platform settings section in the business manager and navigate to Jio. Follow these steps to connect the bot:
 
 1) Callback URL is auto-generated
 
@@ -107,9 +107,9 @@ If you want to use a custom platform or want to connect to a platform not curren
 
 1) Your application receives the message from the user.
 
-2) It then sends a POST request with that message to the callback URL of Bot Builder.
+2) It then sends a POST request with that message to the callback URL of the bot.
 
-3) Bot Builder process the message and sends a response to the webhook URL of your application. 
+3) Haptik processes the message and sends a response to the webhook URL of your application. 
 
 4) Your application listens to the webhook and responds to the user.
 
@@ -121,7 +121,7 @@ You can get more detailed information about the request/response parameters and 
 
 1) Go to the Platform Settings page and scroll to the BotAPI section.
 
-2) Callback URL and Token are already populated. Enter the Webhook URL and Secret Key. The Secret Key and Access Token help with authenticating your server with Bot Builder.
+2) Callback URL and Token are already populated. Enter the Webhook URL and Secret Key. The Secret Key and Access Token help with authenticating your server with Haptik.
 
 3) Enable the Webhook endpoint.
 
@@ -135,13 +135,13 @@ You can test the connection by making a POST request to the callback URL. After 
 
 ## Deploying to Whatsapp
 
-Bot Builder also lets you connect your bot to whatsapp. To make this setup there are a few pre-requisites.
+Conversation Studio also lets you connect your bot to whatsapp. To make this setup there are a few pre-requisites.
 
 ### Pre-Requisites for Whatsapp Integration
 
 You can read about it in detail [here](https://docs.haptik.ai/whatsapp/).
 
-### Complete the Connection on Bot Builder
+### Complete the Connection on Conversation Studio
 
 On the Platform Settings screen go to Whatsapp, callback url will be auto-populated. Haptik team will help you set up this page. Contact your Haptik SPOC for the rest of the fields.
 

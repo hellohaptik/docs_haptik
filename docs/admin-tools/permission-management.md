@@ -20,24 +20,24 @@ The roles are divided or categorised on the basis of tools. The available roles 
 
 * **Conversation Studio**
 
-    * **Conversation Studio View** -  This role allows you to view a bot's flows and training data.
-    * **Conversation Studio Edit** - This role allows you to edit a bot's flows and training data.
-    * **Conversation Studio Transfer** - This role allows you to transfer a bot to production.
-    * **Conversation Studio Business Manager** - This role allows you to manage the business configurations and also transfer the business to production.
+    * **Bot Builder View** -  This role allows you to view a bot's flows and training data.
+    * **Bot Builder Edit** - This role allows you to edit a bot's flows and training data.
+    * **Bot Builder Transfer** - This role allows you to transfer a bot to production.
+    * **Bot Builder Business Manager** - This role allows you to manage the business configurations and also transfer the business to production.
 
-* **Smart Chat Agent**
+* **Smart Agent Chat**
 
-    * **Smart Chat Agent** - This role allows you to take and respond to chats from the chat agent tool.
-    * **Smart Chat Agent TL** - This role gives you team lead access which lets you manage teams on the chat agent tool.
-    * **Smart Chat Agent View Personal Details** - This role allows you to view personal details of the end-user you are chatting to.
-    * **Smart Chat Agent Inactive Auto Logout** - This role automatically logs you out after being inactive on the platform for 8 mins.
+    * **Chat Agent** - This role allows you to take and respond to chats from the chat agent tool.
+    * **Chat Agent TL** - This role gives you team lead access which lets you manage teams on the chat agent tool.
+    * **Chat Agent View Personal Details** - This role allows you to view personal details of the end-user you are chatting to.
+    * **Chat Agent Inactive Auto Logout** - This role automatically logs you out after being inactive on the platform for 8 mins.
 
 * **Intelligent Analytics**
 
-    * **Intelligent Analytics View** - This role lets you access and view all analytics data.
-    * **Intelligent Analytics Edit** - This role lets you view all analytics data and also create/download query completion reports.
-    * **Intelligent Analytics Admin** - This role lets you view all analytics data, create/download/delete query completion reports, and modify columns in the message analysis section.
-    * **Intelligent Analytics Email Report** - This role lets you receive email reports.
+    * **IVA Analytics View** - This role lets you access and view all analytics data.
+    * **IVA Analytics Edit** - This role lets you view all analytics data and also create/download query completion reports.
+    * **IVA Analytics Admin** - This role lets you view all analytics data, create/download/delete query completion reports, and modify columns in the message analysis section.
+    * **IVA Analytics Email Report** - This role lets you receive email reports.
 
 * **Admin Tools**
 

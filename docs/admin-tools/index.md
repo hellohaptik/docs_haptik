@@ -4,7 +4,7 @@ title: Introduction
 
 The Admin Tools of the Haptik Platform are a set of tools that help you manage the users, the data and other configurations of all others tools on the platform like Conversation Studio, Smart Agent Chat and Intelligent Analytics.
 
-![Admin Tools](assets/admin-tools.png)
+![Admin Tools](assets/admintoolshomescreen.png)
 
 ## Available Tools
 

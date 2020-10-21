@@ -199,7 +199,7 @@ The masked data is shown as 6 asterisks in a message as shown below -
 
 ### What all gets masked? 
 
-Not everthing needs to be protected but sensitive data like phone-number, email-id, account number, date-of-birth, etc. needs to be protected. On the platform, these values are inserted as **entities**. So we essentially need to mask these sensitive entities.
+Not everything needs to be protected but sensitive data like phone-number, email-id, account number, date-of-birth, etc. needs to be protected. On the platform, these values are inserted as **entities**. So we essentially need to mask these sensitive entities.
 
 > Nothing else gets masked except **entities**.
 

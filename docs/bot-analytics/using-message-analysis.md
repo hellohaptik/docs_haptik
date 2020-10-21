@@ -191,7 +191,9 @@ We mask the **original_text** not **entity_value**. In a few scenarios, the orig
 
 ![PersonalEntities](assets/DataMasking3.png)
 
-Data on **Message Analysis** screen will show up in the masked format. If you download the **Message Analysis report**, then that will also show up with the masked version. However, chat links will show up in their original form. For easier bot maintenance, the masked value will also be tagged with what kind of information it is. Below image shows how a masked entity value will look like
+Data on **Message Analysis** screen will show up in the masked format. If you download the **Message Analysis report**, then that will also show up with the masked version. However, chat links will show up in their original form. 
+
+The masked data is shown as 6 asterisks in a message as shown below -
 
 ![PersonalEntities](assets/DataMasking4.png)
 
@@ -238,4 +240,3 @@ We do not recommend disabling Data Masking. If you do, then please explicitly in
 ### Can we see the unmasked/decrypted message?
 
 Even though it is technically possible to view the decrypted message, we do not allow the same anywhere. If absolutely required, then please get an approval from Haptik's Infosec team before using it in any application.
-

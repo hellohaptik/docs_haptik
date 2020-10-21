@@ -223,6 +223,9 @@ Few entities are considered as **personal** at the platform level. Once they are
 
 Few entities are considered as **personal** using **Regex Patterns**. Once they are detected in conversations, they are automatically masked. This list is not editable and is defined at a Platform level. Currently, the below regex patterns are used for this -
 
+- **r_email** - \b[A-Za-z0-9\.\+_-]+@[A-Za-z0-9\._-]+\.[a-zA-Z]+\b
+- **r_numbers** - \b\d{6,16}\b
+- **r_pancard** - \b[A-Za-z]{5}\d{4}[A-Za-z]\b
 
 ### Enable Data Masking
 

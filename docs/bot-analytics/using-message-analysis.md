@@ -215,25 +215,14 @@ Entities which are marked as **Personal** on the Conversation Studio tool are ma
 
 #### Predefined Masked Entities on the platform
 
-We try to detect specific entities using NER, which we consider Personal in all Messages. This list is not editable and is defined at a Platform level. 
-Currently, we try to mask the following entities under this Policy
-phone_number
+Few entities are considered as **personal** at the platform level. Once they are detected in conversations, they are automatically masked. This list is not editable and is defined at the platform level. Currently, only one entity is under this list -
+
+- phone_number
 
 #### Predefined Regex Patterns Entities on the platform
 
-We try to detect specific entities using Regex Patterns, which we consider Personal in all Messages. This list is not editable and is defined at a Platform level. 
-Currently, we try to mask entities using the following regex patterns:
+Few entities are considered as **personal** using **Regex Patterns**. Once they are detected in conversations, they are automatically masked. This list is not editable and is defined at a Platform level. Currently, the below regex patterns are used for this -
 
-Pattern Name
-Regex Pattern
-r_email
-\b[A-Za-z0-9\.\+_-]+@[A-Za-z0-9\._-]+\.[a-zA-Z]+\b
-r_numbers
-\b\d{6,16}\b
-
-
-r_pancard
-\b[A-Za-z]{5}\d{4}[A-Za-z]\b
 
 ### Enable Data Masking
 

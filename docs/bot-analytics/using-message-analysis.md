@@ -185,7 +185,7 @@ Apart from the filter options, you also have a button to clear all filters you h
 
 ## Data Masking
 
-Personal information in a conversation needs to be protected when a conversation is marked as complete. This includes User Says, Bot Says, Agent Messages, Media, etc. We mask or encrypt this personal information in order to protect it. Data masking is the practice of intentionally randomizing data to secure it. 
+Personal information in a conversation needs to be protected when a conversation is marked as complete. This includes User Says, Bot Says, Agent Messages, Media, etc. We mask or encrypt this personal information in order to protect it. Data masking is the practice of intentionally randomizing anonymizing specific data/information to secure it. 
 
 We mask the **original_text** not **entity_value**. In a few scenarios, the original_text and entity value are different. The current masking rules consider only the original_text. In the below image, it is shown how **original_text** and **entity_value** can be different -
 
@@ -193,7 +193,7 @@ We mask the **original_text** not **entity_value**. In a few scenarios, the orig
 
 Data on **Message Analysis** screen will show up in the masked format. If you download the **Message Analysis report**, then that will also show up with the masked version. However, chat links will show up in their original form. For easier bot maintenance, the masked value will also be tagged with what kind of information it is. Below image shows how a masked entity value will look like
 
-WAITING FOR JATIN's SCREENSHOT
+![PersonalEntities](assets/DataMasking4.png)
 
 ### What all gets masked? 
 

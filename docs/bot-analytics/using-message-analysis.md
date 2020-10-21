@@ -182,3 +182,68 @@ Apart from the filter options, you also have a button to clear all filters you h
 > Note: When you apply multiple filters, it is possible for the filters to cancel out each other or overlap each other. In such cases you might not see any data or see unexpected data. In such cases it is useful to use this button to clear all filters.
 
 ![Clear Filters](assets/message-analysis-clear-filters.png)
+
+## Data Masking
+
+Personal information in a conversation needs to be protected when a conversation is marked as complete. This includes User Says, Bot Says, Agent Messages, Media, etc. We mask or encrypt this personal information in order to protect it. Data masking is the practice of intentionally randomizing data to secure it. 
+
+We mask the **original_text** not **entity_value**. In a few scenarios, the original_text and entity value are different. The current masking rules consider only the original_text. In the below image, it is shown how **original_text** and **entity_value** can be different -
+
+![PersonalEntities](assets/DataMasking3.png)
+
+Data on **Message Analysis** screen will show up in the masked format. If you download the **Message Analysis report**, then that will also show up with the masked version. However, chat links will show up in their original form. For easier bot maintenance, the masked value will also be tagged with what kind of information it is. Below image shows how a masked entity value will look like
+
+WAITING FOR JATIN's SCREENSHOT
+
+### What all gets masked? 
+
+Not everthing needs to be protected but sensitive data like phone-number, email-id, account number, date-of-birth, etc. needs to be protected. On the platform, these values are inserted as **entities**. So we essentially need to mask these sensitive entities.
+
+> Nothing else gets masked except **entities**.
+
+The following policies, in order of priority, are triggered sequentially.
+
+- Personal Entities
+- Predefined Masked Entities on the platform
+- Predefined Regex Patterns Entities on the platform
+
+#### Personal Entities
+
+Entities which are marked as **Personal** on the Conversation Studio tool are masked in the conversation. It is shown in the below image where you can mark an entity as Personal -
+
+![PersonalEntities](assets/DataMasking1.png)
+
+#### Predefined Masked Entities on the platform
+
+We try to detect specific entities using NER, which we consider Personal in all Messages. This list is not editable and is defined at a Platform level. 
+Currently, we try to mask the following entities under this Policy
+phone_number
+
+#### Predefined Regex Patterns Entities on the platform
+
+We try to detect specific entities using Regex Patterns, which we consider Personal in all Messages. This list is not editable and is defined at a Platform level. 
+Currently, we try to mask entities using the following regex patterns:
+
+Pattern Name
+Regex Pattern
+r_email
+\b[A-Za-z0-9\.\+_-]+@[A-Za-z0-9\._-]+\.[a-zA-Z]+\b
+r_numbers
+\b\d{6,16}\b
+
+
+r_pancard
+\b[A-Za-z]{5}\d{4}[A-Za-z]\b
+
+### Enable Data Masking
+
+Data masking will be enabled by default for all new partners being created. If you wish to switch off the Data Masking (Data Encryption) flag, you can do the same from the Partners List under Admin Tools as shown below
+
+![PersonalEntities2](assets/DataMasking12.png)
+
+We do not recommend disabling Data Masking. If you do, then please explicitly inform the same among all stakeholders.
+
+### Can we see the unmasked/decrypted message?
+
+Even though it is technically possible to view the decrypted message, we do not allow the same anywhere. If absolutely required, then please get an approval from Haptik's Infosec team before using it in any application.
+

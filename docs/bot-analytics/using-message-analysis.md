@@ -231,7 +231,7 @@ Few entities are considered as **personal** using **Regex Patterns**. Once they 
 
 Data masking will be enabled by default for all new partners being created. If you wish to switch off the Data Masking (Data Encryption) flag, you can do the same from the Partners List under Admin Tools as shown below
 
-![PersonalEntities2](assets/DataMasking12.png)
+![PersonalEntities2](assets/DataMasking2.png)
 
 We do not recommend disabling Data Masking. If you do, then please explicitly inform the same among all stakeholders.
 

@@ -11,7 +11,7 @@ platform user to login with their existing Azure AD credentials.
 1) Haptik platform user can go to the homepage and then login 
 using Microsoft option with their Azure AD credentials. 
 Once logged in, then the user will be shown a page to update Profile information. 
-Over there they can update the username and email which will be required for the Haptik Platform.
+Over there the user can update the username and email which will be required for the Haptik Platform.
 Only use lowercase alphanumeric characters for username. 
 After this is done, then they will be redirected to the login page 
 again since their account is not yet whitelisted. 

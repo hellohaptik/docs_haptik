@@ -2,7 +2,7 @@
 title: Azure AD SSO integration
 ---
 
-Azure AD integration with the Haptik platform allows the  platform user to login with their existing Azure AD 
+Azure AD integration with the Haptik platform allows a user to login on the platform with their existing Azure AD 
 credentials.
 
 

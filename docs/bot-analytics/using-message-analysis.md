@@ -187,27 +187,25 @@ Apart from the filter options, you also have a button to clear all filters you h
 
 Personal information in a conversation needs to be protected when a conversation is marked as complete. This includes User Says, Bot Says, Agent Messages, Media, etc. We mask or encrypt this personal information in order to protect it. Data masking is the practice of intentionally randomizing anonymizing specific data/information to secure it. 
 
-We mask the **original_text** not **entity_value**. In a few scenarios, the original_text and entity value are different. The current masking rules consider only the original_text. In the below image, it is shown how **original_text** and **entity_value** can be different -
-
-![PersonalEntities](assets/DataMasking3.png)
-
 Data on **Message Analysis** screen will show up in the masked format. If you download the **Message Analysis report**, then that will also show up with the masked version. However, chat links will show up in their original form. 
 
-The masked data is shown as 6 asterisks in a message as shown below -
+The masked data is shown as **6 asterisks** in a message as shown below -
 
 ![PersonalEntities](assets/DataMasking4.png)
 
 ### What all gets masked? 
 
-Not everything needs to be protected but sensitive data like phone-number, email-id, account number, date-of-birth, etc. needs to be protected. On the platform, these values are inserted as **entities**. So we essentially need to mask these sensitive entities.
+Not everything needs to be protected but sensitive data like phone-number, email-id, account number, date-of-birth, etc. needs to be protected. In most of the cases, these values are inserted as **entities**. So we essentially need to mask these sensitive entities.
 
-> Nothing else gets masked except **entities**.
+We mask the **original_text** not **entity_value**. In a few scenarios, the original_text and entity value are different. The current masking rules consider only the original_text. In the below image, it is shown how **original_text** and **entity_value** can be different -
+
+![PersonalEntities](assets/DataMasking3.png)
 
 The following policies, in order of priority, are triggered sequentially.
 
 - Personal Entities
 - Predefined Masked Entities on the platform
-- Predefined Regex Patterns Entities on the platform
+- Predefined Regex Patterns on the platform
 
 #### Personal Entities
 
@@ -221,9 +219,9 @@ Few entities are considered as **personal** at the platform level. Once they are
 
 - phone_number
 
-#### Predefined Regex Patterns Entities on the platform
+#### Predefined Regex Patterns on the platform
 
-Few entities are considered as **personal** using **Regex Patterns**. Once they are detected in conversations, they are automatically masked. This list is not editable and is defined at a Platform level. Currently, the below regex patterns are used for this -
+Some data is considered as **personal** using **Regex Patterns**. Once they are detected in conversations, they are automatically masked. This list is not editable and is defined at a Platform level. Currently, the below regex patterns are used for this -
 
 - **r_email** - \b[A-Za-z0-9\.\+_-]+@[A-Za-z0-9\._-]+\.[a-zA-Z]+\b
 - **r_numbers** - \b\d{6,16}\b

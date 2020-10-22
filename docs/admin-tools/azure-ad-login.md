@@ -1,5 +1,5 @@
 ---
-title: Azure AD login integration
+title: Azure AD SSO integration
 ---
 
 Azure AD integration with the Haptik platform allows the 

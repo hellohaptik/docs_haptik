@@ -236,5 +236,3 @@ Data masking will be enabled by default for all new partners being created. If y
 ![PersonalEntities2](assets/DataMasking2.png)
 
 We do not recommend disabling Data Masking. If you do, then please explicitly inform the same among all stakeholders.
-
-### Can we see the unmasked/decrypted message?

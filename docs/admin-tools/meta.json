@@ -5,7 +5,8 @@
         ],
         "Resources": [
             "permission-management",
-            "audit-dashboard"
+            "audit-dashboard",
+            "azure-ad-sso"
         ]
     },
     "headerLink": {

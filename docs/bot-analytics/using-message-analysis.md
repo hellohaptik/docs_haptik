@@ -238,5 +238,3 @@ Data masking will be enabled by default for all new partners being created. If y
 We do not recommend disabling Data Masking. If you do, then please explicitly inform the same among all stakeholders.
 
 ### Can we see the unmasked/decrypted message?
-
-Even though it is technically possible to view the decrypted message, we do not allow the same anywhere. If absolutely required, then please get an approval from Haptik's Infosec team before using it in any application.

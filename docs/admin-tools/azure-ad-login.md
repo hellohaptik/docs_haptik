@@ -17,17 +17,17 @@ After this is done, then they will be redirected to the login page
 again since their account is not yet whitelisted. 
 The user can then share the username, full name and email that they selected with the Haptik Platform Admin.
 
-    ![](./assets/azure-ad-login-1.png)
+    ![](assets/azure-ad-login-1.png)
     
-    ![](./assets/azure-ad-login-2.png)
+    ![](assets/azure-ad-login-2.png)
     
-    ![](./assets/azure-ad-login-3.png)
+    ![](assets/azure-ad-login-3.png)
 
-2) Haptik Platform Admin will then [create the user](./permission-management.md#creating-new-user) in the system 
+2) Haptik Platform Admin will then [create the user](permission-management.md#creating-new-user) in the system 
 using the shared details.
 
 3) Haptik Platform Admin will then inform the user that the access is granted. 
 
 4) User will then login to the Haptik Platform using the Microsoft option with their Azure AD credentials.
 
-   ![](./assets/azure-ad-login-1.png)
+   ![](assets/azure-ad-login-1.png)

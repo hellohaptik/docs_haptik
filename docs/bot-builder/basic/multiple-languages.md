@@ -68,3 +68,8 @@ small talk and smart assist are currently not supported in non-english
 
 # How it works?
 
+Entire UI screenshots of switching the language and system messages shown on the UI and bot responses shown in Hindi.
+
+Also when the user explicitly mentions I want to switch to Hindi language, how do we tackle that -
+
+WAITING FOR AKSHAY's template

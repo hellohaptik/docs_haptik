@@ -34,11 +34,13 @@ This accounts for Agent Concurrency, Empty Slots and Idle Time. Chat gets assign
 
 2. In case a chat was allocated to an agent, and the agent loses network connection. If the loss of network persists for more than 5 minutes, we move chats back into the team queue, so that another online agent can receive the chat.
 
+3. Chats that are in pending state gets completed when last agent of a team logouts.
+
+4. Optimized for: Chat load as it’s almost evenly distributed across online agents at the time.
+
+5. Con(s): Does not account for faster agent response times but only the first response times. Faster high performing agents may not be best utilized. 
+
 > Note: Clients for whom efficiency in distribution is important should choose this chat algorithm.
-
-3. Optimized for: Chat load as it’s almost evenly distributed across online agents at the time.
-
-4. Con(s): Does not account for faster agent response times but only the first response times. Faster high performing agents may not be best utilized. 
  
 
 ### B. Speedy resolution 
@@ -49,7 +51,10 @@ Fastest agents get more chats. Every time an agent closes a chat or intermittent
 
 2. Optimized for: Agent speed and high chat volume scenarios
 
-3. Con(s): Chat load is not balanced across agents i.e., fast agents are the ones who close chats quickly thus making the call to request for chats frequently. This breaks the 10 seconds cycle and creates uneven distribution of chats.
+3. Chats that are in pending state gets completed if team settings ("Mark chat as complete when no agents online ?
+") is enabled, else they remain in pending state.
+
+4. Con(s): Chat load is not balanced across agents i.e., fast agents are the ones who close chats quickly thus making the call to request for chats frequently. This breaks the 10 seconds cycle and creates uneven distribution of chats.
 
 
 ### Note

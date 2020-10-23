@@ -21,7 +21,7 @@
             "agent-reports",
             "chat-assignment",
             "bot-agent-handover"
-        ]
+        ],
         "Miscellaneous": [
             "bot-agent-handover",
             "adding-custom-tools",

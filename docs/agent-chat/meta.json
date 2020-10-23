@@ -1,28 +1,30 @@
 {
     "sidebar": {
         "Getting Started": [
-            "index",
+            "index"
+        ],
+        "For Agents": [
+            "for-chat-agents",
+            "action-toolbars",
+            "smart-actions",
+            "closing-categories",
+            "agent-stats-email",
+            "navigating-interface-shortcuts"
+        ],
+        "For Team Leads": [
             "for-team-leads",
-            "for-chat-agents"
-        ],
-        "Guides": [
-            "navigating-interface-shortcuts",
-            "claiming-and-closing",
-            "adding-agents-and-permissions",
-            "adding-custom-tools",
-            "integrating-external-bot"
-        ],
-        "Resources": [
-
             "businesses",
             "teams",
+            "claiming-and-closing",
             "analytics",
             "agent-reports",
             "chat-assignment",
+            "bot-agent-handover"
+        ],
+        "Miscellaneous": [
             "bot-agent-handover",
-            "action-toolbars",
-            "smart-actions",
-            "closing-categories"
+            "adding-custom-tools",
+            "integrating-external-bot"
         ]
     },
     "headerLink": {

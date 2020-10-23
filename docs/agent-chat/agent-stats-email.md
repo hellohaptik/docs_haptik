@@ -12,7 +12,7 @@ This is the sample mailer which goes -
 
       Chats received:
       Online hours:
-      Total positive feedback received: <This is the number of high-value (4 or 5) ratings received by the agent>
+      Total positive feedback received: <This is the total number of high-value (4 or 5) ratings received by the agent>
       Average Resolution Time:
       Average Response Time:
 
@@ -29,4 +29,3 @@ Below is the screenshot of a mailer received by an agent -
 ![AgentStatsMail](assets/AgentStatsMail.png)
 
 > There is no extra permission required to receive this mail. All agents will receive this email who took chats that day.
-

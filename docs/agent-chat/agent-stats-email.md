@@ -34,4 +34,4 @@ Below is the screenshot of a mailer received by an agent -
 
 ![AgentStatsMail](assets/AgentStatsMail.png)
 
-> There is no extra permission required to receive this mail. All agents will receive this email who took chats that day.
+> There is no extra permission required to receive this mail. All agents who took chats that day, will receive this email.

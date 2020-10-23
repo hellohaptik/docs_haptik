@@ -10,11 +10,11 @@ This is the sample mailer which goes -
 
       Please check your statistics for the day <Date> below - 
 
-      Chats received: <Total number of conversations that the agent participated in, similar to the one shown on Team Analytics>
-      Online hours: <Total number of hours that an agent was online using Smart Agent Chat>
-      Total positive <feedback received: This is the total number of high-value (4 or 5) ratings received by the agent>
-      Average Resolution Time: <The average time taken by the agent to resolve or re-assign the conversation>, Note: Resolution time is simply calculated from the user’s first message sent timestamp till the last agent/user message timestamp in a chat
-      Average Response Time: <Average time taken by the agent to reply to a user query>, Note: Resolution time is simply calculated from the user’s first message>
+      Chats received: Total number of conversations that the agent participated in, similar to the one shown on Team Analytics
+      Online hours: Total number of hours that an agent was online on Smart Agent Chat tool
+      Total positive feedback received: Total number of high-value (4 or 5) ratings received by the agent
+      Average Resolution Time: Average time taken by the agent to resolve or re-assign the conversation
+      Average Response Time: Average time taken by the agent to reply to a user query
 
       Have a good day ahead and stay safe. 
 
@@ -24,6 +24,8 @@ This is the sample mailer which goes -
 
       Team Haptik. 
       
+> Note: Resolution time is simply calculated from the user’s first message sent timestamp till the last agent/user message timestamp in a chat
+
 Below is the screenshot of a mailer received by an agent -
 
 ![AgentStatsMail](assets/AgentStatsMail.png)

@@ -4,7 +4,7 @@ title: Introduction
 
 Chat Solutions at Haptik can be powered entirely by Artificial Intelligence (AI) or by a combination of AI and Chat Agents. We have built a Live *Smart Agent Chat* tool for it. This tool is created for operationally managing user chats.
 
-You can skip straight to the video [**HERE**](https://youtu.be/B4WJSLETlvI).
+[![Menu](assets/SACVideo.png)](https://youtu.be/B4WJSLETlvI)
 
 ## Using *Smart Agent Chat*
 

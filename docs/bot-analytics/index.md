@@ -4,13 +4,6 @@ title: Introduction
 
 Intelligent Analytics by Haptik empowers teams to get a comprehensive overview of how the IVAs are performing. Get in-depth insights into how users interact with your IVAs, identify problem areas or features that can be improved and also collect first-hand user feedback about your IVA experience in real-time. The user messages/conversations with historical data can help answer the toughest questions about users. Boost your IVA's conversations' success with this tool.
 
-Through this document, we shall explore the different types of metrics available for tracking and analyzing the IVA using the real-time Intelligent Analytics tool.
-
-You can go through the below introductory video of **Intelligent Analytics** to take a birds eye-view of the tool.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0xodi9IC5eg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
 This tool consists of multiple sections with each section containing metrics and data about a different aspect of the IVA. The multiple sections include:
 
 - Overview
@@ -20,6 +13,10 @@ This tool consists of multiple sections with each section containing metrics and
 - Query Completion
 - User Ratings
 - User Reviews
+
+Through this document, we shall explore the different types of metrics available for tracking and analyzing the IVA using the real-time Intelligent Analytics tool. You can go through the below introductory video of **Intelligent Analytics** to take a birds eye-view of the tool.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0xodi9IC5eg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Getting Credentials
 The first step in starting to use the Intelligent Analytics tool is to get the credentials from the Haptik team.

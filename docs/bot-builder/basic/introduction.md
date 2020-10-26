@@ -2,17 +2,17 @@
 title: Introduction
 ---
 
-Welcome to **Conversation Studio**, Haptik's tool for making bots! Once you've mastered this tool, you'll be able to build bots with minimal coding. You can go through the below introductory video of Conversation Studio to take a birds eye-view of the complete tool.
+Welcome to **Conversation Studio**, Haptik's tool for making bots! Once you've mastered this tool, you'll be able to build bots with minimal coding. 
+
+You can go through the below introductory video of **Conversation Studio** to take a birds eye-view of the tool.
 
 [![Menu](assets/CSVideo.png)](https://youtu.be/vEuc4za39hk)
-
-    Tip: A bot is a program that communicates with you, commonly using a chat or voice interface.
 
 # Key Concepts
 
 On **Conversation Studio**, you can create a bot i.e. formulate different conversation flows. Instead of creating bots on your own, our Conversation Studio gives you a framework and components to build the bot without much effort. 
 
-## Conversation Design before bot building
+## Conversation Design
 
 Before you get started with bot building, you need to lay down the conversation design. Our objective is not just to make bots, but also to create a robust experience for the end user. So, before you go ahead you should be clear on the following aspects:
 
@@ -20,13 +20,13 @@ Before you get started with bot building, you need to lay down the conversation 
 2. **Defined happy paths**: User flows covering all conversation steps and bot responses 
 3. **Edge cases**: Broken experiences needs to covered like we use null states and error messages in websites or mobile apps.
 
-You can also explore the [Introduction to Conversation Design](https://docs.haptik.ai/bot-builder/basic/conversation-design-introduction) section to read about it in more detail.
+You can also explore the [**Introduction to Conversation Design**](https://docs.haptik.ai/bot-builder/basic/conversation-design-introduction) section to read about it in more detail.
 
 ## Bot Building
 
-Once you have created a rough requirement diagram of the possible user conversations and completed the conversation design, you can start with bot building. You can start on **Staging** environment. This is our development environment. 
+Once you have created a rough requirement diagram of the possible user conversations and completed the conversation design, you can start with bot building. You can start on **Staging environment**. This is our development environment. 
 
-### How does the bot building process work?
+**How does the bot building process work?**
 
 Creating the conversation flow in your bots might seem straightforward, but there are a few things bot builders need to know even before they start bot building - 
 
@@ -34,20 +34,20 @@ Creating the conversation flow in your bots might seem straightforward, but ther
 2. Add expected user intents (*User Says*) and corresponding bot responses (*Bot Says*)
 3. You can make external integrations in your bot using (*Code Editor*) and (*Integrations*)
 
-We've detailed out the process of creating bots step-by-step. Read up the various articles from the left-hand navigation to know more.
+We have detailed out the process of creating bots step-by-step. Read up the various articles from the left-hand navigation to know more.
 
 ## Configurations 
 
-Bot's configuration settings are as important as the bot design or bot building. For this purpose, you have a **Business** for your bot on **Conversation Studio**. It helps you with all the settings related to your bot, starting from the bot icon to bot color to bot's deployment channel. You can read more about it [here](https://docs.haptik.ai/bot-builder/basic/business).
+Bot's configuration settings are as important as the bot design or bot building. For this purpose, you have a **Business** for your bot on **Conversation Studio**. It helps you with all the settings related to your bot, starting from the bot icon to bot color to bot's deployment channel. You can read more about it [**here**](https://docs.haptik.ai/bot-builder/basic/business).
 
 ## Quality Assessment
 
 Bot building and bot testing are deeply coupled. You can read it [**here**](https://docs.haptik.ai/bot-builder/advanced/development-guidelines). Once bot building is completed, you can start the process of Quality Assessment using the documentation [**here**](https://docs.haptik.ai/bot-builder/basic/testing-bot). 
 
-Once Quality Assessment is also completed, you can transfer the bot to our **Production** environment. This is our live environment. And once the bot is live, you can start getting insights from our [analytics tool](https://docs.haptik.ai/bot-analytics). 
+Once Quality Assessment is also completed, you can transfer the bot to our **Production environment**. This is our live environment. And once the bot is live, you can start getting insights from our [**analytics tool**](https://docs.haptik.ai/bot-analytics). 
 
     Tool Tips: For those of you who want to jump right in, we've built tooltips directly into Conversation Studio. 
     By hovering over the tooltips, which are indicated by the small "i" or "?" in circles, you'll be able 
     to view brief descriptions of how to use most of the major components in Conversation Studio. 
 
-Once you're ready, click [HERE](https://docs.haptik.ai/bot-builder/basic/making-first-bot) to jump straight to the Conversation Studio tool documentation!
+Once you're ready, click [**here**](https://docs.haptik.ai/bot-builder/basic/making-first-bot) to jump straight to the tool documentation!

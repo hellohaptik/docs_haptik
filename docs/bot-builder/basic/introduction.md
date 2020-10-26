@@ -4,7 +4,7 @@ title: Introduction
 
 Welcome to **Conversation Studio**, Haptik's tool for making bots! Once you've mastered this tool, you'll be able to build bots with minimal coding. To get you started, we've put together this documentation that will guide you through the process of building a bot.
 
-[![Menu](assets/CSVideo.png)](https://youtu.be/vEuc4za39hk).
+[![Menu](assets/CSVideo.png)](https://youtu.be/vEuc4za39hk)
 
     Tip: A bot is a program that communicates with you, commonly using a chat or voice interface.
 

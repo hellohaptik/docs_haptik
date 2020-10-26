@@ -79,19 +79,20 @@
 <ol>
 <li><p>It’s Great for: Even chat load distribution among agents and reducing average agent’s idle time to ensure that agents waiting for a long time get the chat first.</p></li>
 <li><p>In case a chat was allocated to an agent, and the agent loses network connection. If the loss of network persists for more than 5 minutes, we move chats back into the team queue, so that another online agent can receive the chat.</p></li>
+<li><p>Chats that are in pending state gets completed when last agent of a team logouts.</p></li>
+<li><p>Optimized for: Chat load as it’s almost evenly distributed across online agents at the time.</p></li>
+<li><p>Con(s): Does not account for faster agent response times but only the first response times. Faster high performing agents may not be best utilized.</p></li>
 </ol>
 <blockquote>
 <p>Note: Clients for whom efficiency in distribution is important should choose this chat algorithm.</p>
 </blockquote>
-<ol start="3">
-<li><p>Optimized for: Chat load as it’s almost evenly distributed across online agents at the time.</p></li>
-<li><p>Con(s): Does not account for faster agent response times but only the first response times. Faster high performing agents may not be best utilized.</p></li>
-</ol>
 <h3><a class="anchor" aria-hidden="true" id="b-speedy-resolution"></a><a href="#b-speedy-resolution" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>B. Speedy resolution</h3>
 <p>Fastest agents get more chats. Every time an agent closes a chat or intermittently every 10 seconds, the agent requests for a  new chat from the queue.</p>
 <ol>
 <li><p>Great for: Highly-motivated agent workforce i.e. Fastest agents end up getting maximum chats</p></li>
 <li><p>Optimized for: Agent speed and high chat volume scenarios</p></li>
+<li><p>Chats that are in pending state gets completed if team settings (&quot;Mark chat as complete when no agents online ?
+&quot;) is enabled, else they remain in pending state.</p></li>
 <li><p>Con(s): Chat load is not balanced across agents i.e., fast agents are the ones who close chats quickly thus making the call to request for chats frequently. This breaks the 10 seconds cycle and creates uneven distribution of chats.</p></li>
 </ol>
 <h3><a class="anchor" aria-hidden="true" id="note"></a><a href="#note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Note</h3>

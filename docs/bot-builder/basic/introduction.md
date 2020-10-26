@@ -10,7 +10,13 @@ You can go through the below introductory video of **Conversation Studio** to ta
 
 # Key Concepts
 
-On **Conversation Studio**, you can create a bot i.e. formulate different conversation flows. Instead of creating bots on your own, our Conversation Studio gives you a framework and components to build the bot without much effort. 
+On **Conversation Studio**, you can create a bot i.e. formulate different conversation flows. Instead of creating bots on your own, our Conversation Studio gives you a framework and components to build the bot without much effort. We cna broadly classify the bot building process in these 5 steps -
+
+- Conversation Design
+- Bot Building
+- Configurations
+- Quality Assessment
+- Go-Live
 
 ## Conversation Design
 
@@ -44,10 +50,10 @@ Bot's configuration settings are as important as the bot design or bot building.
 
 Bot building and bot testing are deeply coupled. You can read it [**here**](https://docs.haptik.ai/bot-builder/advanced/development-guidelines). Once bot building is completed, you can start the process of Quality Assessment using the documentation [**here**](https://docs.haptik.ai/bot-builder/basic/testing-bot). 
 
+## Go Live
+
 Once Quality Assessment is also completed, you can transfer the bot to our **Production environment**. This is our live environment. And once the bot is live, you can start getting insights from our [**analytics tool**](https://docs.haptik.ai/bot-analytics). 
 
     Tool Tips: For those of you who want to jump right in, we've built tooltips directly into Conversation Studio. 
     By hovering over the tooltips, which are indicated by the small "i" or "?" in circles, you'll be able 
     to view brief descriptions of how to use most of the major components in Conversation Studio. 
-
-Once you're ready, click [**here**](https://docs.haptik.ai/bot-builder/basic/making-first-bot) to jump straight to the tool documentation!

@@ -8,7 +8,7 @@ You can go through the below introductory video of **Conversation Studio** to ta
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vEuc4za39hk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-# Key Concepts
+## Key Concepts
 
 On **Conversation Studio**, you can create a bot i.e. formulate different conversation flows. Instead of creating bots on your own, our Conversation Studio gives you a framework and components to build the bot without much effort. We can broadly classify the bot building process in these 5 steps -
 
@@ -18,7 +18,7 @@ On **Conversation Studio**, you can create a bot i.e. formulate different conver
 - Quality Assessment
 - Go-Live
 
-## Conversation Design
+### Conversation Design
 
 Before you get started with bot building, you need to lay down the conversation design. Our objective is not just to make bots, but also to create a robust experience for the end user. So, before you go ahead you should be clear on the following aspects:
 
@@ -28,7 +28,7 @@ Before you get started with bot building, you need to lay down the conversation 
 
 You can also explore the [**Introduction to Conversation Design**](https://docs.haptik.ai/bot-builder/basic/conversation-design-introduction) section to read about it in more detail.
 
-## Bot Building
+### Bot Building
 
 Once you have created a rough requirement diagram of the possible user conversations and completed the conversation design, you can start with bot building. You can start on **Staging environment**. This is our development environment. 
 
@@ -42,15 +42,15 @@ Creating the conversation flow in your bots might seem straightforward, but ther
 
 We have detailed out the process of creating bots step-by-step. Read up the various articles from the left-hand navigation to know more.
 
-## Configurations 
+### Configurations 
 
 Bot's configuration settings are as important as the bot design or bot building. For this purpose, you have a **Business** for your bot on **Conversation Studio**. It helps you with all the settings related to your bot, starting from the bot icon to bot color to bot's deployment channel. You can read more about it [**here**](https://docs.haptik.ai/bot-builder/basic/business).
 
-## Quality Assessment
+### Quality Assessment
 
 Bot building and bot testing are deeply coupled. You can read it [**here**](https://docs.haptik.ai/bot-builder/advanced/development-guidelines). Once bot building is completed, you can start the process of Quality Assessment using the documentation [**here**](https://docs.haptik.ai/bot-builder/basic/testing-bot). 
 
-## Go Live
+### Go Live
 
 Once Quality Assessment is also completed, you can transfer the bot to our **Production environment**. This is our live environment. And once the bot is live, you can start getting insights from our [**analytics tool**](https://docs.haptik.ai/bot-analytics). 
 

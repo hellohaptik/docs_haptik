@@ -10,6 +10,7 @@ You can go through the below introductory video of **Intelligent Analytics** to 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/0xodi9IC5eg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+
 This tool consists of multiple sections with each section containing metrics and data about a different aspect of the IVA. The multiple sections include:
 
 - Overview

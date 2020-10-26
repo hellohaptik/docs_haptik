@@ -8,7 +8,7 @@ You can go through the below introductory video of **Smart Agent Chat** to take 
 
 [![Menu](assets/SACVideo.png)](https://youtu.be/B4WJSLETlvI)
 
-<iframe width="560" height="315" src="https://youtu.be/B4WJSLETlvI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/B4WJSLETlvI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Using *Smart Agent Chat*
 

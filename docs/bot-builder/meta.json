@@ -18,7 +18,8 @@
 			"basic/connections",
 			"basic/entities",
 			"basic/forms",
-			"basic/story-templates"
+			"basic/story-templates",
+			"basic/searchbot"
 		],
 		"Configurations Settings": [
 			"basic/business",

@@ -6,7 +6,7 @@ Intelligent Analytics by Haptik empowers teams to get a comprehensive overview o
 
 Through this document, we shall explore the different types of metrics available for tracking and analyzing the IVA using the real-time Intelligent Analytics tool.
 
-You can skip straight to a quick video about the tool [**HERE**](https://youtu.be/0xodi9IC5eg).
+[![Menu](assets/IAVideo.png)](https://youtu.be/0xodi9IC5eg)
 
 The Intelligent Analytics tool consists of multiple sections with each section containing metrics and data about a different aspect of the IVA. The multiple sections include:
 

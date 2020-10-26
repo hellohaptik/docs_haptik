@@ -9,6 +9,7 @@ To start building your first bot, log in to the Haptik platform using credential
 You can follow the below video to create your first bot
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8NbUvvX2gEY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p></p>
 
 **Step 1**: Click the "*+ New Bot*" button, located in the upper left hand corner of the page:
 

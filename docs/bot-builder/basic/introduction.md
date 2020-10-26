@@ -10,7 +10,7 @@ You can go through the below introductory video of **Conversation Studio** to ta
 
 # Key Concepts
 
-On **Conversation Studio**, you can create a bot i.e. formulate different conversation flows. Instead of creating bots on your own, our Conversation Studio gives you a framework and components to build the bot without much effort. We cna broadly classify the bot building process in these 5 steps -
+On **Conversation Studio**, you can create a bot i.e. formulate different conversation flows. Instead of creating bots on your own, our Conversation Studio gives you a framework and components to build the bot without much effort. We can broadly classify the bot building process in these 5 steps -
 
 - Conversation Design
 - Bot Building

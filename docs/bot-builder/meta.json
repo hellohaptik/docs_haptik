@@ -12,6 +12,7 @@
 			"basic/general-nodes",
 			"basic/upload-graph-nodes",
 			"basic/user-says-guidelines",
+			"advanced/development-guidelines",
 			"basic/bot-says",
 			"basic/chat-elements",
 			"basic/connections",
@@ -52,7 +53,6 @@
 		],
 		"Quality Assessment": [
 			"basic/testing-bot",
-			"advanced/development-guidelines",
 			"advanced/testing-guidelines",
 			"advanced/debugging-guidelines",
 			"basic/oracle-feedback"

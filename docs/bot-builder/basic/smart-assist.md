@@ -6,13 +6,17 @@ Intelligent Virtual Assistants are always trained to cater to user queries that 
 
 A key component in Haptik’s conversational experience is SMART ASSIST. The objective of the component is to respond back to the user smartly when the IVA is not able to completely understand the User’s query. This should open up the pathways for the users to reformulate or redirect their queries, so that appropriate response can be given.
 
-**How does the SMART ASSIST come into play?**
+## How does the SMART ASSIST come into play?
 
 The below graphic depicts the overall scheme of the SMART ASSIST - 
 
 ![SA_1](assets/SA_1.png)
 
-**What are the components of SMART ASSIST?**
+Here is a sample video explaining how Smart Assist works
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/45VdWX9O5XM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## What are the components of SMART ASSIST?
 
 There are various intelligent nudges that the IVA performs, to make an attempt to bring the user back into the conversation. They are described as below - 
 
@@ -38,7 +42,7 @@ This is similar to the “Did you mean?” feature. The difference is in the ton
 
 ![SA_6](assets/SA_6.png)
 
-**FEW POINTS TO NOTE -**
+## Few points to Note
 
 1. A user can pick an option amongst a list of options by replying with “1”, “2”, “3” after the list of options.
 

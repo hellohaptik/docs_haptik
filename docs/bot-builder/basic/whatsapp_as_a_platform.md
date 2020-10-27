@@ -37,3 +37,7 @@ There are 2 ways to leverage WA -
 5. WhatsApp decides the quality of the content (we have to send all HSMs for WhatsApp approval) and assigns a tier for message limit. This cannot be controlled by us.
 
 6. A robust opt-in and good quality content is necessary to maintain the status of the registered WhatsApp phone number. Lack of attention here can result in the number getting flagged for content or warned.
+
+You can go through this detailed video for understanding Whatsapp Bot Building guidelines.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fEUCbbX27pU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

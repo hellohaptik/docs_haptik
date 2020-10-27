@@ -397,7 +397,7 @@ Below is the case where the detection stopped once the Negative Variations were 
 
 We have 4 main Advanced Settings options under entities.
 
-### 1. Previous Context Tags**
+### 1. Previous Context Tags
 
 **What is Context from an IVA perspective?**
 
@@ -535,7 +535,7 @@ As you can see after selecting the **Mobile+ plan** the entity value is Mobile p
 1. payload_key, completion_key, and entity_value will be needed while creating the entity. 
 2. You cannot use capital letters to create any payload parameters.
 
-## **Node Entity Filter
+## Node Entity Filter
 
 ### What is the feature?
 

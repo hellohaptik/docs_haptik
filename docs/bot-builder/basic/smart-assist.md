@@ -14,7 +14,7 @@ The below graphic depicts the overall scheme of the SMART ASSIST -
 
 Here is a sample video explaining how Smart Assist works
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/45VdWX9O5XM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/COn_lLSwBm4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## What are the components of SMART ASSIST?
 

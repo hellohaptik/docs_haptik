@@ -31,8 +31,8 @@
 		],
 		"NLU": [
 			"basic/intent",
-			"basic/managing-bot-state",
 			"basic/dialoguemanager",
+			"basic/managing-bot-state",
 			"basic/disambiguation",
 			"basic/smart-assist"
 		],

@@ -142,18 +142,20 @@ A user could abandon a conversation due to any of the below reasons. The last vi
 
 ![Query Completion](assets/querycompletion16.png)
 
-Below are soem scenarios which explain drop off in more detail.
+Below are some scenarios which explain drop off in more detail.
 
 **1. Diverted**
+
 If a conversation is diverted from one query to another, a drop off is counted for the first query.
 
 Example:
-Q1: A -> C, 
+Q1: A -> C,
 Q2: B -> E
 User Session: A -> D -> B -> X -> E
 Result: Q1 started on A and diverted to Q2 on D. So there is a droff off on D for Q1 and Q2 got completed.
 
 **2. Restarted**
+
 If a new query is restarted in between another query, a drop off is counted for the first query.
 
 Example:
@@ -162,6 +164,7 @@ User Session: A -> D -> A -> X -> C
 Result: Two queries initiated. So there is a droff off on D for Q1. Again, Q1 restarted on A and got completed.
 
 **3. Abandoned**
+
 If a conversation is abandoned by the user, a droff off is counted for the query.
 
 Example:
@@ -174,13 +177,13 @@ Result: There is a droff off on D for Q1 as the user abandoned at D.
 If a conversation has an agent handover, a droff off is counted for the query.
 
 Example 1:
-Q1: A -> C
-User Session: A -> D -> X -> (Agent chat assigned)
+Q1: A -> C<\n>
+User Session: A -> D -> X -> (Agent chat assigned)<\n>
 Result: There is a droff off on D for Q1 as the chat got assigned to an agent.
 
 Example 2:
-Q1: A -> X
-User Session: A -> D -> X (all entities collected) -> (Agent chat assigned)
+Q1: A -> X<\n>
+User Session: A -> D -> X (all entities collected) -> (Agent chat assigned)<\n>
 Result: Q1 got completed as all the entities are collected.
 
 > When any query definition is changed, the drop offs for all other queries will need to be recalculated.

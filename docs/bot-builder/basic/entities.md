@@ -1,98 +1,10 @@
 ---
 title: Entities
 ---
-In this section, we'll cover the following topics:  
-[What is an Entity?](#what-is-an-entity)  
-[Intent vs Entity](#intent-vs-entity)  
-[When to Use Entities](#when-is-the-appropriate-time-to-use-an-entity)  
-[How Entity Addition Affects Bot Says?](#how-does-using-an-entity-affect-the-other-bot-says-responses)
-[How to Add an Entity](#adding-an-entity)  
-[Creating a New Entity](#making-a-new-entity)  
-[Mandatory and Optional Entities](#mandatory-and-optional-entities)  
-[Entity Types](#entity-types)<br>
-[Entity Patterns](#entity-patterns)<br>
-[Entity Settings](#entity-settings)<br>
-[Node Entity Filter](#node-entity-filter)<br>
-[Language Support for Different Entities](#language-support-for-different-entities)
 
-### What is an entity?
+Before you start how to create entities and understand how to use them in bots, you can start with understanding what are entities by referring to this [**documentation**](https://docs.haptik.ai/bot-builder/basic/intent).  
 
-**Entities**: An entity represents the set of values from which a user’s response must come in order for that user to progress onwards in a conversation. Depending on the context of the conversation, the required response can either be a single value or limited group of specific values from the entity, or any value from within the entity. Entities are always added in connection with the bot’s query the required response is associated with, so that they may detect whether the required response was given.
-
-Entities are auto-tagged in the user utterance as long as the entity dictionary is pre-populated. You can find more details about Entity tagging here.
-
-### Intent vs Entity
-
-It is important to understand the difference between intent and an entity. 
-
-Intent represents an action that the user wants to perform and the entity represents a keyword that you want to be extracted from the user utterance. 
-
-<table>
-  <tr>
-    <td><b>Intent</b></td>
-    <td><b>User utterance</b></td>
-    <td><b>Entity extracted</b></td>
-    <td><b>Explanation</b></td>
-  </tr>
-  <tr>
-    <td>Book_flight</td>
-    <td>Book a flight from Mumbai to Delhi</td>
-    <td>From: Mumbai,
-To: Delhi</td>
-    <td>Departure and arrival locations are important information for Book_flight intent</td>
-  </tr>
-  <tr>
-    <td>Play_content</td>
-    <td>Play Avengers on Hotstar </td>
-    <td>Content_name: Avengers,
-App_name: Hotstar</td>
-    <td>Content name and App name information are extracted from the user utterance</td>
-  </tr>
-  <tr>
-    <td>Need_support</td>
-    <td>Customer care number</td>
-    <td>-</td>
-    <td>No entity to be extracted from the utterance</td>
-  </tr>
-  <tr>
-    <td>Apply_loan</td>
-    <td>I would like to apply for a home loan</td>
-    <td>Loan_type: home loan</td>
-    <td>Loan type entity is extracted from the user utterance. Entity value transition can be used here to traverse to the next node </td>
-  </tr>
-  <tr>
-    <td>Cylinder_price</td>
-    <td>What is the price of 12 kg cylinder</td>
-    <td>Cylinder_size: 12kg</td>
-    <td>Cylinder size entity is extracted from the user utterance to fetch the price</td>
-  </tr>
-  <tr>
-    <td>Login_issues</td>
-    <td>I am unable to login</td>
-    <td>-</td>
-    <td>No entity to be extracted from the utterance. </td>
-  </tr>
-</table>
-
-### When is the appropriate time to use an entity?
-
-Some examples of when you would use an entity in Bot Says:
-
-- When you need a user's email ID and need to verify that inputs are valid IDs or not. The ‘email’ entity allows the detection of an email id.
-- When you need a user's phone number and need to verify that inputs are valid phone numbers. The ‘phone_number_without_validation’ entity detects a 10 digit number.
-- When you need to gather the city a user wants to fly into and need to verify that the user has indicated a city with an airport in it.
-
-### How does using an entity affect the other Bot Says responses?
-
-The flow of Bot Says responses goes from top to bottom in terms of evaluation. **The order of the entities, and their order relative to Bot Says inputs, matters**. First the initial bot reply comes, then the entities, and then finally the final bot reply. The delay message is sent only after a certain level of inactivity. The initial/final bot replies might be not needed in some scenarios. **Note** that to change the order of the Bot Says inputs, simply click and drag the reorder handle.
-
-> **Entity Scenarios**
->
-> - _**If there are no entities**_: If it’s a simple node that doesn’t need to collect entities or data, a simple bot says is all that’s needed. You won’t be able to add a final bot reply as that would be redundant as there are no middle steps.
-> - _**If there is one entity**_: If there’s only one entity, then there is no initial bot reply as that entity’s responses serve as the initial bot reply.
-> - _**If there are multiple entities**_: If there are multiple entities, then all the responses are required. (Intial Bot Says, Entity Responses as well as the final bot reply).
-
-#### Adding an entity:
+## How to add an entity?
 
 After selecting the node on which the entity is to be added, click on "*Add an Entity*":
 
@@ -104,9 +16,17 @@ On the popup below, one can search for an entity, from the already existing list
 
 Simply click select on one of the existing entities to add it to your node.
 
-#### Making a new entity:
+**Public Entities**
 
-To create a new entity
+Entities which you find in your search results are called as **public** or **system entities**. We have kept few generic entities as public like to store the name of the person, phone number, age, email, etc.
+
+These are the most common public entities -
+
+    'flight_arrival_city', 'phone_number', 'location', 'product_id', 'completion_phone_number', 'flight_seat_number', 'utils_city', 'product_type', 'device_name',     'person_name', 'departure_date', 'phone_number_without_validation', 'product_name', 'completion_city', 'completion_email', 'flight_departure_city',                 'arrival_date', 'user_name', 'origin_lat', 'date_of_birth', 'date', 'pincode', 'color', 'age', 'otp_four_digit', 'time', 'time_with_range',                         'completion_location', 'email', 'profession', 'age_range', 'answer', 'origin_lng', 'pan_card', 'feedback_request', 'website_company_name_regex',                   'feedback_regex', 'nps_feedback_range', 'collect_city_details', 'feedback_thumbs', 'url_capturer', 'disambiguation_negation', 'disambiguation_choice',             'international_phone_number'
+    
+## How to create a new entity?
+
+If you are creating a new entity, then that is called a **local** or **private entity** as they are specific to your bot. To create a new local entity -
 
 - Click on Create Entity if an appropriate entity doesn't exist.
 
@@ -114,42 +34,31 @@ To create a new entity
 
 - Choose the privacy of the entity based on whether the entity collects any personal information like name, phone number, insurance number. Any information that can be used to identify the user is considered personal.
 
-    > This feature is currently a work-in-progress. Currently this is treated just as a flag but in the future all personal entities will be encrypted.
-
   ![entities create new](assets/entities_create_new_step1.png)
 
-- Enter the details of the data dictionary. You can use ‘tab’ to quicky add words and variants. Once variants for a particular word are entered, press enter to store and to add new words and variants.
+- Choose the type of the entity from the following options as shown in the image below
 
-  ![entities create new 2](assets/entities_create_new_step2.png)
+  ![Entity Types](assets/EntityType.png)
+  
+- Enter the Entity Reprompt Message which will be used to ask the values of the entity if there is an incorrect input given by the user in the first chance
 
-  **A few technical details**:
-
-  > The ‘Backup’ button will download the current data set for a dictionary.
-  >
-  > The ‘Upload New Dictionary’ button will upload data from a csv into the dictionary.
-  >
-  > Format for upload and backup: word1|variant1,variant2,variant3 word2|variant4,variant5,variant.
-  >
-  > Any other format will be rejected.
-
-- Click 'Next Step' once you're satisfied with your dictionary
-
-- In the final step you can add a default message that the node should respond when the entity is detected
+  ![Entity_Reprompt](assets/EntityReprompt.png)
 
 - On clicking 'Save', the entity will be created
 
 - You can add the newly created entity to the existing node, or you can edit the newly created entity.
 
+## How does using an entity affect the other Bot Says responses?
 
-#### Listing all entities of the bot:
-You can also view all the entities used in the bot in a single place along with their privacy information. This is useful if you want to quickly review all entities and their privacy settings.
+The flow of Bot Says responses goes from top to bottom in terms of evaluation. **The order of the entities, and their order relative to Bot Says inputs, matters**. First the initial bot reply comes, then the entities, and then finally the final bot reply. The delay message is sent only after a certain level of inactivity. The initial/final bot replies might be not needed in some scenarios. **Note** that to change the order of the Bot Says inputs, simply click and drag the reorder handle.
 
-You can view this by clickin on `More` in the top navigation bar and selecting `List of Entities`. You should then be able to view all entities used in the bot.
+> **Entity Scenarios**
+>
+> - _**If there are no entities**_: If it’s a simple node that doesn’t need to collect entities or data, a simple bot says is all that’s needed. You won’t be able to add a final bot reply as that would be redundant as there are no middle steps.
+> - _**If there is one entity**_: If there’s only one entity, then there is no initial bot reply as that entity’s responses serve as the initial bot reply.
+> - _**If there are multiple entities**_: If there are multiple entities, then all the responses are required. (Intial Bot Says, Entity Responses as well as the final bot reply).
 
-![list of entities in bot](assets/list_of_entities_in_bot.png)
-
-
-### **Mandatory and Optional Entities**
+## Mandatory and Optional Entities
 
 An intent is the desired outcome of the whole user utterance, while entities are data extracted from the user utterance.
 
@@ -162,7 +71,6 @@ Entities are optional. You do not need to create entities for every node in your
 For example, your reminder bot could consist of three entities -
 
 ![Mandatory Entity](assets/bot-builder-user-says/mandatory_entity.png)
-
 
 <table>
   <tr>
@@ -187,8 +95,7 @@ For example, your reminder bot could consist of three entities -
   </tr>
 </table>
 
-
-#### **How does this work?**
+**How does this work?**
 
 Add user utterance to the ‘**Meeting reminder node**’.
 
@@ -223,14 +130,53 @@ $time - ‘tomorrow’</td>
   </tr>
 </table>
 
+## How to listing all entities of the bot?
+You can also view all the entities used in the bot in a single place along with their privacy information. This is useful if you want to quickly review all entities and their privacy settings.
 
-### Entity Types
+You can view this by clickin on `More` in the top navigation bar and selecting `List of Entities`. You should then be able to view all entities used in the bot.
+
+![list of entities in bot](assets/list_of_entities_in_bot.png)
+
+## Entity Types
 
 There are multiple types of entities supported on the Platform. Below image showcases those various types -
 
 ![Entity Types](assets/EntityType.png)
 
-#### **Numbers Entity**
+### Words & Phrases Entity
+
+**Words & Phrases** entity is meant to extract "specific" text values e.g. name of a person, name of a city, etc. from user utterances.
+
+There are two ways in which this entity can be used.
+1. Dictionary
+2. [**Entity Patterns**](https://docs.haptik.ai/bot-builder/basic/entities#entity-patterns)
+
+#### Dictionary
+
+`Dictionary` allows bot builders to do a full-text search on user queries to extract matching strings and phrases.
+`Dictionary` has two concepts - 
+
+1. words - value of an entity.
+2. variants - For a given value, different variations of those words or phrases.
+
+Example -  For **city** entity.
+![Entity-Dictionary](assets/bot-builder-user-says/entity-dictionary.png)
+
+You need to enter the details of the dictionary. You can use ‘tab’ to quicky add words and variants. Once variants for a particular word are entered, press enter to store and to add new words and variants.
+
+  ![entities create new 2](assets/entities_create_new_step2.png)
+
+  **A few technical details**:
+
+  > The ‘Backup’ button will download the current data set for a dictionary.
+  >
+  > The ‘Upload New Dictionary’ button will upload data from a csv into the dictionary.
+  >
+  > Format for upload and backup: word1|variant1,variant2,variant3 word2|variant4,variant5,variant.
+  >
+  > Any other format will be rejected.
+
+### Numbers Entity
 
 **Numbers** entity is meant for collecting numbers within a defined number of digits. You can have a minimum and maximum range of digits.
 
@@ -240,17 +186,17 @@ In the above image, you can see a number type entity. Following image shows the 
 
 ![Number Range](assets/NumberRange.png)
 
-#### **Regex Entity**
+### Regex Entity
 
 **Regex** entity is meant for detecting patterns like email ID, phone number etc. and collect relevent information from user says.
 
 ![Regex Entity](assets/RegexEntity.png)
 
-In the above example, if the user is not giving a valid PANCARD number, matching the regular expression pattern, then the entity reprompt message would be asking the user for a valid input. 
+In the above example, if the user is not giving a valid PANCARD number, matching the regular expression pattern, then the entity message would be asking the user for a valid input. 
 
 You can refer https://regex101.com/ to learn more about regular expression.
 
-#### **Currency Entity**
+### Currency Entity
 
 **Currency** entity is meant for matching amounts of money with an indication of a currency type like, "50 rupees",  "three hundred and fifty dollars". It returns an object type value consisting of two attribute-value pairs: 
 
@@ -269,7 +215,7 @@ You can refer https://regex101.com/ to learn more about regular expression.
   </tr>
 </table>
 
-#### **Attachment Entity**
+### Attachment Entity
 
 **Attachment** entity is meant for collecting attachments from the user message.
 
@@ -299,32 +245,13 @@ For video entity to be captured on a Whatsapp bot, we need to enable the setting
 
 > NOTE - The uploaded video will get deleted in 3 days.
 
-#### **Words & Phrases Entity**
-
-**Words & Phrases** entity is meant to extract "specific" text values e.g. name of a person, name of a city, etc. from user utterances.
-
-There are two ways in which this entity can be used.
-1. Dictionary
-2. Entity Patterns
-
-##### Dictionary
-
-`Dictionary` allows bot builders to do a full-text search on user queries to extract matching strings and phrases.
-`Dictionary` has two concepts - 
-
-1. values - value of an entity.
-2. variants - For a given value, different variations of those words or phrases.
-
-Example -  For **city** entity.
-![Entity-Dictionary](assets/bot-builder-user-says/entity-dictionary.png)
-
-### **Entity Patterns**
+## Entity Patterns
 
 Entity Patterns allow the entities to be defined in such a manner that they can be detected on the basis of the context under which the utterance has been made by the User.
 
 > **Entity patterns can be added only in English for now.**
 
-**When should you use ENTITY PATTERNS?**
+### When should you use ENTITY PATTERNS?
 
 It can be used in following cases - 
 
@@ -336,7 +263,7 @@ It can be used in following cases -
 
 3. *When not to use* - Phrase extraction tasks involving action oriented statements like extracting set up a reminder from I want to set up a reminder should not be done through Entity Patterns. It is prone to unpredictable behaviour.
 
-**HOW TO USE?**
+### How to use?
 
 **1.** Go to the Entity Patterns section of an entity. This section is meant to train the bot on the context in which the entity will be detected. 
 
@@ -424,7 +351,7 @@ Aforesaid guidelines are illustrated in the image of Entity Patterns below -
 
 ![EP_9](assets/EP_9.png)
 
-**How do ENTITY PATTERNS work?**
+### How do ENTITY PATTERNS work?
 
 When the entity patterns are defined, the IVA is trained on both the tagged term and the context in which the term is used. This enables the IVA to calculate a confidence score on every User Utterance, on how likely a word or phrase is going to be a value of an entity. 
 
@@ -432,7 +359,7 @@ When the entity patterns are defined, the IVA is trained on both the tagged term
 
 ![EP_10](assets/EP_10.png)
 
-#### **Troubleshooting** ####
+### Troubleshooting
 
 **Entity Detection Failure - Case 1**
 
@@ -466,11 +393,11 @@ Below is the case where the detection stopped once the Negative Variations were 
 
 ![EP_16](assets/EP_16.png)
 
-### **Entity Settings**
+## **Entity Settings**
 
 We have 4 main Advanced Settings options under entities.
 
-**1. Previous Context Tags**
+### 1. Previous Context Tags**
 
 **What is Context from an IVA perspective?**
 
@@ -524,7 +451,7 @@ Check below image with debug logs how the **prev_context_tag** works and stores 
 
 ![ES_5](assets/ES_5.png)
 
-**2. Payload Keys**
+### 2. Payload Keys
 
 **What is Payload?**
 
@@ -608,21 +535,23 @@ As you can see after selecting the **Mobile+ plan** the entity value is Mobile p
 1. payload_key, completion_key, and entity_value will be needed while creating the entity. 
 2. You cannot use capital letters to create any payload parameters.
 
-### **Node Entity Filter**
+## **Node Entity Filter
 
-**What is the feature?**
+### What is the feature?
 
 The *Node-Entity Filter is the property of the Node-Entity combination*. The filter **MAY** come into picture **after** the ML Intent Detection algorithms have shortlisted NODES as per the User Utterance **and** a decision is being made on which is the perfect NODE to respond to the User Utterance.
 
 The Node-Entity Filter MAY cause a NODE to be removed from the above shortlist of NODES. But it can’t get a particular NODE added to the shortlisted NODES, if Intent Detection algorithms haven’t found such a NODE suitable. It is shown in subsequent sections below.
 
-**When to Use?**
+### When to Use?
 
 1. When a Bot Builder wants a NODE to be shortlisted for response only when a specific entity value is present in a particular User Utterance.
 
 2. When a Bot Builder wants to set a particular entity value as default when a User arrives at a particular node.
 
-**How to Use?** - Below is a snapshot from the dictionary of the sample entity demo_city_entity_filter which has been used to illustrate this feature.
+### How to Use? 
+
+Below is a snapshot from the dictionary of the sample entity demo_city_entity_filter which has been used to illustrate this feature.
 
 ![NEF_1](assets/NEF_1.png)
 
@@ -680,7 +609,7 @@ But when **ENTITY FILTER DEMO NODE** was the correct candidate as per the Intent
 
 ![NEF_12](assets/NEF_12.png)
 
-**How does it work?**
+### How does it work?
 
 For understanding, Let’s take the above entity **demo_city_entity_filter**. It’s values are DEL, HYD, MAD, BOM and **HYD** has been set as a Node-Entity Filter.
 
@@ -706,8 +635,7 @@ The response to the User will still be from a Node which has Highest Confidence 
         a. The User Utterance has no entity values, or
         b. The User Utterance has both the entity values on which filter has been applied.
 
-
-### **Language Support for Different Entities**
+## Language Support for Different Entities
 
 <table>
   <tr>

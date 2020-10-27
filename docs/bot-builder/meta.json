@@ -30,6 +30,7 @@
 			"basic/bot-prompt-trigger"
 		],
 		"NLU": [
+			"basic/introduction-nlu",
 			"basic/intent",
 			"basic/dialoguemanager",
 			"basic/managing-bot-state",

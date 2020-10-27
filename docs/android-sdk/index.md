@@ -31,7 +31,7 @@ Here we will walk you thru the steps to quickly set up the Haptik SDK.
    
 ## Minimum and Target SDK versions of the Haptik SDK
 
-`minSdkVersion 16`
+`minSdkVersion 21`
 
 `targetSdkVersion 28`
 
@@ -71,13 +71,13 @@ Haptik will provide required username and password while providing access to the
 Once this is done you can move over to your app's `build.gradle` file and add the following lines of code:
 
 ```java
-implementation 'ai.haptik.android.sdk:haptiklib-core:6.5.4-65583'
+implementation 'ai.haptik.android.sdk:haptiklib-core:7.0.0-70183'
 ```
 
 Add a dependency for image loading library
 
 ```java
-implementation 'ai.haptik.android.sdk:haptiklib-picasso-helper:6.5.4-65583'
+implementation 'ai.haptik.android.sdk:haptiklib-picasso-helper:7.0.0-70183'
 ```
 
 For further details please refer to the "Image Loading Modules" section

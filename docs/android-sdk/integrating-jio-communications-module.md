@@ -11,7 +11,7 @@ title: Integrating Jio Communications
 To enable the Jio Module you need to add the following dependency in the 
 
 ```java 
-implementation 'ai.haptik.android.sdk:haptiklib-jio-communications:6.5.4-65583'
+implementation 'ai.haptik.android.sdk:haptiklib-jio-communications:7.0.0-70183'
 ```
 
 ## Step 2: Implementing JioCommunicationService

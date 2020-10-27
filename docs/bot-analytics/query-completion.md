@@ -150,9 +150,9 @@ If a conversation is diverted from one query to another, a drop off is counted f
 
 **Example**:
 
-Q1: A -> C,
+Q1: Node A -> Node C
 
-Q2: B -> E
+Q2: Node B -> Node E
 
 **User Session**: A -> D -> B -> X -> E
 
@@ -164,7 +164,7 @@ If a new query is restarted in between another query, a drop off is counted for 
 
 **Example**:
 
-Q1: A -> C
+Q1: Node A -> Node C
 
 **User Session**: A -> D -> A -> X -> C
 
@@ -176,7 +176,7 @@ If a conversation is abandoned by the user, a droff off is counted for the query
 
 **Example**:
 
-Q1: A -> C
+Q1: Node A -> Node C
 
 **User Session**: A -> X -> D
 
@@ -188,7 +188,7 @@ If a conversation has an agent handover, a droff off is counted for the query.
 
 **Example 1**:
 
-Q1: A -> C
+Q1: Node A -> Node C
 
 **User Session**: A -> D -> X -> (Agent chat assigned)
 
@@ -196,7 +196,7 @@ Q1: A -> C
 
 **Example 2**:
 
-Q1: A -> X
+Q1: Node A -> Node X
 
 **User Session**: A -> D -> X (all entities collected) -> (Agent chat assigned)
 

@@ -1,8 +1,7 @@
 {
 	"sidebar": {
 		"Getting Started": [
-			"basic/introduction",
-			"basic/for-bot-builders"
+			"basic/introduction"
 		],
 		"Essentials of Bot Building": [
 			"basic/making-first-bot",
@@ -13,12 +12,14 @@
 			"basic/general-nodes",
 			"basic/upload-graph-nodes",
 			"basic/user-says-guidelines",
+			"advanced/development-guidelines",
 			"basic/bot-says",
 			"basic/chat-elements",
 			"basic/connections",
 			"basic/entities",
 			"basic/forms",
-			"basic/story-templates"
+			"basic/story-templates",
+			"basic/searchbot"
 		],
 		"Configurations Settings": [
 			"basic/business",
@@ -29,9 +30,10 @@
 			"basic/bot-prompt-trigger"
 		],
 		"NLU": [
+			"basic/introduction-nlu",
 			"basic/intent",
-			"basic/managing-bot-state",
 			"basic/dialoguemanager",
+			"basic/managing-bot-state",
 			"basic/disambiguation",
 			"basic/smart-assist"
 		],
@@ -53,7 +55,6 @@
 		],
 		"Quality Assessment": [
 			"basic/testing-bot",
-			"advanced/development-guidelines",
 			"advanced/testing-guidelines",
 			"advanced/debugging-guidelines",
 			"basic/oracle-feedback"

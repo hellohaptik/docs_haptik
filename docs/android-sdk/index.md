@@ -31,7 +31,7 @@ Here we will walk you thru the steps to quickly set up the Haptik SDK.
    
 ## Minimum and Target SDK versions of the Haptik SDK
 
-`minSdkVersion 16`
+`minSdkVersion 21`
 
 `targetSdkVersion 28`
 

@@ -1,51 +1,75 @@
 ---
-title: Multiple Languages
+title: Multilingual IVAs
 ---
 
-# How does it work?
+A multilingual chatbot i.e. a bot that can converse with users in multiple languages, can be a tremendous asset to any organization. This particularly holds true in a highly linguistically diverse country like India. The digital revolution in India has exponentially broadened the Internet user base in the country to include large numbers of non-English speakers, who vastly outnumber English language speakers in the country.
+
+Creating a whole new chatbot for each native language isn’t feasible nor pocket-friendly. A single chatbot that can operate effectively in all the languages is what online businesses need! 
+
+Custom Glossary for each language to improve understanding of domain specific terms and overall accuracy.
+Native modules for entity recognition (Entity Patterns).
+Text cleanup layer before translation.
+
+# Why do we need a multilingual bot?
+
+An IVA that doesn’t support multiple languages restricts your business boundaries. You can’t increase your products/services reach, gain happy customers, and lastly, you’ll be getting revenue that isn’t enough to fill your pocket. 
+
+All online stores who sell their products/services to a large customer base across the globe need to integrate a multi-lingual bot as it empowers you with benefits like-
+
+Increases Geographical Boundary Reach
+Provides Personalized Customer Experience 
+Enhances Customer Base
+Improves Business ROI
+Provides Solution In Users’ Native Language
+
+Another early decision that needed to be taken was whether we would build one chatbot that had support for multiple languages, or whether we would build a separate chatbot for each language.
+
+Ultimately, our team decided it would not be feasible to develop a new chatbot for every new language to be added. Particularly since any changes made to the chatbot in one language needed to be implemented across all languages. Maintaining and updating the bot would be far more efficient if changes could be made to a single bot and applied across all the languages it supported.
+
+Essentially, this means that when our multilingual chatbot switches from one language to another, the only things that change are the User Responses, Bot Responses, and Entities – the elements that are directly concerned with language. The rest of the underlying bot framework stays the same. A system like this makes it significantly easier to scale up the number of languages a bot can support over time.
 
 Language support on our platform is divided into 2 parts -
+
 1. *Business*: Manage business level settings and content for multiple languages  
 2. *Bot*: Configure bot content that is the user says, bot says etc. for a language. 
 
-## Part 1 - Create multi-language businesses
+# Steps to create a multilingual bot
 
-Every Business supports 1 Language only. So if you want multiple languages supported, you will have to create Businesses for every language, as explained below.
+## Step 1
 
-Create 1 business for every language that you want to support in the SDK. For example, your bot supports English and Hindi, so we need 2 businesses. If you need support for 5 languages, create 5 businesses. Select language in Business manager as shown on the red box in image below. 
+Default language will be English.
 
-![Language selection on business manager](/assets/language_selection.png)
+# Glossary
 
-The SDKs use Business via_name to combine the different language Businesses. So decide on a fixed prefix for the business via_name and use that for all the Businesses. For example, take **Dr. Path Labs** businesses creation, we have the via_name prefix as **drlalpathlabschannel**. So the corresponding business_via_name for the English and Hindi businesses would be **drlalpathlabschannel_en** and **drlalpathlabschannel_hi** respectively. You can set this via name in the business manager. This is highlighted in the image above as well.
+# Entity Support
 
-       To summarize, the businesss_via_name should be changed to "fixed-prefix_<language-code>" 
+You only need to add entity reprompts in different languages and if there are any domain specific words they need to be added to glossary
+person_name is not supported right now
 
-Once the above is completed, if you want to test the changes that you have just made, you can refer to the below link and update the specific fields here -
+# List of languages supported out of the box
 
-https://toolassets.haptikapi.com/js-sdk/html/demoqp.html?default-language=language_code&business-via-name=via_name_prefix>&client-id=<**client_id**>&api-key=<**api_key**>&base-url=<**base_url**>
+- Hindi
+- Marathi
+- Gujurati
+- Tamil
+- Telegu
+- Kannada
+- French
+- Dutch
+- German
+- Spanish
 
-       When an SDK gets deployed, it opens up with 1 default business (let's say English bot). 
-       And as the user taps on *Change Language* in the SDK, the underlying 
-       business is changed from English to Hindi. What it means is that, 
-       the chat collection, messages, etc. everything is new and not shared 
-       with the data of other language (business). Same applies for Taskbox 
-       as well because English and Hindi are 2 different businesses, the 
-       tasks in Hindi and tasks in English are completely independent.
+system messages which are not available for other languages, by default the platform supports everything
+if you want a language not mentioned in the lsit, reach out to the SPOC
 
+## Bot Break, Smart Assist, Disambiguation, Small Talk
 
-## Part 2 - Add languages to the bot view
+small talk and smart assist are currently not supported in non-english
 
-Unlike Business, a single Bot can support multiple languages. This helps in ease of maintenance so that the story/substory/nodes/connections etc. need not be changed twice.
+# How it works?
 
-When a single bot supports multiple languages, the only things that change when switching a language is the User says, Bot says and Entities. You can use the Language Selection dropdown in the header of Mogambo.
+Entire UI screenshots of switching the language and system messages shown on the UI and bot responses shown in Hindi.
 
-Depending on the language chosen, the bot builder can now configure User Says/Bot Says with the correct data as per language.
+Also when the user explicitly mentions I want to switch to Hindi language, how do we tackle that -
 
-![Language selection on Mogambo](/assets/MultipleLanguage1.png)
-
-You can add more languages in the bot from the same dropdown menu in the header.
-
-    Note: We do not auto-translate the User Responses and Bot Responses currently 
-    on Mogambo. Bot builders will later be able to use a Translate functionality 
-    which is in progress. Currently, bot builders themselves add language specific 
-    bot content. Please bookmark this page for future updates. 
+WAITING FOR AKSHAY's template

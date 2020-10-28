@@ -146,6 +146,36 @@ B = Number of instances where the user started his journey for a particular quer
 <h3><a class="anchor" aria-hidden="true" id="how-are-drop-offs-calculated"></a><a href="#how-are-drop-offs-calculated" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How are Drop-Offs calculated?</h3>
 <p>A user could abandon a conversation due to any of the below reasons. The last visited node is marked as the drop-off node under all of these scenarios:</p>
 <p><img src="/assets/querycompletion16.png" alt="Query Completion"></p>
+<p>Below are some scenarios which explain drop off in more detail.</p>
+<p><strong>1. Diverted</strong></p>
+<p>If a conversation is diverted from one query to another, a drop off is counted for the first query.</p>
+<p><strong>Example</strong>:</p>
+<p>Q1: Node A -&gt; Node C</p>
+<p>Q2: Node B -&gt; Node E</p>
+<p><strong>User Session</strong>: A -&gt; D -&gt; B -&gt; X -&gt; E</p>
+<p><strong>Result</strong>: Q1 started on A and diverted to Q2 on D. So there is a droff off on D for Q1 and Q2 got completed.</p>
+<p><strong>2. Restarted</strong></p>
+<p>If a new query is restarted in between another query, a drop off is counted for the first query.</p>
+<p><strong>Example</strong>:</p>
+<p>Q1: Node A -&gt; Node C</p>
+<p><strong>User Session</strong>: A -&gt; D -&gt; A -&gt; X -&gt; C</p>
+<p><strong>Result</strong>: Two queries initiated. So there is a droff off on D for Q1. Again, Q1 restarted on A and got completed.</p>
+<p><strong>3. Abandoned</strong></p>
+<p>If a conversation is abandoned by the user, a droff off is counted for the query.</p>
+<p><strong>Example</strong>:</p>
+<p>Q1: Node A -&gt; Node C</p>
+<p><strong>User Session</strong>: A -&gt; X -&gt; D</p>
+<p><strong>Result</strong>: There is a droff off on D for Q1 as the user abandoned at D.</p>
+<p><strong>4. Agent Transfer</strong></p>
+<p>If a conversation has an agent handover, a droff off is counted for the query.</p>
+<p><strong>Example 1</strong>:</p>
+<p>Q1: Node A -&gt; Node C</p>
+<p><strong>User Session</strong>: A -&gt; D -&gt; X -&gt; (Agent chat assigned)</p>
+<p><strong>Result</strong>: There is a droff off on D for Q1 as the chat got assigned to an agent.</p>
+<p><strong>Example 2</strong>:</p>
+<p>Q1: Node A -&gt; Node X</p>
+<p><strong>User Session</strong>: A -&gt; D -&gt; X (all entities collected) -&gt; (Agent chat assigned)</p>
+<p><strong>Result</strong>: Q1 got completed as all the entities are collected.</p>
 <blockquote>
 <p>When any query definition is changed, the drop offs for all other queries will need to be recalculated.</p>
 </blockquote>

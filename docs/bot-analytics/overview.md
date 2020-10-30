@@ -54,7 +54,7 @@ In bot state, we close a conversation when there are no messages exchanged betwe
 
 In agent state, we close a conversation either only when the agent clicks “Close Chat” or after 8 mins inactivity for chats that are in “Waiting State”.
 
-> Automated system messages (like "Chat Assigned", "Chat Completed", "Delay", "Follow Up" etc.) are not to be included when calculating the conversation complete time.
+> Automated system messages like "Chat Assigned", "Chat Completed", "Delay", "Follow Up" etc. are not to be included when calculating the conversation complete time.
 
 ![ConversationGraph](assets/Overview4.png)
 
@@ -72,8 +72,6 @@ You can get data at any given time point by hovering on the graph.
 
 - **Customer Satisfaction**: It will give the customer satisfaction score at the selected point of date-time.
 
-> **Bot Transfers** are shown on the graph too with a vertical line.
-
 ## ***Customer Satisfaction***
 
 ![UserRating](assets/Overview6.png)
@@ -84,15 +82,17 @@ This section gives the average User Rating. The rating is optional and is given 
 
 ![TopQueries](assets/Overview9.png)
 
+NEED INFORMATION
+
 ## ***Bot Automation***
 
 ![BotAutomation](assets/Overview7.png)
 
 The next section is Bot Automation. Bot Automation percentage tells us about what percentage of the conversations did not have either a bot break or an agent involved for the selected duration of time.
 
-In the graph, the X axis is the time and the Y axis represents Bot Automation Percentage. 
+In the graph, the X axis is the time and the Y axis represents Bot Automation %. 
 
-> **Bot Automation Formula** = No. of conversations did not have a bot break or a an agent response / Total no. of conversations
+> **Bot Automation Formula** = No. of conversations did not have a bot break or have an agent response / Total no. of conversations
 
 Below are the scenarios where bot breaks could possibly take place -
 
@@ -118,3 +118,5 @@ You can get data at any given time point by hovering on the graph.
 ### Bot Transfers
 
 ![BotAutomation1](assets/Overview10.png)
+
+NEED INFORMATION

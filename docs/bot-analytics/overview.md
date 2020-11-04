@@ -10,7 +10,7 @@ The **Overview** section provides information about:
 
 * Unique Users
 * Conversations
-* Customer Satisfaction
+* User Rating
 * Queries
 * Bot Automation
 
@@ -72,17 +72,25 @@ You can get data at any given time point by hovering on the graph.
 
 - **Customer Satisfaction**: It will give the customer satisfaction score at the selected point of date-time.
 
-## ***Customer Satisfaction***
+## ***User Rating***
 
 ![UserRating](assets/Overview6.png)
 
 This section gives the average User Rating. The rating is optional and is given on a scale of 1-5 stars.
 
-## ***Top Queries***
+## ***Queries***
 
-![TopQueries](assets/Overview9.png)
+![Queries](assets/Overview9.png)
 
-NEED INFORMATION
+This section gives the top queries coming on the bot.
+
+> Query is a step or a series of steps designed to see the effectiveness of the bot to help user’s reach their goal.
+
+Along with the query name, volume and completion rate are also shown.
+
+> **Volume**: Defines the number of times a particular query has been raised by all the users on the bot.
+>
+> **Completion rate**: Defines the number of instances where the user reached their end goal.
 
 ## ***Bot Automation***
 
@@ -119,4 +127,4 @@ You can get data at any given time point by hovering on the graph.
 
 ![BotAutomation1](assets/Overview10.png)
 
-NEED INFORMATION
+Bot Transfers are shown on the graph too with a vertical line along with a toggle filter to see the details with and without. Checking these lines on the graph will help us understand if there have been any changes in the bot's performance due to bot transfers.

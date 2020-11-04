@@ -35,6 +35,6 @@ After you have been presented the home screen with all the tools you have access
 
 After clicking on `Intelligent Analytics` you should be able to see the analytics dashboard with a menu to open different parts of the tool.
 
-![Analytics Dashboard](assets/homescreen2.png)
+![Analytics Dashboard](assets/Overview1.png)
 
 Now that you can access the tool, you can go through the sections provided in this documentation to know more about the various screens on `Intelligent Analytics` tool. You can start [**here**](https://docs.haptik.ai/bot-analytics/overview).

@@ -68,9 +68,9 @@ You can get data at any given time point by hovering on the graph.
 
 - **Bot Performance**: It will give the Bot Automation at the selected point of date-time.
 
-- **Top Queries**: It will give the top queries asked by users at the selected point of date-time.
+- **Queries**: It will give the top queries asked by users at the selected point of date-time.
 
-- **Customer Satisfaction**: It will give the customer satisfaction score at the selected point of date-time.
+- **User Rating**: It will give the average of user ratings given at the selected point of date-time.
 
 ## ***User Rating***
 
@@ -122,6 +122,14 @@ As we do not count Smart Assist as a broken message. In case you want to access 
 ![BotAutomation1](assets/Overview8.png)
 
 You can get data at any given time point by hovering on the graph.
+
+- **Traffic**: It will give the number of Unique Users and Conversations at the selected point of date-time.
+
+- **Bot Performance**: It will give the Bot Automation at the selected point of date-time.
+
+- **Queries**: It will give the top queries asked by users at the selected point of date-time.
+
+- **User Rating**: It will give the average of user ratings given at the selected point of date-time.
 
 ### Bot Transfers
 

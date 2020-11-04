@@ -30,11 +30,11 @@ You can select `Channels` or `Bots` from the first dropdown on the left hand sid
 
 On the right hand side of the filter section, you will find the duration filters. Using these settings you can filter the time period of the data presented. 
 
-There is a compare feature available which will help you to compare the performance of all metrics between the selected duration and its previous duration.
-
 ![Filter Duration2](assets/durationcompare.png)
 
-## ***Unique User***
+There is a compare feature available which will help you to compare the performance of all metrics between the selected duration and its previous duration.
+
+## ***Unique Users***
 
 ![UniqueUsers](assets/Overview2.png)
 
@@ -58,19 +58,19 @@ In agent state, we close a conversation either only when the agent clicks “Clo
 
 ![ConversationGraph](assets/Overview4.png)
 
-In the graph, the X axis is the time and the Y axis represents data about Conversations. 
+In the graph, the X axis represents selected time range and the Y axis represents conversations count. 
 
 ![ConversationGraph2](assets/Overview5.png)
 
-You can get data at any given time point by hovering on the graph. 
+You can view data by hovering over the graph at the selected point of date-time. 
 
-- **Traffic**: It will give the number of Unique Users and Conversations at the selected point of date-time.
+- **Traffic**: It will give the number of unique users and conversations.
 
-- **Bot Performance**: It will give the Bot Automation at the selected point of date-time.
+- **Bot Performance**: It will give the Bot Automation %.
 
-- **Queries**: It will give the top queries asked by users at the selected point of date-time.
+- **Queries**: It will give the top queries asked by users.
 
-- **User Rating**: It will give the average of user ratings given at the selected point of date-time.
+- **User Rating**: It will give the average of user ratings given.
 
 ## ***User Rating***
 
@@ -82,7 +82,7 @@ This section gives the average User Rating. The rating is optional and is given 
 
 ![Queries](assets/Overview9.png)
 
-This section gives the top queries coming on the bot.
+This section gives first 5 queries as per volume coming on the bot.
 
 > Query is a step or a series of steps designed to see the effectiveness of the bot to help user’s reach their goal.
 
@@ -98,7 +98,7 @@ Along with the query name, volume and completion rate are also shown.
 
 The next section is Bot Automation. Bot Automation percentage tells us about what percentage of the conversations did not have either a bot break or an agent involved for the selected duration of time.
 
-In the graph, the X axis is the time and the Y axis represents Bot Automation %. 
+In the graph, the X axis represents selected time range and the Y axis represents Bot Automation %. 
 
 > **Bot Automation Formula** = No. of conversations did not have a bot break or have an agent response / Total no. of conversations
 
@@ -121,15 +121,15 @@ As we do not count Smart Assist as a broken message. In case you want to access 
   
 ![BotAutomation1](assets/Overview8.png)
 
-You can get data at any given time point by hovering on the graph.
+You can view data by hovering over the graph at the selected point of date-time. 
 
-- **Traffic**: It will give the number of Unique Users and Conversations at the selected point of date-time.
+- **Traffic**: It will give the number of unique users and conversations.
 
-- **Bot Performance**: It will give the Bot Automation at the selected point of date-time.
+- **Bot Performance**: It will give the Bot Automation %.
 
-- **Queries**: It will give the top queries asked by users at the selected point of date-time.
+- **Queries**: It will give the top queries asked by users.
 
-- **User Rating**: It will give the average of user ratings given at the selected point of date-time.
+- **User Rating**: It will give the average of user ratings given.
 
 ### Bot Transfers
 

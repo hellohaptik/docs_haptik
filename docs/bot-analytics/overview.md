@@ -16,6 +16,8 @@ The **Overview** section provides information about:
 
 ![OverviewPage](assets/Overview1.png)
 
+> You can know more about a section by clicking on the **?** icon.
+
 ### Filters
 
 ![Filter Channels Bots](assets/basic-filter-channels-bots.png)
@@ -136,3 +138,7 @@ You can view data by hovering over the graph at the selected point of date-time.
 ![BotAutomation1](assets/Overview10.png)
 
 Bot Transfers are shown on the graph too with a vertical line along with a toggle filter to see the details with and without. Checking these lines on the graph will help us understand if there have been any changes in the bot's performance due to bot transfers.
+
+![BotAutomation1](assets/Overview11.png)
+
+> Arrows in every section can take you to the corresponding pages to understand a particular metric in depth.

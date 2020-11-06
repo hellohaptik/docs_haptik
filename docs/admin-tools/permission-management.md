@@ -58,14 +58,14 @@ Users who already have an account on the Haptik Platform can be added into a par
 **Note**: You will only be able to add a User if you also have access to every other partner they belong to.
 
 ## Creating New User
-![Create User](assets/permission-create-user.png)
+![Create User](assets/CreateUser.png)
 
 If a user doesn't currently exist in the system, you can create a new user by clicking on the `Create New User` button and then entering the required details in the modal.
 
 ## Removing User's Access to a Partner
-![Remove Partner Access](assets/permission-remove-partner-access.gif)
+![Remove Partner Access](assets/bulk_edit_partners.gif)
 
-You can revoke access to a partner for the user by removing the partner tag from the partner selection dropdown in the User Modal which can be opened by clicking on the users listing in the table.
+You can revoke access to a partner for the user by unchecking the partner tag from the partner selection dropdown in the User Modal which can be opened by clicking on the users listing in the table.
 
 ## Assigning or Removing Roles for a Partner
 ![Assign Roles](assets/permission-assign-roles.png)

@@ -83,8 +83,10 @@ Once you drag and drop any of the node type from the sidebar, a new sidebar is o
 You'll need to add the following inputs:
 
 - **Node Name**: The label that will appear on the node on the Mogambo graph.
+
 - **System Name**: The system name is used to uniquely identify the node in the backend. Only underscores and capital case alphanumeric characters are allowed in this field.
-- **Node Type**: Use node type to indicate if a node is a Start Node or an End Node. Start Nodes indicate that this is the node that will initiate a conversation, while an End Node is the last node in a conversation. When an end node is reached, and that node does not have further connecting nodes, we internally mark this conversation as 'complete,' which helps when tracking user activity.
+
+- **Node Type**: Use node type to indicate if a node is a **Start Node** or a **Context Clear Node**. Start Nodes indicate that this is the node that will initiate a conversation, while a Context Clear Node clears the entities, user's selection in a conversation.
 
       Tip: When the user is in the middle of a conversation and the system cannot find a match 
       to the connecting nodes, our system will go over all the start nodes to see if it can 
@@ -92,7 +94,7 @@ You'll need to add the following inputs:
 
 - **Status**: Indicate whether the node will be active or inactive. When you are first making a bot, we'll assume all the nodes you create are active. Instances when you will deactivate nodes will arise later on.
 
-Click 'Save' when done.
+Click **'Save'** when done.
 
 Post creation of a node, the node will be displayed as depicted below:
 

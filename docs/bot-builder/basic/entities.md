@@ -419,7 +419,7 @@ Context is linguistically defined as the background in which the conversation is
 
 **When is the context information deleted?**
 The context is deleted by the system in case if any of the following events occur:
-- When an END NODE is encountered by the IVA in the conversation 
+- When a Context Clear Node is encountered by the IVA in the conversation 
 - When an agent marks the conversation as COMPLETE from Agent Chat tool
 - When a chat auto-completes after 8 mins of inactivity
 

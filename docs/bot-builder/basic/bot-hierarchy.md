@@ -2,26 +2,17 @@
 title: Bot Hierarchy
 ---
 
-
 ## 1. Outside a Bot 
 
-##### Partner -> Business -> Bot
+#### Partner -> Business -> Bot
 
-The Haptik Conversation Studio platform has a three-tiered organizational system to help organize bots. This three-tier hierarchy allows bot developers to easily deploy bots across multiple channels. The three tiers of this system are called **bots**, **businesses**, and **partners**:
+The Haptik Conversation Studio platform has a three-tiered organizational system to help organize bots. This three-tier hierarchy allows bot developers to easily deploy bots across multiple channels. The three tiers of this system are called **Bots**, **Businesses**, and **Partners**.
 
-- The smallest unit of organization is the actual **bot**. Bots are clusters of chatflows that accomplish limited goals. You can think of a bot like a single tangent of a conversation (i.e. if the conversation is about technology, a bot would be the conversational tangent about blockchain). 
-- Several bots can be grouped together into one **business**. Continuing the analogy from before, a business would therefore be the *topic* of a conversation (i.e. the business called "technology" would be comprised of several bots focused on various sub-topics related to technology, such as blockchain, servers, and so forth). While most businesses are comprised of multiple bots, it is also possible for a business to consist of only a single bot. 
-- The largest unit of organization is a **partner**. A partner is a unit made up of several businesses. You can think of a partner like an assistant who is able to engage in several topics of conversation, such as technology, entertainment, and sports. Partners (along with their associated businesses and bots) can be deployed across various devices (mobile, web, Facebook chat, etc). Regardless of the place of deployment, however, a partner is always comprised of the same set of businesses (and their associated bots). 
+- Smallest unit is **bot**. Bots are clusters of chatflows that accomplish limited goals.
 
-The following image might help you envision this organizational system: 
+- Second unit is **business** which takes care of all configurations of the bot ranging from color, chat icon, language, channel, etc.
 
-![bot_org_structure](/assets/partner_business_bot.png)
-
-Below are two examples of Haptik's two main partners that serve two different functions:
-
-> The first partner is the Haptik Personal Assistant app, which anyone can download onto their phones and use to engage in conversations covering several topics (a.k.a. businesses), such as Finances, Reminders, and Daily Fun. Within each business, users can discuss various subtopics, which would be the bots. For example, the Finances business in the Haptik Personal Assistant app is comprised of bots that can engage in coversations about credit cards, financial scores, etc.
-
-> The second partner is the Haptik company website, which is there to provide the general public with information about the company. This chatbot is comprised of businesses such as About Chatbots, Haptik Products, Case Studies, etc. Within the business called Haptik Products, users can interact with bots covering solutions for advertisers, solutions for enterprises, and so forth. 
+- Largest unit is **partner**. Usually, its your organisation's name or project's name.
 
 ## 2. Inside a Bot 
 
@@ -41,7 +32,7 @@ As you can see, there are three major sections -
 
 This section is the place where we design user journeys and flows with interconnected Nodes. It follows the below hierarchy.
 
-##### Bot -> Story -> Sub-story -> Node
+#### Bot -> Story -> Sub-story -> Node
 
     A Story is like a folder on your computer. 
 
@@ -68,7 +59,7 @@ In the above case, the sub-story is a group of nodes which constitute a respecti
 
 Now, post the Flight Booking flow a user can trigger a Flights Web Check-in flow which makes sense as it is considered to be a part of Flight's User Journey but it would not make sense if the flows for Trains are triggered within the Flight's User Journey. Thus, one cannot connect to the nodes from two different stories.
 
-To conclude, it is just a matter deciding on most divisible use-case for your bot's hierarchy and there are 'n' number of ways to configure a good and contextually adaptive bots.
+To conclude, it's just a matter of deciding on most divisible use-case for your bot's hierarchy and there are 'n' number of ways to configure a good and contextually adaptive bots.
 
 > All Nodes in **Stories** section are called **Graph Nodes**.
 
@@ -86,4 +77,4 @@ It is the chit-chat module present on the Haptik Platform. It has been developed
 
 You can read more about it [here](https://docs.haptik.ai/bot-builder/basic/smalltalk).
 
-
+Now that we know all components of the bot to get started, let us start our [**bot development life cycle**](https://docs.haptik.ai/bot-builder/advanced/development-guidelines).

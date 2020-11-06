@@ -27,7 +27,7 @@ You can follow the below video to create your first bot
 
 - **Bot Description**: Describe the purpose of your bot. This text here isn't visible anywhere on frontend. Moreover, this text field here works as a reference for everyone.
 
-- **Partner**: A partner is the Conversation Studio's largest unit, and can be deployed in multiple locations (i.e. a website, Android and iOS Apps, Facebook Messenger, Whatsapp, Google Business Manager, etc.). Usually, its your oganisation's name.
+- **Partner**: A partner is the Conversation Studio's largest unit, and can be deployed in multiple locations (i.e. a website, Android and iOS Apps, Facebook Messenger, Whatsapp, Google Business Manager, etc.). Usually, its your organisation's name or project's name.
 
 **Step 4**: Click on **Create Bot** to successfully create your bot. The below pop up would come showing the success message
 

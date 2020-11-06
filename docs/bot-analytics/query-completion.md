@@ -6,7 +6,7 @@ title: Query Completion
 
 For a business which has deployed an IVA solution, it is imperative to know if the IVA is being able to resolve users’ queries i.e. when users are asking questions, is the IVA able to respond with appropriate responses and not requires a human intervention.
 
-**Query Completion** helps us track how users navigate across different nodes and end up getting their query answered. In other words, it indicates the effectiveness of an IVA. This feature will play an important role to enhance our user journeys and IVA content. Various metrics like completion rate, drop-off rate, drop-off nodes, and query volume help us achieve the same . 
+**Query Completion** helps us track how users navigate across different nodes and end up getting their query answered. In other words, it indicates the effectiveness of an IVA. This feature will play an important role to enhance our user journeys and IVA content. Various metrics like completion rate, drop-off rate, drop-off nodes, and query volume help us achieve the same .
 
 > Nodes are interlinked building blocks of an IVA. Each node takes care of one intent coming from the user and responds appropriately.
 
@@ -28,23 +28,23 @@ You can create your own custom queries depending on which IVA usecase you want t
 
 ![Query Completion](assets/querycompletion3.png)
 
-A query has two parts to it. 
+A query has two parts to it.
 
-- **Query Start**: User asking for account balance 
+- **Query Start**: User asking for account balance
 
 - **Query End**: IVA’s response with the account balance
 
 ![Query Completion](assets/querycompletion4.png)
 
-You can specify up to 
+You can specify up to
 
 - **5 start points**: a set of nodes denoting the beginning of a Query (Query Start). A start point has to be unique for every query ie. multiple queries cannot have the same start point.
 
-- **5 end points**: set of nodes denoting completion of the Query (Query End). 
+- **20 end points**: set of nodes denoting completion of the Query (Query End).
 
 ![Query Completion](assets/querycompletion5.png)
 
-You can keep adding nodes by clicking on the **+** button as shown below 
+You can keep adding nodes by clicking on the **+** button as shown below
 
 ![Query Completion](assets/querycompletion6.png)
 
@@ -60,9 +60,9 @@ Once you are done selecting the nodes click on "Create Query" as shown below
 
 > You need to be mindful while creating a new query and choosing the start and end points of those queries keeping real life user messages under consideration as these queries will help you gauge the effectiveness of the IVA.
 
-## Editing Queries 
+## Editing Queries
 
-You can edit the names of your queries by clicking on the pencil icon in front of any query as shown below 
+You can edit the names of your queries by clicking on the pencil icon in front of any query as shown below
 
 ![Query Completion](assets/querycompletion18.png)
 
@@ -77,7 +77,7 @@ This indicates the effectiveness of the IVA design and flow as it shows what wer
 Formula =  (A / B) * 100
 
 A = Number of instances where the user query reached the end point and all conditions* are met
-B = Number of instances where the user started his journey for a particular query 
+B = Number of instances where the user started his journey for a particular query
 
 i.e. Formula =  (Total no. of queries completed /  Total no. of queries initiated) * 100
 
@@ -108,7 +108,7 @@ User Session: A -> A -> A -> C (END)
 
 Result: Query1 completed (Here repeated counts of A are not counted as new query start)
 
-Result: Query Volume -> 1. 
+Result: Query Volume -> 1.
 
 Scenario 2: If a user visits the same start point twice but not sequentially we increment the query start count
 
@@ -124,13 +124,13 @@ Result: Query Volume -> 2
 
 ## Sorting of Queries
 
-By default, you will see the query with the highest Query Volume on top. This is done in order to quickly check the completion rate of the most visited query. 
+By default, you will see the query with the highest Query Volume on top. This is done in order to quickly check the completion rate of the most visited query.
 
 If required, you can change the order of other fields and sort it as per your requirement.
 
 ![Query Completion](assets/querycompletion12.png)
 
-## Drop Off 
+## Drop Off
 
 To understand why a query was not completed, it’s important to know points at which the users are abandoning, restarting or diverting to a different flow. Understanding of WHY the query is not reaching its completion can be found in the drop off section. The insights on messages shared between the IVA and the user along with the Drop Off Nodes can help tweak the conversation design and flow to optimise for better results.
 
@@ -206,11 +206,11 @@ Q1: Node A -> Node X
 
 ### Drop-Off Points
 
-To check the drop-off points for a query, you can click on the icon as shown below 
+To check the drop-off points for a query, you can click on the icon as shown below
 
 ![Query Completion](assets/querycompletion14.png)
 
-A screen would open on RHS. This screen will have all details of drop-off with the following 
+A screen would open on RHS. This screen will have all details of drop-off with the following
 
 - Node Names
 - Percentage distribution of drop-off
@@ -220,18 +220,18 @@ A screen would open on RHS. This screen will have all details of drop-off with t
 
 > We do not show type of nodes under Drop Off Point
 
-Following are the drop-off points under a Node which will be shown 
+Following are the drop-off points under a Node which will be shown
 
 - Bot Says and its Variants
 - Entity Responses and its Variants
-- Final Response and its Variants 
+- Final Response and its Variants
 - Entity re-prompt message: Message content would not be available for this
 - Integration Response Message: Message content would not be available for this
 - Follow-up Message: Message content would not be available for this
 
 ![Query Completion](assets/querycompletion17.png)
 
-**No Node Detected** is shown in the following conditions 
+**No Node Detected** is shown in the following conditions
 
 - When no nodes were matched as per User says
 - When a Smalltalk node is matched

@@ -179,7 +179,7 @@ EXPANDED EXTERNAL TOOLS SCREENSHOT (Tanvi)
 
 If there are more than 2 or 3 tools, they will come stacked in a list as shown in the below image -
 
-![MyChatsScreen11](assets/toolsscreen.png)
+![MyChatsScreen11](assets/Toolsdropdown.png)
 
 #### Previous Conversation 
 

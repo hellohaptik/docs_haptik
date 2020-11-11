@@ -35,37 +35,37 @@ Now, you’ll be taken to a page, where you now need to fill information in thre
 
 These are some basic details of the Business.
 
-- Business Name: This refers to the overarching topic of its conversational capabilities. For example, a Business Name called Flights would have a Flight booking, Flight cancellation and Flight Offers bots covering broad user intents.
+- **Business Name**: This refers to the overarching topic of its conversational capabilities. For example, a Business Name called Flights would have a Flight booking, Flight cancellation and Flight Offers bots covering broad user intents.
 
       You can change the Business name once you’ve saved it.
 
-- Business Via Name: You need to add a Business Via Name as it's an editable field. 
+- **Business Via Name**: You need to add a Business Via Name as it's an editable field. 
     
-- Partner: Businesses can be activated or deactivated for a partner, as per what you select here.
+- **Partner**: Businesses can be activated or deactivated for a partner, as per what you select here.
 
-- Default Team: You can configure the default team for this bot here. Team is a group of agents who get assigned chats from this bot. You can read about Teams on our Smart Agent tool documentation [**link**](https://docs.haptik.ai/agent-chat/).
+- **Default Team**: You can configure the default team for this bot here. Team is a group of agents who get assigned chats from this bot. You can read about Teams on our Smart Agent tool documentation [**link**](https://docs.haptik.ai/agent-chat/).
 
-- Business Languages: You can add languages from the drop down if its a multilingual bot.
+- **Business Languages**: You can add languages from the drop down if its a multilingual bot.
 
-- Enable Human Assistance: Will make it possible for human chat assistants to intervene when bots break. This is helpful if you have a bot + human solution or a human-only solution. How we enable Human assistance on our Business manager, similarly, you'd be able to choose the Live agent chat tool for setup. `Haptik Agent Chat tool` and `Sprinklr` is supported as of now. 
+- **Enable Human Assistance**: Will make it possible for human chat assistants to intervene when bots break. This is helpful if you have a bot + human solution or a human-only solution. How we enable Human assistance on our Business manager, similarly, you'd be able to choose the Live agent chat tool for setup. `Haptik Agent Chat tool` and `Sprinklr` is supported as of now. 
 
 ![ECT Flag](assets/Enable_ECT.png)
 
-> Note: If any value other than Haptik Agent Chat is selected, one must request the ECT to register the required webhooks for the functionality to work. For reference check this [**link**](https://docs.haptik.ai/external-chat-tool/management-APIs).
+> If any value other than Haptik Agent Chat is selected, one must request the ECT to register the required webhooks for the functionality to work. For reference check this [**link**](https://docs.haptik.ai/external-chat-tool/management-APIs).
 
-- Enable Small Talk: Allows certain common phrases to be understood and replied to by the bot. Say, the user types “Hi” or “Good morning”, when Small Talk is enabled, the bot will greet the user and respond back with an apt greeting (ex: “Good afternoon” detecting time of the day). You can read more it [**here**](https://docs.haptik.ai/bot-builder/basic/smalltalk).
+- **Enable Small Talk**: Allows certain common phrases to be understood and replied to by the bot. Say, the user types “Hi” or “Good morning”, when Small Talk is enabled, the bot will greet the user and respond back with an apt greeting (ex: “Good afternoon” detecting time of the day). You can read more it [**here**](https://docs.haptik.ai/bot-builder/basic/smalltalk).
 
-- Enable user file deletion: When enabled for a business, all the files uploaded by the user for that business will be deleted from Haptik's Storage after 72 hrs, from the time of upload for the file.
+- **Enable user file deletion**: When enabled for a business, all the files uploaded by the user for that business will be deleted from Haptik's Storage after 72 hrs, from the time of upload for the file.
 
-- Active Bots: When an user sends message while conversing with this Business, Active Bots will be the bots whose User Says (combinations of predicted user inputs we add in bot builder) will be searched for a relevant match to the user’s input.
+- **Active Bots**: When an user sends message while conversing with this Business, Active Bots will be the bots whose User Says (combinations of predicted user inputs we add in bot builder) will be searched for a relevant match to the user’s input.
 
-- Default Bots: When a user adds an input, this is the first bot whose User Says will be searched for a relevant match to the user’s input. Set the default bot to the conversation most relevant to the Business
+- **Default Bots**: When a user adds an input, this is the first bot whose User Says will be searched for a relevant match to the user’s input. Set the default bot to the conversation most relevant to the Business
 
-- Fallback Bots: When user input doesn’t match the User Says of any of the active bots, the Bot Says response will be automatically sent from the fallback bot.
+- **Fallback Bots**: When user input doesn’t match the User Says of any of the active bots, the Bot Says response will be automatically sent from the fallback bot.
 
 > Make sure you have all these fields filled out with the bots from the drop down, or else your bot will break and not give correct responses.
 
-- User Feedback: Feedback module is the smart action where the users can provide their feedback in text & ratings as shown below
+- **User Feedback**: Feedback module is the smart action where the users can provide their feedback in text & ratings as shown below
 
 ![Star Rating](assets/FD1.png)
 
@@ -124,15 +124,15 @@ As you can see in the image below, there are 3 Tasks that users can initiate - *
 
 ![TaskBox3](assets/Business6.png)
 
-- Task Title: This will be the task what you want to add on the bot and display on the main menu. Example - **Choose a plan** as shown in the Netflix menu above.
+- **Task Title**: This will be the task what you want to add on the bot and display on the main menu. Example - **Choose a plan** as shown in the Netflix menu above.
 
-- User Says: This will be the content which you want as a user text to be sent on the bot once user clicks on Task title. Example - If **User Says** is given as **I want to choose a plan** for the above Task title **Choose a plan**, the text will go as **I want to choose a plan** once the user clicks on **Choose a plan** task.
+- **User Says**: This will be the content which you want as a user text to be sent on the bot once user clicks on Task title. Example - If **User Says** is given as **I want to choose a plan** for the above Task title **Choose a plan**, the text will go as **I want to choose a plan** once the user clicks on **Choose a plan** task.
 
-- Upload the icon: You can set the icon for each task by clicking the icon image present beside the “New Task” text. You can always change the image for the existing task by clicking the same image.
+- **Upload the icon**: You can set the icon for each task by clicking the icon image present beside the “New Task” text. You can always change the image for the existing task by clicking the same image.
 
-- Visible on Task Box: Check this box to make this task active on the taskbox associated with this channel. If you want to deactivate a task at any point, uncheck this box, and it will be removed from the taskbox.
+- **Visible on Task Box**: Check this box to make this task active on the taskbox associated with this channel. If you want to deactivate a task at any point, uncheck this box, and it will be removed from the taskbox.
 
-- Location Required: You can ignore this option.
+- **Location Required**: You can ignore this option.
 
 5. Click Save. You’ve created a task! 
 
@@ -164,23 +164,23 @@ You can apply customized settings on your bot for any channel where it is deploy
 
 ![Partner Settings](assets/Business10.png)
 
-- Upload Business Icon: When there are multiple Businesses clustered together in a partner in a homescreen, you can assign each Business an icon. Upload that icon here
+- **Upload Business Icon**: When there are multiple Businesses clustered together in a partner in a homescreen, you can assign each Business an icon. Upload that icon here
 
-- Hide Haptik branding on the SDK: Tick this off to hide the _powered by Haptik_ branding across this business
+- **Hide Haptik branding on the SDK**: Tick this off to hide the _powered by Haptik_ branding across this business
 
-- Enforce GDPR: You can get the GDPR pop-up on your bot by enabling this toggle.
+- **Enforce GDPR**: You can get the GDPR pop-up on your bot by enabling this toggle.
 
-- Enfore Per Message User Feedback: You can get the per message level feedback by enabling this toggle. You can also provide customised questions and tags for the same.
+- **Enfore Per Message User Feedback**: You can get the per message level feedback by enabling this toggle. You can also provide customised questions and tags for the same.
 
-- JS Configurations: You can change the look and feel of your bot using these options the GDPR pop-up on your bot by enabling this toggle.
+- **JS Configurations**: You can change the look and feel of your bot using these options the GDPR pop-up on your bot by enabling this toggle.
 
 ![JSConfig](assets/Business11.png)
 
-- Langauge Specific SDK Configurations: You can make your SDK basic configurations like Chat Icon, Typing Box Text, etc.
+- **Langauge Specific SDK Configurations**: You can make your SDK basic configurations like Chat Icon, Typing Box Text, etc.
 
 ![LanguageSDKConfig](assets/Business12.png)
 
-- Platform Deployments: You can choose the channel of deployment here.
+- **Platform Deployments**: You can choose the channel of deployment here.
 
 ![PlatformDeployment](assets/Business13.png)
 

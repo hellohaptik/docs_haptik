@@ -120,10 +120,15 @@ WAITING FOR AKSHAY's TEMPLATE
 
 - Hindi
 - Marathi
+- Bengali
+- Oriya
+- Urdu
 - Gujarati
 - Tamil
 - Telugu
 - Kannada
+- Malayalam
+- Punjabi
 - French
 - Dutch
 - German

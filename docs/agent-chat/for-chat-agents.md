@@ -29,6 +29,8 @@ A chat agent can:
   
 >Tip: We also have a system to enforce Data level permissioning i.e. an agent user is allowed to view/edit data for which business can be controlled using this.
 
+We have revamped the **MyChats screen** and currently it is in Beta phase. You can read about it in detail [**here**](https://docs.haptik.ai/agent-chat/newmychats).
+
 ## Chat Priority
 
 In high traffic scenarios for customer support agents, there’s almost always two or three chats for agents to deal. So as soon as an agent finishes helping one customer, they move on to another chat. But user activity is not highlighted to the agent. We color code the chat tab to help agents prioritise a customer basis last user message sent time. This eliminates the agent side dilemma to figure chat priorities from their ongoing chats. Check out this feature in action on Smart Agent Chat and screenshot below.

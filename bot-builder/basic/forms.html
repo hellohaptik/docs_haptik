@@ -66,7 +66,7 @@
 <p>Whenever the input is expected from a user in a structured format, its best taken in a form. For example, address would be best taken over form with 3-4 fields. Forms should have at least two fields.</p>
 <h2><a class="anchor" aria-hidden="true" id="form-creation"></a><a href="#form-creation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Form creation</h2>
 <p>Forms are placed in the Admin tools section. If you've access to them, follow the steps below.</p>
-<pre><code class="hljs">•   Step 1: On your dashboard, choose Administrator
+<pre><code class="hljs">•   Step 1: On your dashboard, choose Admin Tools
 •   Step 2: Click Forms in the Banners, Partners, Forms and Tasks section
 •   Step 3: Now, click on ADD+ blue button on the top-right hand corner
 •   Step 4: You land on a page to configure form by adding fields, task &amp; subtitle
@@ -74,55 +74,53 @@
 </code></pre>
 <p>You can come back to it and edit it, say add more fields or configure this form as required.
 There are multiple field entries and selections while creating a form. Read on each of them below -</p>
-<pre><code class="hljs">Common mistake: Forms with more than 4 fields are likely to see lower completion rate. This is because
-it ends up being too much information being taken from the user. As the form occupies the entire screen
-with &gt; 5 fields, it isn't a good user experience.
-</code></pre>
 <ul>
-<li>Task: This field should generally indicate the Objective of the form. For example, if you are making a form to take delivery address, Task can be Delivery Address</li>
+<li><strong>Task</strong>: This field should generally indicate the Objective of the form. For example, if you are making a form to take delivery address, Task can be Delivery Address</li>
 </ul>
 <p><img src="/assets/1_add_form.png" alt="Add Form"></p>
 <ul>
-<li>Subtitle: This field should convey the action needed from the user. For example if you are making a form to take delivery address, Subtitle can be Please help me with your Delivery address</li>
-<li>Short Hand: This is to be deprecated. Used in older app versions</li>
-<li>Auto Open: Tick this off to auto open form with a single auto search field on task tap. For these use cases, task is linked to the form. This is deprecated.
+<li><strong>Subtitle</strong>: This field should convey the action needed from the user. For example if you are making a form to take delivery address, Subtitle can be Please help me with your Delivery address</li>
+<li><strong>Short Hand</strong>: This is to be deprecated. Used in older app versions</li>
+<li><strong>Auto Open</strong>: Tick this off to auto open form with a single auto search field on task tap. For these use cases, task is linked to the form. This is deprecated.
 The linking of form to task is no longer possible through the Conversation Studio UI and has to be done
 through backend only</li>
-<li>Search Source: When we want some custom response or inputs from a client’s API, we put the API URL here. (ex: we need a list of clinics, we type the API endpoint URL in this field)</li>
-<li>Search Placeholder: In the Search field, the placeholder text visible for the user to understand what needs to be typed</li>
-<li>Add fields: Clicking on Add fields opens a pop-up to add the respective field details for a form -</li>
+<li><strong>Add fields</strong>: Clicking on Add fields opens a pop-up to add the respective field details for a form -</li>
 </ul>
 <p><img src="/assets/2_create_form.png" alt="Create Form"></p>
 <ul>
-<li><p>Sort Position: Enter “0” for a field to be at the top of any form.Add subsequent numbers for the position of any field in a form</p></li>
-<li><p>Key: The field-wise labels that is the text on top of each form field box are to be managed from this Key parameter.</p>
+<li><p><strong>Sort Position</strong>: Enter “0” for a field to be at the top of any form.Add subsequent numbers for the position of any field in a form</p></li>
+<li><p><strong>Key</strong>: The field-wise labels that is the text on top of each form field box are to be managed from this Key parameter.</p>
 <pre><code class="hljs">Tip: Please note that field key maps to an entity when we use entities
 </code></pre></li>
-<li><p>Type: Select the type of field from a drop-down titled Type here. Type options are Text, Picker, Time, Date, ContactPicker, StartDate, EndDate, Search, SearchEditable, SavedAddress, DOB, MultiDayPicker, MultiSelectPicker</p></li>
-<li><p>Hint: You can add Hint for each field to tell an user exactly what is needed to be entered. You can also use it to specify the format in which the input is expected (ex: if you expect the user to enter date of birth, Hint can be DD/MM/YY)
+<li><p><strong>Type</strong>: Select the type of field from a drop-down titled Type here. Type options are Text, Picker, Time, Date, ContactPicker, StartDate, EndDate, Search, SearchEditable, SavedAddress, DOB, MultiDayPicker, MultiSelectPicker</p></li>
+<li><p><strong>Hint</strong>: You can add Hint for each field to tell an user exactly what is needed to be entered. You can also use it to specify the format in which the input is expected (ex: if you expect the user to enter date of birth, Hint can be DD/MM/YY)
 Tip: While the header and the subtitle of the form element are important, the most important element is
 the Hint for each field. Its best to use picker options in form fields wherever applicable and prefilling
 wherever details pre-exist. Forms should always be preceded by a message that specifies the intent of sending
 the bot to the user.</p></li>
-<li><p>Icon: We have a pre configured list of icons for form fields. And you have to use icon names from that pre-defined list only. These names come directly from the code base</p></li>
-<li><p>Auto fill: Here, add the value to auto fill in the form field based on user's profile (age, gender, user_city, user_address, user_email, user_name, star_sign)</p></li>
-<li><p>Auto fill Source: Enter the Source from where the value should be auto filled. Not sure if apps still use this field</p></li>
+<li><p><strong>Icon</strong>: We have a pre configured list of icons for form fields. And you have to use icon names from that pre-defined list only. These names come directly from the code base</p></li>
+<li><p><strong>Auto fill</strong>: Here, add the value to auto fill in the form field based on user's profile (age, gender, user_city, user_address, user_email, user_name, star_sign)</p></li>
+<li><p><strong>Auto fill Source</strong>: Enter the Source from where the value should be auto filled. Not sure if apps still use this field</p>
+<pre><code class="hljs">Common mistake: Forms with more than 4 fields are likely to see lower completion rate. This is because
+it ends up being too much information being taken from the user. As the form occupies the entire screen
+with &gt; 5 fields, it isn't a good user experience.
+</code></pre></li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="form-actions"></a><a href="#form-actions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Form actions</h2>
 <p><img src="/assets/3_form_action.png" alt="Form actions"></p>
 <ul>
-<li><p>Add field: For an already created form, you can still go back and add field(s) in case you feel, you’d missed a field earlier</p></li>
-<li><p>Edit: When you click on edit and click the downward chevron arrow, you’d be able to edit the Task, Subtitle field texts as well as check/uncheck the Auto Open check box
+<li><p><strong>Add field</strong>: For an already created form, you can still go back and add field(s) in case you feel, you’d missed a field earlier</p></li>
+<li><p><strong>Edit</strong>: When you click on edit and click the downward chevron arrow, you’d be able to edit the Task, Subtitle field texts as well as check/uncheck the Auto Open check box
 Tip: Pre-filling the forms with details that you have for the user increases the form submission rate
 significantly. As much as possible, we should pre-fill users information in forms. Exception here is
 in cases where you might need inputs in a different format compared to what is stored on the backend.
 For example, in a particular implementation its expected Delhi as the city vs the value available on
 backend being New Delhi. It might be better to not prefill in this case.</p></li>
-<li><p>Delete: As the action suggests, you’d be able to delete a form by clicking the red Delete button</p></li>
-<li><p>Transfer form: To move this form from staging to production (live) environment, you click the Transfer form button</p></li>
-<li><p>Editing existing fields: You can directly click the chevron arrow icon and then click edit/cross icon on any particular field to edit or delete the field from any form.</p></li>
-<li><p>Using form in Conversation Studio: To use the form on any node, we type {chatform}{id} in the raw HSL (after clicking Add a chat element). The id is the number assigned to each form in Admin Tools -&gt; Forms list view.</p></li>
+<li><p><strong>Delete</strong>: As the action suggests, you’d be able to delete a form by clicking the red Delete button</p></li>
+<li><p><strong>Transfer form</strong>: To move this form from staging to production (live) environment, you click the Transfer form button</p></li>
 </ul>
+<p><strong>Editing existing fields</strong>: You can directly click the chevron arrow icon and then click edit/cross icon on any particular field to edit or delete the field from any form.</p>
+<p>Using form in Conversation Studio: To use the form on any node, we type {chatform}{id} in the raw HSL (after clicking Add a chat element). The id is the number assigned to each form in Admin Tools -&gt; Forms list view.</p>
 <p><img src="/assets/4_form_id.png" alt="Form ID"></p>
 <p>As you can see from the image above, <em>689</em> is a form id for form titled “State List for 4kg Cylinder”.</p>
 <h2><a class="anchor" aria-hidden="true" id="types-of-form-fields"></a><a href="#types-of-form-fields" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Types of Form Fields</h2>
@@ -153,6 +151,40 @@ backend being New Delhi. It might be better to not prefill in this case.</p></li
 </blockquote>
 <p><strong>DOB</strong>: It is used to get the Date of birth from a user and works similarly as the Date field mentioned above except, the user cannot select the future dates as shown below -</p>
 <p><img src="/assets/Form5.png" alt="Form5"></p>
+<p><strong>Search</strong>: This field will help you create search options on the bot. Following two options are required for this field to be used.</p>
+<ol>
+<li><p>Search Placeholder: In the search field, the placeholder text is visible for the user to understand what needs to be typed.</p></li>
+<li><p>Search Source: When we want some custom response or inputs from a client’s API, we put the API URL here. Ex: we need a list of clinics, we type the API endpoint URL in this field.</p></li>
+</ol>
+<p><img src="/assets/searchfieldform.png" alt="Form19"></p>
+<h2><a class="anchor" aria-hidden="true" id="forms-validation"></a><a href="#forms-validation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Forms Validation</h2>
+<p>You can add validations on your form fields. These are the following types of validations available:</p>
+<ol>
+<li>For <strong>Text field</strong>:</li>
+</ol>
+<p><img src="/assets/Form12.png" alt="Form12"></p>
+<p>a. <strong>Content Validation</strong>: This lets you specify what kind of pattern validation should be set for the text field.</p>
+<ul>
+<li>Any (default): As the name suggests. This will allow any text to pass. Basically, no validation.</li>
+<li>Alphabet (without whitespace): For taking one word entries like first names. Ex. Bruce, Clark, Diana, etc.</li>
+<li>Alphabet (with whitespace): For taking multiple word entries like full names. Ex. Bruce Wayne, Clark Kent, Diana Prince, etc.</li>
+<li>Numeric: Only numeric entries. Ex. 1234, 9876584756, etc.</li>
+<li>Email: Accept valid emails only. Ex. <a href="mailto:bruce.wayne@batman.com">bruce.wayne@batman.com</a>, etc.</li>
+<li>Custom Regex: For taking custom regex patterns. This is the most powerful validation functionality. The bot builder can now use varied regex patterns to enable their fields to validate different input formats like credit card syntax, PAN card numbers, etc.</li>
+</ul>
+<p><img src="/assets/Form13.png" alt="Form13"></p>
+<p>b. <strong>Length Validation</strong>: Except for email and custom regex, all other text content validations mentioned above support an additional length validation field. This validation specifies if the text entered has to be of a specific length. Ex. if the length validation is set to be <code>4</code>, then only  words of length 4 characters will be allowed like: tree, milk, etc.</p>
+<p><img src="/assets/Form14.png" alt="Form14"></p>
+<ol start="2">
+<li>For <strong>all other fields</strong>: For fields apart from <strong>text</strong>, there is <em>Input Validations</em>.</li>
+</ol>
+<p><img src="/assets/Form15.png" alt="Form15"></p>
+<p>This has only two values <em>Optional</em> and <em>Mandatory</em>.</p>
+<p><img src="/assets/Form16.png" alt="Form16"></p>
+<p>Every validation can go wrong. To inform the users that they have given an incorrect input, we can configure <strong>Error Message</strong>. This is right below the validation fields.</p>
+<p><img src="/assets/Form17.png" alt="Form17"></p>
+<p>If the users input incorrect values defying the validations, they will get to see the error message as shown below -</p>
+<p><img src="/assets/FormError.png" alt="Form18"></p>
 <h2><a class="anchor" aria-hidden="true" id="using-a-form-in-a-node"></a><a href="#using-a-form-in-a-node" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using a Form in a Node</h2>
 <p>Now that we are aware of how to create a form and various form fields, let us take an example to understand its usage.</p>
 <p>Here we are creating a flow for <strong>Booking an appointment</strong> where users will enter Name, City, Time &amp; Date.</p>
@@ -191,7 +223,7 @@ backend being New Delhi. It might be better to not prefill in this case.</p></li
 <p>This is how the form will look after the user fills the form &amp; clicks on the Send button</p>
 <p><img src="/assets/Form11.png" alt="Form11"></p>
 <p><strong>Note:</strong> Check the values captured in the entities using the debug log as shown above</p>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 11/6/2020</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/bot-builder/basic/entities"><span class="arrow-prev">← </span><span>Entities</span></a><a class="docs-next button" href="/bot-builder/basic/story-templates"><span>Story Templates</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#use-case">Use case</a></li><li><a href="#form-creation">Form creation</a></li><li><a href="#form-actions">Form actions</a></li><li><a href="#types-of-form-fields">Types of Form Fields</a></li><li><a href="#using-a-form-in-a-node">Using a Form in a Node</a></li></ul></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Conversation Studio</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Smart Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Intelligent Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://docs.haptik.ai/ios-sdk/" class="footer-column-link">iOS SDK</a><a href="https://docs.haptik.ai/android-sdk/" class="footer-column-link">Android SDK</a><a href="https://docs.haptik.ai/web-sdk/" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/whatsapp/" class="footer-column-link">WhatsApp</a><a href="https://docs.haptik.ai/other/facebook" class="footer-column-link">Facebook</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Bot API</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a><a href="https://docs.haptik.ai/other/security" class="footer-column-link">Security</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Agent Chat Tool</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2020 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 11/13/2020</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/bot-builder/basic/entities"><span class="arrow-prev">← </span><span>Entities</span></a><a class="docs-next button" href="/bot-builder/basic/story-templates"><span>Story Templates</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#use-case">Use case</a></li><li><a href="#form-creation">Form creation</a></li><li><a href="#form-actions">Form actions</a></li><li><a href="#types-of-form-fields">Types of Form Fields</a></li><li><a href="#forms-validation">Forms Validation</a></li><li><a href="#using-a-form-in-a-node">Using a Form in a Node</a></li></ul></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Conversation Studio</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Smart Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Intelligent Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://docs.haptik.ai/ios-sdk/" class="footer-column-link">iOS SDK</a><a href="https://docs.haptik.ai/android-sdk/" class="footer-column-link">Android SDK</a><a href="https://docs.haptik.ai/web-sdk/" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/whatsapp/" class="footer-column-link">WhatsApp</a><a href="https://docs.haptik.ai/other/facebook" class="footer-column-link">Facebook</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Bot API</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a><a href="https://docs.haptik.ai/other/security" class="footer-column-link">Security</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Agent Chat Tool</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2020 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

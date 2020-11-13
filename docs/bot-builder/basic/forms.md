@@ -154,11 +154,11 @@ This has only two values *Optional* and *Mandatory*.
 
 ![Form16](assets/Form16.png)
 
-Every validation can go wrong. To inform the user that he has given an incorrect input, we can configure **Error Message**. This is right below the validation fields.
+Every validation can go wrong. To inform the users that they have given an incorrect input, we can configure **Error Message**. This is right below the validation fields.
 
 ![Form17](assets/Form17.png)
 
-If the user inputs incorrect values defying the validations, he will get to see the error message as shown below -
+If the users input incorrect values defying the validations, they will get to see the error message as shown below -
 
 ![Form18](assets/FormError.png)
 

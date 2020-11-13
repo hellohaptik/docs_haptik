@@ -24,7 +24,8 @@
         "Miscellaneous": [
             "bot-agent-handover",
             "adding-custom-tools",
-            "integrating-external-bot"
+            "integrating-external-bot",
+            "newmychats"
         ]
     },
     "headerLink": {

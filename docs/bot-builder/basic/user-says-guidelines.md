@@ -207,6 +207,28 @@ So for our Shopping Node example, if you Double click on "buy" -> Select “Buy 
 
 > _**Common Mistake**: Ensure that you enable the correct set of synonyms in the user says as 1 word can have multiple meanings. For example, "speaker" could mean the electronic devices as well as a human is speaking at an event.*_
 
+***For the IVAs made on the latest version***, modifications are being made to the Synonyms feature leading to change in the functionality of the feature and appearance on the bot builder.
+
+Addition of domain specific synonyms, detection and learning are becoming better. The Changes are - 
+
+1. The English Language Synonyms don’t need to be added separately. They have to be incorporated into the “User Says” section when variations are being added as per the User Says Guidelines.
+
+2. The IVA will recognise english language synonyms from Language Training provided automatically by ML Algorithms. Hence, the BLUE LINE below the words in "USER SAYS" section, which used to display synonyms will stop appearing.
+
+3. The Domain specific synonyms can be added manually to the database by a Haptik engineer. Eventually, the interface on the Bot Builder will enable the same.
+
+4. If any domain specific synonym added by the bot builder is identified by the IVA, it will be visible in the logs section in the Bot Builder.
+
+**Note :**
+
+- As per “User Says Guidelines", when Bot Builder is adding variations to the “User Says”, they should use varied vocabulary / synonyms across sentences to increase diversity.
+
+- The English language synonyms should not be added to Domain specific synonyms, as it makes the data redundant.
+
+An illustration shown in the image below - The Bot developer has added the word Amazing as a domain specific synonym of the word Good. The latter was recognised as a synonym of Amazing in a conversation, which can be seen in the logs.
+
+![SY_1](assets/SY_1.png)
+
 ### **Sample user says utterance**
 
 * **_Add_** variations of the sentence that can be used to perform the same action.

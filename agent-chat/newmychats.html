@@ -1,0 +1,228 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>New MyChats · Haptik Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## How to use My Chats?"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="New MyChats · Haptik Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.haptik.ai/"/><meta property="og:description" content="## How to use My Chats?"/><meta property="og:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.haptik.ai/img/image_0.png"/><link rel="shortcut icon" href="/img/image_0.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-106563119-6', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="/js/index.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/image_0.png" alt="Haptik Docs"/><h2 class="headerTitleWithLogo">Haptik Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="/#tools" target="_self">Tools</a></li><li class=""><a href="/#integrations" target="_self">Integrations</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Miscellaneous</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started</h3><ul class=""><li class="navListItem"><a class="navItem" href="/agent-chat/">Introduction</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">For Agents</h3><ul class=""><li class="navListItem"><a class="navItem" href="/agent-chat/for-chat-agents">Introduction</a></li><li class="navListItem"><a class="navItem" href="/agent-chat/action-toolbars">Toolbar Actions</a></li><li class="navListItem"><a class="navItem" href="/agent-chat/smart-actions">Smart Actions</a></li><li class="navListItem"><a class="navItem" href="/agent-chat/closing-categories">Closing Categories</a></li><li class="navListItem"><a class="navItem" href="/agent-chat/agent-stats-email">Agent Daily Statistics Mailer</a></li><li class="navListItem"><a class="navItem" href="/agent-chat/navigating-interface-shortcuts">Shortcuts for navigation</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">For Team Leads</h3><ul class=""><li class="navListItem"><a class="navItem" href="/agent-chat/for-team-leads">Introduction</a></li><li class="navListItem"><a class="navItem" href="/agent-chat/businesses">Businesses</a></li><li class="navListItem"><a class="navItem" href="/agent-chat/teams">Teams</a></li><li class="navListItem"><a class="navItem" href="/agent-chat/claiming-and-closing">Claiming &amp; Closing Chats</a></li><li class="navListItem"><a class="navItem" href="/agent-chat/analytics">Analytics</a></li><li class="navListItem"><a class="navItem" href="/agent-chat/agent-reports">Agent Reports</a></li><li class="navListItem"><a class="navItem" href="/agent-chat/chat-assignment">Chat assignment</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Miscellaneous</h3><ul class=""><li class="navListItem"><a class="navItem" href="/agent-chat/bot-agent-handover">Bot Agent Handover</a></li><li class="navListItem"><a class="navItem" href="/agent-chat/adding-custom-tools">Adding your own custom tool</a></li><li class="navListItem"><a class="navItem" href="/agent-chat/integrating-external-bot">Integrating with External Bot</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/agent-chat/newmychats">New MyChats</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">New MyChats</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="how-to-use-my-chats"></a><a href="#how-to-use-my-chats" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How to use My Chats?</h2>
+<p><img src="/assets/mychatsscreen.png" alt="MyChatsScreen1"></p>
+<p>In this tab, an agent can start taking chats assigned to him/her personally. The screen is divided into multiple sections. We will call it LHS, Centre and RHS for ease of understanding.</p>
+<h3><a class="anchor" aria-hidden="true" id="left-hand-side-of-the-screen"></a><a href="#left-hand-side-of-the-screen" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Left Hand Side of the screen</h3>
+<p><img src="/assets/leftside.png" alt="MyChatsScreen2"></p>
+<p>A chat agent can:</p>
+<ul>
+<li>View agent's display name</li>
+<li>View agent's status - Online or Offline</li>
+<li>View his live chats stats (Completed, Waiting for user, My Queue, Team Queue)</li>
+<li>View his active chats</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="agent-details"></a><a href="#agent-details" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Agent Details</h4>
+<p>The agent will be able to view his name and also his current status.</p>
+<p><img src="/assets/AgentDetails.png" alt="MyChatsScreen3"></p>
+<p>You can also choose the change the status by clicking on <strong>&quot;Go Online&quot;</strong> or <strong>&quot;Go Offline&quot;</strong>.</p>
+<p>Before changing the status to offline, a pop up would come to confirm the change.</p>
+<p><img src="/assets/offlinepopup.png" alt="MyChatsScreen4"></p>
+<p>Before changing the status to online, a pop up would come to confirm the change.</p>
+<p><img src="/assets/onlinepopup.png" alt="MyChatsScreen44"></p>
+<ul>
+<li><p><strong>Online State</strong>:
+When an agent goes online,</p>
+<ul>
+<li>The agent will start receiving new chats as per his available slots.</li>
+<li>The agent could re-assign, mark as waiting, or complete any of the chats allocated to him</li>
+</ul></li>
+<li><p><strong>Offline State</strong>:
+When an agent goes offline</p>
+<ul>
+<li>The agent will no longer receive any fresh chats</li>
+<li>The agent can no longer mark a chat as waiting</li>
+<li>All chats that were already marked as waiting by him/her will start getting assigned back to the available agents so that they can close or re-assign the chat</li>
+<li>The agent is expected to wrap up the chats that are already assigned to him</li>
+</ul></li>
+<li><p><strong>Logout State</strong>:
+When an agent logs out,</p>
+<ul>
+<li>All chats that are currently assigned to him/her will be auto completed.</li>
+</ul></li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="live-chat-stats"></a><a href="#live-chat-stats" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Live Chat Stats</h4>
+<p>This section will provide all numbers related to incoming, existing and completed conversations taken by the agent logged in.</p>
+<p><img src="/assets/livechats.png" alt="MyChatsScreen5"></p>
+<ul>
+<li><strong>Completed</strong>: Number of chats completed today, as per the agent's timezone.</li>
+<li><strong>Waiting for user</strong>: Number of chats currently in waiting state, as marked by this agent.</li>
+<li><strong>Agent queue</strong>: Chats that have been manually reassigned to the agent either by a fellow team mate or a team lead, or chats that were marked as waiting and the user has replied back.</li>
+<li><strong>Team Queue</strong>: Chats that are currently waiting to be taken up by the agents of a team, basis their concurrency bucket(slot) availability.</li>
+</ul>
+<blockquote>
+<p>If an agent is part of multiple teams, we show the combined number for team queue.</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="your-active-chats"></a><a href="#your-active-chats" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Your Active Chats</h4>
+<p>This section will show all chats that are currently assigned to the agent.</p>
+<p><img src="/assets/chatslist.png" alt="MyChatsScreen6"></p>
+<p>We show the following details -</p>
+<ul>
+<li><strong>User name</strong>: This is the name of the user. If the user has provided his name, that would show up or it will be shown as <strong>Guest User</strong>.</li>
+<li><strong>Team name</strong>: This is the name of the team to which this chat is allocated.</li>
+</ul>
+<p>There are few tags which come on the chats depending on whether they have read or unread messages.</p>
+<ol>
+<li><p><strong>Last messaged</strong>: This will come up for read chats where agents have sent a response.</p></li>
+<li><p><strong>Message time</strong>: This will either be the first user message time (among consecutive user messages) for unread chats, or the latest agent reply time for read chats, whichever is earlier.</p></li>
+<li><p><strong>Waiting longest</strong>: This is a tag used for unread chats which have not had a reply for over 5 mins, or the longest waiting chat. For an agent, there will always be a maximum of one chat tagged as waiting longest.</p></li>
+<li><p><strong>New Chat</strong>: This is a tag whenever a new chat comes in. As its a new chat, its in the unread category.</p></li>
+<li><p><strong>Number tab</strong>: This is a tag showing the number of messages that the agent has not yet read or responded to. Thus, this is for unread chats only.</p></li>
+</ol>
+<p><strong>Max number of chats</strong> displayed here would be based on agents concurrent count.</p>
+<p>On click, the chat gets selected in the center page and the tags go away only if the agent replies. Agent can click on chats, but the tag stays the same until the agent sends a message on the chat.</p>
+<blockquote>
+<p>Agents can use shortcuts like F1,F2,F3,F4,F5 to swap between chats.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="centre-of-the-screen"></a><a href="#centre-of-the-screen" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Centre of the screen</h3>
+<p><img src="/assets/centrescreen.png" alt="MyChatsScreen7"></p>
+<p>A chat agent can:</p>
+<ul>
+<li>Exchange messages with the user</li>
+<li>Check history of user's conversation with the bot and other agents</li>
+<li><strong>Reassign chat</strong> to a person or a team</li>
+<li>Mark chat as <strong>Complete</strong> and <strong>Waiting for user</strong></li>
+<li>Use <a href="https://docs.haptik.ai/agent-chat/smart-actions"><strong>Smart Actions</strong></a></li>
+<li>Take down <a href="https://docs.haptik.ai/agent-chat/action-toolbars#notes"><strong>notes</strong></a> during a conversation</li>
+<li>Report a user as inappropriate</li>
+<li>Send canned responses to users</li>
+<li>Share a <a href="https://docs.haptik.ai/agent-chat/action-toolbars#user-info-link"><strong>chat link</strong></a> with others</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="close-chat"></a><a href="#close-chat" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Close Chat</h4>
+<p>Agents can close a chat by clicking on this button.</p>
+<p><img src="/assets/closechatbutton.png" alt="MyChatsScreen13"></p>
+<p>As an agent clicks on this button, a modal opens up showing few options like <strong>closing categories</strong> aka disposition tags and <strong>follow up</strong>.</p>
+<p><img src="/assets/closingcategorymodal.png" alt="MyChatsScreen14"></p>
+<p>You can read more about closing categories <a href="https://docs.haptik.ai/agent-chat/closing-categories"><strong>here</strong></a>.</p>
+<h4><a class="anchor" aria-hidden="true" id="waiting-for-user"></a><a href="#waiting-for-user" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Waiting for user</h4>
+<p>As we know, an agent can take only a certain number of chats at once. We call that number <strong>concurrency of chats</strong>. This is specific to an agent.</p>
+<p>Many times we have seen a user stops replying in between a conversation, what shall an agent do in this case? This chat where the user has stopped replying keeps the agent's concurrency bucket blocked. To clear up the concurrency bucket without closing a chat, agents can use <strong>Waiting for user</strong> button.</p>
+<p><img src="/assets/waitingforuserbutton.png" alt="MyChatsScreen15"></p>
+<p>When the user will come back and respond on the chat screen, the chat will get reassigned to the agent and the agent can continue the conversation with the user.</p>
+<p>This is what makes this button extremely powerful, it cleans up concurrency bucket of the agent at their demand without inserting any friction for the user.</p>
+<h4><a class="anchor" aria-hidden="true" id="reassign-chat"></a><a href="#reassign-chat" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reassign chat</h4>
+<p>In situations where agents need additional help from his team members, they can use this button to reassign the chat to anyone specific among his team or whoever  free in his team.</p>
+<p><img src="/assets/reassignbutton.png" alt="MyChatsScreen16"></p>
+<p>Once you click on the <strong>Reassign Chat</strong> button, a modal opens up on the right hand side of the screen where you can choose whom to reassign it to.</p>
+<p><img src="/assets/reassignmodal.png" alt="MyChatsScreen17"></p>
+<h4><a class="anchor" aria-hidden="true" id="report-a-user-as-inappropriate"></a><a href="#report-a-user-as-inappropriate" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Report a user as inappropriate</h4>
+<p>Agents can mark a user as inappropriate by clicking on this icon as shown below -</p>
+<p><img src="/assets/reportinappropriateicon.png" alt="MyChatsScreen18"></p>
+<p>We register/log a user being marked as inappropriate once every 2 hours per user. If the inappropriate count for a user is greater than 2, we send a blocked message to the user as shown below -</p>
+<pre><code class="hljs">Hi &lt;User Name&gt;, this is a system generated message to inform you that your access to 
+this chat service has been permanently disabled. You will not be able to use this 
+chat service any more as you have been flagged multiple times for inappropriate messages 
+sent to our Human assistants.
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="canned-responses"></a><a href="#canned-responses" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Canned Responses</h4>
+<p><img src="/assets/cannedresponses.png" alt="MyChatsScreen88"></p>
+<p>Canned Responses are predefined responses uploaded prior, which can easily used by agents to reduce response time. They are ready-made responses which agents can customise according to the situation and need before sending it to the user.</p>
+<blockquote>
+<p>When an agent is offline, he would not get the option of <strong>Waiting for user</strong> but only <strong>Reassigning Chat</strong> and <strong>Closing Category</strong> as compared to online state, where agents get to see all controls mentioned above.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="right-hand-side-of-the-screen"></a><a href="#right-hand-side-of-the-screen" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Right Hand Side of the screen</h3>
+<p><img src="/assets/rightscreen.png" alt="MyChatsScreen8"></p>
+<p>A chat agent can:</p>
+<ul>
+<li>View User Details</li>
+<li>Use Custom tools</li>
+<li>View Previous Conversations</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="user-details"></a><a href="#user-details" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>User Details</h4>
+<p><img src="/assets/userdetailsscreen.png" alt="MyChatsScreen9"></p>
+<p>Understanding the basic details of the user like Name, Phone Number, Email, etc, help agents understand the background of the user and help users better. This section gives us all those details about the user.</p>
+<h4><a class="anchor" aria-hidden="true" id="custom-tool"></a><a href="#custom-tool" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Custom Tool</h4>
+<p><img src="/assets/toolsscreen.png" alt="MyChatsScreen10"></p>
+<p>Custom tools like ticketing system, CRM, search fields, etc. can be used by agents in this section to solve users queries further, while they continue to have conversations with users.</p>
+<p>These external tools can also be expanded for better usability as shown in the image below -</p>
+<p><img src="/assets/expandedtoolsview.png" alt="MyChatsScreen101"></p>
+<p>If there are more than 2 or 3 tools, they will come stacked in a list as shown in the below image -</p>
+<p><img src="/assets/Toolsdropdown.png" alt="MyChatsScreen11"></p>
+<h4><a class="anchor" aria-hidden="true" id="previous-conversation---coming-soon"></a><a href="#previous-conversation---coming-soon" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Previous Conversation - COMING SOON</h4>
+<p><img src="/assets/previousconversation.png" alt="MyChatsScreen12"></p>
+<p>Depending on the permissions and features assigned to a Chat agent user, more actions could become accessible.</p>
+<blockquote>
+<p>We also have a system to enforce Data level permissioning i.e. an agent user is allowed to view/edit data for which business can be controlled using this.</p>
+</blockquote>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 11/13/2020</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/agent-chat/integrating-external-bot"><span class="arrow-prev">← </span><span>Integrating with External Bot</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#how-to-use-my-chats">How to use My Chats?</a><ul class="toc-headings"><li><a href="#left-hand-side-of-the-screen">Left Hand Side of the screen</a></li><li><a href="#centre-of-the-screen">Centre of the screen</a></li><li><a href="#right-hand-side-of-the-screen">Right Hand Side of the screen</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Conversation Studio</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Smart Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Intelligent Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://docs.haptik.ai/ios-sdk/" class="footer-column-link">iOS SDK</a><a href="https://docs.haptik.ai/android-sdk/" class="footer-column-link">Android SDK</a><a href="https://docs.haptik.ai/web-sdk/" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/whatsapp/" class="footer-column-link">WhatsApp</a><a href="https://docs.haptik.ai/other/facebook" class="footer-column-link">Facebook</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Bot API</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a><a href="https://docs.haptik.ai/other/security" class="footer-column-link">Security</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Agent Chat Tool</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2020 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '224c7079e67e84a978d8b4621f6af16d',
+                indexName: 'haptik',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

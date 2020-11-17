@@ -2,11 +2,11 @@
 title: Multilingual IVAs
 ---
 
-A multilingual IVA i.e. a bot that can converse with users in multiple languages, can be a tremendous asset to any organization. This particularly holds true in a highly linguistically diverse country like India. The digital revolution in India has exponentially broadened the Internet user base in the country to include large numbers of non-English speakers, who vastly outnumber English language speakers in the country.
+A multilingual IVA i.e. a bot that can converse with users in multiple languages, can be a tremendous asset to any organization.
 
 ## Why do we need a multilingual bot?
 
-An IVA that doesn’t support multiple languages restricts your business boundaries. You can’t increase your products/services reach, gain happy customers, and lastly, you’ll be getting revenue that isn’t enough to fill your pocket. 
+IVAs enable you to interact with your customers in a smarter, faster, and more engaging way. And when equipped with the ability to converse in multiple languages, they enable your brand to overcome geographical and linguistic barriers to open up new markets and reach a wider audience.
 
 All online businesses which sell their products/services to a large customer base across the globe need to integrate a multi-lingual bot as it empowers you with benefits like -
 
@@ -20,7 +20,7 @@ All online businesses which sell their products/services to a large customer bas
 
 Creating a whole new IVA for each native language isn’t feasible nor pocket-friendly. A single chatbot that can operate effectively in all the languages is what is needed! 
 
-Ultimately, our team decided it would not be feasible to develop a new chatbot for every new language to be added. Particularly since any changes made to the chatbot in one language needed to be implemented across all languages. Maintaining and updating the bot would be far more efficient if changes could be made to a single bot and applied across all the languages it supported.
+We believe it would not be feasible to develop a new chatbot for every new language to be added. Particularly since any changes made to the chatbot in one language needed to be implemented across all languages. Maintaining and updating the bot would be far more efficient if changes could be made to a single bot and applied across all the languages it supported.
 
 Essentially, this means that when our multilingual chatbot switches from one language to another, the only things that change are the User Responses, Bot Responses, and Entities – the elements that are directly concerned with language. The rest of the underlying bot framework stays the same. A system like this makes it significantly easier to scale up the number of languages a bot can support over time.
 
@@ -112,9 +112,17 @@ You can use the same debugging window for testing multilingual bots. Both origin
 
 ### Changing the language explicitly or Whatsapp multilingual bots
 
-When the user explicitly mentions **I want to switch to Hindi language**, you can use the below template to handle it -
+When the user explicitly mentions **I want to switch to Hindi language**, you can use the **Language switching template** to handle it. You can find the template under the Generic category inside the template menu. You can open the template menu by clicking on the New from Template button on the LHS menu of the Conversation Studio graph builder.
 
-WAITING FOR AKSHAY's TEMPLATE
+![Language_wa_template](assets/language_template.png)
+
+You can click on **Use template** to start using it.
+
+![Language_wa_template2](assets/language_template2.png)
+
+The template comes with a in-built logic and flow to switch between 10 languages. You can add the template to your bot and disable the languages that are not needed. It enables a user to switch language through the bot flow instead of using the UI.
+
+Users can initiate the language change flow by saying something similar to "I want to change my language". Post this, the bot presents the users with options of which language to switch to.
 
 ### List of languages supported out of the box
 
@@ -136,7 +144,7 @@ WAITING FOR AKSHAY's TEMPLATE
 
 > System messages are not available for any other languages except the ones in the list. For any other languages, reach out to your Haptik SPOC.
 
-## How multilingual bots look like?
+## How do multilingual bots look?
 
 This is how the multilingual bots look like
 

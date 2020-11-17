@@ -4,10 +4,9 @@ title: Business
 
 ## What is a Business?
 
-    Everytime you create a bot, you have to create a new Business or assign an 
-    existing Business to it.
+    Everytime you create a bot, a new Business gets created
     
-A bot always has a Business tagged to it. A Business is like a contact in your Whatsapp application. A user clicks on the particular contact (Business) and starts the conversation.
+A bot always has a Business tagged to it.
     
     User always talks to a Business.
 
@@ -17,7 +16,7 @@ All configurations related to a bot are done under the business ranging from the
 
 There are two ways to create a Business.
 
-- The first way is to create a Business at the same time as you create a bot from the Conversation Studio homepage
+- The first way is a business gets created automatically when you create a bot
 - The second way to create a Business is through the Business manager page. To get started creating Businesses from the Business manager, navigate to the Business Manager tab from the Conversation Studio homepage and click the **+ New Business** button on the page’s top left-hand corner.
 
 ![Business and bots](assets/2_business.png)

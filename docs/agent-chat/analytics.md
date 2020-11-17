@@ -25,15 +25,20 @@ title: Analytics
 
 ![Time_stats](assets/time_stats.png)
 
-1. **Avg. First Response Time** (FRT)
+1. **Average Agent First Response Time** (FRT)
 
-    FRT is the average of first response times taken by the agent to send the first response to end users. Only the chats whose first response was sent during the selected time range will be taken into account. Chats may have been created anytime (inside and outside the selected time range). Queue time is included in this metric. As we check this from first user message timestamp to the first agent response timestamp.
-    
-2. **Avg. Response Time** (RT)
+    AFRT is the average of first response times taken by the agent to send the first response to end users after a chat was assigned to the agent. Only the chats which were initiated by users during the selected time range will be taken into account. Chats may have been created anytime (inside and outside the selected time range). As we check this from first user message timestamp to the first agent response timestamp.
+
+2. **Average Queue Time** (RT)
+
+    AQT is the average time taken for a chat to reach an agent, A chat remains in the queue state, if all agents who are online have no free slots available. 
+
+
+3. **Avg. Response Time** (RT)
 
     RT calculation is the average time taken by the agent to respond in a chat to all messages and not just the first message. Only the chats whose responses were sent during the selected time range will be taken into account. Chats may have been created anytime (inside and outside the selected time range). For the user’s 2nd, 3rd and so on messages, the response time is simply the delta in the user message timestamp and the agent’s response timestamp. 
     
-3. **Avg. Resolution Time**
+4. **Avg. Resolution Time**
 
     This metric 'Average resolution time' should be the average time taken by the agent till there are no messages sent in a chat session. Only the chats that were completed during the selected time range will be taken into account. Chats may have been created anytime (inside and outside the selected time range). Resolution time is simply calculated from the user’s first message sent timestamp till the last agent/user message timestamp in a chat.
     

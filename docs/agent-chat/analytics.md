@@ -2,6 +2,25 @@
 title: Analytics
 ---
 
+
+## Overview
+
+![Overview](assets/overview.png)
+
+1. **Avg. User rating**
+
+    Average rating of all chats where the end user submitted a feedback and an agent was involved. Since this is a Team level view, we consider all agents in this team only, that is all chats where the agents from the chosen team took part.
+
+2. **Total Number of agents**
+
+    The value here gives us the number of agents, who received atleast a single chat in the Team. Only those agents who received any chat(s) are counted. Also note that an agent could be part of multiple teams. 
+
+3. **Time saved of agents**
+
+    All chats where an Haptik bot (gogo) took part, we add up the individual resolution time for all such chats, that would be the total amount of time, Haptik bot (gogo) was responding to the end user, instead of an human agent. 
+    
+> This metric is calculated on the `business` level i.e. we show the "Time saved of agents" value totalled for all teams in a business (for the chosen Team). Since, most of our clients have one team per business, this apporach works. 
+
 ## Time Stats
 
 ![Time_stats](assets/time_stats.png)
@@ -44,25 +63,6 @@ title: Analytics
     
     This metric gets us a count of all instances where the `First_agent_response_time` is greater than `Delay Time` value as setup from the Team settings section. 
     
-
-## Overview
-
-![Overview](assets/overview.png)
-
-1. **Avg. User rating**
-
-    Average rating of all chats where the end user submitted a feedback and an agent was involved. Since this is a Team level view, we consider all agents in this team only, that is all chats where the agents from the chosen team took part.
-
-2. **Total Number of agents**
-
-    The value here gives us the number of agents, who received atleast a single chat in the Team. Only those agents who received any chat(s) are counted. Also note that an agent could be part of multiple teams. 
-
-3. **Time saved of agents**
-
-    All chats where an Haptik bot (gogo) took part, we add up the individual resolution time for all such chats, that would be the total amount of time, Haptik bot (gogo) was responding to the end user, instead of an human agent. 
-    
-> This metric is calculated on the `business` level i.e. we show the "Time saved of agents" value totalled for all teams in a business (for the chosen Team). Since, most of our clients have one team per business, this apporach works. 
-
 
 ## Agent Statistics
 

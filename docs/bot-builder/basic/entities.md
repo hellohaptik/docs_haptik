@@ -255,6 +255,10 @@ For video entity to be captured on a Whatsapp bot, we need to enable the setting
 
 > NOTE - The uploaded video will get deleted in 3 days.
 
+You can refer to the below video to see an example in action.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/R-ht3jXgiOg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Entity Patterns
 
 Entity Patterns allow the entities to be defined in such a manner that they can be detected on the basis of the context under which the utterance has been made by the User.

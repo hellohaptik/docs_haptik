@@ -14,18 +14,11 @@ Once the IVA is ready and needs to be taken live on production environment, that
 
 ## Transferring your Business from Staging to Production
 
-The Business Manager is responsible for the configuration of multiple key characteristics of the IVA such as the appearance of the bot, bot break messages, deployment settings and so on. Hence, the business needs to be transferred to the production environment.
+The Business Manager is responsible for the configuration of multiple key characteristics of the IVA such as the appearance of the bot, bot break messages, deployment settings, bot prompts and taskboxes. Hence, the business needs to be transferred to the production environment.
 
-![TB_1](assets/TB1.png)
+You can click on the **Transfer button** as shown in the below image.
 
-There are four options for Transfer Business:
-
-![TB_2](assets/TB2.png)
-
-- Transfer Business means it will transfer all the information configured on the General Settings Page.
-- Transfer All Tasks means it transfers all the taskbox items which are configured in Partner Settings.
-- Transfer All Prompt Triggers means it transfers only the Bot Prompt Triggers.
-- Transfer All means it transfers all the information present in the Business Manager.
+![TB_1](assets/Business14.png)
 
 > The Business should be transferred again if there are modifications made after the Business is live.
 

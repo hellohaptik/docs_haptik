@@ -17,26 +17,32 @@ title: Analytics
 
 3. **Time saved of agents**
 
-    All chats where an Haptik bot (gogo) took part, we add up the individual resolution time for all such chats, that would be the total amount of time, Haptik bot (gogo) was responding to the end user, instead of an human agent. 
-    
-> This metric is calculated on the `business` level i.e. we show the "Time saved of agents" value totalled for all teams in a business (for the chosen Team). Since, most of our clients have one team per business, this apporach works. 
+    All chats where an Haptik bot (gogo) took part, we add up the individual resolution time for all such chats, that would be the total amount of time, Haptik bot (gogo) was responding to the end user, instead of an human agent.
+
 
 ## Time Stats
 
 ![Time_stats](assets/time_stats.png)
 
-1. **Average Agent First Response Time** (FRT)
+1. **Average First Response Time** (FRT)
 
-    AFRT is the average of first response times taken by the agent to send the first response to end users after a chat was assigned to the agent. Only the chats which were initiated by users during the selected time range will be taken into account. Chats may have been created anytime (inside and outside the selected time range). As we check this from first user message timestamp to the first agent response timestamp.
+    AFRT is the average of first response times taken by the agent to send the first response to end users after a chat was assigned to the agent. Only the chats which were initiated by users during the selected time range will be taken into account. Chats may have been created anytime (inside and outside the selected time range). As we check this from chat assignment to agent till his first response to the chat.
 
 2. **Average Queue Time** (RT)
 
-    AQT is the average time taken for a chat to reach an agent, A chat remains in the queue state, if all agents who are online have no free slots available. 
+    AQT is the average of total amount of time, chats have stayed within a queue. Chats remain in queue for the below mentioned reasons
+    
+    1. A fresh chat has been initiated for a team, and there are no free agent slots avaiable.
+    2. A chat has been re-assigned to an Agent who is currently at max concurrency.
+    
+    In both of the scenarios mentioned above, the chat will remain in queue untill an agent receives the chat. 
+    
+> Number of free slots per agent depends on the number of chats currently assigned to the agent and chat concurrency set for the agent.
 
 
 3. **Avg. Response Time** (RT)
 
-    RT calculation is the average time taken by the agent to respond in a chat to all messages and not just the first message. Only the chats whose responses were sent during the selected time range will be taken into account. Chats may have been created anytime (inside and outside the selected time range). For the user’s 2nd, 3rd and so on messages, the response time is simply the delta in the user message timestamp and the agent’s response timestamp. 
+    RT calculation is the average time taken by the agent to respond in a chat to all messages and not just the first message. Only the chats which had messages exchanged during the selected time range will be taken into account. In other words, average time taken by an agent to consecutively respond to a single or multiple user messages in cronological order.
     
 4. **Avg. Resolution Time**
 

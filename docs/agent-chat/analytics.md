@@ -97,11 +97,11 @@ title: Analytics
 
     Resolution Time here is same as defined above in Time stats. Just the change being, this metric is for the single agent. And the metric above is on a Team level.
     
-> Note that resolution time metrics shown here for agents and team both include the wait time i.e. the time when the chat was in waiting state. This resolution time value thus gives us the total time taken to handle a user chat end to end. 
+> Note that resolution time metrics shown here for agents and team both do not include the wait time and the queue time. This resolution time value thus gives us the total time taken by an agent to handle a user chat end to end. 
     
 4. **Chats received**
 
-    Similar to the Total Chats received, this metric is calculated at an agent level. This includes chats that the agent completed, marked as waiting and chats that were re-assigned to the agent.
+    Similar to the Total Chats received, this metric is calculated at an agent level. This includes chats that the agent completed, marked as waiting or chats that were re-assigned to the agent.
 
 5. **Avg. User Rating**
 

@@ -35,7 +35,7 @@ title: Analytics
     1. A fresh chat has been initiated for a team, and there are no free agent slots avaiable.
     2. A chat has been re-assigned to an Agent who is currently at max concurrency.
     
-    In both of the scenarios mentioned above, the chat will remain in queue untill an agent receives the chat. 
+    In all of the scenarios mentioned above, the chat will remain in queue untill an agent receives the chat. 
     
 > Number of free slots per agent depends on the number of chats currently assigned to the agent and chat concurrency set for the agent.
 

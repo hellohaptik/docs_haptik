@@ -42,7 +42,7 @@ title: Analytics
 
 3. **Average Response Time** (RT)
 
-    RT calculation is the average time taken by the agent to respond in a chat to all messages and not just the first message. Only the chats which had messages exchanged during the selected time range will be taken into account. In other words, average time taken by an agent to consecutively respond to a single or multiple user messages in cronological order.
+    RT calculation is the average time taken by the agent to respond in a chat to all messages and not just the first message. Only the chats which were initiated during the selected time range will be taken into account. In other words, the average time taken by an agent to consecutively respond to a single or multiple user messages in chronological order.
     
 4. **Average Agent Resolution Time**
 

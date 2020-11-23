@@ -26,7 +26,8 @@ title: Analytics
 
 1. **Average Agent First Response Time** (FRT)
 
-    AFRT is the average of first response times taken by the agent to send the first response to end users after a chat was assigned to the agent. Only the chats which were initiated by users during the selected time range will be taken into account. Chats may have been created anytime (inside and outside the selected time range). As we check this from chat assignment to agent till his first response to the chat.
+    Average agent first response time is the average of first response times taken by the agent to send the first response to end users after a chat was assigned to the agent. Only the chats which were initiated by users during the selected time range will be taken into account. 
+> Note: This metric does not include Queue Time for the chats
 
 2. **Average Queue Time** (RT)
 

@@ -46,7 +46,7 @@ title: Analytics
     
 4. **Average Agent Resolution Time**
 
-    This metric 'Average resolution time' should be the average time taken by the agent from the time when the chat was received till it was completed, re-assigned to marked as waiting. Only the chats that were completed during the selected time range will be taken into account. Chats may have been created anytime (inside and outside the selected time range). Agent Resolution time is simply calculated from the user’s first message sent timestamp till the last agent/user message timestamp in a chat, without queue time.
+    This metric 'Average agent resolution time' should be the average time taken by the agent from the time when the chat was received till it was completed, re-assigned to, or marked as waiting. Only the chats that were initiated during the selected time range will be taken into account. Agent Resolution time is simply calculated from the user’s first message sent timestamp till the last agent/user message timestamp in a chat, without queue time.
     
 
 ## Chat Stats

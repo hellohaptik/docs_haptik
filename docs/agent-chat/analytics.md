@@ -35,6 +35,7 @@ title: Analytics
     
     1. A fresh chat has been initiated for a team, and there are no free agent slots avaiable.
     2. A chat has been re-assigned to an Agent who is currently at max concurrency.
+    3. A chat was put in waiting state, when the user replied the chat got allocated back to the agent queue, but the agent was again at max concurrency.
     
     In all of the scenarios mentioned above, the chat will remain in queue untill an agent receives the chat. 
     

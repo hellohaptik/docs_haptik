@@ -2,6 +2,7 @@
 title: Analytics
 ---
 
+All Statistics shown on this page are chats which have been initiated in the selected timestamp.
 
 ## Overview
 

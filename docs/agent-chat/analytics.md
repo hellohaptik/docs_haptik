@@ -24,7 +24,7 @@ title: Analytics
 
 ![Time_stats](assets/time_stats.png)
 
-1. **Average First Response Time** (FRT)
+1. **Average Agent First Response Time** (FRT)
 
     AFRT is the average of first response times taken by the agent to send the first response to end users after a chat was assigned to the agent. Only the chats which were initiated by users during the selected time range will be taken into account. Chats may have been created anytime (inside and outside the selected time range). As we check this from chat assignment to agent till his first response to the chat.
 
@@ -40,13 +40,13 @@ title: Analytics
 > Number of free slots per agent depends on the number of chats currently assigned to the agent and chat concurrency set for the agent.
 
 
-3. **Avg. Response Time** (RT)
+3. **Average Response Time** (RT)
 
     RT calculation is the average time taken by the agent to respond in a chat to all messages and not just the first message. Only the chats which had messages exchanged during the selected time range will be taken into account. In other words, average time taken by an agent to consecutively respond to a single or multiple user messages in cronological order.
     
-4. **Avg. Resolution Time**
+4. **Average Agent Resolution Time**
 
-    This metric 'Average resolution time' should be the average time taken by the agent till there are no messages sent in a chat session. Only the chats that were completed during the selected time range will be taken into account. Chats may have been created anytime (inside and outside the selected time range). Resolution time is simply calculated from the user’s first message sent timestamp till the last agent/user message timestamp in a chat.
+    This metric 'Average resolution time' should be the average time taken by the agent from the time when the chat was received till it was completed, re-assigned to marked as waiting. Only the chats that were completed during the selected time range will be taken into account. Chats may have been created anytime (inside and outside the selected time range). Agent Resolution time is simply calculated from the user’s first message sent timestamp till the last agent/user message timestamp in a chat, without queue time.
     
 
 ## Chat Stats
@@ -85,7 +85,7 @@ title: Analytics
    
 2. **Avg. First Response Time** (FRT)
 
-    FRT here in the agent table is same as defined above in `Time stats` section. However, this metric is for a single agent. And the metric above in `Time stats` section is on a Team level.
+    FRT here in the agent table is the sum of metric queue time and agent first response time as defined above in `Time stats` section. However, this metric is for a single agent, And the metric above in `Time stats` section is on a Team level.
     
 2. **Avg. Response Time** (RT)
 

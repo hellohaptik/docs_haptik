@@ -37,7 +37,7 @@ title: Analytics
     
     In all of the scenarios mentioned above, the chat will remain in queue untill an agent receives the chat. 
     
-> Number of free slots per agent depends on the number of chats currently assigned to the agent and chat concurrency set for the agent.
+> Number of free slots per agent is the difference between chat concurrency set for the agent and the number of chats currently assigned to the agent.
 
 
 3. **Average Response Time** (RT)

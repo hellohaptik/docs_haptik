@@ -2,21 +2,54 @@
 title: Analytics
 ---
 
+All Statistics shown on this page are chats which have been initiated in the selected timestamp.
+
+## Overview
+
+![Overview](assets/overview.png)
+
+1. **Avg. User rating**
+
+    Average rating of all chats where the end user submitted a feedback and an agent was involved. Since this is a Team level view, we consider all agents in this team only, that is all chats where the agents from the chosen team took part.
+
+2. **Total Number of agents**
+
+    The value here gives us the number of agents, who received at least a single chat in the Team. Only those agents who received any chat(s) are counted.
+
+3. **Time saved of agents**
+
+    All chats where an Haptik bot (gogo) took part, we add up the individual resolution time for all such chats, that would be the total amount of time, Haptik bot (gogo) was responding to the end user, instead of an human agent.
+
+
 ## Time Stats
 
 ![Time_stats](assets/time_stats.png)
 
-1. **Avg. First Response Time** (FRT)
+1. **Average Agent First Response Time** (FRT)
 
-    FRT is the average of first response times taken by the agent to send the first response to end users. Only the chats whose first response was sent during the selected time range will be taken into account. Chats may have been created anytime (inside and outside the selected time range). Queue time is included in this metric. As we check this from first user message timestamp to the first agent response timestamp.
+    Average agent first response time is the average of first response times taken by the agent to send the first response to end users after a chat was assigned to the agent. Only the chats which were initiated by users during the selected time range will be taken into account. 
+> Note: This metric does not include Queue Time for the chats
+
+2. **Average Queue Time** (RT)
+
+    AQT is the average of total amount of time, chats have stayed within a queue. Chats remain in queue for the below mentioned reasons
     
-2. **Avg. Response Time** (RT)
-
-    RT calculation is the average time taken by the agent to respond in a chat to all messages and not just the first message. Only the chats whose responses were sent during the selected time range will be taken into account. Chats may have been created anytime (inside and outside the selected time range). For the user’s 2nd, 3rd and so on messages, the response time is simply the delta in the user message timestamp and the agent’s response timestamp. 
+    1. A fresh chat has been initiated for a team, and there are no free agent slots avaiable.
+    2. A chat has been re-assigned to an Agent who is currently at max concurrency.
+    3. A chat was put in waiting state, when the user replied the chat got allocated back to the agent queue, but the agent was again at max concurrency.
     
-3. **Avg. Resolution Time**
+    In all of the scenarios mentioned above, the chat will remain in queue untill an agent receives the chat. 
+    
+> Number of free slots per agent is the difference between chat concurrency set for the agent and the number of chats currently assigned to the agent.
 
-    This metric 'Average resolution time' should be the average time taken by the agent till there are no messages sent in a chat session. Only the chats that were completed during the selected time range will be taken into account. Chats may have been created anytime (inside and outside the selected time range). Resolution time is simply calculated from the user’s first message sent timestamp till the last agent/user message timestamp in a chat.
+
+3. **Average Response Time** (RT)
+
+    RT calculation is the average time taken by the agent to respond in a chat to all messages and not just the first message. Only the chats which were initiated during the selected time range will be taken into account. In other words, the average time taken by an agent to consecutively respond to a single or multiple user messages in chronological order.
+    
+4. **Average Agent Resolution Time**
+
+    This metric 'Average agent resolution time' should be the average time taken by the agent from the time when the chat was received till it was completed, re-assigned to, or marked as waiting. Only the chats that were initiated during the selected time range will be taken into account. Agent Resolution time is simply calculated from the user’s first message sent timestamp till the last agent/user message timestamp in a chat, without queue time.
     
 
 ## Chat Stats
@@ -45,25 +78,6 @@ title: Analytics
     This metric gets us a count of all instances where the `First_agent_response_time` is greater than `Delay Time` value as setup from the Team settings section. 
     
 
-## Overview
-
-![Overview](assets/overview.png)
-
-1. **Avg. User rating**
-
-    Average rating of all chats where the end user submitted a feedback and an agent was involved. Since this is a Team level view, we consider all agents in this team only, that is all chats where the agents from the chosen team took part.
-
-2. **Total Number of agents**
-
-    The value here gives us the number of agents, who received atleast a single chat in the Team. Only those agents who received any chat(s) are counted. Also note that an agent could be part of multiple teams. 
-
-3. **Time saved of agents**
-
-    All chats where an Haptik bot (gogo) took part, we add up the individual resolution time for all such chats, that would be the total amount of time, Haptik bot (gogo) was responding to the end user, instead of an human agent. 
-    
-> This metric is calculated on the `business` level i.e. we show the "Time saved of agents" value totalled for all teams in a business (for the chosen Team). Since, most of our clients have one team per business, this apporach works. 
-
-
 ## Agent Statistics
 
 ![Agent_stats](assets/agentstats.png)
@@ -74,31 +88,31 @@ title: Analytics
    
 2. **Avg. First Response Time** (FRT)
 
-    FRT here in the agent table is same as defined above in `Time stats` section. However, this metric is for a single agent. And the metric above in `Time stats` section is on a Team level.
+    FRT here in the agent table is the sum of metric queue time and agent first response time as defined above in `Time stats` section. However, this metric is for a single agent, And the metric above in `Time stats` section is on a Team level.
     
-2. **Avg. Response Time** (RT)
+3. **Avg. Response Time** (RT)
 
     Response Time (RT) is same as defined above in `Time stats` section. Just the change being, this metric is for the single agent. And the metric above is on a Team level.
     
 > Note that FRT and response time metrics shown here for agents and team both include the queue time i.e. the time when the chat was in queue (pending) state. This response time value thus gives us the total time taken to respond to the user. 
     
-3. **Avg. Resolution Time**
+4. **Avg. Resolution Time**
 
     Resolution Time here is same as defined above in Time stats. Just the change being, this metric is for the single agent. And the metric above is on a Team level.
     
-> Note that resolution time metrics shown here for agents and team both include the wait time i.e. the time when the chat was in waiting state. This resolution time value thus gives us the total time taken to handle a user chat end to end. 
+> Note that resolution time metrics shown here for agents and team both do not include the wait time and the queue time. This resolution time value thus gives us the total time taken by an agent to handle a user chat end to end. 
     
-4. **Chats received**
+5. **Chats received**
 
-    Similar to the Total Chats received, this metric is calculated at an agent level. This includes chats that the agent completed, marked as waiting and chats that were re-assigned to the agent.
+    Similar to the Total Chats received, this metric is calculated at an agent level. This includes chats that the agent completed, marked as waiting or chats that were re-assigned to the agent.
 
-5. **Avg. User Rating**
+6. **Avg. User Rating**
 
     User rating here is same as defined above in Overview section. Just the change being, this metric is for the single agent. And the metric above is on a Team level.
 
 > Note that the User rating is calculated basis the last agent who claimed the chat. There are scenarios wherein the chat completes and then user submits feedback. If the claim name had changed from the last agent to another agent, the feedback will get tagged to this new agent. Feedback metric is integral more at a conversation level. And for agents, feedback is a tertiary metric. The reason being the number of feedbacks submitted considered against the volume of daily chats is nominal. 
 
-6. **Agent Online Time**
+7. **Agent Online Time**
 
     When agents are receiving chats, we total this time i.e. to give you a sense of agent's online activity. This is a useful input to understand agent productivity. 
     

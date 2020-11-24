@@ -90,29 +90,29 @@ All Statistics shown on this page are chats which have been initiated in the sel
 
     FRT here in the agent table is the sum of metric queue time and agent first response time as defined above in `Time stats` section. However, this metric is for a single agent, And the metric above in `Time stats` section is on a Team level.
     
-2. **Avg. Response Time** (RT)
+3. **Avg. Response Time** (RT)
 
     Response Time (RT) is same as defined above in `Time stats` section. Just the change being, this metric is for the single agent. And the metric above is on a Team level.
     
 > Note that FRT and response time metrics shown here for agents and team both include the queue time i.e. the time when the chat was in queue (pending) state. This response time value thus gives us the total time taken to respond to the user. 
     
-3. **Avg. Resolution Time**
+4. **Avg. Resolution Time**
 
     Resolution Time here is same as defined above in Time stats. Just the change being, this metric is for the single agent. And the metric above is on a Team level.
     
 > Note that resolution time metrics shown here for agents and team both do not include the wait time and the queue time. This resolution time value thus gives us the total time taken by an agent to handle a user chat end to end. 
     
-4. **Chats received**
+5. **Chats received**
 
     Similar to the Total Chats received, this metric is calculated at an agent level. This includes chats that the agent completed, marked as waiting or chats that were re-assigned to the agent.
 
-5. **Avg. User Rating**
+6. **Avg. User Rating**
 
     User rating here is same as defined above in Overview section. Just the change being, this metric is for the single agent. And the metric above is on a Team level.
 
 > Note that the User rating is calculated basis the last agent who claimed the chat. There are scenarios wherein the chat completes and then user submits feedback. If the claim name had changed from the last agent to another agent, the feedback will get tagged to this new agent. Feedback metric is integral more at a conversation level. And for agents, feedback is a tertiary metric. The reason being the number of feedbacks submitted considered against the volume of daily chats is nominal. 
 
-6. **Agent Online Time**
+7. **Agent Online Time**
 
     When agents are receiving chats, we total this time i.e. to give you a sense of agent's online activity. This is a useful input to understand agent productivity. 
     

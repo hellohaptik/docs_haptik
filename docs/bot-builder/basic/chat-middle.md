@@ -34,7 +34,7 @@ Example: If your bot is a sales bot, will a user make a purchase after conversin
 ### Pick the right terms
 
 A conversation often has several parts that can feel repetitive like Affirmations, Conversation Propellers, Conversation Enders, and so on. 
-Here’s the 🗝 Content Cheatsheet  — a content repository of phrases and keywords to use in various situations in any chat flow. 
+Here’s the 🗝 **Content Cheatsheet**(/assets/Content_Cheatsheet.pdf) — a content repository of phrases and keywords to use in various situations in any chat flow. 
 
 ### Conversation User Interfaces vs Graphical User Interfaces
 

@@ -2,32 +2,37 @@
 title: Introduction
 ---
 
-**Welcome to Conversation Design. Before you begin building your Intelligent Virtual Assistant, it is essential to create a framework with conversational journeys first.**
+**Welcome to Conversation Design**. 
 
-Conversation Design is the art of crafting an experience between a virtual assistant and the end user. The end objective is to craft and create conversations that are natural and intuitive while scaling these conversations across platforms for all users. 
+As per a Gartner report, 70% of white-collar workers will interact with conversational platforms on a daily basis by 2022. But success for any conversational platforms depends heavily on the Conversation Design that goes behind the functioning of that platform. Hence, before you begin to build your Intelligent Virtual Assistant, it is essential to create a design framework with the user's conversational journey first.
 
-💡 The more clarity you have at the start, the better you can design the bot.
+At Haptik, we define **Conversation Design** as the art and science of crafting an experience between a virtual assistant and the end-user. The end objective is to craft conversations that are natural and intuitive while scaling these conversations across platforms for all users.
 
-## How to get started
+For a successful Conversation Design, you have to think like an architect, mapping what users can do in the space while considering the use-cases and the technological constraints. As a Conversation Designer, you create the conversations, define the flow and its underlying logic in a detailed design document to represent the complete user experience. Conversation Designers partner with stakeholders and developers to iterate on the designs and bring the experience to life. 
 
-Step 1: Understand your business objective
-
-Step 2: Select an appropriate design tool such as Lucidchart or draw.io, to build your flows to solve use cases while creating conversations
-
-Step 3: And finally, review using various guidelines and go-live
+💡 Getting through clarity early in the design phase minimises the effort spent at making changes in the bot building phase.
 
 ## What is the process
 
 Conversation Design entails the entire structure of your Intelligent Virtual Assistant that spearheads your bot building process.
 
-- Start with prioritising the use cases basis the business requirement and understand the channel your IVA will then be deployed on
+- Start with prioritising the use cases basis the business requirement and understand the channel where you will be deploying your IVA. For example, Website, Mobile App, WhatsApp, Facebook Messenger, SMS, etc.
 
-- Now review user data and behaviour to define a set a personality for the IVA
+- Now review user data and behaviour to define a set personality for the IVA
 
-- Select a design tool and deploy conversational journeys for a seamless IVA building experience
+- Select a design tool to start designing user journeys as per the use case specified 
 
 - Iron out edge cases and roadblocks through review and testing
 
-- Finally use this framework to build the IVA on Haptik’s platform!
- 
-Learn about the Bot Building process [here](https://docs.haptik.ai/bot-builder/basic/introduction).
+- Finally use this framework to build and deploy conversational journeys on our Haptik platform for a seamless IVA building experience
+
+![CDprocess](assets/Haptik_CD_Process.png)
+
+
+
+
+
+
+
+
+

@@ -1,5 +1,5 @@
 ---
-title: Create the canvas
+title: Building Blocks of Design
 ---
 
 ## Understand Business Requirements

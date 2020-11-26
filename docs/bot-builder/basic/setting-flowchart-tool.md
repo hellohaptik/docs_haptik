@@ -1,5 +1,5 @@
 ---
-title: Setting up a FlowChart tool
+title: Setting up a Flowchart tool
 ---
 
 This is the most important tool in the Conversation Designer’s arsenal to design conversational flows and user journeys.

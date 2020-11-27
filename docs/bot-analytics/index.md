@@ -10,7 +10,7 @@ This tool consists of multiple sections with each section containing metrics and
 - Story Analysis
 - Message Analysis
 - Word Analysis
-- Query Completion
+- Smart Funnel
 - User Ratings
 - User Reviews
 

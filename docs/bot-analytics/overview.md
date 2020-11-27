@@ -4,14 +4,14 @@ title: Overview
 
 ## Introduction
 
-The first section in the Intelligent Analytics tool is the **Overview** section. As the name suggests, this section helps you get a quick overview of the important metrics to measure the IVA's performance.
+The first section in the `Intelligent Analytics` tool is the **Overview** section. As the name suggests, this section helps you get a quick overview of the important metrics to measure the IVA's performance.
 
 The **Overview** section provides information about:
 
 * Unique Users
 * Conversations
 * User Rating
-* Queries
+* Top Funnels
 * Bot Automation
 
 ![OverviewPage](assets/Overview1.png)
@@ -70,7 +70,7 @@ You can view data by hovering over the graph at the selected point of date-time.
 
 - **Bot Performance**: It will give the Bot Automation %.
 
-- **Queries**: It will give the top queries asked by users.
+- **Funnels**: It will give the top queries asked by users.
 
 - **User Rating**: It will give the average of user ratings given.
 
@@ -80,23 +80,23 @@ You can view data by hovering over the graph at the selected point of date-time.
 
 This section gives the average User Rating. The rating is optional and is given on a scale of 1-5 stars.
 
-## ***Queries***
+## ***Top Funnels***
 
-![Queries](assets/Overview9.png)
+![BotAutomation](assets/Overview7.png)
 
-This section gives first 5 queries as per volume coming on the bot.
+This section gives first 5 funnels as per volume coming on the bot.
 
-> Query is a step or a series of steps designed to see the effectiveness of the bot to help user’s reach their goal.
+> Funnel is a step or a series of steps designed to see the effectiveness of the bot to help user’s reach their goal.
 
-Along with the query name, volume and completion rate are also shown.
+Along with the funnel name, funnel hits and completion rate are also shown.
 
-> **Volume**: Defines the number of times a particular query has been raised by all the users on the bot.
+> **Funnel Hits**: Defines the number of times a particular funnel has been hit by all the users on the bot.
 >
 > **Completion rate**: Defines the number of instances where the user reached their end goal.
 
 ## ***Bot Automation***
 
-![BotAutomation](assets/Overview7.png)
+![Queries](assets/Overview9.png)
 
 The next section is Bot Automation. Bot Automation percentage tells us about what percentage of the conversations did not have either a bot break or an agent involved for the selected duration of time.
 
@@ -129,7 +129,7 @@ You can view data by hovering over the graph at the selected point of date-time.
 
 - **Bot Performance**: It will give the Bot Automation %.
 
-- **Queries**: It will give the top queries asked by users.
+- **Funnels**: It will give the top queries asked by users.
 
 - **User Rating**: It will give the average of user ratings given.
 

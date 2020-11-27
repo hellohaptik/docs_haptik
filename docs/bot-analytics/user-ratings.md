@@ -5,6 +5,8 @@ title: User Ratings
 ## What are User Ratings?
 The User Ratings page of the Intelligent Analytics tool provides information about the ratings given by a user for a bot. 
 
+![menu_user_rating](assets/userrating.png)
+
 Based on the configuration made by the bot developers, a bot might ask for feedback from user at the end of a chat. The feedback it captures involves a star rating out of 5 and a free form text review or comment. 
 
 > **Tip**: The configuration to take user feedback can be made from the `General Settings` tab of the `Business Manager` section in the bot builder tool.

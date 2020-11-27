@@ -38,7 +38,7 @@ A funnel has two parts to it.
 
 You can specify up to
 
-- **5 start points**: a set of nodes denoting the beginning of a Funnel (Funnel Start). A start point has to be unique for every Funnel i.e. multiple queries cannot have the same start point.
+- **5 start points**: a set of nodes denoting the beginning of a Funnel (Funnel Start). A start point has to be unique for every Funnel i.e. multiple funnels cannot have the same start point.
 
 - **20 end points**: a set of nodes denoting completion of the Funnel (Funnel End).
 
@@ -202,7 +202,7 @@ F1: Node A -> Node X
 
 **Result**: F1 got completed as all the entities are collected.
 
-> When any funnel definition is changed, the drop offs for all other queries will need to be recalculated.
+> When any funnel definition is changed, the drop offs for all other funnels will need to be recalculated.
 
 ### Drop-Off Points
 

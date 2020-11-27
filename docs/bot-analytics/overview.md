@@ -82,7 +82,7 @@ This section gives the average User Rating. The rating is optional and is given 
 
 ## ***Top Funnels***
 
-![Queries](assets/Overview9.png)
+![BotAutomation](assets/Overview7.png)
 
 This section gives first 5 funnels as per volume coming on the bot.
 
@@ -96,7 +96,7 @@ Along with the funnel name, funnel hits and completion rate are also shown.
 
 ## ***Bot Automation***
 
-![BotAutomation](assets/Overview7.png)
+![Queries](assets/Overview9.png)
 
 The next section is Bot Automation. Bot Automation percentage tells us about what percentage of the conversations did not have either a bot break or an agent involved for the selected duration of time.
 

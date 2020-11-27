@@ -4,9 +4,9 @@ title: Smart Funnel
 
 ## Introduction
 
-For a business which has deployed an IVA solution, it is imperative to know if the IVA is being able to resolve users’ queries i.e. when users are asking questions, is the IVA able to respond with appropriate responses and not requires a human intervention.
+For a business that has deployed an IVA solution, it is imperative to know if the IVA is able to help users with a resolution.
 
-**Smart Funnel** helps us track how users navigate across different nodes and end up getting their query answered. In other words, it indicates the effectiveness of an IVA. This feature will play an important role to enhance our user journeys and IVA content. Various metrics like completion rate, drop-off rate, drop-off nodes, and funnel hits help us achieve the same.
+**Smart Funnel** helps us track the effectiveness of the bot by tracking the completion rates and identifying the drop off points in order to make changes to the bot design or flow to ensure users are getting a resolution. In other words, it indicates the effectiveness of an IVA. This feature will play an important role to enhance user journeys and IVA content. Various metrics like completion rate, drop-off rate, drop-off nodes, and funnel hits help us achieve the same.
 
 > Nodes are interlinked building blocks of an IVA. Each node takes care of one intent coming from the user and responds appropriately.
 
@@ -76,7 +76,8 @@ This indicates the effectiveness of the IVA design and flow as it shows what wer
 
 Formula =  (A / B) * 100
 
-A = Number of instances where the user query reached the end point and all conditions are met
+A = Number of instances where the user reached the end point and all conditions are met
+
 B = Number of instances where the user started his journey for a particular funnel
 
 i.e. Formula =  (Total no. of funnels completed /  Total no. of funnels initiated) * 100
@@ -124,7 +125,7 @@ Result: Funnel Hit -> 2
 
 ## Sorting of Funnels
 
-By default, you will see the funnel with the highest Funnel Hits on top. This is done in order to quickly check the completion rate of the most visited query.
+By default, you will see the funnel with the highest Funnel Hits on top. This is done in order to quickly check the completion rate of the most visited funnel.
 
 If required, you can change the order of other fields and sort it as per your requirement.
 
@@ -184,7 +185,7 @@ F1: Node A -> Node C
 
 **4. Agent Transfer**
 
-If a conversation has an agent handover, a droff off is counted for the query.
+If a conversation has an agent handover, a droff off is counted for the funnel.
 
 **Example 1**:
 

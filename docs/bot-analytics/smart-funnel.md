@@ -42,7 +42,7 @@ You can specify up to
 
 - **20 end points**: a set of nodes denoting completion of the Funnel (Funnel End).
 
-![SmartFunnel5](assets/smartfunnel5.png)
+![SmartFunnel4](assets/smartfunnel4.png)
 
 You can keep adding nodes by clicking on the **+** button as shown below
 

@@ -1,0 +1,237 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Smart Funnel · Haptik Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Introduction"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Smart Funnel · Haptik Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.haptik.ai/"/><meta property="og:description" content="## Introduction"/><meta property="og:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.haptik.ai/img/image_0.png"/><link rel="shortcut icon" href="/img/image_0.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-106563119-6', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="/js/index.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/image_0.png" alt="Haptik Docs"/><h2 class="headerTitleWithLogo">Haptik Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="/#tools" target="_self">Tools</a></li><li class=""><a href="/#integrations" target="_self">Integrations</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Sections</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-analytics/">Introduction</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Sections</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-analytics/overview">Overview</a></li><li class="navListItem"><a class="navItem" href="/bot-analytics/story-analysis">Story Analysis</a></li><li class="navListItem"><a class="navItem" href="/bot-analytics/using-message-analysis">Message Analysis</a></li><li class="navListItem"><a class="navItem" href="/bot-analytics/word-analysis">Word Analysis</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/bot-analytics/smart-funnel">Smart Funnel</a></li><li class="navListItem"><a class="navItem" href="/bot-analytics/user-ratings">User Ratings</a></li><li class="navListItem"><a class="navItem" href="/bot-analytics/user-reviews">User Reviews</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Resources</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-analytics/analytics-reports">Reporting</a></li><li class="navListItem"><a class="navItem" href="/bot-analytics/analytics-best-practices">Best Practices</a></li><li class="navListItem"><a class="navItem" href="/bot-analytics/analytics-faqs">FAQs</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Smart Funnel</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="introduction"></a><a href="#introduction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introduction</h2>
+<p>For a business that has deployed an IVA solution, it is imperative to know if the IVA is able to help users with a resolution.</p>
+<p><strong>Smart Funnel</strong> helps us track the effectiveness of the bot by tracking the completion rates and identifying the drop off points in order to make changes to the bot design or flow to ensure users are getting a resolution. In other words, it indicates the effectiveness of an IVA. This feature will play an important role to enhance user journeys and IVA content. Various metrics like completion rate, drop-off rate, drop-off nodes, and funnel hits help us achieve the same.</p>
+<blockquote>
+<p>Nodes are interlinked building blocks of an IVA. Each node takes care of one intent coming from the user and responds appropriately.</p>
+</blockquote>
+<p>All these funnels are visible for the duration and business/IVA you have selected on top. Also you can use the <strong>Compare</strong> feature to make comparisons for your IVA's performance between the selected duration and previous duration.</p>
+<p><img src="/assets/smartfunnel1.png" alt="SmartFunnel1"></p>
+<h2><a class="anchor" aria-hidden="true" id="funnels"></a><a href="#funnels" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Funnels</h2>
+<p>A funnel is a question or a request for information by a user. On Intelligent Analytics tool,  it is a step or a series of steps designed to help user’s reach the end of the flow that gives them the appropriate answer.</p>
+<p>For example, a user interacts with a banking assistant and wants to check their account balance. In this case the funnel name will be “to check account balance”.</p>
+<p><img src="/assets/smartfunnel2.png" alt="SmartFunnel2"></p>
+<h2><a class="anchor" aria-hidden="true" id="creating-funnels"></a><a href="#creating-funnels" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Creating Funnels</h2>
+<p>You can create your own custom funnels depending on which IVA usecase you want to track. You can click on <strong>+ Add New Funnel</strong> as shown below.</p>
+<p><img src="/assets/smartfunnel3.png" alt="SmartFunnel3"></p>
+<p>A funnel has two parts to it.</p>
+<ul>
+<li><p><strong>Funnel Start</strong>: User asking for account balance</p></li>
+<li><p><strong>Funnel End</strong>: IVA’s response with the account balance</p></li>
+</ul>
+<p><img src="/assets/smartfunnel4.png" alt="SmartFunnel4"></p>
+<p>You can specify up to</p>
+<ul>
+<li><p><strong>5 start points</strong>: a set of nodes denoting the beginning of a Funnel (Funnel Start). A start point has to be unique for every Funnel i.e. multiple funnels cannot have the same start point.</p></li>
+<li><p><strong>20 end points</strong>: a set of nodes denoting completion of the Funnel (Funnel End).</p></li>
+</ul>
+<p><img src="/assets/smartfunnel4.png" alt="SmartFunnel4"></p>
+<p>You can keep adding nodes by clicking on the <strong>+</strong> button as shown below</p>
+<p><img src="/assets/smartfunnel6.png" alt="SmartFunnel6"></p>
+<p>For example, if you’d like to track a funnel of checking account balance the start point could be the node that captures the intent of checking account balance. The end points could be 2 nodes - one that disburses ‘current account balance’ and the other that disburses ‘savings account balance.’</p>
+<p>You can also search for nodes on this window as shown below</p>
+<p><img src="/assets/smartfunnel7.png" alt="SmartFunnel7"></p>
+<p>Once you are done selecting the nodes click on &quot;Create Funnel&quot; as shown below</p>
+<p><img src="/assets/smartfunnel8.png" alt="SmartFunnel8"></p>
+<blockquote>
+<p>You need to be mindful while creating a new funnel and choosing the start and end points of those funnels keeping real life user messages under consideration as these funnels will help you gauge the effectiveness of the IVA.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="editing-funnels"></a><a href="#editing-funnels" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Editing Funnels</h2>
+<p>You can edit the names of your funnels by clicking on the pencil icon in front of any funnel as shown below</p>
+<p><img src="/assets/smartfunnel9.png" alt="SmartFunnel9"></p>
+<blockquote>
+<p>Providing appropriate names to your funnel is very important. The name should define what your funnel is tracking.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="completion-rate"></a><a href="#completion-rate" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Completion Rate</h2>
+<p><img src="/assets/smartfunnel10.png" alt="SmartFunnel10"></p>
+<p>This indicates the effectiveness of the IVA design and flow as it shows what were the funnels that were completed by the IVA</p>
+<p>Formula =  (A / B) * 100</p>
+<p>A = Number of instances where the user reached the end point and all conditions are met</p>
+<p>B = Number of instances where the user started his journey for a particular funnel</p>
+<p>i.e. Formula =  (Total no. of funnels completed /  Total no. of funnels initiated) * 100</p>
+<p><strong>Conditions that need to be met for a funnel to be counted as complete</strong></p>
+<ul>
+<li>The user must have arrived at any of the start points</li>
+<li>All API executions through the flow must be successful</li>
+<li>All mandatory entities through the flow should have been collected</li>
+<li>The user must have arrived at any of the end points</li>
+</ul>
+<p>For example, if your account balance funnel contains node A, B, C, F, G, H, and you’ve set up a funnel with start points as A, B &amp; end points as G,H, here’s how funnel start and end will be calculated:</p>
+<p><img src="/assets/querycompletion10.png" alt="Smart_Funnel11"></p>
+<h2><a class="anchor" aria-hidden="true" id="funnel-hits"></a><a href="#funnel-hits" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Funnel Hits</h2>
+<p><img src="/assets/smartfunnel11.png" alt="SmartFunnel11"></p>
+<p>This is the no. of times the start point of a funnel has been visited by the user.</p>
+<p>Scenario 1: If a user visits the same start point sequentially we do NOT increment the funnel start count</p>
+<p><strong>Example:</strong></p>
+<p>Funnel Path: A -&gt; C</p>
+<p>User Session: A -&gt; A -&gt; A -&gt; C (END)</p>
+<p>Result: Funnel1 completed (Here repeated counts of A are not counted as new funnel start)</p>
+<p>Result: Funnel Hit -&gt; 1.</p>
+<p>Scenario 2: If a user visits the same start point twice but not sequentially we increment the funnel start count</p>
+<p><strong>Example:</strong></p>
+<p>Funnel Path: A -&gt; C</p>
+<p>User Session: A -&gt; B -&gt; A -&gt; C (END)</p>
+<p>Result: Funnel started at A and user went to B. User restarted the funnel at A and completed the funnel by reaching C.</p>
+<p>Result: Funnel Hit -&gt; 2</p>
+<h2><a class="anchor" aria-hidden="true" id="sorting-of-funnels"></a><a href="#sorting-of-funnels" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sorting of Funnels</h2>
+<p>By default, you will see the funnel with the highest Funnel Hits on top. This is done in order to quickly check the completion rate of the most visited funnel.</p>
+<p>If required, you can change the order of other fields and sort it as per your requirement.</p>
+<p><img src="/assets/smartfunnel12.png" alt="SmartFunnel12"></p>
+<h2><a class="anchor" aria-hidden="true" id="drop-off"></a><a href="#drop-off" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Drop Off</h2>
+<p>To understand why a funnel was not completed, it’s important to know points at which the users are abandoning, restarting or diverting to a different flow. Understanding of WHY the funnel is not reaching its completion can be found in the drop off section. The insights on messages shared between the IVA and the user along with the Drop Off Nodes can help tweak the conversation design and flow to optimise for better results.</p>
+<p><img src="/assets/smartfunnel13.png" alt="SmartFunnel13"></p>
+<h3><a class="anchor" aria-hidden="true" id="how-are-drop-offs-calculated"></a><a href="#how-are-drop-offs-calculated" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How are Drop-Offs calculated?</h3>
+<p>A user could abandon a conversation due to any of the below reasons. The last visited node is marked as the drop-off node under all of these scenarios:</p>
+<p><img src="/assets/querycompletion16.png" alt="Smart Funnel14"></p>
+<p>Below are some scenarios which explain drop off in more detail.</p>
+<p><strong>1. Diverted</strong></p>
+<p>If a conversation is diverted from one funnel to another, a drop off is counted for the first funnel.</p>
+<p><strong>Example</strong>:</p>
+<p>F1: Node A -&gt; Node C</p>
+<p>F2: Node B -&gt; Node E</p>
+<p><strong>User Session</strong>: A -&gt; D -&gt; B -&gt; X -&gt; E</p>
+<p><strong>Result</strong>: F1 started on A and diverted to F2 on D. So there is a droff off on D for F1 and F2 got completed.</p>
+<p><strong>2. Restarted</strong></p>
+<p>If a new funnel is restarted in between another funnel, a drop off is counted for the first funnel.</p>
+<p><strong>Example</strong>:</p>
+<p>F1: Node A -&gt; Node C</p>
+<p><strong>User Session</strong>: A -&gt; D -&gt; A -&gt; X -&gt; C</p>
+<p><strong>Result</strong>: Two funnels initiated. So there is a droff off on D for F1. Again, F1 restarted on A and got completed.</p>
+<p><strong>3. Abandoned</strong></p>
+<p>If a conversation is abandoned by the user, a droff off is counted for the funnel.</p>
+<p><strong>Example</strong>:</p>
+<p>F1: Node A -&gt; Node C</p>
+<p><strong>User Session</strong>: A -&gt; X -&gt; D</p>
+<p><strong>Result</strong>: There is a droff off on D for F1 as the user abandoned at D.</p>
+<p><strong>4. Agent Transfer</strong></p>
+<p>If a conversation has an agent handover, a droff off is counted for the funnel.</p>
+<p><strong>Example 1</strong>:</p>
+<p>F1: Node A -&gt; Node C</p>
+<p><strong>User Session</strong>: A -&gt; D -&gt; X -&gt; (Agent chat assigned)</p>
+<p><strong>Result</strong>: There is a droff off on D for F1 as the chat got assigned to an agent.</p>
+<p><strong>Example 2</strong>:</p>
+<p>F1: Node A -&gt; Node X</p>
+<p><strong>User Session</strong>: A -&gt; D -&gt; X (all entities collected) -&gt; (Agent chat assigned)</p>
+<p><strong>Result</strong>: F1 got completed as all the entities are collected.</p>
+<blockquote>
+<p>When any funnel definition is changed, the drop offs for all other funnels will need to be recalculated.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="drop-off-points"></a><a href="#drop-off-points" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Drop-Off Points</h3>
+<p>To check the drop-off points for a funnel, you can click on the icon as shown below</p>
+<p><img src="/assets/smartfunnel14.png" alt="SmartFunnel14"></p>
+<p>A screen would open on RHS. This screen will have all details of drop-off with the following</p>
+<ul>
+<li>Node Names</li>
+<li>Percentage distribution of drop-off</li>
+<li>Responses sent from IVA and its variations</li>
+</ul>
+<p><img src="/assets/querycompletion15.png" alt="SmartFunnel15"></p>
+<blockquote>
+<p>We do not show type of nodes under Drop Off Point</p>
+</blockquote>
+<p>Following are the drop-off points under a Node which will be shown</p>
+<ul>
+<li>Bot Says and its Variants</li>
+<li>Entity Responses and its Variants</li>
+<li>Final Response and its Variants</li>
+<li>Entity re-prompt message: Message content would not be available for this</li>
+<li>Integration Response Message: Message content would not be available for this</li>
+<li>Follow-up Message: Message content would not be available for this</li>
+</ul>
+<p><img src="/assets/querycompletion17.png" alt="SmartFunnel16"></p>
+<p><strong>No Node Detected</strong> is shown in the following conditions</p>
+<ul>
+<li>When no nodes were matched as per User says</li>
+<li>When a Smalltalk node is matched</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="deleting-funnels"></a><a href="#deleting-funnels" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Deleting Funnels</h2>
+<p>You can delete your funnels by clicking on the pencil icon in front of the funnel and <strong>Delete button</strong> on the modal as shown below</p>
+<p><img src="/assets/smartfunnel15.png" alt="SmartFunnel15"></p>
+<blockquote>
+<p>We have a separate permission for deleting a funnel so that the access to delete funnels can be given to the required memebers of a team.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="download-report"></a><a href="#download-report" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Download Report</h2>
+<p>You will be able to download the Funnel Completion data. It will be available from 10th September on the dashboard. This report will help you understand the reasons of the drop-off in your funnel.</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 11/27/2020</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/bot-analytics/word-analysis"><span class="arrow-prev">← </span><span>Word Analysis</span></a><a class="docs-next button" href="/bot-analytics/user-ratings"><span>User Ratings</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#introduction">Introduction</a></li><li><a href="#funnels">Funnels</a></li><li><a href="#creating-funnels">Creating Funnels</a></li><li><a href="#editing-funnels">Editing Funnels</a></li><li><a href="#completion-rate">Completion Rate</a></li><li><a href="#funnel-hits">Funnel Hits</a></li><li><a href="#sorting-of-funnels">Sorting of Funnels</a></li><li><a href="#drop-off">Drop Off</a><ul class="toc-headings"><li><a href="#how-are-drop-offs-calculated">How are Drop-Offs calculated?</a></li><li><a href="#drop-off-points">Drop-Off Points</a></li></ul></li><li><a href="#deleting-funnels">Deleting Funnels</a></li><li><a href="#download-report">Download Report</a></li></ul></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Conversation Studio</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Smart Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Intelligent Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://docs.haptik.ai/ios-sdk/" class="footer-column-link">iOS SDK</a><a href="https://docs.haptik.ai/android-sdk/" class="footer-column-link">Android SDK</a><a href="https://docs.haptik.ai/web-sdk/" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/whatsapp/" class="footer-column-link">WhatsApp</a><a href="https://docs.haptik.ai/other/facebook" class="footer-column-link">Facebook</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Bot API</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a><a href="https://docs.haptik.ai/other/security" class="footer-column-link">Security</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Agent Chat Tool</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2020 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '224c7079e67e84a978d8b4621f6af16d',
+                indexName: 'haptik',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

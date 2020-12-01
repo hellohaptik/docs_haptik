@@ -92,42 +92,6 @@ be considered if the User's message has "bad" in it's sentence.
 
 > **Common Mistakes**: Adding similar responses on 2 different nodes
 
-
-## Synonyms
-Sometimes, you might have nodes which have sentences like “I want to buy
-this product”, “I want to purchase this product” etc. on a Shopping Node.
-
-If you notice these responses, the only difference is “buy” and
-“purchase” which are words with the same meanings i.e. they are synonyms.
-
-To simplify and reduce the effort of generating such User Responses
-where a common set of words with same meaning are needed, you can enable
-synonyms for specific words in the bot.
-
-> Tip: Black Underline means synonyms are available. Blue underline
-> means Synonyms for that word have been enabled in the Bot.
-
-#### View Synonyms
-For words which have Synonyms, you can double click on the word and
-select “View Synonyms” from the menu.
-
-This will open up a list of all available Synonyms for the word you
-selected.
-
-![Synonyms](assets/bot-builder-user-says/view_synonyms.gif)
-
-#### Add Synonyms
-After viewing the synonyms, just select the "Enable" checkbox in the
-View Synonyms modal.
-
-So for our Shopping Node example, if you Double click on “buy” -> Select
-“Add Synonyms” from the context menu -> Enable a specific Synonym
-cluster, then you can avoid adding variations of the word "buy".
-
-> **Common Mistake**: Ensure that you add the correct set of synonyms as
-> 1 word can have multiple meanigs. For example, “speaker” could mean
-> the electronic devices as well as a human speaking at an event.
-
 ## Spell Correction
 To account for user’s mistakes, the Sentence Similarity module accounts
 for some spelling mistakes that a user could make.

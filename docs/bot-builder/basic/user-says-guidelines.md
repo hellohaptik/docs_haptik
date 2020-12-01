@@ -173,40 +173,6 @@ To simplify and reduce the effort of generating such User Responses where a comm
 
 ![Entity Tagging Disabled](assets/bot-builder-user-says/entity_tagging_disabled.png)
 
-### **Synonyms**
-
-While building a bot, you might have nodes which have sentences like "I want to buy this product", “I want to purchase this product” etc. on a Shopping Node.
-
-If you notice these utterances, the only difference is "buy" and “purchase” which are words with the same meanings i.e. they are synonyms.
-
-To simplify and reduce the effort of generating such user says where a common set of words with the same meaning are needed, you can enable synonyms for specific words in the bot.
-
-> **Tip**: _Dotted Blue Underline means synonyms for the word is available, but not enabled on the bot. Solid Blue underline means synonyms for that word is enabled on the Bot._
-
-#### View Synonyms
-
-For words which have Synonyms, you can double click on the word and select "View Synonyms" from the menu.
-
-This will open up a list of all available Synonyms for the word you selected.
-
-After viewing the synonyms, just select the "Enable" checkbox in the View Synonyms modal to enable the synonym.
-
-![Synonym List](assets/bot-builder-user-says/synonym_list.png)
-
-#### Enable / Disable Synonyms
-
-For words which have Synonyms, you can double click on the word and select "Enable Synonyms" from the menu to **enable** the synonym. **Disabling the synonyms will disable it on the entire bot.**
-
-![Enable Synonym](assets/bot-builder-user-says/enable_synonym.png)
-
-Similarly, for words which have Synonyms, you can double click on the word and select "Disable Synonyms" from the menu to **disable** the synonym.
-
-![Disable Synonym](assets/bot-builder-user-says/disable_synonym.png)
-
-So for our Shopping Node example, if you Double click on "buy" -> Select “Buy Enable Synonyms” from the context menu -> Enable a specific Synonym cluster, then you can avoid adding variations of the word "buy".
-
-> _**Common Mistake**: Ensure that you enable the correct set of synonyms in the user says as 1 word can have multiple meanings. For example, "speaker" could mean the electronic devices as well as a human is speaking at an event.*_
-
 ### **Sample user says utterance**
 
 * **_Add_** variations of the sentence that can be used to perform the same action.

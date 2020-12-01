@@ -223,10 +223,6 @@ Content-Type: application/json
 
 #### Request Params
 
-curl --location --request GET 'https://devanas.hellohaptik.com/integration/external/v2.0/get_chat_history/?pxut=cD19X5tQB5ddvTfk._x6U10oE_j6IEdJtFe5tF8jBL9gsGi_0&conversation_no=1' \
---header 'client-id: b751bbe0379c81ca61e8f2fd426a3b734d107470' \
---header 'AUTHORIZATION: Bearer helloworld'
-
 ```
 "conversation_no": "<Conversation no of the chat for the user>",
 "user_name": "<haptik user name>",

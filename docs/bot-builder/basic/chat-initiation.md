@@ -30,7 +30,7 @@ Example: My package is late should also lead to - Have a complaint task. This sh
 
 c. We can follow the User Says Guidelines for having a clear picture of writing these variations.
 
-d. One way to guide users who prefer typing in freeform would be the AutoComplete feature on the Haptik platform. You can customize the option that appears within the AutoComplete window by flagging it in the Conversation Studio. [Here’s](https://docs.haptik.ai/bot-builder/basic/user-says#autocomplete-suggestions) the documentation to help you enable it on your IVA.
+d. One way to guide users who prefer typing in freeform would be the AutoComplete feature on the Haptik platform. You can customize the option that appears within the AutoComplete window by flagging it in the Conversation Studio. [**Here’s**](https://docs.haptik.ai/bot-builder/basic/user-says#autocomplete-suggestions) the documentation to help you enable it on your IVA.
 
 ![autocomplete](/assets/autocomplete1.png)
 
@@ -45,7 +45,7 @@ Bot prompts are ‘notifications’ sent to users to draw their attention to the
 
 ![botprompt](/assets/botprompt1.png)
 
-- You can customize several aspects of prompts including the pages they appear on, the delay after which they appear, how they work for repeat users, and so on. Read more about it in our documentation [here](https://docs.haptik.ai/bot-builder/basic/bot-prompt-trigger).
+- You can customize several aspects of prompts including the pages they appear on, the delay after which they appear, how they work for repeat users, and so on. Read more about it in our documentation [**here**](https://docs.haptik.ai/bot-builder/basic/bot-prompt-trigger).
 
 - At the very least, we recommend adding the following bot prompts:
 
@@ -81,9 +81,11 @@ SmallTalk is a way to ensure that your bot is able to answer chit chat queries. 
 
 - The Haptik platform has a plug-and-play SmallTalk module that allows you to completely edit all SmallTalk nodes (around 99 separate intents) and choose your own persona, brand, and content.
 
-- While you’re editing the SmallTalk module, make sure that you include a menu list as a response for intents like Greetings, Start_Chat, and Capability. This is important because users want to know what the bot can do for them even though they are chitchatting. If you have the time, we recommend adding some form of re-engagement option to every single intent. 
+- Here’s a 🗝 [**SmallTalk Module**](/assets/SmallTalk_Module_For_Reference.xlsx) for your perusal. This SmallTalk Module sheet contains all the responses for various user intents based on user persona. You can edit the responses as per your brand communication and guidelines. We have also recommended which of the responses you will require to add the taskbox items for the user to move ahead in the conversation. 
 
-- [Here’s](https://docs.haptik.ai/bot-builder/basic/smalltalk) the link to the official documentation that covers everything you need to know.
+- While you’re editing the SmallTalk module, you will need to make sure to include a taskbox with menu items as a response for intents like Greetings, Start_Chat, and Capability. This is important because users want to know what the bot can do for them even though they are chitchatting. As a best practice it is recommended to add some form of re-engagement option to every single intent. 
+
+- [**Here’s**](https://docs.haptik.ai/bot-builder/basic/smalltalk) the link to the official documentation that covers everything you need to know.
 
 ## Generic Tips
 

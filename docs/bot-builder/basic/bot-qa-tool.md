@@ -49,7 +49,7 @@ It is accessible through APIs. There are two main APIs under this tool -
 
 For triggering these APIs, you need the following values -
 
-1. Mock conversation on the bot with all testing scenarios. This should be done in a single conversation. You can read more about conversations [**here**](https://docs.haptik.ai/bot-analytics/overview#conversations).
+1. Mock conversation on the bot with all testing scenarios. You can read more about conversations [**here**](https://docs.haptik.ai/bot-analytics/overview#conversations).
 
 2. Collection ID - You can get the Collection ID from the chat link as shown in the image below. Chat links are available on Intelligent Analytics's Message Analysis page.
 
@@ -69,7 +69,7 @@ Once the popup opens, you can find the Client ID here as shown below.
 
 #### **GENERATE API**
 
-GENERATE API helps us to create a CSV of test cases. We need to send the collection id, conversation id, email id, businessvianame, name of the file in the request and the API will return the **Bot QA Testcases CSV** over email with all test cases.
+GENERATE API helps us to create a CSV of test cases. We need to send the collection id, conversation ids, email id, business-via-name in the request and the API will return the **Bot QA Testcases CSV** over email with all test cases.
 
 **API URL** - https://staging.hellohaptik.com/bot_qa/business-via-name/generate
 
@@ -81,9 +81,13 @@ GENERATE API helps us to create a CSV of test cases. We need to send the collect
 
 **Body for GENERATE API**
 
-{"collection_id": 629, "convesation_id": 1, "email_id": "<email-id>", "filename": "<filename>"}
+{"collection_id": 629, "conversation_id": 1, "email_id": "<email-id>"}
  
-The email-id is of the person who would receive the CSV over email. Filename is the name of the CSV file.
+For multiple conversations
+
+{"collection_id": 629, "conversation_id": "1,2", "email_id": "<email-id>"}
+ 
+The email-id is of the person who would receive the CSV over email. The CSV would be named in the format of **business-via-name_collid_timestamp.csv**.
 
 #### **RUN API**
 
@@ -100,7 +104,7 @@ RUN API helps us to execute test cases under **Bot QA Testcases CSV** and provid
 
 {"email": "<email-id>", "file": "<filename>"}
  
-The email-id is of the person who would receive the CSV over email. Filename is the name of the CSV file.
+The email-id is of the person who would receive the Bot QA Result CSV over email. Filename is the name of the Bot QA Testcases CSV file.
 
 If the API gets executed successfully, you get the below email -
 

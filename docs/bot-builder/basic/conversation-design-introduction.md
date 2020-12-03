@@ -16,6 +16,8 @@ For a successful Conversation Design, you have to think like an architect, mappi
 
 Conversation Design entails the entire structure of your Intelligent Virtual Assistant that spearheads your bot building process.
 
+![CDprocess](assets/Haptik_CD_Process.png)
+
 - Start with prioritising the use cases basis the business requirement and understand the channel where you will be deploying your IVA. For example, Website, Mobile App, WhatsApp, Facebook Messenger, SMS, etc.
 
 - Now review user data and behaviour to define a set personality for the IVA
@@ -25,14 +27,3 @@ Conversation Design entails the entire structure of your Intelligent Virtual Ass
 - Iron out edge cases and roadblocks through review and testing
 
 - Finally use this framework to build and deploy conversational journeys on our Haptik platform for a seamless IVA building experience
-
-![CDprocess](assets/Haptik_CD_Process.png)
-
-
-
-
-
-
-
-
-

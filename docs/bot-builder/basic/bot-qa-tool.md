@@ -34,11 +34,11 @@ There are multiple challenges we face while testing a bot
 
 Everytime you change existing intents in the bot or add new intents in the bot, you would need to test the entire bot again as new or updated intents might affect the existing intents.
 
-To overcome these day to day challenges and deploy a high-quality bot in the shortest possible time,  we have come up with an automatic way of testing - Bot QA tool.
+To overcome these day to day challenges and deploy a high-quality bot in the shortest possible time,  we have come up with an automatic way of testing - Bot QA Tool.
 
 > **The beauty of this tool is that it is independent of the copy of the messages.**
 
-### How to use Haptik's BOT QA Tool
+### How to use Haptik's Bot QA Tool
 
 Haptik's Bot QA Tool makes regression testing of a bot scaleable and thus saves time. It mainly depends on the nodes traversal and not copy of messages. 
 
@@ -81,7 +81,7 @@ GENERATE API helps us to create a CSV of test cases. We need to send the collect
 
 **Body for GENERATE API**
 
-{"collection_id ": 629, "convesation_id": 1, "email_id":”user@email.com” , "filename":”<filename>”}
+{"collection_id": 629, "convesation_id": 1, "email_id": "<email-id>", "filename": "<filename>"}
  
 The email-id is of the person who would receive the CSV over email. Filename is the name of the CSV file.
 
@@ -98,7 +98,7 @@ RUN API helps us to execute test cases under **Bot QA Testcases CSV** and provid
 
 **Body for RUN API**
 
-{"email":”user@email.com”, "file":”<filename>”}
+{"email": "<email-id>", "file": "<filename>"}
  
 The email-id is of the person who would receive the CSV over email. Filename is the name of the CSV file.
 

@@ -44,11 +44,34 @@ Haptik's Bot QA Tool makes regression testing of a bot scaleable and thus saves 
 
 It is accessible through APIs. There are two main APIs under this tool -
 
+1. Generate API
+2. Run API
+
+For triggering these APIs, you need the following values -
+
+1. Mock conversation on the bot with all testing scenarios. This should be done in a single conversation. You can read more about conversations [**here**](https://docs.haptik.ai/bot-analytics/overview#conversations).
+
+2. Collection ID - You can get the Collection ID from the chat link as shown in the image below. Chat links are available on Intelligent Analytics's Message Analysis page.
+
+![collection_id](/assets/collection_id.png)
+
+3. Client ID - You can get the Client ID from the bot credentials pop. You can open the bot credentials pop using the share icon on the bot screen as shown below.
+
+![botcredentials](/assets/botcredentials.png)
+
+Once the popup opens, you can find the Client ID here as shown below.
+
+![clientid](/assets/clientid.png)
+
+4. Business_via_name - You can get the business_via_name from the Business Manager page of your bot as shown below.
+
+![businessvianame](/assets/businessvianame.png)
+
 #### **GENERATE API**
 
-GENERATE API helps us to create a CSV of test cases. We need to send the collection id, conversation id, email id, businessvianame, name of the file in the request and the API will return the **Bot QA Tool Testcases CSV** over email with all test cases.
+GENERATE API helps us to create a CSV of test cases. We need to send the collection id, conversation id, email id, businessvianame, name of the file in the request and the API will return the **Bot QA Testcases CSV** over email with all test cases.
 
-**API URL** - https://staging.hellohaptik.com/bot_qa/<business via name>/generate
+**API URL** - https://staging.hellohaptik.com/bot_qa/business-via-name/generate
 
 **Headers** -
 
@@ -58,22 +81,15 @@ GENERATE API helps us to create a CSV of test cases. We need to send the collect
 
 **Body for GENERATE API**
 
-{ "collection_id ": 629,convesation_id": 1,"email_id":”user@email.com” , "filename":”<filename>” }
-
-Before triggering the GENERATE API, you should do the following -
-
-1. Create test cases by chatting with the bot in a single conversation.
-2. Using the chat link, fetch the collection id.
-
-![collection_id](/assets/collection_id.png)
-
-> You can find the chat link from Intelligent Analytics's Message Analysis page.
+{"collection_id ": 629, "convesation_id": 1, "email_id":”user@email.com” , "filename":”<filename>”}
+ 
+The email-id is of the person who would receive the CSV over email. Filename is the name of the CSV file.
 
 #### **RUN API**
 
-RUN API helps us to execute test cases under **Bot QA Tool Testcases CSV** and provides a result CSV. For running this API, we would send the file, businessvianame, email-id and the API will return the **Bot QA Tool Result CSV** with the success/failure for all test cases over email.
+RUN API helps us to execute test cases under **Bot QA Testcases CSV** and provides a result CSV. For running this API, we would send the file, businessvianame, email-id and the API will return the **Bot QA Result CSV** with the success/failure for all test cases over email.
 
-**API URL** - https://staging.hellohaptik.com/bot_qa/<business via name>/run
+**API URL** - https://staging.hellohaptik.com/bot_qa/business-via-name/run
 
 **Headers** -
 
@@ -82,7 +98,9 @@ RUN API helps us to execute test cases under **Bot QA Tool Testcases CSV** and p
 
 **Body for RUN API**
 
-{"email": "<EMAIL_ID>","file": "<FILE>"}
+{"email":”user@email.com”, "file":”<filename>”}
+ 
+The email-id is of the person who would receive the CSV over email. Filename is the name of the CSV file.
 
 If the API gets executed successfully, you get the below email -
 

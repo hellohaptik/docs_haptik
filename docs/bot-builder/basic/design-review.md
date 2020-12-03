@@ -31,4 +31,4 @@ During the execution of a project, you’re responsible for the following:
 
 2. **Retrospectives**: Retrospectives are a great way of looking back and learning. It is an open platform for everyone to share feedback, discuss impediments, and plan the way forward.
 
-3. **Focus groups**: Run hallway testing and focus groups for bot flows and the final bot to get a comprehensive view of the bot. Here’s a 🗝bot-friendly guide on conducting focus groups!
+3. **Focus groups**: Run hallway testing and focus groups for bot flows and the final bot to get a comprehensive view of the bot.

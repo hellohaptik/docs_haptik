@@ -36,50 +36,60 @@ Everytime you change existing intents in the bot or add new intents in the bot, 
 
 To overcome these day to day challenges and deploy a high-quality bot in the shortest possible time,  we have come up with an automatic way of testing - Bot QA tool.
 
-> **“The beauty of this tool is that it is independent of the copy of the messages.”**
+> **The beauty of this tool is that it is independent of the copy of the messages.**
 
-This Bot QA Tool makes regression testing of a bot scaleable and thus saves time. It mainly depends on the nodes traversal and not copy of messages. 
+### How to use Haptik's BOT QA Tool
+
+Haptik's Bot QA Tool makes regression testing of a bot scaleable and thus saves time. It mainly depends on the nodes traversal and not copy of messages. 
 
 It is accessible through APIs. There are two main APIs under this tool -
 
-1. API 1 - **GENERATE API**
-We would need to send the collection id, conversation id, email id, businessvianame, name of the file in the request and the GENERATE API will return back the Bot QA Tool CSV over email with all test cases.
+#### **GENERATE API**
 
-API URL - https://staging.hellohaptik.com/bot_qa/<business via name>/generate
+GENERATE API helps us to create a CSV of test cases. We need to send the collection id, conversation id, email id, businessvianame, name of the file in the request and the API will return the **Bot QA Tool Testcases CSV** over email with all test cases.
 
-Headers:
-a.Authorization: Bearer <TOKEN>
-b.client-id: <CLIENT_ID>
-c.Content-Type: application/json
+**API URL** - https://staging.hellohaptik.com/bot_qa/<business via name>/generate
 
-Body for GENERATE API
+**Headers** -
+
+- Authorization: Bearer <TOKEN>
+- client-id: <CLIENT_ID>
+- Content-Type: application/json
+
+**Body for GENERATE API**
+
 { "collection_id ": 629,convesation_id": 1,"email_id":”user@email.com” , "filename":”<filename>” }
 
 Before triggering the GENERATE API, you should do the following -
 
 1. Create test cases by chatting with the bot in a single conversation.
-2. Using the user info link and fetch the collection id.
+2. Using the chat link, fetch the collection id.
 
 ![collection_id](/assets/collection_id.png)
 
-2. API 2 - **RUN API**
-For running this API, we would send the file, businessvianame, email-id and the RUN API will return a CSV with the success/failure for each test case in the Bot QA Tool CSV over email.
+> You can find the chat link from Intelligent Analytics's Message Analysis page.
 
-API UTL - https://staging.hellohaptik.com/bot_qa/<business via name>/run
+#### **RUN API**
 
-Headers:
-a.Authorization: Bearer <TOKEN>
-b.client-id: <CLIENT_ID>
+RUN API helps us to execute test cases under **Bot QA Tool Testcases CSV** and provides a result CSV. For running this API, we would send the file, businessvianame, email-id and the API will return the **Bot QA Tool Result CSV** with the success/failure for all test cases over email.
 
-Body for RUN API
+**API URL** - https://staging.hellohaptik.com/bot_qa/<business via name>/run
+
+**Headers** -
+
+- Authorization: Bearer <TOKEN>
+- client-id: <CLIENT_ID>
+
+**Body for RUN API**
+
 {"email": "<EMAIL_ID>","file": "<FILE>"}
 
 If the API gets executed successfully, you get the below email -
 
 ![successmail](/assets/successmail.png)
 
-If the API does not get executed successfully, you get the below email -
+If the API does not execute successfully, you get the below email -
 
 ![failuremail](/assets/failuremail.png)
 
-Using both these APIs, we will be able to run our regression test suites before taking our bots live.
+Using both these APIs, we will be able to run our regression test suites and get the desired results everytime we make a bot live. We can keep making modifications in the bot to remove the failure cases.

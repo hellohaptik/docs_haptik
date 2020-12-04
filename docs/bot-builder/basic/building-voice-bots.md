@@ -6,11 +6,11 @@ title: Voice IVAs
 
 Voice is an efficient mode of communication because of its speed, accuracy and effortless measures. A voice IVA diminishes the user's attempt to type-out a message and leads them to have a hassle-free conversation with the IVA. 
 
-A voice IVA primarily uses voice/audio as an input for communication. Once the voice option is enabled for the business, you can see the audio recorder icon on the IVA as follows
+A voice IVA primarily uses voice/audio as an input for communication. Once the voice option is enabled for the business, you can see the mic icon on the IVA as follows
 
 ![voiceiva](assets/voicebot1.png)
 
-When the user clicks on the audio recorder, the IVA captures the audio from the user and converts it into text. This text becomes the user input and then the IVA responds accordingly.
+When the user clicks on the mic icon, the IVA captures the audio from the user and converts it into text. This text becomes the user input and then the IVA responds accordingly.
 
 ## How to build a Voice IVA?
 
@@ -20,7 +20,7 @@ There are few steps to enable voice on your IVA. These are explained below in de
 
 ![businessmanagervoice](assets/bm_voice.png)
 
-Once this is configured, you should be able to see the voice recorder icon on the IVA.
+Once this is configured, you should be able to see the mic icon on the IVA.
 
 **Secondly**, to configure audio responses on a voice IVA on Conversation Studio, go to a node to set voice-specific bot responses. 
 
@@ -38,7 +38,7 @@ It will look as shown in the image below
 
 ### Enabling Auto Mic option
 
-Enabling the auto open mic, allows the user to talk with the IVA, and activate even if the mic button is not pressed on chat. This makes it user friendly depending on the IVA personality.
+Once a bot response is sent, the user has to click on the mic icon to send a new message. When we enable the **Auto Open Mic** option, after the bot response is sent, IVA opens up the mic automatically and user can send their message. This makes the IVA more user friendly.
 
 Note - If changes are made in Bot says, you have to save the data to test the IVA. If changes are made in User says, you will have to save, then train the IVA and later you can test the IVA.
 
@@ -90,11 +90,11 @@ You can use IVAs with text + voice option or with only voice option. Let us unde
 
 ### Using Text + Voice Input
 
-You can configure an IVA which can take both Text and Voice an input. When the IVA has this combination, you can see both, the message composer and an audio recorder icon. The following image depicts a default state of IVA with a taskbox and both inputs enabled.
+You can configure an IVA which can take both Text and Voice an input. When the IVA has this combination, you can see both, the message composer and the mic icon. The following image depicts a default state of IVA with a taskbox and both inputs enabled.
 
 ![defaultstate](assets/voicebot2.png)
 
-When the user selects their mode of input, for instance, voice, the audio recorder icon is highlighted and the user can start recording their message by clicking on the button.
+When the user selects their mode of input, for instance, voice, the mic icon is highlighted and the user can start sending their message.
 
 ![hoveraudio](assets/voicebot3.png)
 
@@ -122,11 +122,11 @@ In certain cases where there is no taskbox configured, the IVA would appear as f
 
 ### Only Voice IVA
 
-When the IVA is only accepting voice as an input the message composer disappears and only an audio recorder button appears on the IVA. In the following image you can see a Voice only IVA having a taskbox, in its default state.
+When the IVA is only accepting voice as an input the message composer disappears and only the mic icon appears on the IVA. In the following image you can see a Voice only IVA having a taskbox, in its default state.
 
 ![onlyvoice](assets/voicebot8.png)
 
-When the user clicks on the audio recorder button, the IVA goes into Voice reading state. This is how the IVA looks when it is recording the message into text.
+When the user clicks on the mic icon, the IVA goes into voice reading state. This is how the IVA looks when it is converting the message into text.
 
 ![onlyvoicerecord](assets/voicebot9.png)
 

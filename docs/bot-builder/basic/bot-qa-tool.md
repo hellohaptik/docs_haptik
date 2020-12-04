@@ -85,7 +85,7 @@ GENERATE API helps us to create a CSV of test cases. We need to send the collect
  
 For multiple conversations
 
-{"collection_id": 629, "conversation_id": [1,2], "email_id": "<email-id>"}
+{"collection_id": , "conversation_id": [1,2], "email_id": "<email-id>"}
  
 The email-id is of the person who would receive the CSV over email. The CSV would be named in the format of **business-via-name_collid_timestamp.csv**.
 

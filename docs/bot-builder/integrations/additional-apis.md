@@ -13,7 +13,7 @@ Example URL: `https://<base-url>/integration/external/v1.0/send_chat_to_agent/`
 
 #### Headers
 
-```
+```http
 Authorization: Bearer <TOKEN>
 client-id: <CLIENT_ID>
 Content-Type: application/json
@@ -97,7 +97,10 @@ curl -X POST \
 
 ## Get Chat Transcripts
 
-### V1
+### v1.0
+
+> Note: This API will soon be deprecated. Consider using the [v2.0](#v20) API instead!
+
 
 This API allows you to get the chat history of the user for a conversation via a `GET` request to the Haptik Platform.
 
@@ -108,7 +111,7 @@ Example URL: `https://<base-url>/integration/external/v1.0/get_chat_history/`
 
 #### Headers
 
-```
+```http
 Authorization: Bearer <TOKEN>
 client-id: <CLIENT_ID>
 Content-Type: application/json
@@ -120,12 +123,14 @@ Content-Type: application/json
 
 #### Request Params
 
-```
-"conversation_no": "<Conversation no of the chat for the user>",
-"user_name": "<haptik user name>",
-"business_id": <business_id>,
-"limit": "<number of messages>"(optional)
-"respose_type": "<response_type>"(optional)
+```json
+{
+    "conversation_no": "<Conversation no of the chat for the user>",
+    "user_name": "<haptik user name>",
+    "business_id": "<business_id>",
+    "limit": "<number of messages (optional)>"
+    "respose_type": "<response_type> (optional)"
+}
 ```
 Note: Supported response types are `json` and `text`. The default response type is `json`.
 
@@ -153,18 +158,17 @@ A successful request to the API will return a `200` status code with a default J
 ```
 
 Text type response 
-```
+```json
 {  
   "chat_text": "user: Search places to visit{task}\nbot: TEXT\n"
 }
-
 ```
 
 - success: Indicates if the API was a success or failure
-- sender values: 
-    `bot`: message is sent by the bot
-    `user`: message is sent by the user
-    `agent(<AGENT_NAME>)`: message is sent by the agent <AGENT_NAME> : name of the agent who sent the message
+- `sender` values: 
+    - `bot`: message is sent by the bot
+    - `user`: message is sent by the user
+    - `agent(<AGENT_NAME>)`: message is sent by the agent <AGENT_NAME>, i.e, name of the agent who sent the message
 
 #### Error Response
 
@@ -177,6 +181,7 @@ If there is any error in the Headers or the Request body, then the Error message
 ```
 
 Here is a list of some possible error messages
+
 |Error Message|Details|
 --------------|-------|
 |invalid client_id|Incorrect client-id is passed in the headers
@@ -200,7 +205,7 @@ curl -X GET \
 }
 ```
 
-### V2
+### v2.0
 
 This API allows you to get the chat history of the user for a conversation via a `GET` request to the Haptik Platform.
 
@@ -211,30 +216,64 @@ Example URL: `https://<base-url>/integration/external/v2.0/get_chat_history/`
 
 #### Headers
 
-```
+```http
 Authorization: Bearer <TOKEN>
-client-id: <CLIENT_ID>
+Client-ID: <CLIENT_ID>
 Content-Type: application/json
 ```
 
-- Authorization - The Authorization header of each HTTP request should be “Bearer” followed by your token which will be provided by Haptik
-- client-id - The client id for your account which will be provided by Haptik
-- Content-Type - application/json
+| header        | type | required | description                                                  |
+| ------------- | ---- | -------- | ------------------------------------------------------------ |
+| Authorization | str  | true     | Authorization header of each HTTP request should be “Bearer” followed by your token provided by Haptik. |
+| Client-ID     | str  | true     | Client-ID for your account provided by Haptik.               |
+| Content-Type  | str  | true     | constant indicating `application/json` type request          |
 
-#### Request Params
+#### Request parameters
 
-```
-"conversation_no": "<Conversation no of the chat for the user>",
-"user_name": "<haptik user name>",
-"pxut": "<pxut as provided by Tract>"
-"limit": "<number of messages>"(optional)
-"respose_type": "<response_type>"(optional)
-```
-Note: Supported response types are `json` and `text`. The default response type is `json`.
+| parameter       | type     | required | group | description                                             |
+| --------------- | -------- | -------- | ----- | ------------------------------------------------------- |
+| business_id     | str(int) | grouped  | 1     | Business ID for                                         |
+| user_name       | str      | grouped  | 1     | Haptik user name.                                       |
+| conversation_no | int      | true     | 1/2   | Conversation number of user's chat.                     |
+| pxut            | str      | grouped  | 2     | TRACT Packed eXtensible User Token.                     |
+| limit           | str(int) | optional | n/a   | Limit on number of messages that the API should return. |
+| response_type   | str      | optional | n/a   | Either `json` (default) or `text`.                      |
+
+This API allows for fetching the transcripts using either:
+
+- Group 1: for native Haptik consumers
+
+  - business_id
+  - user_name
+  - conversation_no
+
+  ```json
+  {
+  	"business_id": "1234",
+  	"user_name": "ab112468917fgghdebc",
+  	"conversation_no": 2
+  }
+  ```
+
+- Group 2: for TRACT consumers
+
+  - pxut
+  - conversation_no
+
+  ```json
+  {
+  	"pxut": "tw389ysgd._aksdjknsk-545641964-B",
+  	"conversation_no": 2
+  }
+  ```
+
+> NOTE: All arguments within a group are required. If both groups' arguments are provided, first will be preferred.
 
 #### Response
 
 A successful request to the API will return a `200` status code with a default JSON response object containing chat data.
+
+##### JSON response
 
 ```json
 {  
@@ -255,19 +294,21 @@ A successful request to the API will return a `200` status code with a default J
 }
 ```
 
-Text type response 
-```
+##### Text response
+
+```json
 {  
   "chat_text": "user: Search places to visit{task}\nbot: TEXT\n"
 }
-
 ```
 
-- success: Indicates if the API was a success or failure
-- sender values: 
-    `bot`: message is sent by the bot
-    `user`: message is sent by the user
-    `agent(<AGENT_NAME>)`: message is sent by the agent <AGENT_NAME> : name of the agent who sent the message
+###### Sender values
+
+| value          | description                                                  |
+| -------------- | ------------------------------------------------------------ |
+| `bot`          | message was sent by the bot                                  |
+| `user`         | message was sent by the user                                 |
+| `<agent_name>` | message is sent by an agent, `<agent_name>` is the name of the agent who sent the message |
 
 #### Error Response
 
@@ -275,34 +316,26 @@ If there is any error in the Headers or the Request body, then the Error message
 
 ```json
 {
-  "error_message": "user has not sent a message"
+  "error_message": "<error_message>"
 }
 ```
 
-Here is a list of some possible error messages
-|Error Message|Details|
---------------|-------|
-|invalid client_id|Incorrect client-id is passed in the headers
-|invalid token|The Authorization token provided is incorrect
-|user_name missing|The user_name is not provided in the request params
-|business_id missing|The business_id is not provided in the request params
-|conversation_no missing|The conversation_no is not provided in the request params
-|invalid user_name|The user_name provided is not valid for the Partner
-|user has not sent a message|The user has not had any chat on that Business
+Error messages
+
+Error Message|Details
+-------|-------
+ Invalid business_id                                          |business_id was not a valid string representation of an integer.
+Invalid token|The Authorization token provided is incorrect
+ Either the user has not sent a message yet, or the provided user_name-business_id pair is invalid. | Check that the user_name matches the business_id that you are requesting data for, or wait for the user to send a response before sending this request. 
+ Unable to decode pxut-client_id pair                         |The TRACT PXUT is mismatched with the client_id provided in the request headers, or one of them is incorrect. Please recheck both.
+ Argument group validation: no valid group.                   | Verify that parameters have been provided to fulfil at least one request group specified above. See response data for more details. 
+ Argument group validation: invalid group found.              | Verify that parameters provided are of valid type. See response data for more details. 
+ An unknown error occurred                                    |Please contact Haptik team for support.
 
 
-#### Sample CURL command
-
-```
-curl -X GET \
-  https://<base-url>/integration/external/v2.0/get_chat_history/?pxut=<pxut>&conversation_no=<conversation_no>' \
-  -H 'Authorization: Bearer <TOKEN>' \
-  -H 'client-id: <CLIENT_ID>' \
-  -H 'Content-Type: application/json' \
-}
-```
 
 ## FAQ Node Creation APIs for KMS
+
 We have many clients who need FAQ bots. Every time when we want to change the content of these FAQs (Q&As), a new CSV with Node name, Question and Answer in a defined format needs to be uploaded. (Format given below)
 
 We have developed an API that can be integrated with the client KMS(Knowledge Management Systems) via any intermediate layer and every time when data gets changed in KMS, it should call this API to keep data in sync with the Haptik systems.

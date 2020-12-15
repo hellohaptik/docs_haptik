@@ -1,5 +1,5 @@
 ---
-title: New MyChats
+title: Introduction
 ---
 
 ## How to use My Chats?

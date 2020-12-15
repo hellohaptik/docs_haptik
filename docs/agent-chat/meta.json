@@ -4,7 +4,7 @@
             "index"
         ],
         "For Agents": [
-            "for-chat-agents",
+            "newmychats",
             "action-toolbars",
             "smart-actions",
             "closing-categories",
@@ -24,8 +24,7 @@
         "Miscellaneous": [
             "bot-agent-handover",
             "adding-custom-tools",
-            "integrating-external-bot",
-            "newmychats"
+            "integrating-external-bot"
         ]
     },
     "headerLink": {

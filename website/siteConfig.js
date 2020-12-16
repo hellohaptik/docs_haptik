@@ -16,6 +16,7 @@ const siteConfig = {
   baseUrl: baseUrl,
   projectName: 'docs_haptik',
   organizationName: 'hellohaptik',
+  noIndex: true,
 
   headerLinks: [
     // {

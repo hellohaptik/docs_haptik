@@ -1,5 +1,5 @@
 ---
-title: SmartSkills
+title: Introduction
 ---
 
 ## What are SmartSkills?

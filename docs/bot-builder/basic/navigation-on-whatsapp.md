@@ -92,7 +92,7 @@ While designing a WhatsApp IVA, it is important to carefully decide when to offe
    
    - Eg: Policy ID, Order ID, Shipment tracking number, AWB number
 
-   ![navigation11](/assets/2_Natural language.png)
+   ![navigation11](/assets/2_Naturallanguage.png)
 
 ### When to use Free Text
 

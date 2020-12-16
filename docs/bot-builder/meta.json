@@ -3,6 +3,9 @@
 		"Getting Started": [
 			"basic/introduction"
 		],
+		"Smart Skills": [
+			"basic/smartskills"
+		],
 		"Conversation Design": [
 			"basic/conversation-design-introduction",
 			"basic/setting-flowchart-tool",

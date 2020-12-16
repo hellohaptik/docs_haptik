@@ -53,11 +53,16 @@ A General node is created for every Question/Answer pair in the file.
 - The corresponding answer is stored as ‘Bot Says’.
 - The nodes are prefixed with the uploaded file’s name
 
-So to quickly create a Bot which can answer all your FAQs:
+So to quickly create a Bot which can answer all your FAQs you can create a TSV file in the following format:
 
-1. Create a TSV file
-2. Upload it to our Bot Maker
-3. Click on Save
-4. Train the Bot
+| node_name            | question                                                                                                                                                                                                                                                                 | answer                                                                                                        | quick_replies | link_text | link_button | link_url |
+|----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|---------------|-----------|-------------|----------|
+| About <company_name> | What is <company name> \|About  <company name> \|I want to know more about   <company name>\| Can you give me some info about  <company name>\| Require details on  <company name>\| More information on  <company name>\| Share company details\|What is <company name> | <company name> is <description>   ⭐ Quick facts —  ✔ ✔   <m>To see what we can do for you, tap a task below 👇 |               |           |             |          |
+
+Once the file is ready you can follow the following steps:
+
+1. Upload the CSV to our Bot Maker
+2. Click on Save
+3. Train the Bot
 
 And you're done!

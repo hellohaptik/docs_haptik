@@ -181,10 +181,6 @@ The end of a conversation on WhatsApp is quite different from other platforms. U
 
 2. If the user expresses the intent to close the conversation, we can use this opportunity to gather valuable feedback regarding the chat experience. This can be collected in the form of a CSAT question or a feedback question.
 
-3. Defining this experience for chats closed by agents is a challenge on the Haptik platform as of now. Haptik has an in-built feedback module that does not work on WhatsApp due to platform limitations.
-
-4. Please note that the ratings or feedback provided by the users also do not reflect under the user rating section on chat analytics by default. We will need to create queries to track these separately.
-
 **Example** - How was your experience chatting with us on WhatsApp?
 
 1. Easily Understandable

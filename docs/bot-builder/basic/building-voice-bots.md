@@ -64,6 +64,27 @@ As per the SSML tags used above, after Bot says "Not sure." there will be a brea
 
 As per the SSML tags used above, after Bot says "You can contact us on" there will be emphasis on "our landline" phrase and then IVA speaks the rest of the text.
 
+You can use the following SSML tags while adding Voice Says:
+
+- effect
+
+- break
+
+- emphasis
+
+- p
+
+- phoneme
+
+- s
+
+- speak
+
+- sub
+
+- lang
+
+
 ### Do's & Don'ts for building a Voice IVA:
 
 - IVA tends to read out some special characters. Avoid using special characters which aren't SSML tags.
@@ -103,6 +124,8 @@ When the user is recording the audio, the message composer disappears and the IV
 ![messagerecord](assets/voicebot4.png)
 
 > **Note: If you click on the taskbox items while recording the message, the task message will be sent to the IVA and the recording would stop.**
+
+To stop the recording of the message, the user can click on the blue button which indicates that IVA is recording the mesage. The IVA will then go back to default state, where the user can see the message composer and mic option.
 
 Once the message is recorded, the IVA translates the audio to text and it is sent as a user message. The taskbox closes as soon as the message is sent and then the IVA replies according to the message.
 

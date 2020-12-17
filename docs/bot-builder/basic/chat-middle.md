@@ -34,7 +34,7 @@ Example: If your bot is a sales bot, will a user make a purchase after conversin
 ### Pick the right terms
 
 A conversation often has several parts that can feel repetitive like Affirmations, Conversation Propellers, Conversation Enders, and so on. 
-Here’s the 🗝 Content Cheatsheet  — a content repository of phrases and keywords to use in various situations in any chat flow. 
+Here’s the 🗝 [**Content Cheatsheet**](/assets/Content_Cheatsheet.pdf) — a content repository of phrases and keywords to use in various situations in any chat flow. 
 
 ### Conversation User Interfaces vs Graphical User Interfaces
 
@@ -496,7 +496,7 @@ Example: Unfortunately, none of our agents are available at the moment. Tap belo
 
 ## Unstructured FAQ IVA guideline
 
-**Definition**: FAQs stand for frequently asked questions. Adding general FAQs to your bot is a great way to ensure that users receive answers to most of their basic questions alongside the more detailed user journeys that you have built. Here’s an 🗝 FAQ bot building guideline to give a quick overview of the entire process. Examples:
+**Definition**: FAQs stand for frequently asked questions. Adding general FAQs to your bot is a great way to ensure that users receive answers to most of their basic questions alongside the more detailed user journeys that you have built. Examples:
 
 ![chatmiddle23](/assets/chatmiddle23.png)
 

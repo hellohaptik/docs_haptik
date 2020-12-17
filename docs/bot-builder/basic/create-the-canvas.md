@@ -1,5 +1,5 @@
 ---
-title: Create the canvas
+title: Building Blocks of Design
 ---
 
 ## Understand Business Requirements
@@ -58,7 +58,15 @@ Ask the following questions in order to understand what you’re working with!
 
 Getting the answers to these questions will help you understand the expected outcome (e.g. reduce the existing turnaround time from 20 minutes to 3 seconds) and also be valuable during the Conversation Design phase (e.g when you need to tell the customer when agents will be available, etc.).
 
-4. Use gathered User persona(s) through User Research or internal teams. There are some 🗝 samples for reference. This data can be pulled from the brand’s target demographic data and market research.
+4. Use gathered User persona(s) through User Research or internal teams. There are some samples for reference. This data can be pulled from the brand’s target demographic data and market research.
+
+Sample 1 -
+
+![user_persona1](/assets/userpersona1.png)
+
+Sample 2 -
+
+![user_persona2](/assets/userpersona2.png)
 
   This persona(s) can be used in two ways:
 
@@ -72,6 +80,8 @@ Getting the answers to these questions will help you understand the expected out
   - To ensure that your bot can handle all types of users: Use your varied user persona while role-playing conversations. When you’re dealing with a spectrum of different users, the bot is expected to handle varied emotions, languages, technical savviness, and so on. Use these personas while designing to test whether your bot can withstand the angriest customers’ demands and can encourage a shy, new customer to make a purchase.
 
 5. Create a bot persona with the name and avatar. 
+
+![bot_persona](/assets/botpersona.png)
 
   Check if there is an existing brand mascot. If there isn’t, start creating one! 
 

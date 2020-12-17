@@ -65,6 +65,8 @@ Step 2: Look for the desired SmartSkills from the list of SmartSkills
 
 Step 3: Once decided, click on the SmartSkill name to open SmartSkill details. The SmartSkill details will have information about the Purpose of the SmartSkill, How to use the SmartSkill, and, the APIs and Entities used in it. The details section also has a short demo of SmartSkill to let you see it in action. Click on each of these section to know more.
 
+![usetemplate](assets/smartskill4.png)
+
 Step 4: Finally, once you are sure, click the Use Template button on the Right corner to add the SmartSkill to your IVA. The SmartSkill will be imported as a sub-story in your IVA. You can edit the parts of SmartSkill as per your need and start using it in your IVA.
  
 ![add_ss](assets/smartskill3.png)

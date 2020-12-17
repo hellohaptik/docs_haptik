@@ -96,6 +96,7 @@ SmallTalk is a way to ensure that your bot is able to answer chit chat queries. 
 3. Set clear expectations. This will dictate the success of your bot. Tell the user what the bot can do and give them an option if they can’t find their query on the supported list. Ask them to satate their query in keywords if that’s what your bot understands best.
 
 4. Don’t be bot centric. Focus on the user instead of focusing on the bot. 
+
 **Example**: When the bot is unable to understand a user’s query, instead of saying, “Oops! I didn’t understand that because I’m a bot”, say “I’m sorry that your query wasn’t resolved. Would you like to start over?”.
 
 💡 Tip: Take cues from a real human assistant and read your content out loud to gauge whether it comes across as empathetic and natural.

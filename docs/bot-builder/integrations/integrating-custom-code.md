@@ -208,7 +208,7 @@ For instance, consider a use-case where a user wants to renew a policy, the user
 **Things to remember while using Conversation details:**
 
 1) The information which is stored should be related to the conversation.
-2) The Data storage limit is 500 characters.
+2) The Data storage limit is 2500 characters.
 3) The data in conversation details stays for 3 hours only.
 
 ### User Details

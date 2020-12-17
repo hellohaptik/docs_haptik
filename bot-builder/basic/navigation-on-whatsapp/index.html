@@ -1,0 +1,242 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Building IVAs on WhatsApp · Haptik Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Given that WhatsApp today occupies a large portion of an individual’s time with their mobile device, it is critical that companies acknowledge this behavior and design initiatives to fully leverage the firm yet simplistic platform that Whatsapp is. Once you implement a WhatsApp Business Solution, your customers need not go through a long IVR process, they can simply send their concerns to the company using WhatsApp and the query will be addressed within seconds by an AI-powered WhatsApp virtual assistant."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Building IVAs on WhatsApp · Haptik Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.haptik.ai/"/><meta property="og:description" content="Given that WhatsApp today occupies a large portion of an individual’s time with their mobile device, it is critical that companies acknowledge this behavior and design initiatives to fully leverage the firm yet simplistic platform that Whatsapp is. Once you implement a WhatsApp Business Solution, your customers need not go through a long IVR process, they can simply send their concerns to the company using WhatsApp and the query will be addressed within seconds by an AI-powered WhatsApp virtual assistant."/><meta property="og:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="robots" content="noindex"/><link rel="shortcut icon" href="/img/image_0.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-106563119-6', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="/js/index.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/image_0.png" alt="Haptik Docs"/><h2 class="headerTitleWithLogo">Haptik Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="/#tools" target="_self">Tools</a></li><li class=""><a href="/#integrations" target="_self">Integrations</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Conversation Design</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/basic/introduction">Introduction</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Conversation Design</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/basic/conversation-design-introduction">Introduction</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/setting-flowchart-tool">Setting up a Flowchart tool</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/create-the-canvas">Building Blocks of Design</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/chat-initiation">Chat Initiation</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/chat-middle">Chat Middle</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/chat-end">Chat End</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/whatsapp_as_a_platform">Conversation Design on WhatsApp</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/bot-builder/basic/navigation-on-whatsapp">Building IVAs on WhatsApp</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/designing-wa-hsms">WhatsApp HSMs</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/design-review">Design Review</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Essentials of Bot Building</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/basic/making-first-bot">Making Your First Bot</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/bot-hierarchy">Bot Hierarchy</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/advanced/development-guidelines">Bot Development Life Cycle</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/creating-story">Creating a Story</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/creating-nodes">Creating Nodes</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/smalltalk">Small Talk</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/general-nodes">General Nodes</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/upload-graph-nodes">Upload Graph Nodes</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/user-says-guidelines">User Says Guidelines</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/bot-says">Bot Says</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/chat-elements">Chat Elements</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/connections">Connections</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/entities">Entities</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/forms">Forms</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/story-templates">Story Templates</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/searchbot">Search your IVA</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Configurations Settings</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/basic/business">Business</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/platforms-deployment">Platforms Deployment</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/copypaste">Copy &amp; Paste on Conversation Studio</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/sharebot">Share your IVA</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/transferbot">Transfer your IVA</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/bot-prompt-trigger">Bot Prompts</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">NLU</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/basic/introduction-nlu">Introduction</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/intent">Intent &amp; Entity</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/dialoguemanager">Dialogue Manager</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/managing-bot-state">Managing Bot Context and State</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/disambiguation">Did you mean? (Disambiguation)</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/smart-assist">Smart Assist</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Integrations</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/integrations/introduction">Introduction</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/integrations/integrating-custom-code">Code Node Integration</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/integrations/integrating-apis">Static Node Integration</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/integrations/integration-parameters">Integration Parameters</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Quality Assessment</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/basic/testing-bot">Testing your bot</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/advanced/testing-guidelines">Testing Guidelines</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/advanced/debugging-guidelines">How to debug your bot?</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/oracle-feedback">ORACLE Feedback</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/bot-qa-tool">Bot QA Tool</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Advanced</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/advanced/integrating-webviews-into-sdk">Integrating Webviews</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/advanced/integrating-with-external-bot">Integrating with External Bot</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Webhooks</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/integrations/additional-apis">Additional APIs</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Miscellaneous</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-builder/basic/multiple-languages">Multilingual IVAs</a></li><li class="navListItem"><a class="navItem" href="/bot-builder/basic/building-voice-bots">Building Voice bots</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Building IVAs on WhatsApp</h1></header><article><div><span><p>Given that WhatsApp today occupies a large portion of an individual’s time with their mobile device, it is critical that companies acknowledge this behavior and design initiatives to fully leverage the firm yet simplistic platform that Whatsapp is. Once you implement a WhatsApp Business Solution, your customers need not go through a long IVR process, they can simply send their concerns to the company using WhatsApp and the query will be addressed within seconds by an AI-powered WhatsApp virtual assistant.</p>
+<p>Well, when it comes to creating a WhatsApp IVA, the first and foremost consideration is design. There are a lot of UX considerations to keep in mind while designing an automated experience for WhatsApp.</p>
+<p>Some tips to start with -</p>
+<ul>
+<li><p>WhatsApp is a user-focused platform, users have the power to block or report a business number.</p></li>
+<li><p><strong>Start small</strong>: Start with the burning customer issues which can be resolved in a transactional manner with a quick resolution on WhatsApp. These use cases will help maintain a high-quality rating from the users.</p></li>
+<li><p>Design a conversational experience for the user. It’s WhatsApp, after all.</p></li>
+<li><p>Enrich the customer experience by using media messages (photos, videos, etc.) to drive higher engagement</p></li>
+<li><p>Ensure valid human escalation paths - Businesses without a valid human escalation path may become red in terms of quality rating and will see the phone number Status is Flagged. Valid escalation paths include human agent handoff in a thread, phone number, email, web support form or prompting the user for an in-store visit.</p></li>
+</ul>
+<p>You can go through this detailed video for understanding how to build WhatsApp IVAs on Conversation Studio.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fEUCbbX27pU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h2><a class="anchor" aria-hidden="true" id="chat-initiation"></a><a href="#chat-initiation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Chat Initiation</h2>
+<p>But before you start building a WhatsApp IVA, it’s important to first answer the crucial question – <strong>How do you start acquiring customers on WhatsApp?</strong></p>
+<p>A key point to note is that WhatsApp requires a brand to get an opt-in from a user before it can start engaging with him/her i.e. the user needs to consent to start a conversation with your business.</p>
+<p>Here’s a quick guide to some of the techniques you can use to begin your brand’s conversations with customers on the world’s largest messaging channel.</p>
+<p>Read more about how you can acquire new customers using WhatsApp <a href="https://www.haptik.ai/blog/acquire-customers-with-whatsapp-marketing"><strong>here</strong></a>.</p>
+<p>Read more about opt-in <a href="https://developers.facebook.com/docs/whatsapp/guides/opt-in/"><strong>here</strong></a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="introduction--authentication-on-whatsapp"></a><a href="#introduction--authentication-on-whatsapp" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introduction &amp; Authentication on WhatsApp</h2>
+<p>As per WhatsApp's business policy - either a chat is user-initiated OR the brand sends push notifications to engage with a user. After acquiring your customer base and learning who you want to target you should continue with identifying the user.</p>
+<p>When a user initiates a chat on WhatsApp, the mobile number of the user and the WhatsApp name are shared via the WhatsApp Business API. This information can be subsequently used to personalize the user’s interaction with your brand on WhatsApp.</p>
+<ul>
+<li><strong>Name</strong>: Greet the user by their name. It helps to establish trust with the end-user.</li>
+<li><strong>Number</strong>: The user’s phone number can be leveraged in multiple ways. If the user is looking to seek any specific information related to their account, the WhatsApp number becomes the unique identifier. Using the WhatsApp phone number, we can first authenticate the user and then fetch information based on their request.</li>
+</ul>
+<p>Give users a secure onboarding by authenticating their phone number and asking them if they want to move ahead with that specific phone number. If they choose to authenticate another phone number, go ahead and use OTP verification to allow them to log in safely and securely.</p>
+<p>This not only gives the user flexibility to switch numbers and authenticate themselves to carry out a task on the IVA but also allows for re-engagement using past information.</p>
+<p><img src="/assets/intro&amp;auth1.png" alt="navigation1"></p>
+<p><strong>Help users switch numbers using OTP authentication</strong></p>
+<p><img src="/assets/intro&amp;auth2.png" alt="navigation2"></p>
+<p><img src="/assets/intro&amp;auth3.png" alt="navigation2"></p>
+<h2><a class="anchor" aria-hidden="true" id="guided-navigation-on-whatsapp"></a><a href="#guided-navigation-on-whatsapp" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Guided Navigation on WhatsApp</h2>
+<p>At the start of the conversation, the user should be shown a concise menu. The menu should contain the top functionalities of the bot. Like any chatbot experience, this menu is no different.</p>
+<p>Each item listed on the menu should be clear and easy to understand.</p>
+<p>The menu selection can happen in two ways -</p>
+<ul>
+<li><p>The user needs to either type the menu item. For eg. Benefits of WhatsApp. Since a user is required to type, the menu item should be concise so that it is easy for a user to type.</p></li>
+<li><p>The user can simply type the item number to move forward, like in an IVR system. (Users are habituated to use numbers to proceed).
+The menu serves as the first message that will be seen by the user. Therefore, sharing a useful tip right at the beginning is a great opportunity to educate the user.</p></li>
+</ul>
+<p><strong>An informative tip like ‘Type main menu’ to go back at any point in the conversation will come in handy for the user.</strong></p>
+<p>Sample WhatsApp Menu</p>
+<p><img src="/assets/1_GuidedNavigationonWhatsApp.png" alt="navigation3"></p>
+<h4><a class="anchor" aria-hidden="true" id="hybrid-method"></a><a href="#hybrid-method" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Hybrid Method</h4>
+<p>A hybrid method not only allows the user to type their query in free form but also gives them an option to opt for a guided menu option. The design of the first message should be clear and precise. It should not confuse the user instead should allow them flexibility of free form and guided navigation.</p>
+<p><img src="/assets/2_GuidedNavigationonWhatsApp_hybrid.png" alt="navigation4"></p>
+<h2><a class="anchor" aria-hidden="true" id="chat-middle"></a><a href="#chat-middle" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Chat Middle</h2>
+<p>A WhatsApp Bot is fairly different from most other kinds of chatbots you might be familiar with. Typically, UI elements such as buttons and quick replies are a key aspect in streamlining a chatbot experience. UI elements not only help to propel the conversation forward but also help the user to achieve their end goal in the quickest way possible.</p>
+<p>While designing a WhatsApp IVA, one has to operate within certain UI limitations and build an experience sans quick replies, buttons, and carousels. Sharing some workaround for the platforms’ limitations here -</p>
+<p><img src="/assets/Table1.png" alt="navigation5"></p>
+<p><img src="/assets/Table2.png" alt="navigation6"></p>
+<p><img src="/assets/Table3.png" alt="navigation7"></p>
+<p><img src="/assets/Table4.png" alt="navigation8"></p>
+<p><img src="/assets/Table5.png" alt="navigation9"></p>
+<h2><a class="anchor" aria-hidden="true" id="natural-language-vs-numeric-user-inputs--"></a><a href="#natural-language-vs-numeric-user-inputs--" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Natural language vs numeric user inputs -</h2>
+<p>While designing a WhatsApp IVA, it is important to carefully decide when to offer the user numeric transition and when to facilitate free text inputs from the user. This acts as a starting point for the user so designing the menu keeping the user in mind becomes crucial.</p>
+<h3><a class="anchor" aria-hidden="true" id="when-to-use-numeric-transition"></a><a href="#when-to-use-numeric-transition" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>When to use numeric transition?</h3>
+<ol>
+<li><p>For Menu Selection</p>
+<ul>
+<li>A user can simply type the item number to move forward, like in an IVR system. (Users are habituated to use numbers to proceed).</li>
+</ul>
+<p><img src="/assets/1_Naturallanguage.png" alt="navigation10"></p></li>
+<li><p>For Selection of any complex input. (Complex for the user to type)</p>
+<ul>
+<li>Eg: Policy ID, Order ID, Shipment tracking number, AWB number</li>
+</ul>
+<p><img src="/assets/2_Naturallanguage.png" alt="navigation11"></p></li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="when-to-use-free-text"></a><a href="#when-to-use-free-text" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>When to use Free Text</h3>
+<ol>
+<li><strong>Questions</strong></li>
+</ol>
+<p>Questions are a great way to steer the conversation in the right direction. The questions need to be relatable and intuitive. Forcing the question just to move the conversation forward might lead to a substandard conversational experience.</p>
+<p>In fact, questions or commands are the only way to keep the conversation going on WhatsApp.</p>
+<p>Let’s take a look at the Types of Questions:</p>
+<ul>
+<li><strong>Yes/No Questions</strong></li>
+</ul>
+<p>Questions that trigger a yes/no response are an easy way to engage the user and push the conversation forward.</p>
+<p>Example: Would you like to learn more about Chatbots?</p>
+<p>The answer to this question might seem straightforward. But that is not entirely true. A user can say Yes and No in so many different ways.</p>
+<p>Yes: Ya, yup, yeah, yah, ok, sure, alright
+No: Nope, nah, not really, not interested</p>
+<blockquote>
+<p>The bot should be trained to understand agreement vs dissent. There are some obvious cases that might fail with this approach — for e.g.  ‘Why not’.</p>
+</blockquote>
+<ul>
+<li><strong>Suggestive Questions</strong></li>
+</ul>
+<p>Suggestive Questions are a perfect replacement for buttons. It is ideal to present options and let the user define the next course of action.</p>
+<p>Example: Are you interested in chatbots or voice bots?</p>
+<p>A good way to emphasize the selection is by using bold. You can use <strong>bold</strong> text on WhatsApp.</p>
+<p>Example: Are you interested in <strong>chatbots</strong> or <strong>voice bots</strong>?</p>
+<p>You can easily observe the substantial improvement in readability.</p>
+<ol start="2">
+<li><strong>Tips</strong> 💡</li>
+</ol>
+<p>Providing tips throughout the conversation is a must. A seamless two-way interaction on WhatsApp is only possible if the user is aware of how to use it.</p>
+<p>Let us now consider the Types of Tips:</p>
+<ul>
+<li><strong>Menu</strong></li>
+</ul>
+<p>💡 Type ‘go back’ to see the main menu.
+OR<br>
+💡 You can simply type ‘Menu’ to select any other option.</p>
+<ul>
+<li><strong>Question Tips</strong></li>
+</ul>
+<p>Tip: You can also ask me questions like ‘example’</p>
+<blockquote>
+<p>The IVA should always be able to handle user queries in free text. It should be built keeping all the right intents in mind so that the user has the choice of typing at any given point.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="content-formatting-options"></a><a href="#content-formatting-options" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Content Formatting Options</h2>
+<p>The messages you send on WA can be formatted in normal text formats like -</p>
+<ol>
+<li>Bold - Use (*) for this.</li>
+</ol>
+<p>Your total is <em>INR1000</em>.</p>
+<ol start="2">
+<li>Italicized - Use (_) for this</li>
+</ol>
+<p>_Welcome to <em>WhatsApp</em>!</p>
+<h2><a class="anchor" aria-hidden="true" id="design-for-in-built-whatsapp-features"></a><a href="#design-for-in-built-whatsapp-features" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Design for in-built WhatsApp features</h2>
+<p>We often get users using the inbuilt features of WhatsApp which our IVA is not trained for. Instead of hitting a roadblock we should better this experience for the user in case this situation might arise. Here are ways of handling these various unsupported features -</p>
+<ol>
+<li>If the user sends an image since image recognition is underway instead of the bot breaking we educate the user that the image cannot be read.</li>
+</ol>
+<p><img src="/assets/1_inbuilt_WA_features.png" alt="navigation12"></p>
+<p>In case of a hybrid bot - where we have human assistance, we let the user upload images so the agent can view the image and provide the best possible resolution for the user's query.</p>
+<ol start="2">
+<li>If the user clicks on the call/video call button, since this function will serve not purpose in the IVA, we can add a custom screen that looks like this -</li>
+</ol>
+<p><img src="/assets/2_inbuilt_WA_features.png" alt="navigation13"></p>
+<h2><a class="anchor" aria-hidden="true" id="chat-end"></a><a href="#chat-end" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Chat End</h2>
+<p>The end of a conversation on WhatsApp is quite different from other platforms. Unlike websites or apps where users have a ready option to go back to the main menu or click on the task button ready at their disposal, WhatsApp chats need to be well defined.</p>
+<ol>
+<li><p>We need to identify points that mark the end of a task which a user can complete. On these points, it is a good idea to check with the user via question if they would like to explore other options or they would like to end the conversation.</p></li>
+<li><p>If the user expresses the intent to close the conversation, we can use this opportunity to gather valuable feedback regarding the chat experience. This can be collected in the form of a CSAT question or a feedback question.</p></li>
+</ol>
+<p><strong>Example</strong> - How was your experience chatting with us on WhatsApp?</p>
+<ol>
+<li>Easily Understandable</li>
+<li>Helpful Answers</li>
+<li>Quick Response</li>
+<li>Interesting Answers</li>
+<li>All of the above</li>
+</ol>
+<p>💡Type a number from the list above to make your selection.</p>
+<h2><a class="anchor" aria-hidden="true" id="whatsapp-design-best-practices"></a><a href="#whatsapp-design-best-practices" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>WhatsApp Design Best Practices</h2>
+<ol>
+<li><p>Keep it spam-free - It’s a personal and private channel.</p></li>
+<li><p>Keep it short - WhatsApp messages should be short and to the point, with limited screen space, the general consumer tendency is to glance at the message and not read it end to end, which is why all the main content should be covered in copy that’s as short as possible.</p></li>
+<li><p>Keep it transactional - Since the user also has to know how to make a selection there is limited room to play around with chatty content. The content should be to the point but make the user feel comfortable in having a conversation with the brand and make an effort to respond with the limitations of UI elements.</p></li>
+<li><p>Keep it relevant - Since WhatsApp is an informal medium to communicate with friends and family, brands should also approach it with a semi-formal approach to make the consumer feel comfortable chatting with them on a platform they use for personal communication. Only send messages to users who have opted-in to receive messages from your business.</p></li>
+<li><p>Keep it updated - Make sure your brand information is up to date as the consumer viewing the WA profile will get to see information about your company, including your brand name, category, address, description, email, and website. This will add to the credibility and trust of the brand for the consumer conversing with the brand.</p></li>
+</ol>
+<p><strong>“You should message a business just the way you should message a friend.” - Mark Zuckerberg</strong></p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 12/17/2020</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/bot-builder/basic/whatsapp_as_a_platform"><span class="arrow-prev">← </span><span class="function-name-prevnext">Conversation Design on WhatsApp</span></a><a class="docs-next button" href="/bot-builder/basic/designing-wa-hsms"><span class="function-name-prevnext">WhatsApp HSMs</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#chat-initiation">Chat Initiation</a></li><li><a href="#introduction--authentication-on-whatsapp">Introduction &amp; Authentication on WhatsApp</a></li><li><a href="#guided-navigation-on-whatsapp">Guided Navigation on WhatsApp</a></li><li><a href="#chat-middle">Chat Middle</a></li><li><a href="#natural-language-vs-numeric-user-inputs--">Natural language vs numeric user inputs -</a><ul class="toc-headings"><li><a href="#when-to-use-numeric-transition">When to use numeric transition?</a></li><li><a href="#when-to-use-free-text">When to use Free Text</a></li></ul></li><li><a href="#content-formatting-options">Content Formatting Options</a></li><li><a href="#design-for-in-built-whatsapp-features">Design for in-built WhatsApp features</a></li><li><a href="#chat-end">Chat End</a></li><li><a href="#whatsapp-design-best-practices">WhatsApp Design Best Practices</a></li></ul></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Conversation Studio</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Smart Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Intelligent Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://docs.haptik.ai/ios-sdk/" class="footer-column-link">iOS SDK</a><a href="https://docs.haptik.ai/android-sdk/" class="footer-column-link">Android SDK</a><a href="https://docs.haptik.ai/web-sdk/" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/whatsapp/" class="footer-column-link">WhatsApp</a><a href="https://docs.haptik.ai/other/facebook" class="footer-column-link">Facebook</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Bot API</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a><a href="https://docs.haptik.ai/other/security" class="footer-column-link">Security</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Agent Chat Tool</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2020 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '224c7079e67e84a978d8b4621f6af16d',
+                indexName: 'haptik',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

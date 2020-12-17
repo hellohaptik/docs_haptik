@@ -1,6 +1,26 @@
 ---
-title: Navigation on WhatsApp
+title: Building IVAs on WhatsApp
 ---
+
+Given that WhatsApp today occupies a large portion of an individual’s time with their mobile device, it is critical that companies acknowledge this behavior and design initiatives to fully leverage the firm yet simplistic platform that Whatsapp is. Once you implement a WhatsApp Business Solution, your customers need not go through a long IVR process, they can simply send their concerns to the company using WhatsApp and the query will be addressed within seconds by an AI-powered WhatsApp virtual assistant.
+
+Well, when it comes to creating a WhatsApp IVA, the first and foremost consideration is design. There are a lot of UX considerations to keep in mind while designing an automated experience for WhatsApp.
+
+Some tips to start with - 
+
+- WhatsApp is a user-focused platform, users have the power to block or report a business number.
+
+- **Start small**: Start with the burning customer issues which can be resolved in a transactional manner with a quick resolution on WhatsApp. These use cases will help maintain a high-quality rating from the users.
+
+- Design a conversational experience for the user. It’s WhatsApp, after all.
+
+- Enrich the customer experience by using media messages (photos, videos, etc.) to drive higher engagement
+
+- Ensure valid human escalation paths - Businesses without a valid human escalation path may become red in terms of quality rating and will see the phone number Status is Flagged. Valid escalation paths include human agent handoff in a thread, phone number, email, web support form or prompting the user for an in-store visit.
+
+You can go through this detailed video for understanding how to build WhatsApp IVAs on Conversation Studio.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fEUCbbX27pU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Chat Initiation
 

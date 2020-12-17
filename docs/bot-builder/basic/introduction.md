@@ -12,11 +12,24 @@ You can go through the below introductory video of **Conversation Studio** to ta
 
 On **Conversation Studio**, you can create a bot i.e. formulate different conversation flows. Instead of creating bots on your own, our Conversation Studio gives you a framework and components to build the bot without much effort. We can broadly classify the bot building process in these 5 steps -
 
+- Smart Skills
 - Conversation Design
 - Bot Building
 - Configurations
 - Quality Assessment
 - Go-Live
+
+### Smart Skills
+
+Haptik has a varied array of Smart Skills which are highly curated, configurable and efficient conversational journeys. These Smart Skills form a sturdy baseline for the use-case of your IVA.
+
+Using Smart Skills will -
+
+- Significantly improve the development time of your IVA
+- They are thoroughly researched user journeys which require minimal altercation
+- Aid in implementing your first use-case within 4 clicks
+
+You can explore more about implementing Smart Skills by [clicking here](https://docs.haptik.ai/bot-builder/basic/smartskills).
 
 ### Conversation Design
 

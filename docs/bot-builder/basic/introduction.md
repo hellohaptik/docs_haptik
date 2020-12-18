@@ -31,7 +31,7 @@ Using Smart Skills will -
 
 You can explore more about implementing Smart Skills by [clicking here](https://docs.haptik.ai/bot-builder/basic/smartskills).
 
-### Conversation Design
+### Designing Conversations
 
 Before you get started with bot building, you need to lay down the conversation design. Our objective is not just to make bots, but also to create a robust experience for the end user. So, before you go ahead you should be clear on the following aspects:
 
@@ -53,9 +53,9 @@ Creating the conversation flow in your bots might seem straightforward, but ther
 2. Add expected user intents (*User Says*) and corresponding bot responses (*Bot Says*)
 3. You can make external integrations in your bot using (*Code Editor*) and (*Integrations*)
 
-We have detailed out the process of creating bots step-by-step. Read up the various articles from the left-hand navigation to know more.
+We have detailed out the process of creating bots step-by-step. You can start reading up the various articles [**here**](https://docs.haptik.ai/bot-builder/basic/making-first-bot).
 
-### Configurations 
+### Bot Configurations 
 
 Bot's configuration settings are as important as the bot design or bot building. For this purpose, you have a **Business** for your bot on **Conversation Studio**. It helps you with all the settings related to your bot, starting from the bot icon to bot color to bot's deployment channel. You can read more about it [**here**](https://docs.haptik.ai/bot-builder/basic/business).
 

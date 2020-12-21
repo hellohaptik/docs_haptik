@@ -42,24 +42,16 @@ This is similar to the “Did you mean?” feature. The difference is in the ton
 
 ![SA_6](assets/SA_6.png)
 
-## Few points to Note
+## Few points to Note - 
 
-1. A user can pick an option amongst a list of options by replying with “1”, “2”, “3” after the list of options.
+1. Users can pick an option amongst a list of options by replying with “1”, “2”, “3” after the list of options.
 
 **Demonstration -**
 
 ![SA_7](assets/SA_7.png)
 
-2. The IVA will not send the same type of SMART ASSIST message for two consecutive User messages. 
+2. The IVA would Break and not send out Smart Assist for a User message, if the previous User message was responded with a Bot Break or a Smart Assist message.
 
-E.g if a user received a SMART ASSIST message to rephrase his query, the next user message will either receive a correct response, or a SMART ASSIST message apart from the rephrase request.
-
-If the bot finds two consecutive user queries falling into the same SMART ASSIST message type, the second query will receive a Final Bot Break message.
-
-**Demonstration -** In the below image, the “Show sav” message received a SMART ASSIST message to rephrase the query. However, when the next user query was also found eligible to receive a request to rephrase the query, the IVA sent a Final Bot Break Message. The Final Bot Break message is configurable in the “Partner Specific” section of the Business Manager.
-
-![SA_8](assets/SA_8.png)
-
-3. Those SMART ASSIST messages that use button text, those respective button texts are fetched from the “Did you mean?” text section on the respective Nodes in the Conversation Studio.
+3. The button texts on the SMART ASSIST messages are fetched from the “Did you mean?” text section on the respective Nodes in the Conversation Studio.
 
 4. Text of the messages sent as SMART ASSIST responses, is currently non-customisable and controlled directly at the platform level.

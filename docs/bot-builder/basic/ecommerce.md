@@ -29,7 +29,7 @@ When users are not satisfied with the placed order, they can cancel their order 
 - The IVA will then fulfill the cancellation request via a Cancel Order API. 
 
 
-### 4. **Return/Replacement Request** – 
+### 4. **Replacement Request** – 
 Place a service request to replace a wrong or damaged order on the IVA by choosing from the list of fulfilled deliveries.
 - The user can raise a replacement request via the IVA. 
 - The IVA will first present the list of items eligible for replacement.

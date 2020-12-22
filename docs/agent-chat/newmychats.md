@@ -14,7 +14,7 @@ In this tab, an agent can start taking chats assigned to him/her personally. The
 
 A chat agent can:
   * View agent's display name
-  * View agent's status - Online or Offline
+  * View agent's status - Online or Take a Break
   * View his live chats stats (Completed, Waiting for user, My Queue, Team Queue)
   * View his active chats
 
@@ -40,10 +40,10 @@ When an agent goes online,
   - The agent could re-assign, mark as waiting, or complete any of the chats allocated to him
 
 - **Offline State**:
-When an agent goes offline
+When an agent goes on a break,
   - The agent will no longer receive any fresh chats
   - The agent can no longer mark a chat as waiting
-  - All chats that were already marked as waiting by him/her will start getting assigned back to the available agents so that they can close or re-assign the chat
+  - All chats that were already marked as waiting by him/her will be added to the team queue if the user replies back
   - The agent is expected to wrap up the chats that are already assigned to him
 
 - **Logout State**:
@@ -169,7 +169,6 @@ Canned Responses are predefined responses uploaded prior, which can easily used 
 A chat agent can:
   * View User Details
   * Use Custom tools
-  * View Previous Conversations
   
 #### User Details 
 
@@ -190,10 +189,6 @@ These external tools can also be expanded for better usability as shown in the i
 If there are more than 2 or 3 tools, they will come stacked in a list as shown in the below image -
 
 ![MyChatsScreen11](assets/Toolsdropdown.png)
-
-#### Previous Conversation - COMING SOON
-
-![MyChatsScreen12](assets/previousconversation.png)
 
 Depending on the permissions and features assigned to a Chat agent user, more actions could become accessible. 
   

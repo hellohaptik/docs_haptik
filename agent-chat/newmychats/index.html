@@ -70,15 +70,15 @@
 <p>A chat agent can:</p>
 <ul>
 <li>View agent's display name</li>
-<li>View agent's status - Online or Offline</li>
+<li>View agent's status - Online or Take a Break</li>
 <li>View his live chats stats (Completed, Waiting for user, My Queue, Team Queue)</li>
 <li>View his active chats</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="agent-details"></a><a href="#agent-details" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Agent Details</h4>
 <p>The agent will be able to view his name and also his current status.</p>
 <p><img src="/assets/AgentDetails.png" alt="MyChatsScreen3"></p>
-<p>You can also choose the change the status by clicking on <strong>&quot;Go Online&quot;</strong> or <strong>&quot;Go Offline&quot;</strong>.</p>
-<p>Before changing the status to offline, a pop up would come to confirm the change.</p>
+<p>You can also choose the change the status by clicking on <strong>&quot;Go Online&quot;</strong> or <strong>&quot;Take a break&quot;</strong>.</p>
+<p>Before changing the status to <strong>Take a break</strong>, a pop up would come to confirm the change.</p>
 <p><img src="/assets/offlinepopup.png" alt="MyChatsScreen4"></p>
 <p>Before changing the status to online, a pop up would come to confirm the change.</p>
 <p><img src="/assets/onlinepopup.png" alt="MyChatsScreen44"></p>
@@ -89,12 +89,12 @@ When an agent goes online,</p>
 <li>The agent will start receiving new chats as per his available slots.</li>
 <li>The agent could re-assign, mark as waiting, or complete any of the chats allocated to him</li>
 </ul></li>
-<li><p><strong>Offline State</strong>:
-When an agent goes offline</p>
+<li><p><strong>Take a break State</strong>:
+When an agent goes on a break,</p>
 <ul>
 <li>The agent will no longer receive any fresh chats</li>
 <li>The agent can no longer mark a chat as waiting</li>
-<li>All chats that were already marked as waiting by him/her will start getting assigned back to the available agents so that they can close or re-assign the chat</li>
+<li>All chats that were already marked as waiting by him/her will be added to the team queue if the user replies back</li>
 <li>The agent is expected to wrap up the chats that are already assigned to him</li>
 </ul></li>
 <li><p><strong>Logout State</strong>:
@@ -188,7 +188,6 @@ sent to our Human assistants.
 <ul>
 <li>View User Details</li>
 <li>Use Custom tools</li>
-<li>View Previous Conversations</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="user-details"></a><a href="#user-details" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>User Details</h4>
 <p><img src="/assets/userdetailsscreen.png" alt="MyChatsScreen9"></p>
@@ -200,13 +199,11 @@ sent to our Human assistants.
 <p><img src="/assets/expandedtoolsview.png" alt="MyChatsScreen101"></p>
 <p>If there are more than 2 or 3 tools, they will come stacked in a list as shown in the below image -</p>
 <p><img src="/assets/Toolsdropdown.png" alt="MyChatsScreen11"></p>
-<h4><a class="anchor" aria-hidden="true" id="previous-conversation---coming-soon"></a><a href="#previous-conversation---coming-soon" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Previous Conversation - COMING SOON</h4>
-<p><img src="/assets/previousconversation.png" alt="MyChatsScreen12"></p>
 <p>Depending on the permissions and features assigned to a Chat agent user, more actions could become accessible.</p>
 <blockquote>
 <p>We also have a system to enforce Data level permissioning i.e. an agent user is allowed to view/edit data for which business can be controlled using this.</p>
 </blockquote>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 12/18/2020</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/agent-chat/index"><span class="arrow-prev">← </span><span>Introduction</span></a><a class="docs-next button" href="/agent-chat/action-toolbars"><span>Toolbar Actions</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#how-to-use-my-chats">How to use My Chats?</a><ul class="toc-headings"><li><a href="#left-hand-side-of-the-screen">Left Hand Side of the screen</a></li><li><a href="#centre-of-the-screen">Centre of the screen</a></li><li><a href="#right-hand-side-of-the-screen">Right Hand Side of the screen</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Conversation Studio</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Smart Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Intelligent Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://docs.haptik.ai/ios-sdk/" class="footer-column-link">iOS SDK</a><a href="https://docs.haptik.ai/android-sdk/" class="footer-column-link">Android SDK</a><a href="https://docs.haptik.ai/web-sdk/" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/whatsapp/" class="footer-column-link">WhatsApp</a><a href="https://docs.haptik.ai/other/facebook" class="footer-column-link">Facebook</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Bot API</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a><a href="https://docs.haptik.ai/other/security" class="footer-column-link">Security</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Agent Chat Tool</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2020 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 12/22/2020</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/agent-chat/index"><span class="arrow-prev">← </span><span>Introduction</span></a><a class="docs-next button" href="/agent-chat/action-toolbars"><span>Toolbar Actions</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#how-to-use-my-chats">How to use My Chats?</a><ul class="toc-headings"><li><a href="#left-hand-side-of-the-screen">Left Hand Side of the screen</a></li><li><a href="#centre-of-the-screen">Centre of the screen</a></li><li><a href="#right-hand-side-of-the-screen">Right Hand Side of the screen</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Conversation Studio</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Smart Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Intelligent Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://docs.haptik.ai/ios-sdk/" class="footer-column-link">iOS SDK</a><a href="https://docs.haptik.ai/android-sdk/" class="footer-column-link">Android SDK</a><a href="https://docs.haptik.ai/web-sdk/" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/whatsapp/" class="footer-column-link">WhatsApp</a><a href="https://docs.haptik.ai/other/facebook" class="footer-column-link">Facebook</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Bot API</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a><a href="https://docs.haptik.ai/other/security" class="footer-column-link">Security</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Agent Chat Tool</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2020 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

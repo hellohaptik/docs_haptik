@@ -24,9 +24,9 @@ The agent will be able to view his name and also his current status.
 
 ![MyChatsScreen3](assets/AgentDetails.png)
 
-You can also choose the change the status by clicking on **"Go Online"** or **"Go Offline"**. 
+You can also choose the change the status by clicking on **"Go Online"** or **"Take a break"**. 
 
-Before changing the status to offline, a pop up would come to confirm the change.
+Before changing the status to **Take a break**, a pop up would come to confirm the change.
 
 ![MyChatsScreen4](assets/offlinepopup.png)
 
@@ -39,7 +39,7 @@ When an agent goes online,
   - The agent will start receiving new chats as per his available slots.
   - The agent could re-assign, mark as waiting, or complete any of the chats allocated to him
 
-- **Offline State**:
+- **Take a break State**:
 When an agent goes on a break,
   - The agent will no longer receive any fresh chats
   - The agent can no longer mark a chat as waiting

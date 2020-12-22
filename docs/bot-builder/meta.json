@@ -3,6 +3,12 @@
 		"Getting Started": [
 			"basic/introduction"
 		],
+		"Smart Skills": [
+			"basic/smartskills",
+			"basic/ecommerce",
+			"basic/telecom",
+			"basic/insurance"
+		],
 		"Conversation Design": [
 			"basic/conversation-design-introduction",
 			"basic/setting-flowchart-tool",

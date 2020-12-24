@@ -99,3 +99,8 @@ Click **'Save'** when done.
 Post creation of a node, the node will be displayed as depicted below:
 
 ![img](assets/Nodes3.png)
+
+
+#### Uploading Nodes
+
+You can also create nodes by uploading a CSV. You can read more about it [**here**](https://docs.haptik.ai/bot-builder/basic/upload-graph-nodes)

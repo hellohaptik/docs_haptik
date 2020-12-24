@@ -14,7 +14,7 @@ function getTitle() {
     ? MAP[path]
     : path
         .split('-')
-        .map((word) => word[0].toUpperCase() + word.slice(1))
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
         .join(' ');
 }
 
@@ -23,7 +23,7 @@ if (customsidebar.includes(getTitle())) addSidebarStyling();
 document.addEventListener('DOMContentLoaded', function () {
   title = getTitle();
 
-  if (title === 'Docs_haptik') return;
+  if (title === '') return;
 
   if (title === 'Bot Builder') title = 'Conversation Studio';
   if (title === 'Agent Chat') title = 'Smart Agent Chat';

@@ -183,7 +183,10 @@ Example:
 
 <b>event_name = chat_complete</b>
 
+> This event is deprecated in favor of [Webhook Conversation Complete](#webhook-conversation-complete) 
+
 A chat has been marked as complete by an agent from athena.
+
 **Note:** When a chat is marked complete any assigned agent is cleared.
 
 Example:

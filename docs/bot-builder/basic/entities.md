@@ -549,6 +549,16 @@ As you can see after selecting the **Mobile+ plan** the entity value is Mobile p
 1. payload_key, completion_key, and entity_value will be needed while creating the entity. 
 2. You cannot use capital letters to create any payload parameters.
 
+
+## Entity Reprompt
+
+When the user has not entered an expected entity value, for example, if there is a regex entity and the user has not entered a value that matches with the regex pattern, the IVA will then throw the Entity Reprompt message. Entity Reprompt message gives the user another opportunity to provide a correct value to the IVA. 
+
+![entity_reprompt](assets/entity_reprompt.png)
+
+> Note: Please make sure the previous_context_tag is updated if you are adding different message for Entity Reprompt.
+
+
 ## Node Entity Filter
 
 ### What is the feature?
@@ -737,3 +747,11 @@ The response to the User will still be from a Node which has Highest Confidence 
     <td>'en', 'hi', 'gu', 'bn', 'mr', 'ta'</td>
   </tr>
 </table>
+
+## Delete an entity
+
+You can delete an entity from the a particular node by clicking on the **delete icon** present beside the entity name.
+
+![delete_entity](assets/delete_entity.png)
+
+> Note: Even if the entity is deleted it would still appear in the debug logs section since the entity is not permanently deleted from the IVA.

@@ -93,7 +93,7 @@ module.exports = () => (
           url: '/other/sla',
         },
         {
-          title: 'Support Bot',
+          title: 'Help',
           url: '/other/supportbot',
         }
       ]}

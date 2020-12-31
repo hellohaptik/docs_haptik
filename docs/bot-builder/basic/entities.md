@@ -265,7 +265,7 @@ Entity Patterns allow the entities to be defined in such a manner that they can 
 
 > **Entity patterns can be added only in English for now.**
 
-### When should you use ENTITY PATTERNS?
+### When to use?
 
 It can be used in following cases - 
 
@@ -365,7 +365,7 @@ Aforesaid guidelines are illustrated in the image of Entity Patterns below -
 
 ![EP_9](assets/EP_9.png)
 
-### How do ENTITY PATTERNS work?
+### How do Entity Patterns work?
 
 When the entity patterns are defined, the IVA is trained on both the tagged term and the context in which the term is used. This enables the IVA to calculate a confidence score on every User Utterance, on how likely a word or phrase is going to be a value of an entity. 
 
@@ -407,7 +407,24 @@ Below is the case where the detection stopped once the Negative Variations were 
 
 ![EP_16](assets/EP_16.png)
 
-## **Entity Settings**
+## Entity Reprompt
+
+Entity Reprompt message gives a second chance to the user to provide an appropriate value to an entity. 
+
+When a user has not entered an expected entity value, for example, if there is an entity which captures phone-number and the user has entered his name, i.e. a value that does not match the phone number entity, the IVA will throw an Entity Reprompt message which would guide the user to enter an appropriate value.
+
+![entity_reprompt](assets/entity_reprompt.png)
+
+When you are defining the Entity Reprompt messgae, you can state examples of an entity to give direction to the user.
+
+Example -
+
+`I see you have not entered an appropriate phone-number. Can you please retry?
+Tip: The format accepted for a phone number is XXX-XXX-XXXX`
+
+> Note: Please make sure the previous_context_tag is updated if you are adding different message for Entity Reprompt.
+
+## Entity Settings
 
 We have 4 main Advanced Settings options under entities.
 
@@ -549,16 +566,6 @@ As you can see after selecting the **Mobile+ plan** the entity value is Mobile p
 1. payload_key, completion_key, and entity_value will be needed while creating the entity. 
 2. You cannot use capital letters to create any payload parameters.
 
-
-## Entity Reprompt
-
-When the user has not entered an expected entity value, for example, if there is a regex entity and the user has not entered a value that matches with the regex pattern, the IVA will then throw the Entity Reprompt message. Entity Reprompt message gives the user another opportunity to provide a correct value to the IVA. 
-
-![entity_reprompt](assets/entity_reprompt.png)
-
-> Note: Please make sure the previous_context_tag is updated if you are adding different message for Entity Reprompt.
-
-
 ## Node Entity Filter
 
 ### What is the feature?
@@ -659,6 +666,14 @@ The response to the User will still be from a Node which has Highest Confidence 
         a. The User Utterance has no entity values, or
         b. The User Utterance has both the entity values on which filter has been applied.
 
+## Delete an entity
+
+You can delete an entity from the a particular node by clicking on the **delete icon** present beside the entity name.
+
+![delete_entity](assets/delete_entity.png)
+
+> Note: Even if the entity is deleted it would still appear in the debug logs section since the entity is not permanently deleted from the IVA.
+
 ## Language Support for Different Entities
 
 <table>
@@ -747,11 +762,3 @@ The response to the User will still be from a Node which has Highest Confidence 
     <td>'en', 'hi', 'gu', 'bn', 'mr', 'ta'</td>
   </tr>
 </table>
-
-## Delete an entity
-
-You can delete an entity from the a particular node by clicking on the **delete icon** present beside the entity name.
-
-![delete_entity](assets/delete_entity.png)
-
-> Note: Even if the entity is deleted it would still appear in the debug logs section since the entity is not permanently deleted from the IVA.

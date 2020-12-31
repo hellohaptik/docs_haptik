@@ -66,24 +66,25 @@ As per the SSML tags used above, after Bot says "You can contact us on" there wi
 
 You can use the following SSML tags while adding Voice Says:
 
-- effect
+- effect: This can be used to enhance the volume of certain sounds in your audio file.
 
-- break
+- emphasis: This can used to emphasize words. Emphasizing words changes the speaking rate and volume.
 
-- emphasis
+- p: This can be used to add a pause between paragraphs in the text.
 
-- p
+- phoneme: This can be used for phonetic pronunciation for specific text. 
 
-- phoneme
+- s: This can be used to add a pause between lines or sentences in your text. 
 
-- s
+- lang: This can be used to specify another language for a specific word, phrase, or sentence.
 
-- speak
+- sub: This can be used with the alias attribute to substitute a different word (or pronunciation) for selected text such as an acronym or abbreviation.
 
-- sub
+Example - 
 
-- lang
-
+`<speak>
+     My favorite chemical element is <sub alias="Mercury">Hg</sub>, because it looks so shiny. 
+</speak>`
 
 ### Do's & Don'ts for building a Voice IVA:
 
@@ -103,7 +104,9 @@ You can use the following SSML tags while adding Voice Says:
 
 - Voice IVA may sometimes not pronounce the words properly. Misspelling the word in “Voice says” may help at times.
 
-- IVA may also not pronounce non-English words properly. Accordingly, edit the text in "Voice text" field.
+- Currently, there is Voice Support only for **English language**.
+
+> **Note: Voice IVA have best support on Mozilla and Chrome browser. On mobile phones, it works only in Android.**
 
 ## How to use a voice IVA?
 

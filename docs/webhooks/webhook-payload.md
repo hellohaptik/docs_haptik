@@ -101,12 +101,15 @@ Example:
     "user": {
         "auth_id": "<AUTH_ID>",
         "device_platform": "<DEVICE_PLATFORM>",
+        "device_platform_name": "<DEVICE_PLATFORM_NAME>",
         "user_name": "<USER_NAME>",
+        "user_id": "<USER_ID>",
         "phone_model": "<PHONE_MODEL>",
         "os_version": "<OS_VERSION>",
         "package_name": "<PACKAGE_NAME>",
     },
     "business_id": 343,
+    "business_name": "<BUSINESS_NAME>",
     "event_name": "message",
     "agent": {
         "id": 4415,
@@ -142,12 +145,15 @@ Example:
     "user": {
         "auth_id": "<AUTH_ID>",
         "device_platform": "<DEVICE_PLATFORM>",
+        "device_platform_name": "<DEVICE_PLATFORM_NAME>",
         "user_name": "<USER_NAME>",
+        "user_id": "<USER_ID>",
         "phone_model": "<PHONE_MODEL>",
         "os_version": "<OS_VERSION>",
         "package_name": "<PACKAGE_NAME>",
     },
     "business_id": 343,
+    "business_name": "<BUSINESS_NAME>",
     "event_name": "chat_pinned",
     "agent": {
         "id": 235,
@@ -177,7 +183,10 @@ Example:
 
 <b>event_name = chat_complete</b>
 
+> This event is deprecated in favor of [Webhook Conversation Complete](#webhook-conversation-complete) 
+
 A chat has been marked as complete by an agent from athena.
+
 **Note:** When a chat is marked complete any assigned agent is cleared.
 
 Example:
@@ -189,12 +198,15 @@ Example:
     "user": {
         "auth_id": "<AUTH_ID>",
         "device_platform": "<DEVICE_PLATFORM>",
+        "device_platform_name": "<DEVICE_PLATFORM_NAME>",
         "user_name": "<USER_NAME>",
+        "user_id": "<USER_ID>",
         "phone_model": "<PHONE_MODEL>",
         "os_version": "<OS_VERSION>",
         "package_name": "<PACKAGE_NAME>",
     },
     "business_id": 343,
+    "business_name": "<BUSINESS_NAME>",
     "event_name": "chat_complete",
     "agent": {
         "id": 4415,
@@ -226,11 +238,14 @@ Example:
     "version": "1.0",
     "timestamp": "2019-07-03T11:42:44.077Z",
     "business_id": 343,
+    "business_name": "<BUSINESS_NAME>",
     "event_name": "webhook_conversation_complete",
     "user": {
         "auth_id": "<AUTH_ID>",
         "device_platform": "<DEVICE_PLATFORM>",
+        "device_platform_name": "<DEVICE_PLATFORM_NAME>",
         "user_name": "<USER_NAME>",
+        "user_id": "<USER_ID>",
         "phone_model": "<PHONE_MODEL>",
         "os_version": "<OS_VERSION>",
         "package_name": "<PACKAGE_NAME>",
@@ -253,7 +268,8 @@ Example:
         "conversation_no": "<CONVERSATION_NO>",
         "collection_id": "<COLLECTION_ID>",
         "conversation_identifier": "<CONVERSATION_IDENTIFIER>",
-        "chat_link": "<CHAT_LINK>",
+        "chat_link":"<CHAT_LINK>", // deprecated. use `complete_chat_link` instead
+        "complete_chat_link": "<CHAT_LINK>",
         "closing_categories": {
             "reason": "",
             "subReason": "",

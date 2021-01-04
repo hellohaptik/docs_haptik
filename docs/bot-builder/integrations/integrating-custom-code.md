@@ -119,6 +119,7 @@ The output JSON variables are also visible when we click on `Add Variables` whil
 2) You can call external APIs from this code as per your requirement.
 3) You can send output JSON as response from the Code Editor which can be accessed in the Output Node for displaying responses to users.
 4) The HSL message(Bot Says Element) that you want the IVA to respond with should be sent as a JSON in the body of the returned response object from the main function.
+5) There is a 20 second time limit for code executor, which means if the API does not respond within 20 seconds of the call, the IVA will break.
 
 ## Supported Packages 
 1. *Default* - [List of Packages here](https://gist.github.com/gene1wood/4a052f39490fae00e0c3#file-all_aws_lambda_modules_python3-6-txt)
@@ -175,6 +176,8 @@ In the `variables` menu that opens, you can set the variable name and values for
 ![Opening Code Editor](assets/api5.png)
 
 These environment variables are then available within the request parameters for the integration functions. You can read about the request parameter structure [here](https://docs.haptik.ai/bot-builder/integrations/integration-parameters)
+
+> Note: There is a **character limit of 50** to store the environment variables. If this limit exceeds, the IVA will break.
 
 ## Saving Conversation Details and User Details in the Code Editor
 

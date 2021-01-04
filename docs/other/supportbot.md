@@ -2,13 +2,13 @@
 title: Help
 ---
 
-Haptik Platform has multiple tools like Conversation Studio, Smart Agent Chat, Intelligent Analytics and Admin Tools. All of these tools have numerous features that help us create complex and sophisticated Conversational AI solutions like IVA.
+Haptik Platform has multiple tools like Conversation Studio, Smart Agent Chat, Intelligent Analytics, and Admin Tools. All of these tools have numerous features that help us create complex and sophisticated Conversational AI solutions like IVA.
 
 But what if you get stuck somewhere or you want to know about a particular feature in more depth. To handle these, we have a **Help Section** in place to help you. 
 
 ## Where can you access **Help**?
 
-You can access the Help Section from all tool pages, i.e. from Home Page, Conversation Studio, Smart Agent Chat, Intelligent Analytics and Admin Tools on the left side bar. You can click on the icon highlighted in the below diagram to open.
+You can access the Help Section from all tool pages, i.e. from Home Page, Conversation Studio, Smart Agent Chat, Intelligent Analytics, and Admin Tools on the left sidebar. You can click on the icon highlighted in the below diagram to open.
 
 ![SupportBot1](assets/PS1.png)
 
@@ -18,11 +18,9 @@ If the FAQ and documentation are not at par in resolving your query, you can als
 
 Our support team looks at these tickets and resolves the query as soon as possible.
 
-![SupportBot2](assets/psb1.png)
-
 ![open_help](assets/psbv2.png)
 
-## How to use Help Section?
+## How to use the Help Section?
 
 As stated above, along with the FAQs and documentation there is a ticketing journey to raise issues about the platform. 
 
@@ -40,7 +38,7 @@ When you have an issue and you want to raise an issue you will have to provide t
 
 - **Bot link or Chat Link**
 
-- **Date and Time**: You can mention the date and time of issue you are currently facing
+- **Date and Time**: You can mention the date and time of the issue you are currently facing
 
 Once you have provided the above details, you will receive a confirmation message about the ticket on the IVA.
 
@@ -52,4 +50,4 @@ If your request is not listed on the Roadmap, you can create a new one by clicki
 
 ![SupportBot4](assets/PS4.png)
 
-> Note: You can also make requests to improve the Help Section on the IVA iteself.
+> Note: You can also make requests to improve the Help Section on the IVA itself.

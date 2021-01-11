@@ -69,12 +69,10 @@ FAQ or General Nodes are ideal for use cases like FAQs to answer general queries
 
 Because General (FAQ) Nodes are very simple in terms of features (no entities/api calls etc.) and the ability to maintain the context of the bot, they are ideal for quick Question/Answer type contents i.e. FAQs.
 
-You can read more about it [here](https://docs.haptik.ai/bot-builder/basic/general-nodes).
+You can read more about it [**here**](https://docs.haptik.ai/bot-builder/basic/general-nodes).
 
 ### Small Talk
 
 It is the chit-chat module present on the Haptik Platform. It has been developed by Haptik after careful curation of 99 intents, from Haptik’s deep experience in conversational design and observed trends from over 3 billion interactions. The 99 intents are partly customizable, such that every IVA can choose to send its own custom reply to the User Utterance.
 
-You can read more about it [here](https://docs.haptik.ai/bot-builder/basic/smalltalk).
-
-Now that we know all components of the bot to get started, let us start our [**bot development life cycle**](https://docs.haptik.ai/bot-builder/advanced/development-guidelines).
+You can read more about it [**here**](https://docs.haptik.ai/bot-builder/basic/smalltalk).

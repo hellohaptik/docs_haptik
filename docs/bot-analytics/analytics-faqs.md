@@ -9,4 +9,4 @@ No, 8 minutes inactivity window is not configurable. After 8 minutes of inactivi
 - **If the conversation is assigned to an agent, do we still close the conversation if there are no interactions for 8 minutes?**
 
 It depends on the conversation state, if the conversation is in an Agents Queue or Assigned to an agent, it will not be auto completed.
-However if the chat is in "waiting for user" state, as marked by an agent, it will auto complete after 8 minutes of inactivity
+However if the chat is in "waiting for user" state, as marked by an agent, it will auto complete after 8 minutes of inactivity.

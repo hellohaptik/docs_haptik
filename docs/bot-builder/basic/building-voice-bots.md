@@ -18,7 +18,9 @@ There are few steps to enable voice on your IVA. These are explained below in de
 
 **Firstly**, the business needs to be configured to accept voice input. Under **Channel** page of **Business Manager**, enable the **Text + Voice** user input method, as shown below.
 
-![businessmanagervoice](assets/bm_voice.png)
+![businessmanagervoice](assets/voice_business.png)
+
+> **Warning: Initial Input field is being deprecated**
 
 Once this is configured, you should be able to see the mic icon on the IVA.
 

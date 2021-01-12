@@ -1,0 +1,140 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>AI Recommendations · Haptik Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Introduction"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="AI Recommendations · Haptik Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.haptik.ai/"/><meta property="og:description" content="## Introduction"/><meta property="og:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="robots" content="noindex"/><link rel="shortcut icon" href="/img/image_0.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-106563119-6', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="/js/index.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/image_0.png" alt="Haptik Docs"/><h2 class="headerTitleWithLogo">Haptik Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="/#tools" target="_self">Tools</a></li><li class=""><a href="/#integrations" target="_self">Integrations</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Sections</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-analytics/">Introduction</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Sections</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-analytics/overview">Overview</a></li><li class="navListItem"><a class="navItem" href="/bot-analytics/story-analysis">Story Analysis</a></li><li class="navListItem"><a class="navItem" href="/bot-analytics/using-message-analysis">Message Analysis</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/bot-analytics/ai-recommendations">AI Recommendations</a></li><li class="navListItem"><a class="navItem" href="/bot-analytics/word-analysis">Word Analysis</a></li><li class="navListItem"><a class="navItem" href="/bot-analytics/smart-funnel">Smart Funnel</a></li><li class="navListItem"><a class="navItem" href="/bot-analytics/user-ratings">User Ratings</a></li><li class="navListItem"><a class="navItem" href="/bot-analytics/user-reviews">User Reviews</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Resources</h3><ul class=""><li class="navListItem"><a class="navItem" href="/bot-analytics/analytics-reports">Reporting</a></li><li class="navListItem"><a class="navItem" href="/bot-analytics/analytics-best-practices">Best Practices</a></li><li class="navListItem"><a class="navItem" href="/bot-analytics/analytics-faqs">FAQs</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">AI Recommendations</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="introduction"></a><a href="#introduction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introduction</h2>
+<p>Intelligent Ananlytics is the tool which provides information about how your IVA is performing. It also provides feedback on your IVA and points out the problem areas. Using these learnings, you can improve conversations &amp; interactions that users have with the IVA and take take better decisions to build a superior user experience.</p>
+<p>AI Recommendations is one such feature on Analytics which identifies issues with your IVA regarding missing user intents and training deficit on existing intents. It uses an algorithm that intelligently analyses user messages which the bot was not able to understand. Instead of manually analyzing 1,000s of interactions every day to find out those problem areas, we optimize this process with AI.</p>
+<p>The AI Recommendations algorithm provides you all the key insights to understand user interactions to train your IVA better and enhance its intelligence further.</p>
+<p>So to sum up,</p>
+<ul>
+<li><p>The algorithm tells you what users are chatting about, which you have not accounted for in the IVA. In other words, missing intents. By adding these intents, the number of IVA breaks reduces over time.</p></li>
+<li><p>The algorithm also tells you which intents need more training data to make your IVA more intelligent.</p></li>
+</ul>
+<p><img src="/assets/AIR_One.png" alt="AI_Recommendations"></p>
+<h2><a class="anchor" aria-hidden="true" id="how-to-use-ai-recommendations"></a><a href="#how-to-use-ai-recommendations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How to use AI Recommendations?</h2>
+<p>As shown in the above image, you can see two data sets. On the left side, you find intents which require more training data. On the right side, you find missing intents which can be added on the IVA.</p>
+<p>To start using AI Recommendations, download the sheet by clicking on the link shown in the below image. You will receive two CSV files.</p>
+<p><img src="/assets/AIR_Second.png" alt="download_csv"></p>
+<h3><a class="anchor" aria-hidden="true" id="user-says-recommendations-for-existing-nodes"></a><a href="#user-says-recommendations-for-existing-nodes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>User Says recommendations for Existing Nodes</h3>
+<p>Existing nodes are intents which are already present on the bot. User says recommendations for existing nodes are phrases that can be added to the ‘user says’ section of these existing nodes.</p>
+<p>This will help your bot fetch response to a user’s message correctly from the right node because it will be trained with more utterances of the intent on the same node, thus making the training model stronger.</p>
+<p><img src="/assets/AIR_Third.png" alt="Leftside_AIR"></p>
+<h4><a class="anchor" aria-hidden="true" id="nodes-that-already-exist-on-your-bot"></a><a href="#nodes-that-already-exist-on-your-bot" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Nodes that already exist on your bot</h4>
+<p>This is the list of node names existing on the bot. These are already trained with the relevant “user says” messages and correspond to a user’s intent on Conversation Studio.</p>
+<h4><a class="anchor" aria-hidden="true" id="recommendations"></a><a href="#recommendations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Recommendations</h4>
+<p>Recommendations are user messages that broke your bot or caused smart assist to be triggered. The AI Recommendations algorithm suggests that these should be added to the ‘user says’ section of existing nodes on your bot. The volume of the similar intents is also shown in this section. In order to see all the recommendations, you can click on the link shown above to get the detailed report over email.</p>
+<p>The downloaded CSV contains 5 columns -</p>
+<ol>
+<li><p>Nodes that already exist on your bot</p></li>
+<li><p>User Says Recommendations</p></li>
+<li><p>Closest User Says present on the node - These are the User Says already existing on the node.</p></li>
+<li><p>Link to Open and Add Existing Node - This is the link of the node so that you can directly navigate to the required node to add the User Says.</p></li>
+<li><p>Confidence Score - This is the confidence score of AI Recommendations algorithms of matching the recommended user says to the existing nodes.</p></li>
+</ol>
+<p>Here is a snippet of the CSV -</p>
+<p><img src="/assets/AIR_Fourth.png" alt="existing_nodes"></p>
+<h3><a class="anchor" aria-hidden="true" id="user-says-recommendations-to-create-new-nodes"></a><a href="#user-says-recommendations-to-create-new-nodes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>User Says recommendations to Create New Nodes</h3>
+<p>The Create New Nodes section helps you identify intents which are out-of-scope of the bot as well as identify what are the new user utterances surfacing over the bot.</p>
+<p>These messages will help you identify and understand what should be the new capabilities that can be added to the bot.</p>
+<p><img src="/assets/AIR_Fifth.png" alt="Rightside_AIR"></p>
+<h4><a class="anchor" aria-hidden="true" id="recommendations-to-create-new-nodes"></a><a href="#recommendations-to-create-new-nodes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Recommendations to create new nodes</h4>
+<p>The AI Recommendations algorithm has identified similar intents and clustered them together to understand how we can make them into new nodes. These recommendations can be added as new nodes to increase the intelligence and capability of your bot to reply to users queries.</p>
+<h4><a class="anchor" aria-hidden="true" id="recommendations-1"></a><a href="#recommendations-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Recommendations</h4>
+<p>You can see the volume of the similar new intents in this section. In order to see all the recommendations, you can click on the link shown above to get the detailed report over email.</p>
+<p>The downloaded CSV contains four columns -</p>
+<ol>
+<li><p>Recommendations to create new nodes - These are the recommended names of new nodes that can be created with the corresponding user says in the next column.</p></li>
+<li><p>User Says Recommendations - These are the user messages to which the IVA responded with Smart Assist and Bot Break Messages. Then can be used as User Says on the new nodes.</p></li>
+<li><p>Cluster ID   - This helps you understand the count of clusters formed. AI algorithm has identified similar intents and clustered them together to understand how we can make them into new nodes.</p></li>
+<li><p>Confidence Score of the Cluster Identified   - This column will help you understand the similarity in the messages to cluster them together.</p></li>
+</ol>
+<p>Here is a snippet of the CSV -</p>
+<p><img src="/assets/AIR_Sixth.png" alt="existing_nodes"></p>
+<h2><a class="anchor" aria-hidden="true" id="why-use-ai-recommendations"></a><a href="#why-use-ai-recommendations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Why use AI Recommendations?</h2>
+<p>AI Recommendations will not only reduce the manual effort required to go through every single message to identify IVA breaks but also lead to algorithmically improving the training data based on statistically analyzed user data.</p>
+<p>Using AI Recommendations you can -</p>
+<ul>
+<li><p>Identify the Out of Scope queries and find new user intents that can be added to the IVA in order to improve the user experience. This can reduce the IVA maintenance by 30%.</p></li>
+<li><p>Categorize similar user utterances to a single bucket of intent that will lead to less bot breaks, and in turn increase the Smart Funnel completion rate of in-scope intent.</p></li>
+</ul>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 1/11/2021</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/bot-analytics/using-message-analysis"><span class="arrow-prev">← </span><span>Message Analysis</span></a><a class="docs-next button" href="/bot-analytics/word-analysis"><span>Word Analysis</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#introduction">Introduction</a></li><li><a href="#how-to-use-ai-recommendations">How to use AI Recommendations?</a><ul class="toc-headings"><li><a href="#user-says-recommendations-for-existing-nodes">User Says recommendations for Existing Nodes</a></li><li><a href="#user-says-recommendations-to-create-new-nodes">User Says recommendations to Create New Nodes</a></li></ul></li><li><a href="#why-use-ai-recommendations">Why use AI Recommendations?</a></li></ul></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Conversation Studio</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Smart Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Intelligent Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://docs.haptik.ai/ios-sdk/" class="footer-column-link">iOS SDK</a><a href="https://docs.haptik.ai/android-sdk/" class="footer-column-link">Android SDK</a><a href="https://docs.haptik.ai/web-sdk/" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/whatsapp/" class="footer-column-link">WhatsApp</a><a href="https://docs.haptik.ai/other/facebook" class="footer-column-link">Facebook</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Bot API</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a><a href="https://docs.haptik.ai/other/security" class="footer-column-link">Security</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Agent Chat Tool</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2021 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '224c7079e67e84a978d8b4621f6af16d',
+                indexName: 'haptik',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

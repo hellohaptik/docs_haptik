@@ -8,9 +8,13 @@ But what if you get stuck somewhere or you want to know about a particular featu
 
 ## Where can you access **Help**?
 
-You can access the Help Section from all tool pages, i.e. from Home Page, Conversation Studio, Smart Agent Chat, Intelligent Analytics, and Admin Tools on the left sidebar. You can click on the icon highlighted in the below diagram to open.
+You can access the Help Section from all tool pages, i.e. from Home Page, Conversation Studio, Smart Agent Chat, Intelligent Analytics, and Admin Tools on the left sidebar. 
 
 ![SupportBot1](assets/PS1.png)
+
+You can click on the icon highlighted in the below diagram to open.
+
+![SupportBot1](assets/PS5.png)
 
 The Help Section is powered by an IVA trained on 200+ plus FAQs about the platform and documentation links. 
 
@@ -30,13 +34,13 @@ You can also submit requests for any new feature required on the platform.
 
 When you have an issue and you want to raise an issue you will have to provide the following information - 
 
-- **Issue details**: You can describe the issue here currently facing on the platform
+- **Issue details**: You can describe the issue you are currently facing on the platform
 
-- **Screenshot**: Screenshot of the issue you are currently facing
+- **Screenshot**: You can provide the screenshot of the issue you are currently facing
 
-- **Stage of IVA**: You can describe the state your IVA is in i.e. already live or in the development phase
+- **Stage of IVA**: You can describe the state your IVA is in i.e. already live or in the development phase or soon to go live
 
-- **Bot link or Chat Link**
+- **Bot link or Chat Link**: You can provide the bot link or chat link related to the issue you are currently facing
 
 - **Date and Time**: You can mention the date and time of the issue you are currently facing
 

@@ -7,7 +7,7 @@ This section will cover the following topics:
 [Static Node to Static Node Connection Transition](#static-node-to-static-node-connection-transition)  
 [Static Node to Code Node Connection Transition](#static-node-to-code-node-connection-transition)  
 [Code Node to Output Node Connection Transition](#code-node-to-output-node-connection-transition)  
-[Output Node to Static Node Connection Transition](#output-node-to-static-node-connection-transition) 
+[Output Node to Static Node Connection Transition](#output-node-to-static-node-connection-transition)
 [Dependent Response](#dependent-response)   
 [Connection Guidelines](#connection-guidelines)   
 
@@ -131,8 +131,12 @@ When you’ve added an entity to a conversation, you can define the transition f
 
 * The entities from the first node should automatically appear in a drop down menu. Select from the list to complete the creation of a transition based on entity presence.
 
-
-
+> Following are **unsupported types of connection**:
+>
+> 1) Static Node to Output Node Connection Transition
+> 2) Code Node to Code Node Connection Transition
+> 3) Output Node to Output Node Connection Transition
+> 4) Output Node to Code Node Connection Transition
 
 ### Connection Guidelines
 

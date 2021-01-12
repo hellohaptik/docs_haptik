@@ -35,15 +35,17 @@ For example:
 
 ## What is an entity?
 
-**Entities**: An entity represents the set of values from which a user’s response must come in order for that user to progress onwards in a conversation. Depending on the context of the conversation, the required response can either be a single value or limited group of specific values from the entity, or any value from within the entity. Entities are always added in connection with the bot’s query the required response is associated with, so that they may detect whether the required response was given.
+**Entities**: An entity represents values which is collected from the user in a conversation. Depending on the context of the conversation, the required response can either be a single value or group of specific values.
 
-Entities are auto-tagged in the user utterance as long as the entity dictionary is pre-populated. You can find more details about Entity tagging here.
+An entity in an IVA is used to add values to the search intent.
 
 ## Intent vs Entity
 
 It is important to understand the difference between intent and an entity. 
 
 Intent represents an action that the user wants to perform and the entity represents a keyword that you want to be extracted from the user utterance. 
+
+Intent refers to the goal the user has in mind when typing in a question or comment. While entity refers to the modifier the user uses to describe their issue, intent is what they really mean.
 
 <table>
   <tr>

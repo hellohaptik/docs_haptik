@@ -1,56 +1,57 @@
 ---
-title: Platform Support Bot
+title: Help
 ---
 
-Haptik Platform has multiple tools like Conversation Studio, Smart Agent Chat and Intelligent Analytics. All of these tools have numerous features which help us create complex and sophisticated Conversational AI solutions like IVA.
+Haptik Platform has multiple tools like Conversation Studio, Smart Agent Chat, Intelligent Analytics, and Admin Tools. All of these tools have numerous features that help us create complex and sophisticated Conversational AI solutions like IVA.
 
-But what if you get stuck somewhere or you want to know about a particular feature in more depth. To handle these, we have a **Support Bot** in place to help you. 
+But what if you get stuck somewhere or you want to know about a particular feature in more depth. To handle these, we have a **Help Section** in place to help you. 
 
-## Where is Support Bot?
+## Where can you access **Help**?
+
+You can access the Help Section from all tool pages, i.e. from Home Page, Conversation Studio, Smart Agent Chat, Intelligent Analytics, and Admin Tools on the left sidebar. 
 
 ![SupportBot1](assets/PS1.png)
 
-You can click on the icon highighted in the above diagram to open the Support Bot. The bot will open up as shown below with a cross button on the top right corner to close the bot.
+You can click on the icon highlighted in the below diagram to open.
 
-![SupportBot2](assets/PS2.png)
+![SupportBot1](assets/PS5.png)
 
-The Support Bot is accessible from all screens of the Platform. Home Screen, all screens of Conversation Studio, all screens of Chat Analytics tool except Agent Chat screen.
+The Help Section is powered by an IVA trained on 200+ plus FAQs about the platform and documentation links. 
 
-## How to use it?
+If the FAQ and documentation are not at par in resolving your query, you can also raise an issue on the IVA by following the ticketing journey.
 
-There are 3 main menu items on the bot -
+Our support team looks at these tickets and resolves the query as soon as possible.
 
-- Report an Issue
-- Have a Question?
-- Feature Request
+![open_help](assets/psbv2.png)
 
-![SupportBot3](assets/PS3.png)
+## How to use the Help Section?
 
-The bot also handles FAQs. You can ask your queries directly to get responses.
+As stated above, along with the FAQs and documentation there is a ticketing journey to raise issues about the platform. 
 
-### Report an Issue
+You can also submit requests for any new feature required on the platform. 
 
-This option should be chosen whenever you want to report an issue on the Platform if some feature is not behaving as expected. Be ready with the following details before starting -
+### 1. Have an issue
 
-- Reporter Name
-- Reporter Email ID
-- Tool Name
-- Bot Name, Business Name 
-- Chat Link 
-- Date & Time of the issue
-- Screenshot (Only 1 allowed)
+When you have an issue and you want to raise an issue you will have to provide the following information - 
 
-After providing the above details, you will be able to create a ticket successfully. Haptik team will reach out to you for the same.
+- **Issue details**: You can describe the issue you are currently facing on the platform
 
-### Have a Question?
+- **Screenshot**: You can provide the screenshot of the issue you are currently facing
 
-This option should be chosen whenever you have a query about a feature of the Platform. It will make a search for you on docs.haptik.ai before asking you to raise a query for the same.
+- **Stage of IVA**: You can describe the state your IVA is in i.e. already live or in the development phase or soon to go live
 
-### Feature Request
+- **Bot link or Chat Link**: You can provide the bot link or chat link related to the issue you are currently facing
 
-This should be chosen when you want to raise feature requests for the Platform. It will be taking you to our Roadmap page where you can see the on-going, what's new and upcoming features. If your request is not listed there, you can create a new by clicking on the **Feedback button** on top right corner.
+- **Date and Time**: You can mention the date and time of the issue you are currently facing
+
+Once you have provided the above details, you will receive a confirmation message about the ticket on the IVA.
+
+### 2. Submit a feature request
+
+You can choose this icon when you want to raise feature requests for the Platform. It will be taking you to our Roadmap page where you can see the in-progress, upcoming features. There is also a what's new section which lists down all recent updates in the platform. 
+
+If your request is not listed on the Roadmap, you can create a new one by clicking on the **Submit Feedback button** on the top right corner.
 
 ![SupportBot4](assets/PS4.png)
 
-You can also make requests to change the Support Bot on the Bot itself.
-
+> Note: You can also make requests to improve the Help Section on the IVA itself.

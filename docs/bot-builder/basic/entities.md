@@ -140,7 +140,7 @@ $time - ‘tomorrow’</td>
   </tr>
 </table>
 
-## How to listing all entities of the bot?
+## How to list all entities of the bot?
 You can also view all the entities used in the bot in a single place along with their privacy information. This is useful if you want to quickly review all entities and their privacy settings.
 
 You can view this by clickin on `More` in the top navigation bar and selecting `List of Entities`. You should then be able to view all entities used in the bot.

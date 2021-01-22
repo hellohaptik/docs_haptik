@@ -11,20 +11,21 @@ It can involve information like Nodes traversed by the IVA in the conversation, 
 User’s own name, email, phone number, etc explicitly provided by him, will also form a part of the context. The context needs to be stored before it can be used. Before we understand when the context is used, it’s important to know when it’s deleted.
 
 **When is the context information deleted?** 
+
 The context is deleted by the system in case of any of the following events -
 
-* When an END NODE is encountered by the IVA in the conversation
+* When a Context Clear Node is encountered by the IVA in the conversation
 
-* When an agent marks the conversation as COMPLETE from ATHENA
+* When an agent marks the conversation as COMPLETE from Smart Agent Chat
 
 **When is the context used?**
 If the context has not been deleted as per the above 2 cases, the IVA can use the context up to 2 hours from the last activity of the user. The parameter of 2 hours is customizable up to 48 hours.
 
-Illustration - Let’s say there is a conversation that ideally can get 4 levels deep as shown in the image below. It has a START node, a CHILD node, a Grand-Child node and a Great Grand-child Node with the Great Grand Child node being the END NODE.
+Illustration - Let’s say there is a conversation that ideally can get 4 levels deep as shown in the image below. It has a START node, a CHILD node, a Grand-Child node and a Great Grand-child Node with the Great Grand Child node being the Context Clear Node.
 
 ![Data Scopes](assets/bot-builder-manage-state/Context.png)
 
-Let’s say the user starts the conversation from a Start Node ABOUT HAPTIK and then chooses an option to reach the child node FUNDING OF HAPTIK. At this point, if a user leaves the conversation, the IVA will retain the context for 2 hours since the no END NODE has not been encountered in the conversation, so far.
+Let’s say the user starts the conversation from a Start Node ABOUT HAPTIK and then chooses an option to reach the child node FUNDING OF HAPTIK. At this point, if a user leaves the conversation, the IVA will retain the context for 2 hours since the no Context Clear Node has not been encountered in the conversation, so far.
 
 So if a user comes back after, say e.g, 1.5 hours and taps a button or a Quick Reply on FUNDING OF HAPTIK node, he can reach the Grand-Child node i.e CAREERS AT HAPTIK Node directly.
 
@@ -41,8 +42,8 @@ In the above SOFT COMPLETE cases, the context is retained by the IVA for 2 hours
 
 HARD COMPLETE occurs when a conversation -
 
-* Has encountered an END NODE
+* Has encountered a Context Clear Node
 
-* Has been marked as COMPLETE by the assistant from ATHENA.
+* Has been marked as COMPLETE by the assistant from Smart Agent Chat.
 
 The context is immediately deleted and is not retained even for 2 hours when such a HARD COMPLETE has been reached.

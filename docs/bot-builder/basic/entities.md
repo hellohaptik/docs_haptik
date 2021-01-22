@@ -674,6 +674,32 @@ You can delete an entity from the a particular node by clicking on the **delete 
 
 > Note: Even if the entity is deleted it would still appear in the debug logs section since the entity is not permanently deleted from the IVA.
 
+## Using Entity Flusher
+
+ When the user switches context by typing something in free form in between some conversational flow which has not ended, the old entities are not cleared. In such scenarios you can use entity flusher function.
+ 
+ **How to use Entity Flusher?**
+
+Step 1: Add **integration.utils.lead_campaigns.generic_entity_flusher** function in the integrations tab to the start nodes.
+
+![flush_entity](assets/entityflush2.png)
+
+Step 2: Add an entity **bot_flush_exception_list** on the start node where you want to use this function and add all entity names separated by pipe(|) in the filter value of this entity.
+
+> Mark the bot_flush_exception_list entity as non-mandatory.
+
+![flush_entity](assets/entityflush1.png)
+
+This will clear all the entities except person_name and city. 
+
+**Do's and Don't of Entity Flusher**
+
+- This function needs to be added only on nodes which are just start nodes.
+
+- Do not add this function on Context Clear nodes.
+
+- Adding the entity flusher on nodes which have other mandatory entities will clear those as well. 
+
 ## Language Support for Different Entities
 
 <table>

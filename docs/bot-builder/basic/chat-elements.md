@@ -99,21 +99,13 @@ In some cases you might want to open a new visual screen to collect some informa
 
 To use this button type just set the button type as `Open Screen`. Then set the button text and choose the type of screen you want to open. Some of the screen types available are:
 
-* Carousel Detail: Opens a screen which has a carousel of image on the top and space underneath for text.
-* Gallery Picker: Pops up the dialog to choose an image from camera / gallery.
-* Launch Channel: Opens up a new channel. The details of the channel to be opened is given in the payload.
-* Self Serve Recharge: Takes you the Recharge & Bills Screen. By default, the first tab (Recharge) is selected.
-* Electricity: Takes you the Recharge & Bills Screen and selects Electricity tab.
-* Send Location: Opens Place Picker and enables a user to send a particular location.
-* Carousel Default: Opens up a screen which has little space on the top for text, followed by a carousel of images underneath it and a message sending area underneath it. Primarily built for the Food Delivery channel but still useful in many ways.
-* App Authenticate: Used to get Uber authentication. Launches Uber app if available other wise fires up a web view.
-* Profile: Opens up the Profile screen in the app.
-* Wallet: Opens up the Wallet screen in the app. Useful to show the wallet balance.
-* Wallet History: Opens up the Wallet screen and switches to Wallet History.
-* Link: Fires up web view with a link provided in the payload.
-* Send Multiple Locations: Used mostly in the Cabs channel to allow a user to select two locations and send it back as a message.
-* Saved Addresses: Opens up the Saved Addresses screen with the list of saved addresses, if any. Otherwise, opens up the screen to save a new address.
-* Transaction History: Opens up the Transaction History screen.
+* **Carousel Detail**: Opens a screen which has a carousel of image on the top and space underneath for text.
+* **Upload / Take photo**: Pops up the dialog to choose an image from camera / gallery.
+* **Upload document**: Pops up the dialog to choose a document from device.
+* **Open Channel**: Opens up a new channel. The details of the channel to be opened is given in the payload.
+* **Send Location**: Opens Place Picker and enables a user to send a particular location.
+* **Link**: Opens the mentioned link on a new tab.
+* **Webview**: Opens up a custom webview.
 
 > Note: Most of these options are only available on the Android/IOS SDKs.
 

@@ -239,7 +239,7 @@ There are these three types of attachments allowed -
 
 ![Attachment Entity](assets/Video2.png)
 
-You would need to create a Button HSL for letting the user upload the image and document. 
+You would need to create a Button HSL for letting the user upload the image and document. To know more about using Button HSL click [**here**](https://docs.haptik.ai/bot-builder/basic/chat-elements#open-screen)
 
 ![Attachment Example on Bot](assets/AttachmentHSL.png)
 

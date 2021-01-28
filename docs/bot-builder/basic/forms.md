@@ -162,6 +162,8 @@ If the users input incorrect values defying the validations, they will get to se
 
 ![Form18](assets/FormError.png)
 
+> Note: Forms Validation is currently supported only on Web SDK.
+
 ## Using a Form in a Node
 
 Now that we are aware of how to create a form and various form fields, let us take an example to understand its usage.

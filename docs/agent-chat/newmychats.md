@@ -221,10 +221,6 @@ Notes are a stack of all the notes which agents have recorded while having a con
 
 ![notes](assets/notes.png)
 
-Agent can directly start adding a new note by clicking on the orange textarea as shown below
-
-![add_notes](assets/notes1.png)
-
 The saved note contains the name of the agent who saved the note. If the note goes beoyond 2 lines, a **View More** Button appears. **View More** will expose the entire content of the note. 
 
 ![notes_viewmore](assets/notes2.png)

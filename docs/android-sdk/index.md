@@ -202,11 +202,14 @@ functionality.
 If you are pointing the SDK to the Staging Environment please add the
 following line.
 
-<!-- TODO:Add Multilanguage Code Tabs -->
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Java-->
 
 ```java
 HaptikLib.setRunEnvironment(HaptikLib.RUN_ENVIRONMENT_STAGING);
 ```
+
+<!--END_DOCUSAURUS_CODE_TABS-->
 
 By default the SDK is pointing to the Production Environment.
 
@@ -229,6 +232,31 @@ InitData initData = new InitData.Builder(application)
 
 With this `initData` object you can pass it into the
 `HaptikLib.init(initData)` method to initialize the Haptik SDK.
+
+** Implementing InitDataCallback Interface**
+1. Implement the `InitDataCallback` interface in the `Application` class of your app.
+2. Override the `getClientSetupData()` method of the interface and provide the data required to initialize Haptik SDK in the method
+
+Eg:
+
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Java-->
+
+```java
+@Override
+    public InitData getClientSetupData() {
+        HaptikLib.setRunEnvironment(HaptikLib.RUN_ENVIRONMENT_STAGING);
+        InitData initData = new InitData.Builder(this)
+            .baseUrl(DemoPrefUtils.getHaptikBaseUrl(this))
+            .debugEnabled(BuildConfig.DEBUG)
+            .notificationSound(R.raw.notification_sound)
+            .build();
+
+        return initData;
+    }
+```
+
+<!--END_DOCUSAURUS_CODE_TABS-->
 
 ## 4. Basic Sign Up on the Haptik SDK
 

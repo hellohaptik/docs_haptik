@@ -67,7 +67,7 @@ Payload sent to your registered webhook will always be in json.
       </tr>
       <tr>
          <td>agent.email</td>
-         <td>Email address of the agent, it will be None if event is automated.</td>
+         <td>Email address of the agent, it will be null if event is automated.</td>
       </tr>
       <tr>
          <td>message</td>

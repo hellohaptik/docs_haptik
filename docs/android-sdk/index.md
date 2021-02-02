@@ -233,7 +233,7 @@ InitData initData = new InitData.Builder(application)
 With this `initData` object you can pass it into the
 `HaptikLib.init(initData)` method to initialize the Haptik SDK.
 
-** Implementing InitDataCallback Interface**
+**Implementing InitDataCallback Interface**
 1. Implement the `InitDataCallback` interface in the `Application` class of your app.
 2. Override the `getClientSetupData()` method of the interface and provide the data required to initialize Haptik SDK in the method
 

@@ -66,6 +66,10 @@ Payload sent to your registered webhook will always be in json.
          <td>Whether the reply was automated or not. It will be false if agent sent the reply</td>
       </tr>
       <tr>
+         <td>agent.email</td>
+         <td>Email address of the agent, it will be None if event is automated.</td>
+      </tr>
+      <tr>
          <td>message</td>
          <td>All message info will be available here</td>
       </tr>
@@ -115,7 +119,8 @@ Example:
         "id": 4415,
         "name": "gogo",
         "profile_image": "https://assets.haptikapi.com/content/42e123411bk1109823bf.jpg",
-        "is_automated": true
+        "is_automated": true,
+        "email": null
     },
     "message": {
         "id": 1982371,
@@ -159,7 +164,8 @@ Example:
         "id": 235,
         "name": "Prateek",
         "profile_image": "https://assets.haptikapi.com/content/42e123411bk1109823bf.jpg",
-        "is_automated": false
+        "is_automated": false,
+        "email": "prateek@gmail.com"
     },
     "message": {
         "id": 1982314,
@@ -212,7 +218,8 @@ Example:
         "id": 4415,
         "name": "gogo",
         "profile_image": "https://assets.haptikapi.com/content/42e123411bk1109823bf.jpg",
-        "is_automated": true
+        "is_automated": true,
+        "email": null
     },
     "message": {
         "id": 1982471,
@@ -254,7 +261,8 @@ Example:
         "id": 4415,
         "name": "gogo",
         "profile_image": "https://assets.haptikapi.com/content/42e123411bk1109823bf.jpg",
-        "is_automated": true
+        "is_automated": true,
+        "email": null
     },
     "follow_up_details": {
         // This dict will be empty when followup is not present

@@ -73,6 +73,7 @@ We show the following details -
 
 - **User name**: This is the name of the user. If the user has provided his name, that would show up or it will be shown as **Guest User**.
 - **Team name**: This is the name of the team to which this chat is allocated.
+- **Business name**: This is the name of the Business to which this chat is allocated.
 
 There are few tags which come on the chats depending on whether they have read or unread messages.
 
@@ -169,6 +170,8 @@ Canned Responses are predefined responses uploaded prior, which can easily used 
 A chat agent can:
   * View User Details
   * Use Custom tools
+  * Previous Conversations
+  * Notes
   
 #### User Details 
 
@@ -193,3 +196,41 @@ If there are more than 2 or 3 tools, they will come stacked in a list as shown i
 Depending on the permissions and features assigned to a Chat agent user, more actions could become accessible. 
   
 > We also have a system to enforce Data level permissioning i.e. an agent user is allowed to view/edit data for which business can be controlled using this.
+
+#### Previous Conversations
+
+A user might have had multiple conversations with agents at distinct times. **Previous Conversations** section enables the agent to see these latest conversations of the user. A maximum of 5 previous conversations would be shown.
+
+![previousconversationslist1](assets/PC1.png)
+
+Once the agent clicks on any of the conversations, the chat link opens up in a new tab. The chat link displays the entire history of the chat which user had with the IVA.
+
+![previousconversationslist2](assets/PC2.png)
+
+Initially, two latest conversations would be present in the **Previous Conversations** section. The **Show more** option allows the agents to view a maximum of 5 previous conversations of the user.
+
+![previousconversationslist3](assets/PC3.png)
+
+If the user does not have any chat history, the **Previous Conversation** section will be empty and will appear as follows
+
+![previousconversationslist4](assets/PC4.png)
+
+#### Notes
+
+Notes are a stack of all the notes which different agents have recorded while having conversations with the user at distinct times.
+
+![notes](assets/notes.png)
+
+The saved note contains the name of the agent who saved the note. If the note goes beoyond 2 lines, a **View More** Button appears. **View More** will expose the entire content of the note. 
+
+![notes_viewmore](assets/notes2.png)
+
+When **View More** option opens up the entire note, a **Show Less** option becomes available. **Show Less** option minimizes the open note.
+
+![notes_showless](assets/notes3.png)
+
+When there are more than 2 notes present, a **Show More** option appears on the bottom on the visible notes. Upon clicking **Show More** all the notes will get displayed in the Notes section.
+
+![notes_showmore](assets/notes4.png)
+
+The **Show Less** option will minimize the Notes content and only display 2 latest notes.

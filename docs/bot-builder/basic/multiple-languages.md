@@ -125,6 +125,7 @@ The template comes with a in-built logic and flow to switch between 10 languages
 Users can initiate the language change flow by saying something similar to "I want to change my language". Post this, the bot presents the users with options of which language to switch to.
 
 ### List of languages supported out of the box
+**The SDK also supports the listed languages -**
 
 - Hindi
 - Marathi

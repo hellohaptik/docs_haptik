@@ -199,7 +199,7 @@ Depending on the permissions and features assigned to a Chat agent user, more ac
 
 #### Previous Conversations
 
-A user might have had multiple conversations with agents at distinct time. Previous Conversations enables the agent to see a maximum of 5 latest conversations of the user.
+A user might have had multiple conversations with agents at distinct times. **Previous Conversations** section enables the agent to see these latest conversations of the user. A maximum of 5 previous conversations would be shown.
 
 ![previousconversationslist1](assets/PC1.png)
 
@@ -207,17 +207,17 @@ Once the agent clicks on any of the conversations, the chat link opens up in a n
 
 ![previousconversationslist2](assets/PC2.png)
 
-Initially, two latest conversations would be present in the previous conversations section. The **show more** option allows the agents to view a maximum of 5 previous conversations of the user.
+Initially, two latest conversations would be present in the **Previous Conversations** section. The **Show more** option allows the agents to view a maximum of 5 previous conversations of the user.
 
 ![previousconversationslist3](assets/PC3.png)
 
-If the user does not have any chat history, the Previous Conversation section will appear as follows
+If the user does not have any chat history, the **Previous Conversation** section will be empty and will appear as follows
 
 ![previousconversationslist4](assets/PC4.png)
 
 #### Notes
 
-Notes are a stack of all the notes which agents have recorded while having a conversation with the user.
+Notes are a stack of all the notes which different agents have recorded while having conversations with the user at distinct times.
 
 ![notes](assets/notes.png)
 

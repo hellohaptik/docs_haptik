@@ -30,7 +30,7 @@ The three types of nodes are:
 
 ### Purpose and Subcomponents of Static Nodes
 
-The purpose of a static node is to present static information to the user like greeting message, menu options etc and to then collect infromation from the user that is required to perform business logic.
+The purpose of a static node is to present static information to the user like greeting message, menu options etc and to then collect information from the user that is required to perform business logic.
 
 ![RHS of Static Ndoe](assets/bot-builder-nodes/static-node.png)
 

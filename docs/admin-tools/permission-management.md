@@ -30,7 +30,7 @@ The roles are divided or categorised on the basis of tools. The available roles 
     * **Chat Agent** - This role allows you to take and respond to chats from the chat agent tool.
     * **Chat Agent TL** - This role gives you team lead access which lets you manage teams on the chat agent tool.
     * **Chat Agent View Personal Details** - This role allows you to view personal details of the end-user you are chatting to.
-    * **Chat Agent Inactive Auto Logout** - This role automatically logs you out after being inactive on the platform for 8 mins.
+    * **Chat Agent Inactive Auto Logout** - This role automatically logs you out after being inactive on the platform for 13 mins.
 
 * **Intelligent Analytics**
 

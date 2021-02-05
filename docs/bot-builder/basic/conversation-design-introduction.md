@@ -28,4 +28,4 @@ Conversation Design entails the entire structure of your Intelligent Virtual Ass
 
 - Finally use this framework to build and deploy conversational journeys on our Haptik platform for a seamless IVA building experience
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=gUWPo9wHDbk&feature=emb_logo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gUWPo9wHDbk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

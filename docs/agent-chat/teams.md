@@ -58,7 +58,14 @@ Team status defines if the team can receive chats from a business or not.
 Online - Team will receive chats from a business
 Offline - Team will not receive chats from a business
 
-### Step 4 - Setup Team Offline message
+### Step 4 - Select a language (Optional)
+
+If you have multilingual IVA, you can first select the language from the dropdown to configure the following messages.
+
+![language_for_messages](assets/TeamsLanguage.png)
+
+
+### Step 5 - Setup Team Offline message
 
 If a team status id is defined as offline, the team should configure it. When users send a message and all agents have logged out, you can setup a default message for the end user. For example, this message could say `"Sorry, no agents are available at the moment. We will respond to you as soon an agent is online".`
 
@@ -74,7 +81,7 @@ There is a toggle of Marking Chat as complete. This means -
 
 - If the Toggle is **OFF**, i.e Red colour - All the chats will remain in Pending/Queued State when agents are Offline.
 
-### Step 5 - Setup Team Delay Message and Delay Time
+### Step 6 - Setup Team Delay Message and Delay Time
 
 Similar to the Team Offline message, you can configure the delay message that is sent to users with a set delay time. This message will be sent to the user when all agents are busy will other chats. This is customizable and we can adjust the time after which this message will be sent.
 
@@ -82,7 +89,7 @@ Similar to the Team Offline message, you can configure the delay message that is
 
 > Note: Offline message will appear immediately after the user has initiated an agent chat, whereas Delay Message will appear after the specified time interval.
 
-### Step 6 - Setup User Recall Message and Recall Time
+### Step 7 - Setup User Recall Message and Recall Time
 
 Similar to the Delay message, you can configure the recall message to get the user back in the conversation. This message is sent once the chat has started with the agent but the user has stopped replying in between to the Agent. The time can be configured between 0s to 8m. 
 

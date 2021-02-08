@@ -220,7 +220,7 @@ To add a new field on the Form, click on `Add a Field` button. A pop-up opens up
 
 ![formfields](assets/bot-builder-chat-elements/formshsl3.png)
 
-#### Text Field
+### Text
 
 Text Field allows user to provide input in textual or alphanumeric format.
 
@@ -381,7 +381,7 @@ To configure a Search field, you will have to provide following details -
 `Example - If the API is not returning Pune as a dropdown option, then the user can type Pune and it will be captured by the Set Entity`
 - **Error Message** - If the user does not select any option from the dropdown, this error message will be shown to the user which will indicate the user to provide or select the value.
 
-## Deleting a Form Field
+### Deleting a Form Field
 
 You can delete a particular Form Field using the delete button visible on the right side of the field. 
 
@@ -391,7 +391,7 @@ The pop-up appears to confirm if you want to delete the field.
 
 ![delete2](assets/bot-builder-chat-elements/formshsl21.png)
 
-## Customize Send Button
+### Customize Send Button
 
 There is a **Send** button which appears on the form which the user has to click to send the form details. Once the user clicks on **Send** button, the text appearing on the button changes to **Sent**.
 
@@ -401,7 +401,7 @@ You can customize this text which appears on the button by enabling the **Add Cu
 
 ![custombutton](assets/bot-builder-chat-elements/formshsl23.png)
 
-## Toggle the Form Field
+### Toggle the Form Field
 
 You can restructure the form fields and organize them again once they all have been created using the toggle option as shown below.
 

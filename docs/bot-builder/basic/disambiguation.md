@@ -123,3 +123,12 @@ Also shown are the “User Says” present in the **“Haptik Location”** node
 In the image below, User Utterance “can information about haptik be given?” leads to a response from “About Haptik” node. The subsequent utterance was not clearly distinguishable and, hence the IVA disambiguated between **“Cofounder haptik”** FAQ Node and **“Haptik Location”** Dependent Node.
 
 ![DMG_14](assets/DMG_14.png)
+
+**Disambiguation for Multilingual IVAs** - 
+Disambiguation is also triggered in cases of Multilingual IVAs. In non-English language conversations if disambiguation gets triggered then the **Did you mean?** button text in the User Says section is auto-translated to the current language of conversation and used in the bot response.
+
+In the image below, User Utterance "टिकट्स बुक करो" leads to the IVA disambiguating between **rail ticket** and **air ticket** nodes.
+
+![Language_Disambiguation](assets/bot-builder-disambiguation/language-disambiguation.png)
+
+The button texts in the disambiguation message are auto-translated from the message added in the user says section.

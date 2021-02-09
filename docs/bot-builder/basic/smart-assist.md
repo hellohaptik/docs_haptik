@@ -55,3 +55,7 @@ This is similar to the “Did you mean?” feature. The difference is in the ton
 3. The button texts on the SMART ASSIST messages are fetched from the “Did you mean?” text section on the respective Nodes in the Conversation Studio.
 
 4. Text of the messages sent as SMART ASSIST responses, is currently non-customisable and controlled directly at the platform level.
+
+
+**Multilingual Smart Assist**
+In case of multilingual bots, smart assist works exactly in the same way as mentioned above. The only difference being that in case of non-english bots, the button text for the SMART ASSIST message are auto-translated from the "Did you mean?" text section on the User Says section of the respective node.

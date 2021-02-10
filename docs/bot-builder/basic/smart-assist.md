@@ -42,7 +42,7 @@ This is similar to the “Did you mean?” feature. The difference is in the ton
 
 ![SA_6](assets/SA_6.png)
 
-## Few points to Note - 
+## Few points to Note
 
 1. Users can pick an option amongst a list of options by replying with “1”, “2”, “3” after the list of options.
 
@@ -56,6 +56,6 @@ This is similar to the “Did you mean?” feature. The difference is in the ton
 
 4. Text of the messages sent as SMART ASSIST responses, is currently non-customisable and controlled directly at the platform level.
 
+## Multilingual Smart Assist
 
-**Multilingual Smart Assist**
-In case of multilingual bots, smart assist works exactly in the same way as mentioned above. The only difference being that in case of non-english bots, the button text for the SMART ASSIST message are auto-translated from the "Did you mean?" text section on the User Says section of the respective node.
+In case of multilingual bots, smart assist works exactly in the same way as mentioned above. The only difference being that in case of non-english bots, the **Did you mean?** button text in the User Says section of the respective node is auto-translated to the current language of conversation and used in the bot response.

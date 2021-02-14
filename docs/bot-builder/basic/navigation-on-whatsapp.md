@@ -43,6 +43,8 @@ When a user initiates a chat on WhatsApp, the mobile number of the user and the 
 - **Name**: Greet the user by their name. It helps to establish trust with the end-user.
 - **Number**: The user’s phone number can be leveraged in multiple ways. If the user is looking to seek any specific information related to their account, the WhatsApp number becomes the unique identifier. Using the WhatsApp phone number, we can first authenticate the user and then fetch information based on their request.
 
+> You can fetch a user's phone number using **_completion_phone_number_** entity. to read more about using an entity click [**here**](https://docs.haptik.ai/bot-builder/basic/entities)
+
 Give users a secure onboarding by authenticating their phone number and asking them if they want to move ahead with that specific phone number. If they choose to authenticate another phone number, go ahead and use OTP verification to allow them to log in safely and securely.
 
 This not only gives the user flexibility to switch numbers and authenticate themselves to carry out a task on the IVA but also allows for re-engagement using past information.

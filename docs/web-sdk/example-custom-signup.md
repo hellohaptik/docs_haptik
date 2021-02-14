@@ -32,29 +32,47 @@ A custom signup example. Read the full documentation in the custom signup sectio
       </div>
     </div>
   </body>
-  
+    
   <script type="text/javascript">
-  window.haptikInitSettings = {
-    'business-id': '<provided by haptik>',
-    'client-id': '<provided by haptik>',
-    'base-url': '<provided by haptik>',
-    'signup-type': 'my-custom-signup-type',
-  };
-  </script>
-  <script type="text/javascript" charset="UTF-8" src="https://toolassets.haptikapi.com/platform/javascript-xdk/production/loader.js"></script>
-  <script>
-  document.addEventListener('haptik_sdk', function() {
-    HaptikSDK.signup({
-      username: 'Firstname Lastname',
-      auth_id: '9955511100',
-      auth_code: 'XXXXXXXXXXXX',
-      mobile_no: '8828407051',
-      email: 'demo@gmail.com',
-      custom_data: { demo: 'demo' },
-    }, function(success) {
-      console.log('SIGNUP REQUEST SUCCEEDED:', success);
-    });
-  });
-  </script>
+      var query_params = new URLSearchParams(window.location.search);
+      var haptikInitSettings = {
+        'business-id': query_params.get('business_id'),
+    	  'client-id': query_params.get('client_id'),
+    	  'api-key': query_params.get('api_key'),
+    	  'base-url': query_params.get('base_url'),
+    	  'signup-type': query_params.get('signup_type'),
+	      'debug': query_params.get('debug')
+      };
+    </script>
+    <script type="text/javascript" charset="UTF-8" src="https://toolassets.haptikapi.com/js-sdk/js/haptik-sdk-loader.js"></script>
+    <script>
+      //var query_params = new URLSearchParams(window.location.search);
+      console.log(query_params.get('user_type') || 'active')
+      keys = query_params.keys()
+	custom_data = {}
+      for (const key of keys) {
+	if (key.slice(0, 3) == "cd_")
+		custom_data[key.slice(3)] = query_params.get(key);
+	};
+
+      HaptikSDK.signup(
+        {
+          username: 'Firstname Lastname',
+          auth_id: '9955511100',
+          auth_code: 'XXXXXXXXXXXX',
+          mobile_no: '8828407051',
+          email: 'demo@gmail.com',
+          custom_data: { demo: 'demo' },
+        },
+        function(status, error, data) {
+          if (status) {
+            console.log('SUCCESS', data);
+          } else {
+            console.log('ERROR', error);
+          }
+        }
+      );
+    </script>
+
   </html>
 ```

@@ -200,11 +200,11 @@ You can configure Forms by clicking on the `Add a chat element` link and then se
 
 ![formbuilder](assets/bot-builder-chat-elements/formshsl1.png)
 
-After choosing Forms Builder as the chat element option you have to set the **Form Title** and **Form Description**.
+After choosing Forms Builder as the chat element option you can set the **Form Title** and **Form Description**.
 
-1. **Form Title**: This field should convey the action needed from the user. For example if you are making a form to take delivery address, Form Title can be *Please help me with your Delivery address*
+1. **Form Title**: This field should convey the action needed from the user. For example if you are making a form to take delivery address, Form Title can be *Please help me with your Delivery address* Firm Title is an optional field.
 
-2. **Form Description**: This is a Description for the form. This will be visible on the form. Form Description is an optional field.
+2. **Form Description**: This is a Description for the form. This will be visible on the form. Form Description is also an optional field.
 
 ![formtitledescription](assets/bot-builder-chat-elements/formshsl2.png)
 
@@ -228,7 +228,9 @@ Text Field allows user to provide input in textual or alphanumeric format.
 
 This opens up the field details section. You will have to provide the following details to configure a text field on the form.
 
-1. **Text**: This text is the placeholder for the form and will be visible on this text field. To add the placeholder click on **Text** as shown below.
+#### 1. Text: 
+
+This text is the placeholder for the form and will be visible on this text field. To add the placeholder click on **Text** as shown below.
 
 ![text](assets/bot-builder-chat-elements/formshsl5.png)
 
@@ -236,28 +238,37 @@ Example for **Text** -
 
 ![exampletext](assets/bot-builder-chat-elements/formshsl6.png)
 
-2. **Form Icon**: There is a dropdown of available form icons you can choose from to add an icon for this Text field. The default icon is 
+#### 2. Form Icon: 
+
+There is a dropdown of available form icons you can choose from to add an icon for this Text field. The default icon is 
 ![defaulticon](assets/bot-builder-chat-elements/formshsl7.png)
 
 To select another icon, click on the **+**
 
 ![moreicons](assets/bot-builder-chat-elements/formshsl8.png)
 
-3. **Mandatory**: Marking a field Mandatory will ensure that user is providing a value in this Text field.
+#### 3. Mandatory: 
+
+Marking a field Mandatory will ensure that user is providing a value in this Text field.
 
 ![mandatory](assets/bot-builder-chat-elements/formshsl9.png)
 
 > Mandatory field will be automatically enabled if a mandatory entity is set in the **Set Entity** field.
 
-4. **Set Entity**: This option will provide you a dropdown of all the entities present on the node where you are adding Form HSL. You can select the entity whose value you want to capture using this Text field.
+#### 4. Set Entity: 
+
+This option will provide you a dropdown of all the entities present on the node where you are adding Form HSL. You can select the entity whose value you want to capture using this Text field.
 
 ![set-entity](assets/bot-builder-chat-elements/formshsl10.png)
 
-5. **Advanced Options**: This option lets you add validation and the corresponding error message to display if the user is providing incorrect input in this particular field.
+#### 5. Advanced Options: 
 
-**i. Validation**
+This option lets you add validation and the corresponding error message to display if the user is providing incorrect input in this particular field.
 
-##### Default Validations
+##### i. Validation
+
+###### Default Validations
+
 These are the existing types of validations present that you can choose from.
 
  - **Any**: As the name suggests. This will allow any text to pass. Basically, there will be no validation to this field.
@@ -269,10 +280,11 @@ These are the existing types of validations present that you can choose from.
  
  ![text_validation](assets/bot-builder-chat-elements/formshsl11.png)
  
- ##### Custom Validation
+ ###### Custom Validation
  Custom Validation accepts custom regex patterns. This is the most powerful validation functionality. The bot builder can use varied regex patterns to enable their fields to validate different input formats like credit card number, PAN card numbers, etc.
 
-**ii. Error Message**
+##### ii. Error Message
+
 If any validation goes wrong, to inform the users that they have given an incorrect input, we can configure Error Message.
 
 ### Picker
@@ -283,14 +295,21 @@ If any validation goes wrong, to inform the users that they have given an incorr
 
 To configure a Picker field, you will have to provide following details -
 
-- **Picker** - Click on the Picker Text to add a placeholder for the Picker field. 
+- **Picker** - Click on the **Picker** text to add a placeholder for the Picker field. 
+
 `Example, Please select a city`
-- **Icon** - Select an icon from the dropdown.
-- **Mandatory** - Enabling the Mandatory checkbox will ensure the user is selecting a value from the dropdown.
+
+- [**Icon**](form-icon) - Select an icon from the dropdown.
+
+- [**Mandatory**](mandatory) - Enabling the Mandatory checkbox will ensure the user is selecting a value from the dropdown.
+
 - **Picker Options** - Enter the comma separated dropdown values
+
 `For above example of list of cities - Mumbai, Delhi, Kolkata, Chennai, Banglore`
-- **Set Entity** - Select the entity to capture the value from dropdown.
-- **Error Message** - If the user does not select a value from the dropdown, this error message will be shown to the user which will indicate the user to select an option from the dropdown.
+
+- [**Set Entity**](set-entity) - Select the entity to capture the value from dropdown.
+
+- [**Error Message**](error-message) - If the user does not select a value from the dropdown, this error message will be shown to the user which will indicate the user to select an option from the dropdown.
 
 ### Number
 
@@ -300,18 +319,25 @@ Number field can be used to get number inputs from the user. Example, Mobile num
 
 To configure a Number field, you will have to provide following details -
 
-- **Number** - Click on the Number Text to add a placeholder for this Number field.
+- **Number** - Click on the **Number** text to add a placeholder for this Number field.
+
 `Example, Please enter your mobile`
-- **Icon** - Select an icon from the dropdown.
-- **Mandatory** - Enabling the Mandatory checkbox will ensure the user is providing a value.
-- **Set Entity** - Select the entity from the dropdown to capture the number.
+
+- [**Icon**](form-icon) - Select an icon from the dropdown.
+
+- [**Mandatory**](mandatory) - Enabling the Mandatory checkbox will ensure the user is providing a value.
+
+- [**Set Entity**](set-entity) - Select the entity from the dropdown to capture the number.
+
 - **Validation** - There are two different types of validation available
+
 **i. Fixed Length** - This validation specifies if the number entered has to be of a specific length.
+
 **ii. Range** - This validation mentions the range of digits it can accept. If a user inputs anything more or less than the range, it is treated as an invalid value.
 
 ![number_range](assets/bot-builder-chat-elements/formshsl14.png)
 
-- **Error Message** - If the user does not provide a value of either fixed length or in the specified range, this error message will be shown to the user which will indicate the user to provide a number value.
+- [**Error Message**](error-message) - If the user does not provide a value of either fixed length or in the specified range, this error message will be shown to the user which will indicate the user to provide a number value.
 
 ### Email
 
@@ -321,32 +347,43 @@ Email can be used to get the email id from the user.
 
 To configure an Email field, you will have to provide following details -
 
-- **Email** - Click on the Email Text to add a placeholder for the Email field. 
+- **Email** - Click on the **Email** text to add a placeholder for the Email field. 
+
 `Example, Please provide your email id`
-- **Icon** - Select an icon from the dropdown.
-- **Mandatory** - Enabling the Mandatory checkbox will ensure the user is providing the email id.
-- **Set Entity** - Select the entity from the dropdown to capture the email id.
-- **Error Message** - If the user does not provide an email id, this error message will be shown to the user which will indicate the user to provide their email id.
+
+- [**Icon**](form-icon) - Select an icon from the dropdown.
+
+- [**Mandatory**](mandatory) - Enabling the Mandatory checkbox will ensure the user is providing the email id.
+
+- [**Set Entity**](set-entity) - Select the entity from the dropdown to capture the email id.
+
+- [**Error Message**](error-message) - If the user does not provide an email id, this error message will be shown to the user which will indicate the user to provide their email id.
 
 ### Date
 
-Date can be used to get a date from the user
+Date can be used to get a date from the user.
 
 ![dateoption](assets/bot-builder-chat-elements/formshsl16.png)
 
 To configure a Date field, you will have to provide following details -
 
-- **Date** - Click on the Date Text to add a placeholder for the Date field. 
-`Example, Date of Birth`
-- **Icon** - Select an icon from the dropdown.
-- **Mandatory** - Enabling the Mandatory checkbox will ensure the user is providing the date.
-- **Set Entity** - Select the entity from the dropdown to capture the date.
+- **Date** - Click on the **Date** text to add a placeholder for the Date field. 
+
+`Example, Check-in Date`
+
+- [**Icon**](form-icon) - Select an icon from the dropdown.
+
+- [**Mandatory**](mandatory) - Enabling the Mandatory checkbox will ensure the user is providing the date.
+
+- [**Set Entity**](set-entity) - Select the entity from the dropdown to capture the date.
+
 - **Validation** - You can mention both the Start Date and End Date from which the user can select any one date or you can set either of them
+
 `Example, if the Start Date is 01-01-2001 and End Date is 01-01-2099, then the user will only be able to see the dates between these range`
 
 ![date_validation](assets/bot-builder-chat-elements/formshsl17.png)
 
-- **Error Message** - If the user did not select any date, this error message will be shown to the user which will indicate the user to select a date.
+- [**Error Message**](error-message) - If the user did not select any date, this error message will be shown to the user which will indicate the user to select a date.
 
 ### Time
 
@@ -356,12 +393,17 @@ Time field is used to get the time from a user. It uses the clock widget where u
 
 To configure a Time field, you will have to provide following details -
 
-- **Time** - Click on the Time Text to add a placeholder for the Time field. 
+- **Time** - Click on the **Time** text to add a placeholder for the Time field. 
+
 `Example, Check-in Time`
-- **Icon** - Select an icon from the dropdown.
-- **Mandatory** - Enabling the Mandatory checkbox will ensure the user is providing the time.
-- **Set Entity** - Select the entity from the dropdown to capture the time.
-- **Error Message** - If the user does not provide any time, this error message will be shown to the user which will indicate the user to provide the time.
+
+- [**Icon**](form-icon) - Select an icon from the dropdown.
+
+- [**Mandatory**](mandatory) - Enabling the Mandatory checkbox will ensure the user is providing the time.
+
+- [**Set Entity**](set-entity) - Select the entity from the dropdown to capture the time.
+
+- [**Error Message**](error-message) - If the user does not provide any time, this error message will be shown to the user which will indicate the user to provide the time.
 
 ### Search
 
@@ -371,15 +413,23 @@ Search field will help you create search options on the bot. This is similar to 
 
 To configure a Search field, you will have to provide following details -
 
-- **Search** - Click on the Search Text to add a placeholder for the Search field. 
+- **Search** - Click on the **Search** text to add a placeholder for the Search field. 
+
 `Example, Search my City`
-- **Icon** - Select an icon from the dropdown.
-- **Mandatory** - Enabling the Mandatory checkbox will ensure the user is either selecting or providing a value.
+
+- [**Icon**](form-icon) - Select an icon from the dropdown.
+
+- [**Mandatory**](mandatory) - Enabling the Mandatory checkbox will ensure the user is either selecting or providing a value.
+
 - **API** - When we want some custom response or inputs from an external API, we put the API URL here.
-- **Set Entity** - Select the entity from the dropdown to capture the value.
+
+- [**Set Entity**](set-entity) - Select the entity from the dropdown to capture the value.
+
 - **SearchEditable** - This field makes the Search option flexible by allowing users to select a value which is not present in the dropdown.
+
 `Example - If the API is not returning Pune as a dropdown option, then the user can type Pune and it will be captured by the Set Entity`
-- **Error Message** - If the user does not select any option from the dropdown, this error message will be shown to the user which will indicate the user to provide or select the value.
+
+- [**Error Message**](error-message) - If the user does not select any option from the dropdown, this error message will be shown to the user which will indicate the user to provide or select the value.
 
 ### Deleting a Form Field
 
@@ -395,14 +445,14 @@ The pop-up appears to confirm if you want to delete the field.
 
 There is a **Send** button which appears on the form which the user has to click to send the form details. Once the user clicks on **Send** button, the text appearing on the button changes to **Sent**.
 
-You can customize this text which appears on the button by enabling the **Add Custom Submit Button Text** checkbox.
+You can customize this text which appears on the button by enabling the **Add Custom Submit Button Text** checkbox and providing the before and after text for the buttons.
 
 `Examples for custom Button Text - Register, Submit, Proceed, etc`
 
 ![custombutton](assets/bot-builder-chat-elements/formshsl23.png)
 
-### Toggle the Form Field
+### Re-order the Form Fields
 
-You can restructure the form fields and organize them again once they all have been created using the toggle option as shown below.
+You can restructure the form fields and organize them again once they all have been created using the grip option as shown below.
 
 ![toggle](assets/bot-builder-chat-elements/formshsl22.png)

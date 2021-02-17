@@ -1,5 +1,5 @@
 ---
-title: Claiming & Closing Chats
+title: Chat Priority and Manual Routing
 ---
 
 ## Introduction
@@ -8,15 +8,27 @@ When we receive a message from the user, we send the message to a queue. We cont
 
 This priority is calculated dynamically and is based on a number of metrics.
 
-## Priority Calculcation
+## Priority
 
 When we receive a message from a user, We allocate it to Queues with a calculated priority.
 
 ### Queue Structure
 - Team Queue
+  - Every Team has its own dedicated queue.
+  - Chats present in this queue are allocated to agents basis availability of agent slots.
+  - Chats are added to this queue in the below scenarios
+    - Bot Broke, and due to human assistance being enabled, the chat gets allocated to default team
+    - This is an agent only solution, and all chats are added to the default team.
+    - An integration function has manually transferred a chat to a Team
+    - An Agent or Team Lead and re-assigned a chat to this team
+    - When an agent goes offline, and he had chats present in his waiting bucket, those chats get re-assigned back to Team Queue with highest priority 
 - Agent Queue
+  - Every agent has his own dedicated agent queue.
+  - Chats are added to this queue in the below scenarios
+    - If an Agent or Team Lead, manually re-assigns a chat to an agent, and that agent was already handling chats at his maximum allocated concurrency.
+    - If an Agent had marked a chat as "waiting for user", and the user returns, when the agent was already handling chats at his maximum allocated concurrency.
 
-### Queue Management
+### Priority Calculation
 >  Our bot is a special agent, code named ‘Gogo’
 
 The priority value and presence in ‘Team Queue’ or individual ‘Agent queue’ is calculated based on the below metrics:
@@ -32,21 +44,14 @@ The priority value and presence in ‘Team Queue’ or individual ‘Agent queue
   - If the agent to whom this user spoke to earlier is currently offline, we clear the relation between this user and agent, and allocate the chat to the next avaiable agent.
   - When an agent logs out, we clear the relation between this agent and all users he/she might have interacted with earlier.
 
-Apart from the above, once can choose between 2 Chat Assignment Algorithms in Athena, please refer to this [link](https://docs.haptik.ai/agent-chat/chat-assignment). for more information
+Apart from the above, once can choose between 2 Chat Assignment Algorithms in Smart Agent Chat, please refer to this [link](https://docs.haptik.ai/agent-chat/chat-assignment). for more information
 
-## Chat assignment
-The following section covers how an agent is assigned a chat.
+### Manual Chat Routing
+> Smart Agent Chat also supports manual assignment of chats to agents. 
 
-> Once the chat is assigned to an agent, the user can see the handover to the agent on the SDK UI. <br/><br/>
-![all_custom_tools](assets/sdk_claim.png)
+Team leads can manually assign/re-assign a chat. They can either assign it to themselves or a team or an individual agent. 
 
-
-### Manual Chat assignment (Claiming)
-> Smart Agent chat also supports manual assignment of chats to agents. 
-
-Team leads can manually assign a chat. They can either assign it to themselves or a team or an individual agent. 
-
-If the chat is assigned to a team, basis the [algorithm](https://docs.haptik.ai/agent-chat/chat-assignment#choosing-a-chat-assignment-algorithm) selected, the chat would be assigned to an agent of that team.
+If the chat is assigned to a team, basis the [algorithm](https://docs.haptik.ai/agent-chat/chat-assignment#choosing-a-chat-assignment-algorithm) selected, the chat would be assigned to an avaiable agent of that team.
 
 - Open any conversation either on the teams or the businesses page
   
@@ -66,6 +71,13 @@ If the chat is assigned to a team, basis the [algorithm](https://docs.haptik.ai/
 - A right hand side drawer should popup allowing you to assign a chat either to yourself, to a team or to an individual agent.
   <br/><br/>
   
+
+## Chat assignment - End user experience
+The following section covers how an agent is assigned a chat.
+
+> Once the chat is assigned to an agent, the user can see the handover to the agent on the SDK UI. <br/><br/>
+![all_custom_tools](assets/sdk_claim.png)
+
 
 ## Closing & Completing Chats
 When an agent has completed a chat, we ask for closing categories if they are enabled for the business, else we close the chat directly.

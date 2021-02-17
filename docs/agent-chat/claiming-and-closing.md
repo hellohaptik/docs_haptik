@@ -36,8 +36,8 @@ The priority value and presence in ‘Team Queue’ or individual ‘Agent queue
 - Existing Conversation or New Conversation
 - Bot involvement in business, and no previous assigned agent 
   - **If the bot is present and can handle the query** then the conversation continues
-  - **If the bot breaks and agent-assistance is enabled for business** then the conversation is transferred to default team
-  - **If a bot flow triggers agent-assistance**, then the conversation is assigned to the default team, unless a particular team was specified via the integration function.
+  - **If the bot breaks and human assistance is enabled for business** then the conversation is transferred to default team
+  - **If a bot flow triggers human assistance**, then the conversation is assigned to the default team, unless a particular team was specified via the integration function.
   - **If Bot breaks and agent-assistance is disabled for business** then the Bot break message or the outlier message as defined in business config is sent as a message by the bot
 - Returning user and agent Relation
   - If the agent to whom this user spoke to earlier is currently online, we assign this conversation to the same agent.
@@ -80,7 +80,7 @@ The following section covers how an agent is assigned a chat.
 
 
 ## Closing & Completing Chats
-When an agent has completed a chat, we ask for closing categories if they are enabled for the business, else we close the chat directly.
+When an agent has completed a chat, we ask for [closing categories](https://docs.haptik.ai/agent-chat/closing-categories) if they are enabled for the business, else we close the chat directly.
 
 > Once the chat is marked as complete/closed, the user can see the completion message on the SDK UI. <br/><br/> ![all_custom_tools](assets/sdk_complete.png)
 

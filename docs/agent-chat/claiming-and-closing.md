@@ -28,10 +28,9 @@ The priority value and presence in ‘Team Queue’ or individual ‘Agent queue
   - **If a bot flow triggers agent-assistance**, then the conversation is assigned to the default team, unless a particular team was specified via the integration function.
   - **If Bot breaks and agent-assistance is disabled for business** then the Bot break message or the outlier message as defined in business config is sent as a message by the bot
 - Returning user and agent Relation
-  - The following rules are present to improve our end user experiance w.r.t returning users
-    - If the agent to whom this user spoke to earlier is currently online, we assign this conversation to the same agent.
-    - If the agent to whom this user spoke to earlier is currently offline, we clear the relation between this user and agent, and allocate the chat to the next avaiable agent.
-    - When an agent logsout, we clear the relation between this user and agent.
+  - If the agent to whom this user spoke to earlier is currently online, we assign this conversation to the same agent.
+  - If the agent to whom this user spoke to earlier is currently offline, we clear the relation between this user and agent, and allocate the chat to the next avaiable agent.
+  - When an agent logs out, we clear the relation between this agent and all users he/she might have interacted with earlier.
 
 Apart from the above, once can choose between 2 Chat Assignment Algorithms in Athena, please refer to this [link](https://docs.haptik.ai/agent-chat/chat-assignment). for more information
 

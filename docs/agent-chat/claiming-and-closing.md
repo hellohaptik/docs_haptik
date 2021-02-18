@@ -8,11 +8,10 @@ When we receive a message from the user, we send the message to a queue. We cont
 
 This priority is calculated dynamically and is based on a number of metrics.
 
-## Priority
+## Queue Structure
 
 When we receive a message from a user, We allocate it to Queues with a calculated priority.
 
-### Queue Structure
 - Team Queue
   - Every Team has its own dedicated queue.
   - Chats present in this queue are allocated to agents basis availability of agent slots.
@@ -28,8 +27,7 @@ When we receive a message from a user, We allocate it to Queues with a calculate
     - If an Agent or Team Lead, manually re-assigns a chat to an agent, and that agent was already handling chats at his maximum allocated concurrency.
     - If an Agent had marked a chat as "waiting for user", and the user returns, when the agent was already handling chats at his maximum allocated concurrency.
 
-### Priority Calculation
->  Our bot is a special agent, code named ‘Gogo’
+## Priority Calculation
 
 The priority value and presence in ‘Team Queue’ or individual ‘Agent queue’ is calculated based on the below metrics:
 - New user or returning user
@@ -46,7 +44,10 @@ The priority value and presence in ‘Team Queue’ or individual ‘Agent queue
 
 Apart from the above, once can choose between 2 Chat Assignment Algorithms in Smart Agent Chat, please refer to this [link](https://docs.haptik.ai/agent-chat/chat-assignment). for more information
 
-### Manual Chat Routing
+>  Our bot is a special agent, code named ‘Gogo’
+
+## Manual Chat Routing
+
 > Smart Agent Chat also supports manual assignment of chats to agents. 
 
 Team leads can manually assign/re-assign a chat. They can either assign it to themselves or a team or an individual agent. 

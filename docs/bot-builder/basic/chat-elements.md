@@ -295,21 +295,21 @@ If any validation goes wrong, to inform the users that they have given an incorr
 
 To configure a Picker field, you will have to provide following details -
 
-- **Picker** - Click on the **Picker** text to add a placeholder for the Picker field. 
+- [**Picker**](https://docs.haptik.ai/bot-builder/basic/chat-elements#1-text) - Click on the **Picker** text to add a placeholder for the Picker field. 
 
 `Example, Please select a city`
 
-- [**Icon**](form-icon) - Select an icon from the dropdown.
+- [**Icon**](https://docs.haptik.ai/bot-builder/basic/chat-elements#2-form-icon) - Select an icon from the dropdown.
 
-- [**Mandatory**](mandatory) - Enabling the Mandatory checkbox will ensure the user is selecting a value from the dropdown.
+- [**Mandatory**](https://docs.haptik.ai/bot-builder/basic/chat-elements#3-mandatory) - Enabling the Mandatory checkbox will ensure the user is selecting a value from the dropdown.
 
 - **Picker Options** - Enter the comma separated dropdown values
 
 `For above example of list of cities - Mumbai, Delhi, Kolkata, Chennai, Banglore`
 
-- [**Set Entity**](set-entity) - Select the entity to capture the value from dropdown.
+- [**Set Entity**](https://docs.haptik.ai/bot-builder/basic/chat-elements#4-set-entity) - Select the entity to capture the value from dropdown.
 
-- [**Error Message**](error-message) - If the user does not select a value from the dropdown, this error message will be shown to the user which will indicate the user to select an option from the dropdown.
+- **Error Message** - If the user does not select a value from the dropdown, this error message will be shown to the user which will indicate the user to select an option from the dropdown.
 
 ### Number
 
@@ -319,15 +319,15 @@ Number field can be used to get number inputs from the user. Example, Mobile num
 
 To configure a Number field, you will have to provide following details -
 
-- **Number** - Click on the **Number** text to add a placeholder for this Number field.
+- [**Number**](https://docs.haptik.ai/bot-builder/basic/chat-elements#1-text) - Click on the **Number** text to add a placeholder for this Number field.
 
 `Example, Please enter your mobile`
 
-- [**Icon**](form-icon) - Select an icon from the dropdown.
+- [**Icon**](https://docs.haptik.ai/bot-builder/basic/chat-elements#2-form-icon) - Select an icon from the dropdown.
 
-- [**Mandatory**](mandatory) - Enabling the Mandatory checkbox will ensure the user is providing a value.
+- [**Mandatory**](https://docs.haptik.ai/bot-builder/basic/chat-elements#3-mandatory) - Enabling the Mandatory checkbox will ensure the user is providing a value.
 
-- [**Set Entity**](set-entity) - Select the entity from the dropdown to capture the number.
+- [**Set Entity**](https://docs.haptik.ai/bot-builder/basic/chat-elements#4-set-entity) - Select the entity from the dropdown to capture the number.
 
 - **Validation** - There are two different types of validation available
 
@@ -337,7 +337,7 @@ To configure a Number field, you will have to provide following details -
 
 ![number_range](assets/bot-builder-chat-elements/formshsl14.png)
 
-- [**Error Message**](error-message) - If the user does not provide a value of either fixed length or in the specified range, this error message will be shown to the user which will indicate the user to provide a number value.
+- **Error Message** - If the user does not provide a value of either fixed length or in the specified range, this error message will be shown to the user which will indicate the user to provide a number value.
 
 ### Email
 
@@ -347,17 +347,17 @@ Email can be used to get the email id from the user.
 
 To configure an Email field, you will have to provide following details -
 
-- **Email** - Click on the **Email** text to add a placeholder for the Email field. 
+- [**Email**](https://docs.haptik.ai/bot-builder/basic/chat-elements#1-text) - Click on the **Email** text to add a placeholder for the Email field. 
 
 `Example, Please provide your email id`
 
-- [**Icon**](form-icon) - Select an icon from the dropdown.
+- [**Icon**](https://docs.haptik.ai/bot-builder/basic/chat-elements#2-form-icon) - Select an icon from the dropdown.
 
-- [**Mandatory**](mandatory) - Enabling the Mandatory checkbox will ensure the user is providing the email id.
+- [**Mandatory**](https://docs.haptik.ai/bot-builder/basic/chat-elements#3-mandatory) - Enabling the Mandatory checkbox will ensure the user is providing the email id.
 
-- [**Set Entity**](set-entity) - Select the entity from the dropdown to capture the email id.
+- [**Set Entity**](https://docs.haptik.ai/bot-builder/basic/chat-elements#4-set-entity) - Select the entity from the dropdown to capture the email id.
 
-- [**Error Message**](error-message) - If the user does not provide an email id, this error message will be shown to the user which will indicate the user to provide their email id.
+- **Error Message** - If the user does not provide an email id, this error message will be shown to the user which will indicate the user to provide their email id.
 
 ### Date
 
@@ -367,15 +367,15 @@ Date can be used to get a date from the user.
 
 To configure a Date field, you will have to provide following details -
 
-- **Date** - Click on the **Date** text to add a placeholder for the Date field. 
+- [**Date**](https://docs.haptik.ai/bot-builder/basic/chat-elements#1-text) - Click on the **Date** text to add a placeholder for the Date field. 
 
 `Example, Check-in Date`
 
-- [**Icon**](form-icon) - Select an icon from the dropdown.
+- [**Icon**](https://docs.haptik.ai/bot-builder/basic/chat-elements#2-form-icon) - Select an icon from the dropdown.
 
-- [**Mandatory**](mandatory) - Enabling the Mandatory checkbox will ensure the user is providing the date.
+- [**Mandatory**](https://docs.haptik.ai/bot-builder/basic/chat-elements#3-mandatory) - Enabling the Mandatory checkbox will ensure the user is providing the date.
 
-- [**Set Entity**](set-entity) - Select the entity from the dropdown to capture the date.
+- [**Set Entity**](https://docs.haptik.ai/bot-builder/basic/chat-elements#4-set-entity) - Select the entity from the dropdown to capture the date.
 
 - **Validation** - You can mention both the Start Date and End Date from which the user can select any one date or you can set either of them
 
@@ -383,7 +383,7 @@ To configure a Date field, you will have to provide following details -
 
 ![date_validation](assets/bot-builder-chat-elements/formshsl17.png)
 
-- [**Error Message**](error-message) - If the user did not select any date, this error message will be shown to the user which will indicate the user to select a date.
+- **Error Message** - If the user did not select any date, this error message will be shown to the user which will indicate the user to select a date.
 
 ### Time
 
@@ -393,17 +393,17 @@ Time field is used to get the time from a user. It uses the clock widget where u
 
 To configure a Time field, you will have to provide following details -
 
-- **Time** - Click on the **Time** text to add a placeholder for the Time field. 
+- [**Time**](https://docs.haptik.ai/bot-builder/basic/chat-elements#1-text) - Click on the **Time** text to add a placeholder for the Time field. 
 
 `Example, Check-in Time`
 
-- [**Icon**](form-icon) - Select an icon from the dropdown.
+- [**Icon**](https://docs.haptik.ai/bot-builder/basic/chat-elements#2-form-icon) - Select an icon from the dropdown.
 
-- [**Mandatory**](mandatory) - Enabling the Mandatory checkbox will ensure the user is providing the time.
+- [**Mandatory**](https://docs.haptik.ai/bot-builder/basic/chat-elements#3-mandatory) - Enabling the Mandatory checkbox will ensure the user is providing the time.
 
-- [**Set Entity**](set-entity) - Select the entity from the dropdown to capture the time.
+- [**Set Entity**](https://docs.haptik.ai/bot-builder/basic/chat-elements#4-set-entity) - Select the entity from the dropdown to capture the time.
 
-- [**Error Message**](error-message) - If the user does not provide any time, this error message will be shown to the user which will indicate the user to provide the time.
+- **Error Message** - If the user does not provide any time, this error message will be shown to the user which will indicate the user to provide the time.
 
 ### Search
 
@@ -413,23 +413,23 @@ Search field will help you create search options on the bot. This is similar to 
 
 To configure a Search field, you will have to provide following details -
 
-- **Search** - Click on the **Search** text to add a placeholder for the Search field. 
+- [**Search**](https://docs.haptik.ai/bot-builder/basic/chat-elements#1-text) - Click on the **Search** text to add a placeholder for the Search field. 
 
 `Example, Search my City`
 
-- [**Icon**](form-icon) - Select an icon from the dropdown.
+- [**Icon**](https://docs.haptik.ai/bot-builder/basic/chat-elements#2-form-icon) - Select an icon from the dropdown.
 
-- [**Mandatory**](mandatory) - Enabling the Mandatory checkbox will ensure the user is either selecting or providing a value.
+- [**Mandatory**](https://docs.haptik.ai/bot-builder/basic/chat-elements#3-mandatory) - Enabling the Mandatory checkbox will ensure the user is either selecting or providing a value.
 
 - **API** - When we want some custom response or inputs from an external API, we put the API URL here.
 
-- [**Set Entity**](set-entity) - Select the entity from the dropdown to capture the value.
+- [**Set Entity**](https://docs.haptik.ai/bot-builder/basic/chat-elements#4-set-entity) - Select the entity from the dropdown to capture the value.
 
 - **SearchEditable** - This field makes the Search option flexible by allowing users to select a value which is not present in the dropdown.
 
 `Example - If the API is not returning Pune as a dropdown option, then the user can type Pune and it will be captured by the Set Entity`
 
-- [**Error Message**](error-message) - If the user does not select any option from the dropdown, this error message will be shown to the user which will indicate the user to provide or select the value.
+- **Error Message** - If the user does not select any option from the dropdown, this error message will be shown to the user which will indicate the user to provide or select the value.
 
 ### Deleting a Form Field
 

@@ -1,0 +1,19 @@
+---
+title: Sounds and Notifications
+---
+
+Notifications and sounds are sent to agents to increase their porductivity.
+
+
+Upload a video here
+
+Agents get notifications and sounds under the following circumstances. 
+
+## When a new chat is pinned
+1. When a new chat gets pinned to an agent when he is on the my chats window, it will be indicated by a sound.
+2. When a new chat gets pinned to an agent and he is not on the my chats window, It will be indicated by a notification popup accompanied by a sound. If an agent is on any native app and he gets pinned by a new chat, it will be indicated by a notification popup and sound.
+There will also be an indication of the number of new chat pinned on the window
+ 
+## When a New message is received
+1. When the agent is on my chat window and receives a message from any user it will be indicated with just the number bubble and no sound.
+2. When the agent is not on my chat window and receives a message from any user it will be indicated with a sound and a notification

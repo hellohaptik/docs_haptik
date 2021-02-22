@@ -36,13 +36,13 @@ The priority value and presence in ‘Team Queue’ or individual ‘Agent queue
   - **If the bot is present and can handle the query** then the conversation continues
   - **If the bot breaks and human assistance is enabled for business** then the conversation is transferred to default team
   - **If a bot flow triggers human assistance**, then the conversation is assigned to the default team, unless a particular team was specified via the integration function.
-  - **If Bot breaks and agent-assistance is disabled for business** then the Bot break message or the outlier message as defined in business config is sent as a message by the bot
+  - **If Bot breaks and agent-assistance is disabled for business** then the Bot break message or the outlier message as defined on [Business Manager](https://docs.haptik.ai/bot-builder/basic/business) is sent as a message by the bot
 - Returning user and agent Relation
   - If the agent to whom this user spoke to earlier is currently online, we assign this conversation to the same agent.
-  - If the agent to whom this user spoke to earlier is currently offline, we clear the relation between this user and agent, and allocate the chat to the next avaiable agent.
+  - If the agent to whom this user spoke to earlier is currently offline, we clear the relation between this user and agent, and allocate the chat to the next available agent.
   - When an agent logs out, we clear the relation between this agent and all users he/she might have interacted with earlier.
 
-Apart from the above, once can choose between 2 Chat Assignment Algorithms in Smart Agent Chat, please refer to this [link](https://docs.haptik.ai/agent-chat/chat-assignment). for more information
+Apart from the above, once can choose between 2 Chat Assignment Algorithms in **Smart Agent Chat**, you can read more about it [here](https://docs.haptik.ai/agent-chat/chat-assignment). for more information
 
 >  Our bot is a special agent, code named ‘Gogo’
 
@@ -87,9 +87,9 @@ When an agent has completed a chat, we ask for [closing categories](https://docs
 
 ### Automatic Closing of Chats
 Chats are automatically closed if:
-- Chats assigned to the agent which are currently in waiting when the agent logs out
-- No messages are exchanged between the agent and the user and the chat is either with the bot or is in waiting for user state for **8 minutes**.
-- If all agents were offline, and  [this](https://docs.haptik.ai/agent-chat/teams#step-4---setup-team-offline-message) setting was enabled for the team.
+- An agent has **Waiting for user** chats and he/she logs out. We move all **Waiting for user** chats to complete.
+- No messages are exchanged between the agent and the user and the chat is either with the bot or is in **Waiting for user** state for **8 minutes**.
+- If all agents were offline, and [this](https://docs.haptik.ai/agent-chat/teams#step-4---setup-team-offline-message) setting was enabled for the team.
 
 ### Manual Closing of Chats
 Chats can be manually marked complete
@@ -106,7 +106,7 @@ Chats can be manually marked complete
 
 - The agent will have 2 options here
   - **Mark a chat complete**: This means that the conversation is complete and the user will not be sending more messages as a part of this conversation.
-  - **Send to waiting**: Sometimes the conversation isn't complete. For example, the agent has replied but the user is taking some time to reply. In this case the agent can mark the chat as waiting. This removes the chat from the agent's queue freeing up the agent so that the agent can take more chats.
+  - **Send to waiting**: Sometimes the conversation isn't complete. For example, the agent has replied but the user is taking some time to reply. In this case the agent can mark the chat as waiting. This removes the chat from the agent's queue freeing up the agent so that the agent can take fresh chats.
 
     > Once the user replies, the conversation is added back to the same agent's queue.
     > When an agent goes offline, all chats that are currently marked as waiting, will be moved back to team queue with the higest priority, and will be assigned to the next available agents.

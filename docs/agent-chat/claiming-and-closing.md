@@ -36,13 +36,13 @@ The priority value and presence in ‘Team Queue’ or individual ‘Agent queue
   - **If the bot is present and can handle the query** then the conversation continues
   - **If the bot breaks and human assistance is enabled for business** then the conversation is transferred to default team
   - **If a bot flow triggers human assistance**, then the conversation is assigned to the default team, unless a particular team was specified via the integration function.
-  - **If Bot breaks and agent-assistance is disabled for business** then the Bot break message or the outlier message as defined on [Business Manager](https://docs.haptik.ai/bot-builder/basic/business) is sent as a message by the bot
-- Returning user and agent Relation
+  - **If Bot breaks and human assistance is disabled for business** then the Bot break message or the outlier message as defined on [Business Manager](https://docs.haptik.ai/bot-builder/basic/business) is sent as a message by the bot
+- Returning user and agent relation
   - If the agent to whom this user spoke to earlier is currently online, we assign this conversation to the same agent.
   - If the agent to whom this user spoke to earlier is currently offline, we clear the relation between this user and agent, and allocate the chat to the next available agent.
   - When an agent logs out, we clear the relation between this agent and all users he/she might have interacted with earlier.
 
-Apart from the above, once can choose between 2 Chat Assignment Algorithms in **Smart Agent Chat**, you can read more about it [here](https://docs.haptik.ai/agent-chat/chat-assignment). for more information
+Apart from the above, one can choose between the two **Chat Assignment Algorithms** on Smart Agent Chat, you can read more about it [here (https://docs.haptik.ai/agent-chat/chat-assignment).
 
 >  Our bot is a special agent, code named ‘Gogo’
 
@@ -52,7 +52,7 @@ Apart from the above, once can choose between 2 Chat Assignment Algorithms in **
 
 Team leads can manually assign/re-assign a chat. They can either assign it to themselves or a team or an individual agent. 
 
-If the chat is assigned to a team, basis the [algorithm](https://docs.haptik.ai/agent-chat/chat-assignment#choosing-a-chat-assignment-algorithm) selected, the chat would be assigned to an avaiable agent of that team.
+If the chat is assigned to a team, basis the [algorithm](https://docs.haptik.ai/agent-chat/chat-assignment#choosing-a-chat-assignment-algorithm) selected, the chat would be assigned to an available agent of that team.
 
 - Open any conversation either on the teams or the businesses page
   
@@ -104,7 +104,7 @@ Chats can be manually marked complete
   ![all_custom_tools](assets/close_1.png)
   <br/><br/>
 
-- The agent will have 2 options here
+- The agent will have two options here
   - **Mark a chat complete**: This means that the conversation is complete and the user will not be sending more messages as a part of this conversation.
   - **Send to waiting**: Sometimes the conversation isn't complete. For example, the agent has replied but the user is taking some time to reply. In this case the agent can mark the chat as waiting. This removes the chat from the agent's queue freeing up the agent so that the agent can take fresh chats.
 
@@ -113,7 +113,7 @@ Chats can be manually marked complete
   
   ![all_custom_tools](assets/close_2.png)
 
-- Once the agent marks the conversation appropriately. The conversation is removed from the agent's queue and the My Chats page.
+- Once the agent marks a conversation complete, the conversation is removed from the agent's queue and the **MyChats** screen.
 
 ### Open Completed Chats
 

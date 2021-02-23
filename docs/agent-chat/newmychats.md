@@ -136,11 +136,15 @@ This is what makes this button extremely powerful, it cleans up concurrency buck
 
 In situations where agents need additional help from his team members, they can use this button to reassign the chat to anyone specific among his team or whoever  free in his team. 
 
-![MyChatsScreen16](assets/reassignbutton.png)
+![MyChatsScreen16](assets/reassign_chat.png)
 
 Once you click on the **Reassign Chat** button, a modal opens up on the right hand side of the screen where you can choose whom to reassign it to.
 
-![MyChatsScreen17](assets/reassignmodal.png)
+1. "Assign to any agent" will auto-assign the chat to an online agent of the team
+2. The "Assign" button will be active only if the agent is online, which is indicated by green dot on the left side of agent's name 
+3. In case the agent is offline (red dot) or logged out (grey dot), the "Assign" button will not be active and chat's can't be assigned to that particular agent
+
+
 
 #### Report a user as inappropriate
 

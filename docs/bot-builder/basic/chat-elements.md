@@ -202,7 +202,7 @@ You can configure Forms by clicking on the `Add a chat element` link and then se
 
 After choosing Forms Builder as the chat element option you can set the **Form Title** and **Form Description**.
 
-1. **Form Title**: This field should convey the action needed from the user. For example if you are making a form to take delivery address, Form Title can be *Please help me with your Delivery address* Firm Title is an optional field.
+1. **Form Title**: This field should convey the action needed from the user. For example if you are making a form to take delivery address, Form Title can be *Please help me with your Delivery address* Form Title is an optional field.
 
 2. **Form Description**: This is a Description for the form. This will be visible on the form. Form Description is also an optional field.
 
@@ -297,7 +297,7 @@ To configure a Picker field, you will have to provide following details -
 
 - [**Picker**](https://docs.haptik.ai/bot-builder/basic/chat-elements#1-text) - Click on the **Picker** text to add a placeholder for the Picker field. 
 
-`Example, Please select a city`
+    `Example, Please select a city`
 
 - [**Icon**](https://docs.haptik.ai/bot-builder/basic/chat-elements#2-form-icon) - Select an icon from the dropdown.
 
@@ -305,7 +305,7 @@ To configure a Picker field, you will have to provide following details -
 
 - **Picker Options** - Enter the comma separated dropdown values
 
-`For above example of list of cities - Mumbai, Delhi, Kolkata, Chennai, Banglore`
+    `For above example of list of cities - Mumbai, Delhi, Kolkata, Chennai, Banglore`
 
 - [**Set Entity**](https://docs.haptik.ai/bot-builder/basic/chat-elements#4-set-entity) - Select the entity to capture the value from dropdown.
 
@@ -321,7 +321,7 @@ To configure a Number field, you will have to provide following details -
 
 - [**Number**](https://docs.haptik.ai/bot-builder/basic/chat-elements#1-text) - Click on the **Number** text to add a placeholder for this Number field.
 
-`Example, Please enter your mobile`
+    `Example, Please enter your mobile`
 
 - [**Icon**](https://docs.haptik.ai/bot-builder/basic/chat-elements#2-form-icon) - Select an icon from the dropdown.
 
@@ -349,7 +349,7 @@ To configure an Email field, you will have to provide following details -
 
 - [**Email**](https://docs.haptik.ai/bot-builder/basic/chat-elements#1-text) - Click on the **Email** text to add a placeholder for the Email field. 
 
-`Example, Please provide your email id`
+    `Example, Please provide your email id`
 
 - [**Icon**](https://docs.haptik.ai/bot-builder/basic/chat-elements#2-form-icon) - Select an icon from the dropdown.
 
@@ -369,7 +369,7 @@ To configure a Date field, you will have to provide following details -
 
 - [**Date**](https://docs.haptik.ai/bot-builder/basic/chat-elements#1-text) - Click on the **Date** text to add a placeholder for the Date field. 
 
-`Example, Check-in Date`
+    `Example, Check-in Date`
 
 - [**Icon**](https://docs.haptik.ai/bot-builder/basic/chat-elements#2-form-icon) - Select an icon from the dropdown.
 
@@ -379,7 +379,7 @@ To configure a Date field, you will have to provide following details -
 
 - **Validation** - You can mention both the Start Date and End Date from which the user can select any one date or you can set either of them
 
-`Example, if the Start Date is 01-01-2001 and End Date is 01-01-2099, then the user will only be able to see the dates between these range`
+    `Example, if the Start Date is 01-01-2001 and End Date is 01-01-2099, then the user will only be able to see the dates between these range`
 
 ![date_validation](assets/bot-builder-chat-elements/formshsl17.png)
 
@@ -395,7 +395,7 @@ To configure a Time field, you will have to provide following details -
 
 - [**Time**](https://docs.haptik.ai/bot-builder/basic/chat-elements#1-text) - Click on the **Time** text to add a placeholder for the Time field. 
 
-`Example, Check-in Time`
+    `Example, Check-in Time`
 
 - [**Icon**](https://docs.haptik.ai/bot-builder/basic/chat-elements#2-form-icon) - Select an icon from the dropdown.
 
@@ -415,7 +415,7 @@ To configure a Search field, you will have to provide following details -
 
 - [**Search**](https://docs.haptik.ai/bot-builder/basic/chat-elements#1-text) - Click on the **Search** text to add a placeholder for the Search field. 
 
-`Example, Search my City`
+    `Example, Search my City`
 
 - [**Icon**](https://docs.haptik.ai/bot-builder/basic/chat-elements#2-form-icon) - Select an icon from the dropdown.
 
@@ -427,7 +427,7 @@ To configure a Search field, you will have to provide following details -
 
 - **SearchEditable** - This field makes the Search option flexible by allowing users to select a value which is not present in the dropdown.
 
-`Example - If the API is not returning Pune as a dropdown option, then the user can type Pune and it will be captured by the Set Entity`
+    `Example - If the API is not returning Pune as a dropdown option, then the user can type Pune and it will be captured by the Set Entity`
 
 - **Error Message** - If the user does not select any option from the dropdown, this error message will be shown to the user which will indicate the user to provide or select the value.
 
@@ -447,7 +447,7 @@ There is a **Send** button which appears on the form which the user has to click
 
 You can customize this text which appears on the button by enabling the **Add Custom Submit Button Text** checkbox and providing the before and after text for the buttons.
 
-`Examples for custom Button Text - Register, Submit, Proceed, etc`
+    `Examples for custom Button Text - Register, Submit, Proceed, etc`
 
 ![custombutton](assets/bot-builder-chat-elements/formshsl23.png)
 

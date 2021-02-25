@@ -164,7 +164,7 @@ The message which was spoken by the user towards the end of the conversation is 
 
 When you hover over the Conversation %, you can see the conversation count as shown below -
 
-![Language Usage](assets/languagess2.png)
+![Language Usage](assets/languagess2.PNG)
 
 **How is bot automation calculated under Language Usage?**
 

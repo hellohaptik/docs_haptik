@@ -13,6 +13,7 @@ The **Overview** section provides information about:
 * User Rating
 * Top Funnels
 * Bot Automation
+* Language Usage
 
 ![OverviewPage](assets/Overview1.png)
 
@@ -141,4 +142,33 @@ Bot Transfers are shown on the graph too with a vertical line along with a toggl
 
 ![BotAutomation1](assets/Overview11.png)
 
+## Language Usage
+
+**Language Usage** shows the split of languages, conversations and bot automation percentage for all the languages user are interacting in, on the IVA. This section helps in understanding capabilities that should be added to support end-users who reach out in different languages.
+
+![Language Usage](assets/languagess.png)
+
+**What does language(s) mean?**
+
+This section helps in understanding split of different languages your users are interacting in with the IVA.
+
+> If a user talks in a language which is not enabled on the bot, the bot will give a bot break and it will be tagged under default language **English** and automation number for English will be affected.
+
+**How are conversations calculated under Language Usage?**
+
+Conversations shows the split of languages in which the users are interacting with the IVA.
+
+**Formula = No. of conversations (in that language)/ Total no. of conversations X 100**
+
+The message which was spoken by the user towards the end of the conversation is considered as the language in which the user interacted with the IVA. If in the conversation, the first half of the conversation is in English and the rest is in Hindi, the conversation counter would go up for Hindi as the last message was in Hindi.
+
+When you hover over the Conversation %, you can see the conversation count as shown below -
+
+![Language Usage](assets/languagess2.png)
+
+**How is bot automation calculated under Language Usage?**
+
+**Formula = No of conversations (in that language) that didn’t have a bot break or agent response/Total number of conversations (in that same language) X 100**
+
 > Arrows in every section can take you to the corresponding pages to understand a particular metric in depth.
+

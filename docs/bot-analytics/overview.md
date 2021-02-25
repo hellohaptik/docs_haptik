@@ -149,9 +149,10 @@ Bot Transfers are shown on the graph too with a vertical line along with a toggl
 ![Language Usage](assets/languagess.png)
 
 **What does language(s) mean?**
+
 This section helps in understanding split of different languages your users are interacting in with the IVA.
 
-> If a user talks in a language which is not enbaled on the bot, the bot will give a bot break and it will be tagged under default language **English** and automation number for English will be affected.
+> If a user talks in a language which is not enabled on the bot, the bot will give a bot break and it will be tagged under default language **English** and automation number for English will be affected.
 
 **How are conversations calculated under Language Usage?**
 
@@ -160,8 +161,6 @@ Conversations shows the split of languages in which the users are interacting wi
 **Formula = No. of conversations (in that language)/ Total no. of conversations X 100**
 
 The message which was spoken by the user towards the end of the conversation is considered as the language in which the user interacted with the IVA. If in the conversation, the first half of the conversation is in English and the rest is in Hindi, the conversation counter would go up for Hindi as the last message was in Hindi.
-
-If the user chose a different language and did not move to a new language or sent any message after that. The message which he choose to be considered as the language
 
 When you hover over the Conversation %, you can see the conversation count as shown below -
 

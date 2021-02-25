@@ -151,6 +151,8 @@ Bot Transfers are shown on the graph too with a vertical line along with a toggl
 **What does language(s) mean?**
 This section helps in understanding split of different languages your users are interacting in with the IVA.
 
+> If a user talks in a language which is not enbaled on the bot, the bot will give a bot break and it will be tagged under default language **English** and automation number for English will be affected.
+
 **How are conversations calculated under Language Usage?**
 
 Conversations shows the split of languages in which the users are interacting with the IVA.

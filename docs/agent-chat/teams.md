@@ -9,7 +9,6 @@ Read this document to know about the **Team** feature in Smart Agent Chat. Team 
 ## What is a team?
 A team is a group of agents who are trained to handle user queries related to a specific topic. The team can be divided based on the subject matter/location of a user/expertise of agents. The logic for team routing can be defined as per the business requirement. 
 
-
 ## Business Configurations for Enabeling Chat Assignment to a Team
 
 A team can receive chats from a business in 2 possible configurations
@@ -22,15 +21,7 @@ A team can receive chats from a business in 2 possible configurations
 
 _Note: If a Business is **Completely Bot Assisted**, the chat will never be assigned to a team._
 
-
-## Example
-
-![bot_settings](assets/teams_hierarchy.png)
-
-In the above example, Airtel is a partner. There are three teams, which lie under Airtel as a Partner. Teams are not directly associated with a business. They are associated with nodes in the chatflow for a particular bot.
-
-Note: Every Business has a default team in case no team is detected. For no bot condition, the default team is the only team a partner can have.
-
+> Every Business has a default team in case no team is detected. For no bot condition, the default team is the only team a partner can have.
 
 ## Chat routing to a team
 
@@ -40,64 +31,21 @@ There are three ways in which a chat can be assigned to a team
 2. Manual Assignment
 3. Team routing from Business (When a business has no bots)
 
-
 ## How to create a team?
 
-### Step 1 - Write Team name
+**Step 1 - Write Team name**
 
-The team name is used for internal purpose for the Team Leaders & Agents. A user will never see the team name of the team assigned to him/her.
+The team name is used for internal purpose for the Team Leaders & Agents. A user will never be able to see the team name on the chat window.
 
-### Step 2 - Select Team Owner (Client)
+**Step 2 - Select Team Owner (Client)**
 
-Select the company to which the team belongs. This is used by agencies who deal with multiple clients at a given time.
+Select the Partner(Client) to which the team belongs.
 
-### Step 3 - Select Team Status (Online/ Offline)
+> **What is a Default Team?**
+> 
+> There can be a situation when the team routing logic fails and no team is shortlisted to assign a chat. In that case, the chat is assigned to the default team. Create the default team on Smart Agent Chat. Open General Settings on Business manager & set the default team.
 
-Team status defines if the team can receive chats from a business or not.
-
-Online - Team will receive chats from a business
-Offline - Team will not receive chats from a business
-
-### Step 4 - Select a language (Optional)
-
-If you have multilingual IVA, you can first select the language from the dropdown to configure the following messages.
-
-![language_for_messages](assets/TeamsLanguage.png)
-
-
-### Step 5 - Setup Team Offline message
-
-If a team status id is defined as offline, the team should configure it. When users send a message and all agents have logged out, you can setup a default message for the end user. For example, this message could say `"Sorry, no agents are available at the moment. We will respond to you as soon an agent is online".`
-
-![Offline message](assets/Teams1.png)
-
-This message will come when none of the agents assigned to that business is Online. This is also customizable and also we can adjust whether we want to complete the chat in this case or not.
-
-   > Ideally, we suggest agents to go offline first and then logout. So, first an agent closes chats in their queue. And then they logout as soon as they're to end their daily shifts. 
-
-There is a toggle of Marking Chat as complete. This means -
-
-- If the Toggle is **ON**, i.e Green colour - All the chats will be completed when agents are Offline.
-
-- If the Toggle is **OFF**, i.e Red colour - All the chats will remain in Pending/Queued State when agents are Offline.
-
-### Step 6 - Setup Team Delay Message and Delay Time
-
-Similar to the Team Offline message, you can configure the delay message that is sent to users with a set delay time. This message will be sent to the user when all agents are busy will other chats. This is customizable and we can adjust the time after which this message will be sent.
-
-![Delay message](assets/Teams2.png)
-
-> Note: Offline message will appear immediately after the user has initiated an agent chat, whereas Delay Message will appear after the specified time interval.
-
-### Step 7 - Setup User Recall Message and Recall Time
-
-Similar to the Delay message, you can configure the recall message to get the user back in the conversation. This message is sent once the chat has started with the agent but the user has stopped replying in between to the Agent. The time can be configured between 0s to 8m. 
-
-![Recall message](assets/Teams3.png)
-
-After making all the adjustments, Don't forget to Save all the changes which you have done.
-
-## How to Manage Agents of a Team
+## How to Manage Agents of a Team?
 
 1. Add agents
 2. Remove agents
@@ -105,7 +53,7 @@ After making all the adjustments, Don't forget to Save all the changes which you
 4. View agent status
 5. View agent chats
 
-## Chat handling Capacity and Online Agent slots
+### Chat handling Capacity and Online Agent slots
 
 ![Queue capacity 1](assets/case_1.png)
 
@@ -135,7 +83,7 @@ iii. Availability is calculated as = (A-B)/A x 100
 
 The point `iii` above gives the availability %age value. This value in green means the team can handle the incoming chat volume. 
 
-## Team Chats
+## How to monitor Team Chats?
 
 1. View Team chats
 2. Filter chats' list based on
@@ -149,26 +97,51 @@ The point `iii` above gives the availability %age value. This value in green mea
     2. Report inappropriate (to be deprecated)
     3. View User details
 
-
-## Team Analytics
+## How to analyse Team metrics?
 
 1. View Team level statistics
 2. View Agent level statistics
 3. Set duration
 
+## How to make changes in the Team Settings?
 
-## What is a Default Team?
+**Step 1 - Select a language (Optional)**
 
-There can be a situation when the team routing logic fails and no team is shortlisted to assign a chat. In that case, the chat is assigned to the default team.
+If you have multilingual IVA, you can first select the language from the dropdown to configure the following messages.
 
-### Step 1 - Create a Team in Smart Agent Chat
+![language_for_messages](assets/TeamsLanguage.png)
 
-Make a team in agent chat which is supposed to take chats which are not assigned to any team (due to any technical reason).
+**Step 2 - Setup Team Offline message**
 
-### Step 2 - Select Default Team in Business manager
+If a team status id is defined as offline, the team should configure it. When users send a message and all agents have logged out, you can setup a default message for the end user. For example, this message could say `"Sorry, no agents are available at the moment. We will respond to you as soon an agent is online".`
 
-Open General Settings in Business manager & set the default Team.
+![Offline message](assets/Teams1.png)
 
+This message will come when none of the agents assigned to that business is Online. This is also customizable and also we can adjust whether we want to complete the chat in this case or not.
+
+> Ideally, we suggest agents to go offline first and then logout. So, first an agent closes chats in their queue. And then they logout as soon as they're to end their daily shifts. 
+
+There is a toggle of Marking Chat as complete. This means -
+
+- If the Toggle is **ON**, i.e Green colour - All the chats will be completed when agents are Offline.
+
+- If the Toggle is **OFF**, i.e Red colour - All the chats will remain in Pending/Queued State when agents are Offline.
+
+**Step 3 - Setup Team Delay Message and Delay Time**
+
+Similar to the Team Offline message, you can configure the delay message that is sent to users with a set delay time. This message will be sent to the user when all agents are busy will other chats. This is customizable and we can adjust the time after which this message will be sent.
+
+![Delay message](assets/Teams2.png)
+
+> Note: Offline message will appear immediately after the user has initiated an agent chat, whereas Delay Message will appear after the specified time interval.
+
+**Step 4 - Setup User Recall Message and Recall Time**
+
+Similar to the Delay message, you can configure the recall message to get the user back in the conversation. This message is sent once the chat has started with the agent but the user has stopped replying in between to the Agent. The time can be configured between 0s to 8m. 
+
+![Recall message](assets/Teams3.png)
+
+After making all the adjustments, Don't forget to Save all the changes which you have done.
 
 ## Tips to manage a Team
 
@@ -189,7 +162,6 @@ You can filter the summary and agent metrics by *Custom time* or *Custom date*. 
 ![Hourly_Metrics](assets/agentchatanalytics.png)
 
 > Tip: You can choose hourly slots on a date in the Time picker to get the metric values for the chosen Date and Time.
-
 
 ## Managing Offline Hour chats
 

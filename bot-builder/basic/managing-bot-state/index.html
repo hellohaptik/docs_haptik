@@ -66,17 +66,17 @@
 <p>Context is linguistically defined as the background in which the conversation is taking place. From the IVA perspective, it can involve retaining the memory of any piece of information that has been either derived from past user behavior, the action performed by the IVA or has been explicitly given by the user.</p>
 <p>It can involve information like Nodes traversed by the IVA in the conversation, Entity values collected, ML Module which sent the last reply e.g Disambiguation, Small Talk, etc.</p>
 <p>User’s own name, email, phone number, etc explicitly provided by him, will also form a part of the context. The context needs to be stored before it can be used. Before we understand when the context is used, it’s important to know when it’s deleted.</p>
-<p><strong>When is the context information deleted?</strong>
-The context is deleted by the system in case of any of the following events -</p>
+<p><strong>When is the context information deleted?</strong></p>
+<p>The context is deleted by the system in case of any of the following events -</p>
 <ul>
-<li><p>When an END NODE is encountered by the IVA in the conversation</p></li>
-<li><p>When an agent marks the conversation as COMPLETE from ATHENA</p></li>
+<li><p>When a Context Clear Node is encountered by the IVA in the conversation</p></li>
+<li><p>When an agent marks the conversation as COMPLETE from Smart Agent Chat</p></li>
 </ul>
 <p><strong>When is the context used?</strong>
 If the context has not been deleted as per the above 2 cases, the IVA can use the context up to 2 hours from the last activity of the user. The parameter of 2 hours is customizable up to 48 hours.</p>
-<p>Illustration - Let’s say there is a conversation that ideally can get 4 levels deep as shown in the image below. It has a START node, a CHILD node, a Grand-Child node and a Great Grand-child Node with the Great Grand Child node being the END NODE.</p>
+<p>Illustration - Let’s say there is a conversation that ideally can get 4 levels deep as shown in the image below. It has a START node, a CHILD node, a Grand-Child node and a Great Grand-child Node with the Great Grand Child node being the Context Clear Node.</p>
 <p><img src="/assets/bot-builder-manage-state/Context.png" alt="Data Scopes"></p>
-<p>Let’s say the user starts the conversation from a Start Node ABOUT HAPTIK and then chooses an option to reach the child node FUNDING OF HAPTIK. At this point, if a user leaves the conversation, the IVA will retain the context for 2 hours since the no END NODE has not been encountered in the conversation, so far.</p>
+<p>Let’s say the user starts the conversation from a Start Node ABOUT HAPTIK and then chooses an option to reach the child node FUNDING OF HAPTIK. At this point, if a user leaves the conversation, the IVA will retain the context for 2 hours since the no Context Clear Node has not been encountered in the conversation, so far.</p>
 <p>So if a user comes back after, say e.g, 1.5 hours and taps a button or a Quick Reply on FUNDING OF HAPTIK node, he can reach the Grand-Child node i.e CAREERS AT HAPTIK Node directly.</p>
 <p><strong>How does Chat Complete work?</strong>
 There are two types of CHAT COMPLETE - Hard Complete and Soft Complete.</p>
@@ -88,8 +88,8 @@ There are two types of CHAT COMPLETE - Hard Complete and Soft Complete.</p>
 <p>In the above SOFT COMPLETE cases, the context is retained by the IVA for 2 hours. Again, the parameter of 2 hours is customizable per IVA basis, but most IVAs have kept it at 2 hours, which is the default value currently. The 2-hour limit can be extended to 48 hours as already mentioned.</p>
 <p>HARD COMPLETE occurs when a conversation -</p>
 <ul>
-<li><p>Has encountered an END NODE</p></li>
-<li><p>Has been marked as COMPLETE by the assistant from ATHENA.</p></li>
+<li><p>Has encountered a Context Clear Node</p></li>
+<li><p>Has been marked as COMPLETE by the assistant from Smart Agent Chat.</p></li>
 </ul>
 <p>The context is immediately deleted and is not retained even for 2 hours when such a HARD COMPLETE has been reached.</p>
 </span></div></article></div><div class="docLastUpdate"><em>Last updated on 2/25/2021</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/bot-builder/basic/dialoguemanager"><span class="arrow-prev">← </span><span>Dialogue Manager</span></a><a class="docs-next button" href="/bot-builder/basic/disambiguation"><span>Did you mean? (Disambiguation)</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Conversation Studio</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Smart Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Intelligent Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://docs.haptik.ai/ios-sdk/" class="footer-column-link">iOS SDK</a><a href="https://docs.haptik.ai/android-sdk/" class="footer-column-link">Android SDK</a><a href="https://docs.haptik.ai/web-sdk/" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/whatsapp/" class="footer-column-link">WhatsApp</a><a href="https://docs.haptik.ai/other/facebook" class="footer-column-link">Facebook</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Bot API</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a><a href="https://docs.haptik.ai/other/security" class="footer-column-link">Security</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Agent Chat Tool</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2021 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>

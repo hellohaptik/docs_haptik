@@ -10,7 +10,7 @@ This priority is calculated dynamically and is based on a number of metrics.
 
 ## Queue Structure
 
-When we receive a message from a user, We allocate it to Queues with a calculated priority.
+When we receive a message from a user, we allocate it to Queues with a calculated priority.
 
 - Team Queue
   - Every Team has its own dedicated queue.

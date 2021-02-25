@@ -131,7 +131,7 @@ The URL needs to be updated for the partner from the partner tools on staging as
 ### Example:
 A custom signup example. Read the full documentation in the custom signup section of the documentation.
 
-```
+```html
 <!DOCTYPE html>
   <html>
   <head>

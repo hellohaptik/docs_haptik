@@ -30,17 +30,21 @@ When we receive a message from a user, We allocate it to Queues with a calculate
 ## Priority Calculation
 
 The priority value and presence in ‘Team Queue’ or individual ‘Agent queue’ is calculated based on the below metrics:
-- New user or returning user
-- Existing Conversation or New Conversation
-- Bot involvement in business, and no previous assigned agent 
-  - **If the bot is present and can handle the query** then the conversation continues
-  - **If the bot breaks and human assistance is enabled for business** then the conversation is transferred to default team
+- New User: The user has started a new conversation, and there are no previous conversations.
+  - **If the bot is present and can handle the query** then the conversation continues with bot.
+  - **If the bot breaks and human assistance is enabled for business** then the conversation is transferred to default team.
   - **If a bot flow triggers human assistance**, then the conversation is assigned to the default team, unless a particular team was specified via the integration function.
-  - **If Bot breaks and human assistance is disabled for business** then the Bot break message or the outlier message as defined on [Business Manager](https://docs.haptik.ai/bot-builder/basic/business) is sent as a message by the bot
-- Returning user and new conversation
-  - If the agent to whom this user spoke to earlier is currently online, we assign this conversation to the same agent.
-  - If the agent to whom this user spoke to earlier is currently offline, we clear the relation between this user and agent, and allocate the chat to the next available agent.
-  - When an agent logs out, we clear the relation between this agent and all users he/she might have interacted with earlier.
+  - **If the bot breaks and human assistance is disabled for business** then the bot break message as defined on [Business Manager](https://docs.haptik.ai/bot-builder/basic/business) is sent as a response on the bot.
+  - **If no bot present and human assistance is enabled for business** then the conversation is directly assigned to the default team.
+- Returning User: The user has started a new conversation, and there are previous conversations.
+  - If a bot is present
+    - Conversations starts with the bot.
+    - No relation with the agent of the previous conversation.
+  - If no bot present
+    - If the agent to whom this user spoke to earlier is currently online, we assign this conversation to the same agent.
+    - If the agent to whom this user spoke to earlier is currently offline, we clear the relation between this user and agent, and allocate the chat to the next available agent.
+
+> When an agent logs out, we clear the relation between this agent and all users he/she might have interacted with earlier.
 
 Apart from the above, one can choose between the two **Chat Assignment Algorithms** on Smart Agent Chat, you can read more about it [here (https://docs.haptik.ai/agent-chat/chat-assignment).
 
@@ -88,7 +92,7 @@ When an agent has completed a chat, we ask for [closing categories](https://docs
 ### Automatic Closing of Chats
 Chats are automatically closed if:
 - No messages are exchanged between the agent and the user and the chat is either with the bot or is in **Waiting for user** state for **8 minutes**.
-- If all agents were offline, and [this](https://docs.haptik.ai/agent-chat/teams#step-4---setup-team-offline-message) setting was enabled for the team.
+- If all agents were offline, and [**this**](https://docs.haptik.ai/agent-chat/teams#step-4---setup-team-offline-message) setting was enabled for the team.
 
 ### Manual Closing of Chats
 Chats can be manually marked complete
@@ -114,11 +118,15 @@ Chats can be manually marked complete
 
 - Once the agent marks a conversation complete, the conversation is removed from the agent's queue and the **MyChats** screen.
 
-### Re-assign Completed Chats
+### Open/Re-assign Completed Chats
 
 When Team Leads see chats that are wrongly completed, they can reopen/re-assign these chats to make sure user queries are resolved. 
 
-On the Business/Team page, via Completed Chats, if agents click on the `Reassign` option for any chat, then Completed chat is re-assigned to selected agent or team without user messages. Refer the green box in image below.
+On the Business/Team page, via Completed Chats, 
+- If agents click on the `Reassign` option for any chat, then Completed chat is re-assigned to selected agent or team without user messages.
+- If agents click on the `Open` option for any chat, then Completed chat is re-assigned to previous team if present, else default team without user messages.
+
+Refer the green box in image below.
 
   ![Open Chat](assets/Open_chat.png)
   

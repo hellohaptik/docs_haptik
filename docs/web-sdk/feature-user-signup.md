@@ -131,13 +131,22 @@ The URL needs to be updated for the partner from the partner tools on staging as
 ### Example:
 A custom signup example. Read the full documentation in the custom signup section of the documentation.
 
-```html
-  <!DOCTYPE html>
+```
+<!DOCTYPE html>
   <html>
   <head>
-    <title>Haptik JS SDK Custom Sign Up Demo</title>
+    <title>Haptik JS SDK Custom Icon Demo</title>
     <meta charset="UTF-8">
     <meta content="width=device-width; initial-scale=1.0;" name="viewport">
+    <style>
+      .custom-icon {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        padding: 35px;
+        width: 150px;
+        cursor: pointer;
+      }
     </style>
   </head>
   
@@ -164,14 +173,11 @@ A custom signup example. Read the full documentation in the custom signup sectio
       username: 'Firstname Lastname',
       auth_id: '9955511100',
       auth_code: 'XXXXXXXXXXXX',
-      mobile_no: '0123456789',
+      mobile_no: '8828407051',
       email: 'demo@gmail.com',
-    }, function(success,error) {
-      if (success) {
-        console.log('SIGNUP REQUEST SUCCEEDED!');
-      } else {
-        console.log('ERROR:',error);
-      }
+      custom_data: { demo: 'demo' },
+    }, function(success) {
+      console.log('SIGNUP REQUEST SUCCEEDED:', success);
     });
   });
   </script>

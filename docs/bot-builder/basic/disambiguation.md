@@ -2,15 +2,17 @@
 title: Did you mean? (Disambiguation)
 ---
 
-**What is the Feature?**
+## Introduction
 
 As the word disambiguation suggests, it aims to remove ambiguity. The feature triggers when the IVA is not fully confident on it’s intent detection amongst the intents that it has shortlisted based on User Utterances and the Training Data.
 
 (Read Intent = Node)
 
-Hence, there will be multiple nodes from which the response can be provided to the user. The confidence scores for each response are in close range to each other, leading the bot to disambiguate.
+Hence, there will be multiple nodes from which the response can be provided to the user. The confidence scores for each response are in close ra to each other, leading the bot to disambiguate.
 
-**When does it occur?** - Applying the above conditionality, we can find multiple scenarios due to which Disambiguation can trigger - 
+## When does it occur?
+
+Applying the above conditionality, we can find multiple scenarios due to which Disambiguation can trigger - 
 
 1. When the User Utterances are vague or incomplete, the IVA is not able to map the user’s intent to 1 single node.
 
@@ -24,7 +26,7 @@ Hence, there will be multiple nodes from which the response can be provided to t
 
 ![DMG_2](assets/DMG_2.png)
 
-**How does Disambiguation appear to the end user?** - 
+## How does Disambiguation appear to the end user?
 
 When a user utterance is received on the IVA, the IVA tries to find candidate nodes which can respond to the intent. If it finds nodes with confidence scores in close vicinity, it sends a **Disambiguation Message** (shown in attached image). The message has **two or three buttons** which IVA shortlisted as per the intent of the user. 
 
@@ -46,17 +48,17 @@ On Whatsapp, the above message goes as a text message with the shortlister node 
 
 The User can send 1, 2, 3 as a response, basis which we will detect the chosen intent by the user from the above options.
 
-**How to set up Disambiguation?** - 
+## How to set up Disambiguation?
 
 The text that appears on the button on the UI is controlled at a node level through a node-wise copy. It can be set by adding the **Did you mean?** button text in the User Says section of either the static node which is marked as a start node or on the connection where dependent responses are there. 
 
 **It is mandatory to add this text.**
 
-There is a **limit of 20 characters** on the "Did you mean?" button text.
+There is a **limit of 40 characters** on the "Did you mean?" button text.
 
 ![DMG_4](assets/bot-builder-disambiguation/static-node-disambiguation.png)
 
-**Note**: The **Did you mean?** button text also acts as a User Says expression. This is the message that will be sent to the user, so it's critical that this message is similar to the user intent represented in the other user says.
+> The **Did you mean?** button text also acts as a User Says expression. This is the message that will be sent to the user, so it's critical that this message is similar to the user intent represented in the other user says.
 
 **Few rules incorporated** in the IVA to ensure a good user experience with Disambiguation - 
 
@@ -86,7 +88,7 @@ Below are the USER SAYS present in both the DEPENDENT nodes -
 
 ![DMG_7](assets/bot-builder-disambiguation/dependent-disambiguation.png)
 
-**Disambiguation at work**
+## Disambiguation at work
 
 **Example 1** - Between **two start nodes** - In this case, dependent nodes are not eligible candidates for Disambiguation Button UI. 
 
@@ -123,3 +125,13 @@ Also shown are the “User Says” present in the **“Haptik Location”** node
 In the image below, User Utterance “can information about haptik be given?” leads to a response from “About Haptik” node. The subsequent utterance was not clearly distinguishable and, hence the IVA disambiguated between **“Cofounder haptik”** FAQ Node and **“Haptik Location”** Dependent Node.
 
 ![DMG_14](assets/DMG_14.png)
+
+## Disambiguation for Multilingual IVAs
+
+Disambiguation is also triggered in cases of Multilingual IVAs. In non-English language conversations if disambiguation gets triggered then the **Did you mean?** button text in the User Says section is auto-translated to the current language of conversation and used in the bot response.
+
+In the image below, User Utterance "टिकट्स बुक करो" leads to the IVA disambiguating between **rail ticket** and **air ticket** nodes.
+
+![Language_Disambiguation](assets/bot-builder-disambiguation/language-disambiguation.png)
+
+The button texts in the disambiguation message are auto-translated from the message added in the user says section.

@@ -100,8 +100,6 @@ All types of entities are supported for multilingual bots, there is no restricti
 
 There is no need to add dictionaries in multiple languages.
 
-> **person_name** is not supported right now
-
 You only need to add **Entity Reprompts** in all selected languages and if there are any domain specific words, they need to be added to the **Glossary**.
 
 ### Testing multilingual bots

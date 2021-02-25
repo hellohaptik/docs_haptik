@@ -167,7 +167,7 @@ You can apply customized settings on your bot for any channel where it is deploy
 
 - **Hide Haptik branding on the SDK**: Tick this off to hide the _powered by Haptik_ branding across this business
 
-- **Enforce GDPR**: You can get the GDPR pop-up on your bot by enabling this toggle.
+- **Enforce GDPR**: You can get the banner of **privacy policy** on your bot by enabling this toggle. You can specify the privacy policy URL, read more about it [**here**](https://docs.haptik.ai/web-sdk/configuration-customisation#privacy-policy-url).
 
 - **Enfore Per Message User Feedback**: You can get the per message level feedback by enabling this toggle. You can also provide customised questions and tags for the same.
 

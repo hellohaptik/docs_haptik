@@ -1,5 +1,5 @@
 ---
-title: Claiming & Closing Chats
+title: Chat Priority and Assignment
 ---
 
 ## Introduction
@@ -8,60 +8,55 @@ When we receive a message from the user, we send the message to a queue. We cont
 
 This priority is calculated dynamically and is based on a number of metrics.
 
-## Priority Calculcation
+## Queue Structure
 
-When we receive a message from a user, We allocate it to Queues with a calculated priority.
+When we receive a message from a user, we allocate it to Queues with a calculated priority.
 
-### Queue Structure
 - Team Queue
-- Individual queue per ‘Agent’
+  - Every Team has its own dedicated queue.
+  - Chats present in this queue are allocated to agents basis availability of agent slots.
+  - Chats are added to this queue in the below scenarios
+    - Bot Broke, and due to human assistance being enabled, the chat gets allocated to default team
+    - This is an agent only solution, and all chats are added to the default team.
+    - An integration function has manually transferred a chat to a Team
+    - An Agent or Team Lead and re-assigned a chat to this team
+    - When an agent goes offline, and he had chats present in his waiting bucket, those chats get re-assigned back to Team Queue with highest priority 
+- Agent Queue
+  - Every agent has his/her own dedicated agent queue.
+  - Chats are added to this queue in the below scenarios
+    - If an Agent or Team Lead, manually re-assigns a chat to an agent, and that agent was already handling chats at his maximum allocated concurrency.
+    - If an Agent had marked a chat as "waiting for user", and the user returns, when the agent was already handling chats at his maximum allocated concurrency.
 
-### Queue Management
->  Our bot is a special agent, code named ‘Gogo’
+## Priority Calculation
 
 The priority value and presence in ‘Team Queue’ or individual ‘Agent queue’ is calculated based on the below metrics:
-- New user or returning user
-- Existing Conversation or New Conversation
-- Bot involvement in business, and no previous assigned agent 
-  - **If the bot is present and can handle the query** then the conversation continues
-  - **If the bot breaks and agent-assistance is enabled for business** then the conversation is transferred to specified team via defined integration functions or to the default team assigned in the bot builder
-  - **If Bot breaks and agent-assistance is disabled for business** then the Bot break message or the outlier message as defined in business config is sent as a message by the bot
-- Previously assigned agent
-  - If the agent is ‘online’ or ‘offline’, then the chat is added to the agent's queue.
-  - If the agent is logged out, the chat is treated as a fresh conversation.
+- New User: The user has started a new conversation, and there are no previous conversations.
+  - **If the bot is present and can handle the query** then the conversation continues with bot.
+  - **If the bot breaks and human assistance is enabled for business** then the conversation is transferred to default team.
+  - **If a bot flow triggers human assistance**, then the conversation is assigned to the default team, unless a particular team was specified via the integration function.
+  - **If the bot breaks and human assistance is disabled for business** then the bot break message as defined on [Business Manager](https://docs.haptik.ai/bot-builder/basic/business) is sent as a response on the bot.
+  - **If no bot present and human assistance is enabled for business** then the conversation is directly assigned to the default team.
+- Returning User: The user has started a new conversation, and there are previous conversations.
+  - If a bot is present
+    - Conversations starts with the bot.
+    - No relation with the agent of the previous conversation.
+  - If no bot present
+    - If the agent to whom this user spoke to earlier is currently online, we assign this conversation to the same agent.
+    - If the agent to whom this user spoke to earlier is currently offline, we clear the relation between this user and agent, and allocate the chat to the next available agent.
 
-> While these Queues are maintained in our Backend, conversation assignment for a particular agent is handled based on Activities performed on Athena by said agent.
+> When an agent logs out, we clear the relation between this agent and all users he/she might have interacted with earlier.
 
+Apart from the above, one can choose between the two **Chat Assignment Algorithms** on Smart Agent Chat, you can read more about it [here](https://docs.haptik.ai/agent-chat/chat-assignment).
 
-## Chat assignment
-The following section covers how an agent is assigned a chat.
+>  Our bot is a special agent, code named ‘Gogo’
 
-> Once the chat is assigned to an agent, the user can see the handover to the agent on the SDK UI. <br/><br/>
-![all_custom_tools](assets/sdk_claim.png)
+## Manual Chat Assignment
 
+> Smart Agent Chat also supports manual assignment of chats to agents. 
 
-### Base Rules
-- If a conversation is waiting on user or the user does not reply for 8 minutes, we automatically mark that conversation as completed due to user inactivity
-- A fresh message from an existing user would result in a new conversation
-- Currently we allow a maximum of **3 chats** (default value) to be handled simultaneously per agent. We can change this value to anything between 1-5 per agent.
+Team leads can manually assign/re-assign a chat. They can either assign it to themselves or a team or an individual agent. 
 
-### Automatic Chat assignment
-Smart Agent chat tries assigning a chat automatically based on the following parameters.
-- On login or switching to ‘online’
-- Every time an agent marks a chat as ‘Complete’
-- Every time an agent marks a chat as ‘Waiting for User’
-- If the agent has less than 3 chats (configurable value), the chat is requested by the agent every 10 seconds (default global value, modification not in dev pipeline)
-- If the agent has more than 3 chats (configurable value), then the platform doesn't request for more chats till the agent has less than 3 concurrent chats**.
-
-> <b> ** </b> If the agent has some chats in waiting then the chat is put back in the agent's chat queue
-
-
-### Manual Chat assignment (Claiming)
-> Smart Agent chat also supports manual assignment of chats to agents. 
-
-Team leads can manually assign a chat. They can either assign it to themselves or a team or an individual agent. 
-
-If the chat is assigned to a team, then the chat will first get assigned to the team, and then subsequently to an agent of that team.
+If the chat is assigned to a team, basis the [algorithm](https://docs.haptik.ai/agent-chat/chat-assignment#choosing-a-chat-assignment-algorithm) selected, the chat would be assigned to an available agent of that team.
 
 - Open any conversation either on the teams or the businesses page
   
@@ -82,15 +77,22 @@ If the chat is assigned to a team, then the chat will first get assigned to the 
   <br/><br/>
   
 
+## Chat assignment - End user experience
+The following section covers how an agent is assigned a chat.
+
+> Once the chat is assigned to an agent, the user can see the handover to the agent on the SDK UI. <br/><br/>
+![all_custom_tools](assets/sdk_claim.png)
+
+
 ## Closing & Completing Chats
-When an agent has completed a chat, the chat is marked complete and the chat is closed. This process can happen automatically or the chat agent can manually close a chat.
+When an agent has completed a chat, we ask for [closing categories](https://docs.haptik.ai/agent-chat/closing-categories) if they are enabled for the business, else we close the chat directly.
 
 > Once the chat is marked as complete/closed, the user can see the completion message on the SDK UI. <br/><br/> ![all_custom_tools](assets/sdk_complete.png)
 
 ### Automatic Closing of Chats
 Chats are automatically closed if:
-- Chats assigned to the agent which are currently in waiting when the agent logs out
-- No messages are exchanged between the agent and the user and the chat is either with the bot or is in waiting for user state for **8 minutes**.
+- No messages are exchanged between the agent and the user and the chat is either with the bot or is in **Waiting for user** state for **8 minutes**.
+- If all agents were offline, and [**this**](https://docs.haptik.ai/agent-chat/teams#step-4---setup-team-offline-message) setting was enabled for the team.
 
 ### Manual Closing of Chats
 Chats can be manually marked complete
@@ -100,32 +102,37 @@ Chats can be manually marked complete
   ![all_custom_tools](assets/close_1_1.png)
   <br/><br/>
 
-- Alternatively a team lead can also manually mark a chat as complete by tapping on 1 of the two options in the composer inside the Businesses/Teams pages.
+- Alternatively a team lead can also manually mark a live chat as complete by tapping on 1 of the two options in the composer inside the Businesses/Teams pages.
 
   ![all_custom_tools](assets/close_1.png)
   <br/><br/>
 
-- The user will have 2 options here
+- The agent will have two options here
   - **Mark a chat complete**: This means that the conversation is complete and the user will not be sending more messages as a part of this conversation.
-  - **Send to waiting**: Sometimes the conversation isn't complete. For example, the agent has replied but the user is taking some time to reply. In this case the agent can mark the chat as waiting. This removes the chat from the agent's queue freeing up the agent so that the agent can take more chats.
+  - **Send to waiting**: Sometimes the conversation isn't complete. For example, the agent has replied but the user is taking some time to reply. In this case the agent can mark the chat as waiting. This removes the chat from the agent's queue freeing up the agent so that the agent can take fresh chats.
 
     > Once the user replies, the conversation is added back to the same agent's queue.
+    > When an agent goes offline, all chats that are currently marked as waiting, will be moved back to team queue with the higest priority, and will be assigned to the next available agents.
   
   ![all_custom_tools](assets/close_2.png)
 
-- Once the user marks the conversation appropriately. The conversation is removed from the agent's queue and the My Chats page.
+- Once the agent marks a conversation complete, the conversation is removed from the agent's queue and the **MyChats** screen.
 
-### Open Completed Chats
+### Open/Re-assign Completed Chats
 
-When Team Leads see chats that are wrongly completed, they can reopen these chats to make sure user queries are resolved. 
+When Team Leads see chats that are wrongly completed, they can reopen/re-assign these chats to make sure user queries are resolved. 
 
-On the business tab, and on Completed Chats, if agents click on the `Open Chat` option for any chat, then Completed chat assigns again automatically without user messages. Refer the green box in image below.
+On the Business/Team page, via Completed Chats, 
+- If agents click on the `Reassign` option for any chat, then Completed chat is re-assigned to selected agent or team without user messages.
+- If agents click on the `Open` option for any chat, then Completed chat is re-assigned to previous team if present, else default team without user messages.
+
+Refer the green box in image below.
 
   ![Open Chat](assets/Open_chat.png)
   
 > This is the only case when you see completed chat assigned again automatically without user initiation.
 
-## Enable manual closing of chat
+## Disable Manual Closing Of Chat
 The above mentioned functionality is enabled by default for every business. To disable it, one have to edit the flag under Businesses > Business Settings > Show close chat button.
 
 ![business settings](assets/business_settings.png)
@@ -136,8 +143,8 @@ athena_business_settings_edit
 ```
 This should be added to the respective Permission Group as mentioned in [adding agents and permissions](https://docs.haptik.ai/agent-chat/adding-agents-and-permissions).
 
-### Chat Disposition
-When an agent marks a chat as complete. The agent can add some *completion notes* in the form of Chat disposition.
+### Chat Closing Categories
+When an agent marks a chat as complete. The agent can add some *completion notes* in the form of Closing categories.
 
 ![all_custom_tools](assets/chat_disposition_1.png)
 

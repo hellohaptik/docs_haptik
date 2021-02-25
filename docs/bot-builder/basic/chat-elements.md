@@ -99,23 +99,13 @@ In some cases you might want to open a new visual screen to collect some informa
 
 To use this button type just set the button type as `Open Screen`. Then set the button text and choose the type of screen you want to open. Some of the screen types available are:
 
-* Carousel Detail: Opens a screen which has a carousel of image on the top and space underneath for text.
-* Gallery Picker: Pops up the dialog to choose an image from camera / gallery.
-* Launch Channel: Opens up a new channel. The details of the channel to be opened is given in the payload.
-* Self Serve Recharge: Takes you the Recharge & Bills Screen. By default, the first tab (Recharge) is selected.
-* Electricity: Takes you the Recharge & Bills Screen and selects Electricity tab.
-* Send Location: Opens Place Picker and enables a user to send a particular location.
-* Carousel Default: Opens up a screen which has little space on the top for text, followed by a carousel of images underneath it and a message sending area underneath it. Primarily built for the Food Delivery channel but still useful in many ways.
-* App Authenticate: Used to get Uber authentication. Launches Uber app if available other wise fires up a web view.
-* Profile: Opens up the Profile screen in the app.
-* Wallet: Opens up the Wallet screen in the app. Useful to show the wallet balance.
-* Wallet History: Opens up the Wallet screen and switches to Wallet History.
-* Link: Fires up web view with a link provided in the payload.
-* Send Multiple Locations: Used mostly in the Cabs channel to allow a user to select two locations and send it back as a message.
-* Saved Addresses: Opens up the Saved Addresses screen with the list of saved addresses, if any. Otherwise, opens up the screen to save a new address.
-* Transaction History: Opens up the Transaction History screen.
-
-> Note: Most of these options are only available on the Android/IOS SDKs.
+* **Carousel Detail**: Opens a screen that has a carousel of an image on the top and space underneath for text. This option comes with both text and button.
+* **Upload / Take photo**: Pops up the dialog to choose an image from the camera/gallery. This option comes for both native apps and the web.
+* **Upload document**: Pops up the dialog to choose a document from the device.
+* **Open Channel**: Opens up a new channel. The details of the channel to be opened are given in the payload.
+* **Send Location**: Opens Place Picker and enables a user to send a particular location.
+* **Link**: Opens the mentioned link on a new tab.
+* **Webview**: Opens up a custom webview.
 
 ### Call
 This option is useful when you want the user to be able to make a call on click of the button. Clicking this button will open the default calling app and prefill the number to be called.
@@ -186,6 +176,309 @@ After choosing Image as the chat element option you have several configuration c
 ![Image Button](assets/bot-builder-chat-elements/chat-elements-image-button.png)
 
 ## ***Raw Text/HSL***
-If you want to use a custom chat element you can use this option. A custom chat element is something that is not part of the standard elements mentioned above. 
+
+You can use this HSL for sending only text responses or if you want to use a custom chat element you can use this option. A custom chat element is something that is not part of the standard elements mentioned above. 
 
 In such cases you can enter the raw HSL code directly and that element will be rendered by the bots.
+
+## ***Forms***
+
+Whenever the input is expected from a user in a structured format, its best taken in a form. For example, address would be best taken over form with 3-4 fields.
+
+Forms should have minimum two fields or else it would not make sense to use forms. Example, when you want to ask user their Name, Phone, Email and Address to register on your website.
+
+> You should create Forms after adding entities on your Bot Says so that you are able to select the desired entities for each of the Form fields.
+
+You can configure Forms by clicking on the `Add a chat element` link and then selecting **Form Builder**.
+
+![formbuilder](assets/bot-builder-chat-elements/formshsl1.png)
+
+After choosing Forms Builder as the chat element option you can set the **Form Title** and **Form Description**.
+
+1. **Form Title**: This field should convey the action needed from the user. For example, if you are making a form to take delivery address, **Form Title** can be *Please help me with your Delivery address*. Also, it is an optional field.
+
+2. **Form Description**: This is a description for the form. This will be visible on the form. Form Description is also an optional field.
+
+![formtitledescription](assets/bot-builder-chat-elements/formshsl2.png)
+
+To add a new field on the Form, click on `Add a Field` button. A pop-up opens up with a list of all the different types of form fields you can choose from.
+
+- **Text**: This can be used when you want a text input from the user.
+- **Picker**: This can be used when you want a user to select any one option from the given multiple options using the dropdown.
+- **Number**: This can be used to get number inputs from the user. Example - Mobile number, SSN, etc.
+- **Email**: This can be used to get the Email-id from the user.
+- **Date**: This can be used to get the date from the user. It uses the calendar widget where users can select the date.
+- **Time**: This can be used to get the time from the user. It uses the clock widget where user can select the time.
+- **Search**: This field will help you create search options on the IVA.
+
+![formfields](assets/bot-builder-chat-elements/formshsl3.png)
+
+Let us look at each of these fields in detail.
+
+### Text
+
+Text Field allows user to provide input in textual or alphanumeric format.
+
+![textfield](assets/bot-builder-chat-elements/formshsl4.png)
+
+You will have to provide the following details to configure a text field on the form.
+
+#### 1. Text: 
+
+This text is a placeholder for the field and will be visible on this **Text field** before user starts typing on this field. To add the placeholder click on **Text** as shown below.
+
+![text](assets/bot-builder-chat-elements/formshsl5.png)
+
+Example for **Text** -
+
+![exampletext](assets/bot-builder-chat-elements/formshsl6.png)
+
+#### 2. Form Icon: 
+
+There is a dropdown of form icons available which can be used to add an icon for this **Text field**. The default icon is 
+![defaulticon](assets/bot-builder-chat-elements/formshsl7.png)
+
+To select another icon, click on the **+** symbol
+
+![moreicons](assets/bot-builder-chat-elements/formshsl8.png)
+
+#### 3. Mandatory: 
+
+Marking a field **Mandatory** will ensure that the user is providing a value for this **Text field**.
+
+![mandatory](assets/bot-builder-chat-elements/formshsl9.png)
+
+> Mandatory field will be automatically enabled if a mandatory entity is set in the **Set Entity** field.
+
+#### 4. Set Entity: 
+
+This option will provide you a dropdown of all the entities present on the node where you are adding Form HSL. You can select the entity whose value you want to capture using this **Text field**.
+
+![set-entity](assets/bot-builder-chat-elements/formshsl10.png)
+
+#### 5. Advanced Options: 
+
+This option lets you add validation and the corresponding error message to display if the user is providing incorrect input in this particular field.
+
+##### i. Validation
+
+###### Default Validations
+
+These are the existing types of validations present that you can choose from.
+
+ - **Any**: As the name suggests. This will allow any text to pass. Basically, there will be no validation to this field.
+ - **Alphabet (without whitespace)**: This can be used to capture one word entries like first names. Example, Bruce, Clark, Diana, etc.
+ - **Alphabet (with whitespace)**: This can be used to capture multiple word entries like full names. Example, Bruce Wayne, Clark Kent, Diana Prince, etc.
+ - **Alphanumeric (without whitespace)**: This can be used to capture Alphanumeric values without any space. Example, Card number - ABCH1234N
+ - **Alphanumeric (with whitespace)**: This can be used to capture Alphanumeric values containing spaces. Example, Address in one line - 221B Baker Street, London
+ - **Fixed Length** This can be used when the text entered has to be of a specific length. Example, if the length validation is set to be 4, then only words of length 4 characters will be allowed like tree, milk, etc.
+ 
+ ![text_validation](assets/bot-builder-chat-elements/formshsl11.png)
+ 
+ ###### Custom Validation
+ Custom Validation accepts custom regex patterns. This is the most powerful validation functionality. The bot builder can use varied regex patterns to enable their fields to validate different input formats like credit card number, PAN card numbers, etc.
+
+##### ii. Error Message
+
+If any validation goes wrong, to inform the users that they have given an incorrect input, we can configure Error Message.
+
+### Picker
+
+ ![pickeroption](assets/bot-builder-chat-elements/formshsl12.png)
+
+**Picker** field is used when you want a user to select any one option from the given multiple options using the dropdown. Example, list of cities in India.
+
+To configure a Picker field, you will have to provide following details -
+
+- [**Picker**](https://docs.haptik.ai/bot-builder/basic/chat-elements#1-text) - Click on the **Picker** text to add a placeholder for the Picker field. 
+
+    `Example, Please select a city`
+
+- [**Icon**](https://docs.haptik.ai/bot-builder/basic/chat-elements#2-form-icon) - Select an icon from the dropdown.
+
+- [**Mandatory**](https://docs.haptik.ai/bot-builder/basic/chat-elements#3-mandatory) - Enabling the Mandatory checkbox will ensure the user is selecting a value from the dropdown.
+
+- **Picker Options** - Enter the comma separated dropdown values
+
+    `For above example of list of cities - Mumbai, Delhi, Kolkata, Chennai, Banglore`
+
+- [**Set Entity**](https://docs.haptik.ai/bot-builder/basic/chat-elements#4-set-entity) - Select the entity to capture the value from dropdown.
+
+- [**Error Message**](https://docs.haptik.ai/bot-builder/basic/chat-elements#ii-error-message) - If the user does not select a value from the dropdown, this error message will be shown to the user which will indicate the user to select an option from the dropdown.
+
+### Number
+
+Number field can be used to get number inputs from the user. Example, Mobile number.
+
+![numberoption](assets/bot-builder-chat-elements/formshsl13.png)
+
+To configure a Number field, you will have to provide following details -
+
+- [**Number**](https://docs.haptik.ai/bot-builder/basic/chat-elements#1-text) - Click on the **Number** text to add a placeholder for this Number field.
+
+    `Example, Please enter your mobile`
+
+- [**Icon**](https://docs.haptik.ai/bot-builder/basic/chat-elements#2-form-icon) - Select an icon from the dropdown.
+
+- [**Mandatory**](https://docs.haptik.ai/bot-builder/basic/chat-elements#3-mandatory) - Enabling the Mandatory checkbox will ensure the user is providing a value.
+
+- [**Set Entity**](https://docs.haptik.ai/bot-builder/basic/chat-elements#4-set-entity) - Select the entity from the dropdown to capture the number.
+
+- **Validation** - There are two different types of validation available
+
+**i. Fixed Length** - This validation specifies that the number entered has to be of a specific length.
+
+**ii. Range** - This validation mentions the range of digits it can accept. If a user inputs anything more or less than the range, it is treated as an invalid value.
+
+![number_range](assets/bot-builder-chat-elements/formshsl14.png)
+
+- [**Error Message**](https://docs.haptik.ai/bot-builder/basic/chat-elements#ii-error-message) - If the user does not provide a value of either fixed length or in the specified range, this error message will be shown to the user which will indicate the user to provide a number value.
+
+### Email
+
+Email can be used to get the email id from the user.
+
+![emailoption](assets/bot-builder-chat-elements/formshsl15.png)
+
+To configure an Email field, you will have to provide following details -
+
+- [**Email**](https://docs.haptik.ai/bot-builder/basic/chat-elements#1-text) - Click on the **Email** text to add a placeholder for the Email field. 
+
+    `Example, Please provide your email id`
+
+- [**Icon**](https://docs.haptik.ai/bot-builder/basic/chat-elements#2-form-icon) - Select an icon from the dropdown.
+
+- [**Mandatory**](https://docs.haptik.ai/bot-builder/basic/chat-elements#3-mandatory) - Enabling the Mandatory checkbox will ensure the user is providing the email id.
+
+- [**Set Entity**](https://docs.haptik.ai/bot-builder/basic/chat-elements#4-set-entity) - Select the entity from the dropdown to capture the email id.
+
+- [**Error Message**](https://docs.haptik.ai/bot-builder/basic/chat-elements#ii-error-message) - If the user does not provide an email id, this error message will be shown to the user which will indicate the user to provide their correct email id.
+
+### Date
+
+Date field type can be used to accept dates from the user.
+
+![dateoption](assets/bot-builder-chat-elements/formshsl16.png)
+
+To configure a Date field, you will have to provide following details -
+
+- [**Date**](https://docs.haptik.ai/bot-builder/basic/chat-elements#1-text) - Click on the **Date** text to add a placeholder for the Date field. 
+
+    `Example, Check-in Date`
+
+- [**Icon**](https://docs.haptik.ai/bot-builder/basic/chat-elements#2-form-icon) - Select an icon from the dropdown.
+
+- [**Mandatory**](https://docs.haptik.ai/bot-builder/basic/chat-elements#3-mandatory) - Enabling the Mandatory checkbox will ensure the user is providing the date.
+
+- [**Set Entity**](https://docs.haptik.ai/bot-builder/basic/chat-elements#4-set-entity) - Select the entity from the dropdown to capture the date.
+
+- **Validation** - You can mention both the Start Date and End Date from which the user can select any one date or you can set either of them.
+
+    `Example, if the Start Date is 01-01-2001 and End Date is 01-01-2099, then the user will only be able to see the dates between these range`
+
+![date_validation](assets/bot-builder-chat-elements/formshsl17.png)
+
+- [**Error Message**](https://docs.haptik.ai/bot-builder/basic/chat-elements#ii-error-message) - If the user did not select any date, this error message will be shown to the user which will indicate the user to select a date.
+
+### Time
+
+Time field is used to get the time from a user. It uses the clock widget where user can select the time.
+
+![timefield](assets/bot-builder-chat-elements/formshsl18.png)
+
+To configure a Time field, you will have to provide following details -
+
+- [**Time**](https://docs.haptik.ai/bot-builder/basic/chat-elements#1-text) - Click on the **Time** text to add a placeholder for the Time field. 
+
+    `Example, Check-in Time`
+
+- [**Icon**](https://docs.haptik.ai/bot-builder/basic/chat-elements#2-form-icon) - Select an icon from the dropdown.
+
+- [**Mandatory**](https://docs.haptik.ai/bot-builder/basic/chat-elements#3-mandatory) - Enabling the Mandatory checkbox will ensure the user is providing the time.
+
+- [**Set Entity**](https://docs.haptik.ai/bot-builder/basic/chat-elements#4-set-entity) - Select the entity from the dropdown to capture the time.
+
+- [**Error Message**](https://docs.haptik.ai/bot-builder/basic/chat-elements#ii-error-message) - If the user does not provide any time, this error message will be shown to the user which will indicate the user to provide the time.
+
+### Search
+
+Search field will help you create search options on the bot. This is similar to Picker field. In Picker field, you have to mention comma separated values whereas in Search, the dropdown is populated using API.
+
+![searchfield](assets/bot-builder-chat-elements/formshsl19.png)
+
+To configure a Search field, you will have to provide following details -
+
+- [**Search**](https://docs.haptik.ai/bot-builder/basic/chat-elements#1-text) - Click on the **Search** text to add a placeholder for the Search field. 
+
+    `Example, Search my City`
+
+- [**Icon**](https://docs.haptik.ai/bot-builder/basic/chat-elements#2-form-icon) - Select an icon from the dropdown.
+
+- [**Mandatory**](https://docs.haptik.ai/bot-builder/basic/chat-elements#3-mandatory) - Enabling the Mandatory checkbox will ensure the user is either selecting or providing a value.
+
+- **API** - When we want some custom response or inputs from an external API, we put the API URL here.
+
+This API's Request and Response format is mentioned below -
+
+```
+Request:
+
+<YOUR API URL>?query=<the actual search string>&user_id=<actual user_id of that user>&user_name=<user name if present else undefnied>
+
+Response:
+
+{
+	"success": true,
+	"data": [{
+		"title": "<title of the first element in the search result>"
+	}, {
+		"title": "<title of the second element in the search result>"
+	}],
+	"query": "pune",
+	"error": ""
+} 
+```
+
+- [**Set Entity**](https://docs.haptik.ai/bot-builder/basic/chat-elements#4-set-entity) - Select the entity from the dropdown to capture the value.
+
+- **SearchEditable** - This field makes the Search option flexible by allowing users to select a value which is not present in the dropdown.
+
+    `Example - If the API is not returning Pune as a dropdown option, then the user can type Pune and it will be captured by the Set Entity`
+
+- [**Error Message**](https://docs.haptik.ai/bot-builder/basic/chat-elements#ii-error-message) - If the user does not select any option from the dropdown, this error message will be shown to the user which will indicate the user to provide or select the value.
+
+### Deleting a Form Field
+
+You can delete a particular Form Field using the delete button visible on the right side of the field. 
+
+![delete1](assets/bot-builder-chat-elements/formshsl20.png)
+
+The pop-up appears to confirm if you want to delete the field.
+
+![delete2](assets/bot-builder-chat-elements/formshsl21.png)
+
+### Customize Send Button
+
+There is a **Send** button which appears on the form which the user has to click to send the form details. Once the user clicks on **Send** button, the text appearing on the button changes to **Sent**.
+
+You can customize this text which appears on the button by enabling the **Add Custom Submit Button Text** checkbox and providing the before and after text for the buttons.
+
+    `Examples for custom Button Text - Register, Submit, Proceed, etc`
+
+![custombutton](assets/bot-builder-chat-elements/formshsl23.png)
+
+### Re-order the Form Fields
+
+You can restructure the form fields and organize them again once they all have been created using the grip option as shown below.
+
+![toggle](assets/bot-builder-chat-elements/formshsl22.png)
+
+### Form HSL on the bot
+
+Using the fields above once we have completed building the bot, it will be displayed as shown below -
+
+![forminaction](assets/bot-builder-chat-elements/forminaction.png)
+
+Error messages on the various form fields which we have configured come up right below the field as shown below -
+
+![formerrors](assets/bot-builder-chat-elements/formwitherror.png)

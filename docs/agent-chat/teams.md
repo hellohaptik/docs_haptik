@@ -9,7 +9,15 @@ Read this document to know about the **Team** feature in Smart Agent Chat. Team 
 ## What is a team?
 A team is a group of agents who are trained to handle user queries related to a specific topic. The team can be divided based on the subject matter/location of a user/expertise of agents. The logic for team routing can be defined as per the business requirement. 
 
-## Business Configurations for Enabeling Chat Assignment to a Team
+## Chat assignment to a team
+
+There are three ways in which a chat can be assigned to a team
+
+1. Routing from a bot's node
+2. Manual Assignment
+3. Team routing from Business (When a business has no bots)
+
+## Business Configurations for Enabling Chat Assignment to a Team
 
 A team can receive chats from a business in 2 possible configurations
 
@@ -22,14 +30,6 @@ A team can receive chats from a business in 2 possible configurations
 _Note: If a Business is **Completely Bot Assisted**, the chat will never be assigned to a team._
 
 > Every Business has a default team in case no team is detected. For no bot condition, the default team is the only team a partner can have.
-
-## Chat routing to a team
-
-There are three ways in which a chat can be assigned to a team
-
-1. Routing from a bot's node
-2. Manual Assignment
-3. Team routing from Business (When a business has no bots)
 
 ## How to create a team?
 
@@ -103,6 +103,26 @@ The point `iii` above gives the availability %age value. This value in green mea
 2. View Agent level statistics
 3. Set duration
 
+### Tips to manage a Team
+
+✅ Track No. of Delayed Chats and optimise agent strength per Team
+
+✅ Track No. of Live Chats received at a given time
+
+✅ View Response Times for a given time frame to mointor agent performance
+
+✅ View Resolution Times on a Team/Agent level 
+
+✅ View Individual Chats to get quality feedback
+
+✅ Analyze end of day Team-wise analytice values here.
+
+You can filter the summary and agent metrics by *Custom time* or *Custom date*. Refer the image below for how to check hourly/daily **Team analytics**.
+
+![Hourly_Metrics](assets/agentchatanalytics.png)
+
+> Tip: You can choose hourly slots on a date in the Time picker to get the metric values for the chosen Date and Time.
+
 ## How to make changes in the Team Settings?
 
 **Step 1 - Select a language (Optional)**
@@ -142,26 +162,6 @@ Similar to the Delay message, you can configure the recall message to get the us
 ![Recall message](assets/Teams3.png)
 
 After making all the adjustments, Don't forget to Save all the changes which you have done.
-
-## Tips to manage a Team
-
-✅ Track No. of Delayed Chats and optimise agent strength per Team
-
-✅ Track No. of Live Chats received at a given time
-
-✅ View Response Times for a given time frame to mointor agent performance
-
-✅ View Resolution Times on a Team/Agent level 
-
-✅ View Individual Chats to get quality feedback
-
-✅ Analyze end of day Team-wise analytice values here.
-
-You can filter the summary and agent metrics by *Custom time* or *Custom date*. Refer the image below for how to check hourly/daily **Team analytics**.
-
-![Hourly_Metrics](assets/agentchatanalytics.png)
-
-> Tip: You can choose hourly slots on a date in the Time picker to get the metric values for the chosen Date and Time.
 
 ## Managing Offline Hour chats
 

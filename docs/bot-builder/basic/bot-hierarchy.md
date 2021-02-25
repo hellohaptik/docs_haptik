@@ -14,6 +14,8 @@ The Haptik Conversation Studio platform has a three-tiered organizational system
 
 - Largest unit is **partner**. Usually, its your organisation's name or project's name.
 
+> There is a **one-to-one relationship** between partner, business, and a bot i.e. **one partner** is mapped to **one business** and one business is mapped to only **one bot**.
+
 ## 2. Inside a Bot 
 
 Once you have successfully created a bot, you would be able to see the skeleton structure of the bot, as described below -

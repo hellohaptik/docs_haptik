@@ -153,6 +153,8 @@ When you’ve added an entity to a conversation, you can define the transition f
 	For example: When you want to validate a user’s phone number to ensure that it is a valid user before continuing with the char flow. ***_Enter Details _*** contains an integration function that validates user’s phone number and transition to the child node is done based on the response.
 
 	![Linear Chat Flow](assets/bot-builder-user-says/add_connection_linear.png)
+	
+3. Do not mark the Node as **Context Clear Node** if there is a connection to another Node on the basis of **entity**. As marking a Node as Context Clear Node clears out all the entity values collected till the present Node, the connection won't proceed further because the IVA will lose the information at the Context Clear Node.
 
 #### *When should you have an incoming connections to a start node?*
 

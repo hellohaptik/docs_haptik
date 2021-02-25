@@ -239,7 +239,7 @@ There are these three types of attachments allowed -
 
 ![Attachment Entity](assets/Video2.png)
 
-You would need to create a Button HSL for letting the user upload the image and document. 
+You would need to create a Button HSL for letting the user upload the image and document. To know more about using Button HSL click [**here**](https://docs.haptik.ai/bot-builder/basic/chat-elements#open-screen).
 
 ![Attachment Example on Bot](assets/AttachmentHSL.png)
 
@@ -673,6 +673,32 @@ You can delete an entity from the a particular node by clicking on the **delete 
 ![delete_entity](assets/delete_entity.png)
 
 > Note: Even if the entity is deleted it would still appear in the debug logs section since the entity is not permanently deleted from the IVA.
+
+## Using Entity Flusher
+
+When the user switches context by typing something in free form in between some conversational flow which has not ended, the old entities are not cleared. In such scenarios you can use **entity flusher function**.
+ 
+ **How to use Entity Flusher?**
+
+Step 1: Add **integration.utils.lead_campaigns.generic_entity_flusher** function under the Integrations tab on the start nodes.
+
+![flush_entity1](assets/entityflush2.png)
+
+Step 2: Add an entity **bot_flush_exception_list** on the start node where you want to use this function and add all entity names separated by pipe(|) in the filter value of this entity.
+
+> Mark the bot_flush_exception_list entity as non-mandatory.
+
+![flush_entity2](assets/entityflush1.png)
+
+**This will clear all the entities except person_name and city. **
+
+### Do's and Don't of Entity Flusher
+
+- This function needs to be added only on start nodes.
+
+- Do not add this function on Context Clear nodes.
+
+- Adding the entity flusher on nodes which have other mandatory entities will clear those as well. 
 
 ## Language Support for Different Entities
 

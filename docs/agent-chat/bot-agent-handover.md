@@ -26,11 +26,9 @@ If this integration function exists, then the chat will be transferred to a team
 
 ### Human Assistance flag on Business Manager:
 
-If the human assistance flag is on for a business, a chat will be moved to an agent whenever the bot doesn't understand the user's message.
+If the human assistance flag is ON for a business, a chat will be moved to an agent whenever the bot doesn't understand the user's message.
 
-For a bot that already allows human assistance, set the *Handover Message Flag* field to *True* for your target business. This will send the bot break message first before moving the chat to a pending state. And eventually this chat gets assigned to an agent.
-
-    Tip: In these automated methods, you cannot assign directly to an agent. We send it to a team first.
+> Warning: Before the handover to agent, the bot might give a [**Smart Assist**](https://docs.haptik.ai/bot-builder/basic/smart-assist) message. In cases where we do not want this to happen, the Smart Assist can be disabled from the backend.
 
 ### Claiming a chat from Smart Agent Chat tool:
 

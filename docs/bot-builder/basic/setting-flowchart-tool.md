@@ -26,7 +26,7 @@ We started using Lucid at the start of 2019 and put it through its paces, only t
 
 Our platform’s users now have access to a central Haptik Library of over 20 Haptik specific UI elements that can be used to design bot flows.
 
-Here’s a [**chart of the elements**](https://lucid.app/lucidchart/ff856354-5d04-4e6b-a1aa-52b0ec438089/view) which we have imported in the Haptik Lucid accounts. In the below sections we have explained how you can enable it for your Lucid account or any other flowchart design tool. This library is constantly being updated with new elements and is maintained by the Haptik Design and Solutions team.
+Here’s a [**chart of the elements**](https://app.lucidchart.com/lucidchart/2a29bc9d-207d-4a6b-89fd-d852e30ca5e8/edit?shared=true&page=z9jJ29HyvqQA#?folder_id=home&browser=icon) which we have imported in the Haptik Lucid accounts. In the below sections we have explained how you can enable it for your Lucid account or any other flowchart design tool. This library is constantly being updated with new elements and is maintained by the Haptik Design and Solutions team.
 
 ### Creating Flowcharts on Lucid
 

@@ -2,7 +2,7 @@
 title: Carousel
 ---
 
-#### Sample Json for default Carousel
+#### Sample JSON for default Carousel
 
 ```json
 {
@@ -81,7 +81,7 @@ title: Carousel
 
 ![hsl_sample_carousel](assets/hsl_sample_carousel.png)
 
-#### Sample Json for mini actionable
+#### Sample JSON for mini actionable
 
 ```json
 {
@@ -118,6 +118,142 @@ title: Carousel
 #### Sample Output
 
 ![hsl_mini_actionable_carousel](assets/hsl_mini_actionable_carousel.png)
+
+#### Sample JSON for Carousel without Image
+
+```
+{
+  "type": "CAROUSEL",
+  "data": {
+    "image_aspect_ratio": "1000.1",
+    "width": "THIN",
+    "items": [
+      {
+        "thumbnail": {
+          "image": "https://haptikappimg.haptikapi.com/uploads/8d6e31d6504350164b3cb89e4931219e.png?w=121&h=86"
+        },
+        "title": "carousel without image - 1",
+        "sub_title": "",
+        "description": "Add a white image",
+        "actionables": [
+          {
+            "actionable_text": "Click here to know more",
+            "location_required": false,
+            "is_default": 0,
+            "uri": "LINK",
+            "type": "APP_ACTION",
+            "payload": {
+              "title": "Button  1",
+              "url": "https://docs.haptik.ai/bot-builder/basic/chat-elements#carousel",
+              "gogo_message": ""
+            }
+          }
+        ]
+      },
+      {
+        "thumbnail": {
+          "image": "https://haptikappimg.haptikapi.com/uploads/89fc31bbf2e166ad74daa42dd70b5550.png?w=121&h=86"
+        },
+        "title": "carousel without image - 1",
+        "description": "Set the aspect ratio as 1000.1",
+        "actionables": [
+          {
+            "actionable_text": "Click here to know more",
+            "location_required": false,
+            "is_default": 0,
+            "uri": "LINK",
+            "type": "APP_ACTION",
+            "payload": {
+              "title": "Button  1",
+              "url": "https://docs.haptik.ai/bot-builder/basic/chat-elements#carousel",
+              "gogo_message": ""
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "isNew": false
+}
+```
+
+#### Sample Output
+
+![hsl_no_image_carousel](assets/no_image_carousel.png)
+
+#### Sample JSON for Video embedded on carousel
+
+```
+{
+  "type": "CAROUSEL",
+  "data": {
+    "image_aspect_ratio": "1.77",
+    "width": "THIN",
+    "items": [
+      {
+        "thumbnail": {
+          "image": "https://www.youtube.com/embed/hNQFjqDvPhA"
+        },
+        "title": "test",
+        "sub_title": "test",
+        "description": "test",
+        "actionables": [
+          {
+            "actionable_text": "Button 1",
+            "location_required": false,
+            "is_default": 0,
+            "uri": "",
+            "payload": {
+              "gogo_message": ""
+            }
+          }
+        ]
+      },
+      {
+        "thumbnail": {
+          "image": "https://www.youtube.com/embed/aJOTlE1K90k"
+        },
+        "title": "not playing",
+        "sub_title": "issue on mac",
+        "actionables": [
+          {
+            "actionable_text": "Button 1",
+            "location_required": false,
+            "is_default": 0,
+            "uri": "",
+            "payload": {
+              "gogo_message": ""
+            }
+          }
+        ]
+      },
+      {
+        "thumbnail": {
+          "image": "https://www.youtube.com/embed/xcJtL7QggTI"
+        },
+        "title": "",
+        "actionables": [
+          {
+            "actionable_text": "Button 1",
+            "location_required": false,
+            "is_default": 0,
+            "uri": "",
+            "payload": {
+              "gogo_message": ""
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "isNew": false
+}
+```
+
+#### Sample Output
+
+![hsl_video_carousel](assets/video_carousel.png)
+
 
 #### Carousel
 

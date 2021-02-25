@@ -132,7 +132,7 @@ The URL needs to be updated for the partner from the partner tools on staging as
 A custom signup example. Read the full documentation in the custom signup section of the documentation.
 
 ```html
-  <!DOCTYPE html>
+<!DOCTYPE html>
   <html>
   <head>
     <title>Haptik JS SDK Custom Sign Up Demo</title>

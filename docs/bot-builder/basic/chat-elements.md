@@ -99,15 +99,13 @@ In some cases you might want to open a new visual screen to collect some informa
 
 To use this button type just set the button type as `Open Screen`. Then set the button text and choose the type of screen you want to open. Some of the screen types available are:
 
-* **Carousel Detail**: Opens a screen which has a carousel of image on the top and space underneath for text.
-* **Upload / Take photo**: Pops up the dialog to choose an image from camera / gallery.
+* **Carousel Detail**: Opens a screen which has a carousel of image on the top and space underneath for text. This option comes with both text and button.
+* **Upload / Take photo**: Pops up the dialog to choose an image from camera / gallery. This option comes for both native apps and web.
 * **Upload document**: Pops up the dialog to choose a document from device.
 * **Open Channel**: Opens up a new channel. The details of the channel to be opened is given in the payload.
 * **Send Location**: Opens Place Picker and enables a user to send a particular location.
 * **Link**: Opens the mentioned link on a new tab.
 * **Webview**: Opens up a custom webview.
-
-> Note: Most of these options are only available on the Android/IOS SDKs.
 
 ### Call
 This option is useful when you want the user to be able to make a call on click of the button. Clicking this button will open the default calling app and prefill the number to be called.

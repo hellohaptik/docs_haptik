@@ -123,25 +123,14 @@
 <p>In some cases you might want to open a new visual screen to collect some information or show some information. An example is opening a link to show a form or display information. In such cases you can use the <code>Open Screen</code> button type.</p>
 <p>To use this button type just set the button type as <code>Open Screen</code>. Then set the button text and choose the type of screen you want to open. Some of the screen types available are:</p>
 <ul>
-<li>Carousel Detail: Opens a screen which has a carousel of image on the top and space underneath for text.</li>
-<li>Gallery Picker: Pops up the dialog to choose an image from camera / gallery.</li>
-<li>Launch Channel: Opens up a new channel. The details of the channel to be opened is given in the payload.</li>
-<li>Self Serve Recharge: Takes you the Recharge &amp; Bills Screen. By default, the first tab (Recharge) is selected.</li>
-<li>Electricity: Takes you the Recharge &amp; Bills Screen and selects Electricity tab.</li>
-<li>Send Location: Opens Place Picker and enables a user to send a particular location.</li>
-<li>Carousel Default: Opens up a screen which has little space on the top for text, followed by a carousel of images underneath it and a message sending area underneath it. Primarily built for the Food Delivery channel but still useful in many ways.</li>
-<li>App Authenticate: Used to get Uber authentication. Launches Uber app if available other wise fires up a web view.</li>
-<li>Profile: Opens up the Profile screen in the app.</li>
-<li>Wallet: Opens up the Wallet screen in the app. Useful to show the wallet balance.</li>
-<li>Wallet History: Opens up the Wallet screen and switches to Wallet History.</li>
-<li>Link: Fires up web view with a link provided in the payload.</li>
-<li>Send Multiple Locations: Used mostly in the Cabs channel to allow a user to select two locations and send it back as a message.</li>
-<li>Saved Addresses: Opens up the Saved Addresses screen with the list of saved addresses, if any. Otherwise, opens up the screen to save a new address.</li>
-<li>Transaction History: Opens up the Transaction History screen.</li>
+<li><strong>Carousel Detail</strong>: Opens a screen that has a carousel of an image on the top and space underneath for text. This option comes with both text and button.</li>
+<li><strong>Upload / Take photo</strong>: Pops up the dialog to choose an image from the camera/gallery. This option comes for both native apps and the web.</li>
+<li><strong>Upload document</strong>: Pops up the dialog to choose a document from the device.</li>
+<li><strong>Open Channel</strong>: Opens up a new channel. The details of the channel to be opened are given in the payload.</li>
+<li><strong>Send Location</strong>: Opens Place Picker and enables a user to send a particular location.</li>
+<li><strong>Link</strong>: Opens the mentioned link on a new tab.</li>
+<li><strong>Webview</strong>: Opens up a custom webview.</li>
 </ul>
-<blockquote>
-<p>Note: Most of these options are only available on the Android/IOS SDKs.</p>
-</blockquote>
 <h3><a class="anchor" aria-hidden="true" id="call"></a><a href="#call" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Call</h3>
 <p>This option is useful when you want the user to be able to make a call on click of the button. Clicking this button will open the default calling app and prefill the number to be called.</p>
 <p>You can use this by setting the button type as <code>Call</code>. Then you can set the button text and the Phone Number to be prefilled.</p>
@@ -191,9 +180,203 @@
 <p>After choosing Image as the chat element option you have several configuration choices. You can select the size and set the aspect ratio for the image. You can then add a text message to be sent with the notification and finally upload the image to be sent.</p>
 <p><img src="/assets/bot-builder-chat-elements/chat-elements-image-button.png" alt="Image Button"></p>
 <h2><a class="anchor" aria-hidden="true" id="raw-texthsl"></a><a href="#raw-texthsl" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong><em>Raw Text/HSL</em></strong></h2>
-<p>If you want to use a custom chat element you can use this option. A custom chat element is something that is not part of the standard elements mentioned above.</p>
+<p>You can use this HSL for sending only text responses or if you want to use a custom chat element you can use this option. A custom chat element is something that is not part of the standard elements mentioned above.</p>
 <p>In such cases you can enter the raw HSL code directly and that element will be rendered by the bots.</p>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2/25/2021</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/bot-builder/basic/bot-says"><span class="arrow-prev">← </span><span>Bot Says</span></a><a class="docs-next button" href="/bot-builder/basic/connections"><span>Connections</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#what-are-chat-elements">What are Chat Elements?</a></li><li><a href="#text-responses"><strong><em>Text Responses</em></strong></a></li><li><a href="#quick-replies"><strong><em>Quick Replies</em></strong></a><ul class="toc-headings"><li><a href="#the-quick-way-to-add-quick-replies">The Quick way to add Quick Replies</a></li><li><a href="#advanced-options-to-add-quick-replies">Advanced options to add Quick Replies</a></li><li><a href="#reordering-quick-replies">Reordering Quick Replies</a></li></ul></li><li><a href="#buttons"><strong><em>Buttons</em></strong></a><ul class="toc-headings"><li><a href="#text">Text</a></li><li><a href="#open-screen">Open Screen</a></li><li><a href="#call">Call</a></li><li><a href="#sms">SMS</a></li><li><a href="#email">Email</a></li><li><a href="#feedback-flow">Feedback Flow</a></li><li><a href="#share">Share</a></li></ul></li><li><a href="#carousel"><strong><em>Carousel</em></strong></a></li><li><a href="#image"><strong><em>Image</em></strong></a></li><li><a href="#raw-texthsl"><strong><em>Raw Text/HSL</em></strong></a></li></ul></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Conversation Studio</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Smart Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Intelligent Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://docs.haptik.ai/ios-sdk/" class="footer-column-link">iOS SDK</a><a href="https://docs.haptik.ai/android-sdk/" class="footer-column-link">Android SDK</a><a href="https://docs.haptik.ai/web-sdk/" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/whatsapp/" class="footer-column-link">WhatsApp</a><a href="https://docs.haptik.ai/other/facebook" class="footer-column-link">Facebook</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Bot API</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a><a href="https://docs.haptik.ai/other/security" class="footer-column-link">Security</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Agent Chat Tool</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2021 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+<h2><a class="anchor" aria-hidden="true" id="forms"></a><a href="#forms" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong><em>Forms</em></strong></h2>
+<p>Whenever the input is expected from a user in a structured format, its best taken in a form. For example, address would be best taken over form with 3-4 fields.</p>
+<p>Forms should have minimum two fields or else it would not make sense to use forms. Example, when you want to ask user their Name, Phone, Email and Address to register on your website.</p>
+<blockquote>
+<p>You should create Forms after adding entities on your Bot Says so that you are able to select the desired entities for each of the Form fields.</p>
+</blockquote>
+<p>You can configure Forms by clicking on the <code>Add a chat element</code> link and then selecting <strong>Form Builder</strong>.</p>
+<p><img src="/assets/bot-builder-chat-elements/formshsl1.png" alt="formbuilder"></p>
+<p>After choosing Forms Builder as the chat element option you can set the <strong>Form Title</strong> and <strong>Form Description</strong>.</p>
+<ol>
+<li><p><strong>Form Title</strong>: This field should convey the action needed from the user. For example, if you are making a form to take delivery address, <strong>Form Title</strong> can be <em>Please help me with your Delivery address</em>. Also, it is an optional field.</p></li>
+<li><p><strong>Form Description</strong>: This is a description for the form. This will be visible on the form. Form Description is also an optional field.</p></li>
+</ol>
+<p><img src="/assets/bot-builder-chat-elements/formshsl2.png" alt="formtitledescription"></p>
+<p>To add a new field on the Form, click on <code>Add a Field</code> button. A pop-up opens up with a list of all the different types of form fields you can choose from.</p>
+<ul>
+<li><strong>Text</strong>: This can be used when you want a text input from the user.</li>
+<li><strong>Picker</strong>: This can be used when you want a user to select any one option from the given multiple options using the dropdown.</li>
+<li><strong>Number</strong>: This can be used to get number inputs from the user. Example - Mobile number, SSN, etc.</li>
+<li><strong>Email</strong>: This can be used to get the Email-id from the user.</li>
+<li><strong>Date</strong>: This can be used to get the date from the user. It uses the calendar widget where users can select the date.</li>
+<li><strong>Time</strong>: This can be used to get the time from the user. It uses the clock widget where user can select the time.</li>
+<li><strong>Search</strong>: This field will help you create search options on the IVA.</li>
+</ul>
+<p><img src="/assets/bot-builder-chat-elements/formshsl3.png" alt="formfields"></p>
+<p>Let us look at each of these fields in detail.</p>
+<h3><a class="anchor" aria-hidden="true" id="text-1"></a><a href="#text-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Text</h3>
+<p>Text Field allows user to provide input in textual or alphanumeric format.</p>
+<p><img src="/assets/bot-builder-chat-elements/formshsl4.png" alt="textfield"></p>
+<p>You will have to provide the following details to configure a text field on the form.</p>
+<h4><a class="anchor" aria-hidden="true" id="1-text"></a><a href="#1-text" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Text:</h4>
+<p>This text is a placeholder for the field and will be visible on this <strong>Text field</strong> before user starts typing on this field. To add the placeholder click on <strong>Text</strong> as shown below.</p>
+<p><img src="/assets/bot-builder-chat-elements/formshsl5.png" alt="text"></p>
+<p>Example for <strong>Text</strong> -</p>
+<p><img src="/assets/bot-builder-chat-elements/formshsl6.png" alt="exampletext"></p>
+<h4><a class="anchor" aria-hidden="true" id="2-form-icon"></a><a href="#2-form-icon" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. Form Icon:</h4>
+<p>There is a dropdown of form icons available which can be used to add an icon for this <strong>Text field</strong>. The default icon is
+<img src="/assets/bot-builder-chat-elements/formshsl7.png" alt="defaulticon"></p>
+<p>To select another icon, click on the <strong>+</strong> symbol</p>
+<p><img src="/assets/bot-builder-chat-elements/formshsl8.png" alt="moreicons"></p>
+<h4><a class="anchor" aria-hidden="true" id="3-mandatory"></a><a href="#3-mandatory" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. Mandatory:</h4>
+<p>Marking a field <strong>Mandatory</strong> will ensure that the user is providing a value for this <strong>Text field</strong>.</p>
+<p><img src="/assets/bot-builder-chat-elements/formshsl9.png" alt="mandatory"></p>
+<blockquote>
+<p>Mandatory field will be automatically enabled if a mandatory entity is set in the <strong>Set Entity</strong> field.</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="4-set-entity"></a><a href="#4-set-entity" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4. Set Entity:</h4>
+<p>This option will provide you a dropdown of all the entities present on the node where you are adding Form HSL. You can select the entity whose value you want to capture using this <strong>Text field</strong>.</p>
+<p><img src="/assets/bot-builder-chat-elements/formshsl10.png" alt="set-entity"></p>
+<h4><a class="anchor" aria-hidden="true" id="5-advanced-options"></a><a href="#5-advanced-options" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5. Advanced Options:</h4>
+<p>This option lets you add validation and the corresponding error message to display if the user is providing incorrect input in this particular field.</p>
+<h5><a class="anchor" aria-hidden="true" id="i-validation"></a><a href="#i-validation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>i. Validation</h5>
+<h6><a class="anchor" aria-hidden="true" id="default-validations"></a><a href="#default-validations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Default Validations</h6>
+<p>These are the existing types of validations present that you can choose from.</p>
+<ul>
+<li><strong>Any</strong>: As the name suggests. This will allow any text to pass. Basically, there will be no validation to this field.</li>
+<li><strong>Alphabet (without whitespace)</strong>: This can be used to capture one word entries like first names. Example, Bruce, Clark, Diana, etc.</li>
+<li><strong>Alphabet (with whitespace)</strong>: This can be used to capture multiple word entries like full names. Example, Bruce Wayne, Clark Kent, Diana Prince, etc.</li>
+<li><strong>Alphanumeric (without whitespace)</strong>: This can be used to capture Alphanumeric values without any space. Example, Card number - ABCH1234N</li>
+<li><strong>Alphanumeric (with whitespace)</strong>: This can be used to capture Alphanumeric values containing spaces. Example, Address in one line - 221B Baker Street, London</li>
+<li><strong>Fixed Length</strong> This can be used when the text entered has to be of a specific length. Example, if the length validation is set to be 4, then only words of length 4 characters will be allowed like tree, milk, etc.</li>
+</ul>
+<p><img src="/assets/bot-builder-chat-elements/formshsl11.png" alt="text_validation"></p>
+<h6><a class="anchor" aria-hidden="true" id="custom-validation"></a><a href="#custom-validation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Custom Validation</h6>
+<p>Custom Validation accepts custom regex patterns. This is the most powerful validation functionality. The bot builder can use varied regex patterns to enable their fields to validate different input formats like credit card number, PAN card numbers, etc.</p>
+<h5><a class="anchor" aria-hidden="true" id="ii-error-message"></a><a href="#ii-error-message" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ii. Error Message</h5>
+<p>If any validation goes wrong, to inform the users that they have given an incorrect input, we can configure Error Message.</p>
+<h3><a class="anchor" aria-hidden="true" id="picker"></a><a href="#picker" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Picker</h3>
+<p><img src="/assets/bot-builder-chat-elements/formshsl12.png" alt="pickeroption"></p>
+<p><strong>Picker</strong> field is used when you want a user to select any one option from the given multiple options using the dropdown. Example, list of cities in India.</p>
+<p>To configure a Picker field, you will have to provide following details -</p>
+<ul>
+<li><p><a href="https://docs.haptik.ai/bot-builder/basic/chat-elements#1-text"><strong>Picker</strong></a> - Click on the <strong>Picker</strong> text to add a placeholder for the Picker field.</p>
+<p><code>Example, Please select a city</code></p></li>
+<li><p><a href="https://docs.haptik.ai/bot-builder/basic/chat-elements#2-form-icon"><strong>Icon</strong></a> - Select an icon from the dropdown.</p></li>
+<li><p><a href="https://docs.haptik.ai/bot-builder/basic/chat-elements#3-mandatory"><strong>Mandatory</strong></a> - Enabling the Mandatory checkbox will ensure the user is selecting a value from the dropdown.</p></li>
+<li><p><strong>Picker Options</strong> - Enter the comma separated dropdown values</p>
+<p><code>For above example of list of cities - Mumbai, Delhi, Kolkata, Chennai, Banglore</code></p></li>
+<li><p><a href="https://docs.haptik.ai/bot-builder/basic/chat-elements#4-set-entity"><strong>Set Entity</strong></a> - Select the entity to capture the value from dropdown.</p></li>
+<li><p><a href="https://docs.haptik.ai/bot-builder/basic/chat-elements#ii-error-message"><strong>Error Message</strong></a> - If the user does not select a value from the dropdown, this error message will be shown to the user which will indicate the user to select an option from the dropdown.</p></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="number"></a><a href="#number" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Number</h3>
+<p>Number field can be used to get number inputs from the user. Example, Mobile number.</p>
+<p><img src="/assets/bot-builder-chat-elements/formshsl13.png" alt="numberoption"></p>
+<p>To configure a Number field, you will have to provide following details -</p>
+<ul>
+<li><p><a href="https://docs.haptik.ai/bot-builder/basic/chat-elements#1-text"><strong>Number</strong></a> - Click on the <strong>Number</strong> text to add a placeholder for this Number field.</p>
+<p><code>Example, Please enter your mobile</code></p></li>
+<li><p><a href="https://docs.haptik.ai/bot-builder/basic/chat-elements#2-form-icon"><strong>Icon</strong></a> - Select an icon from the dropdown.</p></li>
+<li><p><a href="https://docs.haptik.ai/bot-builder/basic/chat-elements#3-mandatory"><strong>Mandatory</strong></a> - Enabling the Mandatory checkbox will ensure the user is providing a value.</p></li>
+<li><p><a href="https://docs.haptik.ai/bot-builder/basic/chat-elements#4-set-entity"><strong>Set Entity</strong></a> - Select the entity from the dropdown to capture the number.</p></li>
+<li><p><strong>Validation</strong> - There are two different types of validation available</p></li>
+</ul>
+<p><strong>i. Fixed Length</strong> - This validation specifies that the number entered has to be of a specific length.</p>
+<p><strong>ii. Range</strong> - This validation mentions the range of digits it can accept. If a user inputs anything more or less than the range, it is treated as an invalid value.</p>
+<p><img src="/assets/bot-builder-chat-elements/formshsl14.png" alt="number_range"></p>
+<ul>
+<li><a href="https://docs.haptik.ai/bot-builder/basic/chat-elements#ii-error-message"><strong>Error Message</strong></a> - If the user does not provide a value of either fixed length or in the specified range, this error message will be shown to the user which will indicate the user to provide a number value.</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="email-1"></a><a href="#email-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Email</h3>
+<p>Email can be used to get the email id from the user.</p>
+<p><img src="/assets/bot-builder-chat-elements/formshsl15.png" alt="emailoption"></p>
+<p>To configure an Email field, you will have to provide following details -</p>
+<ul>
+<li><p><a href="https://docs.haptik.ai/bot-builder/basic/chat-elements#1-text"><strong>Email</strong></a> - Click on the <strong>Email</strong> text to add a placeholder for the Email field.</p>
+<p><code>Example, Please provide your email id</code></p></li>
+<li><p><a href="https://docs.haptik.ai/bot-builder/basic/chat-elements#2-form-icon"><strong>Icon</strong></a> - Select an icon from the dropdown.</p></li>
+<li><p><a href="https://docs.haptik.ai/bot-builder/basic/chat-elements#3-mandatory"><strong>Mandatory</strong></a> - Enabling the Mandatory checkbox will ensure the user is providing the email id.</p></li>
+<li><p><a href="https://docs.haptik.ai/bot-builder/basic/chat-elements#4-set-entity"><strong>Set Entity</strong></a> - Select the entity from the dropdown to capture the email id.</p></li>
+<li><p><a href="https://docs.haptik.ai/bot-builder/basic/chat-elements#ii-error-message"><strong>Error Message</strong></a> - If the user does not provide an email id, this error message will be shown to the user which will indicate the user to provide their correct email id.</p></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="date"></a><a href="#date" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Date</h3>
+<p>Date field type can be used to accept dates from the user.</p>
+<p><img src="/assets/bot-builder-chat-elements/formshsl16.png" alt="dateoption"></p>
+<p>To configure a Date field, you will have to provide following details -</p>
+<ul>
+<li><p><a href="https://docs.haptik.ai/bot-builder/basic/chat-elements#1-text"><strong>Date</strong></a> - Click on the <strong>Date</strong> text to add a placeholder for the Date field.</p>
+<p><code>Example, Check-in Date</code></p></li>
+<li><p><a href="https://docs.haptik.ai/bot-builder/basic/chat-elements#2-form-icon"><strong>Icon</strong></a> - Select an icon from the dropdown.</p></li>
+<li><p><a href="https://docs.haptik.ai/bot-builder/basic/chat-elements#3-mandatory"><strong>Mandatory</strong></a> - Enabling the Mandatory checkbox will ensure the user is providing the date.</p></li>
+<li><p><a href="https://docs.haptik.ai/bot-builder/basic/chat-elements#4-set-entity"><strong>Set Entity</strong></a> - Select the entity from the dropdown to capture the date.</p></li>
+<li><p><strong>Validation</strong> - You can mention both the Start Date and End Date from which the user can select any one date or you can set either of them.</p>
+<p><code>Example, if the Start Date is 01-01-2001 and End Date is 01-01-2099, then the user will only be able to see the dates between these range</code></p></li>
+</ul>
+<p><img src="/assets/bot-builder-chat-elements/formshsl17.png" alt="date_validation"></p>
+<ul>
+<li><a href="https://docs.haptik.ai/bot-builder/basic/chat-elements#ii-error-message"><strong>Error Message</strong></a> - If the user did not select any date, this error message will be shown to the user which will indicate the user to select a date.</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="time"></a><a href="#time" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Time</h3>
+<p>Time field is used to get the time from a user. It uses the clock widget where user can select the time.</p>
+<p><img src="/assets/bot-builder-chat-elements/formshsl18.png" alt="timefield"></p>
+<p>To configure a Time field, you will have to provide following details -</p>
+<ul>
+<li><p><a href="https://docs.haptik.ai/bot-builder/basic/chat-elements#1-text"><strong>Time</strong></a> - Click on the <strong>Time</strong> text to add a placeholder for the Time field.</p>
+<p><code>Example, Check-in Time</code></p></li>
+<li><p><a href="https://docs.haptik.ai/bot-builder/basic/chat-elements#2-form-icon"><strong>Icon</strong></a> - Select an icon from the dropdown.</p></li>
+<li><p><a href="https://docs.haptik.ai/bot-builder/basic/chat-elements#3-mandatory"><strong>Mandatory</strong></a> - Enabling the Mandatory checkbox will ensure the user is providing the time.</p></li>
+<li><p><a href="https://docs.haptik.ai/bot-builder/basic/chat-elements#4-set-entity"><strong>Set Entity</strong></a> - Select the entity from the dropdown to capture the time.</p></li>
+<li><p><a href="https://docs.haptik.ai/bot-builder/basic/chat-elements#ii-error-message"><strong>Error Message</strong></a> - If the user does not provide any time, this error message will be shown to the user which will indicate the user to provide the time.</p></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="search"></a><a href="#search" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Search</h3>
+<p>Search field will help you create search options on the bot. This is similar to Picker field. In Picker field, you have to mention comma separated values whereas in Search, the dropdown is populated using API.</p>
+<p><img src="/assets/bot-builder-chat-elements/formshsl19.png" alt="searchfield"></p>
+<p>To configure a Search field, you will have to provide following details -</p>
+<ul>
+<li><p><a href="https://docs.haptik.ai/bot-builder/basic/chat-elements#1-text"><strong>Search</strong></a> - Click on the <strong>Search</strong> text to add a placeholder for the Search field.</p>
+<p><code>Example, Search my City</code></p></li>
+<li><p><a href="https://docs.haptik.ai/bot-builder/basic/chat-elements#2-form-icon"><strong>Icon</strong></a> - Select an icon from the dropdown.</p></li>
+<li><p><a href="https://docs.haptik.ai/bot-builder/basic/chat-elements#3-mandatory"><strong>Mandatory</strong></a> - Enabling the Mandatory checkbox will ensure the user is either selecting or providing a value.</p></li>
+<li><p><strong>API</strong> - When we want some custom response or inputs from an external API, we put the API URL here.</p></li>
+</ul>
+<p>This API's Request and Response format is mentioned below -</p>
+<pre><code class="hljs"><span class="hljs-symbol">Request:</span>
+
+<span class="hljs-params">&lt;YOUR API URL&gt;</span>?query=<span class="hljs-params">&lt;the actual search string&gt;</span><span class="hljs-variable">&amp;user_id</span>=<span class="hljs-params">&lt;actual user_id of that user&gt;</span><span class="hljs-variable">&amp;user_name</span>=<span class="hljs-params">&lt;user name if present else undefnied&gt;</span>
+<span class="hljs-symbol">
+Response:</span>
+
+{
+    <span class="hljs-string">"success"</span>: true,
+    <span class="hljs-string">"data"</span>: [{
+        <span class="hljs-string">"title"</span>: <span class="hljs-string">"&lt;title of the first element in the search result&gt;"</span>
+    }, {
+        <span class="hljs-string">"title"</span>: <span class="hljs-string">"&lt;title of the second element in the search result&gt;"</span>
+    }],
+    <span class="hljs-string">"query"</span>: <span class="hljs-string">"pune"</span>,
+    <span class="hljs-string">"error"</span>: <span class="hljs-string">""</span>
+} 
+</code></pre>
+<ul>
+<li><p><a href="https://docs.haptik.ai/bot-builder/basic/chat-elements#4-set-entity"><strong>Set Entity</strong></a> - Select the entity from the dropdown to capture the value.</p></li>
+<li><p><strong>SearchEditable</strong> - This field makes the Search option flexible by allowing users to select a value which is not present in the dropdown.</p>
+<p><code>Example - If the API is not returning Pune as a dropdown option, then the user can type Pune and it will be captured by the Set Entity</code></p></li>
+<li><p><a href="https://docs.haptik.ai/bot-builder/basic/chat-elements#ii-error-message"><strong>Error Message</strong></a> - If the user does not select any option from the dropdown, this error message will be shown to the user which will indicate the user to provide or select the value.</p></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="deleting-a-form-field"></a><a href="#deleting-a-form-field" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Deleting a Form Field</h3>
+<p>You can delete a particular Form Field using the delete button visible on the right side of the field.</p>
+<p><img src="/assets/bot-builder-chat-elements/formshsl20.png" alt="delete1"></p>
+<p>The pop-up appears to confirm if you want to delete the field.</p>
+<p><img src="/assets/bot-builder-chat-elements/formshsl21.png" alt="delete2"></p>
+<h3><a class="anchor" aria-hidden="true" id="customize-send-button"></a><a href="#customize-send-button" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Customize Send Button</h3>
+<p>There is a <strong>Send</strong> button which appears on the form which the user has to click to send the form details. Once the user clicks on <strong>Send</strong> button, the text appearing on the button changes to <strong>Sent</strong>.</p>
+<p>You can customize this text which appears on the button by enabling the <strong>Add Custom Submit Button Text</strong> checkbox and providing the before and after text for the buttons.</p>
+<pre><code class="hljs">`Examples for custom Button Text - Register, Submit, Proceed, etc`
+</code></pre>
+<p><img src="/assets/bot-builder-chat-elements/formshsl23.png" alt="custombutton"></p>
+<h3><a class="anchor" aria-hidden="true" id="re-order-the-form-fields"></a><a href="#re-order-the-form-fields" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Re-order the Form Fields</h3>
+<p>You can restructure the form fields and organize them again once they all have been created using the grip option as shown below.</p>
+<p><img src="/assets/bot-builder-chat-elements/formshsl22.png" alt="toggle"></p>
+<h3><a class="anchor" aria-hidden="true" id="form-hsl-on-the-bot"></a><a href="#form-hsl-on-the-bot" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Form HSL on the bot</h3>
+<p>Using the fields above once we have completed building the bot, it will be displayed as shown below -</p>
+<p><img src="/assets/bot-builder-chat-elements/forminaction.png" alt="forminaction"></p>
+<p>Error messages on the various form fields which we have configured come up right below the field as shown below -</p>
+<p><img src="/assets/bot-builder-chat-elements/formwitherror.png" alt="formerrors"></p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2/25/2021</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/bot-builder/basic/bot-says"><span class="arrow-prev">← </span><span>Bot Says</span></a><a class="docs-next button" href="/bot-builder/basic/connections"><span>Connections</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#what-are-chat-elements">What are Chat Elements?</a></li><li><a href="#text-responses"><strong><em>Text Responses</em></strong></a></li><li><a href="#quick-replies"><strong><em>Quick Replies</em></strong></a><ul class="toc-headings"><li><a href="#the-quick-way-to-add-quick-replies">The Quick way to add Quick Replies</a></li><li><a href="#advanced-options-to-add-quick-replies">Advanced options to add Quick Replies</a></li><li><a href="#reordering-quick-replies">Reordering Quick Replies</a></li></ul></li><li><a href="#buttons"><strong><em>Buttons</em></strong></a><ul class="toc-headings"><li><a href="#text">Text</a></li><li><a href="#open-screen">Open Screen</a></li><li><a href="#call">Call</a></li><li><a href="#sms">SMS</a></li><li><a href="#email">Email</a></li><li><a href="#feedback-flow">Feedback Flow</a></li><li><a href="#share">Share</a></li></ul></li><li><a href="#carousel"><strong><em>Carousel</em></strong></a></li><li><a href="#image"><strong><em>Image</em></strong></a></li><li><a href="#raw-texthsl"><strong><em>Raw Text/HSL</em></strong></a></li><li><a href="#forms"><strong><em>Forms</em></strong></a><ul class="toc-headings"><li><a href="#text-1">Text</a></li><li><a href="#picker">Picker</a></li><li><a href="#number">Number</a></li><li><a href="#email-1">Email</a></li><li><a href="#date">Date</a></li><li><a href="#time">Time</a></li><li><a href="#search">Search</a></li><li><a href="#deleting-a-form-field">Deleting a Form Field</a></li><li><a href="#customize-send-button">Customize Send Button</a></li><li><a href="#re-order-the-form-fields">Re-order the Form Fields</a></li><li><a href="#form-hsl-on-the-bot">Form HSL on the bot</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Conversation Studio</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Smart Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Intelligent Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://docs.haptik.ai/ios-sdk/" class="footer-column-link">iOS SDK</a><a href="https://docs.haptik.ai/android-sdk/" class="footer-column-link">Android SDK</a><a href="https://docs.haptik.ai/web-sdk/" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/whatsapp/" class="footer-column-link">WhatsApp</a><a href="https://docs.haptik.ai/other/facebook" class="footer-column-link">Facebook</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Bot API</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a><a href="https://docs.haptik.ai/other/security" class="footer-column-link">Security</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Agent Chat Tool</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2021 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

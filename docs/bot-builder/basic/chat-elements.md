@@ -99,23 +99,13 @@ In some cases you might want to open a new visual screen to collect some informa
 
 To use this button type just set the button type as `Open Screen`. Then set the button text and choose the type of screen you want to open. Some of the screen types available are:
 
-* Carousel Detail: Opens a screen which has a carousel of image on the top and space underneath for text.
-* Gallery Picker: Pops up the dialog to choose an image from camera / gallery.
-* Launch Channel: Opens up a new channel. The details of the channel to be opened is given in the payload.
-* Self Serve Recharge: Takes you the Recharge & Bills Screen. By default, the first tab (Recharge) is selected.
-* Electricity: Takes you the Recharge & Bills Screen and selects Electricity tab.
-* Send Location: Opens Place Picker and enables a user to send a particular location.
-* Carousel Default: Opens up a screen which has little space on the top for text, followed by a carousel of images underneath it and a message sending area underneath it. Primarily built for the Food Delivery channel but still useful in many ways.
-* App Authenticate: Used to get Uber authentication. Launches Uber app if available other wise fires up a web view.
-* Profile: Opens up the Profile screen in the app.
-* Wallet: Opens up the Wallet screen in the app. Useful to show the wallet balance.
-* Wallet History: Opens up the Wallet screen and switches to Wallet History.
-* Link: Fires up web view with a link provided in the payload.
-* Send Multiple Locations: Used mostly in the Cabs channel to allow a user to select two locations and send it back as a message.
-* Saved Addresses: Opens up the Saved Addresses screen with the list of saved addresses, if any. Otherwise, opens up the screen to save a new address.
-* Transaction History: Opens up the Transaction History screen.
-
-> Note: Most of these options are only available on the Android/IOS SDKs.
+* **Carousel Detail**: Opens a screen that has a carousel of an image on the top and space underneath for text. This option comes with both text and button.
+* **Upload / Take photo**: Pops up the dialog to choose an image from the camera/gallery. This option comes for both native apps and the web.
+* **Upload document**: Pops up the dialog to choose a document from the device.
+* **Open Channel**: Opens up a new channel. The details of the channel to be opened are given in the payload.
+* **Send Location**: Opens Place Picker and enables a user to send a particular location.
+* **Link**: Opens the mentioned link on a new tab.
+* **Webview**: Opens up a custom webview.
 
 ### Call
 This option is useful when you want the user to be able to make a call on click of the button. Clicking this button will open the default calling app and prefill the number to be called.
@@ -186,7 +176,8 @@ After choosing Image as the chat element option you have several configuration c
 ![Image Button](assets/bot-builder-chat-elements/chat-elements-image-button.png)
 
 ## ***Raw Text/HSL***
-If you want to use a custom chat element you can use this option. A custom chat element is something that is not part of the standard elements mentioned above. 
+
+You can use this HSL for sending only text responses or if you want to use a custom chat element you can use this option. A custom chat element is something that is not part of the standard elements mentioned above. 
 
 In such cases you can enter the raw HSL code directly and that element will be rendered by the bots.
 
@@ -195,6 +186,8 @@ In such cases you can enter the raw HSL code directly and that element will be r
 Whenever the input is expected from a user in a structured format, its best taken in a form. For example, address would be best taken over form with 3-4 fields.
 
 Forms should have minimum two fields or else it would not make sense to use forms. Example, when you want to ask user their Name, Phone, Email and Address to register on your website.
+
+> You should create Forms after adding entities on your Bot Says so that you are able to select the desired entities for each of the Form fields.
 
 You can configure Forms by clicking on the `Add a chat element` link and then selecting **Form Builder**.
 

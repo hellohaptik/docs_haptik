@@ -13,6 +13,7 @@ The **Overview** section provides information about:
 * User Rating
 * Top Funnels
 * Bot Automation
+* Language Usage
 
 ![OverviewPage](assets/Overview1.png)
 
@@ -141,4 +142,31 @@ Bot Transfers are shown on the graph too with a vertical line along with a toggl
 
 ![BotAutomation1](assets/Overview11.png)
 
+## Language Usage
+Language Usage shows the split of languages, conversations and bot automation rate in the language user interacting with.
+It helps in understanding capabilities or intents that should be added to support end-users who reach out in different languages.
+
+![Language Usage](assets/languagess.png)
+
+### What does language (s) mean?
+This section helps you understand split of different languages your users are interacting in with the IVA.
+
+### How are conversations calculated under Language Usage?
+Conversations shows the split is shown as per specific language the user interacted with the IVA 
+**Formula = No. of conversations (in that language)/ total no. of conversations*100**
+
+The message which was spoken by the user towards the end of the conversation is considered as the language in which the user interacted with the IVA
+
+If the conversation is first half of conversation is 50% English and 50% Hindi. The last message being Hindi should be considered as Hindi
+
+If the user chose a different language and did not move to a new language or sent any message after that. The message which he choose to be considered as the language
+
+On hover you can see the conversation count
+
+![Language Usage](assets/languagess2.png)
+
+### How is bot automation calculated under Language Usage?
+Formula - No of conversations (in that language) that didn’t have a bot break or agent response/total number of conversations (in that same language)*100
+
 > Arrows in every section can take you to the corresponding pages to understand a particular metric in depth.
+

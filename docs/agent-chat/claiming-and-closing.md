@@ -46,7 +46,7 @@ The priority value and presence in ‘Team Queue’ or individual ‘Agent queue
 
 > When an agent logs out, we clear the relation between this agent and all users he/she might have interacted with earlier.
 
-Apart from the above, one can choose between the two **Chat Assignment Algorithms** on Smart Agent Chat, you can read more about it [here (https://docs.haptik.ai/agent-chat/chat-assignment).
+Apart from the above, one can choose between the two **Chat Assignment Algorithms** on Smart Agent Chat, you can read more about it [here](https://docs.haptik.ai/agent-chat/chat-assignment).
 
 >  Our bot is a special agent, code named ‘Gogo’
 

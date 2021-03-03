@@ -85,10 +85,6 @@ module.exports = () => (
           url: '/hsl',
         },
         {
-          title: 'Security',
-          url: '/other/security',
-        },
-        {
           title: 'SLA',
           url: '/other/sla',
         },

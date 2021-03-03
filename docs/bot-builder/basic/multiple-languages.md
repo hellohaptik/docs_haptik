@@ -78,7 +78,7 @@ You can add language specific **Entity Reprompts** too.
 
 ![Language8](assets/language10.png)
 
-    FAQ Nodes, Small talk, Smart assist and Disambiguation are currently not supported in multilingual bots.
+    FAQ Nodes and Small talk are currently not supported in multilingual bots.
 
 ### Glossary
 

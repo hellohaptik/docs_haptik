@@ -496,11 +496,15 @@ Example: Unfortunately, none of our agents are available at the moment. Tap belo
 
 ## Unstructured FAQ IVA guideline
 
-**Definition**: FAQs stand for frequently asked questions. Adding general FAQs to your bot is a great way to ensure that users receive answers to most of their basic questions alongside the more detailed user journeys that you have built. Examples:
+**Definition**: FAQs stand for frequently asked questions. Adding general FAQs to your bot is a great way to ensure that users receive answers to most of their basic questions alongside the more detailed user journeys that you have built. 
+
+Examples:
 
 ![chatmiddle23](/assets/chatmiddle23.png)
 
 **Considerations**: 
+
+- Download the FAQ guideline linked [**here**](/assets/Haptik_FAQ_Format.xlsx) to add and structure all your FAQs.
 
 - Always have follow-up QR options. Your user should have a way to move forward in the conversation.
 
@@ -508,7 +512,7 @@ Example: Unfortunately, none of our agents are available at the moment. Tap belo
 
 - Ensure that all your nodes have been sufficiently trained so that your bot can answer correctly. You can go through the user says guidelines [here](https://docs.haptik.ai/bot-builder/basic/user-says-guidelines).
 
-- To upload a large number of FAQs at once, you may use the [bulk upload feature](https://docs.haptik.ai/bot-builder/basic/general-nodes). However, make sure that all good conversation designer practices like follow-ups are implemented within your content.
+- To upload a large number of FAQs at once, you may use the [**bulk upload feature**](https://docs.haptik.ai/bot-builder/basic/general-nodes). However, make sure that all good conversation designer practices like follow-ups are implemented within your content.
 
 - Ensure that follow-up feedback doesn’t jump in too early and obscure your follow up QRs. Remember: QRs aren’t persistent.
 

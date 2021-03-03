@@ -58,10 +58,6 @@ class Footer extends React.Component {
             ])}
             {this.renderFooterColumn('Others', [
               { title: 'HSL', url: 'https://docs.haptik.ai/hsl/' },
-              {
-                title: 'Security',
-                url: 'https://docs.haptik.ai/other/security',
-              },
               { title: 'SLA', url: 'https://docs.haptik.ai/other/sla' },
               {
                 title: 'External Agent Chat Tool',

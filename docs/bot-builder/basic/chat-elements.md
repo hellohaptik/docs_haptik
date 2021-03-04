@@ -447,6 +447,29 @@ Response:
 
 - [**Error Message**](https://docs.haptik.ai/bot-builder/basic/chat-elements#ii-error-message) - If the user does not select any option from the dropdown, this error message will be shown to the user which will indicate the user to provide or select the value.
 
+
+### Date of Birth
+
+Date of Birth field is used to accept a date from the user. This field does not allow users to select future dates.
+
+![dobfield](assets/bot-builder-chat-elements/formshsl24.png)
+
+To configure a Date of Birth field, you will have to provide following details -
+
+- [**Text**](https://docs.haptik.ai/bot-builder/basic/chat-elements#1-text) - Click on the **Text** text to add a placeholder for the Date of Birth field. 
+
+    `Example, Please select your Date of Birth`
+
+- [**Icon**](https://docs.haptik.ai/bot-builder/basic/chat-elements#2-form-icon) - Select an icon from the dropdown.
+
+- [**Mandatory**](https://docs.haptik.ai/bot-builder/basic/chat-elements#3-mandatory) - Enabling the Mandatory checkbox will ensure the user is providing the date.
+
+- [**Set Entity**](https://docs.haptik.ai/bot-builder/basic/chat-elements#4-set-entity) - Select the entity from the dropdown to capture the date.
+
+- [**Error Message**](https://docs.haptik.ai/bot-builder/basic/chat-elements#ii-error-message) - If the user does not provide any date, this error message will be shown to the user which will indicate the user to provide the date.
+
+![dobfieldonbot](assets/bot-builder-chat-elements/formshsl25.png)
+
 ### Deleting a Form Field
 
 You can delete a particular Form Field using the delete button visible on the right side of the field. 

@@ -450,7 +450,7 @@ Response:
 
 ### Date of Birth
 
-Date of Birth field is used to accept a date from the user. This field does not allow users to select future dates.
+Date of Birth field is used to accept a date from the user. **This field does not allow users to select future dates.**
 
 ![dobfield](assets/bot-builder-chat-elements/formshsl24.png)
 

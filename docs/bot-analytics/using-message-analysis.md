@@ -35,7 +35,7 @@ These columns are:
 * **Created At** - This column tells you when the message was recieved by the bot.
 * **Full Name** - This column shows the full name of the user who sent the message.
 * **Last Nodes** - This column shows the last node that the user was on before sending this message. This information can be useful to understand what the context was for the user sending the current message.
-* **Sub Story** - This column shows which Sub Story the node from Last Nodes column belongs to.
+* **Sub Story** - This column shows which Sub Story the node from **Last Nodes** column belongs to.
 
 ![View Messages](assets/message-analysis-view-messages.png)
 
@@ -57,9 +57,9 @@ In case of viewing conversations the columns of the table are fixed and they are
 ![View Conversations](assets/message-analysis-view-conversations.png)
 
 ### Downloading the report
-There is an option to email the Message or Conversation data in CSV format if needed. This can be done by clicking on the 
+There is an option to email the Message or Conversation data in CSV format if needed. This can be done by clicking on the `Email Report` button above the table showing the data.
+
 ![emailreport](assets/ma3.png)
-button above the table showing the data.
 
 The CSV file will be sent to you on the Email address registered with your account.
 
@@ -129,7 +129,11 @@ This option lets you switch betweeen seeing only all the messages that lead to a
 ![Bot Break Filter](assets/message-analysis-broken-messages-filter.png)
 
 ### Smart Assist Messages
-This option lets you switch betweeen seeing only messages that triggered the Smart Assist layer.
+Intelligent Virtual Assistants are always trained to cater to user queries that fall within a fixed scope. However, at times, customers might ask queries that don’t fall within the scope of the IVA. This tends to prevent the IVA from answering the User’s queries.
+
+A key component in Haptik’s conversational experience is SMART ASSIST. The objective of the component is to respond back to the user smartly when the IVA is not able to completely understand the User’s query. This should open up the pathways for the users to reformulate or redirect their queries, so that appropriate response can be given. To know more about Smart Assist click [**here**](https://docs.haptik.ai/bot-builder/basic/smart-assist).
+
+This option lets you see those messages that triggered the Smart Assist layer.
 
 ![SA Filter](assets/sa1.png)
 

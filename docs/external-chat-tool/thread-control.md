@@ -1,5 +1,5 @@
 ---
-totitle: Thread control
+title: Thread control
 ---
 
 # What is thread control?
@@ -78,9 +78,17 @@ Hence,
 - Requesting of thread control is currently not supported.
 - Taking thread control is currently not supported, unless you are a primary.
 
-> Please note that in case you're designated as a default receiver, you can use it as a workaround to set the active receiver as yourself. Thereby, effectively allowing you to take thread control at any time.  
+> TRACT only allows TC operations from the active or primary receivers as of now.
 
 To perform a thread control operation request please use the `thread_control/request` API. Please refer the detailed API documentation here.
+
+## Summary table for receivers
+
+| Type    | Can respond to CEU? | Can take thread control from others? | Can give thread control to others? | Gets first message from new CEU chat? | Who can this be? |
+| ------- | ------------------- | ------------------------------------ | ---------------------------------- | ------------------------------------- | ---------------- |
+| Primary | No                  | Yes                                  | Yes                                | No                                    | SAC/IVA          |
+| Default | No                  | No                                   | No                                 | Yes                                   | Any tool         |
+| Active  | Yes                 | No                                   | Yes                                | No                                    | Any tool         |
 
 # How does this map to conversation states?
 

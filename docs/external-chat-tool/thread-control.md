@@ -8,7 +8,7 @@ title: Thread control
 
 Thread control is a way of assigning ownership of a chat conversation (a.k.a. "thread") to a chat tool capable of responding to a CEU.
 
-The thread control protocol allows for multiple ECTs to be able to respond to a given chat form a CEU, in conjunction with one another and the Haptik internal tools: Smart Agent Chat (SAC) and the Intelligent Virtual Assistant (IVA).
+The thread control protocol allows for multiple ECTs to be able to respond to a given chat from a CEU, in conjunction with one another and the Haptik internal tools: Smart Agent Chat (SAC) and the Intelligent Virtual Assistant (IVA).
 
 The chat tool that has thread control at a given instance is the only chat tool allowed to respond to the CEU at that time.
 
@@ -99,6 +99,5 @@ While the TC operations themselves are independent of the states of a chat, a fe
 | TC operation    | State change   | Explanation                                                  |
 | --------------- | -------------- | ------------------------------------------------------------ |
 | Transfer to IVA | Chat Completed | For the IVA to be able to respond properly to the user's next message, we mark the current conversation complete. |
-
 
 

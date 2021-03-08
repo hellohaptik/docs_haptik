@@ -4,13 +4,13 @@ title: Message Analysis
 
 In the Intelligent Analytics tool you can go to the "*Message Analysis*" section to analyse the bot performance at a message level.
 
-![Message Analysis Left Menu](assets/message-analysis-left-menu.png)
+![Message Analysis Left Menu](assets/ma1.png)
 
 You can start by selecting a specific channel or bot and setting the time period. And then you should see a page with options to filter and analyse the messages sent and received by your bot.
 
 The top half of the page consists of multiple filters. We will go through each of these filters and understand how they can be used later in this document.
 
-![Message Analysis Filters](assets/message-analysis-filters.png)
+![Message Analysis Filters](assets/ma2.png)
 
 Below the filters you have a table of data where you can see the messages processed by clicking on the `View Messages` link. Or you can choose to see the conversations of your bot by clicking on the `View Conversations` link.
 
@@ -26,27 +26,16 @@ The View Messages section of the page which can be accessed by clicking on the `
 The columns of the table can be configured by you in case of Viewing Messages. We will discuss these configurations in a later [section](#select-columns). But by default the tool selects a few columns for you.
 
 These columns are:
-* **Story** - The `Story` in the bot builder that the message belongs to. A `Story` is a subcomponent within a bot.
-* **Created At** - This column tells you when the message was recieved by the bot.
-* **Chat Link** - This column provides a link to open and view the conversation related to the message. Clicking on the link will open a page that shows the conversation as well as the user details.
-  ![Chat Link](assets/message-analysis-chat-link.png)
 * **Body** - This column shows you the actual message that was sent.
-* **Message Type** - This column shows you how the message was sent. A message can be sent in two ways. One is the regular way, which is the user typing or clicking on a special chat element. The second is by tapping a task button from the taskbox.
-* **Last Nodes** - This column shows the last node that the user was on before sending this message. This information can be useful to understand what the context was for the user sending the current message.
-* **Stop Logic Data** - This column shows you what the reason was for the conversation flow to stop at this point. This reason could be one of the following:
-    1) Response Sent
-    2) Missing Intent
-    3) Missing Intent/Entities
-    4) Casual Response sent
-    5) Casual Response unchanged
-    6) Negative Intent
-    7) Smalltalk Response Sent
-    8) Smalltalk Response Unchanged
-    9) Error
-    10) Outlier Response
-    11) Retry Ideal Flow
-* **Total User Messages** - This column shows the total number of messages in the conversation to which the message belongs.
+* **Chat Link** - This column provides a link to open and view the conversation related to the message. Clicking on the link will open a page that shows the conversation as well as the user details.
+
+  ![Chat Link](assets/message-analysis-chat-link.png)
+  
+* **Conversation ID** - This is a unique ID every conversation has.
+* **Created At** - This column tells you when the message was recieved by the bot.
 * **Full Name** - This column shows the full name of the user who sent the message.
+* **Last Nodes** - This column shows the last node that the user was on before sending this message. This information can be useful to understand what the context was for the user sending the current message.
+* **Sub Story** - This column shows which Sub Story the node from **Last Nodes** column belongs to.
 
 ![View Messages](assets/message-analysis-view-messages.png)
 
@@ -67,11 +56,12 @@ In case of viewing conversations the columns of the table are fixed and they are
 
 ![View Conversations](assets/message-analysis-view-conversations.png)
 
-### Downloading the data
-There is an option to download the Message or Conversation data in CSV format if needed. This can be done by clicking on the `Download` button above the table showing the data.
-The CSV file will be sent to you on the Email address registered with your account.
+### Downloading the report
+There is an option to email the Message or Conversation data in CSV format if needed. This can be done by clicking on the `Email Report` button above the table showing the data.
 
-![Download](assets/message-analysis/message-analysis-download.png)
+![emailreport](assets/ma3.png)
+
+The CSV file will be sent to you on the Email address registered with your account.
 
 ## Filters
 As mentioned above, the Message Analysis page provides you with many filter options. You can use these filters to select what data you see in the Conversation/Message table on the page.
@@ -123,10 +113,10 @@ The message analysis page also lets you filter the data in the table based on th
 
 ![Message By](assets/message-analysis-message-by.png)
 
-### Stop Logic
-This option lets you filter by the different stop logic options discussed in the earlier [section](#view-messages).
+### Select Sub Story
+This option lets you filter the data based on which sub story on the bot builder the conversation or message belongs to.
 
-![Stop Logic Filter](assets/message-analysis-stop-logic-filter.png)
+![Select Stories](assets/message-analysis-select-stories.png)
 
 ### Message ID
 This option lets you filter based on the Message ID. You can enter the Message ID of the message you want to see in the input field. Then on clicking the magnifying glass icon in the input box the data should get filtered.
@@ -134,14 +124,18 @@ This option lets you filter based on the Message ID. You can enter the Message I
 ![Message ID filter](assets/message-analysis-message-id-filter.png)
 
 ### Broken Messages Only
-This option lets you switch betweeen seeing only bot break messages and seeing all messages.
+This option lets you switch betweeen seeing only all the messages that lead to a bot break.
 
 ![Bot Break Filter](assets/message-analysis-broken-messages-filter.png)
 
-### Select Stories
-This option lets you filter the data based on which story on the bot builder the conversation or message belonged to.
+### Smart Assist Messages
+Intelligent Virtual Assistants are always trained to cater to user queries that fall within a fixed scope. However, at times, customers might ask queries that don’t fall within the scope of the IVA. This tends to prevent the IVA from answering the User’s queries.
 
-![Select Stories](assets/message-analysis-select-stories.png)
+A key component in Haptik’s conversational experience is SMART ASSIST. The objective of the component is to respond back to the user smartly when the IVA is not able to completely understand the User’s query. This should open up the pathways for the users to reformulate or redirect their queries, so that appropriate response can be given. To know more about Smart Assist click [**here**](https://docs.haptik.ai/bot-builder/basic/smart-assist).
+
+This option lets you see those messages that triggered the Smart Assist layer.
+
+![SA Filter](assets/sa1.png)
 
 ### User ID
 This option lets you filter the data based on the user id. This can be helpful to understand the messages/conversations of a partcular user.
@@ -154,23 +148,17 @@ You can enter the user id you want to filter by inside the input field. Then on 
 The final option we will be looking at is the `Select Columns` option which lets you filter what columns are shown in the View Messages table.
 
 The columns that you can select from are:
-* Chat Link
-* Message ID
-* Body
-* Story
-* Last Nodes
-* Predicted Bot
-* Stop Logic Data
-* Redis Cache
-* Coll_Conv
+* Confidence Score 
+* Conversation ID 
 * Created At
 * Full Name
-* New Conversation
-* Total User Messages
-* Unigram
-* Bigram
-* Trigram
-* Confidence Score
+* Last Nodes
+* Message ID 
+* Source Language 
+* Sub Story
+* Total User Messages 
+* Translated Messages 
+* User ID
 
 > Note: If you apply filters on a column that is not selected the data will still be filtered.
 

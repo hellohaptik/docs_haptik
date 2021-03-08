@@ -6,7 +6,7 @@ title: Thread control
 
 Thread control is a way of assigning ownership of a chat conversation (a.k.a. "thread") to a chat tool capable of responding to a CEU.
 
-The thread control protocol allows for multiple ECTs to be able to answer a given chat form a CEU, in conjunction with one another and the Haptik internals: Smart Agent Chat (SAC) and the Intelligent Virtual Assistant (IVA).
+The thread control protocol allows for multiple ECTs to be able to respond to a given chat form a CEU, in conjunction with one another and the Haptik internal tools: Smart Agent Chat (SAC) and the Intelligent Virtual Assistant (IVA).
 
 The chat tool that has thread control at a given instance is the only chat tool allowed to respond to the CEU at at instance.
 
@@ -14,12 +14,12 @@ If another chat tool wishes to respond to the CEU, they must first be given thre
 
 # Why would you need TC / should you be using TC?
 
-Most of our clients use TRACT an Haptik IVA and an ECT configued. This typical use-case manages thread control implicitly and you do not need to manually trigger TC operations. 
+Most of our clients that use TRACT, utilise a Haptik IVA along with a single ECT. This typical use-case manages thread control implicitly and you do not need to manually trigger TC operations. 
 
-Explicit thread control is a feature relevant to you in the following use-cases:
+Explicit thread control features relevant to you in the following use-cases:
 
-- You are a client implementing >1 ECT in tandem.
-- You're using 1 ECT but using Smart Agent Chat alongside.
+- You are a client implementing more than one (>1) ECT in tandem.
+- You're using one (1) ECT but using Smart Agent Chat alongside.
 
 # Receivers
 
@@ -29,9 +29,9 @@ A receiver is one of the ECTs configured or one of the Haptik internal tools: SA
 
 You can use the `thread_control/listeners/` for this. Please refer to the detailed API documentation here.
 
-When you evaluate a response from this API, you will three different flags indicating three different kinds of receivers:
+When you evaluate a response from this API, you will encounter three different flags indicating three different kinds of receivers:
 
-- `is_default`: Default receivers
+- `is_default`: Default receiver
 - `is_primary`: Primary receivers
 - `active` : Active receiver
 
@@ -45,7 +45,7 @@ This is applicable for:
   - TC has been reset for said chat
   - said chat has been marked complete
 
-If an explicit ECT is configured as the default receiver, they are always given the TC in the above two cases.
+If an explicit receiver is configured as the default receiver, they are always given the TC in the above two cases. You can make either an ECT or one of the internal tools as the default receiver.
 
 If an explicit default receiver is not set, we use the following priority ladder to decide the default:
 
@@ -59,7 +59,7 @@ If an explicit default receiver is not set, we use the following priority ladder
 
 Currently we do not require all our ECTs to support TC operations beyond acknowledging a thread that is assigned to them.
 
-However, the internals SAC and IVA are capable of more advanced TC operations like requesting for thread control and taking away thread control.
+However, the internal tools, i.e. SAC and IVA, are capable of more advanced TC operations like requesting for thread control and taking away thread control.
 
 This section will be updated with details as we extend our interactions with ECTs to support more complex TC use cases.
 

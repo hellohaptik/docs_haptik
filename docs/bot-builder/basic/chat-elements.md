@@ -191,6 +191,8 @@ Forms should have minimum two fields or else it would not make sense to use form
 
 You can configure Forms by clicking on the `Add a chat element` link and then selecting **Form Builder**.
 
+> **Note**: You can create forms in multiple languages by adding the Form HSL under the appropriate language inside bot says.
+
 ![formbuilder](assets/bot-builder-chat-elements/formshsl1.png)
 
 After choosing Forms Builder as the chat element option you can set the **Form Title** and **Form Description**.

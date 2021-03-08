@@ -1,8 +1,8 @@
 ---
-title: Multilingual IVAs
+title: Multilingual Virtual Assistants
 ---
 
-A multilingual IVA i.e. a bot that can converse with users in multiple languages, can be a tremendous asset to any organization.
+A multilingual virtual assistant i.e. a bot that can converse with users in multiple languages, can be a tremendous asset to any organization. You can create these multilingual virtual assistants under the **Linguist Pro** plan.
 
 ## Why do we need a multilingual bot?
 
@@ -32,13 +32,13 @@ When user sends a message in a non-english language, our **Translation layer** h
 
 ## How to create multilingual bots?
 
-You would need to create an English bot to start with creation of multilingual bots. Below image sums up all the steps involved in taking a multilingual IVA live -
+To start with, you would need to create an English bot. Add the desired languages on the bot and provide bot responses in these respective languages.
 
-![Language16](assets/language2.png)
+Follow these steps to create an end to end multilingual virtual assistant:
 
-You can read through the defined steps below to understand the above image in more depth -
+### Step 1
 
-**Step 1** - Under Edit Bot, add languages of your wish from the drop down. You can add multiple languages at once. There is no restriction in adding any number of languages.
+Under Edit Bot, add languages of your wish from the drop down. You can add multiple languages at once. There is no restriction in adding any number of languages.
 
 ![Language1](assets/language3.png)
 
@@ -46,41 +46,45 @@ If you want a language not present in the list, get in touch with your Haptik SP
 
 > Default language of an IVA is English. If you want to make a language other than English as default language for the bot, you can use **initialize-language** configuration while integrating your bot on the website. You can read more about it [**here**](https://docs.haptik.ai/web-sdk/configuration-customisation#initialize-language).
 
-**Step 2** - Under a Node, provide **Bot Says** in the selected languages. 
+### Step 2
+
+Under a Node, provide **Bot Says** in the selected languages. 
 
 ![Language2](assets/language4.png)
 
 Bot Says in all the languages should be provided before hitting SAVE. Languages with empty Bot Says will have a **Red dot** on them for identification.
 
 ![Language3](assets/language5.png)
-  
-**Step 3** - Under entities, provide language specific responses and Final response. 
+
+> Bot Says is **NOT** auto translated in any language. You would need to provide Bot Says in all languages.
+
+### Step 3
+
+Under entities, provide language specific responses and Final response. 
 
 ![Language4](assets/language6.png)
 
 You can add language specific **Entity Reprompts** too.
 
 ![Language5](assets/language7.png)
-  
-**Step 4** - Provide language specific **Follow up messages** (If required).
 
-**Step 5** - On your Business, add the languages under General Settings. 
+### Step 4
 
-![Language6](assets/language8.png)
-
-> Make sure to add the same languages at both the bot and the business. 
-
-**Step 6** - On your Business, add the language specific Taskboxes and Bot Break Messages under Content Management.
+On your Business, add the language specific Taskboxes and Bot Break Messages under Content Management.
 
 ![Language7](assets/language9.png)
+
+> Languages chosen under **Edit Bot** section are also visible under **Business Manager - General Settings** section.
   
-**Step 7** - You can also add language specific SDK configurations (If required).
+### Step 5
+
+You can also add language specific SDK configurations (If required).
 
 ![Language8](assets/language10.png)
 
-    FAQ Nodes and Small talk are currently not supported in multilingual bots.
+> FAQ Nodes and Small talk are currently not supported in multilingual bots.
 
-### Glossary
+## Glossary
 
 For words which you need some specific translation values, you can use **Glossary** to improve the understanding of those domain specific terms and increase the overall accuracy. This can be done for all selected languages.
 
@@ -94,7 +98,7 @@ CSV Format -
 
 ![Language11](assets/language13.png)
 
-### Entity Support
+## Entity Support
 
 All types of entities are supported for multilingual bots, there is no restriction in its usage. 
 
@@ -102,13 +106,13 @@ There is no need to add dictionaries in multiple languages.
 
 You only need to add **Entity Reprompts** in all selected languages and if there are any domain specific words, they need to be added to the **Glossary**.
 
-### Testing multilingual bots
+## Testing multilingual bots
 
 You can use the same debugging window for testing multilingual bots. Both original and translated messages will be shown so that you can verify the cause of a particular node being selected. 
 
 ![Language12](assets/language16.png)
 
-### Changing the language explicitly or Whatsapp multilingual bots
+## Whatsapp multilingual bots
 
 When the user explicitly mentions **I want to switch to Hindi language**, you can use the **Language switching template** to handle it. You can find the template under the Generic category inside the template menu. You can open the template menu by clicking on the New from Template button on the LHS menu of the Conversation Studio graph builder.
 
@@ -122,20 +126,20 @@ The template comes with a in-built logic and flow to switch between 10 languages
 
 Users can initiate the language change flow by saying something similar to "I want to change my language". Post this, the bot presents the users with options of which language to switch to.
 
-### List of languages supported out of the box
+## List of languages supported out of the box
+
 **The SDK also supports the listed languages -**
 
+- English
 - Hindi
 - Marathi
 - Bengali
-- Oriya
-- Urdu
 - Gujarati
 - Tamil
 - Telugu
 - Kannada
 - Malayalam
-- Punjabi
+- Bahasa
 - French
 - Dutch
 - German

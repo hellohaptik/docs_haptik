@@ -4,7 +4,7 @@ title: Thread control
 
 > Note: Please refer to [actors](https://docs.haptik.ai/external-chat-tool/#actors) for the values of the abbreviations used.
 
-# What is thread control?
+## What is thread control?
 
 Thread control is a way of assigning ownership of a chat conversation (a.k.a. "thread") to a chat tool capable of responding to a CEU.
 
@@ -14,7 +14,7 @@ The chat tool that has thread control at a given instance is the only chat tool 
 
 If another chat tool wishes to respond to the CEU, they must first be given thread control via a thread control operation.
 
-# Why would you need TC / should you be using TC?
+## Why would you need TC / should you be using TC?
 
 Most of our clients that use TRACT, utilise a Haptik IVA along with a single ECT. This typical use-case manages thread control implicitly and you do not need to manually trigger TC operations. 
 
@@ -23,11 +23,11 @@ Explicit thread control features relevant to you in the following use-cases:
 - You are a client implementing more than one (>1) ECT in tandem.
 - You're using one (1) ECT but using Smart Agent Chat alongside.
 
-# Receivers
+## Receivers
 
 A receiver is one of the ECTs configured or one of the Haptik internal tools: SAC and IVA.
 
-## How do I see these receivers?
+### How do I see these receivers?
 
 You can use the `thread_control/listeners/` for this. Please refer to the detailed API documentation [here](https://docs.haptik.ai/external-chat-tool/thread-control-APIs#api-fetch-listeners).
 
@@ -37,7 +37,7 @@ When you evaluate a response from this API, you will encounter three different f
 - `is_primary`: Primary receivers
 - `active` : Active receiver
 
-## What is a default receiver?
+### What is a default receiver?
 
 For a given client, the default receiver configured gets control of the conversation when a CEU first sends a message.
 This is applicable for:
@@ -57,7 +57,7 @@ If an explicit default receiver is not set, we use the following priority ladder
 
 > If TRACT can neither find an explicitly set default, nor can it deduce one from the above rules, an exception is thrown.
 
-## What is a primary receiver?
+### What is a primary receiver?
 
 Currently we do not require all our ECTs to support TC operations beyond acknowledging a thread that is assigned to them.
 
@@ -67,11 +67,11 @@ This section will be updated with details as we extend our interactions with ECT
 
 >  Currently only the Haptik internal tools SAC and IVA are designated as primary receivers.
 
-## What is an active receiver?
+### What is an active receiver?
 
 This simply is the current thread owner, currently allowed to actively respond to the CEU.
 
-## What thread control operation can I perform?
+### What thread control operation can I perform?
 
 Unless negotiated otherwise, as an ECT **you can only pass thread control to one of the primary or the default receiver**.
 
@@ -84,7 +84,7 @@ Hence,
 
 To perform a thread control operation request please use the `thread_control/request` API. Please refer the detailed API documentation [here](https://docs.haptik.ai/external-chat-tool/thread-control-APIs#api-thread-management).
 
-## Summary table for receivers
+### Summary table for receivers
 
 | Type    | Can respond to CEU? | Can take thread control from others? | Can give thread control to others? | Gets first message from new CEU chat? | Who can this be? |
 | ------- | ------------------- | ------------------------------------ | ---------------------------------- | ------------------------------------- | ---------------- |
@@ -92,7 +92,7 @@ To perform a thread control operation request please use the `thread_control/req
 | Default | No                  | No                                   | No                                 | Yes                                   | Any tool         |
 | Active  | Yes                 | No                                   | Yes                                | No                                    | Any tool         |
 
-# How does this map to conversation states?
+## How does this map to conversation states?
 
 While the TC operations themselves are independent of the states of a chat, a few TC operations currently trigger state changes automatically.
 

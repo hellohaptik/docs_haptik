@@ -2,6 +2,8 @@
 title: Thread control
 ---
 
+> Note: Please refer to [actors](https://docs.haptik.ai/external-chat-tool/#actors) for the values of the abbreviations used.
+
 # What is thread control?
 
 Thread control is a way of assigning ownership of a chat conversation (a.k.a. "thread") to a chat tool capable of responding to a CEU.
@@ -27,7 +29,7 @@ A receiver is one of the ECTs configured or one of the Haptik internal tools: SA
 
 ## How do I see these receivers?
 
-You can use the `thread_control/listeners/` for this. Please refer to the detailed API documentation here.
+You can use the `thread_control/listeners/` for this. Please refer to the detailed API documentation [here](https://docs.haptik.ai/external-chat-tool/thread-control-APIs#api-fetch-listeners).
 
 When you evaluate a response from this API, you will encounter three different flags indicating three different kinds of receivers:
 
@@ -80,7 +82,7 @@ Hence,
 
 > TRACT only allows TC operations from the active or primary receivers as of now.
 
-To perform a thread control operation request please use the `thread_control/request` API. Please refer the detailed API documentation here.
+To perform a thread control operation request please use the `thread_control/request` API. Please refer the detailed API documentation [here](https://docs.haptik.ai/external-chat-tool/thread-control-APIs#api-thread-management).
 
 ## Summary table for receivers
 

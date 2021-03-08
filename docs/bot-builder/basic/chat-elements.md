@@ -193,6 +193,8 @@ You can configure Forms by clicking on the `Add a chat element` link and then se
 
 ![formbuilder](assets/bot-builder-chat-elements/formshsl1.png)
 
+> You can create forms in multiple languages by adding the Form HSL under the appropriate language inside Bot Says.
+
 After choosing Forms Builder as the chat element option you can set the **Form Title** and **Form Description**.
 
 1. **Form Title**: This field should convey the action needed from the user. For example, if you are making a form to take delivery address, **Form Title** can be *Please help me with your Delivery address*. Also, it is an optional field.

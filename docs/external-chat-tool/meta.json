@@ -3,6 +3,7 @@
         "Getting Started": [
             "index",
             "security",
+            "thread control",
             "appendix"
         ],
         "Integration APIs": [

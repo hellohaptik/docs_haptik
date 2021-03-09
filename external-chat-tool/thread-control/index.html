@@ -1,0 +1,184 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Thread control (TC) · Haptik Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&gt; Note: Please refer to [actors](https://docs.haptik.ai/external-chat-tool/#actors) for the values of the abbreviations used."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Thread control (TC) · Haptik Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.haptik.ai/"/><meta property="og:description" content="&gt; Note: Please refer to [actors](https://docs.haptik.ai/external-chat-tool/#actors) for the values of the abbreviations used."/><meta property="og:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="robots" content="noindex"/><link rel="shortcut icon" href="/img/image_0.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-106563119-6', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="/js/index.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/image_0.png" alt="Haptik Docs"/><h2 class="headerTitleWithLogo">Haptik Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="/#tools" target="_self">Tools</a></li><li class=""><a href="/#integrations" target="_self">Integrations</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Getting Started</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started</h3><ul class=""><li class="navListItem"><a class="navItem" href="/external-chat-tool/">Index</a></li><li class="navListItem"><a class="navItem" href="/external-chat-tool/security">Signing management requests</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/external-chat-tool/thread-control">Thread control (TC)</a></li><li class="navListItem"><a class="navItem" href="/external-chat-tool/appendix">Appendix</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Integration APIs</h3><ul class=""><li class="navListItem"><a class="navItem" href="/external-chat-tool/management-APIs">Management APIs</a></li><li class="navListItem"><a class="navItem" href="/external-chat-tool/user-APIs">User APIs</a></li><li class="navListItem"><a class="navItem" href="/external-chat-tool/message-APIs">Message APIs</a></li><li class="navListItem"><a class="navItem" href="/external-chat-tool/event-APIs">Event APIs</a></li><li class="navListItem"><a class="navItem" href="/external-chat-tool/thread-control-APIs">Thread control APIs</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Thread control (TC)</h1></header><article><div><span><blockquote>
+<p>Note: Please refer to <a href="https://docs.haptik.ai/external-chat-tool/#actors">actors</a> for the values of the abbreviations used.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="what-is-thread-control"></a><a href="#what-is-thread-control" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What is thread control?</h2>
+<p>Thread control is a way of assigning ownership of a chat conversation (a.k.a. &quot;thread&quot;) to a chat tool capable of
+responding to a CEU.</p>
+<p>The thread control protocol allows for multiple ECTs to be able to respond to a given chat form a CEU, in conjunction
+with one another and the Haptik internal tools: Smart Agent Chat (SAC) and the Intelligent Virtual Assistant (IVA).</p>
+<p>The chat tool that has thread control at a given instance is the only chat tool allowed to respond to the CEU at that
+time.</p>
+<p>If another chat tool wishes to respond to the CEU, they must first be given thread control via a thread control
+operation.</p>
+<h2><a class="anchor" aria-hidden="true" id="why-would-you-need-tc--should-you-be-using-tc"></a><a href="#why-would-you-need-tc--should-you-be-using-tc" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Why would you need TC / should you be using TC?</h2>
+<p>Most of our clients that use TRACT, utilise a Haptik IVA along with a single ECT. This typical use-case manages thread
+control implicitly, and you do not need to manually trigger TC operations.</p>
+<p>Explicit thread control features are relevant to you in the following use-cases:</p>
+<ul>
+<li>You are a client implementing more than one (&gt;1) ECT in tandem.</li>
+<li>You're using one (1) ECT but using Smart Agent Chat alongside.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="receivers"></a><a href="#receivers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Receivers</h2>
+<p>A receiver is one of the ECTs configured or one of the Haptik internal tools: SAC and IVA.</p>
+<h3><a class="anchor" aria-hidden="true" id="how-do-i-see-these-receivers"></a><a href="#how-do-i-see-these-receivers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How do I see these receivers?</h3>
+<p>You can use the <code>thread_control/listeners/</code> for this. Please refer to the detailed API
+documentation <a href="https://docs.haptik.ai/external-chat-tool/thread-control-APIs#api-fetch-listeners">here</a>.</p>
+<p>When you evaluate a response from this API, you will encounter three different flags indicating three different kinds of
+receivers:</p>
+<ul>
+<li><code>is_default</code>: Default receiver</li>
+<li><code>is_primary</code>: Primary receivers</li>
+<li><code>active</code>: Active receiver</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="what-is-a-default-receiver"></a><a href="#what-is-a-default-receiver" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What is a default receiver?</h3>
+<p>For a given client, the default receiver configured gets control of the chat when a CEU first sends a message.
+This is applicable for:</p>
+<ul>
+<li>a new user's chat</li>
+<li>a chat for an old user, once either of the following has taken place
+<ul>
+<li>TC has been reset for that chat</li>
+<li>That chat has been marked complete</li>
+</ul></li>
+</ul>
+<p>If an explicit receiver is configured as the default receiver, they are always given the TC in the above two cases. You
+can make either an ECT or one of the internal tools as the default receiver.</p>
+<p>If an explicit default receiver is not set, we use the following priority ladder to decide the default:</p>
+<ul>
+<li>If an IVA is configured for this client, the IVA is made default.</li>
+<li>If an IVA is not configured but SAC is enabled, the SAC is made default.</li>
+<li>If neither of IVA and SAC are configured, but only one ECT is configured, said ECT is made default.</li>
+</ul>
+<blockquote>
+<p>If TRACT can neither find an explicitly set default, nor can it deduce one from the above rules, an exception is thrown.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="what-is-a-primary-receiver"></a><a href="#what-is-a-primary-receiver" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What is a primary receiver?</h3>
+<p>Currently, we do not require all our ECTs to support TC operations beyond acknowledging a thread that is assigned to
+them.</p>
+<p>However, the internal tools, i.e. SAC and IVA, are capable of more advanced TC operations like requesting for thread
+control and taking away thread control.</p>
+<p>This section will be updated with details as we extend our interactions with ECTs to support more complex TC use cases.</p>
+<blockquote>
+<p>Currently, only the Haptik internal tools SAC and IVA are designated as primary receivers.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="what-is-an-active-receiver"></a><a href="#what-is-an-active-receiver" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What is an active receiver?</h3>
+<p>This simply is the current thread owner, currently allowed to actively respond to the CEU.</p>
+<h3><a class="anchor" aria-hidden="true" id="what-thread-control-operation-can-i-perform"></a><a href="#what-thread-control-operation-can-i-perform" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What thread control operation can I perform?</h3>
+<p>Unless negotiated otherwise, as an ECT <strong>you can only pass thread control to one of the primary or the default
+receiver</strong>.</p>
+<p>Hence,</p>
+<ul>
+<li>Requesting of thread control is currently not supported.</li>
+<li>Taking thread control is currently not supported, unless you are a primary receiver.</li>
+</ul>
+<blockquote>
+<p>TRACT only allows TC operations from the active or primary receivers as of now.</p>
+</blockquote>
+<p>To perform a thread control operation request please use the <code>thread_control/request</code> API. Please refer the detailed API
+documentation <a href="https://docs.haptik.ai/external-chat-tool/thread-control-APIs#api-thread-management">here</a>.</p>
+<h3><a class="anchor" aria-hidden="true" id="summary-table-for-receivers"></a><a href="#summary-table-for-receivers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Summary table for receivers</h3>
+<table>
+<thead>
+<tr><th>Type</th><th>Can respond to CEU?</th><th>Can take thread control from others?</th><th>Can give thread control to others?</th><th>Gets first message from new CEU chat</th><th>Who can this be?</th></tr>
+</thead>
+<tbody>
+<tr><td>Primary</td><td>No</td><td>Yes</td><td>Yes</td><td>No</td><td>SAC/IVA</td></tr>
+<tr><td>Default</td><td>No</td><td>No</td><td>No</td><td>Yes</td><td>Any tool</td></tr>
+<tr><td>Active</td><td>Yes</td><td>No</td><td>Yes</td><td>No</td><td>Any tool</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="how-does-this-map-to-chat-states"></a><a href="#how-does-this-map-to-chat-states" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How does this map to chat states?</h2>
+<p>While the TC operations themselves are independent of the states of a chat, a few TC operations currently trigger state
+changes automatically.</p>
+<table>
+<thead>
+<tr><th>TC operation</th><th>State change</th><th>Explanation</th></tr>
+</thead>
+<tbody>
+<tr><td>Transfer to IVA</td><td>Chat Completed</td><td>For the IVA to be able to respond properly to the user's next message, we mark the current conversation complete.</td></tr>
+</tbody>
+</table>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 3/9/2021</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/external-chat-tool/security"><span class="arrow-prev">← </span><span>Signing management requests</span></a><a class="docs-next button" href="/external-chat-tool/appendix"><span>Appendix</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#what-is-thread-control">What is thread control?</a></li><li><a href="#why-would-you-need-tc--should-you-be-using-tc">Why would you need TC / should you be using TC?</a></li><li><a href="#receivers">Receivers</a><ul class="toc-headings"><li><a href="#how-do-i-see-these-receivers">How do I see these receivers?</a></li><li><a href="#what-is-a-default-receiver">What is a default receiver?</a></li><li><a href="#what-is-a-primary-receiver">What is a primary receiver?</a></li><li><a href="#what-is-an-active-receiver">What is an active receiver?</a></li><li><a href="#what-thread-control-operation-can-i-perform">What thread control operation can I perform?</a></li><li><a href="#summary-table-for-receivers">Summary table for receivers</a></li></ul></li><li><a href="#how-does-this-map-to-chat-states">How does this map to chat states?</a></li></ul></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Conversation Studio</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Smart Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Intelligent Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://docs.haptik.ai/ios-sdk/" class="footer-column-link">iOS SDK</a><a href="https://docs.haptik.ai/android-sdk/" class="footer-column-link">Android SDK</a><a href="https://docs.haptik.ai/web-sdk/" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/whatsapp/" class="footer-column-link">WhatsApp</a><a href="https://docs.haptik.ai/other/facebook" class="footer-column-link">Facebook</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Bot API</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Agent Chat Tool</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2021 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '224c7079e67e84a978d8b4621f6af16d',
+                indexName: 'haptik',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

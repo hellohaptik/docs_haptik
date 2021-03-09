@@ -135,7 +135,7 @@ module.exports = () => (
           ctaLink: '/other/facebook',
         },
         {
-          title: 'Google Business Manager',
+          title: 'Google Business Messages',
           description:
             'Documentation to help you build conversational experiences on Google Business Manager',
           ctaText: 'Get Started',

@@ -1,0 +1,12 @@
+{
+    "sidebar": {
+        "Getting Started": [
+            "index"
+        ],
+        "Implementation of IVA": [
+        	"on-cs",
+          "deploy-gbm"
+        ]
+    }
+}
+

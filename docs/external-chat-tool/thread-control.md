@@ -1,5 +1,5 @@
 ---
-title: Thread control
+title: Thread control (TC)
 ---
 
 > Note: Please refer to [actors](https://docs.haptik.ai/external-chat-tool/#actors) for the values of the abbreviations used.
@@ -23,7 +23,7 @@ operation.
 Most of our clients that use TRACT, utilise a Haptik IVA along with a single ECT. This typical use-case manages thread
 control implicitly, and you do not need to manually trigger TC operations.
 
-Explicit thread control features relevant to you in the following use-cases:
+Explicit thread control features are relevant to you in the following use-cases:
 
 - You are a client implementing more than one (>1) ECT in tandem.
 - You're using one (1) ECT but using Smart Agent Chat alongside.
@@ -46,11 +46,11 @@ receivers:
 
 ### What is a default receiver?
 
-For a given client, the default receiver configured gets control of the conversation when a CEU first sends a message.
+For a given client, the default receiver configured gets control of the chat when a CEU first sends a message.
 This is applicable for:
 
 - a new user's chat
-- a chat for an old user once either of the following has taken place
+- a chat for an old user, once either of the following has taken place
     - TC has been reset for that chat
     - That chat has been marked complete
 
@@ -89,7 +89,7 @@ receiver**.
 Hence,
 
 - Requesting of thread control is currently not supported.
-- Taking thread control is currently not supported, unless you are a primary.
+- Taking thread control is currently not supported, unless you are a primary receiver.
 
 > TRACT only allows TC operations from the active or primary receivers as of now.
 
@@ -98,13 +98,13 @@ documentation [here](https://docs.haptik.ai/external-chat-tool/thread-control-AP
 
 ### Summary table for receivers
 
-| Type    | Can respond to CEU? | Can take thread control from others? | Can give thread control to others? | Gets first message from new CEU chat? | Who can this be? |
+| Type    | Can respond to CEU? | Can take thread control from others? | Can give thread control to others? | Gets first message from new CEU chat | Who can this be? |
 | ------- | ------------------- | ------------------------------------ | ---------------------------------- | ------------------------------------- | ---------------- |
 | Primary | No                  | Yes                                  | Yes                                | No                                    | SAC/IVA          |
 | Default | No                  | No                                   | No                                 | Yes                                   | Any tool         |
 | Active  | Yes                 | No                                   | Yes                                | No                                    | Any tool         |
 
-## How does this map to conversation states?
+## How does this map to chat states?
 
 While the TC operations themselves are independent of the states of a chat, a few TC operations currently trigger state
 changes automatically.

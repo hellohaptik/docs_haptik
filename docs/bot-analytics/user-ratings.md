@@ -12,10 +12,6 @@ Based on the configuration made by the bot developers, a bot might ask for feedb
 
 > **Tip**: The configuration to take user feedback can be made from the `General Settings` tab of the `Business Manager` section in the bot builder tool.
 
-You can filter the ratings based on Channels or Bots and for any date range from the top navigation bar.
-
-![filters](assets/user-ratings-navigation.png)
-
 ## ***Overall Channel Rating***
 
 At the top of the User Ratings page you have the Overall Channel Rating. The Overall Channel Rating gives you a high level view of how your bot was rated overall.

@@ -3,9 +3,10 @@ title: User Ratings
 ---
 
 ## What are User Ratings?
-The User Ratings page of the Intelligent Analytics tool provides information about the ratings given by a user for a bot. 
 
-![menu_user_rating](assets/userrating.png)
+The User Ratings page of the Intelligent Analytics tool provides information about the ratings given by a user for a bot and agents(if present). 
+
+![menu_user_rating](assets/userratingmainpage.png)
 
 Based on the configuration made by the bot developers, a bot might ask for feedback from user at the end of a chat. The feedback it captures involves a star rating out of 5 and a free form text review or comment. 
 
@@ -16,22 +17,32 @@ You can filter the ratings based on Channels or Bots and for any date range from
 ![filters](assets/user-ratings-navigation.png)
 
 ## ***Overall Channel Rating***
+
 At the top of the User Ratings page you have the Overall Channel Rating. The Overall Channel Rating gives you a high level view of how your bot was rated overall.
 
-In the left corner of this section you can see the average star rating provided by all users and also how many total feedbacks and comments were given.
+In the left corner of this section you can see the average star rating provided by all users. Next to it you can see the total number of people that have given a particular number of stars. For example you can see how many users gave 5 stars, how many gave 4 stars and so on. You can find both the percentage and absolute number of users for any feedback. 
 
-Next to it you can see the total number of people that have given a particular number of stars. For example you can see how many users gave 5 stars, how many gave 4 stars and so on. You can find both the percentage and absolute number of users for any feedback. 
+![Overall Channel Rating](assets/overall-ratings.png)
 
-![Overall Channel Rating](assets/user-ratings-overall-ratings.png)
+There are two options of emailing feedback report here.
 
-If the user provided any comments in feedback those can be viewed by clicking on the link shown with a chat icon. Even these comments are categorized based on the number of stars a user provided before giving the comment. This helps give some context about the comment.
+### Message Feedback Report
 
-### Reviews
-Once you click on the reviews link, it opens a new page with list of all comments provided by users for a given star rating.
+There is an option to collect feedback on every message sent by the bot for free form queries. You can enable the settings for **per message feedback** on **Business Manager**. 
 
-![Reviews Page](assets/user-ratings-reviews.png)
+On Intelligent Analytics tool, you can email this feedback report by clicking on this button on User Ratings screen. 
 
-You can see list of comments provided, the task for which the user has given the feedback and also a link to view the complete chat.
+![Email_Message_Feedback_Report](assets/emailmessagefeedback.png)
+
+### User Ratings Report
+
+To differentiate ratings received by the bot and agents(if present), you can email this User Ratings report by clicking on the button highlighted on the below image and you will receive a password protected CSV report over email. 
+
+![Email_User_Ratings_Report](assets/emailuserratings.png)
+
+The CSV report has a dedicated column **Rating Given To** to specify who received this rating - Bot or Agent.
+
+![User_Ratings_Report](assets/agent_bot_ratings.png)
 
 ## ***Rating Trends***
 Below the Overall Chat Ratings you have the Rating trends where you can see how the user ratings varied over time.

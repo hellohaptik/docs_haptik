@@ -22,17 +22,78 @@ Entities which you find in your search results are called as **public** or **sys
 
 These are the most common public entities -
 
-    'flight_arrival_city', 'phone_number', 'location', 'product_id', 
-    'completion_phone_number', 'flight_seat_number', 'utils_city', 
-    'product_type', 'device_name', 'person_name', 'departure_date', 
-    'phone_number_without_validation', 'product_name', 'completion_city', 
-    'completion_email', 'flight_departure_city', 'arrival_date', 'user_name', 
-    'origin_lat', 'origin_lng', 'date_of_birth', 'date', 'pincode', 
-    'color', 'age', 'otp_four_digit', 'time', 'time_with_range', 
-    'completion_location', 'email', 'profession', 'age_range', 'pan_card', 
-    'feedback_request', 'website_company_name_regex', 'feedback_regex', 
-    'nps_feedback_range', 'feedback_thumbs', 'url_capturer', 
-    'disambiguation_negation', 'disambiguation_choice', 'international_phone_number'
+<table>
+    <tr>
+        <td>flight_arrival_city</td>
+        <td>phone_number</td>
+        <td>location</td>
+        <td>product_id</td>
+    </tr>
+        <tr>
+        <td>flight_seat_number</td>
+        <td>utils_city</td>
+        <td>product_type</td>
+        <td>device_name</td>
+    </tr>
+        <tr>
+        <td>departure_date</td>
+        <td>phone_number_without_validation</td>
+        <td>product_name</td>
+        <td>date</td>
+    </tr>
+        <tr>
+        <td>completion_email</td>
+        <td>flight_departure_city</td>
+        <td>arrival_date</td>
+        <td>date_of_birth</td>
+    </tr>
+    <tr>
+        <td>origin_lat</td>
+        <td>origin_lng</td>
+        <td>date</td>
+        <td>pincode</td>
+    </tr>
+        <tr>
+        <td>age</td>
+        <td>otp_four_digit</td>
+        <td>time</td>
+        <td>time_with_range</td>
+    </tr>
+    <tr>
+        <td>email</td>
+        <td>profession</td>
+        <td>age_range</td>
+        <td>pan_card</td>
+    </tr>
+    <tr>
+        <td>website_company_name_regex</td>
+        <td>feedback_regex</td>
+        <td>nps_feedback_range</td>
+        <td>feedback_thumbs</td>
+    </tr>
+    <tr>
+        <td>disambiguation_negation</td>
+        <td>disambiguation_choice</td>
+        <td>international_phone_number</td>
+        <td>completion_phone_number</td>
+    </tr>
+    <tr>
+        <td>person_name</td>
+        <td>url_capturer</td>
+        <td>feedback_request</td>
+        <td>completion_location</td>
+    </tr>
+    <tr>
+        <td>color</td>
+        <td>user_name</td>
+        <td>completion_city</td>
+    </tr>
+    </table>
+
+**Using public entity on bot**
+- The value stored in public entity are retained for 3 hours.
+- We cannot change **Advanced Settings** of public entities.
+- To add public entity on the bot, simply search for the above mentioned entity name and then click on **Add to Bot Says**.
     
 ## How to create a new entity?
 

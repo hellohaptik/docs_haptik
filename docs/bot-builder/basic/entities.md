@@ -700,6 +700,8 @@ Step 2: Add an entity **bot_flush_exception_list** on the start node where you w
 
 - Adding the entity flusher on nodes which have other mandatory entities will clear those as well. 
 
+> Entity Flusher does not flush system (public) entities like person_name, completion_phone_number, etc.
+
 ## Language Support for Different Entities
 
 <table>

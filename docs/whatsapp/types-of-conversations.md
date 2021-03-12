@@ -49,5 +49,49 @@ Finally when the business wants to send a template message they make an API requ
 
 The whatsapp server instance then sends the message template to the user.
 
+### Supported Media formats on WhatsApp
 
+<table>
+  <th>Media</th>
+  <th>Content Type</th>
+    <tr>
+        <td>Document</td>
+        <td>Any valid MIME type</td>
+    </tr>
+    <tr>
+        <td>Image</td>
+        <td>.jpeg, .png</td>
+    </tr>
+    <tr>
+        <td>Audio</td>
+        <td>acc, mp3, mpeg, mpr, </td>
+    </tr>
+    <tr>
+        <td>Video</td>
+        <td>mp4, 3gpp</td>
+    </tr>
+  </table>
 
+**You can send files in any of these formats using the file attachment HSL below**
+
+```JavaScript
+{
+    "text": "<SOME_MESSAGE>",
+    "type": "BUTTON",
+    "data": {
+        "items": [
+            {
+                "actionable_text": "Download Here",
+                "location_required": false,
+                "is_default": 0,
+                "uri": "LINK",
+                "type": "APP_ACTION",
+                "payload": {
+                    "gogo_message": "",
+                    "url": "<link>"
+                }
+            }
+        ]
+    } 
+  }
+  ```

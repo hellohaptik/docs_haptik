@@ -21,83 +21,179 @@ You can open the code editor by choosing a Code Node and then clicking on the `O
 
 The only requirement for using the code editor is, the code should follow the below format. The supported programming language is Python 3 and above.
 
-If any syntax errors or exceptions are raised by the main function, this will result in a Bot Break message.
+If any syntax errors or exceptions are raised by the main function, this will result in a **Bot Break message**.
 
 ```python
 import  json
 
 def main(event, context):
     """
-    event['body'] is a string dict with the following keys:
-    node, event, user, entities.
-
-    Currently, we pass user_id, user_name, full_name, device_platform and language_code in the user dictionary.
-
-    Args:
-        event (dict): Data corresponding to this event
-        context
-
-    Returns
-        (dict): response with statusCode and the response for the User
-    """
+   event['body'] is a string dict with the following keys:
+   node, event, user, entities.
+   Currently, we pass user_id, user_name, full_name, device_platform and language_code in the user dictionary.
+   Args:
+       event (dict): Data corresponding to this event
+       context
+   Returns
+       (dict): response with statusCode and the response for the User
+   """
     body = json.loads(event['body'])
-    entities = body['entities']
-    user_data = body['user']
-    
-    # This is how entities are used in code editor
-    # entities = body.get('entities')
-    # person_name = entities['user_name_insurance'][0]['entity_value']['value']
-    # phone_number = entities['completion_phone_number'][0]['entity_value']
-    
-    # "custom_data" that is passed through SDK's during sign up can be accessed from body['user_details'].
-    user_details = body['user_details']
-    conversation_details = body['conversation_details']
-    final_response = {'status': True, 'response': write_here(), 'user_details':user_details, 'conversation_details':conversation_details}
+    entities = body.get('entities')
+    user_data = body.get('user')
+    conversation_details = body.get('conversation_details')
+    final_response = {
+        'status': True, 
+        'entities':entities, 
+        'user_full_name': user_data.get("full_name"),
+        'user_device_platform': user_data.get("device_platform"),
+        'conversation_details':conversation_details
+    }
     response = {'statusCode': 200, 'body': json.dumps(final_response), 'headers': {'Content-Type': 'application/json'}}
     return response
-
-def write_here(*args):
-    """
-   WRITE YOUR CODE HERE and update the final_response dict
-   """
-    # hsl_list = ['Hello', {}]
-    button_hsl = {
-        "text": "SHOW POLICY DETAILS; PLC",
-        "type": "BUTTON",
-        "data": {
-            "items": [
-                {
-                    "actionable_text": "Policy #1",
-                    "location_required": False,
-                    "is_default": 0,
-                    "uri": "LAUNCH_CHANNEL",
-                    "type": "TEXT_ONLY",
-                    "payload": {
-                        "gogo_message": "",
-                        "message": "I want to check my policy"
-                    }
-                },
-                {
-                    "actionable_text": "View Details",
-                    "location_required": False,
-                    "is_default": 0,
-                    "uri": "LINK",
-                    "type": "APP_ACTION",
-                    "payload": {
-                        "url": "XYZ.COM",
-                        "gogo_message": ""
-                    }
-                }
-            ]
-        },
-        "isNew": False
-    }
-    return [json.dumps(button_hsl)]
-
 ```
-When we run the code successfully, we get a program output in JSON format, like this
+
+### Using Entities on Code Editor
+
+The information which is collected from users on the Static Node, in the form of entity, can be used on Code Node. You can use the entities to send the dynamic values collected from uses on the IVA and send them to the API to fetch real-time data. 
+
+The connection is automatic from Static Node to Code Node i.e. whenever user provides all the mandatory entity values, the following Code Node gets triggered.
+Inorder to use these entity values in the Code Node, we have to create a new variables.
+
+Let's take an example of order id to understand how to use entity value on Code Node - 
+
+You have a `regex` entity with the pattern `^[a-z]{3}\d{3}$`, this entity will accept values such as `abc123`.
+
+There is a standard JSON format in which the values are stored within an entity. To understand this format, open the **Detailed Info** tab on the **logs** sections besides the entity value which was provided to the IVA. This is found on the Test Bot as shown below - 
+
+![entity_on_logs](assets/entity-log.png)
+
+So the order_id is stored within the entities, under the entity name `order_id_demotrain`. The actual `value` is stored under `entity_value`. On Code Node, you can fetch the `value` in this format - 
+
+```python
+order_id = entities.get("order_id_demotrain")[0].get("entity_value").get('value')
+```
+> The above example is using a regex type entity. The format in which entity is stored changes for every type of entity. Please check the Debug log section to know the format in which the entity is stored to use them on Code Node.
+
+### Sending entity values to API to fetch data
+
+Once the entity value is stored in a variable on the Code Node, you can use this variable to send this to the API and fetch the real-time data. You can send this variable as a payload to the API endpoint.
+
+The following is a sample code for fetching order details - 
+
+```python
+def get_order_details(env_variables, order_id):
+    url = "<API_ENDPOINT>"
+    payload = {
+        "order_id": order_id.upper()
+    }
+    headers = {
+      'Content-Type': 'application/json'
+    }
+    try:
+        response = requests.request(
+            "POST",
+            url,
+            headers=headers,
+            data = json.dumps(payload),
+            timeout=7
+            )
+    except requests.exceptions.Timeout as errt:
+        print("Timeout Error:", errt)
+        error = "Timeout Error"
+        response = generate_response(error)
+        return response
+    except Exception as err:
+        print("Oops: Something Else", err)
+        error = "Api Failure"
+        response = generate_response(error)
+        return response
+   
+    if response.status_code == 200:
+        order_details = json.loads(response.text)
+        order_details = order_details.get('results', {})
+        return order_details
+    else:
+        print("API FAILED. STATUS CODE: ", response.status_code, response.text)
+        error = "Api Failure"
+        response = generate_response(error)
+        return response
+ ```
+
+### Create HSLs in Code Editor
+You can use HSL message(Chat Elements) to display different elements on the bot, such as carousels and buttons. To display HSLs using code node, we first have to copy the HSL from any static node, with the required elements such as a button. The procedure to copy an HSL is mentioned [here](https://docs.haptik.ai/bot-builder/basic/copypaste#how-to-copy-and-paste-the-hsls).
+
+![Opening Code Editor](assets/api10.png)
+
+Change the True and False flags according to Python conventions as shown below
+
+![Opening Code Editor](assets/api11.png)
+
+The variables can be used to show information to the user as well - 
+
+![Opening Code Editor](assets/api12.png)
+
+Here, we have created a button HSL to display the message “Your email is <email>” and a button which redirects to Haptik’s website. When the code is executed on the IVA, it appears as follows,
+
+![Opening Code Editor](assets/api13.png)
+
+### Providing Sample input data in JSON
+
+The Code Editor is an integrated environment where you can write the code and also run it. In the bottom part of the page there is a _Sample input data (JSON)_ section where you can provide the enitity values which you are expecting from the user.
+
+![sample_input](assets/sample-input.png)
+
+### Using final_response
+
+The format or values which the code will return depends on `final_response` present in `def main(event, context)`.
+
+The default `final_response` is as follows - 
+
+```python
+final_response = {
+        'status': True, 
+        'entities':entities, 
+        'user_full_name': user_data.get("full_name"),
+        'user_device_platform': user_data.get("device_platform"),
+        'conversation_details':conversation_details
+    }
+    response = {'statusCode': 200, 'body': json.dumps(final_response), 'headers': {'Content-Type': 'application/json'}}
+    return response
+```
+The main method returns `response`. In `response` we dump the `final_response` in JSON format.
+The `final_reponse` is the JSON key-value pair which gets executed everytime the code runs. The output which you will receive upon running this code will be in the same format as defined in the `final_response`.
+
+On `final_response` -
+- You can call any method defined on the code editor.
+- You can call any variable name declared on the code editor.
+
+A sample `final_response` - 
+
+```JavaScript
+    final_response = {
+    'status': status,
+    'hsl': hsl,
+    'channel': channel,
+    'name': name,
+    'query':get_query(entities),
+    'message': message,
+    'email': email,
+    'ps_date': date,
+    'ps_time': time,
+    'tool': tool_name,
+    'issue_type': issue_type,
+    'description': description,
+    'env': issue_faced_at,
+    'issue_key': issue_key,
+    'issue_link': issue_link,
+    'conversation_details': conversation_details
+    }
+```
+After defining the `final_response` and providing the _Sample input data (JSON)_, you can **Run** the code.
+When the code is executed successfully, you get a program output in JSON format. This format is same as `final_response`.
 
 ![Opening Code Editor](assets/api6.png)
+
+> To know more about live testing of your code, click [**here**](https://docs.haptik.ai/bot-builder/integrations/integrating-custom-code#live-testing-your-code)
 
 This output format needs to be added as a Sample Output JSON Format on Code Node as well to create a connection between Code Node and Output Node. 
 
@@ -140,23 +236,6 @@ rsa-4.0
 six-1.12.0 
 unicodecsv-0.14.1 
 urllib3-1.25.3
-
-## Create HSLs in Code Editor
-You can use HSL message(Bot Says Element) to display different elements on the bot, such as carousels and buttons. To display HSLs using code node, we first have to copy the HSL from any static node, with the required elements such as a button. The procedure to copy an HSL is mentioned [here](https://docs.haptik.ai/bot-builder/basic/copypaste#how-to-copy-and-paste-the-hsls).
-
-![Opening Code Editor](assets/api10.png)
-
-Change the True and False flags according to Python conventions as shown below
-
-![Opening Code Editor](assets/api11.png)
-
-Once you create a variable to store the entity information, we can use it in the HSL as follows
-
-![Opening Code Editor](assets/api12.png)
-
-Here, we have created a button HSL to display the message “Your email is <email>” and a button which redirects to Haptik’s website. When the code is executed on the IVA, it appears as follows,
-
-![Opening Code Editor](assets/api13.png)
 
 ## Using Environment Variables
 You can set environment variables for the code executor to store values like database username and passwords that you don't want to expose inside the code.
@@ -276,6 +355,16 @@ When we test the code on the bot, logs are created every time a code node is exe
 When we click on View Logs button, it will open a screen where we can check all the logs when the code node was executed. This information is retained for the day. The following is the image of sample logs.
 
 ![Opening Code Editor](assets/viewlogs.png)
+
+## Using Output Node to display Output
+
+One Code Node can be connected to multiple Output Nodes. Depending on the conditions provided while making a connection, the Output Node gets triggered. To know more about conditions to connect Code Node to Output Node, click [**here**](https://docs.haptik.ai/bot-builder/basic/connections#code-node-to-output-node-connection-transition).
+
+You can directly use the variables defined in the _Sample Output JSON format_ to show bot responses on the Output Node as shown below - 
+
+![outputhsl](assests/outputhsl.png)
+
+> **Use Raw Text/JSON HSL to use variables**
 
 ## Pre-Transfer
 `Train Bot` prepares the code for production. Hence, you should make sure to call `Train Bot` if there are any changes in the custom code integration before transferring the bot to production.

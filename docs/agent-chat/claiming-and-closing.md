@@ -37,13 +37,14 @@ The priority value and presence in ‘Team Queue’ or individual ‘Agent queue
   - **If the bot breaks and human assistance is disabled for business** then the bot break message as defined on [Business Manager](https://docs.haptik.ai/bot-builder/basic/business) is sent as a response on the bot.
   - **If no bot present and human assistance is enabled for business** then the conversation is directly assigned to the default team.
 - Returning User: The user has started a new conversation, and there are previous conversations.
-  - If a bot is present
-    - Conversations starts with the bot.
-    - No relation with the agent of the previous conversation.
-  - If no bot present
-    - If the agent to whom this user spoke to earlier is currently online, we assign this conversation to the same agent.
-    - If the agent to whom this user spoke to earlier is currently offline, we clear the relation between this user and agent, and allocate the chat to the next available agent.
-
+  - For Bot or Bot + Agent solutions
+    - Conversations always starts with the bot.
+  - For Agent Only solutions
+    - If the agent to whom this user spoke to earlier is currently online
+      - if team is not exclusively provided, we assign to same agent
+      - if team is exclusively provided and agent belongs to team, we assign to same agent
+      - if team is exclusively provided and agent does not belong to the team, we assign to team, and decouple the relation between this agent and user
+    - If the agent to whom this user spoke to earlier is currently offline, we clear the relation between this user and agent, and allocate the chat to the next available team/agent as specified or default team.
 > When an agent logs out, we clear the relation between this agent and all users he/she might have interacted with earlier.
 
 Apart from the above, one can choose between the two **Chat Assignment Algorithms** on Smart Agent Chat, you can read more about it [here](https://docs.haptik.ai/agent-chat/chat-assignment).

@@ -90,8 +90,8 @@ These are the most common public entities -
     </tr>
     </table>
 
-**Using public entity on bot**
-- The value stored in public entity are retained for 3 hours.
+**Using Public Entities on bot**
+- The value stored in public entity are retained until the user clears their browsers local storage.
 - We cannot change **Advanced Settings** of public entities.
 - To add public entity on the bot, simply search for the above mentioned entity name and then click on **Add to Bot Says**.
     

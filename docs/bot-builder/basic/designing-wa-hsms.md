@@ -48,9 +48,9 @@ Read more about media HSMs [**here**](https://developers.facebook.com/docs/whats
 
 1. Check that templates do not contain promotional messaging, which is against our Business Policy
 
-2. Ensure content is informative and helpful for your core customers3
+2. Ensure content is informative and helpful for your core customers
 
-3. Confirm you are sending notifications to customers who have explicitly opted-in to receive them4
+3. Confirm you are sending notifications to customers who have explicitly opted-in to receive them
 
 4. Use the correct format & correctly tag templates
 

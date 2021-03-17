@@ -166,10 +166,10 @@ There are 3 smart actions available -
 1. **{}** - This can be used when you want to skip any message. This is vastly used in Final Response when you want to skip this message.
 2. **{taskbox}** - When the user reaches a Node where bot says is {taskbox}, the bot opens up the Menu/Taskbox.
 
-![taskbox_sa](assets/bot-builder-bot-says/taskboxsa.png)
+![taskboxsa](https://user-images.githubusercontent.com/75118325/111466240-07e8ed00-8749-11eb-82a0-6a810b32d61b.png)
 
 3. **{feedback}** - When the user reaches a Node where bot says is {feedback}, the feedback module is sent to the user on the bot.
 
-![feedback_sa](assets/bot-builder-bot-says/feedbacksa.png)
+![feedbacksa](https://user-images.githubusercontent.com/75118325/111466256-0e776480-8749-11eb-9709-b7aac08928c4.png)
 
 > {taskbox} and {feedback} is available only for Web SDK.

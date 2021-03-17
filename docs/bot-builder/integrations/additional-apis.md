@@ -19,9 +19,19 @@ client-id: <CLIENT_ID>
 Content-Type: application/json
 ```
 
-- Authorization - The Authorization header of each HTTP request should be “Bearer” followed by your token which will be provided by Haptik
-- client-id - The client id for your account which will be provided by Haptik
-- Content-Type - application/json
+##### Authorization - 
+
+The Authorization header of each HTTP request should be “Bearer” followed by a token. This token can be copied from the **Business Manager**, as shown below
+
+![token](https://user-images.githubusercontent.com/75118325/111417485-fa614200-870b-11eb-8d82-5a44c1915112.png)
+
+##### Client-id - 
+
+The client id can be found in the **View Credentials** section. You can view the credentials on Conversation Studio as shown below
+
+![clientid](https://user-images.githubusercontent.com/75118325/111417815-9a1ed000-870c-11eb-929d-50f2320f5fe1.png)
+
+##### Content-Type - application/json
 
 #### Request
 
@@ -38,8 +48,6 @@ Content-Type: application/json
 - business_id (number): This is a numeric identifier for the channel where the User is messaging
 - team_name (string): Name of the team to which the chat is to be assigned. Can be fetched from the Teams page of Agent Chat Tool.
 - countdown (number): If value is set to 5, then after 5 seconds chat will be moved to the queue. Otherwise, the chat will be moved to the queue after 10 seconds (default), value can be from range 5 to 10 seconds.
-
-
 
 #### Response
 
@@ -117,9 +125,19 @@ client-id: <CLIENT_ID>
 Content-Type: application/json
 ```
 
-- Authorization - The Authorization header of each HTTP request should be “Bearer” followed by your token which will be provided by Haptik
-- client-id - The client id for your account which will be provided by Haptik
-- Content-Type - application/json
+##### Authorization - 
+
+The Authorization header of each HTTP request should be “Bearer” followed by a token. This token can be copied from the **Business Manager**, as shown below
+
+![token](https://user-images.githubusercontent.com/75118325/111417485-fa614200-870b-11eb-8d82-5a44c1915112.png)
+
+##### Client-id - 
+
+The client id can be found in the **View Credentials** section. You can view the credentials on Conversation Studio as shown below
+
+![clientid](https://user-images.githubusercontent.com/75118325/111417815-9a1ed000-870c-11eb-929d-50f2320f5fe1.png)
+
+##### Content-Type - application/json
 
 #### Request Params
 
@@ -222,11 +240,19 @@ Client-ID: <CLIENT_ID>
 Content-Type: application/json
 ```
 
-| header        | type | required | description                                                  |
-| ------------- | ---- | -------- | ------------------------------------------------------------ |
-| Authorization | str  | true     | Authorization header of each HTTP request should be “Bearer” followed by your token provided by Haptik. |
-| Client-ID     | str  | true     | Client-ID for your account provided by Haptik.               |
-| Content-Type  | str  | true     | constant indicating `application/json` type request          |
+##### Authorization - 
+
+The Authorization header of each HTTP request should be “Bearer” followed by a token. This token can be copied from the **Business Manager**, as shown below
+
+![token](https://user-images.githubusercontent.com/75118325/111417485-fa614200-870b-11eb-8d82-5a44c1915112.png)
+
+##### Client-id - 
+
+The client id can be found in the **View Credentials** section. You can view the credentials on Conversation Studio as shown below
+
+![clientid](https://user-images.githubusercontent.com/75118325/111417815-9a1ed000-870c-11eb-929d-50f2320f5fe1.png)
+
+##### Content-Type - application/json
 
 #### Request parameters
 
@@ -369,9 +395,19 @@ client-id: <CLIENT_ID>
 Content-Type: multipart/form-data
 ```
 
-- Authorization - The Authorization header of each HTTP request should be “Bearer” followed by your token which will be provided by Haptik
-- client-id - The client id for your account which will be provided by Haptik
-- Content-Type - multipart/form-data
+##### Authorization - 
+
+The Authorization header of each HTTP request should be “Bearer” followed by a token. This token can be copied from the **Business Manager**, as shown below
+
+![token](https://user-images.githubusercontent.com/75118325/111417485-fa614200-870b-11eb-8d82-5a44c1915112.png)
+
+##### Client-id - 
+
+The client id can be found in the **View Credentials** section. You can view the credentials on Conversation Studio as shown below
+
+![clientid](https://user-images.githubusercontent.com/75118325/111417815-9a1ed000-870c-11eb-929d-50f2320f5fe1.png)
+
+##### Content-Type - multipart/form-data
 
 #### Request Body
 
@@ -441,6 +477,19 @@ Example URL: `https://<base-url>/mogambo_api/nodes/faq/create/status/<task_id>/`
 Authorization: Bearer <TOKEN>
 client-id: <CLIENT_ID>
 ```
+
+##### Authorization - 
+
+The Authorization header of each HTTP request should be “Bearer” followed by a token. This token can be copied from the **Business Manager**, as shown below
+
+![token](https://user-images.githubusercontent.com/75118325/111417485-fa614200-870b-11eb-8d82-5a44c1915112.png)
+
+##### Client-id - 
+
+The client id can be found in the **View Credentials** section. You can view the credentials on Conversation Studio as shown below
+
+![clientid](https://user-images.githubusercontent.com/75118325/111417815-9a1ed000-870c-11eb-929d-50f2320f5fe1.png)
+
 
 #### Response
 A successful request to the API will return a `200` status code with a JSON response object.

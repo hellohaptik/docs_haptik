@@ -158,3 +158,18 @@ For ex, if you use "*Good %timeofday*", the bot will reply back Good Morning/Aft
 If you scroll to the bottom, you will see **%entitytag_<entity_name>**. You can use this tag to use the value of any entity collected in the Bot Flow.
 
 So a response like "*Hey %entitytag_person_name! Nice talking to you.*" would become "Hey Bruce Wayne! Nice talking to you".
+
+### Smart Actions for Bot Says
+
+There are 3 smart actions available - 
+
+1. **{}** - This can be used when you want to skip any message. This is vastly used in Final Response when you want to skip this message.
+2. **{taskbox}** - When the user reaches a Node where bot says is {taskbox}, the bot opens up the Menu/Taskbox.
+
+![taskboxsa](https://user-images.githubusercontent.com/75118325/111466240-07e8ed00-8749-11eb-82a0-6a810b32d61b.png)
+
+3. **{feedback}** - When the user reaches a Node where bot says is {feedback}, the feedback module is sent to the user on the bot.
+
+![feedbacksa](https://user-images.githubusercontent.com/75118325/111466256-0e776480-8749-11eb-9709-b7aac08928c4.png)
+
+> {taskbox} and {feedback} is available only for Web SDK.

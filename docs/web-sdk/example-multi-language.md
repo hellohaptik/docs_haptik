@@ -30,8 +30,9 @@ The default language first loaded can be changed by adding the `default-language
   
   <script type="text/javascript">
   window.haptikInitSettings = {
-    'client-id': '<provided by haptik>',
-    'base-url': '<provided by haptik>',
+        "business-id": "<business-id>",
+        "client-id": "<client-id>",
+        "base-url": "<base-url>",
     'default-language': 'hi'
   };
   </script>

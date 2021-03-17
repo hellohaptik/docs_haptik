@@ -41,11 +41,11 @@ Bot Says is where a Node stores the replies that are sent in response to the use
 
 Adding button on Conversation Studio - 
 
-![buttonhsl_gbm](/assets/gbm2.png)
+![gbm2](https://user-images.githubusercontent.com/75118325/111475170-d412c500-8752-11eb-94b2-e033c1f4c1e5.png)
 
 How button appears on Google Business Message screen - 
 
-![buttonqr_gbm](/assets/gbm3.png)
+![buttton](https://user-images.githubusercontent.com/75118325/111476861-8dbe6580-8754-11eb-9f74-6bfdbf897451.png)
 
 ##### 2. Carousel
 

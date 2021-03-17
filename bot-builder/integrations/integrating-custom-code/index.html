@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Code Node Integration · Haptik Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Introduction"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Code Node Integration · Haptik Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.haptik.ai/"/><meta property="og:description" content="## Introduction"/><meta property="og:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="robots" content="noindex"/><link rel="shortcut icon" href="/img/image_0.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Code Node Integration · Haptik Docs</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Introduction"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Code Node Integration · Haptik Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.haptik.ai/"/><meta property="og:description" content="## Introduction"/><meta property="og:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="robots" content="noindex"/><link rel="shortcut icon" href="/img/image_0.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
               (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
               m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -65,93 +65,267 @@
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Code Node Integration</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="introduction"></a><a href="#introduction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introduction</h2>
 <p>In most cases, APIs are not directly consumable by the authoring platforms. This is because the request format of the external API is generally different from the format in which the platform makes the request. Additionally, the response data from the API won’t be directly consumable by the platform as the response format for the virtual assistant is different from the response format of the API. The way most platforms solve this is by building a middleware on top of the external API to convert the request and response into appropriate formats.</p>
 <p>Haptik’s Conversation Studio solves these problems in a novel way through the use of an integrated Code Editor. The Code Editor allows bot builders to easily integrate with external platforms through python scripts. This removes the requirement to build a middleware on top of the external API. The Code Editor uses a serverless implementation so it is more scalable. Another benefit of using the Code Editor is that simple dynamic behavior can be easily added through python scripts without having to build an API to do it.</p>
-<p>The Code Editor provides logger support and live testing of the code. It also helps to manage IVA state by storing contextual information related to the current conversation that the user is having with the IVA. Some examples of this are policy id or policy details that the user is exploring in the current conversation.</p>
+<p>The Code Editor provides logger support and live testing of the code. It also helps to manage IVA state by storing contextual information related to the current conversation that the user is having with the IVA. Some examples of this are order id or order details that the user is exploring in the current conversation.</p>
 <p>The Code Editor feature allows for a quick go-to-market and significantly reduces the infrastructure cost.</p>
 <p>You can open the code editor by choosing a Code Node and then clicking on the <code>Open Code Editor</code> button.</p>
-<p><img src="/assets/api2.png" alt="Opening Code Editor"></p>
+<p><img src="https://user-images.githubusercontent.com/75118325/111466671-98bfc880-8749-11eb-8e43-4c6d18e1ee2c.png" alt="codenode"></p>
 <h2><a class="anchor" aria-hidden="true" id="using-code-editor"></a><a href="#using-code-editor" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using Code Editor</h2>
 <p>The only requirement for using the code editor is, the code should follow the below format. The supported programming language is Python 3 and above.</p>
-<p>If any syntax errors or exceptions are raised by the main function, this will result in a Bot Break message.</p>
+<p>If any syntax errors or exceptions are raised by the main function, this will result in a <strong>Bot Break message</strong>.</p>
 <pre><code class="hljs css language-python"><span class="hljs-keyword">import</span>  json
 
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">(event, context)</span>:</span>
     <span class="hljs-string">"""
-    event['body'] is a string dict with the following keys:
-    node, event, user, entities.
-
-    Currently, we pass user_id, user_name, full_name, device_platform and language_code in the user dictionary.
-
-    Args:
-        event (dict): Data corresponding to this event
-        context
-
-    Returns
-        (dict): response with statusCode and the response for the User
-    """</span>
+   event['body'] is a string dict with the following keys:
+   node, event, user, entities.
+   Currently, we pass user_id, user_name, full_name, device_platform and language_code in the user dictionary.
+   Args:
+       event (dict): Data corresponding to this event
+       context
+   Returns
+       (dict): response with statusCode and the response for the User
+   """</span>
     body = json.loads(event[<span class="hljs-string">'body'</span>])
-    entities = body[<span class="hljs-string">'entities'</span>]
-    user_data = body[<span class="hljs-string">'user'</span>]
+    entities = body.get(<span class="hljs-string">'entities'</span>)
+    user_data = body.get(<span class="hljs-string">'user'</span>)
+    conversation_details = body.get(<span class="hljs-string">'conversation_details'</span>)
+    final_response = {
+        <span class="hljs-string">'status'</span>: <span class="hljs-literal">True</span>, 
+        <span class="hljs-string">'entities'</span>:entities, 
+        <span class="hljs-string">'user_full_name'</span>: user_data.get(<span class="hljs-string">"full_name"</span>),
+        <span class="hljs-string">'user_device_platform'</span>: user_data.get(<span class="hljs-string">"device_platform"</span>),
+        <span class="hljs-string">'conversation_details'</span>:conversation_details
+    }
+    response = {<span class="hljs-string">'statusCode'</span>: <span class="hljs-number">200</span>, <span class="hljs-string">'body'</span>: json.dumps(final_response), <span class="hljs-string">'headers'</span>: {<span class="hljs-string">'Content-Type'</span>: <span class="hljs-string">'application/json'</span>}}
+    <span class="hljs-keyword">return</span> response
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="using-entities-on-code-editor"></a><a href="#using-entities-on-code-editor" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using Entities on Code Editor</h3>
+<p>The information which is collected from users on the Static Node, in the form of entities, can be used on Code Node to fetch user related information.</p>
+<p>The connection is automatic from Static Node to Code Node i.e. whenever user provides all the mandatory entity values, the following Code Node gets triggered.
+In order to use these entity values in the Code Node, we have to create new variables.</p>
+<p>Let's take an example of fetching order details. We have an entity to save <strong>Order ID</strong>. We would use this to understand how to fetch information using entity value on Code Node -</p>
+<p><strong>order_id_demotrain</strong> is a <code>regex</code> entity with the pattern <code>^[a-z]{3}\d{3}$</code>, this entity will accept values such as <code>abc123</code>.</p>
+<p>There is a standard JSON format in which the values are stored within an entity. To understand this format, open the <strong>Detailed Info</strong> tab on the <strong>logs</strong> sections besides the entity value which was provided to the IVA. This is found on the Test Bot as shown below -</p>
+<p><img src="https://user-images.githubusercontent.com/75118325/111479639-2b1a9900-8757-11eb-8005-7d9ca6a9b9d3.png" alt="entity-log"></p>
+<p>So the Order ID is stored under the entity name <code>order_id_demotrain</code>. The actual <code>value</code> is stored under <code>entity_value</code>. On Code Node, you can fetch the <code>value</code> in this format -</p>
+<pre><code class="hljs css language-python">order_id = entities.get(<span class="hljs-string">"order_id_demotrain"</span>)[<span class="hljs-number">0</span>].get(<span class="hljs-string">"entity_value"</span>).get(<span class="hljs-string">'value'</span>)
+</code></pre>
+<blockquote>
+<p>The above example is using a regex type entity. The format in which entity is stored changes for every type of entity. Please check the Debug log section to know the format in which the entity is stored to use them on Code Node.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="sending-entity-values-to-api-to-fetch-data"></a><a href="#sending-entity-values-to-api-to-fetch-data" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sending entity values to API to fetch data</h3>
+<p>Once the entity value is stored in a variable on the Code Node, you can use this variable to send this to the API and fetch the real-time data. You can send this variable as a payload to the API endpoint.</p>
+<p>The following is a sample code for fetching order details -</p>
+<pre><code class="hljs css language-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">(event, context)</span>:</span>
+    <span class="hljs-string">"""
+   event['body'] is a string dict with the following keys:
+   node, event, user, entities.
+   Currently, we pass user_id, user_name, full_name, device_platform and language_code in the user dictionary.
+   Args:
+       event (dict): Data corresponding to this event
+       context
+   Returns
+       (dict): response with statusCode and the response for the User
+   """</span>
+    body = json.loads(event[<span class="hljs-string">'body'</span>])
+    entities = body.get(<span class="hljs-string">'entities'</span>)
+    user_data = body.get(<span class="hljs-string">'user'</span>)
+    conversation_details = body.get(<span class="hljs-string">'conversation_details'</span>)
+    env_variables = body.get(<span class="hljs-string">"env_variables"</span>)
+    entity = Entities(entities)
+    order_id = entity.get(<span class="hljs-string">'capture_track_orderid_copy'</span>, <span class="hljs-string">''</span>)
     
-    <span class="hljs-comment"># This is how entities are used in code editor</span>
-    <span class="hljs-comment"># entities = body.get('entities')</span>
-    <span class="hljs-comment"># person_name = entities['user_name_insurance'][0]['entity_value']['value']</span>
-    <span class="hljs-comment"># phone_number = entities['completion_phone_number'][0]['entity_value']</span>
+    order_details = get_order_details(env_variables, order_id)
+    <span class="hljs-keyword">if</span> <span class="hljs-string">'Statuscode'</span> <span class="hljs-keyword">in</span> order_details:
+        <span class="hljs-keyword">return</span> order_details
+        
+    message = get_order_message(order_details)
     
-    <span class="hljs-comment"># "custom_data" that is passed through SDK's during sign up can be accessed from body['user_details'].</span>
-    user_details = body[<span class="hljs-string">'user_details'</span>]
-    conversation_details = body[<span class="hljs-string">'conversation_details'</span>]
-    final_response = {<span class="hljs-string">'status'</span>: <span class="hljs-literal">True</span>, <span class="hljs-string">'response'</span>: write_here(), <span class="hljs-string">'user_details'</span>:user_details, <span class="hljs-string">'conversation_details'</span>:conversation_details}
+    <span class="hljs-comment"># get_order_message() returns order details in a button HSL </span>
+    
+    final_response = {
+        <span class="hljs-string">'status'</span>: <span class="hljs-literal">True</span>, 
+        <span class="hljs-string">'message'</span>: message
+    }
     response = {<span class="hljs-string">'statusCode'</span>: <span class="hljs-number">200</span>, <span class="hljs-string">'body'</span>: json.dumps(final_response), <span class="hljs-string">'headers'</span>: {<span class="hljs-string">'Content-Type'</span>: <span class="hljs-string">'application/json'</span>}}
     <span class="hljs-keyword">return</span> response
 
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">write_here</span><span class="hljs-params">(*args)</span>:</span>
-    <span class="hljs-string">"""
-   WRITE YOUR CODE HERE and update the final_response dict
-   """</span>
-    <span class="hljs-comment"># hsl_list = ['Hello', {}]</span>
-    button_hsl = {
-        <span class="hljs-string">"text"</span>: <span class="hljs-string">"SHOW POLICY DETAILS; PLC"</span>,
-        <span class="hljs-string">"type"</span>: <span class="hljs-string">"BUTTON"</span>,
-        <span class="hljs-string">"data"</span>: {
-            <span class="hljs-string">"items"</span>: [
-                {
-                    <span class="hljs-string">"actionable_text"</span>: <span class="hljs-string">"Policy #1"</span>,
-                    <span class="hljs-string">"location_required"</span>: <span class="hljs-literal">False</span>,
-                    <span class="hljs-string">"is_default"</span>: <span class="hljs-number">0</span>,
-                    <span class="hljs-string">"uri"</span>: <span class="hljs-string">"LAUNCH_CHANNEL"</span>,
-                    <span class="hljs-string">"type"</span>: <span class="hljs-string">"TEXT_ONLY"</span>,
-                    <span class="hljs-string">"payload"</span>: {
-                        <span class="hljs-string">"gogo_message"</span>: <span class="hljs-string">""</span>,
-                        <span class="hljs-string">"message"</span>: <span class="hljs-string">"I want to check my policy"</span>
-                    }
-                },
-                {
-                    <span class="hljs-string">"actionable_text"</span>: <span class="hljs-string">"View Details"</span>,
-                    <span class="hljs-string">"location_required"</span>: <span class="hljs-literal">False</span>,
-                    <span class="hljs-string">"is_default"</span>: <span class="hljs-number">0</span>,
-                    <span class="hljs-string">"uri"</span>: <span class="hljs-string">"LINK"</span>,
-                    <span class="hljs-string">"type"</span>: <span class="hljs-string">"APP_ACTION"</span>,
-                    <span class="hljs-string">"payload"</span>: {
-                        <span class="hljs-string">"url"</span>: <span class="hljs-string">"XYZ.COM"</span>,
-                        <span class="hljs-string">"gogo_message"</span>: <span class="hljs-string">""</span>
-                    }
-                }
-            ]
-        },
-        <span class="hljs-string">"isNew"</span>: <span class="hljs-literal">False</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_order_details</span><span class="hljs-params">(env_variables, order_id)</span>:</span>
+    url = <span class="hljs-string">"&lt;API_ENDPOINT&gt;"</span>
+    payload = {
+        <span class="hljs-string">"order_id"</span>: order_id.upper()
     }
-    <span class="hljs-keyword">return</span> [json.dumps(button_hsl)]
-
+    headers = {
+      <span class="hljs-string">'Content-Type'</span>: <span class="hljs-string">'application/json'</span>
+    }
+    <span class="hljs-keyword">try</span>:
+        response = requests.request(
+            <span class="hljs-string">"POST"</span>,
+            url,
+            headers=headers,
+            data = json.dumps(payload),
+            timeout=<span class="hljs-number">7</span>
+            )
+    <span class="hljs-keyword">except</span> requests.exceptions.Timeout <span class="hljs-keyword">as</span> errt:
+        print(<span class="hljs-string">"Timeout Error:"</span>, errt)
+        error = <span class="hljs-string">"Timeout Error"</span>
+        response = generate_response(error)
+        <span class="hljs-keyword">return</span> response
+    <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> err:
+        print(<span class="hljs-string">"Oops: Something Else"</span>, err)
+        error = <span class="hljs-string">"Api Failure"</span>
+        response = generate_response(error)
+        <span class="hljs-keyword">return</span> response
+   
+    <span class="hljs-keyword">if</span> response.status_code == <span class="hljs-number">200</span>:
+        order_details = json.loads(response.text)
+        order_details = order_details.get(<span class="hljs-string">'results'</span>, {})
+        <span class="hljs-keyword">return</span> order_details
+    <span class="hljs-keyword">else</span>:
+        print(<span class="hljs-string">"API FAILED. STATUS CODE: "</span>, response.status_code, response.text)
+        error = <span class="hljs-string">"Api Failure"</span>
+        response = generate_response(error)
+        <span class="hljs-keyword">return</span> response
 </code></pre>
-<p>When we run the code successfully, we get a program output in JSON format, like this</p>
+<blockquote>
+<p>You cannot set the entity value from the Code Editor.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="create-hsls-in-code-editor"></a><a href="#create-hsls-in-code-editor" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create HSLs in Code Editor</h3>
+<p><strong>1. Display a static HSL element -</strong></p>
+<p>You can use HSLs (Chat Elements) to display different elements on the bot, such as carousels and buttons. To display HSLs using code node, we first have to copy the HSL from any static node, with the required elements such as a button. The procedure to copy an HSL is mentioned <a href="https://docs.haptik.ai/bot-builder/basic/copypaste#how-to-copy-and-paste-the-hsls">here</a>.</p>
+<p><img src="/assets/api10.png" alt="Opening Code Editor"></p>
+<p>Change the <strong>True</strong> and <strong>False</strong> flags according to Python conventions as shown below -</p>
+<p><img src="/assets/api11.png" alt="Opening Code Editor"></p>
+<p>The variables used in the code can also be used in these HSLs to show user specific information -</p>
+<p><img src="/assets/api12.png" alt="Opening Code Editor"></p>
+<p>Here, we have created a button HSL to display the message “Your email is <strong><a href="mailto:abc@test.com">abc@test.com</a></strong>” and a button which redirects to Haptik’s website. When the code is executed on the IVA, it appears as follows -</p>
+<p><img src="/assets/api13.png" alt="Opening Code Editor"></p>
+<p><strong>2. Display dynamic HSL elements -</strong></p>
+<p>You can show dynamic number of HSLs using the code editor. The following is an example to show the active orders of an user using Carousel element -</p>
+<pre><code class="hljs css language-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">(event, context)</span>:</span>
+    <span class="hljs-string">"""
+   event['body'] is a string dict with the following keys:
+   node, event, user, entities.
+   Currently, we pass user_id, user_name, full_name, device_platform and language_code in the user dictionary.
+   Args:
+       event (dict): Data corresponding to this event
+       context
+   Returns
+       (dict): response with statusCode and the response for the User
+   """</span>
+    body = json.loads(event[<span class="hljs-string">'body'</span>])
+    entities = body.get(<span class="hljs-string">'entities'</span>)
+    user_data = body.get(<span class="hljs-string">'user'</span>)
+    conversation_details = body.get(<span class="hljs-string">'conversation_details'</span>)
+    env_variables = body.get(<span class="hljs-string">"env_variables"</span>)
+    entity = Entities(entities)
+    order_id = entity.get(<span class="hljs-string">'capture_track_orderid_copy'</span>, <span class="hljs-string">''</span>)
+    
+    order_details = get_order_details(env_variables, order_id)
+    <span class="hljs-keyword">if</span> <span class="hljs-string">'Statuscode'</span> <span class="hljs-keyword">in</span> order_details:
+        <span class="hljs-keyword">return</span> order_details
+        
+    <span class="hljs-comment"># get_order_details() will call the API by sending entity values as payload and fetch all the order details</span>
+       
+    message = get_order_message(order_details)
+    
+    <span class="hljs-comment"># get_order_message() returns order details in a button HSL</span>
+
+    final_response = {
+        <span class="hljs-string">'status'</span>: <span class="hljs-literal">True</span>, 
+        <span class="hljs-string">'hsl'</span>: get_carousel(self, orders)
+    }
+    response = {<span class="hljs-string">'statusCode'</span>: <span class="hljs-number">200</span>, <span class="hljs-string">'body'</span>: json.dumps(final_response), <span class="hljs-string">'headers'</span>: {<span class="hljs-string">'Content-Type'</span>: <span class="hljs-string">'application/json'</span>}}
+    <span class="hljs-keyword">return</span> response
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_carousel</span><span class="hljs-params">(self, orders)</span>:</span>
+        carousel_items = []
+        <span class="hljs-keyword">for</span> order_item <span class="hljs-keyword">in</span> orders :
+            carousel_items.append(self.get_carousel_item(order_item))
+        carousel_hsl = {
+            <span class="hljs-string">"text"</span> : <span class="hljs-string">"Here are your order details"</span>,
+            <span class="hljs-string">"type"</span> : <span class="hljs-string">"CAROUSEL"</span>,
+            <span class="hljs-string">"data"</span> : {
+                <span class="hljs-string">"image_aspect_ratio"</span> : <span class="hljs-string">"1000"</span>,
+                <span class="hljs-string">"width"</span> : <span class="hljs-string">"MEDIUM"</span>,
+                <span class="hljs-string">"items"</span>: carousel_items
+            },
+            <span class="hljs-string">"isNew"</span>:<span class="hljs-literal">False</span>
+        }
+        <span class="hljs-keyword">return</span> carousel_hsl
+</code></pre>
+<p>All the orders retrieved from the API will be displayed using Carousel element as follows -</p>
+<p><img src="https://user-images.githubusercontent.com/75118325/111423173-e8849c80-8715-11eb-8993-29dd861db16f.png" alt="multiple_orders"></p>
+<h3><a class="anchor" aria-hidden="true" id="using-final_response"></a><a href="#using-final_response" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using final_response</h3>
+<p>The format or values which the code will return depends on <code>final_response</code> present in <code>def main(event, context)</code>.</p>
+<p>The default <code>final_response</code> is as follows -</p>
+<pre><code class="hljs css language-python">final_response = {
+        <span class="hljs-string">'status'</span>: <span class="hljs-literal">True</span>, 
+        <span class="hljs-string">'entities'</span>:entities, 
+        <span class="hljs-string">'user_full_name'</span>: user_data.get(<span class="hljs-string">"full_name"</span>),
+        <span class="hljs-string">'user_device_platform'</span>: user_data.get(<span class="hljs-string">"device_platform"</span>),
+        <span class="hljs-string">'conversation_details'</span>:conversation_details
+    }
+    response = {<span class="hljs-string">'statusCode'</span>: <span class="hljs-number">200</span>, <span class="hljs-string">'body'</span>: json.dumps(final_response), <span class="hljs-string">'headers'</span>: {<span class="hljs-string">'Content-Type'</span>: <span class="hljs-string">'application/json'</span>}}
+    <span class="hljs-keyword">return</span> response
+</code></pre>
+<p>The main method returns <code>response</code>. In <code>response</code> we dump the <code>final_response</code> in JSON format.
+The <code>final_reponse</code> is the JSON key-value pair which gets executed everytime the code runs. The output which you will receive upon running this code will be in the same format as defined in the <code>final_response</code>.</p>
+<p>On <code>final_response</code> -</p>
+<ul>
+<li>You can call any method defined on the code editor.</li>
+<li>You can call any variable name declared on the code editor.</li>
+</ul>
+<p>A sample <code>final_response</code> -</p>
+<pre><code class="hljs css language-JavaScript">    final_response = {
+    <span class="hljs-string">'status'</span>: status,
+    <span class="hljs-string">'hsl'</span>: hsl,
+    <span class="hljs-string">'channel'</span>: channel,
+    <span class="hljs-string">'name'</span>: name,
+    <span class="hljs-string">'query'</span>:get_query(entities),
+    <span class="hljs-string">'message'</span>: message,
+    <span class="hljs-string">'email'</span>: email,
+    <span class="hljs-string">'ps_date'</span>: date,
+    <span class="hljs-string">'ps_time'</span>: time,
+    <span class="hljs-string">'tool'</span>: tool_name,
+    <span class="hljs-string">'issue_type'</span>: issue_type,
+    <span class="hljs-string">'description'</span>: description,
+    <span class="hljs-string">'env'</span>: issue_faced_at,
+    <span class="hljs-string">'issue_key'</span>: issue_key,
+    <span class="hljs-string">'issue_link'</span>: issue_link,
+    <span class="hljs-string">'conversation_details'</span>: conversation_details
+    }
+</code></pre>
+<p>After defining the <code>final_response</code> and providing the <em>Sample input data (JSON)</em>, you can <strong>Run</strong> the code.
+When the code is executed successfully, you get a program output in JSON format. This format is same as <code>final_response</code>.</p>
 <p><img src="/assets/api6.png" alt="Opening Code Editor"></p>
+<blockquote>
+<p>To know more about live testing of your code, click <a href="https://docs.haptik.ai/bot-builder/integrations/integrating-custom-code#live-testing-your-code"><strong>here</strong></a></p>
+</blockquote>
 <p>This output format needs to be added as a Sample Output JSON Format on Code Node as well to create a connection between Code Node and Output Node.</p>
 <p><img src="/assets/api7.png" alt="Opening Code Editor"></p>
-<p>To connect Code node and Output Node, you can use various rules/conditions on the above output. Please refer the conditions mentioned <a href="https://docs.haptik.ai/bot-builder/basic/connections#code-node-to-output-node-connection-transition">here</a>.</p>
+<blockquote>
+<p>If the format of <code>final_response</code> is wrong, the bot gives a bot break message.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="using-output-node-to-display-output"></a><a href="#using-output-node-to-display-output" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using Output Node to display Output</h2>
+<p>One Code Node can be connected to multiple Output Nodes. Depending on the conditions provided while making a connection, the Output Node gets triggered. To know more about conditions to connect Code Node to Output Node, click <a href="https://docs.haptik.ai/bot-builder/basic/connections#code-node-to-output-node-connection-transition"><strong>here</strong></a>.</p>
+<p>You can directly use the variables defined in the <em>Sample Output JSON format</em> to show bot responses on the Output Node as shown below -</p>
+<p><img src="https://user-images.githubusercontent.com/75118325/111423654-9f811800-8716-11eb-90a6-b253133ff5d0.png" alt="outputhsl"></p>
+<blockquote>
+<p><strong>Use Raw Text/JSON HSL to use variables as Bot Says.</strong></p>
+</blockquote>
+<p>You can make use of the variables coming from the Code Node to display selected variables -</p>
+<p><img src="https://user-images.githubusercontent.com/75118325/111425457-3353e380-8719-11eb-9daa-6792403bc175.png" alt="outpsthsl2"></p>
+<p>After creating a connection on the basis of variables, you can direclty show a static Bot response, as shown below -</p>
+<p><img src="https://user-images.githubusercontent.com/75118325/111468569-b68e2d00-874b-11eb-9d7d-0e1eeb57a7b1.png" alt="addvariable"></p>
+<p><img src="https://user-images.githubusercontent.com/75118325/111425748-9cd3f200-8719-11eb-9d21-5d1fcb7755fb.png" alt="ophsl3"></p>
+<p><img src="https://user-images.githubusercontent.com/75118325/111425833-ba08c080-8719-11eb-8954-68ebd83edd6b.png" alt="ophsl4"></p>
 <p>The output JSON variables are visible when we click on <code>Add Variables</code> while creating a connection between the Output node.</p>
 <p><img src="/assets/api8.png" alt="Opening Code Editor"></p>
 <p>The output JSON variables are also visible when we click on <code>Add Variables</code> while creating a response under <code>Bot Says</code> of Output Node.</p>
 <p><img src="/assets/api9.png" alt="Opening Code Editor"></p>
+<p>You can add multiple Output Nodes emerging from the Code Node. These Output Nodes can be connected using the variables.</p>
+<p><img src="https://user-images.githubusercontent.com/75118325/111469107-51870700-874c-11eb-9456-ca48339d2041.png" alt="outputnodes"></p>
 <p><strong>IMPORTANT POINTS</strong> -</p>
 <ol>
 <li>You can access all entities of your IVA in the above code.</li>
@@ -180,15 +354,6 @@ rsa-4.0
 six-1.12.0
 unicodecsv-0.14.1
 urllib3-1.25.3</p>
-<h2><a class="anchor" aria-hidden="true" id="create-hsls-in-code-editor"></a><a href="#create-hsls-in-code-editor" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create HSLs in Code Editor</h2>
-<p>You can use HSL message(Bot Says Element) to display different elements on the bot, such as carousels and buttons. To display HSLs using code node, we first have to copy the HSL from any static node, with the required elements such as a button. The procedure to copy an HSL is mentioned <a href="https://docs.haptik.ai/bot-builder/basic/copypaste#how-to-copy-and-paste-the-hsls">here</a>.</p>
-<p><img src="/assets/api10.png" alt="Opening Code Editor"></p>
-<p>Change the True and False flags according to Python conventions as shown below</p>
-<p><img src="/assets/api11.png" alt="Opening Code Editor"></p>
-<p>Once you create a variable to store the entity information, we can use it in the HSL as follows</p>
-<p><img src="/assets/api12.png" alt="Opening Code Editor"></p>
-<p>Here, we have created a button HSL to display the message “Your email is <email>” and a button which redirects to Haptik’s website. When the code is executed on the IVA, it appears as follows,</p>
-<p><img src="/assets/api13.png" alt="Opening Code Editor"></p>
 <h2><a class="anchor" aria-hidden="true" id="using-environment-variables"></a><a href="#using-environment-variables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using Environment Variables</h2>
 <p>You can set environment variables for the code executor to store values like database username and passwords that you don't want to expose inside the code.</p>
 <p><strong>The environment variables are stored at a bot level.</strong> This means that variables stored in one node are automatically available to all nodes inside the bot.</p>
@@ -277,7 +442,7 @@ logger.setLevel(logging.INFO)
 <p><img src="/assets/viewlogs.png" alt="Opening Code Editor"></p>
 <h2><a class="anchor" aria-hidden="true" id="pre-transfer"></a><a href="#pre-transfer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pre-Transfer</h2>
 <p><code>Train Bot</code> prepares the code for production. Hence, you should make sure to call <code>Train Bot</code> if there are any changes in the custom code integration before transferring the bot to production.</p>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 3/10/2021</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/bot-builder/integrations/introduction"><span class="arrow-prev">← </span><span>Introduction</span></a><a class="docs-next button" href="/bot-builder/integrations/integrating-apis"><span>Static Node Integration</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#introduction">Introduction</a></li><li><a href="#using-code-editor">Using Code Editor</a></li><li><a href="#supported-packages">Supported Packages</a></li><li><a href="#create-hsls-in-code-editor">Create HSLs in Code Editor</a></li><li><a href="#using-environment-variables">Using Environment Variables</a></li><li><a href="#saving-conversation-details-and-user-details-in-the-code-editor">Saving Conversation Details and User Details in the Code Editor</a><ul class="toc-headings"><li><a href="#what-is-bot-state">What is Bot State</a></li><li><a href="#conversation-details">Conversation Details</a></li><li><a href="#user-details">User Details</a></li></ul></li><li><a href="#logger-support-in-code-executor">Logger support in Code Executor</a></li><li><a href="#live-testing-your-code">Live Testing your Code</a></li><li><a href="#pre-transfer">Pre-Transfer</a></li></ul></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Conversation Studio</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Smart Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Intelligent Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://docs.haptik.ai/ios-sdk/" class="footer-column-link">iOS SDK</a><a href="https://docs.haptik.ai/android-sdk/" class="footer-column-link">Android SDK</a><a href="https://docs.haptik.ai/web-sdk/" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/whatsapp/" class="footer-column-link">WhatsApp</a><a href="https://docs.haptik.ai/other/facebook" class="footer-column-link">Facebook</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Bot API</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Agent Chat Tool</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2021 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 3/17/2021</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/bot-builder/integrations/introduction"><span class="arrow-prev">← </span><span>Introduction</span></a><a class="docs-next button" href="/bot-builder/integrations/integrating-apis"><span>Static Node Integration</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#introduction">Introduction</a></li><li><a href="#using-code-editor">Using Code Editor</a><ul class="toc-headings"><li><a href="#using-entities-on-code-editor">Using Entities on Code Editor</a></li><li><a href="#sending-entity-values-to-api-to-fetch-data">Sending entity values to API to fetch data</a></li><li><a href="#create-hsls-in-code-editor">Create HSLs in Code Editor</a></li><li><a href="#using-final_response">Using final_response</a></li></ul></li><li><a href="#using-output-node-to-display-output">Using Output Node to display Output</a></li><li><a href="#supported-packages">Supported Packages</a></li><li><a href="#using-environment-variables">Using Environment Variables</a></li><li><a href="#saving-conversation-details-and-user-details-in-the-code-editor">Saving Conversation Details and User Details in the Code Editor</a><ul class="toc-headings"><li><a href="#what-is-bot-state">What is Bot State</a></li><li><a href="#conversation-details">Conversation Details</a></li><li><a href="#user-details">User Details</a></li></ul></li><li><a href="#logger-support-in-code-executor">Logger support in Code Executor</a></li><li><a href="#live-testing-your-code">Live Testing your Code</a></li><li><a href="#pre-transfer">Pre-Transfer</a></li></ul></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Conversation Studio</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Smart Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Intelligent Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://docs.haptik.ai/ios-sdk/" class="footer-column-link">iOS SDK</a><a href="https://docs.haptik.ai/android-sdk/" class="footer-column-link">Android SDK</a><a href="https://docs.haptik.ai/web-sdk/" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/whatsapp/" class="footer-column-link">WhatsApp</a><a href="https://docs.haptik.ai/other/facebook" class="footer-column-link">Facebook</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Bot API</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Agent Chat Tool</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2021 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

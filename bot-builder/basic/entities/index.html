@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Entities · Haptik Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Before you start how to create entities and understand how to use them in bots, you can start with understanding what are entities by referring to this [**documentation**](https://docs.haptik.ai/bot-builder/basic/intent).  "/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Entities · Haptik Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.haptik.ai/"/><meta property="og:description" content="Before you start how to create entities and understand how to use them in bots, you can start with understanding what are entities by referring to this [**documentation**](https://docs.haptik.ai/bot-builder/basic/intent).  "/><meta property="og:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="robots" content="noindex"/><link rel="shortcut icon" href="/img/image_0.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Entities · Haptik Docs</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Before you start how to create entities and understand how to use them in bots, you can start with understanding what are entities by referring to this [**documentation**](https://docs.haptik.ai/bot-builder/basic/intent).  "/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Entities · Haptik Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.haptik.ai/"/><meta property="og:description" content="Before you start how to create entities and understand how to use them in bots, you can start with understanding what are entities by referring to this [**documentation**](https://docs.haptik.ai/bot-builder/basic/intent).  "/><meta property="og:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="robots" content="noindex"/><link rel="shortcut icon" href="/img/image_0.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
               (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
               m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -72,18 +72,79 @@
 <p><strong>Public Entities</strong></p>
 <p>Entities which you find in your search results are called as <strong>public</strong> or <strong>system entities</strong>. We have kept few generic entities as public like to store the name of the person, phone number, age, email, etc.</p>
 <p>These are the most common public entities -</p>
-<pre><code class="hljs">'flight_arrival_city', 'phone_number', 'location', 'product_id', 
-'completion_phone_number', 'flight_seat_number', 'utils_city', 
-'product_type', 'device_name', 'person_name', 'departure_date', 
-'phone_number_without_validation', 'product_name', 'completion_city', 
-'completion_email', 'flight_departure_city', 'arrival_date', 'user_name', 
-'origin_lat', 'origin_lng', 'date_of_birth', 'date', 'pincode', 
-'color', 'age', 'otp_four_digit', 'time', 'time_with_range', 
-'completion_location', 'email', 'profession', 'age_range', 'pan_card', 
-'feedback_request', 'website_company_name_regex', 'feedback_regex', 
-'nps_feedback_range', 'feedback_thumbs', 'url_capturer', 
-'disambiguation_negation', 'disambiguation_choice', 'international_phone_number'
-</code></pre>
+<table>
+    <tr>
+        <td>flight_arrival_city</td>
+        <td>phone_number</td>
+        <td>location</td>
+        <td>product_id</td>
+    </tr>
+        <tr>
+        <td>flight_seat_number</td>
+        <td>utils_city</td>
+        <td>product_type</td>
+        <td>device_name</td>
+    </tr>
+        <tr>
+        <td>departure_date</td>
+        <td>phone_number_without_validation</td>
+        <td>product_name</td>
+        <td>date</td>
+    </tr>
+        <tr>
+        <td>completion_email</td>
+        <td>flight_departure_city</td>
+        <td>arrival_date</td>
+        <td>date_of_birth</td>
+    </tr>
+    <tr>
+        <td>origin_lat</td>
+        <td>origin_lng</td>
+        <td>date</td>
+        <td>pincode</td>
+    </tr>
+        <tr>
+        <td>age</td>
+        <td>otp_four_digit</td>
+        <td>time</td>
+        <td>time_with_range</td>
+    </tr>
+    <tr>
+        <td>email</td>
+        <td>profession</td>
+        <td>age_range</td>
+        <td>pan_card</td>
+    </tr>
+    <tr>
+        <td>website_company_name_regex</td>
+        <td>feedback_regex</td>
+        <td>nps_feedback_range</td>
+        <td>feedback_thumbs</td>
+    </tr>
+    <tr>
+        <td>disambiguation_negation</td>
+        <td>disambiguation_choice</td>
+        <td>international_phone_number</td>
+        <td>completion_phone_number</td>
+    </tr>
+    <tr>
+        <td>person_name</td>
+        <td>url_capturer</td>
+        <td>feedback_request</td>
+        <td>completion_location</td>
+    </tr>
+    <tr>
+        <td>color</td>
+        <td>user_name</td>
+        <td>completion_city</td>
+    </tr>
+    </table>
+<p><strong>Using Public Entities on bot</strong></p>
+<ul>
+<li>The value stored in public entity are retained until the user clears their browsers local storage.</li>
+<li>We cannot change <strong>Advanced Settings</strong> of public entities.</li>
+<li>To add public entity on the bot, simply search for the above mentioned entity name and then click on <strong>Add to Bot Says</strong>.</li>
+</ul>
 <h2><a class="anchor" aria-hidden="true" id="how-to-create-a-new-entity"></a><a href="#how-to-create-a-new-entity" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How to create a new entity?</h2>
 <p>If you are creating a new entity, then that is called a <strong>local</strong> or <strong>private entity</strong> as they are specific to your bot. To create a new local entity -</p>
 <ul>
@@ -630,7 +691,7 @@ b. The User Utterance has both the entity values on which filter has been applie
     <td>'en', 'hi', 'gu', 'bn', 'mr', 'ta'</td>
   </tr>
 </table>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 3/10/2021</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/bot-builder/basic/connections"><span class="arrow-prev">← </span><span>Connections</span></a><a class="docs-next button" href="/bot-builder/basic/smalltalk"><span>Small Talk</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#how-to-add-an-entity">How to add an entity?</a></li><li><a href="#how-to-create-a-new-entity">How to create a new entity?</a></li><li><a href="#how-does-using-an-entity-affect-the-other-bot-says-responses">How does using an entity affect the other Bot Says responses?</a></li><li><a href="#mandatory-and-optional-entities">Mandatory and Optional Entities</a></li><li><a href="#how-to-list-all-entities-of-the-bot">How to list all entities of the bot?</a></li><li><a href="#entity-types">Entity Types</a><ul class="toc-headings"><li><a href="#words--phrases-entity">Words &amp; Phrases Entity</a></li><li><a href="#numbers-entity">Numbers Entity</a></li><li><a href="#regex-entity">Regex Entity</a></li><li><a href="#currency-entity">Currency Entity</a></li><li><a href="#attachment-entity">Attachment Entity</a></li></ul></li><li><a href="#entity-patterns">Entity Patterns</a><ul class="toc-headings"><li><a href="#when-to-use">When to use?</a></li><li><a href="#how-to-use">How to use?</a></li><li><a href="#how-do-entity-patterns-work">How do Entity Patterns work?</a></li><li><a href="#troubleshooting">Troubleshooting</a></li></ul></li><li><a href="#entity-reprompt">Entity Reprompt</a></li><li><a href="#entity-settings">Entity Settings</a><ul class="toc-headings"><li><a href="#1-previous-context-tags">1. Previous Context Tags</a></li><li><a href="#2-payload-keys">2. Payload Keys</a></li></ul></li><li><a href="#node-entity-filter">Node Entity Filter</a><ul class="toc-headings"><li><a href="#what-is-the-feature">What is the feature?</a></li><li><a href="#when-to-use-1">When to Use?</a></li><li><a href="#how-to-use-1">How to Use?</a></li><li><a href="#how-does-it-work">How does it work?</a></li></ul></li><li><a href="#delete-an-entity">Delete an entity</a></li><li><a href="#using-entity-flusher">Using Entity Flusher</a><ul class="toc-headings"><li><a href="#dos-and-dont-of-entity-flusher">Do's and Don't of Entity Flusher</a></li></ul></li><li><a href="#language-support-for-different-entities">Language Support for Different Entities</a></li></ul></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Conversation Studio</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Smart Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Intelligent Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://docs.haptik.ai/ios-sdk/" class="footer-column-link">iOS SDK</a><a href="https://docs.haptik.ai/android-sdk/" class="footer-column-link">Android SDK</a><a href="https://docs.haptik.ai/web-sdk/" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/whatsapp/" class="footer-column-link">WhatsApp</a><a href="https://docs.haptik.ai/other/facebook" class="footer-column-link">Facebook</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Bot API</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Agent Chat Tool</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2021 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 3/17/2021</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/bot-builder/basic/connections"><span class="arrow-prev">← </span><span>Connections</span></a><a class="docs-next button" href="/bot-builder/basic/smalltalk"><span>Small Talk</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#how-to-add-an-entity">How to add an entity?</a></li><li><a href="#how-to-create-a-new-entity">How to create a new entity?</a></li><li><a href="#how-does-using-an-entity-affect-the-other-bot-says-responses">How does using an entity affect the other Bot Says responses?</a></li><li><a href="#mandatory-and-optional-entities">Mandatory and Optional Entities</a></li><li><a href="#how-to-list-all-entities-of-the-bot">How to list all entities of the bot?</a></li><li><a href="#entity-types">Entity Types</a><ul class="toc-headings"><li><a href="#words--phrases-entity">Words &amp; Phrases Entity</a></li><li><a href="#numbers-entity">Numbers Entity</a></li><li><a href="#regex-entity">Regex Entity</a></li><li><a href="#currency-entity">Currency Entity</a></li><li><a href="#attachment-entity">Attachment Entity</a></li></ul></li><li><a href="#entity-patterns">Entity Patterns</a><ul class="toc-headings"><li><a href="#when-to-use">When to use?</a></li><li><a href="#how-to-use">How to use?</a></li><li><a href="#how-do-entity-patterns-work">How do Entity Patterns work?</a></li><li><a href="#troubleshooting">Troubleshooting</a></li></ul></li><li><a href="#entity-reprompt">Entity Reprompt</a></li><li><a href="#entity-settings">Entity Settings</a><ul class="toc-headings"><li><a href="#1-previous-context-tags">1. Previous Context Tags</a></li><li><a href="#2-payload-keys">2. Payload Keys</a></li></ul></li><li><a href="#node-entity-filter">Node Entity Filter</a><ul class="toc-headings"><li><a href="#what-is-the-feature">What is the feature?</a></li><li><a href="#when-to-use-1">When to Use?</a></li><li><a href="#how-to-use-1">How to Use?</a></li><li><a href="#how-does-it-work">How does it work?</a></li></ul></li><li><a href="#delete-an-entity">Delete an entity</a></li><li><a href="#using-entity-flusher">Using Entity Flusher</a><ul class="toc-headings"><li><a href="#dos-and-dont-of-entity-flusher">Do's and Don't of Entity Flusher</a></li></ul></li><li><a href="#language-support-for-different-entities">Language Support for Different Entities</a></li></ul></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Conversation Studio</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Smart Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Intelligent Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://docs.haptik.ai/ios-sdk/" class="footer-column-link">iOS SDK</a><a href="https://docs.haptik.ai/android-sdk/" class="footer-column-link">Android SDK</a><a href="https://docs.haptik.ai/web-sdk/" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/whatsapp/" class="footer-column-link">WhatsApp</a><a href="https://docs.haptik.ai/other/facebook" class="footer-column-link">Facebook</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Bot API</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Agent Chat Tool</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2021 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

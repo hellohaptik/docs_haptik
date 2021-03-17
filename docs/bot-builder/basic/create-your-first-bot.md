@@ -28,7 +28,7 @@ Click on the **+Add Skills** button to add required skills on the IVA. As soon a
 
 > **Smart Skills** are highly intelligent, pre-built conversational journeys.
 
-There smart skills are available for specific industries like [**Ecommerce**](https://docs.haptik.ai/bot-builder/basic/ecommerce), [**Insurance**](https://docs.haptik.ai/bot-builder/basic/insurance) and [**Telecom**](https://docs.haptik.ai/bot-builder/basic/telecom). There are also few **Generic** ones which are most widely used in all IVAs.
+These smart skills are available for specific industries like [**Ecommerce**](https://docs.haptik.ai/bot-builder/basic/ecommerce), [**Insurance**](https://docs.haptik.ai/bot-builder/basic/insurance) and [**Telecom**](https://docs.haptik.ai/bot-builder/basic/telecom). There are also few **Generic** ones which are most widely used in all IVAs.
 
 ![add_skill](assets/ss4.png)
 
@@ -36,7 +36,7 @@ There is a **Search option** available to look for your desired Smart Skill as w
 
 ![search_ss](assets/ss5.png)
 
-Once you click on any Smart Skill, a pop-up modal opens up which mentiones all the details about the Smart Skill.
+Once you click on any Smart Skill, a pop-up modal opens up which mentions all the details about the Smart Skill.
 
 ![ss_info](assets/ss6.png)
 
@@ -56,16 +56,16 @@ On the Left hand side, you will be able to see the list of all the Skills added 
 
 There are 4 options available for every Skill -
 
-1. Deactivate Skill - This is deactive the selected Skill and the IVA will no longer respond to users query from this Skill.
-2. Rename Skill - You can rename the select Skill
-3. Copy Skill - This option will allow you to copy the entire Skill and then you can paste it on onther IVA.
-4. Paste Node - This options allows you to paste node that you copies from another Skill.
+1. Deactivate Skill - This will deactivate the selected Skill and the IVA will no longer respond to user queries from this Skill.
+2. Rename Skill - You can rename the selected Skill.
+3. Copy Skill - This option will allow you to copy the entire Skill and paste it on any IVA.
+4. Paste Node - This option will allow you to paste node that you copied from another Skill.
 
 ![ss_options](assets/ss10.png)
 
 ### Create a Custom Skill
 
-If the Smart Skills available on the Conversation Studio are not aligning with your use-case you can create a Custom Skill.
+If the Smart Skills available on the Conversation Studio are not aligning with your use-case, you can create a Custom Skill.
 
 To add a Custom Skill, click on the **+ Custom Skill** button. This button would be at the bottom of the modal which opens up on the click of **+ Add Skill** button.
 
@@ -75,7 +75,7 @@ Provide the purpose of the skill i.e. name to your Custom Skill and click on the
 
 ![add_custom_skill](assets/ss12.png)
 
-Once a new Skill is created successfully, you can start adding Nodes on the skill to start with your conversational journey. To know more about Nodes, click [**here**](https://docs.haptik.ai/bot-builder/basic/creating-nodes).
+Once a new Skill is created successfully, you can start adding Nodes on the skill to start creating your conversational journey. To know more about Nodes, click [**here**](https://docs.haptik.ai/bot-builder/basic/creating-nodes).
 
 ![add_nodes](assets/ss13.png)
 
@@ -95,4 +95,4 @@ You can re-activate the Skill set as well
 
 ## Small Talk
 
-Smalltalk is a plugin that enables your IVA to have informal conversations like "What is the weather like", "Tell me a joke". This plugin provides 99+ such conversational intents with their predefined responses. You can go ahead and tweak these responses suiting your brand and IVA. To know more about Small Talk, click [**here**](https://docs.haptik.ai/bot-builder/basic/smalltalk).
+**Smalltalk** is a plugin that enables your IVA to have informal conversations like "What is the weather like", "Tell me a joke". This plugin provides 99+ such conversational intents with their predefined responses. You can go ahead and tweak these responses suiting your brand and IVA. To know more about Small Talk, click [**here**](https://docs.haptik.ai/bot-builder/basic/smalltalk).

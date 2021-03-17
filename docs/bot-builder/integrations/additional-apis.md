@@ -19,11 +19,15 @@ client-id: <CLIENT_ID>
 Content-Type: application/json
 ```
 
-##### Authorization - The Authorization header of each HTTP request should be “Bearer” followed by a token. This token can be copied from the **Business Manager**, as shown below -
+##### Authorization - 
+
+The Authorization header of each HTTP request should be “Bearer” followed by a token. This token can be copied from the **Business Manager**, as shown below
 
 ![token](https://user-images.githubusercontent.com/75118325/111417485-fa614200-870b-11eb-8d82-5a44c1915112.png)
 
-##### Client-id - The client id can be found in the **View Credentials** section. You can view the credentials on Conversation Studio as shown below
+##### Client-id - 
+
+The client id can be found in the **View Credentials** section. You can view the credentials on Conversation Studio as shown below
 
 ![clientid](https://user-images.githubusercontent.com/75118325/111417815-9a1ed000-870c-11eb-929d-50f2320f5fe1.png)
 
@@ -121,11 +125,15 @@ client-id: <CLIENT_ID>
 Content-Type: application/json
 ```
 
-##### Authorization - The Authorization header of each HTTP request should be “Bearer” followed by a token. This token can be copied from the **Business Manager**, as shown below -
+##### Authorization - 
+
+The Authorization header of each HTTP request should be “Bearer” followed by a token. This token can be copied from the **Business Manager**, as shown below
 
 ![token](https://user-images.githubusercontent.com/75118325/111417485-fa614200-870b-11eb-8d82-5a44c1915112.png)
 
-##### Client-id - The client id can be found in the **View Credentials** section. You can view the credentials on Conversation Studio as shown below
+##### Client-id - 
+
+The client id can be found in the **View Credentials** section. You can view the credentials on Conversation Studio as shown below
 
 ![clientid](https://user-images.githubusercontent.com/75118325/111417815-9a1ed000-870c-11eb-929d-50f2320f5fe1.png)
 
@@ -232,11 +240,15 @@ Client-ID: <CLIENT_ID>
 Content-Type: application/json
 ```
 
-##### Authorization - The Authorization header of each HTTP request should be “Bearer” followed by a token. This token can be copied from the **Business Manager**, as shown below -
+##### Authorization - 
+
+The Authorization header of each HTTP request should be “Bearer” followed by a token. This token can be copied from the **Business Manager**, as shown below
 
 ![token](https://user-images.githubusercontent.com/75118325/111417485-fa614200-870b-11eb-8d82-5a44c1915112.png)
 
-##### Client-id - The client id can be found in the **View Credentials** section. You can view the credentials on Conversation Studio as shown below
+##### Client-id - 
+
+The client id can be found in the **View Credentials** section. You can view the credentials on Conversation Studio as shown below
 
 ![clientid](https://user-images.githubusercontent.com/75118325/111417815-9a1ed000-870c-11eb-929d-50f2320f5fe1.png)
 
@@ -383,11 +395,15 @@ client-id: <CLIENT_ID>
 Content-Type: multipart/form-data
 ```
 
-##### Authorization - The Authorization header of each HTTP request should be “Bearer” followed by a token. This token can be copied from the **Business Manager**, as shown below -
+##### Authorization - 
+
+The Authorization header of each HTTP request should be “Bearer” followed by a token. This token can be copied from the **Business Manager**, as shown below
 
 ![token](https://user-images.githubusercontent.com/75118325/111417485-fa614200-870b-11eb-8d82-5a44c1915112.png)
 
-##### Client-id - The client id can be found in the **View Credentials** section. You can view the credentials on Conversation Studio as shown below
+##### Client-id - 
+
+The client id can be found in the **View Credentials** section. You can view the credentials on Conversation Studio as shown below
 
 ![clientid](https://user-images.githubusercontent.com/75118325/111417815-9a1ed000-870c-11eb-929d-50f2320f5fe1.png)
 
@@ -462,15 +478,18 @@ Authorization: Bearer <TOKEN>
 client-id: <CLIENT_ID>
 ```
 
-##### Authorization - The Authorization header of each HTTP request should be “Bearer” followed by a token. This token can be copied from the **Business Manager**, as shown below -
+##### Authorization - 
+
+The Authorization header of each HTTP request should be “Bearer” followed by a token. This token can be copied from the **Business Manager**, as shown below
 
 ![token](https://user-images.githubusercontent.com/75118325/111417485-fa614200-870b-11eb-8d82-5a44c1915112.png)
 
-##### Client-id - The client id can be found in the **View Credentials** section. You can view the credentials on Conversation Studio as shown below
+##### Client-id - 
+
+The client id can be found in the **View Credentials** section. You can view the credentials on Conversation Studio as shown below
 
 ![clientid](https://user-images.githubusercontent.com/75118325/111417815-9a1ed000-870c-11eb-929d-50f2320f5fe1.png)
 
-##### Content-Type - application/json
 
 #### Response
 A successful request to the API will return a `200` status code with a JSON response object.

@@ -19,8 +19,15 @@ client-id: <CLIENT_ID>
 Content-Type: application/json
 ```
 
-- Authorization - The Authorization header of each HTTP request should be “Bearer” followed by your token which will be provided by Haptik
-- client-id - The client id for your account which will be provided by Haptik
+- Authorization - The Authorization header of each HTTP request should be “Bearer” followed by a token. This token can be generated from the **Business Manager**, as shown below -
+
+![token](https://user-images.githubusercontent.com/75118325/111417485-fa614200-870b-11eb-8d82-5a44c1915112.png)
+
+- client-id - The client id can be found in the **View Credentials** section. You can view the credentials on Conversation Studio as shown below
+
+![clientid](https://user-images.githubusercontent.com/75118325/111417815-9a1ed000-870c-11eb-929d-50f2320f5fe1.png)
+
+
 - Content-Type - application/json
 
 #### Request

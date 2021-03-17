@@ -5,13 +5,6 @@ id: example-multi-language
 
 SDK also supports multi-language bots where the user can seamlessly switch between multiple languages.
 
-Bot builder for the client should already be configured (1 business for each language following the business-via-name pattern)
-
-When specifying app settings, instead of specifying the business-id, we need to specify the `business-via-name`. Pass the via name pattern to this. (Ex. if via_name is mychannel_hi, then the businss-via-name is `mychannel`)
-```
-  'business-via-name': 'mychannel'
-```
-
 The default language first loaded can be changed by adding the `default-language` parameter
 ```
   'default-language': 'hi'
@@ -37,7 +30,6 @@ The default language first loaded can be changed by adding the `default-language
   
   <script type="text/javascript">
   window.haptikInitSettings = {
-    'business-via-name': '<provided by haptik>',
     'client-id': '<provided by haptik>',
     'base-url': '<provided by haptik>',
     'default-language': 'hi'

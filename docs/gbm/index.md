@@ -1,17 +1,23 @@
 ---
-title: Set up Google Business Messages
+title: Introduction
 id: index
 ---
 
 ## Getting started with **Google Business Messages**
 
-**Google Business Messages** helps to connect your business and users. When user searches for your business name or try to search for contact information the users will be able to see a chat option, seen as **MESSAGE**, as shown below - 
+The way we communicate has changed: 75% of consumers now prefer to engage with a brand over private messaging channels versus traditional channels. Business Messages can help route calls to chat, increase sales, and improve customer satisfaction with CSAT data and feedback.
 
-![gbm_messages](/assets/gbm1.png)
+Business Messages is a mobile conversational channel that combines entry points on Google Maps, Search, and brand websites to create rich, asynchronous messaging experiences that delight customers and drive business results. It also facilitates the connection between user and a brand. When user searches for your business name or try to search for contact information the users will be able to see a chat option, seen as **MESSAGE**, as shown below - 
 
-Once the user click on the **MESSAGE** option, a conversational screen opens up and the user can start sending their messages.
+![gbm1](https://user-images.githubusercontent.com/75118325/111470175-919ab980-874d-11eb-9771-251a48bdaf58.png)
 
-> Haptik is a registered **Partner** with Google Platform.
+The **MESSAGE** option is available on all iOS and Andriod Devices. 
+
+Once the user clicks on the **MESSAGE** option, a conversational screen opens up and the user can start sending their messages.
+
+To know more about Google Business Messages, click [**here**](https://businessmessages.google/).
+
+> **Haptik is a registered `Partner` with Google Platform.**
 
 ## Setting up Google Business Messages 
 
@@ -52,5 +58,6 @@ To know more about the verification process, click [**here**](https://developers
 Once the agent is verified for a brand, you can start the development of the IVA using Haptik's Conversation Studio. When the agent is launched, Business Messages does a quick round of check for all required approvals. After the requirements are met, the agent becomes available for the users within a few hours.
 To know more about launching the agent, click [**here**](https://developers.google.com/business-communications/business-messages/guides/deploy/launch?method=console#launch-agent)
 
+To know in detail about setting up the Google Business Messages, click [**here**](https://developers.google.com/business-communications/business-messages/guides).
 
 Once the Google Business Messages is set up, we will now see the implementation of IVA on Haptik's Conversation Studio.

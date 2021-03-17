@@ -16,11 +16,15 @@ The Haptik Conversation Studio platform has a three-tiered organizational system
 
 > There is a **one-to-one relationship** between partner, business, and a bot i.e. **one partner** is mapped to **one business** and one business is mapped to only **one bot**.
 
+You can open the Business page of a bot as shown in the image below -
+
+![bot_skeleton](/assets/OpenBusiness.png)
+
 ## 2. Inside a Bot 
 
 Once you have successfully created a bot, you would be able to see the skeleton structure of the bot, as described below -
 
-![bot_skeleton](/assets/BH1.png)
+![bot_skeleton](/assets/BotHomepage.png)
 
 As you can see, there are three major sections -
 

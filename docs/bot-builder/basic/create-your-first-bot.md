@@ -28,7 +28,7 @@ Click on the **+Add Skills** button to add required skills on the IVA. As soon a
 
 > **Smart Skills** are highly intelligent, pre-built conversational journeys.
 
-There smart skills are available for specific industries like **Ecommerce**, **Insurance** and **Telecom**. There are also few **Generic** ones which are most widely used in all IVAs.
+There smart skills are available for specific industries like [**Ecommerce**](https://docs.haptik.ai/bot-builder/basic/ecommerce), [**Insurance**](https://docs.haptik.ai/bot-builder/basic/insurance) and [**Telecom**](https://docs.haptik.ai/bot-builder/basic/telecom). There are also few **Generic** ones which are most widely used in all IVAs.
 
 ![add_skill](assets/ss4.png)
 

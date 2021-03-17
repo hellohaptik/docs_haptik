@@ -137,7 +137,7 @@ module.exports = () => (
         {
           title: 'Google Business Messages',
           description:
-            'Documentation to help you build conversational experiences on Google Business Manager',
+            'Documentation to help you build conversational experiences on Google Business Messages',
           ctaText: 'Get Started',
           ctaLink: '/gbm',
         },

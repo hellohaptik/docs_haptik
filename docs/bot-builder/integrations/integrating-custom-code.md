@@ -14,8 +14,7 @@ The Code Editor feature allows for a quick go-to-market and significantly reduce
 
 You can open the code editor by choosing a Code Node and then clicking on the `Open Code Editor` button.
 
-![Opening Code Editor](assets/api2.png)
-
+![codenode](https://user-images.githubusercontent.com/75118325/111466671-98bfc880-8749-11eb-8e43-4c6d18e1ee2c.png)
 
 ## Using Code Editor
 
@@ -81,6 +80,38 @@ Once the entity value is stored in a variable on the Code Node, you can use this
 The following is a sample code for fetching order details - 
 
 ```python
+def main(event, context):
+    """
+   event['body'] is a string dict with the following keys:
+   node, event, user, entities.
+   Currently, we pass user_id, user_name, full_name, device_platform and language_code in the user dictionary.
+   Args:
+       event (dict): Data corresponding to this event
+       context
+   Returns
+       (dict): response with statusCode and the response for the User
+   """
+    body = json.loads(event['body'])
+    entities = body.get('entities')
+    user_data = body.get('user')
+    conversation_details = body.get('conversation_details')
+    env_variables = body.get("env_variables")
+    entity = Entities(entities)
+    order_id = entity.get('capture_track_orderid_copy', '')
+    
+    order_details = get_order_details(env_variables, order_id)
+    if 'Statuscode' in order_details:
+        return order_details
+        
+    message = get_order_message(order_details)
+    
+    final_response = {
+        'status': True, 
+        'message': message
+    }
+    response = {'statusCode': 200, 'body': json.dumps(final_response), 'headers': {'Content-Type': 'application/json'}}
+    return response
+
 def get_order_details(env_variables, order_id):
     url = "<API_ENDPOINT>"
     payload = {
@@ -119,7 +150,9 @@ def get_order_details(env_variables, order_id):
         return response
  ```
 
-## Create HSLs in Code Editor
+> You cannot set the entity value from the Code Editor.
+
+### Create HSLs in Code Editor
 
 **1. Display a static HSL element -**
 
@@ -144,6 +177,38 @@ Here, we have created a button HSL to display the message “Your email is **abc
 You can show dynamic number of HSLs using the code editor. The following is an example to show the active orders of an user using Carousel element - 
 
 ```python
+def main(event, context):
+    """
+   event['body'] is a string dict with the following keys:
+   node, event, user, entities.
+   Currently, we pass user_id, user_name, full_name, device_platform and language_code in the user dictionary.
+   Args:
+       event (dict): Data corresponding to this event
+       context
+   Returns
+       (dict): response with statusCode and the response for the User
+   """
+    body = json.loads(event['body'])
+    entities = body.get('entities')
+    user_data = body.get('user')
+    conversation_details = body.get('conversation_details')
+    env_variables = body.get("env_variables")
+    entity = Entities(entities)
+    order_id = entity.get('capture_track_orderid_copy', '')
+    
+    order_details = get_order_details(env_variables, order_id)
+    if 'Statuscode' in order_details:
+        return order_details
+        
+    message = get_order_message(order_details)
+    
+    final_response = {
+        'status': True, 
+        'hsl': get_carousel(self, orders)
+    }
+    response = {'statusCode': 200, 'body': json.dumps(final_response), 'headers': {'Content-Type': 'application/json'}}
+    return response
+
 def get_carousel(self, orders):
         carousel_items = []
         for order_item in orders :
@@ -165,7 +230,7 @@ All the orders retrieved from the API will be displayed using Carousel element a
 
 ![multiple_orders](https://user-images.githubusercontent.com/75118325/111423173-e8849c80-8715-11eb-8993-29dd861db16f.png)
 
-## Using final_response
+### Using final_response
 
 The format or values which the code will return depends on `final_response` present in `def main(event, context)`.
 
@@ -222,11 +287,7 @@ This output format needs to be added as a Sample Output JSON Format on Code Node
 
 ![Opening Code Editor](assets/api7.png)
 
-## Providing Sample input data in JSON
-
-The Code Editor is an integrated environment where you can write the code and also run it. In the bottom part of the page there is a _Sample input data (JSON)_ section where you can provide the enitity values which you are expecting from the user.
-
-![sample_input](assets/sample-input.png)
+> If the format of `final_response` is wrong, the bot gives a bot break message.
 
 ## Using Output Node to display Output
 
@@ -236,17 +297,19 @@ You can directly use the variables defined in the _Sample Output JSON format_ to
 
 ![outputhsl](https://user-images.githubusercontent.com/75118325/111423654-9f811800-8716-11eb-90a6-b253133ff5d0.png)
 
+> **Use Raw Text/JSON HSL to use variables**
+
 You can make use of the variables coming from the Code Node to display selected variables - 
 
 ![outpsthsl2](https://user-images.githubusercontent.com/75118325/111425457-3353e380-8719-11eb-9daa-6792403bc175.png)
 
 After creating a connection on the basis of variables, you can direclty show a static Bot response, as shown below - 
 
+![addvariable](https://user-images.githubusercontent.com/75118325/111468569-b68e2d00-874b-11eb-9d7d-0e1eeb57a7b1.png)
+
 ![ophsl3](https://user-images.githubusercontent.com/75118325/111425748-9cd3f200-8719-11eb-9d21-5d1fcb7755fb.png)
 
 ![ophsl4](https://user-images.githubusercontent.com/75118325/111425833-ba08c080-8719-11eb-8954-68ebd83edd6b.png)
-
-> **Use Raw Text/JSON HSL to use variables**
 
 The output JSON variables are visible when we click on `Add Variables` while creating a connection between the Output node.
 
@@ -255,6 +318,10 @@ The output JSON variables are visible when we click on `Add Variables` while cre
 The output JSON variables are also visible when we click on `Add Variables` while creating a response under `Bot Says` of Output Node.
 
 ![Opening Code Editor](assets/api9.png)
+
+You can multiple output nodes emerging from the code node. These Output Nodes can be connected using the variables.
+
+![outputnodes](https://user-images.githubusercontent.com/75118325/111469107-51870700-874c-11eb-9456-ca48339d2041.png)
 
 **IMPORTANT POINTS** -
 

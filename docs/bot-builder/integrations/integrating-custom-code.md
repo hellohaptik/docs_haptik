@@ -8,7 +8,7 @@ In most cases, APIs are not directly consumable by the authoring platforms. This
 
 Haptik’s Conversation Studio solves these problems in a novel way through the use of an integrated Code Editor. The Code Editor allows bot builders to easily integrate with external platforms through python scripts. This removes the requirement to build a middleware on top of the external API. The Code Editor uses a serverless implementation so it is more scalable. Another benefit of using the Code Editor is that simple dynamic behavior can be easily added through python scripts without having to build an API to do it.
 
-The Code Editor provides logger support and live testing of the code. It also helps to manage IVA state by storing contextual information related to the current conversation that the user is having with the IVA. Some examples of this are policy id or policy details that the user is exploring in the current conversation.
+The Code Editor provides logger support and live testing of the code. It also helps to manage IVA state by storing contextual information related to the current conversation that the user is having with the IVA. Some examples of this are order id or order details that the user is exploring in the current conversation.
 
 The Code Editor feature allows for a quick go-to-market and significantly reduces the infrastructure cost.
 
@@ -54,20 +54,20 @@ def main(event, context):
 
 ### Using Entities on Code Editor
 
-The information which is collected from users on the Static Node, in the form of entity, can be used on Code Node. You can use the entities to send the dynamic values collected from uses on the IVA and send them to the API to fetch real-time data. 
+The information which is collected from users on the Static Node, in the form of entities, can be used on Code Node to fetch user related information. 
 
 The connection is automatic from Static Node to Code Node i.e. whenever user provides all the mandatory entity values, the following Code Node gets triggered.
-Inorder to use these entity values in the Code Node, we have to create a new variables.
+In order to use these entity values in the Code Node, we have to create new variables.
 
-Let's take an example of order id to understand how to use entity value on Code Node - 
+Let's take an example of fetching order details. We have an entity to save **Order ID**. We would use this to understand how to fetch information using entity value on Code Node -
 
-You have a `regex` entity with the pattern `^[a-z]{3}\d{3}$`, this entity will accept values such as `abc123`.
+**order_id_demotrain** is a `regex` entity with the pattern `^[a-z]{3}\d{3}$`, this entity will accept values such as `abc123`.
 
 There is a standard JSON format in which the values are stored within an entity. To understand this format, open the **Detailed Info** tab on the **logs** sections besides the entity value which was provided to the IVA. This is found on the Test Bot as shown below - 
 
 ![entity_on_logs](assets/entity-log.png)
 
-So the order_id is stored within the entities, under the entity name `order_id_demotrain`. The actual `value` is stored under `entity_value`. On Code Node, you can fetch the `value` in this format - 
+So the Order ID is stored under the entity name `order_id_demotrain`. The actual `value` is stored under `entity_value`. On Code Node, you can fetch the `value` in this format - 
 
 ```python
 order_id = entities.get("order_id_demotrain")[0].get("entity_value").get('value')
@@ -119,30 +119,53 @@ def get_order_details(env_variables, order_id):
         return response
  ```
 
-### Create HSLs in Code Editor
-You can use HSL message(Chat Elements) to display different elements on the bot, such as carousels and buttons. To display HSLs using code node, we first have to copy the HSL from any static node, with the required elements such as a button. The procedure to copy an HSL is mentioned [here](https://docs.haptik.ai/bot-builder/basic/copypaste#how-to-copy-and-paste-the-hsls).
+## Create HSLs in Code Editor
+
+**1. Display a static HSL element -**
+
+You can use HSLs (Chat Elements) to display different elements on the bot, such as carousels and buttons. To display HSLs using code node, we first have to copy the HSL from any static node, with the required elements such as a button. The procedure to copy an HSL is mentioned [here](https://docs.haptik.ai/bot-builder/basic/copypaste#how-to-copy-and-paste-the-hsls).
 
 ![Opening Code Editor](assets/api10.png)
 
-Change the True and False flags according to Python conventions as shown below
+Change the **True** and **False** flags according to Python conventions as shown below -
 
 ![Opening Code Editor](assets/api11.png)
 
-The variables can be used to show information to the user as well - 
+The variables used in the code can also be used in these HSLs to show user specific information - 
 
 ![Opening Code Editor](assets/api12.png)
 
-Here, we have created a button HSL to display the message “Your email is <email>” and a button which redirects to Haptik’s website. When the code is executed on the IVA, it appears as follows,
+Here, we have created a button HSL to display the message “Your email is **abc@test.com**” and a button which redirects to Haptik’s website. When the code is executed on the IVA, it appears as follows -
 
 ![Opening Code Editor](assets/api13.png)
 
-### Providing Sample input data in JSON
+**2. Display dynamic HSL elements -**
 
-The Code Editor is an integrated environment where you can write the code and also run it. In the bottom part of the page there is a _Sample input data (JSON)_ section where you can provide the enitity values which you are expecting from the user.
+You can show dynamic number of HSLs using the code editor. The following is an example to show the active orders of an user using Carousel element - 
 
-![sample_input](assets/sample-input.png)
+```python
+def get_carousel(self, orders):
+        carousel_items = []
+        for order_item in orders :
+            carousel_items.append(self.get_carousel_item(order_item))
+        carousel_hsl = {
+            "text" : "Here are your order details",
+            "type" : "CAROUSEL",
+            "data" : {
+                "image_aspect_ratio" : "1000",
+                "width" : "MEDIUM",
+                "items": carousel_items
+            },
+            "isNew":False
+        }
+        return carousel_hsl
+```
 
-### Using final_response
+All the orders retrieved from the API will be displayed using Carousel element as follows -
+
+![multiple_orders](https://user-images.githubusercontent.com/75118325/111423173-e8849c80-8715-11eb-8993-29dd861db16f.png)
+
+## Using final_response
 
 The format or values which the code will return depends on `final_response` present in `def main(event, context)`.
 
@@ -199,7 +222,31 @@ This output format needs to be added as a Sample Output JSON Format on Code Node
 
 ![Opening Code Editor](assets/api7.png)
 
-To connect Code node and Output Node, you can use various rules/conditions on the above output. Please refer the conditions mentioned [here](https://docs.haptik.ai/bot-builder/basic/connections#code-node-to-output-node-connection-transition).
+## Providing Sample input data in JSON
+
+The Code Editor is an integrated environment where you can write the code and also run it. In the bottom part of the page there is a _Sample input data (JSON)_ section where you can provide the enitity values which you are expecting from the user.
+
+![sample_input](assets/sample-input.png)
+
+## Using Output Node to display Output
+
+One Code Node can be connected to multiple Output Nodes. Depending on the conditions provided while making a connection, the Output Node gets triggered. To know more about conditions to connect Code Node to Output Node, click [**here**](https://docs.haptik.ai/bot-builder/basic/connections#code-node-to-output-node-connection-transition).
+
+You can directly use the variables defined in the _Sample Output JSON format_ to show bot responses on the Output Node as shown below - 
+
+![outputhsl](https://user-images.githubusercontent.com/75118325/111423654-9f811800-8716-11eb-90a6-b253133ff5d0.png)
+
+You can make use of the variables coming from the Code Node to display selected variables - 
+
+![outpsthsl2](https://user-images.githubusercontent.com/75118325/111425457-3353e380-8719-11eb-9daa-6792403bc175.png)
+
+After creating a connection on the basis of variables, you can direclty show a static Bot response, as shown below - 
+
+![ophsl3](https://user-images.githubusercontent.com/75118325/111425748-9cd3f200-8719-11eb-9d21-5d1fcb7755fb.png)
+
+![ophsl4](https://user-images.githubusercontent.com/75118325/111425833-ba08c080-8719-11eb-8954-68ebd83edd6b.png)
+
+> **Use Raw Text/JSON HSL to use variables**
 
 The output JSON variables are visible when we click on `Add Variables` while creating a connection between the Output node.
 
@@ -355,16 +402,6 @@ When we test the code on the bot, logs are created every time a code node is exe
 When we click on View Logs button, it will open a screen where we can check all the logs when the code node was executed. This information is retained for the day. The following is the image of sample logs.
 
 ![Opening Code Editor](assets/viewlogs.png)
-
-## Using Output Node to display Output
-
-One Code Node can be connected to multiple Output Nodes. Depending on the conditions provided while making a connection, the Output Node gets triggered. To know more about conditions to connect Code Node to Output Node, click [**here**](https://docs.haptik.ai/bot-builder/basic/connections#code-node-to-output-node-connection-transition).
-
-You can directly use the variables defined in the _Sample Output JSON format_ to show bot responses on the Output Node as shown below - 
-
-![outputhsl](assests/outputhsl.png)
-
-> **Use Raw Text/JSON HSL to use variables**
 
 ## Pre-Transfer
 `Train Bot` prepares the code for production. Hence, you should make sure to call `Train Bot` if there are any changes in the custom code integration before transferring the bot to production.

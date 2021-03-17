@@ -64,7 +64,7 @@ Let's take an example of fetching order details. We have an entity to save **Ord
 
 There is a standard JSON format in which the values are stored within an entity. To understand this format, open the **Detailed Info** tab on the **logs** sections besides the entity value which was provided to the IVA. This is found on the Test Bot as shown below - 
 
-![entity_on_logs](assets/entity-log.png)
+![entity-log](https://user-images.githubusercontent.com/75118325/111479639-2b1a9900-8757-11eb-8005-7d9ca6a9b9d3.png)
 
 So the Order ID is stored under the entity name `order_id_demotrain`. The actual `value` is stored under `entity_value`. On Code Node, you can fetch the `value` in this format - 
 
@@ -104,6 +104,8 @@ def main(event, context):
         return order_details
         
     message = get_order_message(order_details)
+    
+    # get_order_message() returns order details in a button HSL 
     
     final_response = {
         'status': True, 
@@ -200,8 +202,12 @@ def main(event, context):
     if 'Statuscode' in order_details:
         return order_details
         
+    # get_order_details() will call the API by sending entity values as payload and fetch all the order details
+       
     message = get_order_message(order_details)
     
+    # get_order_message() returns order details in a button HSL
+
     final_response = {
         'status': True, 
         'hsl': get_carousel(self, orders)
@@ -297,7 +303,7 @@ You can directly use the variables defined in the _Sample Output JSON format_ to
 
 ![outputhsl](https://user-images.githubusercontent.com/75118325/111423654-9f811800-8716-11eb-90a6-b253133ff5d0.png)
 
-> **Use Raw Text/JSON HSL to use variables**
+> **Use Raw Text/JSON HSL to use variables as Bot Says.**
 
 You can make use of the variables coming from the Code Node to display selected variables - 
 
@@ -319,7 +325,7 @@ The output JSON variables are also visible when we click on `Add Variables` whil
 
 ![Opening Code Editor](assets/api9.png)
 
-You can multiple output nodes emerging from the code node. These Output Nodes can be connected using the variables.
+You can add multiple Output Nodes emerging from the Code Node. These Output Nodes can be connected using the variables.
 
 ![outputnodes](https://user-images.githubusercontent.com/75118325/111469107-51870700-874c-11eb-9456-ca48339d2041.png)
 

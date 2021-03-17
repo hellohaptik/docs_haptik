@@ -15,7 +15,7 @@ The **MESSAGE** option is available on all iOS and Android Devices.
 
 Once the user clicks on the **MESSAGE** option, a conversational screen opens up and the user can start sending their messages.
 
-> Add image here
+![Screenshot_20210317-221659_Maps](https://user-images.githubusercontent.com/75118325/111506508-b2740680-876f-11eb-83b1-aecc749ddf50.jpg)
 
 To know more about Google Business Messages, click [**here**](https://businessmessages.google/).
 

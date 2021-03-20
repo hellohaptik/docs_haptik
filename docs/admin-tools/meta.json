@@ -7,6 +7,9 @@
             "permission-management",
             "audit-dashboard",
             "azure-ad-sso"
+        ],
+        "Content Management": [
+            "upload-canned-responses"
         ]
     },
     "headerLink": {

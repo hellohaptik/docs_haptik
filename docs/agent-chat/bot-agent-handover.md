@@ -44,11 +44,15 @@ For automated transitions, Business Manager in Bot Builder has a `Team Manager` 
 
 ![Team Creation1](assets/HO2.png)
 
-2. After creating the team, add a name for your team, add the owner in the respective fields and tap on the Create Button to create the Team.
+2. After creating the team, add a **name** for your team, add the owner (partner) in the respective fields and tap on the **Save** button to create the Team.
 
-![Team Creation2](assets/HO3.png)
+![image](https://user-images.githubusercontent.com/75118325/111908416-333c4680-8a7f-11eb-8464-de00e6dcba9f.png)
 
 Team Description is optional.
+
+You can change or add automated messages from **Team Settings**. To know more about **Team Settings**, click [**here**](https://docs.haptik.ai/agent-chat/teams#how-to-make-changes-in-the-team-settings).
+
+![image](https://user-images.githubusercontent.com/75118325/111908608-dbeaa600-8a7f-11eb-843c-0f5c835f9b30.png)
 
 3. Now, assign agents for the Team created. For this -
 
@@ -72,7 +76,7 @@ Searching for an agent to be added in the team
 - A list of created teams appears in the Default Team. Select the one which was created.
 - Once the Team is added to Default Team, Click on Save.
 
-![Team Creation5](assets/HO6.png)
+![image](https://user-images.githubusercontent.com/75118325/111908484-78f90f00-8a7f-11eb-9167-3d0fbc119ae0.png)
 
  ## Queue Position Indicator
 
@@ -93,7 +97,7 @@ In most scenarios, delay messages are sent after 60 seconds or the time you have
 
 2. Queue Time Indicator message (as shared in the points above)
 
-3. Delay mmssage (Sorry, our agents are busy. Please try again after some time)
+3. Delay message (Sorry, our agents are busy. Please try again after some time)
 
 If the user still stays, user sees the agent entering the chat.
 

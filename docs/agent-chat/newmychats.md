@@ -4,13 +4,14 @@ title: Introduction
 
 ## How to use My Chats?
 
-![MyChatsScreen1](assets/mychatsscreen.png)
+![image](https://user-images.githubusercontent.com/75118325/111909889-0be87800-8a85-11eb-8869-6f31da5799fe.png)
+
 
 In this tab, an agent can start taking chats assigned to him/her personally. The screen is divided into multiple sections. We will call it LHS, Centre and RHS for ease of understanding.
 
 ### Left Hand Side of the screen
 
-![MyChatsScreen2](assets/leftside.png)
+![image](https://user-images.githubusercontent.com/75118325/111909905-27ec1980-8a85-11eb-8c9d-6ac53813171d.png)
 
 A chat agent can:
   * View agent's display name
@@ -22,7 +23,7 @@ A chat agent can:
 
 The agent will be able to view his name and also his current status. 
 
-![MyChatsScreen3](assets/AgentDetails.png)
+![image](https://user-images.githubusercontent.com/75118325/111909934-3c301680-8a85-11eb-87b7-5181774eaa75.png)
 
 You can also choose the change the status by clicking on **"Go Online"** or **"Take a break"**. 
 
@@ -169,7 +170,7 @@ Canned Responses are predefined responses uploaded prior, which can easily used 
 
 ### Right Hand Side of the screen
 
-![MyChatsScreen8](assets/rightscreen.png)
+![image](https://user-images.githubusercontent.com/75118325/111909976-67b30100-8a85-11eb-97f2-8353bf37ffcf.png)
 
 A chat agent can:
   * View User Details
@@ -191,7 +192,7 @@ Custom tools like ticketing system, CRM, search fields, etc. can be used by agen
 
 These external tools can also be expanded for better usability as shown in the image below -
 
-![MyChatsScreen101](assets/expandedtoolsview.png)
+![image](https://user-images.githubusercontent.com/75118325/111910001-8913ed00-8a85-11eb-8f04-7b74bb8d11e3.png)
 
 If there are more than 2 or 3 tools, they will come stacked in a list as shown in the below image -
 

@@ -23,7 +23,7 @@ A team can receive chats from a business in 2 possible configurations
 
 - If a Business is **Bot + Human Assisted** 
 
-![bot_settings](assets/teams_bot_settings.png)
+![image](https://user-images.githubusercontent.com/75118325/111911168-62a48080-8a8a-11eb-9e63-575c1674b895.png)
 
 - If a Business is **Completely Human Assisted**
 

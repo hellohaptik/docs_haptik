@@ -259,11 +259,13 @@ In the above image, you can see a number type entity. Following image shows the 
 
 ### Regex Entity
 
-**Regex** entity is meant for detecting patterns like email ID, phone number etc. and collect relevent information from user says.
+**Regex** entity is meant for **detecting patterns** like email ID, phone number etc. and collect relevent information from user says. 
+
+> To check if the regex is accepting the pattern, you can test the pattern using the **Regex Pattern** tab. If the value entered is according to the regex pattern, it will be highlighted, as shown below -
 
 ![Regex Entity](assets/RegexEntity.png)
 
-In the above example, if the user is not giving a valid PANCARD number, matching the regular expression pattern, then the entity message would be asking the user for a valid input. 
+In the above example, if the user is not giving a valid PANCARD number, matching the regular expression pattern, then the IVA will send the Entity Reprompt message so the user can enter the right PANCARD number.
 
 You can refer https://regex101.com/ to learn more about regular expression.
 

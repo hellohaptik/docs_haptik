@@ -17,7 +17,7 @@ You can follow the below video to create your first bot
 
 **Step 2**: Now, a pop-up will appear with prompts to configure your bot's basic details:
 
-![createbot_popup_may](/assets/CreateBotPopup.png)
+![image](https://user-images.githubusercontent.com/75118325/111914848-c2565800-8a99-11eb-8a39-0bfb8f2717f9.png)
 
 **Step 3**: Fill the bot details according to the instructions given here:
 
@@ -25,15 +25,15 @@ You can follow the below video to create your first bot
 
       Ex: When the user asks "Who are you?". The bot replies with "I'm <Bot Name>". 
 
-- **Bot Description**: Describe the purpose of your bot. This text here isn't visible anywhere on frontend. Moreover, this text field here works as a reference for everyone.
-
 - **Partner**: A partner is the Conversation Studio's largest unit, and can be deployed in multiple locations (i.e. a website, Android and iOS Apps, Facebook Messenger, Whatsapp, Google Business Manager, etc.). Usually, its your organisation's name or project's name.
+
+- **Select Languages**: Select the languages you want to create the bot in. The default is **English**.
 
 **Step 4**: Click on **Create Bot** to successfully create your bot. The below pop up would come showing the success message
 
-![createbotbutton](/assets/CreateBotButton.png)
+![image](https://user-images.githubusercontent.com/75118325/111914967-2a0ca300-8a9a-11eb-9d06-11f76aae4738.png)
 
-**Step5**: Clicking on **View Bot** would take you to the bot page, where you'll be prompted to input the stories, sub-stories and nodes that will make up your conversation flow.
+**Step 5**: Clicking on **View Bot** would take you to the bot page, where you'll be prompted to input the stories, sub-stories and nodes that will make up your conversation flow.
 
 ![viewbot](/assets/ViewBot.png)
 

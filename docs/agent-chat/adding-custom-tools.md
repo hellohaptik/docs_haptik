@@ -6,41 +6,48 @@ title: Adding your own custom tool
 
 ### Steps
 
+- Once you log in, you will see the below page (may vary based on permissions)
 - Go to: [https://staging.hellohaptik.com/home/](https://staging.hellohaptik.com/home/)
-- Enter your login credentials
-- Once logged in, you will see the below page (may vary based on permissions)
 
-![home_screen](assets/haptik_logged_in_screen.png)
+![image](https://user-images.githubusercontent.com/75118325/111907800-eb1c2480-8a7c-11eb-8b80-569c91b0a42d.png)
 
-- Select Administrator, the below screen will appear (may vary based on permissions)
+- Open **Admin Tools**, the below screen will appear (may vary based on permissions)
 
-![admin_tools_screen](assets/admin_tools_screen.png)
+![image](https://user-images.githubusercontent.com/75118325/111907853-13a41e80-8a7d-11eb-877b-91b7c4aaaa71.png)
 
-- On clicking on External Tools (highlighted), the below page will open
+- On clicking on **External Tools**, the below page will open
 
-![external_tool_screen](assets/external_tool_screen.png)
+![image](https://user-images.githubusercontent.com/75118325/111907906-346c7400-8a7d-11eb-9cca-3eea0f8a4f3d.png)
+
 
     Ex: We added an external url (https://material.io/design/) which should appear
     for Flight Hindi Voice Business as "Test External Link".
 
 - Now, click "*Add External Tool*", to land on the screen below. Here, you enter the following details:
+
         1. Business: Select your unique business name. (will be available in dropdown)
+        
         2. Partner: Select your unique partner name. (will be available in dropdown)
+        
         3. Task: Can be ignored, and left blank
+        
         4. Tool Name: Can be any string (this is what will apear to the agents)
+        
         5. URL: An external link to your tool
+        
         6. Tick: "Link" or "Tool"
+        
         7. Hit Submit
 
 ![add_external_tool](assets/add_external_tool.png)
 
 - On success, your tool will now appear for all agents allocated to your business.
 
-![agent_view_tool](assets/agent_view_tool.png)
+![image](https://user-images.githubusercontent.com/75118325/111908180-41d62e00-8a7e-11eb-9536-fd296c6cc97d.png)
 
 - Simply click on the tool, and the URL will open on the RHS
 
-![agent_view_tool_url](assets/agent_view_tool_url.png)
+![image](https://user-images.githubusercontent.com/75118325/111908119-fcb1fc00-8a7d-11eb-8296-e75e4511d37b.png)
 
 ### Important Design Note
 

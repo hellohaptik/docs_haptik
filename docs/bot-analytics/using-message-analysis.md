@@ -27,9 +27,15 @@ The columns of the table can be configured by you in case of Viewing Messages. W
 
 These columns are:
 * **Body** - This column shows you the actual message that was sent.
-* **Chat Link** - This column provides a link to open and view the conversation related to the message. Clicking on the link will open a page that shows the conversation as well as the user details.
+* **Chat Link** - This column provides a link to open and view the conversation related to the message. Clicking on the link will open a page that shows the conversation as well as the user details. There is a **Previous Conversation** and **Next Conversation** button to help you navigate throughout the various conversations of the user. If you have access to both **Smart Agent Chat** and **Intelligent Analytics**, you will be able to the chat link as shown below - 
 
   ![Chat Link](assets/message-analysis-chat-link.png)
+
+> No PII related information such as email, phone number will be visible on the chat link. 
+> 
+> If you have access to only **Intelligent Analytics**, you will be able to see the link as shown below -
+> 
+>  ![image](https://user-images.githubusercontent.com/75118325/111906417-8231ae00-8a76-11eb-8dfd-ff1894c0c23a.png)
   
 * **Conversation ID** - This is a unique ID every conversation has.
 * **Created At** - This column tells you when the message was recieved by the bot.

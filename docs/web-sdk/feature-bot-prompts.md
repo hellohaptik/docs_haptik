@@ -12,7 +12,7 @@ These prompts can be triggered in 2 ways:
 - **Dynamic Trigger:** *These are triggered based on dynamic conditions dependant on user actions. (Ex. Number of visits, time on page, url etc.)
 See below on how to configure dynamic triggers.*
 - **Programmatic Trigger:** *Prompts can also be triggered manually on a code level using the SDK functions in case the client wants to implement custom trigger logic on their end.
-See Configuration → SDK Methods on how to trigger this.*
+See [**Configuration → SDK Methods**](https://docs.haptik.ai/web-sdk/configuration-sdk-methods#prompttitle-message) on how to trigger this.*
 
 Bot Prompts don't show up regardless of triggers if the user already has the chat window open
 
@@ -20,29 +20,37 @@ Bot Prompts don't show up regardless of triggers if the user already has the cha
 
 Dynamic triggers can be configured through the Bot Builder. You can set rules according to which the prompt will be triggered for users.
 
-To add a prompt, open the relevant business on the Bot Builder
+![image](https://user-images.githubusercontent.com/75118325/111913033-473d7380-8a92-11eb-8adc-c05cb16a2525.png)
 
-*Bot Builder → Businesses → Business → Bot Prompt Triggers*
+Navgiate to **Business Manager** on **Conversation Studio**. Go to **Bot Prompt Triggers**, to create new triggers - 
 
-Tap on create a new trigger to create a trigger.
+![image](https://user-images.githubusercontent.com/75118325/111913133-c337bb80-8a92-11eb-8645-c17d13efe055.png)
+
+Tap on **Create a New Trigger** to create a trigger.
+
+![image](https://user-images.githubusercontent.com/75118325/111913167-ea8e8880-8a92-11eb-8a04-851ef0de1a96.png)
 
 **Field Definitions:**
 
-### `Trigger Title <String>`
+### `Trigger Title (For Internal Use)`
 
 The name of the trigger, used internally.
 
-### `Active <Boolean`
+### `Active`
 
 Whether the trigger is active or not.
 
-### `Variants`
+### `Prompt Variations`
 
 Different bot prompt variations for the trigger. One of the variations is selected at random and shown to the user. Each variant has the following properties:
 
 - `Prompt Title (String)` : The message to be shown to the user.
 - `Button Text (String)` : The text to be shown on the button of prompt.
 - `User Message (String)` : The Message which should be sent as a User Message if the user clicks on the button.
+
+You can add Quick Replies in the Prompt Variations. This can help the users to choose a conversation starter.
+
+![image](https://user-images.githubusercontent.com/75118325/111913291-80c2ae80-8a93-11eb-9d94-6952a248d7af.png)
 
 ### `Prompt Rules`
 
@@ -67,14 +75,17 @@ Whether all the rules for trigger should match (`AND`) or any one of the rules s
 
 ## Bot Prompt UI Types
 
-The XDK supports 2 different types of bot prompt interfaces. 
+The XDK supports 2 different types of bot prompt interfaces.
 
-*See Configuration → SDK Methods on how to trigger this.*
+*See [**Configuration → SDK Methods**](https://docs.haptik.ai/web-sdk/configuration-sdk-methods#prompttitle-message) on how to trigger this.*
 
 - **Full Bot Prompt**
-Contains a logo, header title, message and a call to action button.
-![](assets/bot-prompt-full.png)
+Contains the prompt **Trigger Title** and messages added under **Prompt Variations**.
+
+![image](https://user-images.githubusercontent.com/75118325/111913406-faf33300-8a93-11eb-9103-660b9c87bcf2.png)
+    
 
 - **Minimal Bot Prompt**
 Contains just the message inside a minimal chat bubble above the chat with us button of the XDK. The entire bubble is clickable and acts as the call to action.
-![](assets/bot-prompt-minimal.png)
+
+![image](https://user-images.githubusercontent.com/75118325/111913537-9ab0c100-8a94-11eb-8284-01891697ad93.png)   

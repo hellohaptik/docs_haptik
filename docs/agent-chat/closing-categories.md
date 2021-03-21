@@ -22,7 +22,7 @@ Any Smart Agent Chat tool user with the appropriate permission can create or edi
 The steps to create closing categories are:
 1) Open the Smart Agent Chat tool.
 2) Go to Businesses section from the left side menu.
-   ![Businesses Section](assets/athena_businesses.png)
+   ![image](https://user-images.githubusercontent.com/75118325/111909536-b1025100-8a83-11eb-80ad-475aac5489e7.png)
 3) Go to the closing category section from the top menu on the right section.
 4) From here you can add a closing category bu using the category input field.
 ![create closing category](assets/new_closing_category.gif)

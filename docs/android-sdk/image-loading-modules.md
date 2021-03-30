@@ -26,7 +26,7 @@ Haptik SDK depends on these modules for image loading.
    - Add the following dependency to your module
    
 ```java
-implementation 'ai.haptik.android.sdk:haptiklib-picasso-helper:7.0.0-70183'
+implementation 'ai.haptik.android.sdk:haptiklib-picasso-helper:7.0.1-70284'
 ```
 - Make the following changes to `InitData`
 
@@ -49,7 +49,7 @@ InitData initData = new InitData.Builder(application)
    - Add the following dependency to your module
    
 ```java
-implementation 'ai.haptik.android.sdk:haptiklib-glide-helper:7.0.0-70183'
+implementation 'ai.haptik.android.sdk:haptiklib-glide-helper:7.0.1-70284'
 ```
 
 - Make the following changes to `InitData`

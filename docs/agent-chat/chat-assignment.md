@@ -37,8 +37,8 @@ This accounts for Agent Concurrency, Empty Slots and Idle Time. Chat gets assign
 3. Chats that are in pending state gets completed when last agent of a team logouts.
 
 4. If an agent is part of two teams, both following Balanced Distribution, the concurrency of that agent will be doubled.
-i.e, If agent concurrency is C, and is a part of N teams following Balanced distribution, he concurrency will be C times N.
-We recommend keeping a lower agent concurrency for shared agents.
+i.e, If agent concurrency is C, and is a part of N teams that are following Balanced distribution algorithm, his/her concurrency will be C times N.
+> Note: We recommend keeping a lower agent concurrency for shared agents.
 
 5. Optimized for: Chat load as it’s almost evenly distributed across online agents at the time.
 

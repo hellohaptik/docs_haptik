@@ -71,13 +71,13 @@ Haptik will provide required username and password while providing access to the
 Once this is done you can move over to your app's `build.gradle` file and add the following lines of code:
 
 ```java
-implementation 'ai.haptik.android.sdk:haptiklib-core:7.0.0-70183'
+implementation 'ai.haptik.android.sdk:haptiklib-core:7.0.1-70284'
 ```
 
 Add a dependency for image loading library
 
 ```java
-implementation 'ai.haptik.android.sdk:haptiklib-picasso-helper:7.0.0-70183'
+implementation 'ai.haptik.android.sdk:haptiklib-picasso-helper:7.0.1-70284'
 ```
 
 For further details please refer to the "Image Loading Modules" section

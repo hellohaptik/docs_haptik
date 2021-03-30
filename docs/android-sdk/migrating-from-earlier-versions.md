@@ -1116,3 +1116,30 @@ implementation 'ai.haptik.android.sdk:haptiklib-jio-communications:7.0.0-70183'
 ```groovy
 implementation 'ai.haptik.android.sdk:haptiklib-xdk:7.0.0-70183'
 ```
+
+## Moving from 7.0.0 → 7.0.1
+- **BREAKING:** Min SDK version for Android supported is now 21.
+
+```groovy
+implementation 'ai.haptik.android.sdk:haptiklib-core:7.0.1-70284'
+```
+
+```groovy
+implementation 'ai.haptik.android.sdk:haptiklib-extensions:7.0.1-70284'
+```
+
+```groovy
+implementation 'ai.haptik.android.sdk:haptiklib-picasso-helper:7.0.1-70284'
+```
+
+```groovy
+implementation 'ai.haptik.android.sdk:haptiklib-glide-helper:7.0.1-70284'
+```
+
+```groovy
+implementation 'ai.haptik.android.sdk:haptiklib-jio-communications:7.0.1-70284'
+```
+
+```groovy
+implementation 'ai.haptik.android.sdk:haptiklib-xdk:7.0.1-70284'
+```

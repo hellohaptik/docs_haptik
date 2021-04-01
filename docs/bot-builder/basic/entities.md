@@ -747,13 +747,14 @@ Step 1: Add **integration.utils.lead_campaigns.generic_entity_flusher** function
 
 ![flush_entity1](assets/entityflush2.png)
 
-Step 2: Add an entity **bot_flush_exception_list** on the start node where you want to use this function and add all entity names separated by pipe(|) in the filter value of this entity.
+Step 2: Add an entity **bot_flush_exception_list** on the start node where you want to use this function and add all entity names separated by pipe(|) in the entity filter value of this entity.
 
 > Mark the bot_flush_exception_list entity as non-mandatory.
 
 ![flush_entity2](assets/entityflush1.png)
 
-**This will clear all the entities except person_name and city. **
+
+> **The entity names added in the entity filter will not be flushed away.**
 
 ### Do's and Don't of Entity Flusher
 

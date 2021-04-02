@@ -42,7 +42,7 @@ i.e, If an agent's set concurrency on the "Teams" UI is C, and the agent is part
 
 5. Optimized for: Chat load as it’s almost evenly distributed across online agents at the time.
 
-6. Con(s): Unlike Speed Resolution, Quick high performing agents may not be best utilized. 
+6. Con(s): Unlike Speed Resolution, high performing agents may not be best utilised. 
 
 > Note: Clients for whom efficiency in distribution is important should choose this chat algorithm.
  

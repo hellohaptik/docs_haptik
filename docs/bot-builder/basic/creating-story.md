@@ -25,30 +25,14 @@ You can use the framework of stories and sub-stories as a skeleton for building 
 
 #### Creating a Story
 
-To add a story, just click 'Add a Story' button.
+To add a story, click on `Create Story` button and provide a name for the Story. Post creation of a story, it will appear as shown below - 
 
-![Add Story](/assets/add_story_button.png)
-
-Then, enter the name of the story in 'Enter Story Name' and click on the 'OK' button.
-
-![Story Dialogue](/assets/input_story_dialog.png)
-
-Post creation of a story, the story will be displayed as depicted below.
-
-![New Story Complete](/assets/new_story_complete.png)
+![new story](https://user-images.githubusercontent.com/75118325/113377165-27ab2280-9391-11eb-83a1-7dbe1e814bdd.gif)
 
 #### Creating a Sub-story
 
-To start adding substories, click on the story in which you want to start your work. This will take you to the Conversation Studio graph.
+To start adding **Sub Story**, click on the **Story** in which you want to build the conversational flows. This will take you to the Conversation Studio graph.
 
-![creating_substory_new](/assets/creating_substory_new.png)
+![create ss](https://user-images.githubusercontent.com/75118325/113377354-b455e080-9391-11eb-923c-537884f13125.gif)
 
-Next, enter the name of the sub-story in 'Sub Story Name' and click on the check mark button.
-
-![labeling_substory_new](/assets/labeling_substory_new.png)
-
-Post creation of a sub-story, the sub-story will be displayed as depicted below.
-
-![complete_substory_new](/assets/complete_substory_new.png)
-
-When you are done creating all the sub-stories your conversation requires, click "Add Node" under the substory you want to start building in.
+When you are done creating all the sub-stories your conversation requires, click **Add Node** under the substory you want to start building in.

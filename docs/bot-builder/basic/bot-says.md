@@ -12,7 +12,7 @@ This section is also used to configure the Entities that this node should collec
 
 To get started with adding some Bot Says responses, navigate to a specific node and select the 2nd tab *Bot Says*.
 
-![image](assets/bot-builder-bot-says/initial_response.gif)
+![image](https://user-images.githubusercontent.com/75118325/113371660-8c13b500-9384-11eb-8566-7a2d63d4ef01.png)
 
 Once you arrive at the Bot Says page, you'll see the above interface. This interface might differ slightly depending on the state of the node and the responses added to it.
 
@@ -23,31 +23,28 @@ Depending on how the node is built, the Bot Says section can have four types of 
 
 This is the first message that the bot sends out when the node is detected and it doesn't know about any entity on the node.
 
-![image](assets/bot-builder-bot-says/single_entity_response.gif)
-
-When you have multiple entities, consider the Initial Response to be the opening message for the node. In some cases, this can be the same as the response in "Entity Response" of the first Entity on the node.
-
-When there is only one entity present, this section is disabled as it is the same as *Entity Response* of the first Entity on the node. For Example, if you want to collect the answer to a question, your Bot Says would look something like below:
-
-![image](assets/bot-builder-bot-says/single_entity_response.gif)
-
+![image](https://user-images.githubusercontent.com/75118325/113371542-3e974800-9384-11eb-96a7-ca387f98ea5f.png)
 
 ### Entity Responses
-If you have Entities present on a node, then Entity Response is the response that the bot will send when it doesn't know that Entity's value.
+
+If you have Entities present on a node, then **Entity Response** is the response that the bot will send when it doesn't know that Entity's value.
 
 For example, if you want to collect the User's name, you could ask *"What is your name?"* in the Entity Response. Now If the User replies back with *"My name is Bruce Wayne"*, then "Bruce Wayne" will be extracted as an entity by our [NER](https://github.com/hellohaptik/chatbot_ner). These entities can then be used to create personalized and advanced flows for every user and hence, build better bots.
 
+1. When there is only one entity present, the **Initial Response** section is disabled as it is the same as **Entity Response** of the first Entity on the node. For Example, if you want to collect the answer to a question, your Bot Says would look something like below:
+
+![image](https://user-images.githubusercontent.com/75118325/113371946-1cea9080-9385-11eb-8b5a-5c12c4bd9bf3.png)
+
+2. When you have multiple entities, consider the **Initial Response** to be the opening message for the node. In some cases, this can be the same as the response in **Entity Response** of the first Entity on the node.
+
+![multiple](https://user-images.githubusercontent.com/75118325/113372764-00e7ee80-9387-11eb-9be1-13be6cd42b4a.gif)
+
 > **Tip:** You can create your own Entities or use System Entities provided as a part of the Haptik Platform.
 
-In the below example, the Bot will start with the response from "Initial Response".
-Then, it will start looking for the Entities in the Entity Response. If the bot knows the Entity's value, then it will skip the response and move to the next Entity Response or Final Responses.
-
-![image](assets/bot-builder-bot-says/entity_response.gif)
+> If the bot knows the Entity's value, then it will skip the response and move to the next Entity Response or Final Responses.
 
 #### Mandatory vs Non-Mandatory Entities
 Depending on your flow, some entities could be required to move to the next step and some could be optional. To allow for this requirement, you can use the concept of Mandatory and Non-Mandatory entities.
-
-![Non Mandatory Entities](assets/bot-builder-bot-says/mandatory_entity.gif)
 
 For example, in a Lead Generation Bot, Phone Number may be optional but Email could be compulsory. To handle such scenario, you can mark the *phone_number* entity as Non-Mandatory by clicking on the Star Icon.
 
@@ -55,18 +52,21 @@ What that would mean is, if the User provided the phone number, it will be captu
 
 > **Note:** You can set an Entity Response only for Mandatory Entities. To know more about the difference between Mandatory and Non-Mandatory entities, refer [this](https://docs.haptik.ai/bot-builder/basic/entities).
 
-Since Non-Mandatory entities are not compulsory for the node, you don't need to add a specific response for this entity. And the request to collect the answer can be combined with responses for other Mandatory Entities by using [Chat Forms](https://docs.haptik.ai/bot-builder/basic/entities) or other [HSLs](https://docs.haptik.ai/hsl/)
+Since Non-Mandatory entities are not compulsory for the node, you don't need to add a specific response for this entity. And the request to collect the answer can be combined with responses for other Mandatory Entities by using [Chat Forms](https://docs.haptik.ai/bot-builder/basic/chat-elements#forms) or other [HSLs](https://docs.haptik.ai/hsl/)
 
+![image](https://user-images.githubusercontent.com/75118325/113373357-45c05500-9388-11eb-90b9-c5b4d0303bcf.png)
 
 ### Final Response
 
-Once all the entities have been collected, the bot finally replies with the responses from this section. This is usally a the closing message for that node.
+Once all the entities have been collected, the bot finally replies with the responses from the **Final Response** section. This is usally a the closing message for that node.
 
-In cases where the node is a Start node or an Intermediate node,the Final Response section is useful to send a response to continue the user to the next part of the flow.
+In cases where the node is a Start node or an Intermediate node, the **Final Response** section is useful to send a response to continue the user to the next part of the flow.
 
-> Note: Final Response isn't applicable if the node doesn't have any entities as the Initial Response itself acts like the Final Response.
+> **Note: Final Response isn't applicable if the node doesn't have any entities as the Initial Response itself acts like the Final Response.**
 
-![image](assets/bot-builder-bot-says/final_bot_reply.gif)
+![image](https://user-images.githubusercontent.com/75118325/113373482-88822d00-9388-11eb-9243-ffe4b9ac0948.png)
+
+In case you want to skip this message and directly continue the user's journey in the flow, add **{}** as the **Final Response**. Click [**here**](https://docs.haptik.ai/bot-builder/basic/bot-says#smart-actions-for-bot-says) to know more about Smart Actions on Bot Says.
 
 ### Follow Up Message
 
@@ -74,19 +74,19 @@ If the user is inactive for a specific interval, then the the bot replies with t
 
 > Tip: Use Follow Up messages to collect feedback or increase engagement on your bot.
 
-![bot says delay](assets/bot-builder-bot-says/follow_up.gif)
+![image](https://user-images.githubusercontent.com/75118325/113374728-5f16d080-938b-11eb-9cd0-b3b93cfe6552.png)
 
-> **Note:** Follow up message will be sent only if the user has not replied back after reaching that node and the chat is in Bot or Complete state. To know more about all the States of a chat, please refer here (TODO).
+> **Note:** Follow up message will be sent only if the user has not replied back after reaching that node and the chat is in Bot state.
 
 ## Priority of Responses:
-As explained above, the Response to be sent is chosen from a Top to Down order i.e.
-1. If no entity value is known, then send the response Initial Response Section
-2. Depending on the order of Mandatory Entities, the response will be sent from the Entity whose value is not known. So in the above example, where add person_name, utils_city, email and phone_number as mandatory Entities, it will send the same.
-3. Once value of all Mandatory entities is known, the Final Response is sent, if applicable.
+As explained above, the Response to be sent is chosen from a **Top to Down order** i.e.
+1. If no entity value is known, then the response **Initial Response** is sent.
+2. Depending on the order of Mandatory Entities, the response will be sent from the **Entity Response**, for the entities whose value is not known.
+3. Once value of all Mandatory entities is known, the **Final Response** is sent, if applicable.
 
 > **Tip:** You can change the Priority of Mandatory entities by reordering them.
 
-![reordering entities](assets/bot-builder-bot-says/sorting_entities.gif)
+![reorder](https://user-images.githubusercontent.com/75118325/113374923-f11ed900-938b-11eb-90e1-ac2714271e44.gif)
 
 <hr>
 
@@ -97,17 +97,15 @@ Each of the above response (Initial Response, Entity Response, Final Response, a
 - Quick replies
 
 ### Variants
-A bot response can consist of multiple variants where each variant is an independent message. All variants should imply the same meaning as the bot chooses a variant randomly to avoid being repetitive even when asked the same question.
+A bot response can consist of multiple variants where each variant is an independent message. All variants should imply the same meaning as the **bot chooses a variant randomly** to avoid being repetitive even when asked the same question.
 
-Each variant is composed of Messages and Quick Replies.
+Each variant is composed of **Messages** and **Quick Replies**.
 
-![image](assets/bot-builder-bot-says/variants.gif)
+![image](https://user-images.githubusercontent.com/75118325/113375110-612d5f00-938c-11eb-9f19-f89573d3a688.png)
 
-3rd party platforms that we currently support have certain limitations on chat elements (HSLs). For ex, Whatsapp doesn't have quick replies. The only workaround is to create an entirely separate bot duplicating the existing effort.
+When showing variants, we now also show the **platforms** enabled for that particular variant. Clicking on it opens a small tooltip which allows you to add/remove platforms or just select the platforms for your variant here. If you select the platform as **WhatsApp**, this variant will be sent to user when they are accessing the bot on **WhatsApp**.
 
-When showing variants, we now also show the platforms enabled for that particular variant. Clicking on it opens a small tooltip which allows you to add/remove platforms or just select the platforms for your variant here. Refer the image below.   
-
-![image](assets/bot-builder-bot-says/DPSV.PNG) 
+![image](https://user-images.githubusercontent.com/75118325/113375267-aa7dae80-938c-11eb-8d8c-d011bb05f679.png)
 
 Adding device specific variants to our chat elements helps build one flow for one or many platforms. Depending on the platform the user is using to chat, the device specific variants would be served to the end user. This would give power to the bot builder to modify existing bots and add incremental support for a platform without much effort. 
 
@@ -118,18 +116,20 @@ A variant can have multiple message bubbles. Each message is a separate _text_ f
 
 > Tip: You can use the HSL builder to simplify creation of complicated responses like Carousel, Images and Buttons.
 
+![image](https://user-images.githubusercontent.com/75118325/113375584-5a531c00-938d-11eb-8fe8-5fad82f9b1ac.png)
+
 ### Quick Replies
 In addition to providing the bot response, you might also want to include prompts for how to reply back to the bot again. These pre-defined prompts are called Quick Replies.
 
-For example, if the bot asks a Question "Did you like our product?", you can add "Yes" and "No" as quick replies. So when the bot addresses the question to the user, the user is shown buttons "yes" and "No" which they can select from to reply back easily.
-
-![image](assets/bot-builder-bot-says/message_qrs.gif)
+![image](https://user-images.githubusercontent.com/75118325/113375654-82427f80-938d-11eb-8ad8-c9221aa26ec2.png)
 
 > **Tip:** You should use Quick Replies to help the user navigate within a flow.
 
+## Using Entity Values inside bot says
 
-## Using entity values inside bot says
-You can use the value collected in the entity inside your bot says to personalize the messages. For example: If you collect the user's name using the Person Name entity and you want to use it in a follow up message, you can use the above feature.
+You can use the value collected in the entity inside your bot says to personalize the messages. For example: if you collect the user's name using the person_name entity and you want to use it in the **Final Response**, you can use the name as shown below - 
+
+![ent in bs](https://user-images.githubusercontent.com/75118325/113375887-10b70100-938e-11eb-916c-a477b36b8ac1.gif)
 
 ### Using Simple Entities in bot says
 To use the entity value of simple text entities click on the `Add Entities` dropdown on the top of the bot says textbox and pick the entity value you want to add.
@@ -137,15 +137,18 @@ To use the entity value of simple text entities click on the `Add Entities` drop
 ![bot says entity picker](assets/bot-builder-bot-says/entity_picker_bot_says.gif)
 
 ### Using Complex Entities in bot says
-To use entity value of complex entities like date which can be represented in multiple formats click on the `Add Entities` dropdown on the top of the bot says textbox and pick the complext entity in the format you want it to be shown in.
+To use entity value of complex entities like date which can be represented in multiple formats click on the `Add Entities` dropdown on the top of the bot says textbox and pick the complex entity in the format you want it to be shown in.
 
 ![bot says complex entity picker](assets/bot-builder-bot-says/complex_entity_picker_bot_says.gif)
+
+> Custom or locally created entities have **%entitytag** along with the entity name. 
+> For example, **%entitytag_order_id**, here, order_id is a locally created entity.
 
 ## ProTips
 You can create personalised responses by using specific tags in the bot response.
 To view the ProTips, you can follow the steps below.
 
-![image](assets/bot-builder-bot-says/protip.gif)
+![image](https://user-images.githubusercontent.com/75118325/113376217-d26e1180-938e-11eb-9d42-7915c418b9bd.png)
 
 There are 2 categories of ProTips available:
 1. Customizing message appearance:

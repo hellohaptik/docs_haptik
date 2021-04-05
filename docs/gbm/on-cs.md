@@ -42,7 +42,7 @@ To know more about Bot Says, click [**here**](https://docs.haptik.ai/bot-builder
 #### 1. Buttons
 
 - Maximum of **4** buttons can be added on the IVA.
-- There is a character limitation of **25 characters** for each button.
+- There is a character limitation of **25 characters** (including spaces) for each button.
 - The buttons only support **Text**.
 - The Buttons HSL gets rendered as Quick Replies on the Google Business Message screen.
 

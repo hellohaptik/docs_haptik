@@ -36,9 +36,13 @@ This accounts for Agent Concurrency, Empty Slots and Idle Time. Chat gets assign
 
 3. Chats that are in pending state gets completed when last agent of a team logouts.
 
-4. Optimized for: Chat load as it’s almost evenly distributed across online agents at the time.
+4. If an agent is part of two teams, both following Balanced Distribution, the concurrency of that agent will be doubled.
+i.e, If an agent's set concurrency on the "Teams" UI is C, and the agent is part of N teams that are following Balanced distribution algorithm, this agent's effective concurrency will be C times N.
+> Note: We recommend keeping a lower agent concurrency for shared agents.
 
-5. Con(s): Does not account for faster agent response times but only the first response times. Faster high performing agents may not be best utilized. 
+5. Optimized for: Chat load as it’s almost evenly distributed across online agents at the time.
+
+6. Con(s): Unlike Speed Resolution, high performing agents may not be best utilised. 
 
 > Note: Clients for whom efficiency in distribution is important should choose this chat algorithm.
  
@@ -59,6 +63,6 @@ Fastest agents get more chats. Every time an agent closes a chat or intermittent
 
 ### Note
 
-1. If you have a single client and multiple businesses set up, all businesses must be the same algorithm
-
-2. If there are multiple clients, one can ideally have different algorithms for all, provided there are no shared agents between the teams of different clients.
+1. If there is a single client and multiple businesses set up, all businesses must use the same algorithm.
+2. If there are multiple clients, no compulsion of using same algorithm. One can select different algorithms for each.
+3. An agent can only follow single chat distribution algorithm, ie, we do not support Agent A being part of Team A (balanced distribution) and Team B (speed resolution).

@@ -64,5 +64,5 @@ Fastest agents get more chats. Every time an agent closes a chat or intermittent
 ### Note
 
 1. If you have a single client and multiple businesses set up, all businesses must use the same algorithm.
-2. If there are multiple clients, one can select different algorithms for each.
+2. If there are multiple clients, no compulsion of using same algorithm. One can select different algorithms for each.
 3. An agent can only follow single chat distribution algorithm, ie, we do not support Agent A being part of Team A (balanced distribution) and Team B (speed resolution).

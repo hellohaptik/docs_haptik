@@ -6,7 +6,7 @@ Once you are done with creating all flows in your IVA, you would want to start t
 
 ## How can we share our IVA?
 
-![SB_1](assets/SB1.png)
+![image](https://user-images.githubusercontent.com/75118325/113772499-669af880-9742-11eb-8b39-0602100500f2.png)
 
 Share IVA is the button located on the top right corner of your IVA graph.
 
@@ -20,11 +20,11 @@ Share IVA is the button located on the top right corner of your IVA graph.
 
 - The Demo link can be shared across for testing. It gives an idea of how the actual IVA will function.
 
-![SB_2](assets/SB2.png)
+![image](https://user-images.githubusercontent.com/75118325/113772630-8e8a5c00-9742-11eb-8b99-0e850fb99ca8.png)
 
 ## How does the Demo link look like?
 
-![SB_3](assets/SB3.png)
+![image](https://user-images.githubusercontent.com/75118325/113772676-a2ce5900-9742-11eb-83da-5f48e5f8057a.png)
 
 ## What to do when demo link is not working as expected?
 
@@ -45,7 +45,3 @@ There are four main credentials of an IVA -
 These IDs are used to map the partner, business and IVA.
 
 > Staging is our Development environment and Production is our Live environment
-
-
-
-

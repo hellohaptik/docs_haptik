@@ -66,4 +66,102 @@ To know more about launching the agent, click [**here**](https://developers.goog
 
 > To know in detail about setting up the Google Business Messages, click [**here**](https://developers.google.com/business-communications/business-messages/guides).
 
+
+### 6. Entry Point
+
+**Google Business Messages** has entry points from organic Google search results on **mobile browsers** and from the **Google Maps** app (for location-based brands).
+Entry points are surfaces where users can start conversations with Business Messages agents. Each entry point has a unique appearance and appears in a different place.
+
+> You need to configure all entry points you want to launch your agent on before you verify your agent.
+
+There are two types of entry points:
+1. NON_LOCAL Entry Point
+2. Location Based Entry Point
+
+### 1. NON_LOCAL Entry Point
+
+This entry point does not rely on location. 
+
+To enable non-local entry points - 
+
+- Update your agent with the NON_LOCAL entry point group, and specify values for fields in the NonLocalConfig object.
+- Verify your agent.
+
+Business Messages approves your agent for various entry points based on the information you specify in **NonLocalConfig**.
+
+> Note: You need to configure all entry points you want to launch your agent on before you verify your agent.
+
+- Launch your agent.
+
+There are 4 major ways you set up NON_LOCAL Entry Point.
+
+**1. Featured snippets**
+
+This entry point enables conversations with your agent when a user finds contact details through Search.
+
+**2. Sitelinks**
+
+This entry point enables conversations with your agent when sitelinks appear in Search.
+
+**3. URL**
+
+This entry point enables conversations from URLs in messages, links, or websites.
+
+> URL is supported on Android.
+
+**4. Widget**
+
+This entry point enables conversations from widgets you integrate with a website.
+
+### 2. Location Based Entry Point
+
+The LOCATION entry point group encompasses entry points that rely on locations.
+- Update the agent with the LOCATION entry point group.
+- Verify the agent.
+
+> Note: You need to add all entry points you want to launch your agent on before you verify your agent.
+
+- Launch your agent.
+- Create a location, associate it with your agent, and add the MAPS and PLACESHEET entry points.
+ 
+> Note: You need to add all entry points you want to launch your location on before you verify your location.
+
+- Verify your location.
+- Wait for Business Messages to automatically import, associate, and verify other locations from the verified location's Location group in Google My Business.
+- Launch your locations.
+
+There are 3 major ways you can set Location Based Entry Point - 
+
+**1. Maps**
+
+This entry point enables conversations with locations associated with your agent from the Maps app (Android and iOS)
+
+**2. Placesheet**
+
+This entry point enables conversations with locations associated with your agent when a user finds the location in Search
+
+**3. Local Pack**
+
+When a user's search results include multiple nearby locations, the LOCAL_PACK entry point displays a messaging button below the list of locations. Additionally, LOCAL_PACK enables messaging for a location when the location is closed and can't answer calls.
+
+> **To know more about Entry Point, click [here](https://developers.google.com/business-communications/business-messages/guides/learn/entry-points#location).**
+
+### 7. Bot and human solution
+
+It is mandatory to have a **Bot and human** solution. 
+
+1. Open the **Business Communications Developer Console** and sign in with your Business Messages Google account.
+2. Choose the agent.
+3. In the left navigation, click **Agent information.**
+4. Under **Primary and secondary interactions**, set bot and human messaging availability.
+
+- For Primary interaction, set Interaction type to Bot.
+- If bot messaging isn't always available, uncheck Always available and specify the available days, times, and timezone.
+To add more availability times, click Add availability.
+- Click Add secondary interaction, and set Interaction type to Human.
+- If human messaging isn't always available, uncheck Always available and specify the available days, times, and timezone.
+To add more availability times, click Add availability.
+
+To know more about updating message availability, click [**here**](https://developers.google.com/business-communications/business-messages/guides/configure/availability).
+
 Once the Google Business Messages is set up, we will now see the implementation of IVA on Haptik's Conversation Studio.

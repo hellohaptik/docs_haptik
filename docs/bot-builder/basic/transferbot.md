@@ -26,10 +26,10 @@ You can click on the **Transfer button** as shown in the below image.
 
 Whenever the Transfer button is clicked, all the Story(s), Sub-Story(s), entities, connections and details of the IVA are transferred to the production environment. The transfer button is on the top-right corner of the IVA screen.
 
-![TB_3](assets/TB3.png)
+![image](https://user-images.githubusercontent.com/75118325/113772963-035d9600-9743-11eb-9bde-afb5ab4abefa.png)
 
 You will be shown a pop-up if there are any issues with the IVA before Transfer starts. You can confirm to proceed by clicking on the **Transfer** button.
 
-![TB_4](assets/TB4.png)
+![image](https://user-images.githubusercontent.com/75118325/113773013-11abb200-9743-11eb-8cc4-59a64fe163ec.png)
 
 > The IVA should be transferred again if there are modifications made after the IVA is live.

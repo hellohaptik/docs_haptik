@@ -2,13 +2,45 @@
 title: Getting Started
 ---
 
-## Overview
-WhatsApp helps more than 1 billion people connect and share with the people they care about. WhatsApp is a simple, secure, and reliable way for businesses to reach their customers all over the world. 
+WhatsApp helps more than 1.5 billion people connect and share with the people they care about. WhatsApp is a simple, secure, and reliable way for businesses to reach their customers all over the world.
 
-# Features
 The WhatsApp Business API Client supports a subset of the features provided by the WhatsApp applications you already know from Android, iOS, Web and other platforms including end-to-end encryption. The difference is that this application can be deployed on a server, providing a local API that allows you to programmatically send and receive messages and integrate this workflow with your own systems (CRMs, customer care, etc.).
 
-Please note that if you use anything other than the official WhatsApp Business API or other official WhatsApp tools, Whatsapp reserves the right to limit or remove your access to WhatsApp as this violates their policies.
+If you would like us to consider your business for inclusion in the limited public preview of the WhatsApp Business API, please visit [**https://www.facebook.com/business/m/whatsapp/business-api**](https://www.facebook.com/business/m/whatsapp/business-api).
+
+> If you use anything other than the official WhatsApp Business API or other official WhatsApp tools, Whatsapp reserves the right to limit or remove your access to WhatsApp as this violates their policies.
+
+## Prerequisites for WhatsApp Integration  
+
+- A **Facebook Business Manager** account
+- A **verified** business
+- A **WhatsApp Business Account**
+- A **Line of Credit** for your WhatsApp Business Account — You can refer to [**About WhatsApp Business API Billing**](https://www.facebook.com/business/help/2225184664363779?id=2129163877102343) for more information about the billing process as well.
+- A **command line tool** such as **terminal** or an app like **Postman** that can perform **cURL requests**.
+
+> After verifying your business, your business will be reviewed for compliance with the WhatsApp Terms of Service and WhatsApp Commerce Policy. This step is initiated automatically. You can check the status of business verification and business review in the Settings tab of your WhatsApp business account in Business Manager. Business verification will show as Verified and Account Status will show as **Approved** upon approvals.
+
+<hr>
+
+## WhatsApp Business Account
+
+The first step for businesses to communicate with customers on WhatsApp is to create a [**WhatsApp Business Account**](https://www.facebook.com/business/help/2087193751603668) and set up a [**line of credit**](https://www.facebook.com/business/help/1684730811624773?id=2129163877102343). 
+
+This business account will allow people to easily identify your business and find out more information such as your **address**, **hours of operation**, **website**, and **description**. 
+
+Through your account, in the **Facebook Business Manager**, you will have the ability to **create message templates** for sending **notifications** to customers at scale.
+
+We have covered the entrire setting up process, [**here**]
+
+<hr>
+
+## WhatsApp Messaging
+
+WhatsApp [**message templates**](https://developers.facebook.com/docs/whatsapp/api/messages/message-templates) and [**media message templates**](https://developers.facebook.com/docs/whatsapp/api/messages/message-templates/media-message-templates) are specific message formats that businesses use to send out notifications or customer care messages to people that have opted into notifications. 
+
+Messages can include appointment reminders, shipping information, issue resolution, and payment updates. These are the preferred methods of reaching customers.
+
+Other types of messages such as [**text**](https://developers.facebook.com/docs/whatsapp/api/messages/text) and [**media**](https://developers.facebook.com/docs/whatsapp/api/messages/media), must be sent within a 24-hour window of a message received from a customer.
 
 WhatsApp Business API provides the following features:
 
@@ -16,12 +48,21 @@ WhatsApp Business API provides the following features:
 * **Send and Receive** - Enable two-way high value conversations with customers.
 * **Message Templates** - Create message formats that are needed for sending notifications to users.
 
-      Bot builders can use %full_name in a Bot says response for WhatsApp bots.
-    
-* **Username** - Collect WhatsApp username to add authenticity, and improved Click through rate. Bot builders can use the user's name, which is entered in WhatsApp app, in a Bot Says response using %name. Support agents will also have access to the WhatsApp username on our `Live Chat agent` to personalize communication while interacting with end users. 
+### Types of Conversation
 
-> Note: We only get the username, when the user sends a message. Username is a part of the payload with user's message. The username for all existing users in the system will not change and remain as is. And when we are sending HSMs to the end user for the first time, we would not get the username since we get this username value with the user's message only. 
-      
-* **Location** - Accepting user's location on WhatsApp would now be possible. Live Location is currently not supported. WhatsApp has an option for users to share their location. And, Haptik can process the location input. This means we can now easily build use cases where a user has to send their location on Whatsapp. We will capture this in our location entities.
+There are **two** types of conversations that are possible on WhatsApp. 
 
-> Note for Bot Builder: Please do not use the Location Picker from HSL Builder to get location from WhatsApp. Send it as a text message to the user asking for location from the user.
+1. A regular user initiated conversation where the user sends a message to the WhatsApp bot and the bot replies back to the user. The bot is allowed to reply back to the user within a **24 hour window** from the last message sent by the user.
+2. A conversational flow is bot initiated conversations. In this type whenever a transactional event occurs for eg: user bought a movie ticket, an ebill has been generated etc. **a pre approved template** message can be sent out.
+
+### Highly Structured Message (HSM)
+
+Templates are also known as **HSMs**. HSM stands for **Highly Structured Message**. A HSM template will have placeholders in it which can be filled with dynamic user specific values. Here’s a sample **HSM**:
+
+`Hi {{1}}! Thanks for starting your personal training plan. We’ll send you a {{2}} update with your new schedule. You can log-in online using your training ID {{3}}. Stay fit!`
+
+After filling in user specific data the HSM will be sent out as:
+
+`Hi Joey! Thanks for starting your personal training plan. We’ll send you a weekly update with your new schedule. You can log-in online using your training ID 123456. Stay fit!`
+
+To know more about HSMs, read [**here**]

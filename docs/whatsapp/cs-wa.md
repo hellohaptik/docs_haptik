@@ -88,6 +88,13 @@ An entity represents values which is collected from the user in a conversation. 
 > 
 > As we want the user to select an option from the menu, we have created a dictionary entity, where the Words column represent the actual word which will get detected and in the Variants column we can add the different variations which users can type. If the user types **1**, the bot capture the value as word, **work**, in this case.
 
+`
+You can fetch user's **name** and **phone number** from WhatsApp.
+There are system entity that can fetch these values from the user's profile.
+Use **_completion_phone_number_** to fetch user's phone number and **_username_** to fetch the user's profile name.`
+
+Add the entities on first node of the bot and mark them as non-mandatory. Read [**here**](https://docs.haptik.ai/bot-builder/basic/entities) to know more about entities.
+
 ### Step 7: Create Connections
 
 Connections represent the path a conversation takes from node to node. Depending on the response a user inputs to the bot, they traverse down a different connection to the appropriate next node. Bot builders must modify every connection they create to indicate which user inputs correspond to which nodes.

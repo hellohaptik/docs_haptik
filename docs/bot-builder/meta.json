@@ -64,7 +64,8 @@
 			"advanced/testing-guidelines",
 			"advanced/debugging-guidelines",
 			"basic/oracle-feedback",
-			"basic/bot-qa-tool"
+			"basic/bot-qa-tool",
+			"basic/qa-best-practices"
 		],
 		"Advanced": [
 			"advanced/integrating-webviews-into-sdk",

@@ -1,0 +1,19 @@
+{
+    "sidebar": {
+        "Getting Started": [
+            "index"
+        ],
+        "Live Agent Automation": [
+          "setup-laa",
+          "build-laa"
+        ],
+        "Ticketing Integration": [
+          "setup-ti",
+          "build-ti"
+        ],
+        "Customer Data Integration": [
+          "setup-cdi",
+          "build-cdi"
+        ]
+    }
+}

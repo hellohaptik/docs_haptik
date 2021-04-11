@@ -37,7 +37,7 @@ These columns are:
 * **Last Nodes** - This column shows the last node that the user was on before sending this message. This information can be useful to understand what the context was for the user sending the current message.
 * **Sub Story** - This column shows which Sub Story the node from **Last Nodes** column belongs to.
 
-![View Messages](assets/message-analysis-view-messages.png)
+![image](https://user-images.githubusercontent.com/75118325/114306348-62335e80-9af9-11eb-9204-5b3e7c9b22b9.png)
 
 ## View Conversations
 The View Conversations section of the page which can be accessed by clicking on the `View Conversations` link above the table. The table shows data at a conversation level, rather than at a message level.
@@ -54,7 +54,7 @@ In case of viewing conversations the columns of the table are fixed and they are
     4) Others - This section tells you how many messages came from other sources. These could include notifications, reminders, feedback messages etc.
 * **Broken Messages** - This column gives you information about how many messages broke in the conversation. A message is considered to be broken if the bot cannot respond to it.
 
-![View Conversations](assets/message-analysis-view-conversations.png)
+![image](https://user-images.githubusercontent.com/75118325/114306615-f0a7e000-9af9-11eb-8a3a-6fcce20d3cf8.png)
 
 ### Downloading the report
 There is an option to email the Message or Conversation data in CSV format if needed. This can be done by clicking on the `Email Report` button above the table showing the data.
@@ -68,7 +68,6 @@ As mentioned above, the Message Analysis page provides you with many filter opti
 
 In this section of the document we will go over each of these filter options. We will see how you can use one or a combination of these options to select the data you view in the tables.
 
-
 ### Search Body
 The first filter option is `Search Body`. You can use this option to filter the table based on the message body.
 
@@ -81,8 +80,8 @@ The above will give you all the messages similar to the phrase you searched for.
 However, if you are interested in exact match only, then you can enclose your phrase within double quotes `"`. For example, `"I want to book a flight ticket"` will show only those messages with the exact string being present.
 
 > **ProTip:** If you want to search for an exact phrase, enclose it within double quotes like this `"<search phrase>"` when searching.
->
-![Search Body](assets/message-analysis/message-analysis-exact-search.gif)
+
+![search body](https://user-images.githubusercontent.com/75118325/114306207-c7d31b00-9af8-11eb-8a43-dc75f02d9596.gif)
 
 
 ### Select Nodes
@@ -111,7 +110,7 @@ The message analysis page also lets you filter the data in the table based on th
 * User - Only shows messages sent by the user.
 * Assistant - Only shows messages sent by the chat agent.
 
-![Message By](assets/message-analysis-message-by.png)
+![image](https://user-images.githubusercontent.com/75118325/114306235-f224d880-9af8-11eb-8f14-d04e5497cf49.png)
 
 ### Select Sub Story
 This option lets you filter the data based on which sub story on the bot builder the conversation or message belongs to.

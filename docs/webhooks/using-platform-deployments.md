@@ -10,7 +10,12 @@ The platform deployments page provides a graphical interface to configure these 
 You need to follow the below steps
 1. Go to the **Platform Deployments** section of **Channels** page and select Bot API as **Platform**.
 2. **Callback URL** and **Token** are already populated. 
-3. Enter the **Webhook URL** and **Secret Key**. The Secret Key and Access Token help with authenticating your server with Conversation Studio.
+3. Enter the **Webhook URL** and **Secret Key**. The Secret Key and Access Token help with authenticating your server with Conversation Studio. 
+
+   **Webhook URL** is the URL where you want to receive the request. 
+
+   You can use any online key generatory to create the **Secret Key**.
+
 4. Enable the Webhook endpoint.
 5. If needed enable email alerts and enter the list of emails you want the alerts sent to.
 6. Save the configuration and activate it by turning the switch on next to the partner you want to setup the bot for.

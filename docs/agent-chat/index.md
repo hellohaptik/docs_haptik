@@ -34,7 +34,7 @@ Chat flows are designed to guide the user through a specific problem and to ensu
 **Businesses** and **Teams** are sections to analyse your business/team data and configure respective settings for incoming chats. You can read more about it [**here**](https://docs.haptik.ai/agent-chat/for-team-leads).
 
 
-#### Sidebar
+## Sidebar
 
 The **sidebar** remains constant throughout the tool.
 

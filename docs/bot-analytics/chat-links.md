@@ -2,16 +2,17 @@
 title: Chat Link
 ---
 
-Chat links are extremely useful when you want to share a particular user conversation. Whether the conversation is between the user and the bot or between user and a live agent, chat links can be shared across with anyone.
+**What are chat links?**
+
+Chat links are the conversation is between the user and the bot or between user and a live agent, chat links can be shared across with anyone. 
+There are scenarios where we need to analyse the conversation, chat links are extremely useful in this case. 
 
 ## **What all information chat links contain?**
 
 Chat links have - 
-* Conversation between the user and the bot/agent.
+* All conversations between the user and the bot/agent.
 * User details such as their name, email and the information which you have collected in the bot.
 * The timestamps at which the messages were exchanged between user and the bot/agent.
-
-![image](https://user-images.githubusercontent.com/75118325/114148560-88110580-9937-11eb-9880-4839c95cceb7.png)
 
 Along with information, for ease of action, there are two buttons, namely, **Previous Conversation** and **Next Conversation** to toggle between multiple conversations of the user.
 
@@ -21,13 +22,13 @@ Along with information, for ease of action, there are two buttons, namely, **Pre
 
 ## How to access Chat Links?
 
-You can access these Chat Links from 
-* Intelligent Analytics and
+You can access these Chat Links either from -  
+* Intelligent Analytics 
 * Smart Agent Chat
 
 ### On Intelligent Analytics
 
-On Intelligent Analytic, you can find these **Chat Links** in the **Message Analysis** section, as shown below
+On Intelligent Analytics, you can find these **Chat Links** in the **Message Analysis** section, as shown below
 
 ![image](https://user-images.githubusercontent.com/75118325/114148758-c0184880-9937-11eb-9965-6bd2d0ca9a7b.png)
 
@@ -45,7 +46,7 @@ On Intelligent Analytic, you can find these **Chat Links** in the **Message Anal
 
 ## Viewing Chat Links
 
-Depending on the access you have on the Haptik Platform, these Chat Links will appear different.
+Depending on the access you have on the Haptik Platform, these Chat Links will appear differently.
 
 ### Chat Link access for Agents
 
@@ -81,19 +82,10 @@ If the TL _does not_ have **Chat Agent View Personal Details** permission for Sm
 > - All the entites which are marked as personal on the bot, will be masked as well
 > ![image](https://user-images.githubusercontent.com/75118325/114155287-f0afb080-993e-11eb-92eb-eb8e7ac5e11d.png)
 
-If you have access to both **Intelligent Analytics** and **Smart Agent Chat** you will be able to see all the details of the user along with the entire conversation, as shown below - 
+### Chat link access on Intelligent Analytics
 
-![image](https://user-images.githubusercontent.com/75118325/114346286-d533e800-9b80-11eb-8559-7a2733822592.png)
-![image](https://user-images.githubusercontent.com/75118325/114346300-dbc25f80-9b80-11eb-956f-ba27edb2d1cb.png)
+If you have access to only Intelligent Analytics, you will be able to see **conversation page**. This page will not contain any PII related information.
 
-![image](https://user-images.githubusercontent.com/75118325/114346367-fbf21e80-9b80-11eb-86ba-f89645aaf02d.png)
-
-### Access to only Intelligent Analytics
-
-If you have access to only Intelligent Analytics, you will have be seeing a **conversation page**. This page will not contain any PII related information.
-
-![image](https://user-images.githubusercontent.com/75118325/114346675-7c188400-9b81-11eb-96c8-df6b42538fab.png)
 ![image](https://user-images.githubusercontent.com/75118325/114346695-820e6500-9b81-11eb-8671-9af7e7a1c5ad.png)
-
 
 ![image](https://user-images.githubusercontent.com/75118325/114346540-45db0480-9b81-11eb-8abd-46f5beffda48.png)

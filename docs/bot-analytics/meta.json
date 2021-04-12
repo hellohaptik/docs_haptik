@@ -16,7 +16,8 @@
     "Resources": [
       "analytics-reports",
       "analytics-best-practices",
-      "analytics-faqs"
+      "analytics-faqs",
+      "chat-links"
     ]
   },
   "headerLink": {

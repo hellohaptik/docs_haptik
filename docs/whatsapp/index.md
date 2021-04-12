@@ -30,7 +30,7 @@ This business account will allow people to easily identify your business and fin
 
 Through your account, in the **Facebook Business Manager**, you will have the ability to **create message templates** for sending **notifications** to customers at scale.
 
-We have covered the entrire setting up process, [**here**]
+We have covered the entrire setting up process, [**here**](https://docs.haptik.ai/whatsapp/setup-wa).
 
 <hr>
 
@@ -65,4 +65,17 @@ After filling in user specific data the HSM will be sent out as:
 
 `Hi Joey! Thanks for starting your personal training plan. We’ll send you a weekly update with your new schedule. You can log-in online using your training ID 123456. Stay fit!`
 
-To know more about HSMs, read [**here**]
+To know more about HSMs, read [**here**](https://docs.haptik.ai/whatsapp/bot-initiated).
+
+<hr>
+
+## Share WhatsApp Bot
+
+If you want to share the WhatsApp IVA chat link on website (or marketing content) wherein the user clicks on it, and it directly opens the whatsapp conversation with the IVA on their device - 
+On the website, you can add a link with your WhatsApp number (e.g. 1XXXXXXXXXX) and the default text as query parameter (e.g. I'm intereseted in your car sale) as follows:
+
+`https://wa.me/1XXXXXXXXXX?text=I'm%20interested%20in%20your%20car%20for%20sale`
+
+Clicking on it will redirect the user to the WhatsApp chat window for your number 
+
+You can read more about sharing WhatsApp link, [**here**](https://faq.whatsapp.com/general/chats/how-to-use-click-to-chat/).

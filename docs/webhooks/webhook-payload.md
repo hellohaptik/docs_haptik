@@ -89,6 +89,7 @@ Payload sent to your registered webhook will always be in json.
 
 ## Payload types
 
+> The events are supported by all channels such as WhatsApp, Facebook and so on.
 
 ### Message
 

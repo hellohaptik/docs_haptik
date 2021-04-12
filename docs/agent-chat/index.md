@@ -33,3 +33,21 @@ Chat flows are designed to guide the user through a specific problem and to ensu
 
 **Businesses** and **Teams** are sections to analyse your business/team data and configure respective settings for incoming chats. You can read more about it [**here**](https://docs.haptik.ai/agent-chat/for-team-leads).
 
+
+## Sidebar
+
+The **sidebar** remains constant throughout the tool.
+
+- You can check the latest features and relases from the sidebar as shown below - 
+![image](https://user-images.githubusercontent.com/75118325/111907011-785d7a00-8a79-11eb-9dbc-81921b00a851.png)
+
+- The toggle buttons helps you to navigate to different tools which you have access to.
+![image](https://user-images.githubusercontent.com/75118325/111907059-b3f84400-8a79-11eb-87d2-c585c8ce50df.png)
+
+- From the **My Profile** option you can check your profile and see all the partners you have access to. 
+- You can also **logout** from the platform using the **Logout** option
+![image](https://user-images.githubusercontent.com/75118325/111907122-f6218580-8a79-11eb-9366-94092026e2cb.png)
+
+- The **Help** section allows you to raise any query/issue you are facing with the platform. To know more about Help section, click [**here**](https://docs.haptik.ai/other/supportbot).
+![image](https://user-images.githubusercontent.com/75118325/111907190-341ea980-8a7a-11eb-9df1-d0a8aa1e351d.png)
+

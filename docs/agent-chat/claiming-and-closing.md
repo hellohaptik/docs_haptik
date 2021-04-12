@@ -61,7 +61,8 @@ If the chat is assigned to a team, basis the [algorithm](https://docs.haptik.ai/
 
 - Open any conversation either on the teams or the businesses page
   
-  ![all_custom_tools](assets/claim_1.png)
+  ![image](https://user-images.githubusercontent.com/75118325/111909053-b494d880-8a81-11eb-9fbb-e4e24569b86d.png)
+
   <br/><br/>
 
 - Click the reassign button on the composer.
@@ -100,13 +101,11 @@ Chats can be manually marked complete
 
 - When the agent is ready to mark a chat as complete (close the chat). The agent can mark the chat either complete or send to waiting.
 
-  ![all_custom_tools](assets/close_1_1.png)
-  <br/><br/>
+  ![image](https://user-images.githubusercontent.com/75118325/111909114-f1f96600-8a81-11eb-9172-8fb07c3dd84a.png)
 
 - Alternatively a team lead can also manually mark a live chat as complete by tapping on 1 of the two options in the composer inside the Businesses/Teams pages.
 
   ![all_custom_tools](assets/close_1.png)
-  <br/><br/>
 
 - The agent will have two options here
   - **Mark a chat complete**: This means that the conversation is complete and the user will not be sending more messages as a part of this conversation.
@@ -134,9 +133,9 @@ Refer the green box in image below.
 > This is the only case when you see completed chat assigned again automatically without user initiation.
 
 ## Disable Manual Closing Of Chat
-The above mentioned functionality is enabled by default for every business. To disable it, one have to edit the flag under Businesses > Business Settings > Show close chat button.
+The above mentioned functionality is enabled by default for every business. To disable it, one have to edit the flag under **Businesses > Business Settings > Show close chat button**.
 
-![business settings](assets/business_settings.png)
+![image](https://user-images.githubusercontent.com/75118325/111909325-d80c5300-8a82-11eb-9889-d4a2eff872e9.png)
 
 To add to that, one can edit the flag only if they have access to the below mentioned feature.
 ```

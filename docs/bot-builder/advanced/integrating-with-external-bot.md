@@ -15,14 +15,14 @@ The second step is to create a node in the bot. The job of this node is to take 
 
 ![addnode](https://user-images.githubusercontent.com/75118325/114334211-b8d78180-9b67-11eb-966f-cb61cf5f1244.gif)
 
-#### 3. Accepting all inputs
+### 3. Accepting all inputs
 We get the node to capture all the input messages by using a catchall entity. You can do this by adding an entity called "feedback_regex". This entity uses regex to capture the complete user message in the entity called "feedback_regex". 
 
 You can add entity by going to `bot_says` section of the node. In the `bot says` section click on the `+ Add an Entity` and then search for `feedback_regex`. Finally click on `Add to Bot Says` to add it to the node.
 
 ![add feedback](https://user-images.githubusercontent.com/75118325/114334420-27b4da80-9b68-11eb-9ad6-232f1d1d0dc8.gif)
 
-#### 4. Communicating with the external bot
+### 4. Communicating with the external bot
 Once the user message is captured it can be sent to the external bot using the `integrations` section of the node. The first step is to set the base url of the external bot in the bot settings section. If the external bot has different test and production endpoints you can set them accordingly. Or you can set it to be the same URL in both the cases.
 
 ![image](https://user-images.githubusercontent.com/75118325/114334677-b45f9880-9b68-11eb-8a4e-647fc6efee57.png)
@@ -33,7 +33,7 @@ Once that is done, we can add the specific path where we need to send the messag
 
 > To read more about how the data is sent to the endpoint, click [**here**](https://docs.haptik.ai/bot-builder/integrations/integration-parameters#request-parameters).
 
-#### 5. Completing the setup
+### 5. Completing the setup
 Finally, we want the above steps to be repeated for all user messages. To do this we make the node self connecting. This means that all incoming messages and responses will loop through this node which is what we want.
 
 ![self connect](https://user-images.githubusercontent.com/75118325/114334770-ecff7200-9b68-11eb-80b0-0fddbf4cca94.gif)

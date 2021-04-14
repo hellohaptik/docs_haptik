@@ -3,12 +3,12 @@
         "Getting Started": [
             "index"
         ],
-        "Live Agent Automation": [
+        "Technical Setup": [
           "setup-laa",
-          "build-laa"
+          "setup-ti"
         ],
-        "Ticketing and Data Integration": [
-          "setup-ti",
+        "Using User Details": [
+          "build-laa",
           "build-integration"
         ]
     }

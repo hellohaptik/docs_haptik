@@ -83,3 +83,4 @@ Provide the Button ID as the URL on Haptik Platform, as shown below -
 
 ![image](https://user-images.githubusercontent.com/75118325/114524898-3e8c2780-9c63-11eb-90dd-c7b73a099b88.png)
 
+> To know how to transfer the user to an agent on Salesforce, read [**here**](https://docs.haptik.ai/salesforce/build-laa).

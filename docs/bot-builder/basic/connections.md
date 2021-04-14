@@ -20,23 +20,21 @@ You might want to transition from one static node to another based on the user's
 
 The connections you create can prompt a user to transition from one node to the next in the following three ways:
 
-#### 1. Transition Basis message input by user (User Says):
+#### 1. Transition based on messages sent by user (User Says based Connection):
 
 This is when a conversation moves from one node to another based on a particular keyword/phrase or set of keywords sent by a user.
 
-* To set a connection based on a user input, click on the arrow linking the two nodes you need to link
+* To set a connection based on a user input, click on the arrow linking the two nodes you need to connect
 
-* The **User Says** tab opens up, here you can the user variations as shown below - 
+* The **User Says** tab opens up, here you can add the user variations as shown below - 
 
 ![usersaysconn](https://user-images.githubusercontent.com/75118325/113378297-419a3480-9394-11eb-9f61-da4bd16d759e.gif)
 
-* The User Says section on the node will only contain Negative Responses as the **Source of responses**. 
-
-    * Negative Responses are the user says for which you do not want the connection to happen.
+> The User Says section on the connected node (a non-start node) will only contain Negative Responses as the **Source of responses**. Negative Responses are the user says for which you do not want the connection to happen. This is being shown in the GIF below
 
 ![negativeconn](https://user-images.githubusercontent.com/75118325/113378578-fb91a080-9394-11eb-9eea-7fcc09a1f4c4.gif)
 
-#### 2. Transition Basis a particular Entity
+#### 2. Transition based on values of entities given by user (Entities based Connection):
 
 You can create a connection between two nodes on the basis of the values collected from the user in the forms of Entitites.
 
@@ -44,8 +42,7 @@ There are 3 options when you open the Entities tab on the Connection line.
 
 **1. Do not connect**:
 
-This option will not the slected entity for the connection. 
-For example, if you do not wish to connect Node 1 to Node 2 on the basis of person_name, you can select the Connection as **Do not connect**.
+This option will not use the selected entity for the connection. For example, if you do not wish to connect Node 1 to Node 2 on the basis of person_name, you can select the Connection as **Do not connect**.
 
 ![dnc](https://user-images.githubusercontent.com/75118325/113379638-b02cc180-9397-11eb-9450-de866d4ccab1.gif)
 
@@ -57,13 +54,13 @@ When you’ve added an entity to a conversation, you can define the transition f
 
 **3. Connect via entity value**:
 
-You can create a connection on the basis of a particular value(s)
+You can create a connection on the basis of a particular value(s) of an entity.
 
 ![Basis entity value](assets/bot-builder-user-says/connection_entity_value.png)
 
 * Here, you **add the entity value** and **press the enter key** on your keyboard. You can add multiple values for this entity.
 
-> The entities from the first node should automatically appear in a drop down menu. Select from the list to complete the creation of a transition based on entity presence.
+> The entities from the first node automatically appears in a drop down menu. Select from the list to complete the creation of a transition based on entity presence.
 
 ### Static Node to Code Node Connection Transition 
 
@@ -94,52 +91,7 @@ You can add rules in the following way:
 
 ### Output Node to Static Node Connection Transition 
 
-You can transition from an output node to a static node based on the user input by using user says based transition or by an entity transition.
-
-#### 1. Transition Basis message input by user (User Says):
-
-This is when a conversation moves from one node to another based on a particular keyword/phrase or set of keywords sent by a user.
-
-* To set a connection based on a user input, click on the arrow linking the two nodes you need to link
-
-* The **User Says** tab opens up, here you can the user variations as shown below - 
-
-![usersaysconn](https://user-images.githubusercontent.com/75118325/113378297-419a3480-9394-11eb-9f61-da4bd16d759e.gif)
-
-* The User Says section on the node will only contain Negative Responses as the **Source of responses**. 
-
-    * Negative Responses are the user says for which you do not want the connection to happen.
-
-![negativeconn](https://user-images.githubusercontent.com/75118325/113378578-fb91a080-9394-11eb-9eea-7fcc09a1f4c4.gif)
-
-#### 2. Transition Basis a particular Entity
-
-You can create a connection between two nodes on the basis of the values collected from the user in the forms of Entitites.
-
-There are 3 options when you open the Entities tab on the Connection line.
-
-**1. Do not connect**:
-
-This option will not the slected entity for the connection. 
-For example, if you do not wish to connect Node 1 to Node 2 on the basis of person_name, you can select the Connection as **Do not connect**.
-
-![dnc](https://user-images.githubusercontent.com/75118325/113379638-b02cc180-9397-11eb-9450-de866d4ccab1.gif)
-
-**2. Connect via entity presence**:
-
-When you’ve added an entity to a conversation, you can define the transition from the node with the entity to the next as only being possible if the user has input a response that falls within the entity. This is particularly helpful when you are setting a conversational flow in which a user needs to input something like a phone number or email ID. All values within the entities are accepted, but the bot will be able to determine whether or not the user has input the correct type of value (i.e. a 9 digit number or a complete email address)
-
-![image](https://user-images.githubusercontent.com/75118325/113379739-f124d600-9397-11eb-97e3-14070bf1d920.png)
-
-**3. Connect via entity value**:
-
-You can create a connection on the basis of a particular value(s)
-
-![Basis entity value](assets/bot-builder-user-says/connection_entity_value.png)
-
-* Here, you **add the entity value** and **press the enter key** on your keyboard. You can add multiple values for this entity.
-
-> The entities from the first node should automatically appear in a drop down menu. Select from the list to complete the creation of a transition based on entity presence.
+You can transition from an output node to a static node based on User Says or Entities. This functions the same way as **Static to Static Connection**.
 
 ### Unsupported Connections
 

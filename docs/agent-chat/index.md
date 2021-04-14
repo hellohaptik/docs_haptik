@@ -22,7 +22,7 @@ There are three sections in this tool:
 
 You will read about the above concepts in subsequent sections.
 
-**My Chats** is a section, where you converse with users i.e. agents receive and send messages. You can read more about it [**here**](https://docs.haptik.ai/agent-chat/for-chat-agents).
+**My Chats** is a section, where you converse with users i.e. agents receive and send messages. You can read more about it [**here**](https://docs.haptik.ai/agent-chat/newmychats).
 
     Tip: In case a bot is unable to respond to a query, which is outside the chat flow, 
     the chat is handed over to a chat agent. 

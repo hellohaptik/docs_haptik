@@ -2,22 +2,11 @@
 title: Creating Nodes
 ---
 
-On this page, we'll cover the following topics:
-
-[What is a Node?](#what-is-a-node)  
-[Different types of Nodes](#different-types-of-nodes)  
-[Purpose and Subcomponents of Static Node](#subcomponents-of-static-nodes)  
-[Purpose and Subcomponents of Code Node](#subcomponents-of-code-nodes)  
-[Purpose and Subcomponents of Output Node](#subcomponents-of-output-nodes)    
-[Creating a Node](#creating-a-node)
-
 ### What is a Node?
 
-**Nodes** are the interlinked building blocks of a bot. Each node acts like a gatekeeper who detects user inputs, sends out appropriate responses, and directs users to the next node. They are the points where conversation converges or diverges basis the information users input to the bot. Nodes are comprised of several important sub-components, which house important pieces of information. Read on in this section to learn more about the significance of the components **User Says, Bot Says,** and **Entities,** and **APIs**.
+**Nodes** are the interlinked building blocks of an IVA. Each node acts like a gatekeeper which detects user inputs, sends out appropriate responses, and directs users to the next node. They are the points where conversation converges or diverges basis the information users input to the IVA. 
 
-To jump straight to reading about any of the sub-components of nodes, click on the link in the subcomponents section of any node. 
-
-Otherwise, keep reading below to learn about the different node types and how to get started creating nodes.
+Nodes are comprised of several important sub-components, which house important pieces of information.
 
 ### Different Types of Nodes
 The Conversation Studio tool provides three types of nodes. Each node has a specific purpose and the different nodes can be used together in different combinations based on the use case.
@@ -34,12 +23,39 @@ The purpose of a static node is to present static information to the user like g
 
 ![RHS of Static Ndoe](assets/bot-builder-nodes/static-node.png)
 
-#### Subcomponents
+**Subcomponents**
 
-1. [User Says](user-says.md)
-2. [Bot Says](bot-says.md)
-3. [Connections](connections.md)
-4. [Integrations](../integrations/introduction.md)
+#### 1. User Says
+
+User says are the inputs from the user that the IVA needs to interpret the user’s goal. It is important to add and train the IVA with a variety of different sample user says for each node, so that the IVA can identify the correct intents and extract information (entities) from the user utterance.
+
+Whenever a user sends a message, IVA tries to understand what the User is saying using various Machine Learning algorithms and find the corresponding node. One of the key modules which is used for node identification is **Intent Detection Module**, which is a suit of many Machine Learning algorithms that help in finding the right node.
+
+To know more about User Says, click [**here**](https://docs.haptik.ai/bot-builder/basic/user-says-guidelines).
+
+#### 2. Bot Says
+
+Once you've completed the User Says component of a node, you'll need to define the node's Bot Says section. Bot Says is where a Node stores the replies that are sent in response to the user's message.
+
+To know more about Bot Says, click [**here**](https://docs.haptik.ai/bot-builder/basic/bot-says).
+
+#### 3. Connections
+
+Connections represent the path a conversation takes from node to node. Depending on the response a user inputs to the IVA, they traverse down a different connection to the appropriate next node. Bot builders must modify every connection they create to indicate which user inputs correspond to which nodes.
+
+To know more about Connections, click [**here**](https://docs.haptik.ai/bot-builder/basic/connections).
+
+#### 4. Integrations
+
+Integrations allow you to connect your IVA to external services to perform dynamic operations like fetching data, posting data or performing some business logic over the collected entities from the IVA.
+
+To know more about Integrations, click [**here**](https://docs.haptik.ai/bot-builder/integrations/introduction).
+
+#### 5. Settings
+
+When you drag and drop a node on the Conversation Studio graph, the **Settings** tab opens up.
+
+To know more about the fields on the Settings tab, click [**here**](https://docs.haptik.ai/bot-builder/basic/creating-nodes#creating-a-node).
 
 ### Purpose and Subcomponents of Code Nodes
 
@@ -51,8 +67,8 @@ Additionally, this gives you more power with respect to what you can do with the
 
 ![RHS of Code Ndoe](assets/bot-builder-nodes/code-node.png)
 
+**Subcomponents**
 
-#### Subcomponents
 1. [Integrations with Custom Code](../integrations/integrating-custom-code.md)
 
 ### Purpose and Subcomponents of Output Nodes
@@ -65,7 +81,8 @@ The output node also allows you to collect non mandatory entities that might be 
 
 ![RHS of Output Node](assets/bot-builder-nodes/output-node.png)
 
-#### Subcomponents
+**Subcomponents**
+
 1. [Bot Says](bot-says.md)
 
 ### Creating a Node
@@ -82,7 +99,7 @@ Once you drag and drop any of the node type from the sidebar, a new sidebar is o
 
 You'll need to add the following inputs:
 
-- **Node Name**: The label that will appear on the node on the Mogambo graph.
+- **Node Name**: The label that will appear on the node on the graph.
 
 - **System Name**: The system name is used to uniquely identify the node in the backend. Only underscores and capital case alphanumeric characters are allowed in this field.
 
@@ -96,10 +113,11 @@ You'll need to add the following inputs:
 
 Click **'Save'** when done.
 
+![add_node](https://user-images.githubusercontent.com/75118325/111916019-0dbf3500-8a9f-11eb-8ea0-2e46e67b09d6.gif)
+
 Post creation of a node, the node will be displayed as depicted below:
 
 ![img](assets/Nodes3.png)
-
 
 #### Uploading Nodes
 

@@ -2,23 +2,16 @@
 title: Connections
 ---
 
-This section will cover the following topics:  
-[What are connections?](#what-are-connections)  
-[Static Node to Static Node Connection Transition](#static-node-to-static-node-connection-transition)  
-[Static Node to Code Node Connection Transition](#static-node-to-code-node-connection-transition)  
-[Code Node to Output Node Connection Transition](#code-node-to-output-node-connection-transition)  
-[Output Node to Static Node Connection Transition](#output-node-to-static-node-connection-transition)
-[Dependent Response](#dependent-response)   
-[Connection Guidelines](#connection-guidelines)   
-
 ### What are Connections?
 
-Connections represent the path a conversation takes from node to node. Depending on the response a user inputs to the bot, they traverse down a different connection to the appropriate next node. Bot builders must modify every connection they create to indicate which user inputs correspond to which nodes.
+Connections represent the **path a conversation takes** from node to node. Depending on the response a user inputs to the bot, they traverse down a different connection to the appropriate next node. 
+
+Bot builders must modify every connection they create to indicate which user inputs correspond to which nodes.
 
 ### Creating Connections?
 You can create a connection between two nodes by clicking on the parent node, holding shift and dragging to the child node as shown below:
 
-![Creating Connections](assets/bot-builder-connections/creating-connections.gif)
+![s2s conn](https://user-images.githubusercontent.com/75118325/113377702-b1a7bb00-9392-11eb-81f7-3d85a4fe3169.gif)
 
 ### Static Node to Static Node Connection Transition 
 You might want to transition from one static node to another based on the user's input to branch into a different information collection flow.
@@ -27,46 +20,47 @@ You might want to transition from one static node to another based on the user's
 
 The connections you create can prompt a user to transition from one node to the next in the following three ways:
 
-**1. Transition Basis message input by user:**
+#### 1. Transition based on messages sent by user (User Says based Connection):
 
 This is when a conversation moves from one node to another based on a particular keyword/phrase or set of keywords sent by a user.
 
-* To set a connection based on a user input, click on the arrow linking the two nodes you need to link
+* To set a connection based on a user input, click on the arrow linking the two nodes you need to connect
 
-* Click on 'Connection Responses,' which will take you to the following screen.
+* The **User Says** tab opens up, here you can add the user variations as shown below - 
 
-![Basis user message](assets/bot-builder-user-says/connection_user_message.png)
+![usersaysconn](https://user-images.githubusercontent.com/75118325/113378297-419a3480-9394-11eb-9f61-da4bd16d759e.gif)
 
-* Decide which type of user input you want to set as an indicator to transition to the next node.
+> The User Says section on the connected node (a non-start node) will only contain Negative Responses as the **Source of responses**. Negative Responses are the user says for which you do not want the connection to happen. This is being shown in the GIF below
 
-    * Independent Responses: Adding potential user inputs here indicates to the bot that a user may transition to this next node from any point in the conversation as long as their input sufficiently matches the responses input by the bot builder.
+![negativeconn](https://user-images.githubusercontent.com/75118325/113378578-fb91a080-9394-11eb-9eea-7fcc09a1f4c4.gif)
 
-    * Negative Responses: Adding user inputs for which, you do not want the connection to happen.
+#### 2. Transition based on values of entities given by user (Entities based Connection):
 
-    * Responses from 'Previous_Node': This lets you limit the flow of conversation so that a user can only reach the next node if the bot has received a response from the specific preceding node.
+You can create a connection between two nodes on the basis of the values collected from the user in the forms of Entitites.
 
-**2. Transition Basis a particular entity value**
+There are 3 options when you open the Entities tab on the Connection line.
 
-(a.k.a. a Step Transition): The last type of transition that you can create is where a user may only move to the next node if a user inputs a specific value(s) from within an entity on a node.
+**1. Do not connect**:
 
-* To set a step transition value, click the arrow between the two nodes for which you're creating a connection
+This option will not use the selected entity for the connection. For example, if you do not wish to connect Node 1 to Node 2 on the basis of person_name, you can select the Connection as **Do not connect**.
 
-* Select Step Transition Values, which will take you to the screen below
+![dnc](https://user-images.githubusercontent.com/75118325/113379638-b02cc180-9397-11eb-9450-de866d4ccab1.gif)
+
+**2. Connect via entity presence**:
+
+When you’ve added an entity to a conversation, you can define the transition from the node with the entity to the next as only being possible if the user has input a response that falls within the entity. This is particularly helpful when you are setting a conversational flow in which a user needs to input something like a phone number or email ID. All values within the entities are accepted, but the bot will be able to determine whether or not the user has input the correct type of value (i.e. a 9 digit number or a complete email address)
+
+![image](https://user-images.githubusercontent.com/75118325/113379739-f124d600-9397-11eb-97e3-14070bf1d920.png)
+
+**3. Connect via entity value**:
+
+You can create a connection on the basis of a particular value(s) of an entity.
 
 ![Basis entity value](assets/bot-builder-user-says/connection_entity_value.png)
 
-* Here, you add the entity value and press the enter key on your keyboard. You can add multiple values for this entity.
+* Here, you **add the entity value** and **press the enter key** on your keyboard. You can add multiple values for this entity.
 
-**3. Transition Basis a particular entity presence**
-
-When you’ve added an entity to a conversation, you can define the transition from the node with the entity to the next as only being possible if the user has input a response that falls within the entity. This is particularly helpful when you are setting a conversational flow in which a user needs to input something like a phone number or email ID. All values within the entities are accepted, but the bot will be able to determine whether or not the user has input the correct type of value (i.e. a 9 digit number or a complete email address).
-
-* To set a connection based on an entity presence, click on the arrow connecting the two nodes you're looking to connect. This will take you to the following screen:
-
-![Basis entity presence](assets/bot-builder-user-says/connection_entity_presence.png)
-
-* The entities from the first node should automatically appear in a drop down menu. Select from the list to complete the creation of a transition based on entity presence.
-
+> The entities from the first node automatically appears in a drop down menu. Select from the list to complete the creation of a transition based on entity presence.
 
 ### Static Node to Code Node Connection Transition 
 
@@ -74,15 +68,15 @@ Transition from a static node to code node happens automatically once all the re
 
 However, if the static node is connected to another static node and has a user says or entity based transition and the condition for these transitions get satisfied then the transition will happen to the connnected static node and not the connected node.
 
-![Static-to-Code Connection](assets/bot-builder-connections/static-to-code.png)
+![s2c](https://user-images.githubusercontent.com/75118325/113380002-af485f80-9398-11eb-9541-0fe36787ce3a.gif)
 
 ### Code Node to Output Node Connection Transition 
 
 You can transition from a code node to any output node basis a set of rules/conditions applied on the output JSON from the code node.
 
-![Code-to-Output Connection](assets/bot-builder-connections/code-to-output.png)
+![c2o](https://user-images.githubusercontent.com/75118325/113381223-08fe5900-939c-11eb-93af-8e0534b48c23.gif)
 
-**1. Transition Basis Rules on Output JSON:**
+**Transition Basis Rules on Output JSON:**
 
 You can apply a combination of rules combined by either `AND` or `OR` to traverse from one node to the other.
 
@@ -97,46 +91,16 @@ You can add rules in the following way:
 
 ### Output Node to Static Node Connection Transition 
 
-You can transition from an output node to a static node based on the user input by using user says based transition or by an entity transition.
+You can transition from an output node to a static node based on User Says or Entities. This functions the same way as **Static to Static Connection**.
 
-**1. Transition Basis message input by user:**
+### Unsupported Connections
 
-This is when a conversation moves from one node to another based on a particular keyword/phrase or set of keywords sent by a user.
+Following are **unsupported types of connection**:
 
-* Create a connection fromt the parent node to the child node.
-* Click on the connection linking the two nodes.
-* Add the 'User Says' in the RHS screen shown below.
-
-![Output-to-Static Connection](assets/bot-builder-user-says/connection_user_message.png)
-
-**2. Transition Basis a particular entity value**
-
-(a.k.a. a Step Transition): The last type of transition that you can create is where a user may only move to the next node if a user inputs a specific value(s) from within an entity on a node.
-
-* To set a step transition value, click the arrow between the two nodes for which you're creating a connection
-
-* Select Step Transition Values, which will take you to the screen below
-
-![Basis entity value](assets/bot-builder-user-says/connection_entity_value.png)
-
-* Here, you add the entity value and press the enter key on your keyboard. You can add multiple values for this entity.
-
-**3. Transition Basis a particular entity presence**
-
-When you’ve added an entity to a conversation, you can define the transition from the node with the entity to the next as only being possible if the user has input a response that falls within the entity. This is particularly helpful when you are setting a conversational flow in which a user needs to input something like a phone number or email ID. All values within the entities are accepted, but the bot will be able to determine whether or not the user has input the correct type of value (i.e. a 9 digit number or a complete email address).
-
-* To set a connection based on an entity presence, click on the arrow connecting the two nodes you're looking to connect. This will take you to the following screen:
-
-![Basis entity presence](assets/bot-builder-user-says/connection_entity_presence.png)
-
-* The entities from the first node should automatically appear in a drop down menu. Select from the list to complete the creation of a transition based on entity presence.
-
-> Following are **unsupported types of connection**:
->
-> 1) Static Node to Output Node Connection Transition
-> 2) Code Node to Code Node Connection Transition
-> 3) Output Node to Output Node Connection Transition
-> 4) Output Node to Code Node Connection Transition
+1) Static Node to Output Node Connection Transition
+2) Code Node to Code Node Connection Transition
+3) Output Node to Output Node Connection Transition
+4) Output Node to Code Node Connection Transition
 
 ### Connection Guidelines
 
@@ -145,32 +109,14 @@ When you’ve added an entity to a conversation, you can define the transition f
 1. If chat flow contains a conditional logic and you need to take action based on the user response or entity value
 
 	For example: When you would like the user to select the preferred language before continuing with the chat flow.
-
-	![Conditional Chat Flow](assets/bot-builder-user-says/add_connection_flow.png)
+	
+	![image](https://user-images.githubusercontent.com/75118325/113381568-ede01900-939c-11eb-8bc9-4efd8751f698.png)
 
 2. If the chat contains a linear flow, but as we have a conditional logic for validation, split the logic into two nodes and transition to child node is done using dependent response or entity based transition.
 
-	For example: When you want to validate a user’s phone number to ensure that it is a valid user before continuing with the char flow. ***_Enter Details _*** contains an integration function that validates user’s phone number and transition to the child node is done based on the response.
-
-	![Linear Chat Flow](assets/bot-builder-user-says/add_connection_linear.png)
+	![image](https://user-images.githubusercontent.com/75118325/113381643-1b2cc700-939d-11eb-8464-c6fcc8d6d09f.png)
 	
 3. Do not mark the Node as **Context Clear Node** if there is a connection to another Node on the basis of **entity**. As marking a Node as Context Clear Node clears out all the entity values collected till the present Node, the connection won't proceed further because the IVA will lose the information at the Context Clear Node.
-
-#### *When should you have an incoming connections to a start node?*
-
-When user message on connection and on the independent response on the start node is different
-
-For example: When you would like to transition to the child based on single words such as voice or data.
-
-	User says: I want to recharge
-
-	Bot says: What would you like to recharge? Data plan or Voice plan?
-
-	User says: voice
-
-	Bot says: Sure! Let me go ahead and fetch the voice recharge plans
-
-Adding single words like voice, data, recharge, plan or phrase like data plan, what is the process, how to get without any context around the word or phrase is a bad practise. It will cause conflicts and lead to a false response.
 
 #### *When should you have an incoming connections to a non-start node?*
 

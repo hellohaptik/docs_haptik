@@ -190,7 +190,7 @@ You can apply customized settings on your bot for any channel where it is deploy
 
 You can choose the channel of deployment here.
 
-![PlatformDeployment](assets/Business13.png)
+![image](https://user-images.githubusercontent.com/75118325/113768030-fe95e380-973c-11eb-9ad9-b7dc5bdfcd39.png)
 
 You can read about it in detail [**here**](https://docs.haptik.ai/bot-builder/basic/platforms-deployment).
 

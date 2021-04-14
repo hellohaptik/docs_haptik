@@ -1,9 +1,9 @@
 ---
-title: Salesforce Integration
+title: Introduction
 id: index
 ---
 
-Salesforce, today is a prime choice for most businesses to handle their CRM, manage data and many more activities.
+Salesforce is a prime choice for most businesses to handle their CRM, manage data and many more activities.
 Customers who use Salesforce Service Cloud for providing support can leverage Haptik IVA’s integration with Salesforce products to provide a unified automated support experience in one interface.
 
 Also, Haptik IVA users can remain on familiar interfaces. Salesforce live agents can remain on their familiar interface. No re-learning of new interfaces needed for either of them. 
@@ -22,6 +22,8 @@ There are 3 key features of this integration -
 - Salesforce Live Agents will be able to use their familiar agent dashboard to engage with the user.
 - In case of agents being busy, Haptik IVA can notify users of the estimated wait time for agents to become available. 
 
+To read more about how to configure Live Agent Automation, read [**here**](https://docs.haptik.ai/salesforce/setup-laa).
+
 #### 2. Ticketing Integration
 
 - In addition to **Live Agent Integration**, Haptik IVAs will also be able to create **Cases** in **Salesforce Service Cloud** based on predefined actions or events in the IVA. 
@@ -33,6 +35,8 @@ There are 3 key features of this integration -
 - Haptik IVA can also be configured to **fetch user information** stored in **Salesforce CRM** to personalize the conversation. 
 - Haptik IVA identifies users based on the **identifier shared with the IVA** at the time of initiation of the conversation. The same can be used to query **Salesforce CRM** in an attempt to fetch more information about the user. 
 - **Personalization** can be as simple as addressing users by name or involve making the IVA flows more smarter by avoiding asking details already gathered in **Salesforce CRM**.
+
+To read more about how to configure Ticketing Integration and Customer Data Integration, read [**here**](https://docs.haptik.ai/salesforce/setup-ti).
 
 ### Pre-requisites for Haptik and Salesforce integration
 

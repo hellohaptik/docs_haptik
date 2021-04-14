@@ -7,13 +7,9 @@
           "setup-laa",
           "build-laa"
         ],
-        "Ticketing Integration": [
+        "Ticketing and Data Integration": [
           "setup-ti",
-          "build-ti"
-        ],
-        "Customer Data Integration": [
-          "setup-cdi",
-          "build-cdi"
+          "build-integration"
         ]
     }
 }

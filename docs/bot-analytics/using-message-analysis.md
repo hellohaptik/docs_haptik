@@ -27,9 +27,13 @@ The columns of the table can be configured by you in case of Viewing Messages. W
 
 These columns are:
 * **Body** - This column shows you the actual message that was sent.
-* **Chat Link** - This column provides a link to open and view the conversation related to the message. Clicking on the link will open a page that shows the conversation as well as the user details.
+* **Chat Link** - This column provides a link to open and view the entire conversation related to the message. 
+
+Clicking on the link will open a page that shows the conversation as well as the user details which were collected on the bot. There is a **Previous Conversation** and **Next Conversation** button to help you navigate throughout the various conversations of the user. If you have access to both **Smart Agent Chat** and **Intelligent Analytics**, you will be able to the chat link as shown below - 
 
   ![Chat Link](assets/message-analysis-chat-link.png)
+
+> Read more about chat links, [**here**](https://docs.haptik.ai/bot-analytics/chat-links).
   
 * **Conversation ID** - This is a unique ID every conversation has.
 * **Created At** - This column tells you when the message was recieved by the bot.

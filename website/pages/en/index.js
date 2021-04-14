@@ -91,6 +91,10 @@ module.exports = () => (
         {
           title: 'Help',
           url: '/other/supportbot',
+        },
+        {
+          title: 'Chat Link',
+          url: '/bot-analytics/chat-links'
         }
       ]}
     />

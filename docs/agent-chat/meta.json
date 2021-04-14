@@ -25,8 +25,7 @@
         "Miscellaneous": [
             "bot-agent-handover",
             "adding-custom-tools",
-            "integrating-external-bot",
-            "../bot-analytics/chat-links"
+            "integrating-external-bot"
         ]
     },
     "headerLink": {

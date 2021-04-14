@@ -48,14 +48,14 @@ Select the **Platform** you want to deploy the bot on.
 
 The fields for adding keys change according to the **Platform** selected. 
 
-`**Deploying to Jio**
-
-To connect your bot to Jio - open the platform settings section in the business manager and navigate to Jio. Follow these steps to connect the bot:
-
-1) Callback URL is auto-generated
-2) Enter the access token provided by the Jio team
-3) Activate the connection by clicking on the switch and save the configuration
-4) Share the full callback url <domain_name>/jio/<any_identifier> using the same identifier as before with the Jio team. The domain name will be provided by Haptik team.`
+>**Deploying to Jio**
+>
+>To connect your bot to Jio - open the platform settings section in the business manager and navigate to Jio. Follow these steps to connect the bot:
+>
+>1) Callback URL is auto-generated
+>2) Enter the access token provided by the Jio team
+>3) Activate the connection by clicking on the switch and save the configuration
+>4) Share the full callback url <domain_name>/jio/<any_identifier> using the same identifier as before with the Jio team. The domain name will be provided by Haptik team.
 
 ## Sending Notifications in a Bot with Web SDK Integration
 

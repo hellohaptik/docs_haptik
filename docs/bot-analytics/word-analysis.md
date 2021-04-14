@@ -42,7 +42,7 @@ In **others**, we see all messages which caused a bot break and appeared a singl
 
 Messages which received bot break messages and were repeated on the bot fall under this category.
 
-> Topics in Clustered and Unclustered sections are different. Under Clustered, only messages which have common words/phrases being repeated are created as a topic. But under Unclusteted, entire message should be repeated to create a topic.
+> Topics in Clustered and Unclustered sections are different. Under Clustered, only messages which have common words/phrases being repeated are created as a topic. But under Unclustered, entire message should be repeated to create a topic.
 
 ## Word Cloud
 

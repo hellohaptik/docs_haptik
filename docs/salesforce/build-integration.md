@@ -53,17 +53,15 @@ Read more about chat elements, [**here**](https://docs.haptik.ai/bot-builder/bas
 
 An entity represents values which is collected from the user in a conversation. Depending on the context of the conversation, the required response can either be a single value or group of specific values.
 
-> You can fetch user's **name** from their Facebook account. Add **person_name** entity to fetch the user's profile name and use %entitytag_person_name@full_name to print the name on bot says. Add the entity on first node of the bot and mark them as non-mandatory. 
-
 You can read more about entities [**here**](https://docs.haptik.ai/bot-builder/basic/entities).
 
 ## Step 7: Create Connections
 
 Connections represent the path a conversation takes from node to node. Depending on the response a user inputs to the bot, they traverse down a different connection to the appropriate next node. Bot builders must modify every connection they create to indicate which user inputs correspond to which nodes.
 
-## Step 8: Using Code Editor for user details
+## Step 8: Using Code Editor for User Details
 
-### Get User Details
+### Get User Details from Salesforce
 
 On code editor, try out the example below to featch user details from your Salesforce account.
 
@@ -87,7 +85,7 @@ def get_data():
           return {'exception': True}
 `
 
-### Post User Details
+### Post User Details to Salesforce
 
 Everytime the bot hits your Salesforce app, a new case gets generated. 
 Tryout the below example to post data and generate a new case on your Salesforce account.

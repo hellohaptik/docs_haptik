@@ -45,7 +45,14 @@ To know more about Bot Says, click [**here**](https://docs.haptik.ai/bot-builder
 
 ### Using Chat Elements (HSLs)
 
-Chat Elements are used to send different types to responses to the user.
+Chat Elements are used to send different types to responses to the user. Facebook supports the following Chat Elements - 
+* Buttons
+  * The character length (including spaces) for Buttons is **20**.
+* Text + Quick Replies
+  * The character length (including spaces) for Quick Replies is **25**.
+* Carousels
+* Image
+* Raw Text/JSON
 
 Read more about chat elements, [**here**](https://docs.haptik.ai/bot-builder/basic/chat-elements).
 
@@ -63,8 +70,18 @@ Add the entities on first node of the bot and mark them as non-mandatory. Read [
 
 Connections represent the path a conversation takes from node to node. Depending on the response a user inputs to the bot, they traverse down a different connection to the appropriate next node. Bot builders must modify every connection they create to indicate which user inputs correspond to which nodes.
 
-## Step 8: Quality Assessment
+## Step 8: Add Taskbox
+
+You can add a Taskbox which provides a default option for the users select from. The process to add a taskbox is mentioned [**here**](https://docs.haptik.ai/bot-builder/basic/business#taskbox).
+
+The tasks which are added appear as a Quick Reply to the user.
+
+## Step 9: Quality Assessment
 
 Follow our [**Quality Assessment**](https://docs.haptik.ai/bot-builder/basic/testing-bot) section to test the bot.
+
+## Feedback Module
+
+Facebook does not support the **Haptik's Feedback module** as of now.
 
 Once the testing is done, you can test the bot on Facebook

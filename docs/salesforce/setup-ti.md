@@ -44,3 +44,5 @@ If you have not generated the crt file, then Haptik will generate private key an
 > 
 
 * **Step 4:** Share the **clientId**(consumer key) and **username** used for creating the connected application with Haptik.
+
+> To know how to fetch and post user data, read [**here**](https://docs.haptik.ai/salesforce/build-integration).

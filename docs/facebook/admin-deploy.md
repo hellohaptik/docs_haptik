@@ -1,5 +1,5 @@
 ---
-title: Setting up Facebook Credentials
+title: Set up Facebook Credentials
 ---
 
 After an Admin has been added in the app, they will have to continue with certain configurations.

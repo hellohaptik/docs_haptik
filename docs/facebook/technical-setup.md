@@ -1,5 +1,5 @@
 ---
-title: Technical Setup of Facebook Account
+title: Set up Facebook Account
 ---
 
 ## Facebook Developer Account

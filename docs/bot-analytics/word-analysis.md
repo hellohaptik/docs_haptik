@@ -4,33 +4,50 @@ title: Word Analysis
 
 This section will show which words caused the IVA to break the maximum, top IVA break topics, thereby enabling businesses to optimize chat flows for better user experience.
 
+**Word Analysis** helps you know the keywords/phrases which the bot was not able to understand in the user's messages, resulting in a bot break. 
+
 ![wa1](https://user-images.githubusercontent.com/75118325/111724721-c2810880-888b-11eb-9717-c6d41aa0ba99.png)
 
-As the name suggests **Word Analysis** helps you know the words which the IVA was not able to understand in the user's messages, resulting in a bot break. 
-
-![wa2](https://user-images.githubusercontent.com/75118325/111725087-6cf92b80-888c-11eb-978b-542922b0f7ec.png)
 
 ## Bot Break Topics
 
-Word analysis helps to classify messages into bot break topics. There are two options to **filter** Bot Break topics, **Clustered** and **Unclustered**.
+![wa2](https://user-images.githubusercontent.com/75118325/111725087-6cf92b80-888c-11eb-978b-542922b0f7ec.png)
 
-Bot Break Topics also gives us visibility of **Messages**, **Users** and **Confidence level** of the model for each filter so that we can take an informed decision.
+Bot Break Topics section will help you understand the keywords/phrases that are causing the bot breaks. Bot Break Topics also gives us visibility of **Messages**, **Users** and **Confidence level** of the model for each filter so that we can take an informed decision.
 
-![image](https://user-images.githubusercontent.com/75118325/111902315-0417dc00-8a63-11eb-8140-bd11b83ff8b1.png)
+There are **two** filter options to view Bot Break Topics - 
+* Clustered Bot Break Topics
+* Unclustered Bot Break Topics
 
-#### Clustered Bot Break Topics
+<hr>
 
-This filter clubs all the similar or same words that caused the IVA to break the maximum.
+### Clustered Bot Break Topics
 
-![image](https://user-images.githubusercontent.com/75118325/111902695-b43a1480-8a64-11eb-99d9-ce52bde92ae4.png)
+![image](https://user-images.githubusercontent.com/75118325/114655662-481c9a80-9d0a-11eb-9094-48ef2e6f999f.png)
 
-#### Unclustered Bot Break Topics
+In Clustered Bot Break Topics, all the keywords are matched and clubbed together to form a topic. This topic will contain all different user messages where the same keyword/phrase was present.
 
-Unclustered Bot Break Topics creates a topic on the basis of same messages received by the IVA that caused the bot break.
+<hr>
 
-There is a **others** topic at the end of the the table. This topic contains all the random messages which were received by the IVA that caused the bot break. These messages were received by the IVA not more than once.
+### Unclustered Bot Break Topics
 
-![image](https://user-images.githubusercontent.com/75118325/111904070-efd7dd00-8a6a-11eb-8eab-a80be8c81f80.png)
+![image](https://user-images.githubusercontent.com/75118325/114660250-9afa5000-9d12-11eb-8b66-7d883f5a98c1.png)
+
+In Unclustered Bot Break Topic, there are 2 types of topics - 
+
+#### Others
+
+![image](https://user-images.githubusercontent.com/75118325/114660294-af3e4d00-9d12-11eb-8a19-e6222fbabe5e.png)
+
+In **others**, these are all the messages which caused a bot break which were not observed more than once on the bot.
+
+#### Topics
+
+![image](https://user-images.githubusercontent.com/75118325/114660360-d09f3900-9d12-11eb-9886-e3625e9eb019.png)
+
+The topics in unclustered filter are formed only if the same user message was repeated.
+
+<hr>
 
 ## Word Cloud
 

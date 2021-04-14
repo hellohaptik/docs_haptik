@@ -12,9 +12,7 @@ There are several advantages for using Facebook Messenger -
 * Easily identifies leads.
 * Your business can reach your consumers.
 
-## Setting up Facebook Messenger
-
-### Prerequisites
+## Prerequisites of a Facebook Messenger Bot
 
 The following are pre-requisites for having a Facebook Messenger Bot -
 * A **Facebook page**, this is the page where the bot will be deployed.

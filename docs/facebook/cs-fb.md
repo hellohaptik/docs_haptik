@@ -60,11 +60,9 @@ Read more about chat elements, [**here**](https://docs.haptik.ai/bot-builder/bas
 
 An entity represents values which is collected from the user in a conversation. Depending on the context of the conversation, the required response can either be a single value or group of specific values.
 
-`
-You can fetch user's **name** from their Facebook account.
-Add **person_name** entity to fetch the user's profile name and use %entitytag_person_name@full_name to print the name on bot says `
+> You can fetch user's **name** from their Facebook account. Add **person_name** entity to fetch the user's profile name and use %entitytag_person_name@full_name to print the name on bot says. Add the entity on first node of the bot and mark them as non-mandatory. 
 
-Add the entities on first node of the bot and mark them as non-mandatory. Read [**here**](https://docs.haptik.ai/bot-builder/basic/entities) to know more about entities.
+You can read more about entities [**here**](https://docs.haptik.ai/bot-builder/basic/entities).
 
 ## Step 7: Create Connections
 

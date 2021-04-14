@@ -61,7 +61,7 @@ Bot's configuration settings are as important as the bot design or bot building.
 
 ### Quality Assessment
 
-Bot building and bot testing are deeply coupled. You can read it [**here**](https://docs.haptik.ai/bot-builder/advanced/development-guidelines). Once bot building is completed, you can start the process of Quality Assessment using the documentation [**here**](https://docs.haptik.ai/bot-builder/basic/testing-bot). 
+Bot building and bot testing are deeply coupled. Quality Assessment ensures whether the bot is functioning aptly. Once bot building is completed, you can start the process of Quality Assessment using the documentation [**here**](https://docs.haptik.ai/bot-builder/basic/testing-introduction). 
 
 ### Go Live
 

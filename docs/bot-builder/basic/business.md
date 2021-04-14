@@ -46,7 +46,10 @@ These are some basic details of the Business.
 
 - **Business Languages**: You can add languages from the drop down if its a multilingual bot.
 
-- **Enable Human Assistance**: Will make it possible for human chat assistants to intervene when bots break. This is helpful if you have a bot + human solution or a human-only solution. How we enable Human assistance on our Business manager, similarly, you'd be able to choose the Live agent chat tool for setup. `Haptik Agent Chat tool` and `Sprinklr` is supported as of now. 
+#### Bot Settings
+
+- **Enable Human Assistance**: Will make it possible for human chat assistants to intervene when bots break. This is helpful if you have a bot + human solution or a human-only solution. How we enable Human assistance on our Business manager, similarly, you'd be able to choose the Live agent chat tool for setup. 
+Click on the dropdown to select your preferred tool.
 
 ![ECT Flag](assets/Enable_ECT.png)
 
@@ -64,7 +67,9 @@ These are some basic details of the Business.
 
 > Make sure you have all these fields filled out with the bots from the drop down, or else your bot will break and not give correct responses.
 
-- **User Feedback**: Feedback module is the smart action where the users can provide their feedback in text & ratings as shown below
+#### User Feedback
+
+Feedback module is the smart action where the users can provide their feedback in text & ratings as shown below
 
 ![Star Rating](assets/FD1.png)
 
@@ -163,6 +168,8 @@ You can apply customized settings on your bot for any channel where it is deploy
 
 ![Partner Settings](assets/Business10.png)
 
+#### SDK Configurations
+
 - **Upload Business Icon**: When there are multiple Businesses clustered together in a partner in a homescreen, you can assign each Business an icon. Upload that icon here
 
 - **Hide Haptik branding on the SDK**: Tick this off to hide the _powered by Haptik_ branding across this business
@@ -179,17 +186,19 @@ You can apply customized settings on your bot for any channel where it is deploy
 
 ![LanguageSDKConfig](assets/Business12.png)
 
-- **Platform Deployments**: You can choose the channel of deployment here.
+#### Platform Deployments 
 
-![PlatformDeployment](assets/Business13.png)
+You can choose the channel of deployment here.
+
+![image](https://user-images.githubusercontent.com/75118325/113768030-fe95e380-973c-11eb-9ad9-b7dc5bdfcd39.png)
 
 You can read about it in detail [**here**](https://docs.haptik.ai/bot-builder/basic/platforms-deployment).
 
-### Section 3: Bot Prompt Triggers
+### Section 4: Bot Prompt Triggers
 
 Bot prompts are pop-ups with content and a click action. It’s used to grab an user’s attention in a non-intrusive way. Please refer the image below where on the Haptik’s website, we try to connect with the user.
 
-![Bot Prompt](assets/10_bot_prompt.png)
+![image](https://user-images.githubusercontent.com/75118325/113762039-c7700400-9735-11eb-827a-339555fa4a7b.png)
 
 Check out the pop-up message on the bottom-right corner in the above image. It’s a type of bot prompt. In this section, we give you the power to configure these bot prompts. And its trigger is when you decide to push a bot prompt to the user.
 

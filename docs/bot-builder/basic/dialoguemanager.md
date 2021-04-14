@@ -25,7 +25,7 @@ Some illustrations below depict the algorithm in action.
 
 FAQ Node -
 
-![DM 2](/assets/DM2.png)
+![image](https://user-images.githubusercontent.com/75118325/113774603-1f623700-9745-11eb-97d5-d609cd85e543.png)
 
 Start Node -
 
@@ -81,7 +81,8 @@ The below images show the User Says on the FAQ NODE **Founders of Haptik**. Also
 
 ![DM 11](/assets/DM11.png)
 
-![DM 2](/assets/DM2.png)
+![image](https://user-images.githubusercontent.com/75118325/113774663-3012ad00-9745-11eb-8b01-e89416633cf5.png)
+
 
 As shown in the image below, the conversation started with User Utterance "About Haptik" and correctly got responded by **About Haptik** START NODE, as per FLOWCHART 1.
 
@@ -99,7 +100,7 @@ The below images show the conversation flow from **Funding of Haptik** START NOD
 
 ![DM 13](/assets/DM13.png)
 
-![DM 2](/assets/DM2.png)
+![image](https://user-images.githubusercontent.com/75118325/113775151-ea0a1900-9745-11eb-8e6c-d57b4c69a5d2.png)
 
 The conversation started with a User Utterance "Funding of Haptik". It was responded from **Funding of Haptik** START NODE.
 
@@ -165,7 +166,7 @@ The below images show an entity being collected on the **Careers at Haptik** STA
 
 Below image shows a FAQ NODE **Founders of Haptik** and it’s User Says.
 
-![DM 2](/assets/DM2.png)
+![image](https://user-images.githubusercontent.com/75118325/113776482-9b5d7e80-9747-11eb-921e-07990dc50f6f.png)
 
 As shown in the image below, when the User Utterance “Is haptik hiring for any jobs?” is received, the **Careers at Haptik** START NODE is selected to respond to the query.
 

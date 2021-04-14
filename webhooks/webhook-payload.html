@@ -310,6 +310,9 @@
         <span class="hljs-attr">"conversation_identifier"</span>: <span class="hljs-string">"&lt;CONVERSATION_IDENTIFIER&gt;"</span>,
         <span class="hljs-attr">"chat_link"</span>:<span class="hljs-string">"&lt;CHAT_LINK&gt;"</span>, <span class="hljs-comment">// deprecated. use `complete_chat_link` instead</span>
         <span class="hljs-attr">"complete_chat_link"</span>: <span class="hljs-string">"&lt;CHAT_LINK&gt;"</span>,
+        <span class="hljs-attr">"completion_type"</span>: <span class="hljs-string">"agent"</span>, <span class="hljs-comment">// possible values 'gogo', 'agent', 'autocomplete' depends who marked the chat complete</span>
+        <span class="hljs-attr">"completion_by"</span>: <span class="hljs-string">"&lt;AGENT_CLAIM_NAME&gt;"</span>, <span class="hljs-comment">// the state of a conversation before it was marked as completed.</span>
+                                      <span class="hljs-comment">//Possible values 'AGENT_CLAIM_NAME', 'Team Offline Flag', 'Waiting for User', 'Bot completed'</span>
         <span class="hljs-attr">"closing_categories"</span>: {
             <span class="hljs-attr">"reason"</span>: <span class="hljs-string">""</span>,
             <span class="hljs-attr">"subReason"</span>: <span class="hljs-string">""</span>,

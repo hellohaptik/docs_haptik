@@ -6,6 +6,9 @@
         "Implementation of IVA": [
         	"on-cs",
             "deploy-gbm"
+        ],
+        "Analytics of GBM IVA": [
+            "analytics-gbm"
         ]
     }
 }

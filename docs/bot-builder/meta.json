@@ -60,12 +60,13 @@
 			"integrations/integration-parameters"
 		],
 		"Quality Assessment": [
-			"basic/testing-bot",
-			"advanced/testing-guidelines",
-			"advanced/debugging-guidelines",
+			"basic/testing-introduction",
+			"advanced/development-guidelines",
 			"basic/oracle-feedback",
-			"basic/bot-qa-tool",
-			"basic/qa-best-practices"
+			"basic/testing-bot",
+			"advanced/debugging-guidelines",
+			"basic/qa-best-practices",		
+			"basic/bot-qa-tool"
 		],
 		"Advanced": [
 			"advanced/integrating-webviews-into-sdk",
@@ -75,7 +76,7 @@
 			"integrations/additional-apis"
 		],
 		"Miscellaneous": [
-			"advanced/development-guidelines",
+			
 			"basic/multiple-languages",
 			"basic/building-voice-bots"
 			

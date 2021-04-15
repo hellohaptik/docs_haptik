@@ -79,8 +79,14 @@ If the TL _does not_ have **Chat Agent View Personal Details** permission for Sm
 ![image](https://user-images.githubusercontent.com/75118325/114346094-7ff7d680-9b80-11eb-83b1-21703da9cebd.png)
 
 > - This link does not contain any PII related information such as name, email of the user.
-> - All the entites which are marked as personal on the bot, will be masked as well
+> 
+> - This link will also not contain any sensitive information such as PAN number, Credit Card number and so on.
+> 
+> - All the entites which are marked as **personal** on the bot, will be masked as well
+> 
 > ![image](https://user-images.githubusercontent.com/75118325/114155287-f0afb080-993e-11eb-92eb-eb8e7ac5e11d.png)
+
+> **_Note:_** **Please read this [document](https://docs.haptik.ai/bot-analytics/using-message-analysis#data-masking) to understand how to mask the data and how data can be masked by default.**
 
 ### Chat link access on Intelligent Analytics
 
@@ -89,4 +95,5 @@ If you have access to only Intelligent Analytics, you will be able to see **conv
 On Intelligent Analytics, Chat links are accessible from **Message Analysis**, **Word Analysis** and **User Reviews** sections. Whenever you click the **View Chat** button, it will take you to **conversation page** as shown below
 
 ![image](https://user-images.githubusercontent.com/75118325/114346540-45db0480-9b81-11eb-8abd-46f5beffda48.png)
+
 

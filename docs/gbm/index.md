@@ -175,6 +175,7 @@ To add more availability times, click Add availability.
 - Click Add secondary interaction, and set Interaction type to Human.
 - If human messaging isn't always available, uncheck Always available and specify the available days, times, and timezone.
 To add more availability times, click Add availability.
+- If you have a live agent only solution on, then you should also configure an offline message that gets auto-triggered during their offline hours. This message can be configured from the Business Communications Developer console
 
 To know more about updating message availability, click [**here**](https://developers.google.com/business-communications/business-messages/guides/configure/availability).
 

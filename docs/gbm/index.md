@@ -11,13 +11,13 @@ The way we communicate has changed: 75% of consumers now prefer to engage with a
 
 ![gbm1](https://user-images.githubusercontent.com/75118325/111470175-919ab980-874d-11eb-9771-251a48bdaf58.png)
 
-The **MESSAGE** option is available on all iOS and Android Devices. 
+All GBM entry points (non-local and location based) are available on android. Only location based entry points are available on iOS.
 
 Once the user clicks on the **MESSAGE** option, a conversational screen opens up and the user can start sending their messages.
 
 ![Screenshot_20210317-221659_Maps](https://user-images.githubusercontent.com/75118325/111506508-b2740680-876f-11eb-83b1-aecc749ddf50.jpg)
 
-To know more about Google Business Messages, click [**here**](https://businessmessages.google/).
+To know more about Google Business Messages, click [**here**](https://developers.google.com/business-communications/business-messages/guides/features).
 
 > **Haptik is a registered `Partner` with Google Platform.**
 
@@ -31,7 +31,7 @@ Brand is the business name. For example, if Jio wants to set up a Google Busines
 
 ### 2. Create an Agent
 
-An agent is a Haptik's Intelligent Virtual Assistant (IVA). The agent represents the brand i.e. the business, which users will be having a conversation with. Agents are managed by Haptik (partner).
+An agent means Haptik's Intelligent Virtual Assistant (IVA). The agent represents the brand i.e. the business, which users will be having a conversation with. Agents are managed by Haptik (partner).
 
 > To know more about creating brand and agents click [**here**](https://developers.google.com/business-communications/business-messages/guides/set-up/agent).
 
@@ -93,15 +93,19 @@ Business Messages approves your agent for various entry points based on the info
 
 - Launch your agent.
 
-There are 4 major ways you set up NON_LOCAL Entry Point.
+There are 4 different types NON_LOCAL Entry Point.
 
 **1. Featured snippets**
 
 This entry point enables conversations with your agent when a user finds contact details through Search.
 
+![image](https://user-images.githubusercontent.com/75118325/114896619-1ef52a80-9e2e-11eb-831c-8f6bec13d07b.png)
+
 **2. Sitelinks**
 
 This entry point enables conversations with your agent when sitelinks appear in Search.
+
+![image](https://user-images.githubusercontent.com/75118325/114896648-2583a200-9e2e-11eb-8671-f3b4fb5450ca.png)
 
 **3. URL**
 
@@ -112,6 +116,8 @@ This entry point enables conversations from URLs in messages, links, or websites
 **4. Widget**
 
 This entry point enables conversations from widgets you integrate with a website.
+
+![image](https://user-images.githubusercontent.com/75118325/114896715-303e3700-9e2e-11eb-9cbb-ede1bcaadfc2.png)
 
 ### 2. Location Based Entry Point
 
@@ -134,21 +140,29 @@ There are 3 major ways you can set Location Based Entry Point -
 
 **1. Maps**
 
-This entry point enables conversations with locations associated with your agent from the Maps app (Android and iOS)
+This entry point enables conversations with locations associated with your agent from the Maps app (Android and iOS).
+
+![image](https://user-images.githubusercontent.com/75118325/114896776-3df3bc80-9e2e-11eb-935c-c0359da3c186.png)
+
 
 **2. Placesheet**
 
-This entry point enables conversations with locations associated with your agent when a user finds the location in Search
+This entry point enables conversations with locations associated with your agent when a user finds the location in Search.
+
+![image](https://user-images.githubusercontent.com/75118325/114896818-477d2480-9e2e-11eb-9cfc-16f1d5d068e0.png)
+
 
 **3. Local Pack**
 
 When a user's search results include multiple nearby locations, the LOCAL_PACK entry point displays a messaging button below the list of locations. Additionally, LOCAL_PACK enables messaging for a location when the location is closed and can't answer calls.
 
+![image](https://user-images.githubusercontent.com/75118325/114896853-4f3cc900-9e2e-11eb-99b9-a14a8457303e.png)
+
 > **To know more about Entry Point, click [here](https://developers.google.com/business-communications/business-messages/guides/learn/entry-points#location).**
 
-### 7. Bot and human solution
+### 7. Live Agent Requirements
 
-It is mandatory to have a **Bot and human** solution. 
+It is mandatory to have a live agent solution at all entry points except website and url entry points 
 
 1. Open the **Business Communications Developer Console** and sign in with your Business Messages Google account.
 2. Choose the agent.

@@ -9,6 +9,7 @@ Testing all the functional flows will ensure if the bot is giving correct respon
 * Test of all the positive and negative flows as per the design.
 * Identify and write different scenarios before test execution.
 * Execution of scenarios, and issues fixes with retesting.
+* Prepare a sheet for all the test cases you are testing. Find a sample sheet at the end of the document.
 
 ### 2. API testing and its alignment with requirements in IVA:
 
@@ -24,7 +25,11 @@ All the APIs should be tested to ensure users are getting responses and the APIs
 
 Small Talk is a module present for all the bot. Small Talk responds to random questions asked by user such as _Are yuo a robot?_.
 
-* IVA should reply correctly for small talk (if it is enabled).  
+* IVA should reply correctly for small talk (if it is enabled).
+* Verify the negative intents for Small talk as well. 
+  
+  `Example: You are useless.`
+  
 * Ask the question such as _‘Who made you?’_ It should not give **Haptik** branding. Small talk customized messages are recommended.
 
 ### 4. FAQs verification (if FAQs are present):
@@ -101,6 +106,10 @@ Test variations with negative tone within the bot flow.
 * Check if the chat is transferred to agent on bot break or upon user says.
 * Check if the chat gets assigned to an agent and if you are getting reponses on the bot.
 * Check if agent is able to close the chat.
+
+### 11. Run the Bot QA Tool:
+
+* Haptik's Bot QA Tool makes regression testing of a bot scaleable and thus saves time. To use the Bot QA tool, read [**here**](https://docs.haptik.ai/bot-builder/basic/bot-qa-tool).
 
 ### Regression testing before go live:
 

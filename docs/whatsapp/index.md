@@ -6,9 +6,9 @@ WhatsApp helps more than 1.5 billion people connect and share with the people th
 
 The WhatsApp Business API Client supports a subset of the features provided by the WhatsApp applications you already know from Android, iOS, Web and other platforms including end-to-end encryption. The difference is that this application can be deployed on a server, providing a local API that allows you to programmatically send and receive messages and integrate this workflow with your own systems (CRMs, customer care, etc.).
 
-If you would like us to consider your business for inclusion in the limited public preview of the WhatsApp Business API, please visit [**https://www.facebook.com/business/m/whatsapp/business-api**](https://www.facebook.com/business/m/whatsapp/business-api).
+If you would like us to consider your business for inclusion in the limited public preview of the WhatsApp Business API, please visit [**here**](https://www.facebook.com/business/m/whatsapp/business-api).
 
-> If you use anything other than the official WhatsApp Business API or other official WhatsApp tools, Whatsapp reserves the right to limit or remove your access to WhatsApp as this violates their policies.
+> If you use anything other than the official WhatsApp Business API or other official WhatsApp tools, Whatsapp reserves the right to limit or remove your access from WhatsApp as this violates their policies.
 
 ## Prerequisites for WhatsApp Integration  
 
@@ -22,7 +22,9 @@ If you would like us to consider your business for inclusion in the limited publ
 
 <hr>
 
-## WhatsApp Business Account
+## Setup WhatsApp Business Account
+
+Now that you know the pre-requisites for setting up a WhatsApp bot, you can set up the WhatsApp Business Account.
 
 The first step for businesses to communicate with customers on WhatsApp is to create a [**WhatsApp Business Account**](https://www.facebook.com/business/help/2087193751603668) and set up a [**line of credit**](https://www.facebook.com/business/help/1684730811624773?id=2129163877102343). 
 
@@ -34,7 +36,20 @@ We have covered the entrire setting up process, [**here**](https://docs.haptik.a
 
 <hr>
 
-## WhatsApp Messaging
+## WhatsApp Conversation
+
+There are **two** types of conversations that are possible on WhatsApp. 
+
+1. A regular user initiated conversation where the user sends a message to the WhatsApp bot and the bot replies back to the user. The bot is allowed to reply back to the user within a **24 hour window** from the last message sent by the user.
+2. A conversational flow is bot initiated conversations. In this type whenever a transactional event occurs for eg: user bought a movie ticket, an ebill has been generated etc. **a pre approved template** message can be sent out.
+
+### WhatsApp Bot Conversations
+
+On WhatsApp, users can get their queries resolved with the help of AI powered conversational journeys. The conversational journeys are present for users 24 * 7 and helps user resolve their queries within minutes.
+
+To build the conversational flows, read [**here**](https://docs.haptik.ai/whatsapp/cs-wa).
+
+### Highly Structured Message (HSM)
 
 WhatsApp [**message templates**](https://developers.facebook.com/docs/whatsapp/api/messages/message-templates) and [**media message templates**](https://developers.facebook.com/docs/whatsapp/api/messages/message-templates/media-message-templates) are specific message formats that businesses use to send out notifications or customer care messages to people that have opted into notifications. 
 
@@ -47,15 +62,6 @@ WhatsApp Business API provides the following features:
 * **Industry Information** - People can now easily identify your business by its category or industry and find out more information (i.e., hours of operation, website, location, description).
 * **Send and Receive** - Enable two-way high value conversations with customers.
 * **Message Templates** - Create message formats that are needed for sending notifications to users.
-
-### Types of Conversation
-
-There are **two** types of conversations that are possible on WhatsApp. 
-
-1. A regular user initiated conversation where the user sends a message to the WhatsApp bot and the bot replies back to the user. The bot is allowed to reply back to the user within a **24 hour window** from the last message sent by the user.
-2. A conversational flow is bot initiated conversations. In this type whenever a transactional event occurs for eg: user bought a movie ticket, an ebill has been generated etc. **a pre approved template** message can be sent out.
-
-### Highly Structured Message (HSM)
 
 Templates are also known as **HSMs**. HSM stands for **Highly Structured Message**. A HSM template will have placeholders in it which can be filled with dynamic user specific values. Here’s a sample **HSM**:
 

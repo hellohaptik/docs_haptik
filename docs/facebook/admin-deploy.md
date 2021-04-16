@@ -1,5 +1,5 @@
 ---
-title: Set up Facebook Credentials
+title: Configure Facebook Credentials
 ---
 
 After an Admin has been added in the app, they will have to continue with certain configurations.
@@ -8,9 +8,11 @@ After an Admin has been added in the app, they will have to continue with certai
 
 If a Facebook page has not been created yet, Admin can create the page where the bot will be live.
 
-On the left sidebar, under **Products**, there will be **Messenger** option which we added in the Techincal Setup. Go to the **Settings** page and when you scroll down, you will be able to see the following screen - 
+On the left sidebar, under **Products**, there will be **Messenger** option. Go to the **Settings** page and when you scroll down, you will be able to see the following screen - 
 
 ![image](https://user-images.githubusercontent.com/75118325/113734840-50c50d80-9719-11eb-8f4e-3502243d9a7f.png)
+
+Click on **Add or Remove Pages** button.
 
 ## Step 2: Generate Access Token
 
@@ -25,13 +27,13 @@ You will be able to generate an access token for a Page if:
 Click on the **Generate Token** button. Facebook will ask to accept the terms. Once you click on **I Understand** checkbox, the Access Token will be available for use. 
 
 > Copy this Access Token and save in a secure place. We will be using this Access Token on the Haptik Platform.
-> **Do not to re-generate the Access Token** as generating new tokens every time will depreciate the previously generated Access Token and the Access Token will have to changed on the Haptik Platform as well.
+> **Do not re-generate the Access Token** as generating new tokens every time will depreciate the previously generated Access Token and the Access Token will have to changed on the Haptik Platform as well.
 
 ![image](https://user-images.githubusercontent.com/75118325/113736042-6850c600-971a-11eb-9a11-fc2405204103.png)
 
 ## Step 3: Setting up credentials on Haptik Platform
 
-Setting up the credentials will conenct the Haptik bot on the required Facebook page. These credentials will need to set up in the **Business Manager** section of the Haptik Platform. 
+Setting up the credentials will connect the Haptik bot on the required Facebook page. These credentials will need to be set up in the **Business Manager** section of the Haptik Platform. 
 
 On the **Production Environment**, navigate to [**Business Manager**](https://api.haptikapi.com/mogambo/#/businesses). Search for your business name and click on it.
 
@@ -114,17 +116,20 @@ Go the **Page Settings**. This is the Page (not the App) where the bot will be l
 Click on the **Configure** button.
 
 > **Primary Receiver** would be a bot that can respond to most incoming messages automatically (bot).
+> 
 > **Secondary Receiver** would route to chat with a live agent or be a specialized app for handling certain request types.
 
 Select the App name from the dropdown besides **Primary Receiver**.
 
-## Test the live bot
+![image](https://user-images.githubusercontent.com/75118325/114992484-6e803880-9eb8-11eb-8385-3c01b7a2ce3d.png)
+
+## Step 7: Confirm green ticks
 
 On the left sidebar, check for green ticks besides **Webhooks and Messenger**. If it is green, you can start testing the bot on the Page.
 
 ![image](https://user-images.githubusercontent.com/75118325/113748454-275eae80-9726-11eb-89b3-20f2f024126e.png)
 
-## Business Verification
+## Step 8: Business Verification
 
 If you are a developer for a business, you'll need to complete **Business Verification** in addition to **App Review** before you can access live data.
 
@@ -138,7 +143,7 @@ Provide the Business details and complete the verification process.
 
 > To know more about the Business verification process, click [**here**](https://developers.facebook.com/docs/messenger-platform/app-review/).
 
-## App Review
+## Step 9: App Review
 
 To have various permission to access the data related to the Page and App, you can request for **Advanced Access**.
 
@@ -148,7 +153,9 @@ The change request depends on the type of permission you want to change.
 
 For example, the process to change `pages_read_engagement` permission will differ from the process to change `pages_manage_post` because their nature of access is different.
 
-## Setup a Persistent Menu 
+Once these steps are completed, the bot will be able to send responses to the user's messages.
+
+## How to setup the persistent menu? (optional)
 
 The persistent menu allows user to have an always-on user interface element inside Messenger conversations. This is an easy way to help people discover and access the core functionality of your Messenger bot at any point in the conversation.
 
@@ -161,6 +168,7 @@ The request body to setup a persistent menu (in JSON) -
 Here,
 
   **title**: is the text which appears on the Messenger screen.
+  
   **payload**: is the text which will be sent once the user clicks on the menu item.
 
 ``` JSON
@@ -191,7 +199,7 @@ Here,
 }
 ```
 
-## Setup the Get Started button
+## How to setup the Get Started button? (optional)
 
 For a better user experience, Facebook allows us to add a Get Started button which enables the user to start a conversation with the bot.
 
@@ -205,8 +213,11 @@ To enable the **Get Started** button, you will need to send a POST request as de
 
 The request body to send to the above URL (in JSON) - 
 
-```JSON
+Here,
 
+**payload**: is the text which will be sent to the bot when user clicks on the **Get Started** button.
+
+```JSON
 { 
   "get_started":{
     "payload":"Get started"

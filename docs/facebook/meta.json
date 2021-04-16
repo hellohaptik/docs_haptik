@@ -1,0 +1,15 @@
+{
+    "sidebar": {
+        "Getting Started": [
+            "index"
+        ],
+        "Setting up Facebook Bot": [
+          "technical-setup",
+          "admin-deploy"
+        ],
+      "Building Facebook Bot": [
+        "cs-fb"
+        ]
+    }
+}
+

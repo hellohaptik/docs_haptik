@@ -117,21 +117,6 @@ module.exports = () => (
           ctaLink: '/whatsapp',
         },
         {
-          title: 'iOS SDK',
-          description:
-            'Objective-C framework to bring the chatbot magic in your app for iOS 9 & higher',
-          ctaText: 'Get Started',
-          ctaLink: '/ios-sdk',
-        },
-        
-        {
-          title: 'Android SDK',
-          description:
-            'Java framework to supercharge your Android app with AI powered chatbot capabilities',
-          ctaText: 'Get Started',
-          ctaLink: '/android-sdk',
-        },
-        {
           title: 'Facebook',
           description:
             'Documentation to help you build conversational experiences on Facebook',
@@ -146,11 +131,32 @@ module.exports = () => (
           ctaLink: '/gbm',
         },
         {
+          title: 'Salesforce',
+          description:
+            'Documentation to help you build conversational experiences on Salesforce',
+          ctaText: 'Get Started',
+          ctaLink: '/salesforce',
+        },
+        {
           title: 'Bot API',
           description:
             'API docs to help you build powerful chatbot solutions with great customisations',
           ctaText: 'Get Started',
           ctaLink: '/webhooks',
+        },
+        {
+          title: 'iOS SDK',
+          description:
+            'Objective-C framework to bring the chatbot magic in your app for iOS 9 & higher',
+          ctaText: 'Get Started',
+          ctaLink: '/ios-sdk',
+        },        
+        {
+          title: 'Android SDK',
+          description:
+            'Java framework to supercharge your Android app with AI powered chatbot capabilities',
+          ctaText: 'Get Started',
+          ctaLink: '/android-sdk',
         },
       ]}
       others={[

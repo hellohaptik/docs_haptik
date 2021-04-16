@@ -2,7 +2,7 @@
 title: Preparing for Quality Assessment
 ---
 
-Like every Software Product follows a [Software Development Life Cycle](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=3&cad=rja&uact=8&ved=2ahUKEwjZ0JPZwLLmAhUBILcAHedkAd4QFjACegQIDRAG&url=https%3A%2F%2Fwww.tutorialspoint.com%2Fsdlc%2Fsdlc_overview.htm&usg=AOvVaw2V89Mo-1dhC5xNDnRrIaIM)
+Like every Software Product follows a **Software Development Life Cycle**
 , our Bots should also follow a Development Life Cycle. We recommend
  following phases during the Bot Development:
 

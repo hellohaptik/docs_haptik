@@ -1,21 +1,6 @@
 ---
-title: Setting Live Agent Integration
+title: Configuring Live Agent Integration
 ---
-
-## Steps to create a connected app
-* On quick find box search for **Manage connected apps** and click on **New connected app**. Add the basic information in the fields. For more references click [**here**](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_connected_app.htm)
-* Add this callback url https://login.salesforce.com/services/oauth2/success while creating the app
-* Enable the **Use digital signatures checkbox** and update the **certificate shared to** by Haptik.
-* OAuth scopes which needs to be added for app are - 
-  * Allow access to your unique identifier (openid).
-  * Perform requests on your behalf at any time (refresh token, offline access). 
-  * Provide access to your data via the Web (web).
-  * Access and manage your data (api).
-  * Full Access (optional, To access features like create lead) 
-* After creating the app update the below url with domain, client-id(consumer key) and navigate to the url in browser and give the access for the connected app.
-
-  `Navigation URL:` `https://<salesforce_domain>/services/oauth2/authorize?response_type=token&client_id=<client_id>&redirect_uri=https://login.salesforce.com/services/oauth2/success`
-* Share the **clientId**(consumer key) and **username** used for creating the connected application to Haptik Platform.
 
 ## Configure the Chats
 
@@ -29,23 +14,33 @@ A pop up opens up. Select the **Chat with Customers** option.
 
 A widget will open to begin the team setup.
 
-The steps to setup the team is as follows - 
+The steps to setup the team are as follows - 
 
 1. Provide the **Queue name** and **Team name**.
 2. Select the **members** you want to add to the team.
 3. Provide a **Priority**. If you have multiple queues, priority will help the routing configuration to prioritize a queue.
-4. Adjust the chat workload by providing the **Work Item Size** i.e. the number of agents and **Agent Capacity** i.e. how many chats an agent can handle at a time.
+4. Adjust the chat workload by providing the Work Item Size and Agent Capacity -
+
+For example, 1 chat can be considered as 1 work item and agent capacity is set at 10 i.e. 1 agent can handle 10 chats at a time.
+
 5. Provide the secured (https) webpage where you will deploying the IVA.
-6. Select the type as **Service**. This will create a case for every chat you receive.
-7. Add an automated reply which will be sent to the user if all users are offline.
+
+> Note: This link won't be used in our integration anywhere since Haptik SDK will be directly integrated with your platform.
+
+6. Select the type as **Service**.
+7. Keep the offline support toggle **off** here. You will need to configure the offline message  from Haptik platform as mentioned in the documentation later.
+8. You will get a code snippet for integration on your platform - skip this step since Haptik's integration on your platform will handle live agent integration automatically.
 
 ## Connect the Haptik Platform to Salesforce using credentials
 
 On Haptik Platform, navigate to **Business Manager** and open the **Platform Deployment** settings, as shown below - 
 
+Select **Salesforce Agent Chat** from the **Platform** drop down list
+
 ![image](https://user-images.githubusercontent.com/75118325/114354148-76c03700-9b8b-11eb-837c-ac41d255521c.png)
 
 You will need to copy the following keys from your **Salesforce Setup** to **Haptik's Platform Deployment** - 
+
 * **1. API Endpoint**: To get this value, from Setup, search for Chat Settings and copy the hostname from the API Endpoint.
 
 ![image](https://user-images.githubusercontent.com/75118325/114354962-89873b80-9b8c-11eb-9a90-faa42118f652.png)
@@ -70,7 +65,7 @@ Provide the Deployment ID as the URL on Haptik Platform, as shown below -
 
 ![image](https://user-images.githubusercontent.com/75118325/114520119-ba37a580-9c5e-11eb-93af-e9c944803cc7.png)
 
-* **4. Button ID**: To get this value, from Setup, search for Chat Buttons and select Chat Buttons & Invitations. Copy the id for the button from the JavaScript snippet.
+* **4. Button ID**: The agent queue created earlier is identified by a button ID. To get this value, from Setup, search for Chat Buttons and select Chat Buttons & Invitations. Copy the id for the button from the JavaScript snippet 
 
 Provide the Button ID as the URL on Haptik Platform, as shown below - 
 

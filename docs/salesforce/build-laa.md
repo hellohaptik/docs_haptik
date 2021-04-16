@@ -63,10 +63,23 @@ Connections represent the path a conversation takes from node to node. Depending
 
 ## Step 8: Transfer the user to an agent
 
+At all points of agent transfer within the bot flow, the following code should be sent as the **final_response** within the code node to transfer chat to Salesforce agent
+
+```
+    final_response = {
+        'status': "Chat now", 
+        'user_details': user_details,
+        'callback_ops': {
+            'tract_atc': {
+                'receiver': 'message_delivery_salesforce'
+            }
+        }
+    }
+```
+
 Refer to the sample code to transfer the user to an agent on Salesforce.
 
-`
-
+```
 def transferChatToAgent(user_name):
 
      url = "https://staging.hellohaptik.com" + "/integration/external/v1.0/send_chat_to_agent/"
@@ -84,7 +97,7 @@ def transferChatToAgent(user_name):
      except Exception as e:
          print(f'[transferChatToAgent] API failed due to {e} request {header} response {response.json()}')
          return False
-`
+```
 
 ## Step 9: Configure the External Chat tool on Business Manager
 

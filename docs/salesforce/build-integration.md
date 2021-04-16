@@ -1,5 +1,5 @@
 ---
-title: Implement Salesforce Integration
+title: Implement Ticketing Integration
 ---
 
 ## Step 1: Create a New Bot
@@ -63,66 +63,41 @@ Connections represent the path a conversation takes from node to node. Depending
 
 ### Get User Details from Salesforce
 
-On code editor, try out the example below to featch user details from your Salesforce account.
+On code editor, use the cURL request as below to featch user details from your Salesforce account.
 
-`
-def get_data():
-  
-      url = 'https://staging-messenger.haptikapi.com/third_party_integrations/v1/salesforce/api_name'
-      
-      headers = {
-        'username': 'test',   # the salesforce account username
-        'clientid': "xxxxxx", # the consumer key
-        'privatekey': " ",    # the private key uploaded while creating the app
-      }
-      try:
-          response = requests.request("GET", url, headers=headers)
-          response.raise_for_status()
-          return response.json()
-      except Exception as e:
-          print(
-              f"[salesforce] [get_data_api] [api_failure] {e} body: {headers} url: {url} response {response} ")
-          return {'exception': True}
-`
+```
+curl --location --request GET 'https://<BASE_URL>/third_party_integrations/v1/salesforce/get_data/?object_type=Contact&object_id=<contact_id>' #Note: The base-url will be provided by Haptik at the time of integration
+--header 'username: <Username>' \
+--header 'clientid: <Client Id>' \
+--header 'privatekey: <Private Key>'
+```
 
-### Post User Details to Salesforce
+### Create case(ticket) in Salesforce
 
 Everytime the bot hits your Salesforce app, a new case gets generated. 
-Tryout the below example to post data and generate a new case on your Salesforce account.
 
-`
-  def post_data_api(description, environment_variables):
+To generate a new case during the bot and user conversation, you should use the CURL request below.
 
-    url = 'https://staging-messenger.haptikapi.com/third_party_integrations/v1/salesforce/create/'
-      
-    payload = {
+```
+curl --location --request POST 'https://<BASE_URL>/third_party_integrations/v1/salesforce/create/' #Note: The base-url will be provided by Haptik at the time of integration.
+--header 'username:  <Username>' \
+--header 'clientid: <Client Id>' \
+--header 'privatekey:  <Private key>' \
+--header 'Content-Type: application/json' \
+--data-raw '{
     "payload": {
         "subject": "Created using Haptik IVA",
-        "Description": description,
+        "Description": "Test description",
         "Type": "Ecommerce",
         "Reason": "Order details",
         "SuppliedName": "John Doe",
         "SuppliedEmail": "john@test.com",
         "SuppliedPhone": "+919123456789",
         "SuppliedCompany": "Haptik",
-        "priority": "High"  # priority can be High, Medium, Low
+        "priority": "High" 
     }
-    }
-    headers = {
-      'username': 'test',   # the salesforce account username
-      'clientid': "xxxxxx", # the consumer key
-      'privatekey': " ",    # the private key uploaded while creating the app
-    }
-    try:
-        response = requests.request("POST", url, headers=headers, json = payload)
-        response.raise_for_status()
-        return response.json()
-    except Exception as e:
-        print(
-            f"[salesforce] [get_data_api] [api_failure] {e} body: {headers} url: {url} response {response.text}")
-        return {'exception': True}
-`
-
+}
+```
 ## Step 9: Add Taskbox
 
 You can add a Taskbox which provides a default option for the users select from. The process to add a taskbox is mentioned [**here**](https://docs.haptik.ai/bot-builder/basic/business#taskbox).

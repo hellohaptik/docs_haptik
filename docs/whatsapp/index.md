@@ -71,7 +71,7 @@ After filling in user specific data the HSM will be sent out as:
 
 `Hi Joey! Thanks for starting your personal training plan. We’ll send you a weekly update with your new schedule. You can log-in online using your training ID 123456. Stay fit!`
 
-To know more about HSMs, read [**here**](https://docs.haptik.ai/whatsapp/bot-initiated).
+To know more about HSMs, read [**here**](https://docs.haptik.ai/whatsapp/sending-notifications).
 
 <hr>
 

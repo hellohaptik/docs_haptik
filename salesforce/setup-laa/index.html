@@ -1,0 +1,144 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Configuring Live Agent Integration · Haptik Docs</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Start by navigating to **Service Setup Home** page on your Salesforce account, click on **View All** option. A pop up opens up. Select the **Chat with Customers** option."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Configuring Live Agent Integration · Haptik Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.haptik.ai/"/><meta property="og:description" content="Start by navigating to **Service Setup Home** page on your Salesforce account, click on **View All** option. A pop up opens up. Select the **Chat with Customers** option."/><meta property="og:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="robots" content="noindex"/><link rel="shortcut icon" href="/img/image_0.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-106563119-6', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="/js/index.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/image_0.png" alt="Haptik Docs"/><h2 class="headerTitleWithLogo">Haptik Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="/#tools" target="_self">Tools</a></li><li class=""><a href="/#integrations" target="_self">Integrations</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Configuration</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started</h3><ul class=""><li class="navListItem"><a class="navItem" href="/salesforce/">Introduction</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Configuration</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/salesforce/setup-laa">Configuring Live Agent Integration</a></li><li class="navListItem"><a class="navItem" href="/salesforce/setup-ti">Configuring Ticketing Integration</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Implementation</h3><ul class=""><li class="navListItem"><a class="navItem" href="/salesforce/build-laa">Implement Live Agent Automation</a></li><li class="navListItem"><a class="navItem" href="/salesforce/build-integration">Implement Ticketing Integration</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Configuring Live Agent Integration</h1></header><article><div><span><p>Start by navigating to <strong>Service Setup Home</strong> page on your Salesforce account, click on <strong>View All</strong> option. A pop up opens up. Select the <strong>Chat with Customers</strong> option.</p>
+<p><img src="https://user-images.githubusercontent.com/75118325/114341439-6bfba700-9b77-11eb-92c3-f28a3425b2dc.png" alt="image"></p>
+<p>A widget will open to begin the team setup.</p>
+<p>The steps to setup the team are as follows -</p>
+<ol>
+<li><p>Provide the <strong>Queue name</strong> and <strong>Team name</strong>.</p></li>
+<li><p>Select the <strong>members</strong> you want to add to the team.</p></li>
+<li><p>Provide a <strong>Priority</strong>. If you have multiple queues, priority will help the routing configuration to prioritize a queue.</p></li>
+<li><p>Adjust the chat workload by providing the Work Item Size and Agent Capacity -</p>
+<p>For example, 1 chat can be considered as 1 work item and agent capacity is set at 10 i.e. 1 agent can handle 10 chats at a time.</p></li>
+<li><p>Provide the secured (https) webpage where you will be deploying the IVA.</p></li>
+</ol>
+<blockquote>
+<p>Note: This link won't be used in our integration anywhere since Haptik SDK will be directly integrated with your platform.</p>
+</blockquote>
+<ol start="6">
+<li>Select the type as <strong>Service</strong>.</li>
+<li>Keep the offline support toggle <strong>off</strong> here. You will need to configure the offline message  from Haptik platform as mentioned in the documentation later.</li>
+<li>You will get a code snippet for integration on your platform - skip this step since Haptik's integration on your platform will handle live agent integration automatically.</li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="connect-the-haptik-platform-to-salesforce-using-credentials"></a><a href="#connect-the-haptik-platform-to-salesforce-using-credentials" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Connect the Haptik Platform to Salesforce using credentials</h2>
+<p>On Haptik Platform, navigate to <strong>Business Manager</strong> and open the <strong>Platform Deployment</strong> settings, as shown below -</p>
+<p>Select <strong>Salesforce Agent Chat</strong> from the <strong>Platform</strong> drop down list</p>
+<p><img src="https://user-images.githubusercontent.com/75118325/114354148-76c03700-9b8b-11eb-837c-ac41d255521c.png" alt="image"></p>
+<p>You will need to copy the following keys from your <strong>Salesforce Setup</strong> to <strong>Haptik's Platform Deployment</strong> -</p>
+<ul>
+<li><strong>API Endpoint</strong>: To get this value, from Setup, search for Chat Settings and copy the hostname from the API Endpoint.</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/75118325/114354962-89873b80-9b8c-11eb-9a90-faa42118f652.png" alt="image"></p>
+<p>Provide the API Endpoint as the URL on Haptik Platform, as shown below -</p>
+<p><img src="https://user-images.githubusercontent.com/75118325/114355372-03b7c000-9b8d-11eb-93b0-34f15afa0e8b.png" alt="image"></p>
+<ul>
+<li><strong>Salesforce Organization ID</strong>: To get this value, from Setup, search for Company Information and copy the Salesforce Organization ID.</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/75118325/114359476-a5411080-9b91-11eb-96f4-64ac71090907.png" alt="image"></p>
+<p>Provide the Salesforce Organization ID as the URL on Haptik Platform, as shown below -</p>
+<p><img src="https://user-images.githubusercontent.com/75118325/114359631-cdc90a80-9b91-11eb-8f5f-2250bb49a0d7.png" alt="image"></p>
+<ul>
+<li><strong>Deployment ID</strong>:  To get this value, from Setup, select Chat | Deployments. The script at the bottom of the page contains a call to the liveagent.init function with the pod, the deploymentId, and orgId as arguments. Copy the <strong>deploymentId</strong> value.</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/75118325/114519873-7a70be00-9c5e-11eb-9297-c2ed36dd7a98.png" alt="image"></p>
+<p>Provide the Deployment ID as the URL on Haptik Platform, as shown below -</p>
+<p><img src="https://user-images.githubusercontent.com/75118325/114520119-ba37a580-9c5e-11eb-93af-e9c944803cc7.png" alt="image"></p>
+<ul>
+<li><strong>Button ID</strong>: The agent queue created earlier is identified by a button ID. To get this value, from Setup, search for Chat Buttons and select Chat Buttons &amp; Invitations. Copy the id for the button from the JavaScript snippet</li>
+</ul>
+<p>Provide the Button ID as the URL on Haptik Platform, as shown below -</p>
+<p><img src="https://user-images.githubusercontent.com/75118325/114524061-852d5200-9c62-11eb-86dc-323dc8d4a4a0.png" alt="image"></p>
+<ul>
+<li><strong>Provide Automated Messages</strong>:
+<ul>
+<li><strong>Chat Request Fail</strong> message is sent to the user when the request to connect with an agent fails.</li>
+<li><strong>Chat Request Pending</strong> message is sent when all agents are busy and cannot take new chat at the moment.</li>
+<li><strong>Chat Ended</strong> message is sent to the user when the agent closes the chat from his/her end.</li>
+</ul></li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/75118325/114524898-3e8c2780-9c63-11eb-90dd-c7b73a099b88.png" alt="image"></p>
+<blockquote>
+<p>To know how to transfer the user to an agent on Salesforce, read <a href="https://docs.haptik.ai/salesforce/build-laa"><strong>here</strong></a>.</p>
+</blockquote>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 4/16/2021</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/salesforce/index"><span class="arrow-prev">← </span><span>Introduction</span></a><a class="docs-next button" href="/salesforce/setup-ti"><span>Configuring Ticketing Integration</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#connect-the-haptik-platform-to-salesforce-using-credentials">Connect the Haptik Platform to Salesforce using credentials</a></li></ul></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Conversation Studio</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Smart Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Intelligent Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://docs.haptik.ai/ios-sdk/" class="footer-column-link">iOS SDK</a><a href="https://docs.haptik.ai/android-sdk/" class="footer-column-link">Android SDK</a><a href="https://docs.haptik.ai/web-sdk/" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/whatsapp/" class="footer-column-link">WhatsApp</a><a href="https://docs.haptik.ai/other/facebook" class="footer-column-link">Facebook</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Bot API</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Agent Chat Tool</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2021 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '224c7079e67e84a978d8b4621f6af16d',
+                indexName: 'haptik',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

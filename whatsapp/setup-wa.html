@@ -1,0 +1,149 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Setting up WhatsApp Account · Haptik Docs</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Before we start WhatsApp integration we need to get the **business** and **phone number** approved. The steps involved are:"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Setting up WhatsApp Account · Haptik Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.haptik.ai/"/><meta property="og:description" content="Before we start WhatsApp integration we need to get the **business** and **phone number** approved. The steps involved are:"/><meta property="og:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="robots" content="noindex"/><link rel="shortcut icon" href="/img/image_0.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-106563119-6', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="/js/index.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/image_0.png" alt="Haptik Docs"/><h2 class="headerTitleWithLogo">Haptik Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="/#tools" target="_self">Tools</a></li><li class=""><a href="/#integrations" target="_self">Integrations</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Setting up WhatsApp</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Introduction</h3><ul class=""><li class="navListItem"><a class="navItem" href="/whatsapp/">Getting Started</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Setting up WhatsApp</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/whatsapp/setup-wa">Setting up WhatsApp Account</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Building WhatsApp IVA</h3><ul class=""><li class="navListItem"><a class="navItem" href="/whatsapp/cs-wa">Using Conversation Studio</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Notifications (HSMs)</h3><ul class=""><li class="navListItem"><a class="navItem" href="/whatsapp/sending-notifications">Setup</a></li><li class="navListItem"><a class="navItem" href="/whatsapp/allowed-notification-types">Allowed Notification Types</a></li><li class="navListItem"><a class="navItem" href="/whatsapp/disallowed-notification-types">Disallowed Notification Types</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Miscellaneous</h3><ul class=""><li class="navListItem"><a class="navItem" href="/whatsapp/getting-user-opt-ins">Getting User Opt-Ins</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Setting up WhatsApp Account</h1></header><article><div><span><p>Before we start WhatsApp integration we need to get the <strong>business</strong> and <strong>phone number</strong> approved. The steps involved are:</p>
+<ul>
+<li><p><strong>Step 1: Apply for access:</strong> Whatsapp Business APIs are only available to approved businesses. Businesses can apply for approval by filling a questionnaire and submit to us and we will get the business approval as a WhatsApp partner.</p></li>
+<li><p><strong>Step 2: Procure a number:</strong> After getting approval, the next step is to connect a number. The number should be a fresh number with no prior WhatsApp account associated with it. The number can be a mobile number, landline number, or even an IVR number. The only restriction is that it should also be capable of either receiving an <strong>SMS</strong> or a <strong>Call</strong> for OTP verification.</p></li>
+</ul>
+<p>Because of end-to-end encryption requirements, WhatsApp requires that business API of any enterprise business to be hosted as a separate service. Whatsapp provides a set of Docker images with the business API setup which will be setup end to end by Haptik. Production level setup with HA, alerting, etc. will be done.</p>
+<p>Post setup of the WhatsApp system, the number will be verified using a certificate from <strong>Facebook Business manager</strong> &amp; <strong>Two Factor Authentication Pin</strong>. The number will be registered on the WhatsApp system by Haptik. (Number needs to be online to receive OTP)</p>
+<p>There are rate limits on a WhatsApp standalone setup. It is around 20 messages/sec. So if you have a high volume you might have to setup a multi-connect cluster to handle the load.</p>
+<blockquote>
+<p><strong>Why do we need a setup?</strong></p>
+<p>A WhatsApp business account lets your business use the WhatsApp Business API to communicate directly with your customers.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="step-1-create-a-facebook-business-manager"></a><a href="#step-1-create-a-facebook-business-manager" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 1: Create a Facebook Business Manager</h3>
+<p>In order to create a WhatsApp Account, the brand must already have a <strong>Facebook Business Manager</strong> set-up.</p>
+<p><strong>Facebook Business Manager</strong> is free to use. To start, first make sure that you have a personal (to the organization) Facebook account to confirm your identity.</p>
+<p>Next, sign up for Business Manager:</p>
+<ol>
+<li>Go to <a href="business.facebook.com"><strong>business.facebook.com</strong></a></li>
+<li>Click <strong>Create Account</strong></li>
+<li>Enter a <strong>name</strong> for your business, select the <strong>primary page</strong> and enter <strong>your name</strong> and <strong>work email address</strong></li>
+</ol>
+<blockquote>
+<p>If you don't yet have a Page for your business, click <a href="https://docs.haptik.ai/facebook/admin-deploy"><strong>here</strong></a> to know how to create a new page.</p>
+</blockquote>
+<p>Move through the rest of the onboarding flow by entering the rest of the required fields.</p>
+<h3><a class="anchor" aria-hidden="true" id="step-2-verify-facebook-business-manager"></a><a href="#step-2-verify-facebook-business-manager" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 2: Verify Facebook Business Manager</h3>
+<p>You need to complete business verification to send a message from the <strong>WhatsApp Business Account</strong></p>
+<p>To start the verification process:</p>
+<ol>
+<li>Go to <strong>Security Center</strong>, and click <strong>Start Verification</strong> in the <strong>Business Verification</strong> section</li>
+<li>Enter your business details and click <strong>Next</strong></li>
+<li>Verify the <strong>Legal Business Name</strong> and upload official documents that may be required</li>
+<li>Verify the <strong>Business Address</strong> or <strong>Phone Number</strong> by uploading a document that shows both the legal name of your business and the mailing address or phone number shown on the screen</li>
+</ol>
+<blockquote>
+<p>Upload an official document that matches the business’s legal name you entered. Any discrepancy in the document name will lead to rejection
+The verification button may be greyed out prior to starting the onboarding process. Share the BM Id with team Haptik and we will enable the option.
+Read <a href="https://www.facebook.com/business/help/2058515294227817?id=180505742745347"><strong>here</strong></a> to know more about the verification process.</p>
+</blockquote>
+<p><img src="https://user-images.githubusercontent.com/75118325/114120622-79602980-990a-11eb-8a78-48dc25f6e673.png" alt="image"></p>
+<h3><a class="anchor" aria-hidden="true" id="step-3-share-verified-facebook-business-manager-id-with-haptik"></a><a href="#step-3-share-verified-facebook-business-manager-id-with-haptik" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 3: Share Verified Facebook Business Manager ID with Haptik</h3>
+<p>Haptik will require the <strong>15 or 16 digit numeric Facebook Business Manager ID</strong> in order to create a WhatsApp Account.</p>
+<p>To find your Facebook Business Manager ID -</p>
+<ol>
+<li>Go to <strong>Business Settings</strong></li>
+<li>Click Business Info</li>
+<li>Below <strong>Business Manager Info</strong>, you'll see your ID number</li>
+</ol>
+<p><img src="https://user-images.githubusercontent.com/75118325/114119542-7bc18400-9908-11eb-8ad3-301b5b090274.png" alt="image"></p>
+<h3><a class="anchor" aria-hidden="true" id="step-4-haptik-will-create-the-whatsapp-business-account"></a><a href="#step-4-haptik-will-create-the-whatsapp-business-account" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 4: Haptik will create the WhatsApp Business Account</h3>
+<p>Haptik can now create your WhatsApp Business Account using your <strong>Legal Business Name</strong> and <strong>Facebook Business Manager ID</strong>.</p>
+<h3><a class="anchor" aria-hidden="true" id="step-5-business-needs-to-approve-request-for-haptik"></a><a href="#step-5-business-needs-to-approve-request-for-haptik" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 5: Business needs to approve request for Haptik</h3>
+<p>Once the WhatsApp account is created, you will have to accept the <strong>Invitation from Jio Haptik</strong> to send messages on your behalf on the business.
+Please follow the steps to approve the request:</p>
+<ol>
+<li>Go to <a href="business.facebook.com"><strong>business.facebook.com</strong></a></li>
+<li>Click on <strong>Business Settings</strong></li>
+<li>Now select <strong>Requests</strong></li>
+<li>You will see a <strong>pending request</strong></li>
+<li>Click on <strong>Approve</strong></li>
+</ol>
+<p>Note: Once you approve the request, your WhatsApp account is set-up.
+The account will not be approved if your Business Manager is not verified.</p>
+<p><img src="https://user-images.githubusercontent.com/75118325/114120866-fb505280-990a-11eb-8f60-2c86641df10c.png" alt="image"></p>
+<p>Once the setup is complete, we will now see how to deploy the using Haptik Platform.</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 4/16/2021</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/whatsapp/index"><span class="arrow-prev">← </span><span>Getting Started</span></a><a class="docs-next button" href="/whatsapp/cs-wa"><span>Using Conversation Studio</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Conversation Studio</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Smart Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Intelligent Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://docs.haptik.ai/ios-sdk/" class="footer-column-link">iOS SDK</a><a href="https://docs.haptik.ai/android-sdk/" class="footer-column-link">Android SDK</a><a href="https://docs.haptik.ai/web-sdk/" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/whatsapp/" class="footer-column-link">WhatsApp</a><a href="https://docs.haptik.ai/other/facebook" class="footer-column-link">Facebook</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Bot API</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Agent Chat Tool</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2021 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '224c7079e67e84a978d8b4621f6af16d',
+                indexName: 'haptik',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

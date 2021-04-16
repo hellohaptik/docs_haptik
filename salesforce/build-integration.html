@@ -1,0 +1,151 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Implement Ticketing Integration · Haptik Docs</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Step 1: Create a New Bot"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Implement Ticketing Integration · Haptik Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.haptik.ai/"/><meta property="og:description" content="## Step 1: Create a New Bot"/><meta property="og:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="robots" content="noindex"/><link rel="shortcut icon" href="/img/image_0.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-106563119-6', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="/js/index.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/image_0.png" alt="Haptik Docs"/><h2 class="headerTitleWithLogo">Haptik Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="/#tools" target="_self">Tools</a></li><li class=""><a href="/#integrations" target="_self">Integrations</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Implementation</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started</h3><ul class=""><li class="navListItem"><a class="navItem" href="/salesforce/">Introduction</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Configuration</h3><ul class=""><li class="navListItem"><a class="navItem" href="/salesforce/setup-laa">Configuring Live Agent Integration</a></li><li class="navListItem"><a class="navItem" href="/salesforce/setup-ti">Configuring Ticketing Integration</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Implementation</h3><ul class=""><li class="navListItem"><a class="navItem" href="/salesforce/build-laa">Implement Live Agent Automation</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/salesforce/build-integration">Implement Ticketing Integration</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Implement Ticketing Integration</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="step-1-create-a-new-bot"></a><a href="#step-1-create-a-new-bot" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 1: Create a New Bot</h2>
+<p>We will start by creating a new bot on the platform.</p>
+<ol>
+<li>Go to <a href="https://staging.hellohaptik.com/mogambo/#/bots"><strong>Conversation Studio</strong></a></li>
+<li>Click on <strong>New Bot</strong></li>
+<li>Provide a <strong>name</strong>, select the <strong>partner</strong> from dropdown and provide some additional details (these are optional)</li>
+<li>Click on <strong>Create Bot</strong></li>
+</ol>
+<p><img src="https://user-images.githubusercontent.com/75118325/114122315-a5c97500-990d-11eb-999f-425e88d6add9.png" alt="image"></p>
+<h2><a class="anchor" aria-hidden="true" id="step-2-create-a-story-and-sub-story"></a><a href="#step-2-create-a-story-and-sub-story" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 2: Create a Story and Sub Story</h2>
+<p>After creating a new bot, create a new Story within the bot.
+To know more about Story, click <a href="https://docs.haptik.ai/bot-builder/basic/creating-story"><strong>here</strong></a>.</p>
+<p>Within the story, create a new sub story. Every Sub Story handles one use-case.
+To know more about Sub Story, click <a href="https://docs.haptik.ai/bot-builder/basic/creating-story"><strong>here</strong></a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="step-3-create-nodes"></a><a href="#step-3-create-nodes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 3: Create Nodes</h2>
+<p>Nodes are the interlinked building blocks of a bot. Each node acts like a gatekeeper which <strong>detects user inputs</strong>, sends out appropriate <strong>responses</strong>, and <strong>directs users</strong> to the next node.</p>
+<p>Nodes are composed of several important sub-components, which house important pieces of information - User Says, Bot Says, Entities, and APIs.</p>
+<p>To know more about Nodes, click <a href="https://docs.haptik.ai/bot-builder/basic/creating-nodes"><strong>here</strong></a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="step-4-add-user-says"></a><a href="#step-4-add-user-says" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 4: Add User Says</h2>
+<p>User says are the inputs from the user that the agent needs to interpret the user’s goal. It is important to add and train the bot with a variety of different sample user says for each node, so that the bot can identify the correct intents and extract entities from the user utterance.</p>
+<p>Whenever a user sends a message, we try to understand what the user is trying to say using various Machine Learning algorithms and find the corresponding node. One of the key modules which is used for node identification is <strong>Intent Detection module</strong>.</p>
+<p>To know more about adding user says, click <a href="https://docs.haptik.ai/bot-builder/basic/user-says-guidelines"><strong>here</strong></a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="step-5-add-bot-says"></a><a href="#step-5-add-bot-says" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 5: Add Bot Says</h2>
+<p>Bot Says is where a Node stores the replies that are sent in response to the user's message.</p>
+<p>To know more about Bot Says, click <a href="https://docs.haptik.ai/bot-builder/basic/bot-says"><strong>here</strong></a></p>
+<h3><a class="anchor" aria-hidden="true" id="using-chat-elements-hsls"></a><a href="#using-chat-elements-hsls" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using Chat Elements (HSLs)</h3>
+<p>Chat Elements are used to send different types to responses to the user.</p>
+<p>Read more about chat elements, <a href="https://docs.haptik.ai/bot-builder/basic/chat-elements"><strong>here</strong></a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="step-6-add-entities"></a><a href="#step-6-add-entities" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 6: Add Entities</h2>
+<p>An entity represents values which is collected from the user in a conversation. Depending on the context of the conversation, the required response can either be a single value or group of specific values.</p>
+<p>You can read more about entities <a href="https://docs.haptik.ai/bot-builder/basic/entities"><strong>here</strong></a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="step-7-create-connections"></a><a href="#step-7-create-connections" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 7: Create Connections</h2>
+<p>Connections represent the path a conversation takes from node to node. Depending on the response a user inputs to the bot, they traverse down a different connection to the appropriate next node. Bot builders must modify every connection they create to indicate which user inputs correspond to which nodes.</p>
+<h2><a class="anchor" aria-hidden="true" id="step-8-using-code-editor-for-user-details"></a><a href="#step-8-using-code-editor-for-user-details" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 8: Using Code Editor for User Details</h2>
+<h3><a class="anchor" aria-hidden="true" id="get-user-details-from-salesforce"></a><a href="#get-user-details-from-salesforce" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Get User Details from Salesforce</h3>
+<p>On code editor, use the cURL request as below to featch user details from your Salesforce account.</p>
+<pre><code class="hljs">curl --location --request <span class="hljs-keyword">GET</span> <span class="hljs-comment">'https://<span class="hljs-doctag">&lt;BASE_URL&gt;</span>/third_party_integrations/v1/salesforce/get_data/?object_type=Contact&amp;object_id=<span class="hljs-doctag">&lt;contact_id&gt;</span>' #<span class="hljs-doctag">Note:</span> The base-url will be provided by Haptik at the time of integration</span>
+--header <span class="hljs-comment">'username: <span class="hljs-doctag">&lt;Username&gt;</span>' \</span>
+--header <span class="hljs-comment">'clientid: <span class="hljs-doctag">&lt;Client Id&gt;</span>' \</span>
+--header <span class="hljs-comment">'privatekey: <span class="hljs-doctag">&lt;Private Key&gt;</span>'</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="create-caseticket-in-salesforce"></a><a href="#create-caseticket-in-salesforce" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create case(ticket) in Salesforce</h3>
+<p>Everytime the bot hits your Salesforce app, a new case gets generated.</p>
+<p>To generate a new case during the bot and user conversation, you should use the CURL request below.</p>
+<pre><code class="hljs">curl <span class="hljs-params">--location</span> <span class="hljs-params">--request</span> POST 'https:<span class="hljs-string">//</span>&lt;BASE_URL&gt;<span class="hljs-string">/third_party_integrations/v1/salesforce/create/</span>' <span class="hljs-comment">#Note: The base-url will be provided by Haptik at the time of integration.</span>
+<span class="hljs-params">--header</span> 'username:  &lt;Username&gt;' \
+<span class="hljs-params">--header</span> 'clientid: &lt;Client Id&gt;' \
+<span class="hljs-params">--header</span> 'privatekey:  &lt;Private key&gt;' \
+<span class="hljs-params">--header</span> 'Content-Type: application/json' \
+<span class="hljs-params">--data-raw</span> '{
+    <span class="hljs-string">"payload"</span>: {
+        <span class="hljs-string">"subject"</span>: <span class="hljs-string">"Created using Haptik IVA"</span>,
+        <span class="hljs-string">"Description"</span>: <span class="hljs-string">"Test description"</span>,
+        <span class="hljs-string">"Type"</span>: <span class="hljs-string">"Ecommerce"</span>,
+        <span class="hljs-string">"Reason"</span>: <span class="hljs-string">"Order details"</span>,
+        <span class="hljs-string">"SuppliedName"</span>: <span class="hljs-string">"John Doe"</span>,
+        <span class="hljs-string">"SuppliedEmail"</span>: <span class="hljs-string">"john@test.com"</span>,
+        <span class="hljs-string">"SuppliedPhone"</span>: <span class="hljs-string">"+919123456789"</span>,
+        <span class="hljs-string">"SuppliedCompany"</span>: <span class="hljs-string">"Haptik"</span>,
+        <span class="hljs-string">"priority"</span>: <span class="hljs-string">"High"</span> 
+    }
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="step-9-add-taskbox-optional"></a><a href="#step-9-add-taskbox-optional" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 9: Add Taskbox (optional)</h2>
+<p>You can add a Taskbox which provides a default option for the users select from. The process to add a taskbox is mentioned <a href="https://docs.haptik.ai/bot-builder/basic/business#taskbox"><strong>here</strong></a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="step-10-quality-assessment"></a><a href="#step-10-quality-assessment" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 10: Quality Assessment</h2>
+<p>Follow our <a href="https://docs.haptik.ai/bot-builder/basic/testing-bot"><strong>Quality Assessment</strong></a> section to test the bot.</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 4/16/2021</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/salesforce/build-laa"><span class="arrow-prev">← </span><span>Implement Live Agent Automation</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#step-1-create-a-new-bot">Step 1: Create a New Bot</a></li><li><a href="#step-2-create-a-story-and-sub-story">Step 2: Create a Story and Sub Story</a></li><li><a href="#step-3-create-nodes">Step 3: Create Nodes</a></li><li><a href="#step-4-add-user-says">Step 4: Add User Says</a></li><li><a href="#step-5-add-bot-says">Step 5: Add Bot Says</a><ul class="toc-headings"><li><a href="#using-chat-elements-hsls">Using Chat Elements (HSLs)</a></li></ul></li><li><a href="#step-6-add-entities">Step 6: Add Entities</a></li><li><a href="#step-7-create-connections">Step 7: Create Connections</a></li><li><a href="#step-8-using-code-editor-for-user-details">Step 8: Using Code Editor for User Details</a><ul class="toc-headings"><li><a href="#get-user-details-from-salesforce">Get User Details from Salesforce</a></li><li><a href="#create-caseticket-in-salesforce">Create case(ticket) in Salesforce</a></li></ul></li><li><a href="#step-9-add-taskbox-optional">Step 9: Add Taskbox (optional)</a></li><li><a href="#step-10-quality-assessment">Step 10: Quality Assessment</a></li></ul></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Conversation Studio</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Smart Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Intelligent Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://docs.haptik.ai/ios-sdk/" class="footer-column-link">iOS SDK</a><a href="https://docs.haptik.ai/android-sdk/" class="footer-column-link">Android SDK</a><a href="https://docs.haptik.ai/web-sdk/" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/whatsapp/" class="footer-column-link">WhatsApp</a><a href="https://docs.haptik.ai/other/facebook" class="footer-column-link">Facebook</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Bot API</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Agent Chat Tool</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2021 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '224c7079e67e84a978d8b4621f6af16d',
+                indexName: 'haptik',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

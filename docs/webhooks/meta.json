@@ -1,21 +1,25 @@
 {
     "sidebar": {
-        "Introduction": [
-            "index",
+        "Getting Started": [
+            "index"
+        ],
+        "Pre-requisites": [
+            "api-security-rules",
+            "protocols",
             "webhook-payload"
         ],
-        "How to Create a Webhook": [
-        	"protocols",
-        	"re-enable-webhook"
-        ],
-        "Independent Integrations": [
-        	"api-security-rules",
-        	"create-haptik-user",
-        	"send-message-to-haptik",
+        "Setup": [
+            "create-haptik-user",
+            "send-message-to-haptik",
             "send-file-to-haptik",
-            "send-feedback-to-haptik",
-            "using-platform-deployments",
-            "synchronous_webhooks"
+            "send-feedback-to-haptik"        	
+        ],
+        "Bot Deployment": [
+            "using-platform-deployments"
+        ],
+        "Miscellaneous": [
+            "synchronous_webhooks",
+            "re-enable-webhook"            
         ]
     }
 }

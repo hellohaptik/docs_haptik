@@ -1,10 +1,8 @@
 ---
-title: Salesforce Setup
+title: Configuring Ticketing Integration
 ---
 
 Salesforce allows business to store user information such as their name, email, phone number and so on. It then helps businesses to track their users interaction and activity with the business.
-
-You can use the collected in Salesforce to communicate with the user on the Haptik bot.
 
 ## Create a Connected App
 

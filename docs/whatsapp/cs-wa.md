@@ -132,4 +132,4 @@ Connections represent the path a conversation takes from node to node. Depending
 
 Follow our [**Quality Assessment**](https://docs.haptik.ai/bot-builder/basic/testing-bot) section to test the bot.
 
-Once the bot is test, we will now see how to deploy the bot on WhatsApp.
+Once the bot is tested, we will deploy the bot on WhatsApp using **Platform Deployment** under **Business Manager** of **Conversation Studio**.

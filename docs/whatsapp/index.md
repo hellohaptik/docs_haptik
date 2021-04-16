@@ -22,21 +22,7 @@ If you would like us to consider your business for inclusion in the limited publ
 
 <hr>
 
-## Setup WhatsApp Business Account
-
-Now that you know the pre-requisites for setting up a WhatsApp bot, you can set up the WhatsApp Business Account.
-
-The first step for businesses to communicate with customers on WhatsApp is to create a [**WhatsApp Business Account**](https://www.facebook.com/business/help/2087193751603668) and set up a [**line of credit**](https://www.facebook.com/business/help/1684730811624773?id=2129163877102343). 
-
-This business account will allow people to easily identify your business and find out more information such as your **address**, **hours of operation**, **website**, and **description**. 
-
-Through your account, in the **Facebook Business Manager**, you will have the ability to **create message templates** for sending **notifications** to customers at scale.
-
-We have covered the entrire setting up process, [**here**](https://docs.haptik.ai/whatsapp/setup-wa).
-
-<hr>
-
-## WhatsApp Conversation
+## Types of WhatsApp Conversations
 
 There are **two** types of conversations that are possible on WhatsApp. 
 
@@ -75,13 +61,25 @@ To know more about HSMs, read [**here**](https://docs.haptik.ai/whatsapp/sending
 
 <hr>
 
+## Setup WhatsApp Business Account
+
+Once you decide which type of conversation is well suited for your business need, you can now proceed to setup the **WhatsApp Business Account** which is the first step for businesses to communicate with customers on WhatsApp. 
+
+Create the [**WhatsApp Business Account**](https://www.facebook.com/business/help/2087193751603668) and set up a [**line of credit**](https://www.facebook.com/business/help/1684730811624773?id=2129163877102343). 
+
+This business account will allow people to easily identify your business and find out more information such as your **address**, **hours of operation**, **website**, and **description**. 
+
+Through your account, in the **Facebook Business Manager**, you will have the ability to **create message templates** for sending **notifications** to customers at scale.
+
+We have covered the detailed setting up process, [**here**](https://docs.haptik.ai/whatsapp/setup-wa).
+
 ## Share your WhatsApp Bot
 
-If you want to share the WhatsApp IVA chat link on website (or marketing content) wherein the user clicks on it, and it directly opens the whatsapp conversation with the IVA on their device - 
+If you want to share the WhatsApp bot link on website (or marketing content) wherein the user clicks on it, and it directly opens the WhatsApp conversation with the bot on their device - 
 On the website, you can add a link with your WhatsApp number (e.g. 1XXXXXXXXXX) and the default text as query parameter (e.g. I'm intereseted in your car sale) as follows:
 
 `https://wa.me/1XXXXXXXXXX?text=I'm%20interested%20in%20your%20car%20for%20sale`
 
-Clicking on it will redirect the user to the WhatsApp chat window for your number 
+Clicking on it will redirect the user to the WhatsApp chat window for your number.
 
 You can read more about sharing WhatsApp link, [**here**](https://faq.whatsapp.com/general/chats/how-to-use-click-to-chat/).

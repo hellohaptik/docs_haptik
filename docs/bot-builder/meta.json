@@ -61,9 +61,6 @@
 		],
 		"Quality Assessment": [
 			"basic/testing-introduction",
-			"advanced/development-guidelines",
-			"basic/testing-bot",
-			"advanced/debugging-guidelines",
 			"basic/oracle-feedback",
 			"basic/qa-best-practices",		
 			"basic/bot-qa-tool"

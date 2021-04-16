@@ -2,21 +2,21 @@
     "sidebar": {
         "Introduction": [
             "index",
-            "business-setup",
-        	"technical-setup"
         ],
-        "Types of Conversations": [
-        	"types-of-conversations"
+        "Setting up WhatsApp": [
+            "setup-wa"
         ],
-        "Deploying the Bot": [
-            "bot-deploy-whatsapp",
-            "whatsapp-language-settings"
+        "Building WhatsApp IVA": [
+        	"cs-wa"
         ],
-        "Sending Notifications":[
+        "Notifications (HSMs)":[
             "sending-notifications",
-            "getting-user-opt-ins",
             "allowed-notification-types",
             "disallowed-notification-types"
+        ],
+        "Miscellaneous": [
+            "getting-user-opt-ins",
+            "business-setup"
         ]
     }
 }

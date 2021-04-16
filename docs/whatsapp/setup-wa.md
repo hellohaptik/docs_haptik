@@ -30,7 +30,8 @@ Next, sign up for Business Manager:
 2. Click **Create Account**
 3. Enter a **name** for your business, select the **primary page** and enter **your name** and **work email address**
 
-> If you don't yet have a Page for your business, click [**here**] to know how to create a new page.
+> If you don't yet have a Page for your business, click [**here**](https://docs.haptik.ai/facebook/admin-deploy) to know how to create a new page.
+> 
 Move through the rest of the onboarding flow by entering the rest of the required fields.
 
 ### Step 2: Verify Facebook Business Manager

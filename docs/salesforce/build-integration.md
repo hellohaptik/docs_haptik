@@ -98,12 +98,10 @@ curl --location --request POST 'https://<BASE_URL>/third_party_integrations/v1/s
     }
 }
 ```
-## Step 9: Add Taskbox
+## Step 9: Add Taskbox (optional)
 
 You can add a Taskbox which provides a default option for the users select from. The process to add a taskbox is mentioned [**here**](https://docs.haptik.ai/bot-builder/basic/business#taskbox).
 
-The tasks which are added appear as a Quick Reply to the user.
-
-## Step 9: Quality Assessment
+## Step 10: Quality Assessment
 
 Follow our [**Quality Assessment**](https://docs.haptik.ai/bot-builder/basic/testing-bot) section to test the bot.

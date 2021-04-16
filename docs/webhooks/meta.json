@@ -15,7 +15,7 @@
             "send-feedback-to-haptik"        	
         ],
         "Bot Deployment": [
-            "using-platform-deployments",
+            "using-platform-deployments"
         ],
         "Miscellaneous": [
             "synchronous_webhooks",

@@ -1,0 +1,221 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Introduction · Haptik Docs</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Getting started with **Google Business Messages**"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Introduction · Haptik Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.haptik.ai/"/><meta property="og:description" content="## Getting started with **Google Business Messages**"/><meta property="og:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="robots" content="noindex"/><link rel="shortcut icon" href="/img/image_0.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-106563119-6', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="/js/index.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/image_0.png" alt="Haptik Docs"/><h2 class="headerTitleWithLogo">Haptik Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="/#tools" target="_self">Tools</a></li><li class=""><a href="/#integrations" target="_self">Integrations</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Getting Started</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/gbm/">Introduction</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Implementation of IVA</h3><ul class=""><li class="navListItem"><a class="navItem" href="/gbm/on-cs">Creating the IVA</a></li><li class="navListItem"><a class="navItem" href="/gbm/deploy-gbm">Deploying the IVA</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Analytics of GBM IVA</h3><ul class=""><li class="navListItem"><a class="navItem" href="/gbm/analytics-gbm">Analytics for Google Business Messages</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Introduction</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="getting-started-with-google-business-messages"></a><a href="#getting-started-with-google-business-messages" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Getting started with <strong>Google Business Messages</strong></h2>
+<p>The way we communicate has changed: 75% of consumers now prefer to engage with a brand over private messaging channels versus traditional channels. <strong>Google Business Messages</strong> can help route calls to chat, increase sales, and improve customer satisfaction with CSAT data and feedback.</p>
+<p><strong>Google Business Messages</strong> is a mobile conversational channel that combines entry points on Google Maps, Search, and brand websites to create rich, asynchronous messaging experiences that delight customers and drive business results. It also facilitates the connection between user and a brand. When user searches for your business name or tries to search for your business' contact information, they will be able to see a chat option as <strong>MESSAGE</strong> as shown below -</p>
+<p><img src="https://user-images.githubusercontent.com/75118325/111470175-919ab980-874d-11eb-9771-251a48bdaf58.png" alt="gbm1"></p>
+<p>All GBM entry points (non-local and location based) are available on android. Only location based entry points are available on iOS.</p>
+<p>Once the user clicks on the <strong>MESSAGE</strong> option, a conversational screen opens up and the user can start sending their messages.</p>
+<p><img src="https://user-images.githubusercontent.com/75118325/111506508-b2740680-876f-11eb-83b1-aecc749ddf50.jpg" alt="Screenshot_20210317-221659_Maps"></p>
+<p>To know more about Google Business Messages, click <a href="https://developers.google.com/business-communications/business-messages/guides/features"><strong>here</strong></a>.</p>
+<blockquote>
+<p><strong>Haptik is a registered <code>Partner</code> with Google Platform.</strong></p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="setting-up-google-business-messages"></a><a href="#setting-up-google-business-messages" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Setting up Google Business Messages</h2>
+<h3><a class="anchor" aria-hidden="true" id="1-create-brand"></a><a href="#1-create-brand" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Create Brand</h3>
+<p>Brand is the business name. For example, if Jio wants to set up a Google Business Messaging system, we will create a brand named Jio. Brand represents the business. A brand can be created using the <a href="https://business-communications.sandbox.google.com/?utm_source=/business-communications/business-messages/guides/quickstarts/echo-agent&amp;utm_medium=devsite&amp;utm_campaign=business-messages"><strong>Business Communications Developer Console</strong></a>.</p>
+<blockquote>
+<p>As a registered partner, Haptik will be creating the brand for your business.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="2-create-an-agent"></a><a href="#2-create-an-agent" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. Create an Agent</h3>
+<p>An agent means Haptik's Intelligent Virtual Assistant (IVA). The agent represents the brand i.e. the business, which users will be having a conversation with. Agents are managed by Haptik (partner).</p>
+<blockquote>
+<p>To know more about creating brand and agents click <a href="https://developers.google.com/business-communications/business-messages/guides/set-up/agent"><strong>here</strong></a>.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="3-manage-location"></a><a href="#3-manage-location" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. Manage Location</h3>
+<p>If your business is active in various locations, they can be associated with the agent (IVA). This enables users to have a conversation with your brand specific to the location. Google Business Messages identifies locations by Place ID.</p>
+<p>There are a few prerequisites to manage location -</p>
+<ul>
+<li>The brand should have a <strong>Google my business</strong> account.</li>
+<li>The physical <strong>location</strong> should be present in the brands <strong>Google my Business</strong> page and should be verified.</li>
+<li>If there are <strong>multiple locations</strong> for your business, they need to be added in the same Location Group. This location group is present in the <strong>Google my Business Console</strong>. To read more about managing multiple locations, click <a href="https://developers.google.com/business-communications/business-messages/guides/set-up/locations?method=console#managing_multiple_locations"><strong>here</strong></a>.</li>
+<li>Locations are identified by <strong>Place ID</strong>. Place ID is a unique identifier for a particular location on Google Maps.
+For multiple locations, we can use a single place ID from one of the locations in the location group.
+To know more about finding out Place ID, click <a href="https://developers.google.com/maps/documentation/javascript/examples/places-placeid-finder"><strong>here</strong></a>.</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="4-verify-agents-and-location"></a><a href="#4-verify-agents-and-location" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4. Verify agents and location</h3>
+<p>Before we go live with the <strong>Google Business Messages</strong> integration we need to verify the agent with Google and the brand.</p>
+<p>The brand SPOC receives an email with the subject: <em>Please approve <code>brand name</code> use for Business Messages</em>.</p>
+<p>Once the brand SPOC replies to this email, Google does a <strong>manual verification</strong> where they check if the agent is associated with the brand or not. In case the agent logo or name is different from the brand name or logo, the verification might be rejected. In such a case, SPOC will have to follow up with Google to get the verification completed.</p>
+<p>To know more about the verification process, click <a href="https://developers.google.com/business-communications/business-messages/guides/deploy/verify?method=console"><strong>here</strong></a>.</p>
+<h3><a class="anchor" aria-hidden="true" id="5-launch-locations-and-agents"></a><a href="#5-launch-locations-and-agents" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5. Launch locations and agents</h3>
+<p>Once the agent is verified for a brand, you can start the development of the IVA using Haptik's Conversation Studio. When the agent is launched, <strong>Google Business Messages</strong> does a quick round of check for all required approvals. After the requirements are met, the agent becomes available for the users within a few hours.</p>
+<p>To know more about launching the agent, click <a href="https://developers.google.com/business-communications/business-messages/guides/deploy/launch?method=console#launch-agent"><strong>here</strong></a>.</p>
+<blockquote>
+<p>To know in detail about setting up the Google Business Messages, click <a href="https://developers.google.com/business-communications/business-messages/guides"><strong>here</strong></a>.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="6-entry-point"></a><a href="#6-entry-point" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>6. Entry Point</h3>
+<p><strong>Google Business Messages</strong> has entry points from organic Google search results on <strong>mobile browsers</strong> and from the <strong>Google Maps</strong> app (for location-based brands).
+Entry points are surfaces where users can start conversations with Business Messages agents. Each entry point has a unique appearance and appears in a different place.</p>
+<blockquote>
+<p>You need to configure all entry points you want to launch your agent on before you verify your agent.</p>
+</blockquote>
+<p>There are two types of entry points:</p>
+<ol>
+<li>NON_LOCAL Entry Point</li>
+<li>Location Based Entry Point</li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="1-non_local-entry-point"></a><a href="#1-non_local-entry-point" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. NON_LOCAL Entry Point</h3>
+<p>This entry point does not rely on location.</p>
+<p>To enable non-local entry points -</p>
+<ul>
+<li>Update your agent with the NON_LOCAL entry point group, and specify values for fields in the NonLocalConfig object.</li>
+<li>Verify your agent.</li>
+</ul>
+<p>Business Messages approves your agent for various entry points based on the information you specify in <strong>NonLocalConfig</strong>.</p>
+<blockquote>
+<p>Note: You need to configure all entry points you want to launch your agent on before you verify your agent.</p>
+</blockquote>
+<ul>
+<li>Launch your agent.</li>
+</ul>
+<p>There are 4 different types NON_LOCAL Entry Point.</p>
+<p><strong>1. Featured snippets</strong></p>
+<p>This entry point enables conversations with your agent when a user finds contact details through Search.</p>
+<p><img src="https://user-images.githubusercontent.com/75118325/114896619-1ef52a80-9e2e-11eb-831c-8f6bec13d07b.png" alt="image"></p>
+<p><strong>2. Sitelinks</strong></p>
+<p>This entry point enables conversations with your agent when sitelinks appear in Search.</p>
+<p><img src="https://user-images.githubusercontent.com/75118325/114896648-2583a200-9e2e-11eb-8671-f3b4fb5450ca.png" alt="image"></p>
+<p><strong>3. URL</strong></p>
+<p>This entry point enables conversations from URLs in messages, links, or websites.</p>
+<blockquote>
+<p>URL is supported on Android.</p>
+</blockquote>
+<p><strong>4. Widget</strong></p>
+<p>This entry point enables conversations from widgets you integrate with a website.</p>
+<p><img src="https://user-images.githubusercontent.com/75118325/114896715-303e3700-9e2e-11eb-9cbb-ede1bcaadfc2.png" alt="image"></p>
+<h3><a class="anchor" aria-hidden="true" id="2-location-based-entry-point"></a><a href="#2-location-based-entry-point" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. Location Based Entry Point</h3>
+<p>The LOCATION entry point group encompasses entry points that rely on locations.</p>
+<ul>
+<li>Update the agent with the LOCATION entry point group.</li>
+<li>Verify the agent.</li>
+</ul>
+<blockquote>
+<p>Note: You need to add all entry points you want to launch your agent on before you verify your agent.</p>
+</blockquote>
+<ul>
+<li>Launch your agent.</li>
+<li>Create a location, associate it with your agent, and add the MAPS and PLACESHEET entry points.</li>
+</ul>
+<blockquote>
+<p>Note: You need to add all entry points you want to launch your location on before you verify your location.</p>
+</blockquote>
+<ul>
+<li>Verify your location.</li>
+<li>Wait for Business Messages to automatically import, associate, and verify other locations from the verified location's Location group in Google My Business.</li>
+<li>Launch your locations.</li>
+</ul>
+<p>There are 3 major ways you can set Location Based Entry Point -</p>
+<p><strong>1. Maps</strong></p>
+<p>This entry point enables conversations with locations associated with your agent from the Maps app (Android and iOS).</p>
+<p><img src="https://user-images.githubusercontent.com/75118325/114896776-3df3bc80-9e2e-11eb-935c-c0359da3c186.png" alt="image"></p>
+<p><strong>2. Placesheet</strong></p>
+<p>This entry point enables conversations with locations associated with your agent when a user finds the location in Search.</p>
+<p><img src="https://user-images.githubusercontent.com/75118325/114896818-477d2480-9e2e-11eb-9cfc-16f1d5d068e0.png" alt="image"></p>
+<p><strong>3. Local Pack</strong></p>
+<p>When a user's search results include multiple nearby locations, the LOCAL_PACK entry point displays a messaging button below the list of locations. Additionally, LOCAL_PACK enables messaging for a location when the location is closed and can't answer calls.</p>
+<p><img src="https://user-images.githubusercontent.com/75118325/114896853-4f3cc900-9e2e-11eb-99b9-a14a8457303e.png" alt="image"></p>
+<blockquote>
+<p><strong>To know more about Entry Point, click <a href="https://developers.google.com/business-communications/business-messages/guides/learn/entry-points#location">here</a>.</strong></p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="7-live-agent-requirements"></a><a href="#7-live-agent-requirements" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>7. Live Agent Requirements</h3>
+<p>It is mandatory to have a live agent solution at all entry points except website and url entry points</p>
+<ol>
+<li>Open the <strong>Business Communications Developer Console</strong> and sign in with your Business Messages Google account.</li>
+<li>Choose the agent.</li>
+<li>In the left navigation, click <strong>Agent information.</strong></li>
+<li>Under <strong>Primary and secondary interactions</strong>, set bot and human messaging availability.</li>
+</ol>
+<ul>
+<li>For Primary interaction, set Interaction type to Bot.</li>
+<li>If bot messaging isn't always available, uncheck Always available and specify the available days, times, and timezone.
+To add more availability times, click Add availability.</li>
+<li>Click Add secondary interaction, and set Interaction type to Human.</li>
+<li>If human messaging isn't always available, uncheck Always available and specify the available days, times, and timezone.
+To add more availability times, click Add availability.</li>
+<li>If you have a live agent only solution on, then you should also configure an offline message that gets auto-triggered during their offline hours. This message can be configured from the Business Communications Developer console</li>
+</ul>
+<p>To know more about updating message availability, click <a href="https://developers.google.com/business-communications/business-messages/guides/configure/availability"><strong>here</strong></a>.</p>
+<p>Once the Google Business Messages is set up, we will now see the implementation of IVA on Haptik's Conversation Studio.</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 4/16/2021</em></div><div class="docs-prevnext"><a class="docs-next button" href="/gbm/on-cs"><span>Creating the IVA</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#getting-started-with-google-business-messages">Getting started with <strong>Google Business Messages</strong></a></li><li><a href="#setting-up-google-business-messages">Setting up Google Business Messages</a><ul class="toc-headings"><li><a href="#1-create-brand">1. Create Brand</a></li><li><a href="#2-create-an-agent">2. Create an Agent</a></li><li><a href="#3-manage-location">3. Manage Location</a></li><li><a href="#4-verify-agents-and-location">4. Verify agents and location</a></li><li><a href="#5-launch-locations-and-agents">5. Launch locations and agents</a></li><li><a href="#6-entry-point">6. Entry Point</a></li><li><a href="#1-non_local-entry-point">1. NON_LOCAL Entry Point</a></li><li><a href="#2-location-based-entry-point">2. Location Based Entry Point</a></li><li><a href="#7-live-agent-requirements">7. Live Agent Requirements</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Conversation Studio</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Smart Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Intelligent Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://docs.haptik.ai/ios-sdk/" class="footer-column-link">iOS SDK</a><a href="https://docs.haptik.ai/android-sdk/" class="footer-column-link">Android SDK</a><a href="https://docs.haptik.ai/web-sdk/" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/whatsapp/" class="footer-column-link">WhatsApp</a><a href="https://docs.haptik.ai/other/facebook" class="footer-column-link">Facebook</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Bot API</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Agent Chat Tool</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2021 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '224c7079e67e84a978d8b4621f6af16d',
+                indexName: 'haptik',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

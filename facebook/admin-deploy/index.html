@@ -1,0 +1,228 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Configure Facebook Credentials · Haptik Docs</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="generator" content="Docusaurus"/><meta name="description" content="After an Admin has been added in the app, they will have to continue with certain configurations."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Configure Facebook Credentials · Haptik Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.haptik.ai/"/><meta property="og:description" content="After an Admin has been added in the app, they will have to continue with certain configurations."/><meta property="og:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="robots" content="noindex"/><link rel="shortcut icon" href="/img/image_0.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-106563119-6', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="/js/index.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/image_0.png" alt="Haptik Docs"/><h2 class="headerTitleWithLogo">Haptik Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="/#tools" target="_self">Tools</a></li><li class=""><a href="/#integrations" target="_self">Integrations</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Setting up Facebook Bot</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started</h3><ul class=""><li class="navListItem"><a class="navItem" href="/facebook/">Introduction</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Setting up Facebook Bot</h3><ul class=""><li class="navListItem"><a class="navItem" href="/facebook/technical-setup">Set up Facebook Account</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/facebook/admin-deploy">Configure Facebook Credentials</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Building Facebook Bot</h3><ul class=""><li class="navListItem"><a class="navItem" href="/facebook/cs-fb">Using Haptik Platform</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Configure Facebook Credentials</h1></header><article><div><span><p>After an Admin has been added in the app, they will have to continue with certain configurations.</p>
+<h2><a class="anchor" aria-hidden="true" id="step-1-create-a-page"></a><a href="#step-1-create-a-page" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 1: Create a Page</h2>
+<p>If a Facebook page has not been created yet, Admin can create the page where the bot will be live.</p>
+<p>On the left sidebar, under <strong>Products</strong>, there will be <strong>Messenger</strong> option. Go to the <strong>Settings</strong> page and when you scroll down, you will be able to see the following screen -</p>
+<p><img src="https://user-images.githubusercontent.com/75118325/113734840-50c50d80-9719-11eb-8f4e-3502243d9a7f.png" alt="image"></p>
+<p>Click on <strong>Add or Remove Pages</strong> button.</p>
+<h2><a class="anchor" aria-hidden="true" id="step-2-generate-access-token"></a><a href="#step-2-generate-access-token" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 2: Generate Access Token</h2>
+<p>The access token from Facebook will be required on the Haptik Platform for the setup of bot.</p>
+<p>You will be able to generate an access token for a Page if:</p>
+<ol>
+<li>You are one of the Page admins, and</li>
+<li>The app has been granted the Page's permission to manage and access Page conversations in Messenger.</li>
+</ol>
+<p><img src="https://user-images.githubusercontent.com/75118325/113735731-2758b180-971a-11eb-8bb5-38f3629c597b.png" alt="image"></p>
+<p>Click on the <strong>Generate Token</strong> button. Facebook will ask to accept the terms. Once you click on <strong>I Understand</strong> checkbox, the Access Token will be available for use.</p>
+<blockquote>
+<p>Copy this Access Token and save in a secure place. We will be using this Access Token on the Haptik Platform.
+<strong>Do not re-generate the Access Token</strong> as generating new tokens every time will depreciate the previously generated Access Token and the Access Token will have to changed on the Haptik Platform as well.</p>
+</blockquote>
+<p><img src="https://user-images.githubusercontent.com/75118325/113736042-6850c600-971a-11eb-9a11-fc2405204103.png" alt="image"></p>
+<h2><a class="anchor" aria-hidden="true" id="step-3-setting-up-credentials-on-haptik-platform"></a><a href="#step-3-setting-up-credentials-on-haptik-platform" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 3: Setting up credentials on Haptik Platform</h2>
+<p>Setting up the credentials will connect the Haptik bot on the required Facebook page. These credentials will need to be set up in the <strong>Business Manager</strong> section of the Haptik Platform.</p>
+<p>On the <strong>Production Environment</strong>, navigate to <a href="https://api.haptikapi.com/mogambo/#/businesses"><strong>Business Manager</strong></a>. Search for your business name and click on it.</p>
+<p>Under <strong>Channels</strong> section, there is a <strong>Platform Deployment</strong> tab. Select the <strong>Platform</strong> as <strong>Facebook</strong> to set up the following credentials.</p>
+<p>The credentails required are -</p>
+<h3><a class="anchor" aria-hidden="true" id="1-access-token-from-facebook"></a><a href="#1-access-token-from-facebook" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Access Token from Facebook</h3>
+<p>This is the Access Token generated in Step 2.</p>
+<p>Paste the <strong>Access Token</strong> in the <strong>Access Token</strong> field, as shown below -</p>
+<p><img src="https://user-images.githubusercontent.com/75118325/113742963-c385b700-9720-11eb-9292-a50385e07689.png" alt="image"></p>
+<h3><a class="anchor" aria-hidden="true" id="2-app-secret-key-from-facebook"></a><a href="#2-app-secret-key-from-facebook" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. App secret key from Facebook</h3>
+<p>The is an already generated key for the Facebook app. You can find the <strong>App Secret</strong> key from the <strong>Settings</strong> page of the app, as shown below -</p>
+<p><img src="https://user-images.githubusercontent.com/75118325/113741575-69d0bd00-971f-11eb-839e-4074571af180.png" alt="image"></p>
+<p>Paste the <strong>App Secret Key</strong> in the <strong>App Secret Key</strong> field, as shown below -</p>
+<p><img src="https://user-images.githubusercontent.com/75118325/113742818-9f29da80-9720-11eb-94f2-f5708cb838ba.png" alt="image"></p>
+<h3><a class="anchor" aria-hidden="true" id="3-callback-url"></a><a href="#3-callback-url" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. Callback URL</h3>
+<p>The Callback URL is present on the haptik Platform.</p>
+<p>In the <strong>Platform Deplyment</strong> tab, find the <strong>Callback URL</strong> as shown below -</p>
+<p><img src="https://user-images.githubusercontent.com/75118325/113741929-bae0b100-971f-11eb-90d3-877325289754.png" alt="image"></p>
+<p>Copy this Callback URL. This Callback URL will be used in the Facebook App.</p>
+<h3><a class="anchor" aria-hidden="true" id="4-secret-challenge-key"></a><a href="#4-secret-challenge-key" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4. Secret Challenge Key</h3>
+<p>You can generate the <strong>Secret Challenge Key</strong> by yourself (just like any Strong Password) or use this link to generate a random key <a href="https://randomkeygen.com/"><strong>https://randomkeygen.com/</strong></a>.</p>
+<p>Paste this key in the <strong>Secret Key</strong> field, as shown below -</p>
+<p><img src="https://user-images.githubusercontent.com/75118325/113742620-6853c480-9720-11eb-8f24-607569281df7.png" alt="image"></p>
+<h2><a class="anchor" aria-hidden="true" id="step-4-connect-the-facebook-app-to-haptik-platform"></a><a href="#step-4-connect-the-facebook-app-to-haptik-platform" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 4: Connect the Facebook App to Haptik Platform</h2>
+<p>You will have to connect the Facebook App to Haptik Platform  to receive messages and other events sent by the Messenger users.</p>
+<p>To create the connection, go to <strong>Settings</strong> page of <strong>Messenger</strong> and scroll down a bit to find the <strong>Webhooks</strong> section, as shown below -</p>
+<p><img src="https://user-images.githubusercontent.com/75118325/113744304-3cd1d980-9722-11eb-90c2-ed94da317076.png" alt="image"></p>
+<p>Click on <strong>Add Callback URL</strong> button. Paste the <strong>Callback URL</strong> which you copied from <strong>Business Manager</strong> section of Haptik Platform <a href="https://docs.haptik.ai/facebook/admin-deploy#2-app-secret-key-from-facebook">(refer point 3 of Step 2)</a> and paste the <strong>Secret Challenge Key</strong> in the <strong>Verify Token</strong> field <a href="https://docs.haptik.ai/facebook/admin-deploy#4-secret-challenge-key">(refer point 4 in Step 2)</a>.</p>
+<p>Click on <strong>Verify and Save</strong> button.</p>
+<blockquote>
+<p>Copy the <strong>Callback URL</strong> from Production Environment.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="step-5-subscribe-to-events"></a><a href="#step-5-subscribe-to-events" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 5: Subscribe to events</h2>
+<p>After adding the <strong>Callback URL</strong> you will need to <strong>Subscribe</strong> for the various events to get logs.</p>
+<p>In the same <strong>Webhooks</strong> section, once the <strong>Callback URL</strong> is added, a <strong>Add Subscription</strong> button will appear.</p>
+<p><img src="https://user-images.githubusercontent.com/75118325/113746708-3cd2d900-9724-11eb-8f37-a440a330f2ec.png" alt="image"></p>
+<p>Select the required events that you want to subscribe to and click on <strong>Save</strong>.</p>
+<p><img src="https://user-images.githubusercontent.com/75118325/113746803-58d67a80-9724-11eb-819c-df7e33f9756c.png" alt="image"></p>
+<blockquote>
+<p>The above selected events are mandatory events to be checked for the setup process.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="step-6-setup-a-primary-receiver"></a><a href="#step-6-setup-a-primary-receiver" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 6: Setup a Primary Receiver</h2>
+<p>You need to enable the App as the <strong>Primary Receiver</strong> for the Page.</p>
+<p>Go the <strong>Page Settings</strong>. This is the Page (not the App) where the bot will be live.</p>
+<p><img src="https://user-images.githubusercontent.com/75118325/113747554-20836c00-9725-11eb-8dad-5615cb439f67.png" alt="image"></p>
+<p>Click on the <strong>Configure</strong> button.</p>
+<blockquote>
+<p><strong>Primary Receiver</strong> would be a bot that can respond to most incoming messages automatically (bot).</p>
+<p><strong>Secondary Receiver</strong> would route to chat with a live agent or be a specialized app for handling certain request types.</p>
+</blockquote>
+<p>Select the App name from the dropdown besides <strong>Primary Receiver</strong>.</p>
+<p><img src="https://user-images.githubusercontent.com/75118325/114992484-6e803880-9eb8-11eb-8385-3c01b7a2ce3d.png" alt="image"></p>
+<h2><a class="anchor" aria-hidden="true" id="step-7-confirm-green-ticks"></a><a href="#step-7-confirm-green-ticks" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 7: Confirm green ticks</h2>
+<p>On the left sidebar, check for green ticks besides <strong>Webhooks and Messenger</strong>. If it is green, you can start testing the bot on the Page.</p>
+<p><img src="https://user-images.githubusercontent.com/75118325/113748454-275eae80-9726-11eb-89b3-20f2f024126e.png" alt="image"></p>
+<h2><a class="anchor" aria-hidden="true" id="step-8-business-verification"></a><a href="#step-8-business-verification" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 8: Business Verification</h2>
+<p>If you are a developer for a business, you'll need to complete <strong>Business Verification</strong> in addition to <strong>App Review</strong> before you can access live data.</p>
+<p>Navigate to App <strong>Settings</strong> and look for <strong>Verfication</strong> section.</p>
+<p><img src="https://user-images.githubusercontent.com/75118325/113748774-86bcbe80-9726-11eb-9a67-4718e32d88d9.png" alt="image"></p>
+<p>Click on <strong>Start Verification</strong> button and select the type as <strong>Business Verification</strong>. Create a <strong>Facebook Business Manager</strong> account (if you don't have already) by providing you Business name, your name and email address.</p>
+<p>Provide the Business details and complete the verification process.</p>
+<blockquote>
+<p>To know more about the Business verification process, click <a href="https://developers.facebook.com/docs/messenger-platform/app-review/"><strong>here</strong></a>.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="step-9-app-review"></a><a href="#step-9-app-review" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 9: App Review</h2>
+<p>To have various permission to access the data related to the Page and App, you can request for <strong>Advanced Access</strong>.</p>
+<p><img src="https://user-images.githubusercontent.com/75118325/113751508-a3a6c100-9729-11eb-90da-bbede1f60e6f.png" alt="image"></p>
+<p>The change request depends on the type of permission you want to change.</p>
+<p>For example, the process to change <code>pages_read_engagement</code> permission will differ from the process to change <code>pages_manage_post</code> because their nature of access is different.</p>
+<p>Once these steps are completed, the bot will be able to send responses to the user's messages.</p>
+<h2><a class="anchor" aria-hidden="true" id="how-to-setup-the-persistent-menu-optional"></a><a href="#how-to-setup-the-persistent-menu-optional" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How to setup the persistent menu? (optional)</h2>
+<p>The persistent menu allows user to have an always-on user interface element inside Messenger conversations. This is an easy way to help people discover and access the core functionality of your Messenger bot at any point in the conversation.</p>
+<p><code>URL:</code> <code>https://graph.facebook.com/v10.0/me/messenger_profile?access_token=&lt;ACCESS TOKEN&gt;</code></p>
+<blockquote>
+<p><strong>Copy this access token from Haptik Platform Deployment settings</strong>.</p>
+</blockquote>
+<p>The request body to setup a persistent menu (in JSON) -</p>
+<p>Here,</p>
+<p><strong>title</strong>: is the text which appears on the Messenger screen.</p>
+<p><strong>payload</strong>: is the text which will be sent once the user clicks on the menu item.</p>
+<pre><code class="hljs css language-JSON">{
+    <span class="hljs-attr">"persistent_menu"</span>: [
+        {
+            <span class="hljs-attr">"locale"</span>: <span class="hljs-string">"default"</span>,
+            <span class="hljs-attr">"composer_input_disabled"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-attr">"call_to_actions"</span>: [
+                {
+                    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"postback"</span>,
+                    <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Menu 1"</span>,
+                    <span class="hljs-attr">"payload"</span>: <span class="hljs-string">"Menu 1{task}"</span>
+                },
+                {
+                    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"postback"</span>,
+                    <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Menu 2"</span>,
+                    <span class="hljs-attr">"payload"</span>: <span class="hljs-string">"Menu 2{task}"</span>
+                },
+                {
+                    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"postback"</span>,
+                    <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Menu 3"</span>,
+                    <span class="hljs-attr">"payload"</span>: <span class="hljs-string">"Menu 3{task}"</span>
+                }
+            ]
+        }
+    ]
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="how-to-setup-the-get-started-button-optional"></a><a href="#how-to-setup-the-get-started-button-optional" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How to setup the Get Started button? (optional)</h2>
+<p>For a better user experience, Facebook allows us to add a Get Started button which enables the user to start a conversation with the bot.</p>
+<p><img src="https://user-images.githubusercontent.com/75118325/114985951-0712ba80-9eb1-11eb-84d5-f2a54332ee32.png" alt="image"></p>
+<p>To enable the <strong>Get Started</strong> button, you will need to send a POST request as demonstrated below -</p>
+<p><code>URL:</code> <code>https://graph.facebook.com/v10.0/me/messenger_profile?access_token=&lt;ACCESS TOKEN&gt;</code></p>
+<blockquote>
+<p><strong>Copy this access token from Haptik Platform Deployment settings</strong>.</p>
+</blockquote>
+<p>The request body to send to the above URL (in JSON) -</p>
+<p>Here,</p>
+<p><strong>payload</strong>: is the text which will be sent to the bot when user clicks on the <strong>Get Started</strong> button.</p>
+<pre><code class="hljs css language-JSON">{ 
+  <span class="hljs-attr">"get_started"</span>:{
+    <span class="hljs-attr">"payload"</span>:<span class="hljs-string">"Get started"</span>
+  }
+}
+</code></pre>
+<p>Voila! You have now successfully set up you Facebook Page and the bot to reach to you consumers.</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 4/16/2021</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/facebook/technical-setup"><span class="arrow-prev">← </span><span>Set up Facebook Account</span></a><a class="docs-next button" href="/facebook/cs-fb"><span>Using Haptik Platform</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#step-1-create-a-page">Step 1: Create a Page</a></li><li><a href="#step-2-generate-access-token">Step 2: Generate Access Token</a></li><li><a href="#step-3-setting-up-credentials-on-haptik-platform">Step 3: Setting up credentials on Haptik Platform</a><ul class="toc-headings"><li><a href="#1-access-token-from-facebook">1. Access Token from Facebook</a></li><li><a href="#2-app-secret-key-from-facebook">2. App secret key from Facebook</a></li><li><a href="#3-callback-url">3. Callback URL</a></li><li><a href="#4-secret-challenge-key">4. Secret Challenge Key</a></li></ul></li><li><a href="#step-4-connect-the-facebook-app-to-haptik-platform">Step 4: Connect the Facebook App to Haptik Platform</a></li><li><a href="#step-5-subscribe-to-events">Step 5: Subscribe to events</a></li><li><a href="#step-6-setup-a-primary-receiver">Step 6: Setup a Primary Receiver</a></li><li><a href="#step-7-confirm-green-ticks">Step 7: Confirm green ticks</a></li><li><a href="#step-8-business-verification">Step 8: Business Verification</a></li><li><a href="#step-9-app-review">Step 9: App Review</a></li><li><a href="#how-to-setup-the-persistent-menu-optional">How to setup the persistent menu? (optional)</a></li><li><a href="#how-to-setup-the-get-started-button-optional">How to setup the Get Started button? (optional)</a></li></ul></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Conversation Studio</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Smart Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Intelligent Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://docs.haptik.ai/ios-sdk/" class="footer-column-link">iOS SDK</a><a href="https://docs.haptik.ai/android-sdk/" class="footer-column-link">Android SDK</a><a href="https://docs.haptik.ai/web-sdk/" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/whatsapp/" class="footer-column-link">WhatsApp</a><a href="https://docs.haptik.ai/other/facebook" class="footer-column-link">Facebook</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Bot API</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Agent Chat Tool</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2021 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '224c7079e67e84a978d8b4621f6af16d',
+                indexName: 'haptik',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

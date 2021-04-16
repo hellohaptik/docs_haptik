@@ -70,103 +70,47 @@
 <ol>
 <li>Go to the Business Manager section of the Conversation Studio tool from the left Navigation Bar.</li>
 </ol>
-<p><img src="/assets/platform_deployments_business_manager.png" alt="Businsess Manager"></p>
+<p><img src="https://user-images.githubusercontent.com/75118325/113767890-d3ab8f80-973c-11eb-9810-8e004d6b201a.png" alt="image"></p>
 <ol start="2">
 <li>Open the business of the bot you want to connect to external platform and navigate to <strong>Platform Deployment</strong> settings</li>
 </ol>
-<p><img src="/assets/PD.png" alt="Platform Settings"></p>
+<p><img src="https://user-images.githubusercontent.com/75118325/113768030-fe95e380-973c-11eb-9ad9-b7dc5bdfcd39.png" alt="image"></p>
 <p>Using the Platform Settings you can easily connect your bot to any of the following external platforms:</p>
 <ul>
-<li>Facebook Messenger</li>
+<li><a href="https://docs.haptik.ai/other/facebook">Facebook</a></li>
+<li><a href="https://docs.haptik.ai/whatsapp/">WhatsApp</a></li>
+<li><a href="https://docs.haptik.ai/web-sdk/">Web SDK</a></li>
+<li><a href="https://docs.haptik.ai/android-sdk/">Android SDK</a></li>
+<li><a href="https://docs.haptik.ai/ios-sdk/">iOS SDK</a></li>
+<li><a href="https://docs.haptik.ai/webhooks/">Bot API</a></li>
+<li>Google Business Messages</li>
+<li>Salesforce Agent Chat</li>
+<li>Zendesk Live Chat</li>
+<li>Nice Agent Chat</li>
+<li>Freshchat</li>
 <li>Jio</li>
-<li>Bot API</li>
-<li>WhatsApp</li>
-<li>Web SDK</li>
-<li>Android SDK</li>
-<li>iOS SDK</li>
+<li>Jio Chat Connector</li>
+<li>Gupshup Chat Connector</li>
+<li>Netcore Chat Connector</li>
+<li>Sunshine Chat Connector</li>
+<li>Infobip Chat Connector</li>
+<li>GIP</li>
+<li>IVR Audio codes</li>
+<li>Twilio</li>
+<li>IVR APIs</li>
 </ul>
-<h2><a class="anchor" aria-hidden="true" id="deploying-to-facebook-messenger"></a><a href="#deploying-to-facebook-messenger" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Deploying to Facebook Messenger</h2>
-<p>Before connecting your Conversation Studio bot to Facebook Messenger there are a few pre-requisites.</p>
-<h3><a class="anchor" aria-hidden="true" id="pre-requisites"></a><a href="#pre-requisites" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pre-requisites</h3>
+<p>Select the <strong>Platform</strong> you want to deploy the bot on.</p>
+<p>The fields for adding keys change according to the <strong>Platform</strong> selected.</p>
+<blockquote>
+<p><strong>Deploying to Jio</strong></p>
+<p>To connect your bot to Jio - open the platform settings section in the business manager and navigate to Jio. Follow these steps to connect the bot:</p>
 <ol>
-<li>Create an application on the <a href="https://developers.facebook.com">Facebook developers portal</a>.</li>
+<li>Callback URL is auto-generated</li>
+<li>Enter the access token provided by the Jio team</li>
+<li>Activate the connection by clicking on the switch and save the configuration</li>
+<li>Share the full callback url &lt;domain_name&gt;/jio/&lt;any_identifier&gt; using the same identifier as before with the Jio team. The domain name will be provided by Haptik team.</li>
 </ol>
-<p><img src="/assets/platform_deployments_facebook_app_create.png" alt="Facebook App Creation"></p>
-<ol start="2">
-<li>Go to the Dashboard section of your application and note down the App ID and App Secret of your application.</li>
-</ol>
-<p><img src="/assets/platform_deployments_app_credentials.png" alt="App Credentials"></p>
-<ol start="3">
-<li>Click on the Products option in the left navigation menu and setup Messenger.</li>
-</ol>
-<p><img src="/assets/platform_deployments_facebook_messenger_product_setup.png" alt="Messenger Product Selection"></p>
-<ol start="4">
-<li>Inside Messenger settings scroll down to the Token Generation section and generate token for the facebook page you want to connect your bot to.</li>
-</ol>
-<p><img src="/assets/platform_deployments_page_access_token.png" alt="Page Access Token"></p>
-<p>Once you have completed all the pre-requisite steps, you can go ahead with connecting your newly created facebook application with Bot Builder.</p>
-<p>You can read about it in detail <a href="https://docs.haptik.ai/other/facebook">here</a>.</p>
-<h3><a class="anchor" aria-hidden="true" id="connecting-to-conversation-studio"></a><a href="#connecting-to-conversation-studio" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Connecting to Conversation Studio</h3>
-<ol>
-<li><p>On the Platform Settings screen in Conversation Studio, go to Facebook.</p></li>
-<li><p>Callback URL will be auto-generated.</p></li>
-<li><p>Enter the <strong>access token</strong> and the <strong>app secret key</strong> generated from the pre-requisites steps.</p></li>
-<li><p>Finally add a unique secret challenge key of your choice.   After adding the details turn the switch on to activate the connection.</p></li>
-<li><p>Go back to the facebook developer application and scroll down to the webhook section.</p></li>
-<li><p>Click on Setup Webhook, then enter &lt;domain_name&gt;/fb/&lt;any_identifier&gt; in the callback url. The domain name will be provided by the Haptik team. Use the same identifier that you used in bot's callback url.</p></li>
-<li><p>Enter the secret_challenge_key previously setup in the verify token field.</p></li>
-<li><p>Choose the messages and message_postbacks checkboxes in Subscription Fields and click on <code>Verify and Save</code>.</p></li>
-</ol>
-<p><img src="/assets/platform_deployments_webhook_setup.png" alt="Webhook Setup"></p>
-<ol start="9">
-<li>After saving your webhook, subscribe it to the page you want to connect your bot to.</li>
-</ol>
-<p><img src="/assets/platform_deployments_webhook_subscription.png" alt="Webhook Subscribe"></p>
-<p>The connection should be now setup and we can go ahead and test the bot.</p>
-<h3><a class="anchor" aria-hidden="true" id="testing-the-bot-on-messenger"></a><a href="#testing-the-bot-on-messenger" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Testing the Bot on Messenger</h3>
-<ol>
-<li><p>Open Messenger and search for the page you connected the bot to.</p></li>
-<li><p>Start chatting with the page and test out your bot.<br>
-<img src="/assets/platform_deployments_bot_testing.png" alt="Bot Testing"></p></li>
-</ol>
-<h2><a class="anchor" aria-hidden="true" id="deploying-to-jio"></a><a href="#deploying-to-jio" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Deploying to Jio</h2>
-<p>To connect your bot to Jio open the platform settings section in the business manager and navigate to Jio. Follow these steps to connect the bot:</p>
-<ol>
-<li><p>Callback URL is auto-generated</p></li>
-<li><p>Enter the access token provided by the Jio team.</p></li>
-<li><p>Activate the connection by clicking on the switch and save the configuration.</p></li>
-<li><p>Share the full callback url &lt;domain_name&gt;/jio/&lt;any_identifier&gt; using the same identifier as before with the Jio team. The domain name will be provided by Haptik team.</p></li>
-</ol>
-<h2><a class="anchor" aria-hidden="true" id="deploying-using-botapi"></a><a href="#deploying-using-botapi" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Deploying using BotAPI</h2>
-<p>If you want to use a custom platform or want to connect to a platform not currently supported you can use the BotAPI (Webhook) Integration. Briefly this is how the webhook integration works:</p>
-<ol>
-<li><p>Your application receives the message from the user.</p></li>
-<li><p>It then sends a POST request with that message to the callback URL of the bot.</p></li>
-<li><p>Haptik processes the message and sends a response to the webhook URL of your application.</p></li>
-<li><p>Your application listens to the webhook and responds to the user.</p></li>
-</ol>
-<p><img src="/assets/platform_deployments_webhook_uml.png" alt="Webhook UML"></p>
-<p>You can get more detailed information about the request/response parameters and schema <a href="https://docs.haptik.ai/webhooks/">here</a>.</p>
-<h3><a class="anchor" aria-hidden="true" id="setting-up-the-connection"></a><a href="#setting-up-the-connection" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Setting up the connection</h3>
-<ol>
-<li><p>Go to the Platform Settings page and scroll to the BotAPI section.</p></li>
-<li><p>Callback URL and Token are already populated. Enter the Webhook URL and Secret Key. The Secret Key and Access Token help with authenticating your server with Haptik.</p></li>
-<li><p>Enable the Webhook endpoint.</p></li>
-<li><p>If needed enable email alerts and enter the list of emails you want the alerts sent to.</p></li>
-<li><p>Save the configuration and activate it by turning the switch on next to the partner you want to setup the bot for.</p></li>
-</ol>
-<h3><a class="anchor" aria-hidden="true" id="testing-the-connection"></a><a href="#testing-the-connection" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Testing the connection</h3>
-<p>You can test the connection by making a POST request to the callback URL. After making the request you should get a reply sent as a request on the webhook URL setup by you.</p>
-<h2><a class="anchor" aria-hidden="true" id="deploying-to-whatsapp"></a><a href="#deploying-to-whatsapp" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Deploying to Whatsapp</h2>
-<p>Conversation Studio also lets you connect your bot to whatsapp. To make this setup there are a few pre-requisites.</p>
-<h3><a class="anchor" aria-hidden="true" id="pre-requisites-for-whatsapp-integration"></a><a href="#pre-requisites-for-whatsapp-integration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pre-Requisites for Whatsapp Integration</h3>
-<p>You can read about it in detail <a href="https://docs.haptik.ai/whatsapp/">here</a>.</p>
-<h3><a class="anchor" aria-hidden="true" id="complete-the-connection-on-conversation-studio"></a><a href="#complete-the-connection-on-conversation-studio" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Complete the Connection on Conversation Studio</h3>
-<p>On the Platform Settings screen go to Whatsapp, callback url will be auto-populated. Haptik team will help you set up this page. Contact your Haptik SPOC for the rest of the fields.</p>
-<h3><a class="anchor" aria-hidden="true" id="test-the-bot-on-whatsapp"></a><a href="#test-the-bot-on-whatsapp" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Test the bot on whatsapp</h3>
-<p>You can test the bot by sending whatsapp messages to the number.</p>
-<h3><a class="anchor" aria-hidden="true" id="using-your-number"></a><a href="#using-your-number" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using your number</h3>
-<p>To use your own brand name, phone number, and custom message templates, your account must first be approved by WhatsApp.</p>
+</blockquote>
 <h2><a class="anchor" aria-hidden="true" id="sending-notifications-in-a-bot-with-web-sdk-integration"></a><a href="#sending-notifications-in-a-bot-with-web-sdk-integration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sending Notifications in a Bot with Web SDK Integration</h2>
 <p>If you integrate your bot into an Android or iOS app using Web SDK then it is not possible to send push notifications out of the box. In such cases if you want to send push notifications you can use the Web SDK settings from the platform deployments page.</p>
 <h3><a class="anchor" aria-hidden="true" id="setting-up-notifications"></a><a href="#setting-up-notifications" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Setting up notifications</h3>
@@ -177,11 +121,7 @@
 <li><p>Finally enter the Webhook URL. This is the URL the notifications will be sent as a request to.</p></li>
 <li><p>Save the configuration and activate it by turning the switch on next to the partner you want to setup the bot for.</p></li>
 </ol>
-<p><img src="/assets/PD1.png" alt="Web SDK settings"></p>
-<h2><a class="anchor" aria-hidden="true" id="sdk-integrations"></a><a href="#sdk-integrations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>SDK Integrations</h2>
-<p>You can read more about Web SDK integrations <a href="https://docs.haptik.ai/web-sdk/">here</a>.</p>
-<p>You can read more about Android SDK integrations <a href="https://docs.haptik.ai/android-sdk/">here</a> and iOS SDK integrations <a href="https://docs.haptik.ai/ios-sdk/">here</a>.</p>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 4/14/2021</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/bot-builder/basic/business"><span class="arrow-prev">← </span><span>Business</span></a><a class="docs-next button" href="/bot-builder/basic/copypaste"><span>Copy &amp; Paste on Conversation Studio</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#how-to-deploy-the-bot-to-external-platforms">How to Deploy the Bot to External Platforms?</a></li><li><a href="#deploying-to-facebook-messenger">Deploying to Facebook Messenger</a><ul class="toc-headings"><li><a href="#pre-requisites">Pre-requisites</a></li><li><a href="#connecting-to-conversation-studio">Connecting to Conversation Studio</a></li><li><a href="#testing-the-bot-on-messenger">Testing the Bot on Messenger</a></li></ul></li><li><a href="#deploying-to-jio">Deploying to Jio</a></li><li><a href="#deploying-using-botapi">Deploying using BotAPI</a><ul class="toc-headings"><li><a href="#setting-up-the-connection">Setting up the connection</a></li><li><a href="#testing-the-connection">Testing the connection</a></li></ul></li><li><a href="#deploying-to-whatsapp">Deploying to Whatsapp</a><ul class="toc-headings"><li><a href="#pre-requisites-for-whatsapp-integration">Pre-Requisites for Whatsapp Integration</a></li><li><a href="#complete-the-connection-on-conversation-studio">Complete the Connection on Conversation Studio</a></li><li><a href="#test-the-bot-on-whatsapp">Test the bot on whatsapp</a></li><li><a href="#using-your-number">Using your number</a></li></ul></li><li><a href="#sending-notifications-in-a-bot-with-web-sdk-integration">Sending Notifications in a Bot with Web SDK Integration</a><ul class="toc-headings"><li><a href="#setting-up-notifications">Setting up notifications</a></li></ul></li><li><a href="#sdk-integrations">SDK Integrations</a></li></ul></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Conversation Studio</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Smart Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Intelligent Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://docs.haptik.ai/ios-sdk/" class="footer-column-link">iOS SDK</a><a href="https://docs.haptik.ai/android-sdk/" class="footer-column-link">Android SDK</a><a href="https://docs.haptik.ai/web-sdk/" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/whatsapp/" class="footer-column-link">WhatsApp</a><a href="https://docs.haptik.ai/other/facebook" class="footer-column-link">Facebook</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Bot API</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Agent Chat Tool</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2021 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 4/16/2021</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/bot-builder/basic/business"><span class="arrow-prev">← </span><span>Business</span></a><a class="docs-next button" href="/bot-builder/basic/copypaste"><span>Copy &amp; Paste on Conversation Studio</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#how-to-deploy-the-bot-to-external-platforms">How to Deploy the Bot to External Platforms?</a></li><li><a href="#sending-notifications-in-a-bot-with-web-sdk-integration">Sending Notifications in a Bot with Web SDK Integration</a><ul class="toc-headings"><li><a href="#setting-up-notifications">Setting up notifications</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Conversation Studio</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Smart Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Intelligent Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://docs.haptik.ai/ios-sdk/" class="footer-column-link">iOS SDK</a><a href="https://docs.haptik.ai/android-sdk/" class="footer-column-link">Android SDK</a><a href="https://docs.haptik.ai/web-sdk/" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/whatsapp/" class="footer-column-link">WhatsApp</a><a href="https://docs.haptik.ai/other/facebook" class="footer-column-link">Facebook</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Bot API</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Agent Chat Tool</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2021 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

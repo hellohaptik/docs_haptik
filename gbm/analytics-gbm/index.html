@@ -1,0 +1,126 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Analytics for Google Business Messages · Haptik Docs</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Intelligent Analytics by Haptik empowers teams to get a comprehensive overview of how the IVAs are performing. Get in-depth insights into how users interact with your IVAs, identify problem areas or features that can be improved and also collect first-hand user feedback about your IVA experience in real-time. The user messages/conversations with historical data can help answer the toughest questions about users. Boost your IVA&#x27;s conversations&#x27; success with this tool."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Analytics for Google Business Messages · Haptik Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.haptik.ai/"/><meta property="og:description" content="Intelligent Analytics by Haptik empowers teams to get a comprehensive overview of how the IVAs are performing. Get in-depth insights into how users interact with your IVAs, identify problem areas or features that can be improved and also collect first-hand user feedback about your IVA experience in real-time. The user messages/conversations with historical data can help answer the toughest questions about users. Boost your IVA&#x27;s conversations&#x27; success with this tool."/><meta property="og:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="robots" content="noindex"/><link rel="shortcut icon" href="/img/image_0.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-106563119-6', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="/js/index.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/image_0.png" alt="Haptik Docs"/><h2 class="headerTitleWithLogo">Haptik Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="/#tools" target="_self">Tools</a></li><li class=""><a href="/#integrations" target="_self">Integrations</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Analytics of GBM IVA</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started</h3><ul class=""><li class="navListItem"><a class="navItem" href="/gbm/">Introduction</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Implementation of IVA</h3><ul class=""><li class="navListItem"><a class="navItem" href="/gbm/on-cs">Creating the IVA</a></li><li class="navListItem"><a class="navItem" href="/gbm/deploy-gbm">Deploying the IVA</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Analytics of GBM IVA</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/gbm/analytics-gbm">Analytics for Google Business Messages</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Analytics for Google Business Messages</h1></header><article><div><span><p>Intelligent Analytics by Haptik empowers teams to get a comprehensive overview of how the IVAs are performing. Get in-depth insights into how users interact with your IVAs, identify problem areas or features that can be improved and also collect first-hand user feedback about your IVA experience in real-time. The user messages/conversations with historical data can help answer the toughest questions about users. Boost your IVA's conversations' success with this tool.</p>
+<p>To know more about Haptik's Intelligent Analytics, read <a href="https://docs.haptik.ai/bot-analytics/"><strong>here</strong></a>.</p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="analytics-on-google-business-messages"></a><a href="#analytics-on-google-business-messages" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Analytics on Google Business Messages</h2>
+<p>Google Business Messages tracks key performance metrics to make sure agent performs well.</p>
+<p>Apart from Inteligent Analytics dashboard metrics, Google also shares the following metrics -</p>
+<p>Google Business Messages have 2 target metrics -</p>
+<ul>
+<li><strong>CSAT</strong>: The <strong>Customer Satisfaction</strong> percentage.</li>
+<li><strong>MRR</strong>: The <strong>Merchant Response Rate</strong> i.e. the frequency at which the agent(bot) responds back to the user.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="improving-metrics-of-agent"></a><a href="#improving-metrics-of-agent" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Improving Metrics of agent</h2>
+<p>If the agent performance is low, make sure your agent does the following -</p>
+<h3><a class="anchor" aria-hidden="true" id="process-and-respond-to-messages-without-technical-issue"></a><a href="#process-and-respond-to-messages-without-technical-issue" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Process and respond to messages without technical issue</h3>
+<ul>
+<li>Check for all the webhooks and confirm if the messages are being sent to the user.</li>
+<li>Check for the fallback strategy if some information is missing.</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="reply-intelligently-and-compassionately"></a><a href="#reply-intelligently-and-compassionately" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reply intelligently and compassionately</h3>
+<ul>
+<li>Reply to every message. Automated replies can help you address common questions.</li>
+<li>Be aware of users' conversation entry points and respond accordingly. For example, users coming from Google Maps are more likely interested in location-specific information like opening hours and stock checks.</li>
+<li>For location-based messages, route questions to the individuals best suited to respond to them.</li>
+<li>If a live agent isn't available, use automation to response to the user. Let them know your agent's chat hours and how else they might reach someone (for example, a support phone number).</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="provide-guidance"></a><a href="#provide-guidance" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Provide guidance</h3>
+<p>Make use of guidance messages, conversation startes to make the conversational journey easier for the user.</p>
+<h3><a class="anchor" aria-hidden="true" id="handle-data-carefully"></a><a href="#handle-data-carefully" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Handle data carefully</h3>
+<ul>
+<li>Whenever possible, gather location and other data from messages you receive rather than asking for it.</li>
+<li>Don't request sensitive information (log in credentials, banking/credit details, personal identification numbers).</li>
+<li>Only ask for data when it's required. Data overreach creates a bad user experience.</li>
+<li>When you need data, be clear about why and how you'll use it.</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="behave-asynchronously"></a><a href="#behave-asynchronously" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Behave asynchronously</h3>
+<ul>
+<li>Don't mark conversations as inactive. Communications over Business Messages is ansynchronous, so users may not respond immediately.</li>
+<li>Don't follow up on unresponsive users. Users aren't disconnected after navigating away from the conversation.</li>
+</ul>
+<blockquote>
+<p><strong>To know more about metrics on Google Business Messages, read <a href="https://developers.google.com/business-communications/business-messages/guides/measure/metrics">here</a>.</strong></p>
+</blockquote>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 4/16/2021</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/gbm/deploy-gbm"><span class="arrow-prev">← </span><span>Deploying the IVA</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#analytics-on-google-business-messages">Analytics on Google Business Messages</a></li><li><a href="#improving-metrics-of-agent">Improving Metrics of agent</a><ul class="toc-headings"><li><a href="#process-and-respond-to-messages-without-technical-issue">Process and respond to messages without technical issue</a></li><li><a href="#reply-intelligently-and-compassionately">Reply intelligently and compassionately</a></li><li><a href="#provide-guidance">Provide guidance</a></li><li><a href="#handle-data-carefully">Handle data carefully</a></li><li><a href="#behave-asynchronously">Behave asynchronously</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Conversation Studio</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Smart Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Intelligent Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://docs.haptik.ai/ios-sdk/" class="footer-column-link">iOS SDK</a><a href="https://docs.haptik.ai/android-sdk/" class="footer-column-link">Android SDK</a><a href="https://docs.haptik.ai/web-sdk/" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/whatsapp/" class="footer-column-link">WhatsApp</a><a href="https://docs.haptik.ai/other/facebook" class="footer-column-link">Facebook</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Bot API</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Agent Chat Tool</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2021 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '224c7079e67e84a978d8b4621f6af16d',
+                indexName: 'haptik',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

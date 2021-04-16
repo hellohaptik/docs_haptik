@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Connections · Haptik Docs</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="generator" content="Docusaurus"/><meta name="description" content="This section will cover the following topics:  "/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Connections · Haptik Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.haptik.ai/"/><meta property="og:description" content="This section will cover the following topics:  "/><meta property="og:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="robots" content="noindex"/><link rel="shortcut icon" href="/img/image_0.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Connections · Haptik Docs</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="generator" content="Docusaurus"/><meta name="description" content="### What are Connections?"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Connections · Haptik Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.haptik.ai/"/><meta property="og:description" content="### What are Connections?"/><meta property="og:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.haptik.ai/img/image_0.png"/><meta name="robots" content="noindex"/><link rel="shortcut icon" href="/img/image_0.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
               (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
               m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -62,65 +62,53 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Connections</h1></header><article><div><span><p>This section will cover the following topics:<br>
-<a href="#what-are-connections">What are connections?</a>  <br>
-<a href="#static-node-to-static-node-connection-transition">Static Node to Static Node Connection Transition</a>  <br>
-<a href="#static-node-to-code-node-connection-transition">Static Node to Code Node Connection Transition</a>  <br>
-<a href="#code-node-to-output-node-connection-transition">Code Node to Output Node Connection Transition</a>  <br>
-<a href="#output-node-to-static-node-connection-transition">Output Node to Static Node Connection Transition</a>
-<a href="#dependent-response">Dependent Response</a>   <br>
-<a href="#connection-guidelines">Connection Guidelines</a></p>
-<h3><a class="anchor" aria-hidden="true" id="what-are-connections"></a><a href="#what-are-connections" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What are Connections?</h3>
-<p>Connections represent the path a conversation takes from node to node. Depending on the response a user inputs to the bot, they traverse down a different connection to the appropriate next node. Bot builders must modify every connection they create to indicate which user inputs correspond to which nodes.</p>
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Connections</h1></header><article><div><span><h3><a class="anchor" aria-hidden="true" id="what-are-connections"></a><a href="#what-are-connections" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What are Connections?</h3>
+<p>Connections represent the <strong>path a conversation takes</strong> from node to node. Depending on the response a user inputs to the bot, they traverse down a different connection to the appropriate next node.</p>
+<p>Bot builders must modify every connection they create to indicate which user inputs correspond to which nodes.</p>
 <h3><a class="anchor" aria-hidden="true" id="creating-connections"></a><a href="#creating-connections" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Creating Connections?</h3>
 <p>You can create a connection between two nodes by clicking on the parent node, holding shift and dragging to the child node as shown below:</p>
-<p><img src="/assets/bot-builder-connections/creating-connections.gif" alt="Creating Connections"></p>
+<p><img src="https://user-images.githubusercontent.com/75118325/113377702-b1a7bb00-9392-11eb-81f7-3d85a4fe3169.gif" alt="s2s conn"></p>
 <h3><a class="anchor" aria-hidden="true" id="static-node-to-static-node-connection-transition"></a><a href="#static-node-to-static-node-connection-transition" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Static Node to Static Node Connection Transition</h3>
 <p>You might want to transition from one static node to another based on the user's input to branch into a different information collection flow.</p>
 <p><img src="/assets/bot-builder-connections/static-to-static.png" alt="Static-to-Static Connection"></p>
 <p>The connections you create can prompt a user to transition from one node to the next in the following three ways:</p>
-<p><strong>1. Transition Basis message input by user:</strong></p>
+<h4><a class="anchor" aria-hidden="true" id="1-transition-based-on-messages-sent-by-user-user-says-based-connection"></a><a href="#1-transition-based-on-messages-sent-by-user-user-says-based-connection" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Transition based on messages sent by user (User Says based Connection):</h4>
 <p>This is when a conversation moves from one node to another based on a particular keyword/phrase or set of keywords sent by a user.</p>
 <ul>
-<li><p>To set a connection based on a user input, click on the arrow linking the two nodes you need to link</p></li>
-<li><p>Click on 'Connection Responses,' which will take you to the following screen.</p></li>
+<li><p>To set a connection based on a user input, click on the arrow linking the two nodes you need to connect</p></li>
+<li><p>The <strong>User Says</strong> tab opens up, here you can add the user variations as shown below -</p></li>
 </ul>
-<p><img src="/assets/bot-builder-user-says/connection_user_message.png" alt="Basis user message"></p>
-<ul>
-<li><p>Decide which type of user input you want to set as an indicator to transition to the next node.</p>
-<ul>
-<li><p>Independent Responses: Adding potential user inputs here indicates to the bot that a user may transition to this next node from any point in the conversation as long as their input sufficiently matches the responses input by the bot builder.</p></li>
-<li><p>Negative Responses: Adding user inputs for which, you do not want the connection to happen.</p></li>
-<li><p>Responses from 'Previous_Node': This lets you limit the flow of conversation so that a user can only reach the next node if the bot has received a response from the specific preceding node.</p></li>
-</ul></li>
-</ul>
-<p><strong>2. Transition Basis a particular entity value</strong></p>
-<p>(a.k.a. a Step Transition): The last type of transition that you can create is where a user may only move to the next node if a user inputs a specific value(s) from within an entity on a node.</p>
-<ul>
-<li><p>To set a step transition value, click the arrow between the two nodes for which you're creating a connection</p></li>
-<li><p>Select Step Transition Values, which will take you to the screen below</p></li>
-</ul>
+<p><img src="https://user-images.githubusercontent.com/75118325/113378297-419a3480-9394-11eb-9f61-da4bd16d759e.gif" alt="usersaysconn"></p>
+<blockquote>
+<p>The User Says section on the connected node (a non-start node) will only contain Negative Responses as the <strong>Source of responses</strong>. Negative Responses are the user says for which you do not want the connection to happen. This is being shown in the GIF below</p>
+</blockquote>
+<p><img src="https://user-images.githubusercontent.com/75118325/113378578-fb91a080-9394-11eb-9eea-7fcc09a1f4c4.gif" alt="negativeconn"></p>
+<h4><a class="anchor" aria-hidden="true" id="2-transition-based-on-values-of-entities-given-by-user-entities-based-connection"></a><a href="#2-transition-based-on-values-of-entities-given-by-user-entities-based-connection" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. Transition based on values of entities given by user (Entities based Connection):</h4>
+<p>You can create a connection between two nodes on the basis of the values collected from the user in the forms of Entitites.</p>
+<p>There are 3 options when you open the Entities tab on the Connection line.</p>
+<p><strong>1. Do not connect</strong>:</p>
+<p>This option will not use the selected entity for the connection. For example, if you do not wish to connect Node 1 to Node 2 on the basis of person_name, you can select the Connection as <strong>Do not connect</strong>.</p>
+<p><img src="https://user-images.githubusercontent.com/75118325/113379638-b02cc180-9397-11eb-9450-de866d4ccab1.gif" alt="dnc"></p>
+<p><strong>2. Connect via entity presence</strong>:</p>
+<p>When you’ve added an entity to a conversation, you can define the transition from the node with the entity to the next as only being possible if the user has input a response that falls within the entity. This is particularly helpful when you are setting a conversational flow in which a user needs to input something like a phone number or email ID. All values within the entities are accepted, but the bot will be able to determine whether or not the user has input the correct type of value (i.e. a 9 digit number or a complete email address)</p>
+<p><img src="https://user-images.githubusercontent.com/75118325/113379739-f124d600-9397-11eb-97e3-14070bf1d920.png" alt="image"></p>
+<p><strong>3. Connect via entity value</strong>:</p>
+<p>You can create a connection on the basis of a particular value(s) of an entity.</p>
 <p><img src="/assets/bot-builder-user-says/connection_entity_value.png" alt="Basis entity value"></p>
 <ul>
-<li>Here, you add the entity value and press the enter key on your keyboard. You can add multiple values for this entity.</li>
+<li>Here, you <strong>add the entity value</strong> and <strong>press the enter key</strong> on your keyboard. You can add multiple values for this entity.</li>
 </ul>
-<p><strong>3. Transition Basis a particular entity presence</strong></p>
-<p>When you’ve added an entity to a conversation, you can define the transition from the node with the entity to the next as only being possible if the user has input a response that falls within the entity. This is particularly helpful when you are setting a conversational flow in which a user needs to input something like a phone number or email ID. All values within the entities are accepted, but the bot will be able to determine whether or not the user has input the correct type of value (i.e. a 9 digit number or a complete email address).</p>
-<ul>
-<li>To set a connection based on an entity presence, click on the arrow connecting the two nodes you're looking to connect. This will take you to the following screen:</li>
-</ul>
-<p><img src="/assets/bot-builder-user-says/connection_entity_presence.png" alt="Basis entity presence"></p>
-<ul>
-<li>The entities from the first node should automatically appear in a drop down menu. Select from the list to complete the creation of a transition based on entity presence.</li>
-</ul>
+<blockquote>
+<p>The entities from the first node automatically appears in a drop down menu. Select from the list to complete the creation of a transition based on entity presence.</p>
+</blockquote>
 <h3><a class="anchor" aria-hidden="true" id="static-node-to-code-node-connection-transition"></a><a href="#static-node-to-code-node-connection-transition" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Static Node to Code Node Connection Transition</h3>
 <p>Transition from a static node to code node happens automatically once all the required entities are collected.</p>
 <p>However, if the static node is connected to another static node and has a user says or entity based transition and the condition for these transitions get satisfied then the transition will happen to the connnected static node and not the connected node.</p>
-<p><img src="/assets/bot-builder-connections/static-to-code.png" alt="Static-to-Code Connection"></p>
+<p><img src="https://user-images.githubusercontent.com/75118325/113380002-af485f80-9398-11eb-9541-0fe36787ce3a.gif" alt="s2c"></p>
 <h3><a class="anchor" aria-hidden="true" id="code-node-to-output-node-connection-transition"></a><a href="#code-node-to-output-node-connection-transition" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Code Node to Output Node Connection Transition</h3>
 <p>You can transition from a code node to any output node basis a set of rules/conditions applied on the output JSON from the code node.</p>
-<p><img src="/assets/bot-builder-connections/code-to-output.png" alt="Code-to-Output Connection"></p>
-<p><strong>1. Transition Basis Rules on Output JSON:</strong></p>
+<p><img src="https://user-images.githubusercontent.com/75118325/113381223-08fe5900-939c-11eb-93af-8e0534b48c23.gif" alt="c2o"></p>
+<p><strong>Transition Basis Rules on Output JSON:</strong></p>
 <p>You can apply a combination of rules combined by either <code>AND</code> or <code>OR</code> to traverse from one node to the other.</p>
 <p>You can add rules in the following way:</p>
 <ul>
@@ -132,35 +120,8 @@
 <li>You can add another rule using the <code>+ Add Condition</code> button from the top menu of the RHS window.</li>
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="output-node-to-static-node-connection-transition"></a><a href="#output-node-to-static-node-connection-transition" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Output Node to Static Node Connection Transition</h3>
-<p>You can transition from an output node to a static node based on the user input by using user says based transition or by an entity transition.</p>
-<p><strong>1. Transition Basis message input by user:</strong></p>
-<p>This is when a conversation moves from one node to another based on a particular keyword/phrase or set of keywords sent by a user.</p>
-<ul>
-<li>Create a connection fromt the parent node to the child node.</li>
-<li>Click on the connection linking the two nodes.</li>
-<li>Add the 'User Says' in the RHS screen shown below.</li>
-</ul>
-<p><img src="/assets/bot-builder-user-says/connection_user_message.png" alt="Output-to-Static Connection"></p>
-<p><strong>2. Transition Basis a particular entity value</strong></p>
-<p>(a.k.a. a Step Transition): The last type of transition that you can create is where a user may only move to the next node if a user inputs a specific value(s) from within an entity on a node.</p>
-<ul>
-<li><p>To set a step transition value, click the arrow between the two nodes for which you're creating a connection</p></li>
-<li><p>Select Step Transition Values, which will take you to the screen below</p></li>
-</ul>
-<p><img src="/assets/bot-builder-user-says/connection_entity_value.png" alt="Basis entity value"></p>
-<ul>
-<li>Here, you add the entity value and press the enter key on your keyboard. You can add multiple values for this entity.</li>
-</ul>
-<p><strong>3. Transition Basis a particular entity presence</strong></p>
-<p>When you’ve added an entity to a conversation, you can define the transition from the node with the entity to the next as only being possible if the user has input a response that falls within the entity. This is particularly helpful when you are setting a conversational flow in which a user needs to input something like a phone number or email ID. All values within the entities are accepted, but the bot will be able to determine whether or not the user has input the correct type of value (i.e. a 9 digit number or a complete email address).</p>
-<ul>
-<li>To set a connection based on an entity presence, click on the arrow connecting the two nodes you're looking to connect. This will take you to the following screen:</li>
-</ul>
-<p><img src="/assets/bot-builder-user-says/connection_entity_presence.png" alt="Basis entity presence"></p>
-<ul>
-<li>The entities from the first node should automatically appear in a drop down menu. Select from the list to complete the creation of a transition based on entity presence.</li>
-</ul>
-<blockquote>
+<p>You can transition from an output node to a static node based on User Says or Entities. This functions the same way as <strong>Static to Static Connection</strong>.</p>
+<h3><a class="anchor" aria-hidden="true" id="unsupported-connections"></a><a href="#unsupported-connections" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Unsupported Connections</h3>
 <p>Following are <strong>unsupported types of connection</strong>:</p>
 <ol>
 <li>Static Node to Output Node Connection Transition</li>
@@ -168,30 +129,16 @@
 <li>Output Node to Output Node Connection Transition</li>
 <li>Output Node to Code Node Connection Transition</li>
 </ol>
-</blockquote>
 <h3><a class="anchor" aria-hidden="true" id="connection-guidelines"></a><a href="#connection-guidelines" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Connection Guidelines</h3>
 <h4><a class="anchor" aria-hidden="true" id="when-should-you-add-a-connection"></a><a href="#when-should-you-add-a-connection" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>When should you add a connection?</em></h4>
 <ol>
 <li><p>If chat flow contains a conditional logic and you need to take action based on the user response or entity value</p>
 <p>For example: When you would like the user to select the preferred language before continuing with the chat flow.</p>
-<p><img src="/assets/bot-builder-user-says/add_connection_flow.png" alt="Conditional Chat Flow"></p></li>
+<p><img src="https://user-images.githubusercontent.com/75118325/113381568-ede01900-939c-11eb-8bc9-4efd8751f698.png" alt="image"></p></li>
 <li><p>If the chat contains a linear flow, but as we have a conditional logic for validation, split the logic into two nodes and transition to child node is done using dependent response or entity based transition.</p>
-<p>For example: When you want to validate a user’s phone number to ensure that it is a valid user before continuing with the char flow. <strong><em>_Enter Details _</em></strong> contains an integration function that validates user’s phone number and transition to the child node is done based on the response.</p>
-<p><img src="/assets/bot-builder-user-says/add_connection_linear.png" alt="Linear Chat Flow"></p></li>
+<p><img src="https://user-images.githubusercontent.com/75118325/113381643-1b2cc700-939d-11eb-8464-c6fcc8d6d09f.png" alt="image"></p></li>
 <li><p>Do not mark the Node as <strong>Context Clear Node</strong> if there is a connection to another Node on the basis of <strong>entity</strong>. As marking a Node as Context Clear Node clears out all the entity values collected till the present Node, the connection won't proceed further because the IVA will lose the information at the Context Clear Node.</p></li>
 </ol>
-<h4><a class="anchor" aria-hidden="true" id="when-should-you-have-an-incoming-connections-to-a-start-node"></a><a href="#when-should-you-have-an-incoming-connections-to-a-start-node" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>When should you have an incoming connections to a start node?</em></h4>
-<p>When user message on connection and on the independent response on the start node is different</p>
-<p>For example: When you would like to transition to the child based on single words such as voice or data.</p>
-<pre><code class="hljs">User says: I want to recharge
-
-Bot says: What would you like to recharge? Data plan or Voice plan?
-
-User says: voice
-
-Bot says: Sure! Let me go ahead and fetch the voice recharge plans
-</code></pre>
-<p>Adding single words like voice, data, recharge, plan or phrase like data plan, what is the process, how to get without any context around the word or phrase is a bad practise. It will cause conflicts and lead to a false response.</p>
 <h4><a class="anchor" aria-hidden="true" id="when-should-you-have-an-incoming-connections-to-a-non-start-node"></a><a href="#when-should-you-have-an-incoming-connections-to-a-non-start-node" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>When should you have an incoming connections to a non-start node?</em></h4>
 <p>Parent node connected to two child nodes and entity value based transition</p>
 <p>When user wants to apply for a loan. <strong><em>‘Lead Generation node’</em></strong> should be able to understand the users goal and guide user through loan application process  and collect the <em>phone_number</em> , <em>email</em>, <em>confirmation</em> entities. Check with the user if representative can call the user right away and save the users response in ‘<em>confirmation</em>’ entity. Use entity value based transition to traverse to the child node.</p>
@@ -242,7 +189,7 @@ Bot says: Sure! Let me go ahead and fetch the voice recharge plans
 <blockquote>
 <p><em>Warning</em>: Perils of self connected nodes - When the node is self connected with the purpose to retry the collection of user’s phone number. Phone number used under a different context will still lead the user to the self connected node.</p>
 </blockquote>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 4/14/2021</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/bot-builder/basic/chat-elements"><span class="arrow-prev">← </span><span>Chat Elements</span></a><a class="docs-next button" href="/bot-builder/basic/entities"><span>Entities</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Conversation Studio</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Smart Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Intelligent Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://docs.haptik.ai/ios-sdk/" class="footer-column-link">iOS SDK</a><a href="https://docs.haptik.ai/android-sdk/" class="footer-column-link">Android SDK</a><a href="https://docs.haptik.ai/web-sdk/" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/whatsapp/" class="footer-column-link">WhatsApp</a><a href="https://docs.haptik.ai/other/facebook" class="footer-column-link">Facebook</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Bot API</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Agent Chat Tool</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2021 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 4/16/2021</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/bot-builder/basic/chat-elements"><span class="arrow-prev">← </span><span>Chat Elements</span></a><a class="docs-next button" href="/bot-builder/basic/entities"><span>Entities</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><div class="footer"><a href="https://haptik.ai/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/image_0.png" alt="Haptik Inc." width="100"/></a><div class="footer-columns"><div class="footer-column"><div class="footer-column-title">Tools</div><div class="footer-column-links"><a href="https://docs.haptik.ai/bot-builder/basic/introduction" class="footer-column-link">Conversation Studio</a><a href="https://docs.haptik.ai/agent-chat/" class="footer-column-link">Smart Agent Chat</a><a href="https://docs.haptik.ai/bot-analytics/" class="footer-column-link">Intelligent Analytics</a></div></div><div class="footer-column"><div class="footer-column-title">Integrations</div><div class="footer-column-links"><a href="https://docs.haptik.ai/ios-sdk/" class="footer-column-link">iOS SDK</a><a href="https://docs.haptik.ai/android-sdk/" class="footer-column-link">Android SDK</a><a href="https://docs.haptik.ai/web-sdk/" class="footer-column-link">Web SDK</a><a href="https://docs.haptik.ai/whatsapp/" class="footer-column-link">WhatsApp</a><a href="https://docs.haptik.ai/other/facebook" class="footer-column-link">Facebook</a><a href="https://docs.haptik.ai/webhooks/" class="footer-column-link">Bot API</a></div></div><div class="footer-column"><div class="footer-column-title">Others</div><div class="footer-column-links"><a href="https://docs.haptik.ai/hsl/" class="footer-column-link">HSL</a><a href="https://docs.haptik.ai/other/sla" class="footer-column-link">SLA</a><a href="https://docs.haptik.ai/external-chat-tool/" class="footer-column-link">External Agent Chat Tool</a></div></div></div><div class="footer-copyright"></div></div><section class="copyright">Copyright © 2021 Haptik Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

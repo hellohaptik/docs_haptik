@@ -112,30 +112,18 @@ Test variations with negative tone within the bot flow.
 * Check if the chat gets assigned to an agent and if you are getting reponses on the bot.
 * Check if agent is able to close the chat.
 
-## 11. Run the Bot QA Tool:
-
-* Haptik's Bot QA Tool makes regression testing of a bot scaleable and thus saves time. To use the Bot QA tool, read [**here**](https://docs.haptik.ai/bot-builder/basic/bot-qa-tool).
-
-## Regression testing before go live:
-
-* Retest all the issue which you were facing and were resolved.
-* High level sanity of IVA flows for impact of fixes.
-* High level sanity check for correct intent detection.
-
 ## Preparing Test cases
 
-Test cases preparation guidelines and sample template :
+Test cases preparation guidelines and sample template:
 
-Test cases should cover:
+1. All the positive functional flows of IVA
+- Verify all possible flows in IVA
+- Verify all the bot’s invocation points
+- Verify UI elements like carousels, buttons, quick replies, chat elements, dropdowns, location pickers, attachments, web views, forms, message copies, emojis(WhatsApp IVA)
+- Verify user authentication e.g: OTP, PAN etc
 
-1. All the positive functional flows of IVA. 
-Verify all possible flows in IVA 
-Verify all the bot’s invocation points
-Verify UI elements like carousels, buttons, quick replies, chat elements, dropdowns, location pickers, attachments, web views, forms, message copies, emojis(WhatsApp IVA)
-Verify user authentication e.g: OTP, PAN etc
-
-2. Negative cases and validations. 
-Bot break scenarios (when out of scope query is asked or invalid inputs given by the user)
-Verify the outro messages are clear and meaningful to the user
+2. Negative cases and validations
+- Bot break scenarios (when out of scope query is asked or invalid inputs given by the user)
+- Verify the outro messages are clear and meaningful to the user
 
 The following is a file containing sample test cases, click [**here**](https://github.com/hellohaptik/docs_haptik/files/6292796/Test.cases.Template._.Dummy.ISP.IVA.pdf) to download.

@@ -105,6 +105,14 @@ Open the [**Business Manager**](https://staging.hellohaptik.com/mogambo/#/busine
 
 ![image](https://user-images.githubusercontent.com/75118325/114771942-d0db1b00-9d8a-11eb-8936-95292b09dd71.png)
 
-## Step 10: Test the connection
+## Step 10: Add Taskbox (optional)
 
-After the setup and configuration, you can start testing the bot and the agent connection.
+You can add a Taskbox which provides a default option for the users select from. The process to add a taskbox is mentioned [**here**](https://docs.haptik.ai/bot-builder/basic/business#taskbox).
+
+## Step 11: Test the connection
+
+After the setup and configuration, you can test the connection between bot and the agent.
+
+## Step 12: Quality Assessment
+
+Follow our [**Quality Assessment**](https://docs.haptik.ai/bot-builder/basic/testing-introduction) section to test the bot.

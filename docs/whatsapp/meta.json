@@ -15,8 +15,7 @@
             "disallowed-notification-types"
         ],
         "Miscellaneous": [
-            "getting-user-opt-ins",
-            "business-setup"
+            "getting-user-opt-ins"
         ]
     }
 }

@@ -1,9 +1,8 @@
 ---
-title: Sending Notifications
+title: Setup
 ---
 
 As explained in the `Types of Conversations` section, you can have the bot initiate a conversation with the user. This is done by sending them a pre-approved message template.
-
 
 ## Highly Structured Message (HSM) Templates
 The templates that can be sent to WhatsApp users are called Highly Structured Messages. In short they are often referred to as HSMs.
@@ -30,6 +29,70 @@ The steps involved in creating a HSM template are:
 5) Once satisfied, click on submit to submit the HSM for approval.
 
 > **NOTE:** Once approved, the HSM content cannot be edited.
+
+### Adding buttons to HSM templates
+
+WhatsApp allows buttons to be added to the HSM template. The `Buttons` section is located at the bottom of the HSM page (assuming that you are either creating a new HSM or editing an existing one). There are two broad categories of buttons that you can add to your template:
+
+1. Quick Reply
+2. Call To Action
+
+**Quick Reply:** <br/>
+An HSM template can have at the most 3 quick reply buttons. Quick Reply buttons as their name implies, are buttons which when tapped-on by the user, send the title of those buttons as a message from that user. _(You can even provide a payload to override the message that gets sent back on button click. More on that later, in sending HSM Templates section)_
+
+> Known limitations:
+> - At most 3 quick reply Buttons
+> - Text of Each button can be no more than 20 characters
+
+_Steps to add Quick Reply buttons:_
+- In the `Buttons` section, click the dropdown which by default is set to `None` and choose `Quick Reply`
+- A new input field titled `Button Text` will appear
+- Enter the text which is to be shown in the Quick Reply
+- To add more buttons, click on `Add Another Button` and repeat the above step
+- Once you save your HSM template, this configuration gets stored along with it.
+
+
+- ![Quick Reply buttons in HSM template](assets/hsm_buttons/quick-replies.png) <br/> _Quick Reply buttons in HSM template builder_ <br/><br/>
+
+
+- ![Quick Reply buttons in users Whatsapp Messenger](assets/hsm_buttons/whatsapp_quick-replies.jpg) <br/> _Quick Reply buttons in users Whatsapp Messenger_
+
+<br/>
+
+**Call To Action:** <br/>
+A Call To Action button as the name implies, is a button which when clicked by the user would cause a certain action to be called or performed right on the user's device.
+
+Call To Action buttons are further divided into two types:-
+- Call Phone number
+- Visit Website
+
+> Known limitations:
+> - Max two buttons i.e. one of each type (Call Phone Number or Visit Website)
+> - Text of Each button can be no more than 20 characters
+
+_Steps to add Call To Action buttons:_
+- In the `Buttons` section, click the dropdown which by default is set to `None` and choose `Call To Action`.
+
+
+- _Call Phone Number_:
+    - This button takes a phone number with country code and text to display on the button as parameters and when sent to the user, this button on click will actually initiate a phone call to the said number.
+    - When `Call Phone Number` is selected in `Type of Action` you get the following columns adjacent to it viz. `Button Text`, `Country`, `Phone Number`.
+
+
+- _Visit Website_:
+    - This button takes a website URL and text to display on the button as parameters and when sent to the user, this button on click will actually launch the website in the user's phone.
+    - When `Visit Website` is selected in `Type of Action` you get the following columns adjacent to it viz. `Button Text`, `URL Type`, `Website URL`.
+    - `URL Type` is a drop down in itself which has two options viz. `Static` and `Dynamic`
+    - A `Static` URL is self explanatory. It is basically a hardcoded website URL.
+    - A `Dynamic` URL is a URL that will have a parameter which will be suffixed to it to form the final URL. <br/> For example, if the URL entered for Dynamic field is `https://<sitedomain>.com`, then while sending HSM, a paramter will have to be sent which will be suffixed to this URL. Thus, if you send the parameter as `1234` then when the user receives this HSM and clicks on this button, the URL launched would be `https://<sitedomain>.com/1234`.
+    - Do note that sending the parameter for `Dynamic` URL in the HSM while sending request is mandatory.
+
+
+- ![Call To Action buttons in HSM template](assets/hsm_buttons/call-to-action-button.png) <br/> _Call To Action buttons in HSM template builder_ <br/><br/>
+
+
+- ![Call To Action buttons in user's WhatsApp Messenger](assets/hsm_buttons/whatsapp_call-to-action.jpg) <br/> _Call To Action buttons in user's WhatsApp Messenger_
+
 
 ## Sending a HSM as a notification
 After you have submitted your HSM and approval has been granted, you can start sending the HSM as notifications to opted-in users.
@@ -97,9 +160,9 @@ Details regarding the other fields in the body can be found [here](https://devel
 
 Acceptable formats for phone number can be found [here](https://developers.facebook.com/docs/whatsapp/api/contacts#phone).
 
-## Sending a media HSM
+## Sending a Media HSM
 
-Other than text based HSMs to our Whatsapp end users, you can send Media HSMs as well.
+You can not only send text based HSMs to your WhatsApp end users, but also Media HSMs, Button HSMs.
 
 Checkout the examples below:
 
@@ -275,71 +338,6 @@ Note: The above structure is for reference only and will change based on the way
 
 > Only Images, PDF, MP3 and MP4 files are supported.
 
-
-## Adding buttons to HSM templates
-
-WhatsApp allows buttons to be added to the HSM template. The `Buttons` section is located at the bottom of the HSM page (assuming that you are either creating a new HSM or editing an existing one). There are two broad categories of buttons that you can add to your template:
-
-1. Quick Reply
-2. Call To Action
-
-**Quick Reply:** <br/>
-An HSM template can have at the most 3 quick reply buttons. Quick Reply buttons as their name implies, are buttons which when tapped-on by the user, send the title of those buttons as a message from that user. _(You can even provide a payload to override the message that gets sent back on button click. More on that later, in sending HSM Templates section)_
-
-> Known limitations:
-> - At most 3 quick reply Buttons
-> - Text of Each button can be no more than 20 characters
-
-_Steps to add Quick Reply buttons:_
-- In the `Buttons` section, click the dropdown which by default is set to `None` and choose `Quick Reply`
-- A new input field titled `Button Text` will appear
-- Enter the text which is to be shown in the Quick Reply
-- To add more buttons, click on `Add Another Button` and repeat the above step
-- Once you save your HSM template, this configuration gets stored along with it.
-
-
-- ![Quick Reply buttons in HSM template](assets/hsm_buttons/quick-replies.png) <br/> _Quick Reply buttons in HSM template builder_ <br/><br/>
-
-
-- ![Quick Reply buttons in users Whatsapp Messenger](assets/hsm_buttons/whatsapp_quick-replies.jpg) <br/> _Quick Reply buttons in users Whatsapp Messenger_
-
-<br/>
-
-**Call To Action:** <br/>
-A Call To Action button as the name implies, is a button which when clicked by the user would cause a certain action to be called or performed right on the user's device.
-
-Call To Action buttons are further divided into two types:-
-- Call Phone number
-- Visit Website
-
-> Known limitations:
-> - Max two buttons i.e. one of each type (Call Phone Number or Visit Website)
-> - Text of Each button can be no more than 20 characters
-
-_Steps to add Call To Action buttons:_
-- In the `Buttons` section, click the dropdown which by default is set to `None` and choose `Call To Action`.
-
-
-- _Call Phone Number_:
-    - This button takes a phone number with country code and text to display on the button as parameters and when sent to the user, this button on click will actually initiate a phone call to the said number.
-    - When `Call Phone Number` is selected in `Type of Action` you get the following columns adjacent to it viz. `Button Text`, `Country`, `Phone Number`.
-
-
-- _Visit Website_:
-    - This button takes a website URL and text to display on the button as parameters and when sent to the user, this button on click will actually launch the website in the user's phone.
-    - When `Visit Website` is selected in `Type of Action` you get the following columns adjacent to it viz. `Button Text`, `URL Type`, `Website URL`.
-    - `URL Type` is a drop down in itself which has two options viz. `Static` and `Dynamic`
-    - A `Static` URL is self explanatory. It is basically a hardcoded website URL.
-    - A `Dynamic` URL is a URL that will have a parameter which will be suffixed to it to form the final URL. <br/> For example, if the URL entered for Dynamic field is `https://<sitedomain>.com`, then while sending HSM, a paramter will have to be sent which will be suffixed to this URL. Thus, if you send the parameter as `1234` then when the user receives this HSM and clicks on this button, the URL launched would be `https://<sitedomain>.com/1234`.
-    - Do note that sending the parameter for `Dynamic` URL in the HSM while sending request is mandatory.
-
-
-- ![Call To Action buttons in HSM template](assets/hsm_buttons/call-to-action-button.png) <br/> _Call To Action buttons in HSM template builder_ <br/><br/>
-
-
-- ![Call To Action buttons in user's WhatsApp Messenger](assets/hsm_buttons/whatsapp_call-to-action.jpg) <br/> _Call To Action buttons in user's WhatsApp Messenger_
-
-
 ## Sending HSMs with Buttons
 
 [Link to the official documentation.](https://developers.facebook.com/docs/whatsapp/api/messages/message-templates/interactive-message-templates)
@@ -390,8 +388,6 @@ curl -X POST <base_url>/whatsapp/notification/v2/ \
 }
 '
 ```
-
-
 **Call To Action:**
 
 - Sending a HSM template with Call To Action buttons is similar to sending any other HSM template.

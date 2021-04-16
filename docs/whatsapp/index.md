@@ -75,7 +75,7 @@ To know more about HSMs, read [**here**](https://docs.haptik.ai/whatsapp/sending
 
 <hr>
 
-## Share WhatsApp Bot
+## Share your WhatsApp Bot
 
 If you want to share the WhatsApp IVA chat link on website (or marketing content) wherein the user clicks on it, and it directly opens the whatsapp conversation with the IVA on their device - 
 On the website, you can add a link with your WhatsApp number (e.g. 1XXXXXXXXXX) and the default text as query parameter (e.g. I'm intereseted in your car sale) as follows:

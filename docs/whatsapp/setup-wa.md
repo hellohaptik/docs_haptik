@@ -2,22 +2,21 @@
 title: Setting up WhatsApp Account
 ---
 
-## Business and Technical Setup
-
 Before we start WhatsApp integration we need to get the **business** and **phone number** approved. The steps involved are:
 
 - **Step 1: Apply for access:** Whatsapp Business APIs are only available to approved businesses. Businesses can apply for approval by filling a questionnaire and submit to us and we will get the business approval as a WhatsApp partner.
+
 - **Step 2: Procure a number:** After getting approval, the next step is to connect a number. The number should be a fresh number with no prior WhatsApp account associated with it. The number can be a mobile number, landline number, or even an IVR number. The only restriction is that it should also be capable of either receiving an **SMS** or a **Call** for OTP verification.
 
 Because of end-to-end encryption requirements, WhatsApp requires that business API of any enterprise business to be hosted as a separate service. Whatsapp provides a set of Docker images with the business API setup which will be setup end to end by Haptik. Production level setup with HA, alerting, etc. will be done.
 
 Post setup of the WhatsApp system, the number will be verified using a certificate from **Facebook Business manager** & **Two Factor Authentication Pin**. The number will be registered on the WhatsApp system by Haptik. (Number needs to be online to receive OTP)
 
-There are rate limits on a WhatsApp standalone setup. It is around 20 messages/sec. So if the client has a high volume we might have to setup a multi-connect cluster to handle the load.
+There are rate limits on a WhatsApp standalone setup. It is around 20 messages/sec. So if you have a high volume you might have to setup a multi-connect cluster to handle the load.
 
-**Why do we need a setup?**
-
-A WhatsApp business account lets your business use the WhatsApp Business API to communicate directly with your customers.
+> **Why do we need a setup?**
+> 
+> A WhatsApp business account lets your business use the WhatsApp Business API to communicate directly with your customers.
 
 ### Step 1: Create a Facebook Business Manager
 
@@ -67,7 +66,7 @@ To find your Facebook Business Manager ID -
 
 Haptik can now create your WhatsApp Business Account using your **Legal Business Name** and **Facebook Business Manager ID**.
 
-### Step 5: Business needs to Approve request for Haptik
+### Step 5: Business needs to approve request for Haptik
 
 Once the WhatsApp account is created, you will have to accept the **Invitation from Jio Haptik** to send messages on your behalf on the business. 
 Please follow the steps to approve the request:
@@ -83,4 +82,4 @@ The account will not be approved if your Business Manager is not verified.
 
 ![image](https://user-images.githubusercontent.com/75118325/114120866-fb505280-990a-11eb-8f60-2c86641df10c.png)
 
-Once the setup is complete, we will now set how to deploy the using using Haptik Platform.
+Once the setup is complete, we will now see how to deploy the using Haptik Platform.

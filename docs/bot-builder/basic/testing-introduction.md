@@ -49,8 +49,8 @@ Example: If sentence is "Benefits of SIP", then test your bot on:
 * Benefits of bvdfbv fjdb (Phrase + Gibberish/noise)
 * cricket benefits (Gibberish/noise + Phrase)
 * benefits (Phrase)
-
-### How to examine the Test Set?
+ 
+### **How to examine the Test Set? **
 
 #### 1. Using Test and Debug
 
@@ -76,7 +76,7 @@ This information is useful to understand why a bot is behaving in a certain way 
 
 > Training data is tested during the development phase of the lifecycle. This ensures whether the bot is able to understand user's query and if the bot is taking the user through the right conversation flow.
 
-### 2. ORACLE Feedback Module
+#### 2. ORACLE Feedback Module
 
 ORACLE feedback module aids is providing quality training data to the bot. The User Says section for every Start node is crucial for the bot to understand user's query. ORACLE feedback module runs through all the User Says and provides feedback to the bot builder to improve the quality of provided training data.
 
@@ -86,7 +86,7 @@ To know more about ORACLE feedback modle, click [**here**](https://docs.haptik.a
 
 ## Functional testing
 
-All the integrated APIs should go through testing phase to ensure their proper functioning. If the APIs start to fail on production, the bot gives bot break responses. 
+All the conversational flows should go through testing phase to ensure their proper functioning. If the APIs start to fail on production, the bot gives bot break responses. 
 
 We have prepared a quick guide containing all the checkpoints that needs to be assessed before taking the bot to production. To read the guide, click [**here**](https://docs.haptik.ai/bot-builder/basic/qa-best-practices).
 

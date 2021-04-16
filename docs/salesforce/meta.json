@@ -3,11 +3,11 @@
         "Getting Started": [
             "index"
         ],
-        "Technical Setup": [
+        "Configuration": [
           "setup-laa",
           "setup-ti"
         ],
-        "Using User Details": [
+        "Implementation": [
           "build-laa",
           "build-integration"
         ]

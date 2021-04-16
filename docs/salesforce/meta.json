@@ -1,0 +1,15 @@
+{
+    "sidebar": {
+        "Getting Started": [
+            "index"
+        ],
+        "Configuration": [
+          "setup-laa",
+          "setup-ti"
+        ],
+        "Implementation": [
+          "build-laa",
+          "build-integration"
+        ]
+    }
+}

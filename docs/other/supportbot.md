@@ -38,13 +38,29 @@ When you have an issue and you want to raise an issue you will have to provide t
 
 - **Screenshot**: You can provide the screenshot of the issue you are currently facing
 
-- **Stage of IVA**: You can describe the state your IVA is in i.e. already live or in the development phase or soon to go live
+- **Severity of the issue**: You can describe the severity/impact caused by the issue
+
+  - There are 4 levels of severity: 
+  
+    - **Blocker:** indicates the issue has caused severe impact on the functioning
+    
+        Example - Chats not getting assigned to agents.
+        
+    - **High:** indicates that the issue has caused major impact on the functioning
+    
+        Example - Bot is not getting transferred to production
+        
+    - **Medium:** - indicates the issue has cause a minor impact on the the functioning
+    
+        Example - Business changes are not reflecting on the bot
+        
+    - **Low:** - indicates the issue exists but does not disrupt the functioning
+    
+        Example - Wrong entity is getting detected
 
 - **Bot link or Chat Link**: You can provide the bot link or chat link related to the issue you are currently facing
 
-- **Date and Time**: You can mention the date and time of the issue you are currently facing
-
-Once you have provided the above details, you will receive a confirmation message about the ticket on the IVA.
+Once you have provided the above details, you will receive a confirmation message about the ticket on the IVA. We will assign a priority to the issue depending on the severity.
 
 ### 2. Submit a feature request
 
@@ -52,6 +68,6 @@ You can choose this icon when you want to raise feature requests for the Platfor
 
 If your request is not listed on the Roadmap, you can create a new one by clicking on the **Submit Feedback button** on the top right corner.
 
-![SupportBot4](assets/PS4.png)
+![image](https://user-images.githubusercontent.com/75118325/115733559-a1d63200-a3a6-11eb-96ab-332b69f9e9bc.png)
 
 > Note: You can also make requests to improve the Help Section on the IVA itself.

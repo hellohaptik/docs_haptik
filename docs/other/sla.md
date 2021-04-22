@@ -30,13 +30,52 @@ The SLA does not apply to
 Technical support is provided for the Haptik Service offering during the subscription period and is not
 available as a separate offering.
 
-| Severity | Severity Definition                                                                                                                                                                                                                                                                                                      | Response Time Objectives  | Response Time Coverage |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------- | ---------------------- |
-| 1        | **Critical business impact/service down**: Business critical functionality is inoperable or critical interface has failed. This usually applies to the production environment and indicates an inability to access services resulting in a critical impact on operations. This condition requires an immediate solution. | Within 2 Hours            | 24x7                   |
-| 2        | **Significant business impact**: A service business feature or function of the service that was previously working is severely restricted in its use.                                                                                                                                                                    | Within 2-6 Business Hours | M-F Business Hours     |
-| 3        | **Minor business impact**: Indicates that the core service or functionality of the bot is usable and the issue does not have a critical impact on operations.                                                                                                                                                            | Within 1-3 Business Days  | M-F Business Hours     |
-| 4        | **Minimal business impact**: This may be an inquiry or non-technical request or any other minor issue or improvement.                                                                                                                                                                                                    | Within 5-10 Business Days | M-F Business Hours     |
-
+<table>
+  <th>Severity</th>
+  <th>Support Request</th>
+  <th>Response Time</th>
+  
+  <tr>
+  <td rowspan="2">S0 <b>(Blocker)</b></td>
+  <td><b>Criticial Functionality has stopped working, serious business impact</b></td>
+  <td rowspan="2">Within 1 hour (24x7)</td>
+  </tr>
+  
+  <tr>
+  <td><i>Example:</i> <br> - Bot Response getting delayed by 20 seconds <br> - Chats are not getting assigned to agents</td>
+  </tr>
+  
+  <tr>
+  <td rowspan="2">S1 <b>(High)</b></td>
+  <td><b>Major functionality has stopped working, moderate business impact</b></td>
+  <td rowspan="2">Within 1 hour (Business Hours)</td>
+  </tr>
+  
+  <tr>
+  <td><i>Example:</i> <br> - Analytics report not getting downloaded <br> - Bot transfer not working as expected </td>
+  </tr>
+  
+  <tr>
+  <td rowspan="2">S2 <b>(Medium)</b></td>
+  <td><b>Minor functionality has stopped working, limited business impact</b></td>
+  <td rowspan="2">Within 4 hours (Business Hours)</td>
+  </tr>
+  
+  <tr>
+  <td><i>Example:</i> <br> - UI issues on the tool <br> - Business changes not reflecting on the bot on Staging </td>
+  </tr>
+  
+  <tr>
+  <td rowspan="2">S3 <b>(Low)</b></td>
+  <td><b>Issue with the setup, no business impact</b></td>
+  <td rowspan="2">Within 4 hours (Business Hours)</td>
+  </tr>
+  
+  <tr>
+  <td><i>Example:</i> <br> - Entities not getting captured on bot <br> - Test bot not giving Logs </td>
+  </tr>
+  
+ </table>
 
 ## Change Requests
 

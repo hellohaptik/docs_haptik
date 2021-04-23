@@ -1,6 +1,18 @@
 ---
-title: Support SLA
+title: Support
 ---
+
+We all need support while using a product. When a user has issues, they can reach out to our support system to get their resolution. The issues could be of varied types from product usage, to technical support to other things.
+
+**So, how do we reach out to Haptik Support?**
+Everyone can reach out to Haptik’s Support by using either of this -
+- Dropping a mail to **support@haptik.ai**
+- Reaching out to Support Bot that resides within the Platform under the name of **Help**.
+
+**When should we reach out to Haptik Support?**
+Facing any type of problem with the platform.
+
+Support Bot captures every detail of the issue along with the severity.
 
 ## Severity & Response Time
 

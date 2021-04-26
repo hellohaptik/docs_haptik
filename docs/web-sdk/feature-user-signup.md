@@ -133,50 +133,50 @@ A custom signup example. Read the full documentation in the custom signup sectio
 
 ```html
 <!DOCTYPE html>
-  <html>
-  <head>
+<html>
+<head>
     <title>Haptik JS SDK Custom Sign Up Demo</title>
     <meta charset="UTF-8">
     <meta content="width=device-width; initial-scale=1.0;" name="viewport">
-    </style>
-  </head>
-  
-  <body>
+</head>
+<body>
     <div style="width: 100%; padding-top: 100px;">
-      <div style="max-width: 7000px; margin: 0 auto; padding: 0 40px; text-align: left;">
-        <h4>Haptik JS SDK</h4>
-      </div>
+        <div style="max-width: 7000px; margin: 0 auto; padding: 0 40px; text-align: left;">
+            <h4>Haptik JS SDK</h4>
+        </div>
     </div>
-  </body>
-  
-  <script type="text/javascript">
-  window.haptikInitSettings = {
-    'business-id': '<provided by haptik>',
-    'client-id': '<provided by haptik>',
-    'base-url': '<provided by haptik>',
-    'signup-type': 'my-custom-signup-type',
-  };
-  </script>
-  <script type="text/javascript" charset="UTF-8" src="https://toolassets.haptikapi.com/platform/javascript-xdk/production/loader.js"></script>
-  <script>
-  document.addEventListener('haptik_sdk', function() {
-    HaptikSDK.signup({
-      username: 'Firstname Lastname',
-      auth_id: '9955511100',
-      auth_code: 'XXXXXXXXXXXX',
-      mobile_no: '0123456789',
-      email: 'demo@gmail.com',
-    }, function(success,error) {
-      if (success) {
-        console.log('SIGNUP REQUEST SUCCEEDED!');
-      } else {
-        console.log('ERROR:',error);
-      }
+</body>
+<script type="text/javascript">
+    window.haptikInitSettings = {
+        "business-id": <View Credentials>, # Find the documentation link below to know what View Credentials is
+        "client-id": <View Credentials>,   # Find the documentation link below to know what View Credentials is
+        "base-url": "https://staging.hellohaptik.com/",
+        'signup-type': 'third_party'
+    };
+</script>
+<script type="text/javascript" charset="UTF-8"
+    src="https://toolassets.haptikapi.com/platform/javascript-xdk/production/loader.js"></script>
+<script>
+    document.addEventListener('haptik_sdk', function () {
+        HaptikSDK.signup({
+            username: 'John Doe',
+            auth_id: '890xxxxx',
+            auth_code: 'xxxxxxx',
+            mobile_no: '9123456789',
+            email: 'demo@gmail.com',
+            custom_data: { demo: 'demo' }
+        }, function (success, error, data) {
+            if (success) {
+                console.log('SIGNUP REQUEST SUCCEEDED!', data);
+            } else {
+                console.log('ERROR:', error);
+            }
+        });
     });
-  });
-  </script>
-  </html>
+</script>
+</html>
 ```
+> Read this document to know [**View Credentails**](https://docs.haptik.ai/bot-builder/basic/sharebot#what-does-the-share-option-do).
 
 ## **Expiring Tokens**
 

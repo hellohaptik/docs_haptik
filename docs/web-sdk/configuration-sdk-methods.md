@@ -41,7 +41,7 @@ Note: Using other listeners like `window.onload` or `document.onload` will lead 
 
 ### `destroy()`
 
-*Unmount the SDK and remove it from the page completely.*
+*When there are 2 SDKs (one for guest user and another for logged in user) adding destroy() will clear out all the information from the previous instance (bot one) to load the seond bot*
 
 **Params: <None>**
 

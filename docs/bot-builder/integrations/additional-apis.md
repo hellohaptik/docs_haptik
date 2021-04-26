@@ -531,3 +531,5 @@ curl -X GET \
 **2.Handle textual content** - Everytime we want to change bot's response, a code change is required. To avoid that pain, we can use **key value stores**. Any person with zero to little tech knowledge can change bot response from key value store (with GUI) by updating the message copy corresponding to that unique message key or ID. This message key can be shared with the developer and fetch the response using that key.
 
 **3. HSLs**  - Haptik defines a superset of UI elements that are available across multiple platforms. These UI elements are then converted to their platform equivalent (js-sdk, android, ios, facebook-messenger, etc..) if they are not available on that specific platform. Eg. Forms are converted to quick replies on the Facebook platform and collected over free form. [for more detail read here](https://docs.haptik.ai/hsl/)
+
+**4. Calling the API** - There is no limit to the number of calls that you can make to the APIs. However, if Haptik detects a DDOS attack (100-200 calls/sec) then Haptik will block your requests, The recommended rate at which you can call the API is around a max of 100 Calls/minute. 

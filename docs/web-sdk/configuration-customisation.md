@@ -23,12 +23,6 @@ The primary colour used throughout the SDK. This should ideally be the same as y
 
 **default: #00000**
 
-### `font-size`
-
-The base font size used throughout the SDK. It is recommended to leave this unchanged.
-
-**default: 16px**
-
 ### `typography`
 
 The font family used throughout the SDK. It must be a google font. You can see available fonts here: [https://fonts.google.com/](https://fonts.google.com/)
@@ -167,6 +161,8 @@ This setting governs the initial view of the SDK. Supporting use cases where the
 
 **default: Default**
 
+_Currently `"mode": "fsm"` is not supported on IVA with custom signup._
+
 ## Feature Settings
 > Settings that primarily disable or enable features in the SDK.
 
@@ -200,13 +196,6 @@ The SDK supports both voice and text base conversations. This setting can set th
 
 ## Text Settings
 > Settings that primarily alter the text/content of the SDK
-
-### `header-text`
-
-The text that's displayed on the chat header and the intro screen for first time users.
-![](assets/header-text.png)
-
-**default: Haptik**
 
 ### `composer-placeholder`
 
@@ -298,6 +287,8 @@ Code of language you want to open bot with. For eg `en`, `hi`. (Optional). We su
 Hides the cross button so that user is unable to close the chat window. This is useful when building experiences with custom chat buttons and other customised UI elements.
 
 **default: false**
+
+_The user will be slightly able to see the close button but they won't be able to click on the button._
 
 ### `no-chat-bubble`
 

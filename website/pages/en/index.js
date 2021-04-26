@@ -131,9 +131,9 @@ module.exports = () => (
           ctaLink: '/gbm',
         },
         {
-          title: 'Salesforce',
+          title: 'Salesforce Service Cloud Integration',
           description:
-            'Documentation to help you build conversational experiences on Salesforce',
+            'Documentation to help you build conversational experiences on Salesforce Service Cloud',
           ctaText: 'Get Started',
           ctaLink: '/salesforce',
         },

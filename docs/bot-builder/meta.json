@@ -67,9 +67,7 @@
 		],
 		"Advanced": [
 			"advanced/integrating-webviews-into-sdk",
-			"advanced/integrating-with-external-bot"
-		],
-		"Webhooks": [
+			"advanced/integrating-with-external-bot",
 			"integrations/additional-apis"
 		],
 		"Miscellaneous": [

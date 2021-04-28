@@ -43,18 +43,26 @@ class Footer extends React.Component {
               },
             ])}
             {this.renderFooterColumn('Integrations', [
+              { title: 'Web SDK', url: 'https://docs.haptik.ai/web-sdk/' },
+              { title: 'WhatsApp', url: 'https://docs.haptik.ai/whatsapp/' },
+              {
+                title: 'Facebook',
+                url: 'https://docs.haptik.ai/facebook/',
+              },
+              {
+                title: 'Google Business Messages',
+                url: 'https://docs.haptik.ai/gbm/',
+              },
+              {
+                title: 'Salesforce Service Cloud',
+                url: 'https://docs.haptik.ai/salesforce/',
+              },
+              { title: 'Bot API', url: 'https://docs.haptik.ai/webhooks/' },
               { title: 'iOS SDK', url: 'https://docs.haptik.ai/ios-sdk/' },
               {
                 title: 'Android SDK',
                 url: 'https://docs.haptik.ai/android-sdk/',
               },
-              { title: 'Web SDK', url: 'https://docs.haptik.ai/web-sdk/' },
-              { title: 'WhatsApp', url: 'https://docs.haptik.ai/whatsapp/' },
-              {
-                title: 'Facebook',
-                url: 'https://docs.haptik.ai/other/facebook',
-              },
-              { title: 'Bot API', url: 'https://docs.haptik.ai/webhooks/' },
             ])}
             {this.renderFooterColumn('Others', [
               { title: 'HSL', url: 'https://docs.haptik.ai/hsl/' },

@@ -1,3 +1,8 @@
+---
+title: Introduction
+id: index
+---
+
 Zendesk is a service-first CRM company that builds software designed to improve customer relationships. Our software is powerful and flexible and scales to meet the needs of any business.
 
 The Zendesk Messaging Bot Partner Program is a new initiative at Zendesk to help businesses deliver bot integrations into Zendesk Suite. Any business opting for the program will have their integration listed on [**Sunshine Conversations Marketplace**](https://app.smooch.io/integrations/) as part of the Switchboard API launch.

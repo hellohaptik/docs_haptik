@@ -1,0 +1,14 @@
+{
+    "sidebar": {
+        "Getting Started": [
+            "index"
+        ],
+        "Zendesk and Sunshine Integration": [
+        	"sunshine",
+        ],
+        "Zendesk Messaging": [
+            "zenchat"
+        ]
+    }
+}
+

@@ -18,7 +18,7 @@ Image smart action is used to share an image with the user. The agent can drag a
 
 ## Attachment Smart Action
 
-Attachment smart action is used to share .pdf, .docx files with the user. The agent can drag and drop the file on the pop-up that opens on clicking this smart action. You can also add a custom text for the user here. Now, click *Save* and then send it to the user.
+Attachment smart action is used to share .pdf files with the user. The agent can drag and drop the file on the pop-up that opens on clicking this smart action. You can also add a custom text for the user here. Now, click *Save* and then send it to the user.
 
 ## External Link Smart Action
 

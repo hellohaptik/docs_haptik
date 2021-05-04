@@ -82,4 +82,7 @@ On the website, you can add a link with your WhatsApp number (e.g. 1XXXXXXXXXX) 
 
 Clicking on it will redirect the user to the WhatsApp chat window for your number.
 
+> Add the entire number i.e. including the country code.
+> For example, in case of Indian number the link will be similar to `https://wa.me/918899xxxxxx?text=Hi`
+
 You can read more about sharing WhatsApp link, [**here**](https://faq.whatsapp.com/general/chats/how-to-use-click-to-chat/).

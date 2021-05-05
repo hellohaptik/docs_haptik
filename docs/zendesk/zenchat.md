@@ -19,13 +19,16 @@ Click on **Add API client**. Here, provide the following details -
 * **Client Name**
 * **Company Name**
 * **Redirect URLs**
+
   * Here, provide the following link -
   
-   `https://staging-messenger.haptikapi.com/third_party_integrations/v1/zendesk_live_chat/generate_token/<BUSINESS_ID>`
+   `https://<BASE_URL>/third_party_integrations/v1/zendesk_live_chat/generate_token/<BUSINESS_ID>`
     * Replace the <BUSINESS_ID> with the bots business id. To know how to get the business id for your bot, click [**here**](https://docs.haptik.ai/bot-builder/basic/sharebot#what-does-the-share-option-do).
+    * Haptik will provide the <BASE_URL>.
+    
     * The URL would resemble this format - 
     
-    `https://staging-messenger.haptikapi.com/third_party_integrations/v1/zendesk_live_chat/generate_authorize_url/xxxx`
+    `https://env.haptikapi.com/third_party_integrations/v1/zendesk_live_chat/generate_authorize_url/xxxx`
 
 Once the API Client is added, a pop-up will appear. Copy these keys.
 

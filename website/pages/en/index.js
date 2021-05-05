@@ -137,6 +137,13 @@ module.exports = () => (
           ctaText: 'Get Started',
           ctaLink: '/salesforce',
         },
+          {
+          title: 'Zendesk',
+          description:
+            'Documentation to help you build conversational experiences on Zendesk',
+          ctaText: 'Get Started',
+          ctaLink: '/zendesk',
+        },
         {
           title: 'Bot API',
           description:

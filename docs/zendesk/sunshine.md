@@ -47,6 +47,8 @@ _You can add multiple channels within the Sunshine app._
 
 Once the configuration between Sunshine Conversation and Haptik is completed, you can now proceed to configure Sunshine Conversation and Zendesk.
 
+> By now you have connected your channel to the bot and you can test the bot by sending messages from your channel connected in your Sunshine app.
+
 ## Sunshine Conversation + Zendesk Configuration
 
 > Currently, Haptik will have to complete the Sunshine Conversation and Zendesk Configuration.
@@ -61,6 +63,22 @@ We need to call Switchboard APIs to complete this Configuration. There are 3 API
 1. Create Switchboard
 2. Enable Switchboard
 3. Add Haptik to Switchboard
+
+To call the above APIs, the you need to create an **App Key** and **App Secret** from an Oauth configured app in the Sunshine Conversations.
+
+Open the Sunshine app and select **Settings**
+
+![image](https://user-images.githubusercontent.com/75118325/117115948-61fe4a00-adab-11eb-97ea-19ef333bc643.png)
+
+Scroll down to API Keys section.
+
+For the first time you will be able to see a button **Generate API Keys**. Click on the button and the keys will get generated
+
+![image](https://user-images.githubusercontent.com/75118325/117116223-b9041f00-adab-11eb-8da4-fffbaffa2b67.png)
+
+Provide the above keys in the **Platform Deployment** section of the Business Manager on Conversation Studio tool.
+
+![image](https://user-images.githubusercontent.com/75118325/117116509-15ffd500-adac-11eb-8bb6-6c4fda08a4ae.png)
 
 ### Connect to an agent
 

@@ -6,7 +6,7 @@ title: User Ratings
 
 The User Ratings page of the Intelligent Analytics tool provides information about the ratings given by a user for a bot and agents(if present). 
 
-![menu_user_rating](assets/userratingmainpage.png)
+![image](https://user-images.githubusercontent.com/75118325/117293701-5b490300-ae8f-11eb-9a66-a0f0d4ce7b87.png)
 
 Based on the configuration made by the bot developers, a bot might ask for feedback from user at the end of a chat. The feedback it captures involves a star rating out of 5 and a free form text review or comment. 
 
@@ -14,11 +14,14 @@ Based on the configuration made by the bot developers, a bot might ask for feedb
 
 ## ***Overall Channel Rating***
 
-At the top of the User Ratings page you have the Overall Channel Rating. The Overall Channel Rating gives you a high level view of how your bot was rated overall.
+At the top of the User Ratings page you have the Overall Channel Rating. This section will show the bifurcation of ratings received on the bot. There are three types of feedback ratings - 
+* **Total Feedback** - This is the total feeback received both on bot and for agents.
+* **Agent Feedback** - This is the number of feedback collected on Smart Agent Chat i.e. when users provide a feedback after conversaing with agents.
+* **Bot Feedback** - This is the number of feedback collected on the bot i.e. the overall rating provided by the users to the bot. (This feedback module kicks in when user reaches Context Clear Node)
 
 In the left corner of this section you can see the average star rating provided by all users. Next to it you can see the total number of people that have given a particular number of stars. For example you can see how many users gave 5 stars, how many gave 4 stars and so on. You can find both the percentage and absolute number of users for any feedback. 
 
-![Overall Channel Rating](assets/overall-ratings.png)
+![image](https://user-images.githubusercontent.com/75118325/117293889-98ad9080-ae8f-11eb-99ab-913f863df571.png)
 
 There are two options of emailing feedback report here.
 

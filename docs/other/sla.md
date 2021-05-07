@@ -2,21 +2,30 @@
 title: Support
 ---
 
-We all need support while using a product. When a user has issues, they can reach out to our support system to get their resolution. The issues could be of varied types from product usage, to technical support to other things.
+If you have questions or run into technical issues while using Haptik, you can access our guides and tutorials for self-guided instructions and troubleshooting tips. We also provide additional support via bot or email. The issues could be of varied types from product usage, to technical support to other things.
 
-**So, how do we reach out to Haptik Support?**
-Everyone can reach out to Haptik’s Support by using either of this -
-- Dropping a mail to **support@haptik.ai**
-- Reaching out to Support Bot that resides within the Platform under the name of **Help**.
+In this article, you'll learn how to contact our Support team and find resources to help you with your Haptik account.
 
-**When should we reach out to Haptik Support?**
-Facing any type of problem with the platform.
+**Access the guides and tutorials**
+
+Use our comprehensive documentation to self-guide through features and keep moving forward without any wait.
+
+To access the guides and tutorials, click [**here**](https://docs.haptik.ai/).
+
+**How to contact technical support?**
+
+To get help, you must be logged in and go through our [**HELP section**](https://docs.haptik.ai/other/supportbot) or send us an email at **support@haptik.ai**. When you log in to your account, we’re able to personalize your support experience.
+
+To contact our support team, follow these steps -
+
+- After you've logged in, find the [**HELP section**](https://docs.haptik.ai/other/supportbot) in any screen of the platform.
+- All you need to do is fill out the required fields and submit your question/issue. We’ll get back to you soon.
 
 Support Bot captures every detail of the issue along with the severity.
 
 ## Severity & Response Time
 
-Technical support is provided for the Haptik Service offering during the subscription period and is not available as a separate offering.
+Technical support is provided by Haptik during the subscription period and is not available as a separate offering.
 
 <table>
   <th>Severity</th>

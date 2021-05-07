@@ -1,31 +1,32 @@
 {
     "sidebar": {
         "Getting Started": [
-            "index"
-        ],
-        "For Agents": [
-            "newmychats",
-            "action-toolbars",
-            "smart-actions",
-            "closing-categories",
-            "agent-stats-email",
-            "navigating-interface-shortcuts",
-            "sounds-notifications"
-        ],
-        "For Team Leads": [
-            "for-team-leads",
-            "businesses",
-            "teams",
-            "claiming-and-closing",
-            "analytics",
-            "agent-reports",
-            "chat-assignment",
+            "index",
             "bot-agent-handover"
         ],
-        "Miscellaneous": [
-            "bot-agent-handover",
+        "How to set up Smart Agent Chat?": [
+            "setup-intro",
+            "teams",
+            "chat-assignment",
+            "closing-categories"
+        ],
+        "How to manage chats?": [
+            "newmychats",
+            "left-hs",
+            "centre-screen",
+            "right-hs"
+        ],
+        "How to analyze chats?": [
+            "analyze-intro",
+            "businesses",
+            "monitor-closing-categories",
+            "analytics",
+            "agent-reports"
+        ],
+        "Miscellaneous": [  
             "adding-custom-tools",
-            "integrating-external-bot"
+            "integrating-external-bot",
+            "adding-canned-responses"
         ]
     },
     "headerLink": {

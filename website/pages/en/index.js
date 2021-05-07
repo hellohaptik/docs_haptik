@@ -85,7 +85,7 @@ module.exports = () => (
           url: '/hsl',
         },
         {
-          title: 'SLA',
+          title: 'Support',
           url: '/other/sla',
         },
         {

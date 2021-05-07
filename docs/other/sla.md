@@ -6,13 +6,13 @@ If you have questions or run into technical issues while using Haptik, you can a
 
 In this article, you'll learn how to contact our Support team and find resources to help you with your Haptik account.
 
-**Access the guides and tutorials**
+### Access the guides and tutorials
 
 Use our comprehensive documentation to self-guide through features and keep moving forward without any wait.
 
 To access the guides and tutorials, click [**here**](https://docs.haptik.ai/).
 
-**How to contact technical support?**
+### How to contact technical support?
 
 To get help, you must be logged in and go through our [**HELP section**](https://docs.haptik.ai/other/supportbot) or send us an email at **support@haptik.ai**. When you log in to your account, we’re able to personalize your support experience.
 
